@@ -34,15 +34,28 @@ export default function Hero() {
         </div>
 
         <div className="hero__cards" aria-hidden="true">
-          {featured.map((r, i) => (
-            <div className={`hero__card hero__card--${i}`} key={r.img}>
-              <img src={r.img} alt="" loading="eager" />
-              <div className="hero__card-label">
-                <span className="band-chip">{r.band}</span>
-                <span>{r.name}</span>
+          {featured.map((r, i) => {
+            const top = r.scores ? Math.max(...Object.values(r.scores).map(parseFloat)) : null;
+            return (
+              <div className={`hero__card hero__card--${i}`} key={r.img}>
+                <img src={r.img} alt="" loading="eager" />
+                {r.scores && (
+                  <div className="hero__card-scores">
+                    {["l", "r", "w", "s"].map((k) => (
+                      <span key={k} className={parseFloat(r.scores[k]) === top ? "is-top" : ""}>
+                        <em>{k.toUpperCase()}</em>
+                        {r.scores[k]}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <div className="hero__card-label">
+                  <span className="band-chip">{r.band}</span>
+                  <span>{r.name}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

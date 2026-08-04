@@ -220,7 +220,24 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     to { transform: rotate(var(--tilt, 0deg)) translateY(-10px); }
   }
 }
-.hero__card img { height: 300px; object-fit: cover; object-position: top; width: 100%; }
+.hero__card img { height: 264px; object-fit: cover; object-position: top; width: 100%; }
+/* crisp HTML subscores — the tiny TRF print itself can never be legible
+   at card size, so the numbers live outside the photo */
+.hero__card-scores {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  background: #fafcfb;
+}
+.hero__card-scores span {
+  display: flex; flex-direction: column; align-items: center; gap: 1px;
+  padding: 6px 0 5px; font-weight: 900; font-size: 13.5px; color: var(--ink);
+}
+.hero__card-scores span + span { border-left: 1px solid var(--border); }
+.hero__card-scores em {
+  font-style: normal; font-size: 9px; font-weight: 800;
+  letter-spacing: 0.1em; color: var(--ink-3);
+}
+.hero__card-scores span.is-top { color: #9a7a24; background: rgba(212, 168, 67, 0.1); }
 .hero__card-label {
   display: flex; align-items: center; gap: 8px; padding: 10px 12px;
   color: var(--ink); font-weight: 700; font-size: 13px;
