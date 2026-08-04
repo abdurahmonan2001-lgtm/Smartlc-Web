@@ -115,7 +115,7 @@ export default function Results() {
         <div className={`marquee__track ${reverse ? "marquee__track--reverse" : ""}`}>
           {[...items, ...items].map((r, i) => (
             <button className="result-card" key={`${r.img}-${i}`} onClick={() => setLightbox(r)}>
-              <div className="result-card__img">
+              <div className="result-card__img zoomable">
                 <img src={r.img} alt={`IELTS ${r.band} — ${r.name}`} loading="lazy" />
               </div>
               <div className="result-card__meta">

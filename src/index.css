@@ -738,6 +738,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .score-row--lg .score-row__cell { padding: 7px 4px 6px; background: rgba(255, 255, 255, 0.08); }
 .score-row--lg .score-row__cell strong { font-size: 16px; }
 
+/* cursor-following magnifying lens over certificate cards (desktop) */
+.magnifier-lens {
+  position: fixed; display: none; width: 210px; height: 210px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  border: 3px solid var(--green); background-color: #fff; background-repeat: no-repeat;
+  box-shadow: 0 12px 40px rgba(0, 13, 12, 0.45), 0 0 0 5px rgba(255, 255, 255, 0.3);
+  pointer-events: none; z-index: 150;
+}
+.zoomable { cursor: zoom-in; }
+
 /* ─── Lightbox + magnifier ─── */
 .lightbox {
   position: fixed; inset: 0; z-index: 200; background: rgba(0, 13, 12, 0.9);

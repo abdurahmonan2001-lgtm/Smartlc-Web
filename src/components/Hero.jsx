@@ -45,7 +45,9 @@ export default function Hero() {
               onClick={() => setZoom(r)}
               aria-label={`View IELTS ${r.band} certificate — ${r.name}`}
             >
-              <img src={r.img} alt="" loading="eager" />
+              <span className="zoomable">
+                <img src={r.img} alt="" loading="eager" />
+              </span>
               <div className="hero__card-label">
                 <span className="band-chip">{r.band}</span>
                 <span>{r.name}</span>
