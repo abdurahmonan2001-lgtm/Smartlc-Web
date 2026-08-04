@@ -450,6 +450,79 @@ export function Courses() {
   );
 }
 
+/** Airport-style departures board: what an IELTS certificate unlocks.
+ *  Board chrome ("DEPARTURES", "BOARDING") stays in English on purpose —
+ *  real departure boards do. */
+export function Unlocks() {
+  const { t } = useLang();
+  const u = t.unlocks;
+  return (
+    <section className="section section--dark unlocks" id="unlocks">
+      <div className="container">
+        <h2 className="section__title">{u.title}</h2>
+        <p className="section__sub">{u.sub}</p>
+        <div className="board">
+          <div className="board__head">
+            <span className="board__dot" aria-hidden="true" />
+            DEPARTURES
+          </div>
+          {u.rows.map((r, i) => (
+            <div className="board__row" style={{ "--i": i }} key={r.dest}>
+              <span className="board__icon" aria-hidden="true">{r.icon}</span>
+              <span className="board__dest">
+                <strong>{r.dest}</strong>
+                <small>{r.d}</small>
+              </span>
+              <span className="board__band">IELTS {r.band}</span>
+              <span className="board__status"><i aria-hidden="true" />Boarding</span>
+            </div>
+          ))}
+        </div>
+        <GoalPicker />
+      </div>
+    </section>
+  );
+}
+
+/** Interactive goal picker: choose a destination, see the band you need,
+ *  the road there, and a level-check CTA — the board made personal. */
+function GoalPicker() {
+  const { t } = useLang();
+  const g = t.unlocks.goal;
+  const [sel, setSel] = useState(0);
+  const active = g.goals[sel];
+  return (
+    <div className="goal">
+      <h3 className="goal__title">{g.title}</h3>
+      <p className="goal__sub">{g.sub}</p>
+      <div className="goal__chips" role="tablist">
+        {g.goals.map((item, i) => (
+          <button
+            key={item.label}
+            role="tab"
+            aria-selected={i === sel}
+            className={`goal__chip ${i === sel ? "is-active" : ""}`}
+            onClick={() => setSel(i)}
+          >
+            <span aria-hidden="true">{item.icon}</span> {item.label}
+          </button>
+        ))}
+      </div>
+      <div className="goal__result" key={active.label}>
+        <div className="goal__band">
+          <em>{g.target}</em>
+          <strong>{active.band.includes("B2") ? active.band : `IELTS ${active.band}`}</strong>
+        </div>
+        <div className="goal__text">
+          <p>{active.need}</p>
+          <p className="goal__plan">{active.plan}</p>
+          <a className="btn btn--primary" href="/register">{g.cta} →</a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const PRICE = "700 000";
 
 export function Pricing() {
