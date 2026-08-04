@@ -26,7 +26,7 @@ const dict = {
     hero: {
       eyebrow: "Smart Learning Centre · Tashkent",
       motto: ["English", "Every", "Day."],
-      sub: "Our motto is simple: real progress comes from showing up daily. Structured courses from your first English word to IELTS — built on the Oxford University Press program and taught by high-band teachers.",
+      sub: "English is the language of universities, careers and half the internet — and the only way to truly learn it is a little every day. That is our whole method: English Every Day, from your first word all the way to IELTS.",
       cta: "Sign up via Telegram",
       cta2: "Call us",
       badge: "official IELTS 7.0+ results",
@@ -102,8 +102,8 @@ const dict = {
       },
     },
     english: {
-      title: "What English Gives You",
-      sub: "Even before any exam, the language itself opens the world:",
+      title: "Why English?",
+      sub: "Because the language itself opens the world — before any exam ever enters the picture:",
       items: [
         ["1.5 bln+", "people speak English worldwide — talk to 1 in 5 humans"],
         ["50%", "of everything on the internet is in English"],
@@ -243,7 +243,7 @@ const dict = {
     hero: {
       eyebrow: "Smart Learning Centre · Toshkent",
       motto: ["English", "Every", "Day."],
-      sub: "Shiorimiz oddiy: haqiqiy natija — har kuni shug'ullanishdan keladi. Birinchi inglizcha so'zdan IELTS gacha tizimli kurslar — Oxford University Press dasturi asosida, yuqori natijali ustozlar bilan.",
+      sub: "Ingliz tili — universitetlar, karyera va internetning yarmi tili. Uni chinakam o'rganishning yagona yo'li — har kuni ozgina shug'ullanish. Butun metodimiz shu: English Every Day — birinchi so'zdan IELTS gacha.",
       cta: "Telegram orqali yozilish",
       cta2: "Qo'ng'iroq qilish",
       badge: "rasmiy IELTS 7.0+ natijalar",
@@ -319,8 +319,8 @@ const dict = {
       },
     },
     english: {
-      title: "Ingliz tili sizga nima beradi",
-      sub: "Hech qanday imtihonsiz ham tilning o'zi dunyoni ochadi:",
+      title: "Nega ingliz tili?",
+      sub: "Chunki tilning o'zi — hali hech qanday imtihon bo'lmasidan — dunyoni ochadi:",
       items: [
         ["1.5 mlrd+", "kishi ingliz tilida gaplashadi — har 5 kishidan biri bilan suhbatlashing"],
         ["50%", "internetdagi barcha ma'lumot ingliz tilida"],
@@ -460,7 +460,7 @@ const dict = {
     hero: {
       eyebrow: "Smart Learning Centre · Ташкент",
       motto: ["English", "Every", "Day."],
-      sub: "Наш девиз прост: настоящий прогресс приходит с ежедневной практикой. Системные курсы от первого английского слова до IELTS — на основе программы Oxford University Press, с преподавателями с высокими баллами.",
+      sub: "Английский — язык университетов, карьеры и половины интернета. По-настоящему выучить его можно, только занимаясь понемногу каждый день. В этом весь наш метод: English Every Day — от первого слова до IELTS.",
       cta: "Записаться в Telegram",
       cta2: "Позвонить",
       badge: "официальных результатов IELTS 7.0+",
@@ -536,8 +536,8 @@ const dict = {
       },
     },
     english: {
-      title: "Что даёт английский",
-      sub: "Даже без всяких экзаменов сам язык открывает мир:",
+      title: "Почему английский?",
+      sub: "Потому что сам язык открывает мир — ещё до всяких экзаменов:",
       items: [
         ["1.5 млрд+", "человек говорят по-английски — каждый пятый на планете"],
         ["50%", "всего контента в интернете — на английском"],

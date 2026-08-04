@@ -49,17 +49,20 @@ export default function App() {
         <>
           <Nav />
           <main>
+            {/* Act 1 — why learn English at all */}
             <Hero />
-            <Stats />
+            <EnglishGives />
+            {/* Act 2 — how you do it with Smart LC */}
             <Advantages />
             <ContactBand kind="telegram" />
             <Courses />
-            <Unlocks />
-            <EnglishGives />
             <Pricing />
             <ContactBand kind="phone" />
             <Teachers />
             <ContactBand kind="instagram" />
+            {/* Act 3 — what it gives you */}
+            <Unlocks />
+            <Stats />
             <Results />
             <SuccessStories />
             <LevelCheck />
