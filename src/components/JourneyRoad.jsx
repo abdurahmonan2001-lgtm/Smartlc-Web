@@ -148,6 +148,7 @@ export default function JourneyRoad() {
   // stops, n = rolling off the road past IELTS. The bus only ever moves
   // forward; the loop restarts with an instant (transition-free) jump to -1.
   const [at, setAt] = useState(-1);
+  const [vessel, setVessel] = useState(0);
   const [driving, setDriving] = useState(false);
   const [jump, setJump] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -175,7 +176,11 @@ export default function JourneyRoad() {
         for (let i = 0; i < n && alive; i++) {
           setDriving(true);
           setAt(i);
-          await wait(1300); // matches the CSS transition time
+          // the upgrade happens MID-CROSSING: halfway to the next stop the
+          // vessel transforms into the next level's boat (1300ms = CSS leg)
+          await wait(650);
+          setVessel(i);
+          await wait(650);
           setDriving(false);
           await wait(i === n - 1 ? DWELL_END : DWELL);
         }
@@ -194,6 +199,7 @@ export default function JourneyRoad() {
         jumpRef.current = true;
         setJump(true);
         setAt(-1);
+        setVessel(0); // back to the dinghy while invisible
         await wait(650);
         jumpRef.current = false;
         setJump(false);
@@ -221,9 +227,6 @@ export default function JourneyRoad() {
   // -1 sits just beyond the left edge so each lap opens with a sail-in
   const busPos = at <= -1 ? "-5%" : at >= n ? "107%" : pos(at);
   const active = steps[Math.min(Math.max(at, 0), n - 1)];
-  // the vessel upgrades on ARRIVAL: while sailing toward stop i the
-  // previous level's boat is still underneath you
-  const vessel = Math.min(Math.max(driving ? at - 1 : at, 0), n - 1);
 
   return (
     <div className="road-wrap" ref={sectionRef}>
@@ -251,6 +254,7 @@ export default function JourneyRoad() {
             style={{ left: busPos }}
           >
             <span className="boat" key={vessel}>{VESSELS[vessel]}</span>
+            <span className="boat__burst" key={`burst-${vessel}`} aria-hidden="true" />
           </div>
         </div>
       </div>
