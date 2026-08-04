@@ -595,7 +595,8 @@ export function LevelCheck() {
             </ul>
           </div>
           <div className="lcheck__cta">
-            <a className="btn btn--primary btn--lg" href="/register">{lc.cta} →</a>
+            {/* Free online placement test — public, no account needed */}
+            <a className="btn btn--primary btn--lg" href="/placement">{lc.cta} →</a>
             <span className="lcheck__or">{lc.or}</span>
             <a className="btn btn--ghost" href={CONTACT.phoneHref}>{CONTACT.phone}</a>
           </div>

@@ -8,6 +8,7 @@ import { Testimonials, Location, Faq, Footer } from "./components/Closing.jsx";
 import RegisterPage from "./components/RegisterPage.jsx";
 import ContactBand from "./components/ContactBand.jsx";
 import PracticeApp from "./practice/PracticeApp.jsx";
+import PlacementTest from "./placement/PlacementTest.jsx";
 import Magnifier from "./components/Magnifier.jsx";
 
 /** Fades each section in as it scrolls into view (skipped for reduced-motion users). */
@@ -37,9 +38,11 @@ export default function App() {
   const path = window.location.pathname.replace(/\/$/, "");
   const isRegister = path === "/register";
   const isPractice = path === "/practice" || path.startsWith("/practice/");
-  useScrollReveal(!isRegister && !isPractice);
+  const isPlacement = path === "/placement";
+  useScrollReveal(!isRegister && !isPractice && !isPlacement);
 
   if (isPractice) return <PracticeApp />;
+  if (isPlacement) return <PlacementTest />;
 
   return (
     <LangProvider>
