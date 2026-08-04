@@ -66,6 +66,24 @@ const dateKey = (r) => {
 };
 const byDateDesc = [...results].sort((a, b) => dateKey(b) - dateKey(a));
 
+/** Full-screen certificate viewer with the magnifier — shared with the hero. */
+export function CertLightbox({ cert, onClose }) {
+  const { t } = useLang();
+  return (
+    <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
+      <button className="lightbox__close" aria-label={t.results.close}>✕</button>
+      <figure onClick={(e) => e.stopPropagation()}>
+        <ZoomImage src={cert.img} alt={`IELTS ${cert.band} — ${cert.name}`} />
+        <figcaption>
+          <strong>{cert.name} — IELTS {cert.band}{cert.date ? ` · ${cert.date.slice(-4)}` : ""}</strong>
+          <ScoreRow scores={cert.scores} size="lg" />
+          <span>{t.results.zoomHint}</span>
+        </figcaption>
+      </figure>
+    </div>
+  );
+}
+
 function ScoreRow({ scores, size }) {
   if (!scores) return null;
   const cells = [["L", scores.l], ["R", scores.r], ["W", scores.w], ["S", scores.s]];
@@ -132,19 +150,7 @@ export default function Results() {
       <Row items={rowA} />
       <Row items={rowB} reverse />
 
-      {lightbox && (
-        <div className="lightbox" onClick={() => setLightbox(null)} role="dialog" aria-modal="true">
-          <button className="lightbox__close" aria-label={t.results.close}>✕</button>
-          <figure onClick={(e) => e.stopPropagation()}>
-            <ZoomImage src={lightbox.img} alt={`IELTS ${lightbox.band} — ${lightbox.name}`} />
-            <figcaption>
-              <strong>{lightbox.name} — IELTS {lightbox.band}{lightbox.date ? ` · ${lightbox.date.slice(-4)}` : ""}</strong>
-              <ScoreRow scores={lightbox.scores} size="lg" />
-              <span>{t.results.zoomHint}</span>
-            </figcaption>
-          </figure>
-        </div>
-      )}
+      {lightbox && <CertLightbox cert={lightbox} onClose={() => setLightbox(null)} />}
     </section>
   );
 }

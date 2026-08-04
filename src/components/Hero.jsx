@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { useLang } from "../i18n.jsx";
 import { CONTACT } from "../data/site.js";
 import results from "../data/results.json";
+import { CertLightbox } from "./Results.jsx";
 
 const featured = results.filter((r) => r.band === "8.0").slice(0, 3);
 
 export default function Hero() {
   const { t } = useLang();
+  const [zoom, setZoom] = useState(null);
   return (
     <section className="hero" id="top">
       <div className="hero__glow" aria-hidden="true" />
@@ -33,31 +36,27 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="hero__cards" aria-hidden="true">
-          {featured.map((r, i) => {
-            const top = r.scores ? Math.max(...Object.values(r.scores).map(parseFloat)) : null;
-            return (
-              <div className={`hero__card hero__card--${i}`} key={r.img}>
-                <img src={r.img} alt="" loading="eager" />
-                {r.scores && (
-                  <div className="hero__card-scores">
-                    {["l", "r", "w", "s"].map((k) => (
-                      <span key={k} className={parseFloat(r.scores[k]) === top ? "is-top" : ""}>
-                        <em>{k.toUpperCase()}</em>
-                        {r.scores[k]}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                <div className="hero__card-label">
-                  <span className="band-chip">{r.band}</span>
-                  <span>{r.name}</span>
-                </div>
+        <div className="hero__cards">
+          {featured.map((r, i) => (
+            <button
+              className={`hero__card hero__card--${i}`}
+              key={r.img}
+              type="button"
+              onClick={() => setZoom(r)}
+              aria-label={`View IELTS ${r.band} certificate — ${r.name}`}
+            >
+              <img src={r.img} alt="" loading="eager" />
+              <div className="hero__card-label">
+                <span className="band-chip">{r.band}</span>
+                <span>{r.name}</span>
+                <span className="hero__card-zoom" aria-hidden="true">🔍</span>
               </div>
-            );
-          })}
+            </button>
+          ))}
         </div>
       </div>
+
+      {zoom && <CertLightbox cert={zoom} onClose={() => setZoom(null)} />}
     </section>
   );
 }

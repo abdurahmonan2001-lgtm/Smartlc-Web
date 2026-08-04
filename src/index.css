@@ -204,11 +204,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .hero__badge:hover { color: #f0cd77; }
 .hero__badge strong { font-size: 18px; }
 
-.hero__cards { position: relative; height: 460px; }
+.hero__cards { position: relative; height: 560px; }
 .hero__card {
-  position: absolute; width: 240px; background: #fff; border-radius: 14px; overflow: hidden;
+  position: absolute; width: 310px; background: #fff; border-radius: 14px; overflow: hidden;
   box-shadow: var(--shadow-lg); transform: rotate(var(--tilt, 0deg));
-  transition: transform 0.35s;
+  transition: transform 0.35s; cursor: zoom-in; padding: 0; text-align: left;
 }
 .hero__card:hover { transform: rotate(0deg) scale(1.04); z-index: 5; animation: none; }
 @media (prefers-reduced-motion: no-preference) {
@@ -220,32 +220,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     to { transform: rotate(var(--tilt, 0deg)) translateY(-10px); }
   }
 }
-.hero__card img { height: 264px; object-fit: cover; object-position: top; width: 100%; }
-/* crisp HTML subscores — the tiny TRF print itself can never be legible
-   at card size, so the numbers live outside the photo */
-.hero__card-scores {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  background: #fafcfb;
-}
-.hero__card-scores span {
-  display: flex; flex-direction: column; align-items: center; gap: 1px;
-  padding: 6px 0 5px; font-weight: 900; font-size: 13.5px; color: var(--ink);
-}
-.hero__card-scores span + span { border-left: 1px solid var(--border); }
-.hero__card-scores em {
-  font-style: normal; font-size: 9px; font-weight: 800;
-  letter-spacing: 0.1em; color: var(--ink-3);
-}
-.hero__card-scores span.is-top { color: #9a7a24; background: rgba(212, 168, 67, 0.1); }
+/* the whole certificate, uncropped — click opens the full-screen magnifier */
+.hero__card img { display: block; width: 100%; height: auto; }
+.hero__card-zoom { margin-left: auto; font-size: 14px; opacity: 0.55; }
+.hero__card:hover .hero__card-zoom { opacity: 1; }
 .hero__card-label {
   display: flex; align-items: center; gap: 8px; padding: 10px 12px;
   color: var(--ink); font-weight: 700; font-size: 13px;
 }
 .hero__card-label span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hero__card--0 { --tilt: -6deg; top: 10px; left: 0; z-index: 3; }
-.hero__card--1 { --tilt: 4deg; top: 60px; right: 30px; z-index: 2; }
-.hero__card--2 { --tilt: -2deg; bottom: 0; left: 90px; z-index: 1; }
+.hero__card--0 { --tilt: -5deg; top: 0; left: 0; z-index: 3; }
+.hero__card--1 { --tilt: 4deg; top: 46px; right: 0; z-index: 2; }
+.hero__card--2 { --tilt: -2deg; bottom: 0; left: 110px; z-index: 1; }
 
 /* ─── Stats ─── */
 .stats { background: var(--racing-2); color: #fff; padding: 34px 0; border-top: 1px solid var(--border-dark); }
