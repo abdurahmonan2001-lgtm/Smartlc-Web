@@ -65,7 +65,7 @@ const dict = {
       month: "month",
       months: "months",
       total: "The full journey from zero: about 16 months of consistent study.",
-      registerCta: "Get on the bus — Register",
+      registerCta: "Come aboard — Register",
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Your very first step — alphabet, core vocabulary and simple everyday phrases." },
         { name: "Elementary", dur: 3, level: "A2", d: "Build grammar foundations and start speaking in full sentences with confidence." },
@@ -76,7 +76,7 @@ const dict = {
       ],
     },
     unlocks: {
-      title: "Where the Bus Goes",
+      title: "Where the Ship Sails",
       sub: "An IELTS certificate isn't just paper — it's a boarding pass. Here's what it opens:",
       rows: [
         { icon: "🎓", dest: "Universities abroad", d: "The UK, USA, Europe and Asia — direct admission and scholarship applications.", band: "6.5 – 7.5" },
@@ -282,7 +282,7 @@ const dict = {
       month: "oy",
       months: "oy",
       total: "Noldan to'liq yo'l: taxminan 16 oy muntazam o'qish.",
-      registerCta: "Avtobusga chiqing — Ro'yxatdan o'ting",
+      registerCta: "Kemaga chiqing — Ro'yxatdan o'ting",
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Eng birinchi qadam — alifbo, asosiy so'z boyligi va oddiy kundalik iboralar." },
         { name: "Elementary", dur: 3, level: "A2", d: "Grammatika poydevorini quring va to'liq gaplar bilan ishonchli gapirishni boshlang." },
@@ -293,7 +293,7 @@ const dict = {
       ],
     },
     unlocks: {
-      title: "Avtobus qayerga boradi?",
+      title: "Kema qayerga suzadi?",
       sub: "IELTS sertifikati shunchaki qog'oz emas — bu bording-pass. Mana u ochadigan yo'llar:",
       rows: [
         { icon: "🎓", dest: "Chet el universitetlari", d: "Buyuk Britaniya, AQSH, Yevropa va Osiyo — to'g'ridan-to'g'ri qabul va grant arizalari.", band: "6.5 – 7.5" },
@@ -499,7 +499,7 @@ const dict = {
       month: "месяц",
       months: "месяца",
       total: "Полный путь с нуля: около 16 месяцев регулярных занятий.",
-      registerCta: "Садитесь в автобус — Регистрация",
+      registerCta: "Поднимайтесь на борт — Регистрация",
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Самый первый шаг — алфавит, базовая лексика и простые повседневные фразы." },
         { name: "Elementary", dur: 3, level: "A2", d: "Постройте грамматический фундамент и начните уверенно говорить полными предложениями." },
@@ -510,7 +510,7 @@ const dict = {
       ],
     },
     unlocks: {
-      title: "Куда едет автобус?",
+      title: "Куда плывёт корабль?",
       sub: "Сертификат IELTS — не просто бумага, это посадочный талон. Вот что он открывает:",
       rows: [
         { icon: "🎓", dest: "Университеты за рубежом", d: "Великобритания, США, Европа и Азия — прямое поступление и заявки на стипендии.", band: "6.5 – 7.5" },

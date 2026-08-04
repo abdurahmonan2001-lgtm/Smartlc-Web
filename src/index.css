@@ -560,14 +560,21 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    breathing room before Beginner / after IELTS lives in pos() in
    JourneyRoad.jsx instead. */
 .road { position: relative; min-width: 1000px; height: 238px; margin: 0 auto; max-width: 1000px; }
+/* the sea: a teal band with a drifting wave crest along the surface */
 .road__line {
-  position: absolute; left: 0; right: 0; top: 150px; height: 4px;
-  background: var(--ink); border-radius: 999px;
+  position: absolute; left: 0; right: 0; top: 150px; height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #8fd6c7 0%, #3aa392 35%, #1b8471 100%);
 }
 .road__line::before {
-  content: ""; position: absolute; left: 0; right: 0; top: -7px; height: 0;
-  border-top: 2px dashed rgba(12, 31, 29, 0.25);
+  content: ""; position: absolute; left: 6px; right: 6px; top: -5px; height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='8'%3E%3Cpath d='M0 8 Q11.5 0 23 8 T46 8' fill='%23bfe9df'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .road__line::before { animation: sea-drift 4s linear infinite; }
+}
+@keyframes sea-drift { to { background-position-x: 46px; } }
 .road__stop {
   position: absolute; top: 58px; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; width: 132px;
@@ -598,18 +605,29 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .road__stop.is-current .road__tag { transform: scale(1.12); }
 .road__stop.is-current .road__label { color: var(--green-dark); }
 .road__stop--ielts .road__sub { color: #9a7a24; opacity: 1; }
+/* the vessel: bottom-anchored so every hull, small or grand, sits on the
+   same waterline (bottom = slightly into the sea band) */
 .road__bus {
-  position: absolute; top: 116px; transform: translateX(-50%); z-index: 3;
+  position: absolute; bottom: 74px; transform: translateX(-50%); z-index: 3;
+  display: flex; align-items: flex-end;
   transition: left 1.3s cubic-bezier(0.45, 0.05, 0.35, 1), opacity 0.45s ease;
 }
 /* restart: teleport with left frozen, but keep the opacity fade alive */
 .road__bus.is-jumping { transition: left 0s, opacity 0.45s ease; }
 .road__bus.is-hidden { opacity: 0; }
-.road__bus svg { display: block; }
-.road__bus.is-driving svg { animation: bus-rumble 0.28s linear infinite; }
-@keyframes bus-rumble {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
+.boat { display: block; transform-origin: bottom center; }
+.road__bus svg { display: block; transform-origin: 50% 90%; }
+@media (prefers-reduced-motion: no-preference) {
+  /* keyed remount pops the upgraded vessel in on arrival */
+  .boat { animation: boat-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .road__bus svg { animation: boat-bob 3.2s ease-in-out infinite; }
+  .road__bus.is-driving svg { animation: boat-rock 1.15s ease-in-out infinite; }
+}
+@keyframes boat-pop { from { transform: scale(0.78); opacity: 0.3; } }
+@keyframes boat-bob { 50% { transform: translateY(-2px) rotate(0.8deg); } }
+@keyframes boat-rock {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50% { transform: rotate(2.4deg) translateY(-2.5px); }
 }
 
 .road-detail {
@@ -1352,16 +1370,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .road-wrap { margin-top: 22px; }
   .road-scroller { padding: 40px 0 26px; }
   .road { min-width: 640px; max-width: none; height: 168px; }
-  .road__line { top: 118px; }
+  .road__line { top: 118px; height: 16px; }
   .road__stop { top: 42px; width: 88px; }
   .road__sign { height: 16px; font-size: 14px; line-height: 16px; }
   .road__pole { height: 30px; }
   .road__tag { margin-top: 46px; }
   .road__label { font-size: 10.5px; }
   .road__sub { font-size: 9.5px; }
-  .road__bus { top: 90px; }
-  .road__bus svg { width: 44px; height: 27px; }
-  .road__bubble { width: 190px; font-size: 11px; bottom: 40px; }
+  .road__bus { bottom: 36px; }
+  .boat { transform: scale(0.72); }
   .road-detail { margin-top: 12px; padding: 16px 18px; }
   .road-detail p { font-size: 13.5px; }
   .journey__total { margin-top: 14px; font-size: 13px; }
