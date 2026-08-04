@@ -2,13 +2,22 @@
 // web images and writes a manifest the site renders the score wall from.
 import { pdf } from "pdf-to-img";
 import sharp from "sharp";
-import { readdirSync, mkdirSync, writeFileSync } from "node:fs";
+import { readdirSync, mkdirSync, writeFileSync, readFileSync, existsSync } from "node:fs";
 import { join, extname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const SRC = "C:/Users/abdur/Desktop/SMART/App/SmartLC - new website/Student Results";
 const OUT = fileURLToPath(new URL("../public/results/", import.meta.url));
 const BANDS = ["8.0 Holders", "7.5 Holders", "7.0 Holders"];
+
+// keep the L/R/W/S subscores that extract-scores.mjs / scores-manual.json
+// already merged into the manifest — re-running this script must not drop them
+const MANIFEST_PATH = fileURLToPath(new URL("../src/data/results.json", import.meta.url));
+const prevScores = new Map(
+  existsSync(MANIFEST_PATH)
+    ? JSON.parse(readFileSync(MANIFEST_PATH, "utf8")).filter((r) => r.scores).map((r) => [r.img, r.scores])
+    : []
+);
 
 const manifest = [];
 
@@ -43,13 +52,17 @@ for (const bandDir of BANDS) {
     try {
       let input;
       if (extname(f).toLowerCase() === ".pdf") {
-        const doc = await pdf(join(SRC, bandDir, f), { scale: 2 });
+        // scale 3 ≈ 1790px wide — text must stay legible under the 2.4x
+        // magnifier lens, so render high and downsize only slightly
+        const doc = await pdf(join(SRC, bandDir, f), { scale: 3 });
         for await (const page of doc) { input = page; break; } // first page only
       } else {
         input = join(SRC, bandDir, f);
       }
-      await sharp(input).rotate().resize({ width: 1000, withoutEnlargement: true }).webp({ quality: 72 }).toFile(outFile);
-      manifest.push({ name: meta.name, band, date: meta.date, img: `/results/${band}/${slug}.webp` });
+      await sharp(input).rotate().resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 76 }).toFile(outFile);
+      const img = `/results/${band}/${slug}.webp`;
+      const scores = prevScores.get(img);
+      manifest.push({ name: meta.name, band, date: meta.date, img, ...(scores ? { scores } : {}) });
       console.log(`ok  ${band}  ${meta.name}`);
     } catch (e) {
       console.error(`FAIL ${band} ${f}: ${e.message}`);

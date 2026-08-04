@@ -55,7 +55,7 @@ for (const band of readdirSync(ROOT)) {
         .toBuffer();
       overlays.push({ input: region, left, top });
     }
-    const out = await sharp(src).composite(overlays).webp({ quality: 72 }).toBuffer();
+    const out = await sharp(src).composite(overlays).webp({ quality: 78 }).toBuffer();
     writeFileSync(path, out);
     done++;
   }

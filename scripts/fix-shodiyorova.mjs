@@ -7,11 +7,11 @@ sharp.cache(false);
 const SRC = "C:/Users/abdur/Desktop/SMART/App/SmartLC - new website/Student Results/7.0 Holders/53 - Shodiyorova Marjona - 25.01.2026 - etrf.pdf";
 const OUT = "public/results/7.0/shodiyorova-marjona.webp";
 
-const doc = await pdf(SRC, { scale: 2 });
+const doc = await pdf(SRC, { scale: 3 });
 let page;
 for await (const p of doc) { page = p; break; }
 
-const base = await sharp(page).rotate().resize({ width: 1000, withoutEnlargement: true }).toBuffer();
+const base = await sharp(page).rotate().resize({ width: 1600, withoutEnlargement: true }).toBuffer();
 const { width, height } = await sharp(base).metadata();
 
 const RECTS = [
@@ -31,6 +31,6 @@ for (const r of RECTS) {
   const region = await sharp(tiny).resize(w, h, { fit: "fill" }).blur(6).toBuffer();
   overlays.push({ input: region, left, top });
 }
-const out = await sharp(base).composite(overlays).webp({ quality: 72 }).toBuffer();
+const out = await sharp(base).composite(overlays).webp({ quality: 78 }).toBuffer();
 await sharp(out).toFile(OUT);
 console.log("rebuilt", OUT, `${width}x${height}`);
