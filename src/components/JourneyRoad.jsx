@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "../i18n.jsx";
 
-const DWELL = 2100; // ms at a normal stop
-const DWELL_IELTS = 3200; // a beat longer at the exam stop
-const DWELL_END = 4500; // the long pause happens at the goal stop
+const DWELL = 1050; // ms at a normal stop
+const DWELL_IELTS = 1600; // a beat longer at the exam stop
+const DWELL_END = 2250; // the long pause happens at the goal stop
 
 function BusSvg() {
   return (
@@ -37,27 +37,25 @@ export default function JourneyRoad() {
   const [hidden, setHidden] = useState(false);
   const sectionRef = useRef(null);
   const scrollerRef = useRef(null);
-  const runningRef = useRef(false);
   const jumpRef = useRef(false);
-
-  // run the loop only while the road is on screen
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      ([e]) => { runningRef.current = e.isIntersecting; },
-      { threshold: 0.3 }
-    );
-    if (sectionRef.current) io.observe(sectionRef.current);
-    return () => io.disconnect();
-  }, []);
 
   useEffect(() => {
     let alive = true;
     const timers = [];
     const wait = (ms) => new Promise((r) => timers.push(setTimeout(r, ms)));
+    // drive only while the road is on screen — checked directly each pass
+    // (an IntersectionObserver's callbacks ride on rendering steps and can
+    // go undelivered in hidden/background tabs, deadlocking the loop)
+    const roadVisible = () => {
+      const el = sectionRef.current;
+      if (!el) return false;
+      const r = el.getBoundingClientRect();
+      return r.top < innerHeight && r.bottom > 0;
+    };
 
     (async () => {
       while (alive) {
-        if (!runningRef.current) { await wait(600); continue; }
+        if (!roadVisible()) { await wait(600); continue; }
         for (let i = 0; i < n && alive; i++) {
           setDriving(true);
           setAt(i);
@@ -74,8 +72,10 @@ export default function JourneyRoad() {
         await wait(DWELL_END);
         if (!alive) break;
         // ride forward off the road — no reversing. The restart is seamless:
-        // fade out beyond the edge, teleport while invisible, let the road
-        // pan home, then fade back in on the open road before Beginner.
+        // fade out beyond the right edge, teleport to just beyond the LEFT
+        // edge while invisible, let the road pan home, then fade back in as
+        // the next lap's drive-in begins — the bus visibly drives in from
+        // the start rather than materialising in place.
         setDriving(true);
         setAt(n + 1);
         await wait(1300);
@@ -88,8 +88,9 @@ export default function JourneyRoad() {
         await wait(650);
         jumpRef.current = false;
         setJump(false);
+        await wait(60); // let the left transition re-arm before the drive-in
         setHidden(false);
-        await wait(800);
+        await wait(120);
       }
     })();
 
@@ -109,7 +110,8 @@ export default function JourneyRoad() {
   // n+1 points on the road (courses + goal), inset so there is open road
   // before Beginner and after the goal
   const pos = (i) => `${8 + (i / n) * 85}%`;
-  const busPos = at <= -1 ? "2%" : at > n ? "107%" : pos(at);
+  // -1 sits just beyond the left edge so each lap opens with a drive-in
+  const busPos = at <= -1 ? "-5%" : at > n ? "107%" : pos(at);
   const isGoal = at >= n;
   const active = isGoal ? goal : steps[Math.max(at, 0)];
 
