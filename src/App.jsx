@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { LangProvider } from "./i18n.jsx";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
-import { Stats, Advantages, Courses, Unlocks, Pricing, Teachers } from "./components/Sections.jsx";
+import { Stats, Advantages, Courses, Unlocks, EnglishGives, SuccessStories, LevelCheck, Pricing, Teachers } from "./components/Sections.jsx";
 import Results from "./components/Results.jsx";
 import { Testimonials, Location, Faq, Footer } from "./components/Closing.jsx";
 import RegisterPage from "./components/RegisterPage.jsx";
@@ -55,12 +55,14 @@ export default function App() {
             <ContactBand kind="telegram" />
             <Courses />
             <Unlocks />
+            <EnglishGives />
             <Pricing />
             <ContactBand kind="phone" />
             <Teachers />
             <ContactBand kind="instagram" />
             <Results />
-            <ContactBand kind="register" dark />
+            <SuccessStories />
+            <LevelCheck />
             <Testimonials />
             <Location />
             <ContactBand kind="phone" />

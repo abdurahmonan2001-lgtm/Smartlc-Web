@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "../i18n.jsx";
 import results from "../data/results.json";
+import stories from "../data/stories.json";
+import { CONTACT } from "../data/site.js";
 import JourneyRoad from "./JourneyRoad.jsx";
 
 const CARD_ICONS = ["🚀", "🗓️", "👨‍👩‍👧", "🖥️", "📚", "📜"];
@@ -520,6 +522,86 @@ function GoalPicker() {
         </div>
       </div>
     </div>
+  );
+}
+
+/** What English itself gives — count-up tiles, light twin of the stats band. */
+export function EnglishGives() {
+  const { t } = useLang();
+  const e = t.english;
+  return (
+    <section className="section english" id="english">
+      <div className="container">
+        <h2 className="section__title">{e.title}</h2>
+        <p className="section__sub">{e.sub}</p>
+        <div className="stats__grid english__grid">
+          {e.items.map(([v, label]) => (
+            <div className="stats__item" key={label}>
+              <span className="stats__value"><CountUp value={v} /></span>
+              <span className="stats__label">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** Alumni outcomes — renders only once real stories exist in
+ *  src/data/stories.json: [{ name, band, year, outcome: {en, uz, ru} }] */
+export function SuccessStories() {
+  const { t, lang } = useLang();
+  if (!stories.length) return null;
+  return (
+    <section className="section section--alt" id="stories">
+      <div className="container">
+        <h2 className="section__title">{t.stories.title}</h2>
+        <p className="section__sub">{t.stories.sub}</p>
+        <div className="stories__grid">
+          {stories.map((s) => (
+            <article className="story-card" key={s.name}>
+              <div className="story-card__top">
+                <span className="band-chip">{s.band}</span>
+                <strong>{s.name}</strong>
+                {s.year && <em>{s.year}</em>}
+              </div>
+              <p>{s.outcome[lang] ?? s.outcome.en}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** Free level check — the low-commitment first step, after the results. */
+export function LevelCheck() {
+  const { t } = useLang();
+  const lc = t.levelCheck;
+  return (
+    <section className="section" id="level-check">
+      <div className="container">
+        <div className="lcheck">
+          <div className="lcheck__info">
+            <h2 className="section__title">{lc.title}</h2>
+            <p className="lcheck__name">{lc.name}</p>
+            <ul className="lcheck__steps">
+              {lc.steps.map(([icon, text]) => (
+                <li key={text}>
+                  <span aria-hidden="true">{icon}</span>
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lcheck__cta">
+            <a className="btn btn--primary btn--lg" href="/register">{lc.cta} →</a>
+            <span className="lcheck__or">{lc.or}</span>
+            <a className="btn btn--ghost" href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

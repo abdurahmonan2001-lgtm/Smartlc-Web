@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLang } from "../i18n.jsx";
 
 const DWELL = 1050; // ms at a normal stop
-const DWELL_IELTS = 1600; // a beat longer at the exam stop
-const DWELL_END = 2250; // the long pause happens at the goal stop
+const DWELL_END = 2250; // the long pause at the final IELTS stop
 
 function BusSvg() {
   return (
@@ -26,11 +25,9 @@ export default function JourneyRoad() {
   const { t } = useLang();
   const steps = t.courses.steps;
   const n = steps.length;
-  const goal = t.courses.goal;
   // `at` is the bus position: -1 = open road before Beginner, 0..n-1 = course
-  // stops, n = the "Your Goal" stop beyond IELTS, n+1 = rolling off the road.
-  // The bus only ever moves forward; the loop restarts with an instant
-  // (transition-free) jump back to -1.
+  // stops, n = rolling off the road past IELTS. The bus only ever moves
+  // forward; the loop restarts with an instant (transition-free) jump to -1.
   const [at, setAt] = useState(-1);
   const [driving, setDriving] = useState(false);
   const [jump, setJump] = useState(false);
@@ -61,15 +58,8 @@ export default function JourneyRoad() {
           setAt(i);
           await wait(1300); // matches the CSS transition time
           setDriving(false);
-          await wait(i === n - 1 ? DWELL_IELTS : DWELL);
+          await wait(i === n - 1 ? DWELL_END : DWELL);
         }
-        if (!alive) break;
-        // one more hop: the goal beyond IELTS, where the long pause happens
-        setDriving(true);
-        setAt(n);
-        await wait(1300);
-        setDriving(false);
-        await wait(DWELL_END);
         if (!alive) break;
         // ride forward off the road — no reversing. The restart is seamless:
         // fade out beyond the right edge, teleport to just beyond the LEFT
@@ -77,7 +67,7 @@ export default function JourneyRoad() {
         // the next lap's drive-in begins — the bus visibly drives in from
         // the start rather than materialising in place.
         setDriving(true);
-        setAt(n + 1);
+        setAt(n);
         await wait(1300);
         setDriving(false);
         setHidden(true);
@@ -102,18 +92,16 @@ export default function JourneyRoad() {
   useEffect(() => {
     const sc = scrollerRef.current;
     if (!sc || sc.scrollWidth <= sc.clientWidth) return;
-    const k = Math.min(Math.max(at, 0), n);
-    const target = (k / n) * (sc.scrollWidth - 160) - sc.clientWidth / 2 + 80;
+    const k = Math.min(Math.max(at, 0), n - 1);
+    const target = (k / (n - 1)) * (sc.scrollWidth - 160) - sc.clientWidth / 2 + 80;
     sc.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
   }, [at, n]);
 
-  // n+1 points on the road (courses + goal), inset so there is open road
-  // before Beginner and after the goal
-  const pos = (i) => `${8 + (i / n) * 85}%`;
+  // inset the route: open road before Beginner and after IELTS
+  const pos = (i) => `${9 + (i / (n - 1)) * 84}%`;
   // -1 sits just beyond the left edge so each lap opens with a drive-in
-  const busPos = at <= -1 ? "-5%" : at > n ? "107%" : pos(at);
-  const isGoal = at >= n;
-  const active = isGoal ? goal : steps[Math.max(at, 0)];
+  const busPos = at <= -1 ? "-5%" : at >= n ? "107%" : pos(at);
+  const active = steps[Math.min(Math.max(at, 0), n - 1)];
 
   return (
     <div className="road-wrap" ref={sectionRef}>
@@ -136,18 +124,6 @@ export default function JourneyRoad() {
               </span>
             </div>
           ))}
-          {/* the destination beyond IELTS: university, visa, career */}
-          <div
-            className={`road__stop road__stop--goal ${at >= n ? "is-passed is-current" : ""}`}
-            style={{ left: pos(n) }}
-          >
-            <span className="road__sign">🏆</span>
-            <span className="road__pole" aria-hidden="true" />
-            <span className="road__tag">
-              <span className="road__label">{goal.name}</span>
-              <span className="road__sub">{goal.sub}</span>
-            </span>
-          </div>
           <div
             className={`road__bus ${driving ? "is-driving" : ""} ${jump ? "is-jumping" : ""} ${hidden ? "is-hidden" : ""}`}
             style={{ left: busPos }}
@@ -161,9 +137,7 @@ export default function JourneyRoad() {
         <div className="road-detail__top">
           <span className="journey__level">{active.level}</span>
           <h3>{active.name}</h3>
-          {!isGoal && (
-            <span className="journey__dur">{active.dur} {active.dur === 1 ? t.courses.month : t.courses.months}</span>
-          )}
+          <span className="journey__dur">{active.dur} {active.dur === 1 ? t.courses.month : t.courses.months}</span>
         </div>
         <p>{active.d}</p>
       </div>

@@ -66,12 +66,6 @@ const dict = {
       months: "months",
       total: "The full journey from zero: about 16 months of consistent study.",
       registerCta: "Get on the bus — Register",
-      goal: {
-        name: "Your Goal",
-        sub: "🎓 · ✈️ · 💼",
-        level: "IELTS = your key",
-        d: "IELTS isn't the finish line — it's the key that opens doors. Most test takers use their score to win university places and scholarships abroad, qualify for study and work visas, or step into international careers. Whatever your goal is, this bus takes you there.",
-      },
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Your very first step — alphabet, core vocabulary and simple everyday phrases." },
         { name: "Elementary", dur: 3, level: "A2", d: "Build grammar foundations and start speaking in full sentences with confidence." },
@@ -106,6 +100,31 @@ const dict = {
           { icon: "💬", label: "Confident English", band: "B2+", need: "No exam needed — just real conversations without fear.", plan: "General English: Beginner → Pre-IELTS, from 1 to 13 months depending on where you start." },
         ],
       },
+    },
+    english: {
+      title: "What English Gives You",
+      sub: "Even before any exam, the language itself opens the world:",
+      items: [
+        ["1.5 bln+", "people speak English worldwide — talk to 1 in 5 humans"],
+        ["50%", "of everything on the internet is in English"],
+        ["100+", "countries where English connects you"],
+        ["No.1", "language of science, IT and global business"],
+      ],
+    },
+    stories: {
+      title: "After the Certificate",
+      sub: "Where Smart LC students went next:",
+    },
+    levelCheck: {
+      title: "Not sure where to start?",
+      name: "Free 15-minute level check",
+      steps: [
+        ["🗣️", "A short speaking and written check with a teacher"],
+        ["📍", "You learn your exact starting stop on the journey"],
+        ["🗺️", "You leave with a personal road map and timeline"],
+      ],
+      cta: "Book yours — it's free",
+      or: "or call us",
     },
     pricing: {
       title: "One Honest Price",
@@ -264,12 +283,6 @@ const dict = {
       months: "oy",
       total: "Noldan to'liq yo'l: taxminan 16 oy muntazam o'qish.",
       registerCta: "Avtobusga chiqing — Ro'yxatdan o'ting",
-      goal: {
-        name: "Maqsadingiz",
-        sub: "🎓 · ✈️ · 💼",
-        level: "IELTS = kalitingiz",
-        d: "IELTS marra emas — eshiklarni ochadigan kalit. Ko'pchilik o'z bali bilan chet el universitetlariga va grantlarga qabul qilinadi, o'qish va ish vizalarini oladi yoki xalqaro karyerani boshlaydi. Maqsadingiz qanday bo'lmasin — bu avtobus sizni o'sha yerga olib boradi.",
-      },
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Eng birinchi qadam — alifbo, asosiy so'z boyligi va oddiy kundalik iboralar." },
         { name: "Elementary", dur: 3, level: "A2", d: "Grammatika poydevorini quring va to'liq gaplar bilan ishonchli gapirishni boshlang." },
@@ -304,6 +317,31 @@ const dict = {
           { icon: "💬", label: "Erkin ingliz tili", band: "B2+", need: "Imtihon shart emas — shunchaki qo'rquvsiz, erkin suhbatlar.", plan: "General English: Beginner → Pre-IELTS, boshlang'ich darajangizga qarab 1 oydan 13 oygacha." },
         ],
       },
+    },
+    english: {
+      title: "Ingliz tili sizga nima beradi",
+      sub: "Hech qanday imtihonsiz ham tilning o'zi dunyoni ochadi:",
+      items: [
+        ["1.5 mlrd+", "kishi ingliz tilida gaplashadi — har 5 kishidan biri bilan suhbatlashing"],
+        ["50%", "internetdagi barcha ma'lumot ingliz tilida"],
+        ["100+", "mamlakatda ingliz tili sizni bog'laydi"],
+        ["No.1", "fan, IT va global biznes tili"],
+      ],
+    },
+    stories: {
+      title: "Sertifikatdan keyin",
+      sub: "Smart LC talabalari keyin qayerga borishdi:",
+    },
+    levelCheck: {
+      title: "Qayerdan boshlashni bilmayapsizmi?",
+      name: "Bepul 15 daqiqalik daraja tekshiruvi",
+      steps: [
+        ["🗣️", "Ustoz bilan qisqa speaking va yozma tekshiruv"],
+        ["📍", "Yo'ldagi aniq boshlang'ich bekatingizni bilib olasiz"],
+        ["🗺️", "Shaxsiy yo'l xaritasi va muddat bilan chiqasiz"],
+      ],
+      cta: "Band qiling — bu bepul",
+      or: "yoki qo'ng'iroq qiling",
     },
     pricing: {
       title: "Bitta halol narx",
@@ -462,12 +500,6 @@ const dict = {
       months: "месяца",
       total: "Полный путь с нуля: около 16 месяцев регулярных занятий.",
       registerCta: "Садитесь в автобус — Регистрация",
-      goal: {
-        name: "Ваша цель",
-        sub: "🎓 · ✈️ · 💼",
-        level: "IELTS = ваш ключ",
-        d: "IELTS — не финиш, а ключ, открывающий двери. Чаще всего балл нужен для поступления и стипендий в зарубежных университетах, учебных и рабочих виз или старта международной карьеры. Какой бы ни была ваша цель — этот автобус довезёт вас до неё.",
-      },
       steps: [
         { name: "Beginner", dur: 1, level: "A1", d: "Самый первый шаг — алфавит, базовая лексика и простые повседневные фразы." },
         { name: "Elementary", dur: 3, level: "A2", d: "Постройте грамматический фундамент и начните уверенно говорить полными предложениями." },
@@ -502,6 +534,31 @@ const dict = {
           { icon: "💬", label: "Свободный английский", band: "B2+", need: "Экзамен не нужен — просто живое общение без страха.", plan: "General English: Beginner → Pre-IELTS, от 1 до 13 месяцев в зависимости от старта." },
         ],
       },
+    },
+    english: {
+      title: "Что даёт английский",
+      sub: "Даже без всяких экзаменов сам язык открывает мир:",
+      items: [
+        ["1.5 млрд+", "человек говорят по-английски — каждый пятый на планете"],
+        ["50%", "всего контента в интернете — на английском"],
+        ["100+", "стран, где английский вас соединяет"],
+        ["No.1", "язык науки, IT и глобального бизнеса"],
+      ],
+    },
+    stories: {
+      title: "После сертификата",
+      sub: "Куда студенты Smart LC пошли дальше:",
+    },
+    levelCheck: {
+      title: "Не знаете, с чего начать?",
+      name: "Бесплатная 15-минутная проверка уровня",
+      steps: [
+        ["🗣️", "Короткая устная и письменная проверка с преподавателем"],
+        ["📍", "Узнаете свою точную стартовую остановку на пути"],
+        ["🗺️", "Уйдёте с личной картой пути и сроками"],
+      ],
+      cta: "Записаться — это бесплатно",
+      or: "или позвоните нам",
     },
     pricing: {
       title: "Одна честная цена",

@@ -598,12 +598,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .road__stop.is-current .road__tag { transform: scale(1.12); }
 .road__stop.is-current .road__label { color: var(--green-dark); }
 .road__stop--ielts .road__sub { color: #9a7a24; opacity: 1; }
-/* the gold destination stop beyond IELTS */
-.road__stop--goal .road__sign { font-size: 21px; }
-.road__stop--goal .road__pole { background: var(--gold); }
-.road__stop--goal .road__label { color: #9a7a24; }
-.road__stop--goal.is-current .road__label { color: #7a5f14; }
-.road__stop--goal .road__sub { opacity: 1; letter-spacing: 0.06em; }
 .road__bus {
   position: absolute; top: 116px; transform: translateX(-50%); z-index: 3;
   transition: left 1.3s cubic-bezier(0.45, 0.05, 0.35, 1), opacity 0.45s ease;
@@ -786,6 +780,48 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .board__band { margin-top: 2px; }
   .board__status { display: none; }
   .board__head { padding: 13px 18px; letter-spacing: 0.22em; }
+}
+
+/* "What English gives" — light stat tiles */
+.english__grid { margin-top: 44px; }
+.english .stats__item {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 26px 18px; box-shadow: var(--shadow);
+}
+.english .stats__value { color: var(--green-dark); }
+.english .stats__label { color: var(--ink-2); }
+
+/* success stories (renders once stories.json has entries) */
+.stories__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+.story-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px 24px; box-shadow: var(--shadow);
+}
+.story-card__top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.story-card__top strong { font-size: 15.5px; font-weight: 800; }
+.story-card__top em { font-style: normal; margin-left: auto; color: var(--ink-3); font-size: 13px; font-weight: 700; }
+.story-card p { color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+@media (max-width: 860px) { .stories__grid { grid-template-columns: 1fr; } }
+
+/* free level check */
+.lcheck {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;
+  background: linear-gradient(160deg, #ffffff 55%, #e2f5ee 100%);
+  border: 1.5px solid rgba(0, 148, 114, 0.35); border-radius: 24px;
+  padding: 44px 48px; box-shadow: var(--shadow);
+}
+.lcheck .section__title { text-align: left; margin-bottom: 6px; }
+.lcheck__name { color: var(--green-dark); font-weight: 800; font-size: 16.5px; margin-bottom: 18px; }
+.lcheck__steps { list-style: none; padding: 0; display: grid; gap: 12px; }
+.lcheck__steps li { display: flex; align-items: flex-start; gap: 12px; color: var(--ink-2); font-size: 14.5px; font-weight: 600; }
+.lcheck__steps li span { font-size: 19px; line-height: 1.2; }
+.lcheck__cta { display: grid; gap: 10px; justify-items: center; text-align: center; }
+.lcheck__cta .btn--lg { width: 100%; }
+.lcheck__or { color: var(--ink-3); font-size: 13px; font-weight: 700; }
+@media (max-width: 860px) {
+  .lcheck { grid-template-columns: 1fr; gap: 24px; padding: 30px 22px; }
+  .lcheck .section__title { text-align: center; }
+  .lcheck__name { text-align: center; }
 }
 
 /* goal picker under the departures board */
