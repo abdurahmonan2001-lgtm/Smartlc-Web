@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Arial, sans-serif">
+  <rect width="640" height="400" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#0c1f1d">Weekly visits to Northfield Public Library by age group, 2010 and 2020</text>
+
+  <!-- axes -->
+  <line x1="70" y1="330" x2="600" y2="330" stroke="#0c1f1d" stroke-width="2"/>
+  <line x1="70" y1="60" x2="70" y2="330" stroke="#0c1f1d" stroke-width="2"/>
+
+  <!-- y labels + gridlines (visits) -->
+  <g font-size="12" fill="#435d59">
+    <text x="60" y="335" text-anchor="end">0</text><line x1="70" y1="330" x2="600" y2="330" stroke="#e2e8f0"/>
+    <text x="60" y="268" text-anchor="end">500</text><line x1="70" y1="263" x2="600" y2="263" stroke="#e2e8f0"/>
+    <text x="60" y="201" text-anchor="end">1000</text><line x1="70" y1="196" x2="600" y2="196" stroke="#e2e8f0"/>
+    <text x="60" y="134" text-anchor="end">1500</text><line x1="70" y1="129" x2="600" y2="129" stroke="#e2e8f0"/>
+    <text x="60" y="67" text-anchor="end">2000</text><line x1="70" y1="62" x2="600" y2="62" stroke="#e2e8f0"/>
+  </g>
+  <text x="24" y="200" font-size="12" fill="#435d59" transform="rotate(-90 24 200)">Visits per week</text>
+
+  <!-- bars: scale 500 visits = 67px; base y=330 -->
+  <!-- Under 15: 2010=1600, 2020=900 -->
+  <rect x="100" y="115.6" width="40" height="214.4" fill="#0a4d49"/>
+  <rect x="145" y="209.4" width="40" height="120.6" fill="#d4a843"/>
+  <!-- 15–24: 2010=1400, 2020=700 -->
+  <rect x="230" y="142.4" width="40" height="187.6" fill="#0a4d49"/>
+  <rect x="275" y="236.2" width="40" height="93.8" fill="#d4a843"/>
+  <!-- 25–59: 2010=800, 2020=1100 -->
+  <rect x="360" y="222.8" width="40" height="107.2" fill="#0a4d49"/>
+  <rect x="405" y="182.6" width="40" height="147.4" fill="#d4a843"/>
+  <!-- 60+: 2010=600, 2020=1700 -->
+  <rect x="490" y="249.6" width="40" height="80.4" fill="#0a4d49"/>
+  <rect x="535" y="102.2" width="40" height="227.8" fill="#d4a843"/>
+
+  <!-- x labels -->
+  <g font-size="13" fill="#0c1f1d" text-anchor="middle">
+    <text x="142" y="352">Under 15</text>
+    <text x="272" y="352">15–24</text>
+    <text x="402" y="352">25–59</text>
+    <text x="532" y="352">60 and over</text>
+  </g>
+
+  <!-- legend -->
+  <rect x="240" y="372" width="14" height="14" fill="#0a4d49"/>
+  <text x="260" y="384" font-size="13" fill="#0c1f1d">2010</text>
+  <rect x="320" y="372" width="14" height="14" fill="#d4a843"/>
+  <text x="340" y="384" font-size="13" fill="#0c1f1d">2020</text>
+</svg>

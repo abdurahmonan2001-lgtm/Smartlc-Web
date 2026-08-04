@@ -1,0 +1,1082 @@
+[
+  {
+    "name": "Egamova Farangis",
+    "band": "8.0",
+    "date": "19.12.2025",
+    "img": "/results/8.0/egamova-farangis.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "9.0",
+      "w": "7.0",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Aziza Abduvaliyeva",
+    "band": "8.0",
+    "date": "21.11.2025",
+    "img": "/results/8.0/aziza-abduvaliyeva.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Mansurov Shodiyorbek",
+    "band": "8.0",
+    "date": "22.08.2025",
+    "img": "/results/8.0/mansurov-shodiyorbek.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Toshkhujaeva Gulhayo",
+    "band": "8.0",
+    "date": "09.05.2024",
+    "img": "/results/8.0/toshkhujaeva-gulhayo.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "8.0"
+    }
+  },
+  {
+    "name": "Jaloliddinov Fazliddin",
+    "band": "8.0",
+    "date": "10.04.2024",
+    "img": "/results/8.0/jaloliddinov-fazliddin.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Mirzaev Akbar",
+    "band": "8.0",
+    "date": "18.02.2023",
+    "img": "/results/8.0/mirzaev-akbar.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "9.0",
+      "w": "6.0",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Ozodov Sultonmurod",
+    "band": "8.0",
+    "date": "01.12.2022",
+    "img": "/results/8.0/ozodov-sultonmurod.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "9.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Bakhtiyorova Sevara",
+    "band": "8.0",
+    "date": "08.04.2022",
+    "img": "/results/8.0/bakhtiyorova-sevara.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Xujamuratova Zarnigor",
+    "band": "7.5",
+    "date": "13.03.2026",
+    "img": "/results/7.5/xujamuratova-zarnigor.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Erkinov Saidkomil",
+    "band": "7.5",
+    "date": "25.12.2025",
+    "img": "/results/7.5/erkinov-saidkomil.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Yusupova Raykhona",
+    "band": "7.5",
+    "date": "15.11.2025",
+    "img": "/results/7.5/yusupova-raykhona.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.5",
+      "w": "7.0",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Maxmudxo'jayev Javokhirkhuja",
+    "band": "7.5",
+    "date": "14.09.2025",
+    "img": "/results/7.5/maxmudxojayev-javokhirkhuja.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Sattarova Nodira",
+    "band": "7.5",
+    "date": "22.08.2025",
+    "img": "/results/7.5/sattarova-nodira.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Maruf Gulov",
+    "band": "7.5",
+    "date": "13.08.2025",
+    "img": "/results/7.5/maruf-gulov.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Maqsudov Olloyor",
+    "band": "7.5",
+    "date": "21.07.2025",
+    "img": "/results/7.5/maqsudov-olloyor.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Nasriddinov Abdurashid",
+    "band": "7.5",
+    "date": "06.07.2025",
+    "img": "/results/7.5/nasriddinov-abdurashid.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Qurbonmurodov Diyorbek",
+    "band": "7.5",
+    "date": "20.03.2025",
+    "img": "/results/7.5/qurbonmurodov-diyorbek.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Bozorboyeva Mukhlisa",
+    "band": "7.5",
+    "date": "19.11.2024",
+    "img": "/results/7.5/bozorboyeva-mukhlisa.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Mustafoyeva Ezozabonu",
+    "band": "7.5",
+    "date": "17.09.2024",
+    "img": "/results/7.5/mustafoyeva-ezozabonu.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Tolibov Ozodbek",
+    "band": "7.5",
+    "date": "29.08.2024",
+    "img": "/results/7.5/tolibov-ozodbek.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Sharobiddinov Muhammaddiyor",
+    "band": "7.5",
+    "date": "04.07.2024",
+    "img": "/results/7.5/sharobiddinov-muhammaddiyor.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "7.5",
+      "w": "7.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Mansurov Shodiyorbek",
+    "band": "7.5",
+    "date": "21.03.2024",
+    "img": "/results/7.5/mansurov-shodiyorbek.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.0",
+      "w": "7.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Jaloliddinov Fazliddin",
+    "band": "7.5",
+    "date": "06.02.2024",
+    "img": "/results/7.5/jaloliddinov-fazliddin.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Fayzullayev Jamoliddin",
+    "band": "7.5",
+    "date": "07.12.2023",
+    "img": "/results/7.5/fayzullayev-jamoliddin.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "8.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Sobirjonov Muhammadali",
+    "band": "7.5",
+    "date": "30.11.2023",
+    "img": "/results/7.5/sobirjonov-muhammadali.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Abduvaliyeva Aziza",
+    "band": "7.5",
+    "date": "09.11.2023",
+    "img": "/results/7.5/abduvaliyeva-aziza.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Toshpulatov Bobur",
+    "band": "7.5",
+    "date": "02.11.2023",
+    "img": "/results/7.5/toshpulatov-bobur.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Abduganiyeva Zebuniso",
+    "band": "7.5",
+    "date": "05.10.2023",
+    "img": "/results/7.5/abduganiyeva-zebuniso.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Abdulloyev Oybek",
+    "band": "7.5",
+    "date": "07.09.2023",
+    "img": "/results/7.5/abdulloyev-oybek.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Basarov Bobur",
+    "band": "7.5",
+    "date": "10.08.2023",
+    "img": "/results/7.5/basarov-bobur.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "7.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Mirzorakhmonov Nurmuhammad",
+    "band": "7.5",
+    "date": "03.08.2023",
+    "img": "/results/7.5/mirzorakhmonov-nurmuhammad.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Abdibaeva Juldiz",
+    "band": "7.5",
+    "date": "06.07.2023",
+    "img": "/results/7.5/abdibaeva-juldiz.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Sultonov Iqboljon",
+    "band": "7.5",
+    "date": "30.12.2021",
+    "img": "/results/7.5/sultonov-iqboljon.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Mirzaev Akbar",
+    "band": "7.5",
+    "date": "23.12.2020",
+    "img": "/results/7.5/mirzaev-akbar.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "8.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Sardor Muzaffarov",
+    "band": "7.0",
+    "date": "20.02.2026",
+    "img": "/results/7.0/sardor-muzaffarov.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Botir Safarov",
+    "band": "7.0",
+    "date": "25.02.2026",
+    "img": "/results/7.0/botir-safarov.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Ahror Rahmatullayev",
+    "band": "7.0",
+    "date": "22.02.2026",
+    "img": "/results/7.0/ahror-rahmatullayev.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Shodiyorova Marjona",
+    "band": "7.0",
+    "date": "25.01.2026",
+    "img": "/results/7.0/shodiyorova-marjona.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.5",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Akhmadjon Abdumutalibov",
+    "band": "7.0",
+    "date": "14.12.2026",
+    "img": "/results/7.0/akhmadjon-abdumutalibov.webp",
+    "scores": {
+      "l": "6.5",
+      "r": "7.5",
+      "w": "7.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Toirov Zafar",
+    "band": "7.0",
+    "date": "12.10.2025",
+    "img": "/results/7.0/toirov-zafar.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Marjona Yuldasheva",
+    "band": "7.0",
+    "date": "08.08.2025",
+    "img": "/results/7.0/marjona-yuldasheva.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Mirolimov Isomiddin",
+    "band": "7.0",
+    "date": "05.06.2025",
+    "img": "/results/7.0/mirolimov-isomiddin.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "7.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Xushvaqova Gulirano",
+    "band": "7.0",
+    "date": "18.03.2025",
+    "img": "/results/7.0/xushvaqova-gulirano.webp",
+    "scores": {
+      "l": "6.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Jo'rayev Xasanboy",
+    "band": "7.0",
+    "date": "18.03.2025",
+    "img": "/results/7.0/jorayev-xasanboy.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Islomjonov Jaxongir",
+    "band": "7.0",
+    "date": "03.01.2025",
+    "img": "/results/7.0/islomjonov-jaxongir.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Boymuxammedov Baxtiyor",
+    "band": "7.0",
+    "date": "03.01.2025",
+    "img": "/results/7.0/boymuxammedov-baxtiyor.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Babaxonova Nozanin",
+    "band": "7.0",
+    "date": "03.01.2025",
+    "img": "/results/7.0/babaxonova-nozanin.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "6.5",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Saidov Mirzohid",
+    "band": "7.0",
+    "date": "12.12.2024",
+    "img": "/results/7.0/saidov-mirzohid.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "8.0",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "G'ulomjonova DIlorom",
+    "band": "7.0",
+    "date": "09.12.2024",
+    "img": "/results/7.0/gulomjonova-dilorom.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Islomova Shahrizoda",
+    "band": "7.0",
+    "date": "10.10.2024",
+    "img": "/results/7.0/islomova-shahrizoda.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Toshtemirov Bekhruz",
+    "band": "7.0",
+    "date": "29.08.2024",
+    "img": "/results/7.0/toshtemirov-bekhruz.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "6.0",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Raximova Shaxnozabonu",
+    "band": "7.0",
+    "date": "29.08.2024",
+    "img": "/results/7.0/raximova-shaxnozabonu.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Ravshanova Sevinch",
+    "band": "7.0",
+    "date": "29.08.2024",
+    "img": "/results/7.0/ravshanova-sevinch.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "6.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Abdurashidov Laziz",
+    "band": "7.0",
+    "date": "04.07.2024",
+    "img": "/results/7.0/abdurashidov-laziz.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Madjitova Masturabonu",
+    "band": "7.0",
+    "date": "09.05.2024",
+    "img": "/results/7.0/madjitova-masturabonu.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Abdubositov Khusan",
+    "band": "7.0",
+    "date": "09.05.2024",
+    "img": "/results/7.0/abdubositov-khusan.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Anvarova Feruzabonu",
+    "band": "7.0",
+    "date": "19.03.2024",
+    "img": "/results/7.0/anvarova-feruzabonu.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "5.5",
+      "w": "7.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Yangiboev Zukhriddin",
+    "band": "7.0",
+    "date": "07.03.2024",
+    "img": "/results/7.0/yangiboev-zukhriddin.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Ibodullayeva Mumtozakhon",
+    "band": "7.0",
+    "date": "07.03.2024",
+    "img": "/results/7.0/ibodullayeva-mumtozakhon.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.5",
+      "w": "6.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Usmonova Dilbar",
+    "band": "7.0",
+    "date": "07.12.2023",
+    "img": "/results/7.0/usmonova-dilbar.webp",
+    "scores": {
+      "l": "6.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Ibragimova Shakhzoda",
+    "band": "7.0",
+    "date": "30.11.2023",
+    "img": "/results/7.0/ibragimova-shakhzoda.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Chimpulatov Bekzod",
+    "band": "7.0",
+    "date": "16.11.2023",
+    "img": "/results/7.0/chimpulatov-bekzod.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Yergesheva Shohida",
+    "band": "7.0",
+    "date": "19.10.2023",
+    "img": "/results/7.0/yergesheva-shohida.webp",
+    "scores": {
+      "l": "9.0",
+      "r": "7.5",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Khasanov Sardor",
+    "band": "7.0",
+    "date": "13.09.2023",
+    "img": "/results/7.0/khasanov-sardor.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Ganiyev Abdunosir",
+    "band": "7.0",
+    "date": "13.09.2023",
+    "img": "/results/7.0/ganiyev-abdunosir.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Abdurakhmonov Khusan",
+    "band": "7.0",
+    "date": "12.09.2023",
+    "img": "/results/7.0/abdurakhmonov-khusan.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.5",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Ergasheva Marjona",
+    "band": "7.0",
+    "date": "08.09.2023",
+    "img": "/results/7.0/ergasheva-marjona.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Ravshanova Shahrizoda",
+    "band": "7.0",
+    "date": "07.09.2023",
+    "img": "/results/7.0/ravshanova-shahrizoda.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "7.0",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Ruzmatova Nigora",
+    "band": "7.0",
+    "date": "31.08.2023",
+    "img": "/results/7.0/ruzmatova-nigora.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Otaboeva Donokhon",
+    "band": "7.0",
+    "date": "31.08.2023",
+    "img": "/results/7.0/otaboeva-donokhon.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "5.5",
+      "s": "7.5"
+    }
+  },
+  {
+    "name": "Raximov Gulom",
+    "band": "7.0",
+    "date": "24.08.2023",
+    "img": "/results/7.0/raximov-gulom.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Maqsudov Olloyor",
+    "band": "7.0",
+    "date": "21.06.2023",
+    "img": "/results/7.0/maqsudov-olloyor.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Tulkinova Ezoza",
+    "band": "7.0",
+    "date": "15.06.2023",
+    "img": "/results/7.0/tulkinova-ezoza.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "6.5",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Normaxamatova Makhliyo",
+    "band": "7.0",
+    "date": "15.06.2023",
+    "img": "/results/7.0/normaxamatova-makhliyo.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Vasliddinova Kamola",
+    "band": "7.0",
+    "date": "29.12.2022",
+    "img": "/results/7.0/vasliddinova-kamola.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "8.5",
+      "w": "6.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Ismoilov Abdulvoxid",
+    "band": "7.0",
+    "date": "29.12.2022",
+    "img": "/results/7.0/ismoilov-abdulvoxid.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "6.0",
+      "w": "5.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "O'razova Sabina",
+    "band": "7.0",
+    "date": "15.12.2022",
+    "img": "/results/7.0/orazova-sabina.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "6.5",
+      "w": "6.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Sa'dullayev Khamrobek",
+    "band": "7.0",
+    "date": "08.12.2022",
+    "img": "/results/7.0/sadullayev-khamrobek.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.5",
+      "w": "5.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Nuraliyev Javohirbek",
+    "band": "7.0",
+    "date": "08.12.2022",
+    "img": "/results/7.0/nuraliyev-javohirbek.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Kuvatov Fatxulloh",
+    "band": "7.0",
+    "date": "08.12.2022",
+    "img": "/results/7.0/kuvatov-fatxulloh.webp",
+    "scores": {
+      "l": "8.0",
+      "r": "8.0",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Fayzullayev Abdulloxon",
+    "band": "7.0",
+    "date": "08.12.2022",
+    "img": "/results/7.0/fayzullayev-abdulloxon.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Abdulbokieva Rakhnomokhon",
+    "band": "7.0",
+    "date": "08.12.2022",
+    "img": "/results/7.0/abdulbokieva-rakhnomokhon.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Toshkhujaeva Gulkhayo",
+    "band": "7.0",
+    "date": "08.04.2022",
+    "img": "/results/7.0/toshkhujaeva-gulkhayo.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.0",
+      "w": "7.0",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Kholboeva Zulfizar",
+    "band": "7.0",
+    "date": "08.04.2022",
+    "img": "/results/7.0/kholboeva-zulfizar.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "6.5",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Sattarova Nodira",
+    "band": "7.0",
+    "date": "11.03.2022",
+    "img": "/results/7.0/sattarova-nodira.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "8.5",
+      "w": "7.0",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Rustamova Shokhzodabonu",
+    "band": "7.0",
+    "date": "11.03.2022",
+    "img": "/results/7.0/rustamova-shokhzodabonu.webp",
+    "scores": {
+      "l": "7.5",
+      "r": "7.5",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Asrorov Mukhammadkhon",
+    "band": "7.0",
+    "date": "11.03.2022",
+    "img": "/results/7.0/asrorov-mukhammadkhon.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "7.0"
+    }
+  },
+  {
+    "name": "Iskandarova Kamolakhon",
+    "band": "7.0",
+    "date": "24.12.2021",
+    "img": "/results/7.0/iskandarova-kamolakhon.webp",
+    "scores": {
+      "l": "7.0",
+      "r": "7.0",
+      "w": "6.5",
+      "s": "6.5"
+    }
+  },
+  {
+    "name": "Sultonov Iqboljon",
+    "band": "7.0",
+    "date": "25.08.2021",
+    "img": "/results/7.0/sultonov-iqboljon.webp",
+    "scores": {
+      "l": "8.5",
+      "r": "6.5",
+      "w": "6.0",
+      "s": "6.0"
+    }
+  },
+  {
+    "name": "Ilkhomova Komilabonu",
+    "band": "7.0",
+    "date": "09.07.2021",
+    "img": "/results/7.0/ilkhomova-komilabonu.webp",
+    "scores": {
+      "l": "6.0",
+      "r": "7.0",
+      "w": "7.5",
+      "s": "6.5"
+    }
+  }
+]

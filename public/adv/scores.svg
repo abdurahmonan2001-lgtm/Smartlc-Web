@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a5a51"/>
+      <stop offset="0.6" stop-color="#002b2a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0cd77"/>
+      <stop offset="1" stop-color="#d4a843"/>
+    </linearGradient>
+    <linearGradient id="em" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00c896"/>
+      <stop offset="1" stop-color="#009472"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <circle cx="800" cy="60" r="180" fill="#00b389" opacity="0.12"/>
+  <circle cx="60" cy="500" r="140" fill="#d4a843" opacity="0.10"/>
+
+  <text x="450" y="96" text-anchor="middle" font-size="34" font-weight="bold" fill="#a9c4bf" letter-spacing="6">OUR STUDENTS' IELTS</text>
+
+  <!-- podium: 7.0 / 7.5 / 8.0 -->
+  <!-- 7.0 -->
+  <rect x="130" y="240" width="170" height="220" rx="20" fill="url(#em)"/>
+  <text x="215" y="215" text-anchor="middle" font-size="52" font-weight="bold" fill="#ffffff">7.0</text>
+  <text x="215" y="320" text-anchor="middle" font-size="44" font-weight="bold" fill="#04352c">56</text>
+  <text x="215" y="352" text-anchor="middle" font-size="19" fill="#04352c">students</text>
+
+  <!-- 7.5 -->
+  <rect x="365" y="190" width="170" height="270" rx="20" fill="url(#em)"/>
+  <text x="450" y="165" text-anchor="middle" font-size="52" font-weight="bold" fill="#ffffff">7.5</text>
+  <text x="450" y="290" text-anchor="middle" font-size="44" font-weight="bold" fill="#04352c">26</text>
+  <text x="450" y="322" text-anchor="middle" font-size="19" fill="#04352c">students</text>
+
+  <!-- 8.0 (gold, tallest) -->
+  <rect x="600" y="140" width="170" height="320" rx="20" fill="url(#gold)"/>
+  <text x="685" y="115" text-anchor="middle" font-size="52" font-weight="bold" fill="#f0cd77">8.0</text>
+  <text x="685" y="260" text-anchor="middle" font-size="44" font-weight="bold" fill="#3d2f05">8</text>
+  <text x="685" y="292" text-anchor="middle" font-size="19" fill="#3d2f05">students</text>
+  <text x="685" y="180" text-anchor="middle" font-size="24" fill="#3d2f05">★</text>
+
+  <rect x="130" y="470" width="640" height="4" rx="2" fill="#0a4d49"/>
+  <text x="450" y="520" text-anchor="middle" font-size="26" font-weight="bold" fill="#d4a843">90+ official results · every score verifiable</text>
+</svg>
