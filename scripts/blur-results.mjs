@@ -29,13 +29,32 @@ const OVERRIDES = {
   ],
 };
 
+// EXTRA rects are applied on top of the standard/override set.
+// `face: true` uses a much harder downscale so the person is unrecognizable.
+const EXTRA = {
+  "8.0/aziza-abduvaliyeva.webp": [
+    { x: 0.75, y: 0.205, w: 0.215, h: 0.152, face: true }, // candidate photo (blurred on request)
+  ],
+  "7.5/abduvaliyeva-aziza.webp": [
+    { x: 0.724, y: 0.196, w: 0.207, h: 0.152, face: true }, // same student, earlier scan
+  ],
+};
+
+// optional CLI filter: `node scripts/blur-results.mjs aziza` touches only
+// matching files (avoids a lossy re-encode of untouched certificates)
+const filter = process.argv[2];
+
 let done = 0;
 for (const band of readdirSync(ROOT)) {
   for (const f of readdirSync(join(ROOT, band))) {
+    if (filter && !f.includes(filter)) continue;
     const path = join(ROOT, band, f);
     const src = readFileSync(path);
     const { width, height } = await sharp(src).metadata();
-    const rects = OVERRIDES[`${band}/${f}`] ?? STANDARD;
+    const rects = [
+      ...(OVERRIDES[`${band}/${f}`] ?? STANDARD),
+      ...(EXTRA[`${band}/${f}`] ?? []),
+    ];
 
     const overlays = [];
     for (const r of rects) {
@@ -47,11 +66,15 @@ for (const band of readdirSync(ROOT)) {
       // looks gently out of focus instead of showing harsh redaction blocks.
       // (downscale first so the blur is irreversible even at high sigma zoom)
       const tiny = await sharp(src).extract({ left, top, width: w, height: h })
-        .resize(Math.max(12, Math.round(w / 14)), Math.max(6, Math.round(h / 6)), { fit: "fill" })
+        .resize(
+          r.face ? 10 : Math.max(12, Math.round(w / 14)),
+          r.face ? 12 : Math.max(6, Math.round(h / 6)),
+          { fit: "fill" }
+        )
         .toBuffer();
       const region = await sharp(tiny)
         .resize(w, h, { fit: "fill" })
-        .blur(6)
+        .blur(r.face ? 10 : 6)
         .toBuffer();
       overlays.push({ input: region, left, top });
     }
@@ -60,4 +83,4 @@ for (const band of readdirSync(ROOT)) {
     done++;
   }
 }
-console.log(`${done} certificates redacted`);
+console.log(`${done} certificate(s) redacted${filter ? ` (filter: ${filter})` : ""}`);
