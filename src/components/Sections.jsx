@@ -25,7 +25,7 @@ export function useIsMobile(bp = 860) {
 export function Pager({ slides, className = "" }) {
   const [slide, setSlide] = useState(0);
   const lastTouchRef = useRef(0);
-  const swipeRef = useRef(0);
+  const frameRef = useRef(null);
   const n = slides.length;
 
   useEffect(() => {
@@ -36,6 +36,30 @@ export function Pager({ slides, className = "" }) {
     return () => clearInterval(iv);
   }, [n]);
 
+  // Native swipe listeners: horizontal swipes page back/forward, vertical
+  // flicks pass through untouched so page scrolling never hijacks a slide.
+  // Interaction only DELAYS autoplay (6s) — it never stops it.
+  useEffect(() => {
+    const el = frameRef.current;
+    if (!el) return;
+    let sx = 0, sy = 0;
+    const onStart = (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; };
+    const onEnd = (e) => {
+      const dx = e.changedTouches[0].clientX - sx;
+      const dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        lastTouchRef.current = Date.now();
+        setSlide((s) => (((s + (dx < 0 ? 1 : -1)) % n) + n) % n);
+      }
+    };
+    el.addEventListener("touchstart", onStart, { passive: true });
+    el.addEventListener("touchend", onEnd, { passive: true });
+    return () => {
+      el.removeEventListener("touchstart", onStart);
+      el.removeEventListener("touchend", onEnd);
+    };
+  }, [n]);
+
   const go = (i) => {
     lastTouchRef.current = Date.now();
     setSlide(((i % n) + n) % n);
@@ -43,14 +67,7 @@ export function Pager({ slides, className = "" }) {
 
   return (
     <div className={`adv-pager ${className}`}>
-      <div
-        className="adv-pager__frame"
-        onTouchStart={(e) => { swipeRef.current = e.touches[0].clientX; }}
-        onTouchEnd={(e) => {
-          const dx = e.changedTouches[0].clientX - swipeRef.current;
-          if (Math.abs(dx) > 40) go(slide + (dx < 0 ? 1 : -1));
-        }}
-      >
+      <div className="adv-pager__frame" ref={frameRef}>
         {slides.map((s, i) => (
           <div className={`adv-slide ${i === slide ? "is-active" : ""}`} key={i} aria-hidden={i !== slide}>
             {s}
@@ -157,6 +174,17 @@ function WeekStrip() {
 // photo card index -> overlay badge key in t.adv.badges
 const CARD_BADGES = { 3: "classes", 4: "oxford" };
 
+// card index -> the section that elaborates on it; tapping the card goes
+// there (same tap-through behaviour as the results card). "/#..." form so
+// the links also work from the /register pager.
+const CARD_LINKS = {
+  0: "/#courses", // 1-month fast start -> the journey
+  1: "/#pricing", // weekly teacher/mentor rhythm -> listed in what's included
+  3: "/#teachers", // small classes -> who teaches them
+  4: "/#faq", // Oxford program -> materials answer in the FAQ
+  5: "/#results", // score podium -> the certificates
+};
+
 /** Band-score column chart for the results card, computed from the real
  *  manifest. Column heights use a sqrt scale so the gold 8.0 column stays
  *  readable next to the much larger 7.0 group. */
@@ -220,8 +248,28 @@ export function AdvCarousel({ mode = "track" }) {
     const track = trackRef.current;
     if (!track) return;
     const touch = () => { lastTouchRef.current = Date.now(); };
-    const events = ["pointerdown", "wheel", "touchstart", "pointerover"];
-    for (const ev of events) track.addEventListener(ev, touch, { passive: true });
+
+    // Pause only for REAL carousel interaction. Vertical page scrolling that
+    // merely passes over the cards must never stop the autoplay, so touch
+    // pauses only once a swipe proves horizontal, wheel only on horizontal
+    // deltas, and the mouse only while it is actually moving over the track
+    // (pointerover would re-fire as cards drift under a parked cursor and
+    // stall the loop forever).
+    let sx = 0, sy = 0, horizontal = false;
+    const onTouchStart = (e) => {
+      sx = e.touches[0].clientX; sy = e.touches[0].clientY; horizontal = false;
+    };
+    const onTouchMove = (e) => {
+      const dx = Math.abs(e.touches[0].clientX - sx);
+      const dy = Math.abs(e.touches[0].clientY - sy);
+      if (horizontal || (dx > 8 && dx > dy)) { horizontal = true; touch(); }
+    };
+    const onWheel = (e) => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) touch(); };
+    const onPointerMove = (e) => { if (e.pointerType === "mouse") touch(); };
+    track.addEventListener("touchstart", onTouchStart, { passive: true });
+    track.addEventListener("touchmove", onTouchMove, { passive: true });
+    track.addEventListener("wheel", onWheel, { passive: true });
+    track.addEventListener("pointermove", onPointerMove, { passive: true });
 
     const isTouch = matchMedia("(hover: none)").matches;
     let raf, iv;
@@ -229,10 +277,14 @@ export function AdvCarousel({ mode = "track" }) {
     if (isTouch) {
       iv = setInterval(() => {
         if (Date.now() - lastTouchRef.current < 5000 || document.hidden) return;
+        const card = track.querySelector(".adv-card");
+        if (!card) return;
+        const step = card.offsetWidth + 20;
         const half = track.scrollWidth / 2;
         if (track.scrollLeft >= half) track.scrollLeft -= half; // invisible loop reset
-        const card = track.querySelector(".adv-card");
-        if (card) track.scrollBy({ left: card.offsetWidth + 20, behavior: "smooth" });
+        // align to the card grid so a manual swipe can never derail autoplay
+        const next = (Math.round(track.scrollLeft / step) + 1) * step;
+        track.scrollTo({ left: next, behavior: "smooth" });
       }, 5000);
     } else {
       const drift = () => {
@@ -250,7 +302,10 @@ export function AdvCarousel({ mode = "track" }) {
     return () => {
       if (raf) cancelAnimationFrame(raf);
       if (iv) clearInterval(iv);
-      for (const ev of events) track.removeEventListener(ev, touch);
+      track.removeEventListener("touchstart", onTouchStart);
+      track.removeEventListener("touchmove", onTouchMove);
+      track.removeEventListener("wheel", onWheel);
+      track.removeEventListener("pointermove", onPointerMove);
     };
   }, []);
 
@@ -313,16 +368,18 @@ export function AdvCarousel({ mode = "track" }) {
             )}
           </>
         );
+        const link = CARD_LINKS[i];
         const cls = ["adv-card"];
         if (i === 0) cls.push("adv-card--fast");
         if (i === 1) cls.push("adv-card--week");
         if (i === 2) cls.push("adv-card--parent-app");
         if (i === 3) cls.push("adv-card--classes");
         if (i === 4) cls.push("adv-card--oxford");
-        if (i === 5) cls.push("adv-card--results", "adv-card--link");
+        if (i === 5) cls.push("adv-card--results");
+        if (link) cls.push("adv-card--link");
         return (
           <article className={cls.join(" ")} key={`${card.t}-${copy}`}>
-            {i === 5 ? <a href="#results">{inner}</a> : inner}
+            {link ? <a href={link}>{inner}</a> : inner}
           </article>
         );
       }),

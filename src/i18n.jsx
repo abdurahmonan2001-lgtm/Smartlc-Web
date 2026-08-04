@@ -157,7 +157,7 @@ const dict = {
       title: "Frequently Asked Questions",
       items: [
         { q: "How do I start studying at Smart LC?", a: "Message us on Telegram or call us. We'll determine your current level and place you in the right group so you never study material that's too easy or too hard." },
-        { q: "I'm a complete beginner. Can I still aim for IELTS?", a: "Yes — that's exactly what our journey is for. You start at Beginner and climb seven steps to IELTS Proficiency. The full path from zero takes about 19 months." },
+        { q: "I'm a complete beginner. Can I still aim for IELTS?", a: "Yes — that's exactly what our journey is for. You start at Beginner and climb six steps to IELTS. The full path from zero takes about 16 months." },
         { q: "How long does it take to reach IELTS?", a: "From Pre-Intermediate, the road through Intermediate, Pre-IELTS and IELTS takes about 12 months of consistent study. Our 90+ official 7.0+ results show the system works when you do." },
         { q: "Do you offer mock exams?", a: "Yes. Students take full IELTS-style mock tests under real exam timing, so the real exam feels like just another practice day." },
         { q: "What materials do you use?", a: "The licensed Oxford University Press program for general English levels, plus dedicated IELTS materials and mock tests for the exam stages — supported daily by our Student App." },
@@ -329,7 +329,7 @@ const dict = {
       title: "Ko'p so'raladigan savollar",
       items: [
         { q: "Smart LC da o'qishni qanday boshlayman?", a: "Telegram orqali yozing yoki qo'ng'iroq qiling. Darajangizni aniqlab, sizni mos guruhga joylashtiramiz — hech qachon juda oson yoki juda qiyin material o'qimaysiz." },
-        { q: "Men noldan boshlayman. IELTS ga erisha olamanmi?", a: "Ha — yo'limiz aynan shuning uchun. Beginner dan boshlab IELTS Proficiency gacha yetti qadam ko'tarilasiz. Noldan to'liq yo'l taxminan 19 oy davom etadi." },
+        { q: "Men noldan boshlayman. IELTS ga erisha olamanmi?", a: "Ha — yo'limiz aynan shuning uchun. Beginner dan boshlab IELTS gacha olti qadam ko'tarilasiz. Noldan to'liq yo'l taxminan 16 oy davom etadi." },
         { q: "IELTS ga yetish qancha vaqt oladi?", a: "Pre-Intermediate dan boshlab Intermediate, Pre-IELTS va IELTS orqali yo'l taxminan 12 oy muntazam o'qishni talab qiladi. 90+ rasmiy 7.0+ natijamiz tizim ishlashini isbotlaydi." },
         { q: "Mock imtihonlar bormi?", a: "Ha. Talabalar haqiqiy imtihon vaqti bilan to'liq IELTS formatidagi mock testlarni topshirishadi — haqiqiy imtihon oddiy mashg'ulotdek tuyuladi." },
         { q: "Qanday materiallardan foydalanasiz?", a: "Umumiy ingliz tili bosqichlari uchun litsenziyalangan Oxford University Press dasturi, imtihon bosqichlari uchun maxsus IELTS materiallari va mock testlar — har kuni Student App yordamida." },
@@ -501,7 +501,7 @@ const dict = {
       title: "Часто задаваемые вопросы",
       items: [
         { q: "Как начать учиться в Smart LC?", a: "Напишите нам в Telegram или позвоните. Мы определим ваш уровень и подберём подходящую группу — вы никогда не будете учить слишком лёгкий или слишком сложный материал." },
-        { q: "Я начинаю с нуля. Смогу ли я сдать IELTS?", a: "Да — именно для этого наш путь. Вы начинаете с Beginner и поднимаетесь по семи ступеням до IELTS Proficiency. Полный путь с нуля занимает около 16 месяцев." },
+        { q: "Я начинаю с нуля. Смогу ли я сдать IELTS?", a: "Да — именно для этого наш путь. Вы начинаете с Beginner и поднимаетесь по шести ступеням до IELTS. Полный путь с нуля занимает около 16 месяцев." },
         { q: "Сколько времени нужно до IELTS?", a: "С Pre-Intermediate дорога через Intermediate, Pre-IELTS и IELTS занимает около 12 месяцев регулярных занятий. Наши 90+ официальных результатов 7.0+ доказывают: система работает." },
         { q: "Есть ли пробные экзамены?", a: "Да. Студенты проходят полные mock-тесты в формате IELTS с реальным таймингом — настоящий экзамен ощущается как обычная тренировка." },
         { q: "По каким материалам вы занимаетесь?", a: "Лицензированная программа Oxford University Press для уровней общего английского, плюс специальные материалы IELTS и mock-тесты для экзаменационных ступеней — с ежедневной поддержкой Student App." },
