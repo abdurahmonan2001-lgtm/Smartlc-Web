@@ -9,18 +9,18 @@ const DWELL_END = 2250; // the long pause at the final IELTS stop
    curved silhouettes, gradient volume, glass bands, rimmed portholes.
    All face right; hulls share a waterline (container is bottom-anchored). */
 const VESSELS = [
-  // 0 · Beginner — rowing dinghy
-  <svg viewBox="0 0 50 30" width="50" height="30" aria-hidden="true" key="v0">
+  // 0 · Beginner — humble wooden rowing dinghy (only wooden hull in the fleet)
+  <svg viewBox="0 0 50 30" width="44" height="26" aria-hidden="true" key="v0">
     <defs>
       <linearGradient id="v0h" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#00b389" /><stop offset="1" stopColor="#00674f" />
+        <stop offset="0" stopColor="#c89a5e" /><stop offset="1" stopColor="#7a5230" />
       </linearGradient>
     </defs>
-    <line x1="23" y1="4" x2="35" y2="16" stroke="#a8713a" strokeWidth="2.6" strokeLinecap="round" />
-    <ellipse cx="36.8" cy="17.6" rx="3.4" ry="1.7" fill="#8a5a2b" transform="rotate(45 36.8 17.6)" />
+    <line x1="23" y1="4" x2="35" y2="16" stroke="#6e4a26" strokeWidth="2.6" strokeLinecap="round" />
+    <ellipse cx="36.8" cy="17.6" rx="3.4" ry="1.7" fill="#5b3c1e" transform="rotate(45 36.8 17.6)" />
     <path d="M4 14 C13 12.4 37 12.4 46 14 L40 24.5 C32 28 18 28 10 24.5 Z" fill="url(#v0h)" />
     <path d="M4 14 C13 12.4 37 12.4 46 14 L44.5 16.5 C33 14.9 17 14.9 5.5 16.5 Z" fill="#f0cd77" />
-    <path d="M12 25.6 C18 27.6 32 27.6 38 25.6 L40 24.5 C32 28 18 28 10 24.5 Z" fill="#004d3b" opacity="0.6" />
+    <path d="M12 25.6 C18 27.6 32 27.6 38 25.6 L40 24.5 C32 28 18 28 10 24.5 Z" fill="#4a2f16" opacity="0.6" />
   </svg>,
   // 1 · Elementary — small sailboat, billowed sail
   <svg viewBox="0 0 60 48" width="60" height="48" aria-hidden="true" key="v1">
@@ -40,7 +40,7 @@ const VESSELS = [
     <path d="M6 35 C18 33.4 42 33.4 54 35 L52.4 37.4 C40 35.8 20 35.8 7.6 37.4 Z" fill="#f0cd77" />
   </svg>,
   // 2 · Pre-Intermediate — two-sail sloop with a fluttering pennant
-  <svg viewBox="0 0 72 54" width="72" height="54" aria-hidden="true" key="v2">
+  <svg viewBox="0 0 72 54" width="78" height="58" aria-hidden="true" key="v2">
     <defs>
       <linearGradient id="v2s" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#c3e0d7" />
@@ -60,28 +60,29 @@ const VESSELS = [
     <path d="M7 41 C21 39.2 51 39.2 65 41 L57 49.5 C45 52.8 27 52.8 15 49.5 Z" fill="url(#v2h)" />
     <path d="M7 41 C21 39.2 51 39.2 65 41 L63.3 43.5 C49 41.8 23 41.8 8.7 43.5 Z" fill="#f0cd77" />
   </svg>,
-  // 3 · Intermediate — sleek motorboat, raked bow, tinted windshield
-  <svg viewBox="0 0 84 42" width="84" height="42" aria-hidden="true" key="v3">
+  // 3 · Intermediate — white speedboat with emerald racing stripe (first
+  // motor vessel: no sails, distinct white hull)
+  <svg viewBox="0 0 84 42" width="90" height="45" aria-hidden="true" key="v3">
     <defs>
       <linearGradient id="v3c" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#e2f1ec" />
+        <stop offset="0" stopColor="#0aa886" /><stop offset="1" stopColor="#006c52" />
       </linearGradient>
       <linearGradient id="v3g" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor="#bfe9df" /><stop offset="1" stopColor="#6fbfae" />
       </linearGradient>
       <linearGradient id="v3h" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#00a37e" /><stop offset="1" stopColor="#00543f" />
+        <stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#cfe4dd" />
       </linearGradient>
     </defs>
     <path d="M22 8 C28 5.2 40 5.2 45 7.6 L53 20 L18 20 Z" fill="url(#v3c)" />
     <path d="M44 7.8 L53 20 L45.5 20 L39.5 8.4 Z" fill="url(#v3g)" />
     <rect x="24" y="11" width="7.5" height="5" rx="1.6" fill="#a5dccf" />
     <path d="M4 20 C20 17.6 52 17.6 66 19.2 Q76 20.4 80 24 L70 33.5 C52 38 26 38 12 33.5 Q5 29 4 23 Z" fill="url(#v3h)" />
-    <path d="M4 20 C20 17.6 52 17.6 66 19.2 Q76 20.4 80 24 L78 26 C64 22.5 24 21.5 5.5 23 Z" fill="#f0cd77" />
-    <path d="M14 34.2 C30 37.6 52 37.4 68 33.8 L70 33.5 C52 38 26 38 12 33.5 Z" fill="#003a2c" opacity="0.55" />
+    <path d="M4 20 C20 17.6 52 17.6 66 19.2 Q76 20.4 80 24 L78 26 C64 22.5 24 21.5 5.5 23 Z" fill="#009472" />
+    <path d="M14 34.2 C30 37.6 52 37.4 68 33.8 L70 33.5 C52 38 26 38 12 33.5 Z" fill="#8fb5ab" opacity="0.6" />
   </svg>,
   // 4 · Pre-IELTS — cabin cruiser: flybridge, glass band, rimmed portholes
-  <svg viewBox="0 0 100 56" width="100" height="56" aria-hidden="true" key="v4">
+  <svg viewBox="0 0 100 56" width="108" height="60" aria-hidden="true" key="v4">
     <defs>
       <linearGradient id="v4c" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#e2f1ec" />
@@ -107,7 +108,7 @@ const VESSELS = [
     <path d="M17 42.2 C36 46.2 60 46 77 41.8 L79 41.5 C58 46.5 28 46.5 15 41.5 Z" fill="#001d18" opacity="0.5" />
   </svg>,
   // 5 · IELTS — the superyacht: three decks, radar arch, gold waterline
-  <svg viewBox="0 0 130 66" width="130" height="66" aria-hidden="true" key="v5">
+  <svg viewBox="0 0 130 66" width="142" height="72" aria-hidden="true" key="v5">
     <defs>
       <linearGradient id="v5c" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#e2f1ec" />
