@@ -518,7 +518,7 @@ function GoalPicker() {
         <div className="goal__text">
           <p>{active.need}</p>
           <p className="goal__plan">{active.plan}</p>
-          <a className="btn btn--primary" href="/register">{g.cta} →</a>
+          <a className="btn btn--primary" href="/placement">{g.cta} →</a>
         </div>
       </div>
     </div>

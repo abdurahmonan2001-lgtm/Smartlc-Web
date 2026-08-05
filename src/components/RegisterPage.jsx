@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLang, LANGS } from "../i18n.jsx";
 import { CONTACT } from "../data/site.js";
 import { PhoneIcon, TelegramIcon } from "./Icons.jsx";
@@ -25,6 +25,14 @@ export default function RegisterPage() {
 
   const digits = phone.replace(/\D/g, "");
   const valid = name.trim().length >= 2 && digits.length === 9;
+
+  // after a successful registration, return the visitor to the main site
+  // (the thank-you screen shows for a few seconds first)
+  useEffect(() => {
+    if (state !== "done") return;
+    const t = setTimeout(() => { window.location.href = "/"; }, 3500);
+    return () => clearTimeout(t);
+  }, [state]);
 
   const submit = async (e) => {
     e.preventDefault();
