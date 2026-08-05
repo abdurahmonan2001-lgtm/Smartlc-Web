@@ -11,7 +11,10 @@ export default function handler(req, res) {
   if (!process.env.PLACEMENT_SECRET && !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     return res.status(500).json({ error: 'Placement test is not configured yet.' })
   }
-  if (rateLimited(`start:${clientIp(req)}`, 12, 60 * 60000)) {
+  // Generous: starting costs nothing (no AI call, no database write), and a
+  // shared office tablet or a NAT'd mobile network puts many real candidates
+  // behind one IP. The submit endpoint carries the meaningful quota.
+  if (rateLimited(`start:${clientIp(req)}`, 40, 60 * 60000)) {
     return res.status(429).json({ error: 'Too many attempts from this connection. Please try again later.' })
   }
 

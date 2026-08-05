@@ -9,7 +9,15 @@
 // Anti-abuse: signed one-use session token, minimum completion time, honeypot
 // field, per-IP rate limits, and hard input size caps.
 import { GRAMMAR, READING, WRITING_PROMPT, determineLevel } from './_bank.js'
-import { verifySession, seededShuffle, clientIp, rateLimited } from './_session.js'
+import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit } from './_session.js'
+
+// A whole family sharing one connection, or a queue of candidates on the
+// centre's own tablet, all look like a single IP — so the quota counts only
+// COMPLETED tests (the ones that cost an AI call and create a record), while a
+// separate, looser ceiling stops a script from hammering the endpoint.
+const HOUR = 60 * 60000
+const MAX_COMPLETED_PER_HOUR = 20
+const MAX_ATTEMPTS_PER_HOUR = 60
 
 const MIN_SECONDS = 60                    // faster than this is not a human sitting the test
 const MAX_SESSION_MS = 4 * 3600 * 1000    // a session older than 4h is stale
@@ -55,8 +63,11 @@ export default async function handler(req, res) {
   if (!url || !serviceKey) return res.status(500).json({ error: 'Placement test is not configured yet.' })
 
   const ip = clientIp(req)
-  if (rateLimited(`submit:${ip}`, 6, 60 * 60000)) {
-    return res.status(429).json({ error: 'Too many submissions from this connection. Please try again later.' })
+  if (rateLimited(`try:${ip}`, MAX_ATTEMPTS_PER_HOUR, HOUR)) {
+    return res.status(429).json({ error: 'Too many requests from this connection. Please try again later.' })
+  }
+  if (countRecent(`done:${ip}`, HOUR) >= MAX_COMPLETED_PER_HOUR) {
+    return res.status(429).json({ error: 'Too many completed tests from this connection in the last hour. Please try again later.' })
   }
 
   const b = req.body || {}
@@ -158,6 +169,8 @@ export default async function handler(req, res) {
     console.error('placement save failed', saved.status, await saved.text().catch(() => ''))
     return res.status(502).json({ error: 'Could not save your results — please try submitting again.' })
   }
+
+  recordHit(`done:${ip}`)   // charge the quota only for a test that actually completed
 
   // Only the candidate's own outcome is returned — never any other row.
   return res.status(200).json({

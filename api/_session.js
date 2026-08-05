@@ -45,15 +45,31 @@ export function clientIp(req) {
     || req.socket?.remoteAddress || 'unknown'
 }
 
-// Per-warm-instance limiter. Ephemeral (resets on cold start) so it blunts
+// Per-warm-instance limiters. Ephemeral (reset on cold start) so they blunt
 // bursts rather than guaranteeing a hard cap — the AI cost ceiling and the
 // session token do the heavy lifting.
 const buckets = new Map()
-export function rateLimited(key, maxPerWindow, windowMs) {
+
+function prune(key, windowMs) {
   const now = Date.now()
   const arr = (buckets.get(key) || []).filter(t => now - t < windowMs)
-  arr.push(now)
   buckets.set(key, arr)
   if (buckets.size > 5000) buckets.clear()
+  return arr
+}
+
+// Records a hit and reports whether the allowance is now exceeded.
+export function rateLimited(key, maxPerWindow, windowMs) {
+  const arr = prune(key, windowMs)
+  arr.push(Date.now())
   return arr.length > maxPerWindow
+}
+
+// Counts without recording — lets a caller charge the quota only for the
+// outcomes that actually cost something (a saved result, an AI call).
+export function countRecent(key, windowMs) { return prune(key, windowMs).length }
+export function recordHit(key) {
+  const arr = buckets.get(key) || []
+  arr.push(Date.now())
+  buckets.set(key, arr)
 }
