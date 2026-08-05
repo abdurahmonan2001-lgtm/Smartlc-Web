@@ -33,3 +33,33 @@ alter table public.placement_results add column if not exists source text;
 -- Sanity check — should return rowsecurity = true and zero policies:
 -- select relrowsecurity from pg_class where relname = 'placement_results';
 -- select * from pg_policies where tablename = 'placement_results';
+
+
+-- ============================================================================
+-- BACKFILL: put existing test-takers into the New Students pipeline.
+--
+-- The old kiosk saved completed tests with NO status. They still showed in
+-- "New Students → Placement Tests" (that tab lists everything not yet 'added'),
+-- but the Daily Tasks counter looks for status = 'pending' exactly, so they
+-- never produced a task. New website submissions now set 'pending'; this
+-- aligns the historic rows.
+--
+-- Pipeline statuses: 'booked' (office booked it) → 'pending' (test taken,
+-- awaiting a group) → 'added' (enrolled; drops off the list).
+-- ============================================================================
+
+-- Rows already turned into students but never stamped — mark them enrolled so
+-- they do NOT reappear as open tasks.
+update public.placement_results
+   set status = 'added'
+ where status is null
+   and student_username is not null;
+
+-- Everything else with no status is a completed test awaiting placement.
+update public.placement_results
+   set status = 'pending'
+ where status is null;
+
+-- Check the resulting spread:
+-- select coalesce(status,'(null)') as status, count(*)
+--   from public.placement_results group by 1 order by 2 desc;

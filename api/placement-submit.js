@@ -111,19 +111,41 @@ export default async function handler(req, res) {
     level,
     grammar_answers: gA,
     reading_answers: rA,
+    // 'pending' = test taken, awaiting placement into a group. This is what
+    // puts the candidate into the admin app's New Students pipeline and its
+    // Daily Tasks counter; the office marks it 'added' on enrolment.
+    status: 'pending',
     source: 'website',
   }
 
-  const save = async payload => fetch(`${url}/rest/v1/placement_results`, {
-    method: 'POST',
+  const rest = (path, init) => fetch(`${url}/rest/v1/${path}`, {
+    ...init,
     headers: {
       apikey: serviceKey,
       Authorization: `Bearer ${serviceKey}`,
       'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
+      ...(init?.headers || {}),
     },
-    body: JSON.stringify(payload),
   })
+
+  // If the office already BOOKED this test for a lead, fill that row in rather
+  // than creating a second one — otherwise the CRM lead stays wired to an empty
+  // "booked, not yet taken" row while the real scores sit in a separate record.
+  // Phones are compared by their last 9 digits, since the CRM and this form
+  // format them differently.
+  const digits = phone.replace(/\D/g, '').slice(-9)
+  let bookedId = null
+  try {
+    const r = await rest('placement_results?status=eq.booked&select=id,phone&order=created_at.desc&limit=200')
+    if (r.ok) {
+      const rows = await r.json()
+      bookedId = rows.find(x => String(x.phone || '').replace(/\D/g, '').slice(-9) === digits)?.id ?? null
+    }
+  } catch (e) { console.error('placement booked-row lookup failed', e) }
+
+  const save = async payload => bookedId
+    ? rest(`placement_results?id=eq.${bookedId}`, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(payload) })
+    : rest('placement_results', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(payload) })
 
   let saved = await save(row)
   if (!saved.ok) {
