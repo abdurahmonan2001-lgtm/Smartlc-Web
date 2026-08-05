@@ -742,23 +742,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   padding: 4px 12px; border-radius: 999px;
 }
 
-/* ─── Teachers ─── */
-.teachers__grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 520px));
-  justify-content: center; gap: 24px; margin-top: 48px;
-}
-.teacher-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; }
-.teacher-card__head { display: flex; gap: 18px; align-items: center; margin-bottom: 18px; }
-.teacher-card__avatar {
-  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--racing-2), var(--racing-card)); color: var(--green-bright);
-  font-weight: 900; font-size: 22px; flex-shrink: 0;
-}
-.teacher-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
-.teacher-card__bands { display: flex; gap: 8px; flex-wrap: wrap; }
-.teacher-card__bio { color: var(--ink-2); font-size: 14.5px; }
-.teacher-card__exp { margin-top: 14px; font-weight: 700; font-size: 13.5px; color: var(--ink-3); }
-
 /* ─── Results carousel ─── */
 .results__filters { display: flex; justify-content: center; gap: 10px; margin: 40px 0 8px; flex-wrap: wrap; }
 .results__filters button {
@@ -853,6 +836,35 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .board__status { display: none; }
   .board__head { padding: 13px 18px; letter-spacing: 0.22em; }
 }
+
+/* team cards: the member's own certificate front and centre */
+.team__grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 18px; margin-top: 30px;
+}
+.team-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+}
+.team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.team-card--founder { border: 1.5px solid rgba(212, 168, 67, 0.55); }
+.team-card__cert { display: block; padding: 0; background: #fff; border-bottom: 1px solid var(--border); }
+.team-card__cert img { display: block; width: 100%; height: auto; }
+.team-card__meta { padding: 14px 16px 4px; display: grid; gap: 8px; justify-items: start; }
+.team-card__meta h3 { font-size: 15.5px; font-weight: 800; line-height: 1.25; }
+.team-card__role {
+  color: #9a7a24; font-size: 11px; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.team-card__bands { display: flex; gap: 8px; flex-wrap: wrap; }
+.team-card__bio { padding: 4px 16px 16px; color: var(--ink-2); font-size: 13px; line-height: 1.5; }
+/* the score row was styled for dark result cards — light overrides here */
+.team-card .score-row { padding: 0 0 12px; width: 100%; }
+.team-card .score-row__cell { background: var(--bg-alt); border-color: var(--border); }
+.team-card .score-row__cell em { color: var(--ink-3); }
+.team-card .score-row__cell strong { color: var(--ink); }
+.team-card .score-row__cell.is-top em, .team-card .score-row__cell.is-top strong { color: #9a7a24; }
 
 /* "What English gives" — light stat tiles */
 .english__grid { margin-top: 30px; }
@@ -1415,7 +1427,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .nav__logo span { display: none; }
   .hero { padding: 110px 0 64px; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
-  .teachers__grid { grid-template-columns: 1fr; }
+  .team__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .section { padding: 44px 0; }
   .contact__card { padding: 44px 18px; }
   .contact__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }

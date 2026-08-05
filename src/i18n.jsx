@@ -22,7 +22,7 @@ function detectLang() {
 
 const dict = {
   en: {
-    nav: { about: "Why us", courses: "Courses", pricing: "Prices", teachers: "Teachers", results: "Results", location: "Location", contact: "Contact", enroll: "Enroll now", enrollShort: "Enroll" },
+    nav: { about: "Why us", courses: "Courses", unlocks: "Opportunities", pricing: "Prices", teachers: "Team", results: "Results", location: "Location", levelCheck: "Level check", contact: "Contact", enroll: "Enroll now", enrollShort: "Enroll" },
     hero: {
       eyebrow: "Smart Learning Centre · Tashkent",
       motto: ["English", "Every", "Day."],
@@ -167,13 +167,10 @@ const dict = {
       ],
     },
     teachers: {
-      title: "Our Teachers",
-      sub: "Learn from teachers who have taken the exam — and scored at the top.",
-      exp: "years of experience",
-      exp1: "year of experience",
-      list: [
-        { name: "Abdurahmon Nasriddinov", band: "IELTS 8.5", details: ["Speaking 9.0", "Writing 8.5"], years: 7, bio: "Specialist in IELTS preparation with a focus on speaking and writing. Helps students break through plateaus with proven band-score strategies." },
-      ],
+      title: "Our Team",
+      sub: "Everyone who teaches you has passed the exam themselves — tap any certificate to inspect it up close.",
+      founder: "Founder & Head Teacher",
+      founderBio: "IELTS 8.5 (C2) with a perfect 9.0 in both Listening and Reading. Specialist in IELTS preparation with 7 years of experience — helps students break through plateaus with proven band-score strategies.",
     },
     results: {
       title: "Real Results. Official Certificates.",
@@ -239,7 +236,7 @@ const dict = {
   },
 
   uz: {
-    nav: { about: "Nega biz", courses: "Kurslar", pricing: "Narxlar", teachers: "Ustozlar", results: "Natijalar", location: "Manzil", contact: "Aloqa", enroll: "Ro'yxatdan o'tish", enrollShort: "Yozilish" },
+    nav: { about: "Nega biz", courses: "Kurslar", unlocks: "Imkoniyatlar", pricing: "Narxlar", teachers: "Jamoa", results: "Natijalar", location: "Manzil", levelCheck: "Daraja testi", contact: "Aloqa", enroll: "Ro'yxatdan o'tish", enrollShort: "Yozilish" },
     hero: {
       eyebrow: "Smart Learning Centre · Toshkent",
       motto: ["English", "Every", "Day."],
@@ -384,13 +381,10 @@ const dict = {
       ],
     },
     teachers: {
-      title: "Ustozlarimiz",
-      sub: "Imtihonni o'zi topshirib, eng yuqori natija olgan ustozlardan o'rganing.",
-      exp: "yillik tajriba",
-      exp1: "yillik tajriba",
-      list: [
-        { name: "Abdurahmon Nasriddinov", band: "IELTS 8.5", details: ["Speaking 9.0", "Writing 8.5"], years: 7, bio: "IELTS tayyorlash bo'yicha mutaxassis, speaking va writing yo'nalishiga alohida e'tibor beradi. Isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi." },
-      ],
+      title: "Jamoamiz",
+      sub: "Sizga dars beradigan har bir inson imtihonni o'zi topshirgan — istalgan sertifikatni bosib, yaqindan ko'ring.",
+      founder: "Asoschi va bosh ustoz",
+      founderBio: "IELTS 8.5 (C2), Listening va Reading bo'yicha mukammal 9.0. 7 yillik tajribaga ega IELTS tayyorgarligi mutaxassisi — isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi.",
     },
     results: {
       title: "Haqiqiy natijalar. Rasmiy sertifikatlar.",
@@ -456,7 +450,7 @@ const dict = {
   },
 
   ru: {
-    nav: { about: "Почему мы", courses: "Курсы", pricing: "Цены", teachers: "Преподаватели", results: "Результаты", location: "Адрес", contact: "Контакты", enroll: "Записаться", enrollShort: "Запись" },
+    nav: { about: "Почему мы", courses: "Курсы", unlocks: "Возможности", pricing: "Цены", teachers: "Команда", results: "Результаты", location: "Адрес", levelCheck: "Тест уровня", contact: "Контакты", enroll: "Записаться", enrollShort: "Запись" },
     hero: {
       eyebrow: "Smart Learning Centre · Ташкент",
       motto: ["English", "Every", "Day."],
@@ -601,13 +595,10 @@ const dict = {
       ],
     },
     teachers: {
-      title: "Наши преподаватели",
-      sub: "Учитесь у тех, кто сам сдал экзамен — на высший балл.",
-      exp: "лет опыта",
-      exp1: "год опыта",
-      list: [
-        { name: "Абдурахмон Насриддинов", band: "IELTS 8.5", details: ["Speaking 9.0", "Writing 8.5"], years: 7, bio: "Специалист по подготовке к IELTS с фокусом на speaking и writing. Помогает студентам преодолевать плато с помощью проверенных стратегий." },
-      ],
+      title: "Наша команда",
+      sub: "Каждый, кто вас учит, сам сдал экзамен — нажмите на любой сертификат, чтобы рассмотреть его вблизи.",
+      founder: "Основатель и главный преподаватель",
+      founderBio: "IELTS 8.5 (C2), идеальные 9.0 по Listening и Reading. Специалист по подготовке к IELTS с 7-летним опытом — помогает студентам преодолевать плато с помощью проверенных стратегий.",
     },
     results: {
       title: "Реальные результаты. Официальные сертификаты.",

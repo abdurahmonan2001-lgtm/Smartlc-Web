@@ -1,0 +1,43 @@
+[
+  {
+    "id": "abdurakhmon",
+    "name": "Abdurakhmon Nasriddinov",
+    "band": "8.5",
+    "cefr": "C2",
+    "img": "/team/abdurakhmon.webp",
+    "scores": { "l": "9.0", "r": "9.0", "w": "8.5", "s": "8.0" },
+    "founder": true
+  },
+  {
+    "id": "mashxura",
+    "name": "Mashxura Turdaliyeva",
+    "band": "7.5",
+    "cefr": "C1",
+    "img": "/team/mashxura.webp",
+    "scores": { "l": "8.5", "r": "8.5", "w": "6.0", "s": "6.5" }
+  },
+  {
+    "id": "fazilat",
+    "name": "Fazilat Umirzoqova",
+    "band": "7.0",
+    "cefr": "C1",
+    "img": "/team/fazilat.webp",
+    "scores": { "l": "7.0", "r": "7.0", "w": "6.5", "s": "6.5" }
+  },
+  {
+    "id": "laylo",
+    "name": "Laylo Zokirova",
+    "band": "7.0",
+    "cefr": "C1",
+    "img": "/team/laylo.webp",
+    "scores": { "l": "8.0", "r": "7.0", "w": "6.0", "s": "7.5" }
+  },
+  {
+    "id": "sardorbek",
+    "name": "Sardorbek Ikromov",
+    "band": "7.0",
+    "cefr": "C1",
+    "img": "/team/sardorbek.webp",
+    "scores": { "l": "7.5", "r": "7.0", "w": "6.5", "s": "6.5" }
+  }
+]

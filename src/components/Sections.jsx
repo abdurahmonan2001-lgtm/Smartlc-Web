@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { useLang } from "../i18n.jsx";
 import results from "../data/results.json";
 import stories from "../data/stories.json";
+import team from "../data/team.json";
 import { CONTACT } from "../data/site.js";
 import JourneyRoad from "./JourneyRoad.jsx";
+import { CertLightbox, ScoreRow } from "./Results.jsx";
 
 const CARD_ICONS = ["🚀", "🗓️", "👨‍👩‍👧", "🖥️", "📚", "📜"];
 
@@ -643,38 +645,42 @@ export function Pricing() {
   );
 }
 
+/** The team, certificate-first: every member's own TRF is on the card,
+ *  zoomable with the lens and expandable into the full-screen viewer. */
 export function Teachers() {
   const { t } = useLang();
+  const [zoom, setZoom] = useState(null);
   return (
     <section className="section" id="teachers">
       <div className="container">
         <h2 className="section__title">{t.teachers.title}</h2>
         <p className="section__sub">{t.teachers.sub}</p>
-        <div className="teachers__grid">
-          {t.teachers.list.map((tc) => (
-            <article className="teacher-card" key={tc.name}>
-              <div className="teacher-card__head">
-                <span className="teacher-card__avatar" aria-hidden="true">
-                  {tc.name.split(" ").map((w) => w[0]).join("")}
-                </span>
-                <div>
-                  <h3>{tc.name}</h3>
-                  <div className="teacher-card__bands">
-                    <span className="band-chip band-chip--lg">{tc.band}</span>
-                    {tc.details.map((d) => (
-                      <span className="band-chip band-chip--outline" key={d}>{d}</span>
-                    ))}
-                  </div>
+        <div className="team__grid">
+          {team.map((m) => (
+            <article className={`team-card ${m.founder ? "team-card--founder" : ""}`} key={m.id}>
+              <button
+                className="team-card__cert zoomable"
+                type="button"
+                onClick={() => setZoom(m)}
+                aria-label={`View IELTS ${m.band} certificate — ${m.name}`}
+              >
+                <img src={m.img} alt="" loading="lazy" />
+              </button>
+              <div className="team-card__meta">
+                <h3>{m.name}</h3>
+                {m.founder && <span className="team-card__role">{t.teachers.founder}</span>}
+                <div className="team-card__bands">
+                  <span className="band-chip band-chip--lg">IELTS {m.band}</span>
+                  <span className="band-chip band-chip--outline">{m.cefr}</span>
                 </div>
+                <ScoreRow scores={m.scores} />
               </div>
-              <p className="teacher-card__bio">{tc.bio}</p>
-              <p className="teacher-card__exp">
-                {tc.years} {tc.years === 1 ? t.teachers.exp1 : t.teachers.exp}
-              </p>
+              {m.founder && <p className="team-card__bio">{t.teachers.founderBio}</p>}
             </article>
           ))}
         </div>
       </div>
+      {zoom && <CertLightbox cert={zoom} onClose={() => setZoom(null)} />}
     </section>
   );
 }

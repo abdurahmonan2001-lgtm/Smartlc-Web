@@ -14,12 +14,15 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // mirrors the page's three-act order: how → what it gives → practicalities
   const links = [
     ["#about", t.nav.about],
     ["#courses", t.nav.courses],
-    ["#pricing", t.nav.pricing],
+    ["#unlocks", t.nav.unlocks],
     ["#teachers", t.nav.teachers],
     ["#results", t.nav.results],
+    ["/placement", t.nav.levelCheck],
+    ["#pricing", t.nav.pricing],
     ["#location", t.nav.location],
   ];
 

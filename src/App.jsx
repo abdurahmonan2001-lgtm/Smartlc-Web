@@ -59,7 +59,6 @@ export default function App() {
             <Advantages />
             <ContactBand kind="telegram" />
             <Courses />
-            <Pricing />
             <ContactBand kind="phone" />
             <Teachers />
             <ContactBand kind="instagram" />
@@ -73,6 +72,8 @@ export default function App() {
             <Location />
             <ContactBand kind="phone" />
             <Faq />
+            {/* the price comes last — after the full case has been made */}
+            <Pricing />
             <ContactBand kind="telegram" />
           </main>
           <Footer />

@@ -84,7 +84,7 @@ export function CertLightbox({ cert, onClose }) {
   );
 }
 
-function ScoreRow({ scores, size }) {
+export function ScoreRow({ scores, size }) {
   if (!scores) return null;
   const cells = [["L", scores.l], ["R", scores.r], ["W", scores.w], ["S", scores.s]];
   const top = Math.max(...cells.map(([, v]) => parseFloat(v)));
