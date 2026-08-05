@@ -2,13 +2,13 @@
 // per-candidate random order, plus a signed session token that the submit
 // endpoint uses to re-derive that exact order and score it.
 import { GRAMMAR, READING, READING_PASSAGE, WRITING_PROMPT } from './_bank.js'
-import { signSession, seededShuffle, clientIp, rateLimited } from './_session.js'
+import { signSession, seededShuffle, clientIp, rateLimited, env } from './_session.js'
 import crypto from 'node:crypto'
 
 export default function handler(req, res) {
   // Same-origin page; no CORS headers on purpose.
   if (req.method !== 'POST' && req.method !== 'GET') return res.status(405).json({ error: 'POST only' })
-  if (!process.env.PLACEMENT_SECRET && !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+  if (!env('PLACEMENT_SECRET') && !env('SUPABASE_SERVICE_ROLE_KEY')) {
     return res.status(500).json({ error: 'Placement test is not configured yet.' })
   }
   // Generous: starting costs nothing (no AI call, no database write), and a

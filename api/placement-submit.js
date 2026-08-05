@@ -9,7 +9,7 @@
 // Anti-abuse: signed one-use session token, minimum completion time, honeypot
 // field, per-IP rate limits, and hard input size caps.
 import { GRAMMAR, READING, WRITING_PROMPT, determineLevel } from './_bank.js'
-import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit } from './_session.js'
+import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit, env } from './_session.js'
 
 // A whole family sharing one connection, or a queue of candidates on the
 // centre's own tablet, all look like a single IP — so the quota counts only
@@ -26,7 +26,7 @@ const MAX_NAME = 120
 const MAX_PHONE = 40
 
 async function gradeWriting(text) {
-  const key = process.env.ANTHROPIC_API_KEY
+  const key = env('ANTHROPIC_API_KEY')
   if (!key) return { score: null, feedback: 'Grading unavailable — needs manual review.' }
   try {
     const r = await fetch('https://api.anthropic.com/v1/messages', {
@@ -58,8 +58,8 @@ async function gradeWriting(text) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' })
 
-  const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const url = (env('SUPABASE_URL') || env('VITE_SUPABASE_URL')).replace(/\/+$/, '')
+  const serviceKey = env('SUPABASE_SERVICE_ROLE_KEY')
   if (!url || !serviceKey) return res.status(500).json({ error: 'Placement test is not configured yet.' })
 
   const ip = clientIp(req)
@@ -158,12 +158,21 @@ export default async function handler(req, res) {
     ? rest(`placement_results?id=eq.${bookedId}`, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(payload) })
     : rest('placement_results', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(payload) })
 
-  let saved = await save(row)
-  if (!saved.ok) {
-    // `source` may not exist as a column yet — retry without it rather than
-    // losing a real candidate's result.
-    const { source, ...noSource } = row      // eslint-disable-line no-unused-vars
-    saved = await save(noSource)
+  // Never let an unexpected throw here become a crash page: the candidate has
+  // just spent 45 minutes, and a clear "try again" is recoverable where a 500
+  // is not.
+  let saved
+  try {
+    saved = await save(row)
+    if (!saved.ok) {
+      // `source` may not exist as a column yet — retry without it rather than
+      // losing a real candidate's result.
+      const { source, ...noSource } = row      // eslint-disable-line no-unused-vars
+      saved = await save(noSource)
+    }
+  } catch (e) {
+    console.error('placement save threw', e)
+    return res.status(502).json({ error: 'Could not save your results — please try submitting again.' })
   }
   if (!saved.ok) {
     console.error('placement save failed', saved.status, await saved.text().catch(() => ''))

@@ -6,8 +6,13 @@
 // minimum completion time (bot guard) and a maximum session age.
 import crypto from 'node:crypto'
 
-const SECRET = () =>
-  process.env.PLACEMENT_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+// Env values can arrive with a UTF-8 byte-order mark or stray whitespace when
+// they are pasted from a file saved as "UTF-8 with BOM" — an invisible U+FEFF
+// in front of a URL makes it unparseable and crashes fetch. Always read env
+// through this.
+export const env = name => String(process.env[name] || '').replace(/^﻿/, '').trim()
+
+const SECRET = () => env('PLACEMENT_SECRET') || env('SUPABASE_SERVICE_ROLE_KEY') || ''
 
 const b64u = buf => Buffer.from(buf).toString('base64url')
 
