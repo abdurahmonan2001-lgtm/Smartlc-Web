@@ -71,9 +71,9 @@ export default function App() {
             <Testimonials />
             <Location />
             <ContactBand kind="phone" />
-            <Faq />
-            {/* the price comes last — after the full case has been made */}
+            {/* the price comes late — after the full case has been made */}
             <Pricing />
+            <Faq />
             <ContactBand kind="telegram" />
           </main>
           <Footer />

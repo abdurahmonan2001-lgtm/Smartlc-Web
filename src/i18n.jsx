@@ -127,7 +127,7 @@ const dict = {
       or: "or call us",
     },
     pricing: {
-      title: "One Honest Price",
+      title: "One Reasonable Price",
       sub: "700 000 so'm a month — whether you're learning General English or preparing for IELTS. Everything included, no hidden extras.",
       perMonth: "per month",
       popular: "Most popular",
@@ -341,7 +341,7 @@ const dict = {
       or: "yoki qo'ng'iroq qiling",
     },
     pricing: {
-      title: "Bitta halol narx",
+      title: "Bitta maqbul narx",
       sub: "Oyiga 700 000 so'm — umumiy ingliz tili ham, IELTS tayyorgarligi ham. Hammasi narx ichida, yashirin to'lovlar yo'q.",
       perMonth: "oyiga",
       popular: "Eng ommabop",
@@ -555,7 +555,7 @@ const dict = {
       or: "или позвоните нам",
     },
     pricing: {
-      title: "Одна честная цена",
+      title: "Одна разумная цена",
       sub: "700 000 сумов в месяц — и общий английский, и подготовка к IELTS. Всё включено, без скрытых доплат.",
       perMonth: "в месяц",
       popular: "Самый популярный",
