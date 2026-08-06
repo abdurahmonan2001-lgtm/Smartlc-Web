@@ -749,7 +749,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   background: var(--racing-card); color: #a9c4bf; border: 1px solid var(--border-dark); transition: all 0.2s;
 }
 .results__filters button.is-active { background: var(--green-bright); color: #00231c; border-color: var(--green-bright); }
-.marquee--results { margin-top: 28px; }
+/* certificate rows run edge to edge with no side fade limiters
+   (doubled class beats the later shared .marquee mask rule) */
+.marquee.marquee--results {
+  margin-top: 28px;
+  -webkit-mask-image: none; mask-image: none;
+}
 .result-card {
   width: 310px; flex-shrink: 0;
   background: var(--racing-card); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 18px;
@@ -884,13 +889,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .story--flip { grid-template-columns: 1fr 300px; }
 .story--flip .story__media { order: 2; }
+/* text-only story: no photo column reserved at all */
+.story--nophoto, .story--nophoto.story--flip { grid-template-columns: 1fr; }
 .story__media { border-radius: 16px; overflow: hidden; background: var(--bg-alt); }
 .story__media img { display: block; width: 100%; height: auto; }
-.story__avatar {
-  display: grid; place-items: center; width: 100%; aspect-ratio: 3 / 4;
-  background: linear-gradient(150deg, var(--racing-2), var(--racing-card));
-  color: var(--green-bright); font-size: 64px; font-weight: 900;
-}
 .story__chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .story__body h3 { font-size: 22px; font-weight: 900; letter-spacing: -0.01em; }
 .story__role { color: var(--green-dark); font-weight: 800; font-size: 13.5px; margin: 4px 0 14px; }

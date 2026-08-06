@@ -568,16 +568,15 @@ export function SuccessStories() {
         <p className="section__sub">{t.stories.sub}</p>
         <div className="stories">
           {live.slice(0, shown).map((s, i) => (
-            <article className={`story ${i % 2 ? "story--flip" : ""}`} key={s.id}>
-              <div className="story__media">
-                {s.photo ? (
+            <article
+              className={`story ${i % 2 ? "story--flip" : ""} ${!s.photo ? "story--nophoto" : ""}`}
+              key={s.id}
+            >
+              {s.photo && (
+                <div className="story__media">
                   <img src={s.photo} alt={s.name} loading="lazy" />
-                ) : (
-                  <span className="story__avatar" aria-hidden="true">
-                    {s.name.split(" ").map((w) => w[0]).join("")}
-                  </span>
-                )}
-              </div>
+                </div>
+              )}
               <div className="story__body">
                 <div className="story__chips">
                   {s.chips.map((c) => (

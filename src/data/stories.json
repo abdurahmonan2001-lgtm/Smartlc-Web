@@ -78,5 +78,26 @@
       "uz": "Abdurahmon Nasriddinov bergan bilimlar menga poydevor bo'ldi. Bu yo'lni 7-sinfda yoshlikdan boshlaganman. Shuning uchun ayta olamanki — qancha erta boshlasangiz, shuncha yaxshi. Til o'rganish bir kunlik ish emas, biroz sabr talab qiladi, lekin har bir qadam sizni orzuingizga yaqinlashtiradi. Bugun sizga qiyin ko'ringan narsa, ertaga eng katta kuchingizga aylanadi.",
       "ru": "Знания, которые дал мне Абдурахмон Насриддинов, стали моим фундаментом. Я начал этот путь в 7-м классе, поэтому могу сказать: чем раньше начнёте, тем лучше. Язык не учится за один день — нужно немного терпения, но каждый шаг приближает вас к мечте. То, что сегодня кажется трудным, завтра станет вашей главной силой."
     }
+  },
+  {
+    "id": "durdona",
+    "name": "Durdona",
+    "photo": null,
+    "chips": ["3 boshlanish · 1 natija", "🛍️"],
+    "title": {
+      "en": "Runs her own online shop — taught by the internet, in English",
+      "uz": "O'z onlayn do'konini yuritadi — internetdan, ingliz tilida o'rganib",
+      "ru": "Ведёт собственный онлайн-магазин — учится у интернета на английском"
+    },
+    "story": {
+      "en": "Let me start with the conclusion: learn English for your own growth, not just for a certificate. My road began in 2023 with one trial lesson. I had no interest then — I attended because my family insisted, and within two or three months I quit. Later, while studying maths, I got curious about IELTS and SAT and started a second time, dreaming of European universities — then quit again. All I did was watch films and podcasts, and my English slid backwards. With exactly nine months left before admissions I came back for the third time — I honestly expected to be turned away, but I was supported instead. This time I worked seriously: I learned how to research, worked on myself, tried new directions. I can't describe how much my worldview changed. Things that are taught for money in Uzbek, I now learn online in English for free — and I even run a small online shop, using what I've learned in real life.",
+      "uz": "Xulosani boshidanoq aytmoqchiman: ingliz tilini shunchaki sertifikat uchun emas, o'zingizni rivojlantirish uchun o'rganish kerak. Mening yo'lim 2023-yilda bitta sinov darsidan boshlangan. O'shanda tilga umuman qiziqishim yo'q edi — uydagilar aytgani uchun qatnab yurardim va 2–3 oydan keyin tashlab qo'ydim. Keyin matematika o'qib yurib IELTS va SAT sertifikatlariga qiziqib qoldim, ikkinchi marta boshladim — Yevropa universitetlari haqidagi orzular kuchaydi, lekin yana tashlab qo'ydim. Faqat podkast va kinolar ko'rardim, tilim esa sezilarli yomonlashdi. O'qishga topshirishga roppa-rosa 9 oy qolganda uchinchi marta qaytishga qaror qildim — haydab yuborishsa kerak deb o'ylagandim, aksincha, qo'llab-quvvatlashdi. Bu safar qattiq harakat qildim: research qilishni o'rgandim, o'z ustimda ishladim, yangi yo'nalishlarda o'zimni sinab ko'rdim. Dunyoqarashim qanchalik o'zgarganini so'z bilan tasvirlay olmayman. O'zbek tilida pulga o'rgatiladigan narsalarni endi internetda ingliz tilida bepul o'rganaman — kichkina bo'lsa ham onlayn do'koncham bor, o'rganganlarimni hayotda qo'llayapman.",
+      "ru": "Начну сразу с вывода: английский нужно учить не ради сертификата, а ради собственного развития. Мой путь начался в 2023 году с одного пробного урока. Тогда язык меня совсем не интересовал — я ходила, потому что настаивала семья, и через два-три месяца бросила. Позже, занимаясь математикой, я увлеклась сертификатами IELTS и SAT и начала во второй раз — мечтала о европейских университетах, но снова бросила. Я лишь смотрела фильмы и подкасты, и мой английский заметно откатился. Когда до подачи документов оставалось ровно девять месяцев, я вернулась в третий раз — честно ждала, что меня развернут, но меня поддержали. В этот раз я работала всерьёз: научилась делать research, работала над собой, пробовала новые направления. Не передать, как изменилось моё мировоззрение. То, чему на узбекском учат за деньги, я теперь бесплатно учу онлайн на английском — и у меня даже есть небольшой онлайн-магазин, где я применяю выученное в жизни."
+    },
+    "quote": {
+      "en": "Special thanks to my teacher — no matter how many times I dropped out, he stood firm and kept teaching me.",
+      "uz": "Ustozga alohida rahmat aytaman — qayta-qayta tashlab qo'ysam ham, qattiq turib o'qitdilar.",
+      "ru": "Отдельное спасибо учителю — сколько бы раз я ни бросала, он твёрдо продолжал меня учить."
+    }
   }
 ]
