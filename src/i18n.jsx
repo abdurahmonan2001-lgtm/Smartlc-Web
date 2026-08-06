@@ -170,9 +170,11 @@ const dict = {
       title: "Our Team",
       sub: "Everyone who teaches you has passed the exam themselves — tap any certificate to inspect it up close.",
       roles: {
-        abdurakhmon: "Founder & Head Teacher",
+        abdurakhmon: "English Teacher",
         sardorbek: "English Teacher",
         fazilat: "English Teacher",
+        mashxura: "English Teacher",
+        laylo: "English Teacher",
       },
       bios: {
         abdurakhmon: "IELTS 8.5 (C2) with a perfect 9.0 in both Listening and Reading. Specialist in IELTS preparation with 7 years of experience — helps students break through plateaus with proven band-score strategies.",
@@ -392,9 +394,11 @@ const dict = {
       title: "Jamoamiz",
       sub: "Sizga dars beradigan har bir inson imtihonni o'zi topshirgan — istalgan sertifikatni bosib, yaqindan ko'ring.",
       roles: {
-        abdurakhmon: "Asoschi va bosh ustoz",
+        abdurakhmon: "Ingliz tili ustozi",
         sardorbek: "Ingliz tili ustozi",
         fazilat: "Ingliz tili ustozi",
+        mashxura: "Ingliz tili ustozi",
+        laylo: "Ingliz tili ustozi",
       },
       bios: {
         abdurakhmon: "IELTS 8.5 (C2), Listening va Reading bo'yicha mukammal 9.0. 7 yillik tajribaga ega IELTS tayyorgarligi mutaxassisi — isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi.",
@@ -614,9 +618,11 @@ const dict = {
       title: "Наша команда",
       sub: "Каждый, кто вас учит, сам сдал экзамен — нажмите на любой сертификат, чтобы рассмотреть его вблизи.",
       roles: {
-        abdurakhmon: "Основатель и главный преподаватель",
+        abdurakhmon: "Преподаватель английского",
         sardorbek: "Преподаватель английского",
         fazilat: "Преподаватель английского",
+        mashxura: "Преподаватель английского",
+        laylo: "Преподаватель английского",
       },
       bios: {
         abdurakhmon: "IELTS 8.5 (C2), идеальные 9.0 по Listening и Reading. Специалист по подготовке к IELTS с 7-летним опытом — помогает студентам преодолевать плато с помощью проверенных стратегий.",

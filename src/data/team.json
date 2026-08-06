@@ -5,8 +5,7 @@
     "band": "8.5",
     "cefr": "C2",
     "img": "/team/abdurakhmon.webp",
-    "scores": { "l": "9.0", "r": "9.0", "w": "8.5", "s": "8.0" },
-    "founder": true
+    "scores": { "l": "9.0", "r": "9.0", "w": "8.5", "s": "8.0" }
   },
   {
     "id": "mashxura",
