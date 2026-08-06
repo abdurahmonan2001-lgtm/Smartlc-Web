@@ -169,8 +169,14 @@ const dict = {
     teachers: {
       title: "Our Team",
       sub: "Everyone who teaches you has passed the exam themselves — tap any certificate to inspect it up close.",
-      founder: "Founder & Head Teacher",
-      founderBio: "IELTS 8.5 (C2) with a perfect 9.0 in both Listening and Reading. Specialist in IELTS preparation with 7 years of experience — helps students break through plateaus with proven band-score strategies.",
+      roles: {
+        abdurakhmon: "Founder & Head Teacher",
+        sardorbek: "English Teacher",
+      },
+      bios: {
+        abdurakhmon: "IELTS 8.5 (C2) with a perfect 9.0 in both Listening and Reading. Specialist in IELTS preparation with 7 years of experience — helps students break through plateaus with proven band-score strategies.",
+        sardorbek: "A specialist with 2 years of English-teaching experience, focused on making complex grammar topics and language rules simple, clear and memorable. Every lesson is built around the individual student — their level, goal and learning style. Modern methods and hands-on practice grow confident, fluent spoken English.",
+      },
     },
     results: {
       title: "Real Results. Official Certificates.",
@@ -383,8 +389,14 @@ const dict = {
     teachers: {
       title: "Jamoamiz",
       sub: "Sizga dars beradigan har bir inson imtihonni o'zi topshirgan — istalgan sertifikatni bosib, yaqindan ko'ring.",
-      founder: "Asoschi va bosh ustoz",
-      founderBio: "IELTS 8.5 (C2), Listening va Reading bo'yicha mukammal 9.0. 7 yillik tajribaga ega IELTS tayyorgarligi mutaxassisi — isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi.",
+      roles: {
+        abdurakhmon: "Asoschi va bosh ustoz",
+        sardorbek: "Ingliz tili ustozi",
+      },
+      bios: {
+        abdurakhmon: "IELTS 8.5 (C2), Listening va Reading bo'yicha mukammal 9.0. 7 yillik tajribaga ega IELTS tayyorgarligi mutaxassisi — isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi.",
+        sardorbek: "Ingliz tili o'qitish bo'yicha 2 yillik tajribaga ega mutaxassis. Murakkab grammatik mavzular va til qoidalarini sodda, tushunarli va esda qolarli usullar bilan o'rgatishga ixtisoslashgan. Har bir o'quvchining bilim darajasi, maqsadi va o'rganish uslubidan kelib chiqib, individual yondashuvda dars o'tadi. Zamonaviy metodlar va amaliy mashg'ulotlar orqali o'quvchilarning ingliz tilida erkin muloqot qilishi va o'ziga ishonchini oshirishga e'tibor qaratadi.",
+      },
     },
     results: {
       title: "Haqiqiy natijalar. Rasmiy sertifikatlar.",
@@ -597,8 +609,14 @@ const dict = {
     teachers: {
       title: "Наша команда",
       sub: "Каждый, кто вас учит, сам сдал экзамен — нажмите на любой сертификат, чтобы рассмотреть его вблизи.",
-      founder: "Основатель и главный преподаватель",
-      founderBio: "IELTS 8.5 (C2), идеальные 9.0 по Listening и Reading. Специалист по подготовке к IELTS с 7-летним опытом — помогает студентам преодолевать плато с помощью проверенных стратегий.",
+      roles: {
+        abdurakhmon: "Основатель и главный преподаватель",
+        sardorbek: "Преподаватель английского",
+      },
+      bios: {
+        abdurakhmon: "IELTS 8.5 (C2), идеальные 9.0 по Listening и Reading. Специалист по подготовке к IELTS с 7-летним опытом — помогает студентам преодолевать плато с помощью проверенных стратегий.",
+        sardorbek: "Специалист с 2-летним опытом преподавания английского языка. Объясняет сложные грамматические темы и правила языка просто, понятно и так, что они запоминаются. Строит каждое занятие индивидуально — с учётом уровня, цели и стиля обучения студента. С помощью современных методик и практических заданий развивает свободную речь и уверенность в английском.",
+      },
     },
     results: {
       title: "Реальные результаты. Официальные сертификаты.",

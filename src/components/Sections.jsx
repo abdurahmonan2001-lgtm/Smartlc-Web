@@ -668,14 +668,14 @@ export function Teachers() {
               </button>
               <div className="team-card__meta">
                 <h3>{m.name}</h3>
-                {m.founder && <span className="team-card__role">{t.teachers.founder}</span>}
+                {t.teachers.roles?.[m.id] && <span className="team-card__role">{t.teachers.roles[m.id]}</span>}
                 <div className="team-card__bands">
                   <span className="band-chip band-chip--lg">IELTS {m.band}</span>
                   <span className="band-chip band-chip--outline">{m.cefr}</span>
                 </div>
                 <ScoreRow scores={m.scores} />
               </div>
-              {m.founder && <p className="team-card__bio">{t.teachers.founderBio}</p>}
+              {t.teachers.bios?.[m.id] && <p className="team-card__bio">{t.teachers.bios[m.id]}</p>}
             </article>
           ))}
         </div>
