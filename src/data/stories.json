@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "xumoyun",
+    "name": "Xumoyun Normamatov",
+    "photo": null,
+    "chips": ["IELTS 6.5 → 7.5", "CEFR C1", "WIUT"],
+    "title": {
+      "en": "Westminster International University in Tashkent student",
+      "uz": "Toshkent xalqaro Vestminster universiteti talabasi",
+      "ru": "Студент Международного Вестминстерского университета в Ташкенте"
+    },
+    "story": {
+      "en": "I was a 7th-grader who barely knew English — I started from Beginner and climbed step by step to the centre's very top level. At 15 I took IELTS for the first time and got 6.5; at 17 I reached 7.5, earning a CEFR Multilevel C1 certificate along the way. The 6.5 opened the Westminster Academic Lyceum — my English entrance exam was waived. The 7.5 took me straight into Westminster International University in Tashkent, no entrance exam, and I finished my Foundation year with distinction. Today English is simply part of my life: cybersecurity courses, programming, MUN debates, and the freedom to talk to anyone, anywhere. I'm 18 — and there's a lot ahead.",
+      "uz": "7-sinf o'quvchisi edim, ingliz tilini esa deyarli bilmasdim — Beginner darajadan boshlab, markazdagi eng yuqori darajagacha bosqichma-bosqich ko'tarildim. 15 yoshimda birinchi marta IELTS topshirib 6.5 oldim, 17 yoshda esa 7.5 ga erishdim; oradan CEFR Multilevel bo'yicha C1 sertifikatini ham oldim. 6.5 bilan Vestminster Akademik litseyiga kirdim — ingliz tili imtihonidan ozod bo'ldim. 7.5 esa meni kirish imtihonisiz, to'g'ridan-to'g'ri Toshkent xalqaro Vestminster universitetiga olib kirdi — Foundation yilini a'lo baholar bilan tugatdim. Bugun ingliz tili kundalik hayotimning bir qismi: kiberxavfsizlik kurslari, dasturlash, MUN debatlari va istalgan odam bilan erkin suhbat. Hozir 18 yoshdaman — oldinda hali ko'p narsa bor.",
+      "ru": "В 7-м классе я почти не знал английского — начал с уровня Beginner и шаг за шагом дошёл до самого верхнего уровня центра. В 15 лет впервые сдал IELTS на 6.5, в 17 — на 7.5, а между ними получил сертификат C1 по CEFR Multilevel. С 6.5 я поступил в Академический лицей Вестминстерского университета — экзамен по английскому мне зачли автоматически. А 7.5 привёл меня прямо в Международный Вестминстерский университет в Ташкенте, без вступительных экзаменов — Foundation-год я закончил с отличием. Сегодня английский — просто часть моей жизни: курсы по кибербезопасности, программирование, дебаты MUN и свободное общение с кем угодно. Мне 18 — и впереди ещё многое."
+    },
+    "quote": {
+      "en": "The knowledge Abdurahmon Nasriddinov gave me became my foundation. I started this road young, in 7th grade — so I can tell you: the earlier you start, the better. Learning a language isn't a one-day job; it takes patience, but every step brings you closer to your dream. What looks hard today becomes your greatest strength tomorrow.",
+      "uz": "Abdurahmon Nasriddinov bergan bilimlar menga poydevor bo'ldi. Bu yo'lni 7-sinfda yoshlikdan boshlaganman. Shuning uchun ayta olamanki — qancha erta boshlasangiz, shuncha yaxshi. Til o'rganish bir kunlik ish emas, biroz sabr talab qiladi, lekin har bir qadam sizni orzuingizga yaqinlashtiradi. Bugun sizga qiyin ko'ringan narsa, ertaga eng katta kuchingizga aylanadi.",
+      "ru": "Знания, которые дал мне Абдурахмон Насриддинов, стали моим фундаментом. Я начал этот путь в 7-м классе, поэтому могу сказать: чем раньше начнёте, тем лучше. Язык не учится за один день — нужно немного терпения, но каждый шаг приближает вас к мечте. То, что сегодня кажется трудным, завтра станет вашей главной силой."
+    }
+  }
+]

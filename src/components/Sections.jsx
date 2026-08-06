@@ -549,25 +549,41 @@ export function EnglishGives() {
   );
 }
 
-/** Alumni outcomes — renders only once real stories exist in
- *  src/data/stories.json: [{ name, band, year, outcome: {en, uz, ru} }] */
+/** Alumni success stories — rich feature cards from src/data/stories.json:
+ *  [{ id, name, photo|null, chips, title/story/quote: {en, uz, ru} }].
+ *  Photo falls back to an initials avatar until a portrait is provided. */
 export function SuccessStories() {
   const { t, lang } = useLang();
   if (!stories.length) return null;
+  const L = (v) => (v ? v[lang] ?? v.en : null);
   return (
     <section className="section section--alt" id="stories">
       <div className="container">
         <h2 className="section__title">{t.stories.title}</h2>
         <p className="section__sub">{t.stories.sub}</p>
-        <div className="stories__grid">
-          {stories.map((s) => (
-            <article className="story-card" key={s.name}>
-              <div className="story-card__top">
-                <span className="band-chip">{s.band}</span>
-                <strong>{s.name}</strong>
-                {s.year && <em>{s.year}</em>}
+        <div className="stories">
+          {stories.map((s, i) => (
+            <article className={`story ${i % 2 ? "story--flip" : ""}`} key={s.id}>
+              <div className="story__media">
+                {s.photo ? (
+                  <img src={s.photo} alt={s.name} loading="lazy" />
+                ) : (
+                  <span className="story__avatar" aria-hidden="true">
+                    {s.name.split(" ").map((w) => w[0]).join("")}
+                  </span>
+                )}
               </div>
-              <p>{s.outcome[lang] ?? s.outcome.en}</p>
+              <div className="story__body">
+                <div className="story__chips">
+                  {s.chips.map((c) => (
+                    <span className="band-chip" key={c}>{c}</span>
+                  ))}
+                </div>
+                <h3>{s.name}</h3>
+                <p className="story__role">{L(s.title)}</p>
+                <p className="story__text">{L(s.story)}</p>
+                {s.quote && <blockquote className="story__quote">{L(s.quote)}</blockquote>}
+              </div>
             </article>
           ))}
         </div>

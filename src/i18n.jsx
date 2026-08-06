@@ -112,8 +112,8 @@ const dict = {
       ],
     },
     stories: {
-      title: "After the Certificate",
-      sub: "Where Smart LC students went next:",
+      title: "Success Stories",
+      sub: "The certificate is a key — here is what our students opened with it:",
     },
     levelCheck: {
       title: "Not sure where to start?",
@@ -336,8 +336,8 @@ const dict = {
       ],
     },
     stories: {
-      title: "Sertifikatdan keyin",
-      sub: "Smart LC talabalari keyin qayerga borishdi:",
+      title: "Muvaffaqiyat tarixlari",
+      sub: "Sertifikat — bu kalit. Mana talabalarimiz u bilan qanday eshiklarni ochdi:",
     },
     levelCheck: {
       title: "Qayerdan boshlashni bilmayapsizmi?",
@@ -560,8 +560,8 @@ const dict = {
       ],
     },
     stories: {
-      title: "После сертификата",
-      sub: "Куда студенты Smart LC пошли дальше:",
+      title: "Истории успеха",
+      sub: "Сертификат — это ключ. Вот какие двери им открыли наши студенты:",
     },
     levelCheck: {
       title: "Не знаете, с чего начать?",
