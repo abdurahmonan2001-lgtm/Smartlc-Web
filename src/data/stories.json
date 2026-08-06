@@ -1,5 +1,65 @@
 [
   {
+    "id": "traveller",
+    "draft": true,
+    "name": "",
+    "photo": "/stories/traveller.webp",
+    "chips": ["5 countries", "🇩🇪 🇫🇷 🇧🇪 🇳🇱 🇹🇷"],
+    "title": {
+      "en": "World traveller — five countries and counting",
+      "uz": "Sayohatchi — besh davlat, va bu hali boshlanishi",
+      "ru": "Путешественник — пять стран, и это только начало"
+    },
+    "story": {
+      "en": "Learning English was one of the best decisions of my life. At first it was just another subject — until it started opening doors. My biggest win: English took me to Germany, France, Belgium, the Netherlands and Turkey, talking with people from every background and getting to know new cultures up close. Knowing the language, I felt free and confident in any situation. It changed me beyond travel too — my worldview widened, my confidence grew, my goals got bigger. English matters in my work today, and my main goal ahead is a master's degree abroad and a career in an international company.",
+      "uz": "Ingliz tilini o'rganish hayotimdagi eng to'g'ri qarorlardan biri bo'ldi. Avvaliga uni shunchaki fan sifatida o'rganardim, lekin vaqt o'tib u men uchun yangi imkoniyatlar eshigini ochdi. Eng katta yutug'im — ingliz tili tufayli Germaniya, Fransiya, Belgiya, Niderlandiya va Turkiya kabi davlatlarga borib, turli millat vakillari bilan muloqot qildim va yangi madaniyatlarni yaqindan tanidim. Til bilganim uchun har qanday vaziyatda o'zimni erkin va ishonchli his qildim. Bu til sayohatlardan tashqari shaxs sifatida o'sishimga ham katta hissa qo'shdi: dunyoqarashim kengaydi, o'zimga ishonchim oshdi va oldimga yanada katta maqsadlar qo'ya boshladim. Bugun ham ingliz tili ish jarayonlarimda muhim o'rin tutadi; kelajakdagi asosiy maqsadim — chet elda magistratura bosqichida o'qish va xalqaro kompaniyada faoliyat yuritish.",
+      "ru": "Изучение английского стало одним из самых правильных решений в моей жизни. Сначала это был просто предмет — пока язык не начал открывать двери. Главное достижение: благодаря английскому я побывал в Германии, Франции, Бельгии, Нидерландах и Турции, общался с людьми самых разных культур и узнавал их вблизи. Со знанием языка я чувствовал себя свободно и уверенно в любой ситуации. Он изменил меня и вне путешествий: кругозор стал шире, уверенность выросла, а цели — масштабнее. Английский важен и в моей сегодняшней работе, а главная цель впереди — магистратура за рубежом и карьера в международной компании."
+    },
+    "quote": {
+      "en": "If you're learning English today, never stop. Every word you learn, every bit of work you put in will one day carry you to the opportunities you dream of — my own life convinced me of that. Maybe tomorrow your success story will inspire others too.",
+      "uz": "Agar bugun ingliz tilini o'rganayotgan bo'lsangiz, hech qachon to'xtamang. Har bir o'rgangan so'zingiz, har bir qilgan mehnatingiz bir kun kelib sizni orzu qilgan imkoniyatlaringizga olib boradi — men bunga o'z hayotim orqali amin bo'ldim. Balki ertaga sizning success story'ingiz ham boshqalarga ilhom berar.",
+      "ru": "Если вы учите английский сегодня — не останавливайтесь. Каждое выученное слово, каждый вложенный труд однажды приведёт вас к возможностям, о которых вы мечтаете, — я убедился в этом на собственной жизни. Возможно, завтра ваша история успеха вдохновит других."
+    }
+  },
+  {
+    "id": "mirzokhid",
+    "name": "Mirzokhid Saidov",
+    "photo": null,
+    "chips": ["IELTS 7.0", "SAT 1410", "100% scholarship 🇰🇷"],
+    "title": {
+      "en": "Full-scholarship student in South Korea",
+      "uz": "Janubiy Koreyada 100% grant asosida talaba",
+      "ru": "Студент в Южной Корее на 100% гранте"
+    },
+    "story": {
+      "en": "An IELTS 7.0 changed my life. It gave me the confidence to travel to Egypt, Saudi Arabia, the UAE and Qatar without worrying about language barriers — English made every trip easier. It opened academic doors too: scholarship offers worth $160,000–$360,000 for four years from universities in the United States, a 100% scholarship at one of Korea's leading universities, and full scholarships from MDIS Tashkent, Central Asian University, Webster University in Tashkent, AUT and Turin Polytechnic. The reading skills I built preparing for IELTS even carried me to a 1410 on the SAT. Today I live in South Korea, learning Korean — and English still plays a role in my life every single day.",
+      "uz": "IELTS 7.0 hayotimni o'zgartirdi. U menga til to'sig'idan qo'rqmasdan Misr, Saudiya Arabistoni, BAA va Qatarga sayohat qilish ishonchini berdi — ingliz tili har bir safarni osonlashtirdi. U ilmiy eshiklarni ham ochdi: AQSH universitetlaridan to'rt yilga $160 000–$360 000 lik grant takliflari, Koreyaning yetakchi universitetlaridan birida 100% grant, shuningdek MDIS Tashkent, Markaziy Osiyo universiteti (CAU), Webster University Tashkent, AUT va Turin politexnika universitetidan to'liq grantlar. IELTS ga tayyorgarlikda shakllangan o'qish ko'nikmalari SAT dan 1410 ball olishimga ham yordam berdi. Bugun Janubiy Koreyada yashab, koreys tilini o'rganyapman — ingliz tili esa har kunimda muhim o'rin tutmoqda.",
+      "ru": "IELTS 7.0 изменил мою жизнь. Он дал уверенность путешествовать в Египет, Саудовскую Аравию, ОАЭ и Катар, не боясь языкового барьера — английский делал каждую поездку проще. Он открыл и академические двери: предложения стипендий от университетов США на $160 000–$360 000 за четыре года, 100% грант в одном из ведущих университетов Кореи, а также полные гранты от MDIS Tashkent, Central Asian University, Webster University in Tashkent, AUT и Туринского политехнического университета в Ташкенте. Навыки чтения, наработанные при подготовке к IELTS, помогли набрать 1410 на SAT. Сегодня я живу в Южной Корее и учу корейский — а английский по-прежнему со мной каждый день."
+    },
+    "quote": {
+      "en": "I sincerely thank Mr. Abdurahmon Nasriddinov for his interesting, funny and effective teaching style — it made learning enjoyable and helped me reach these results. Learn English: it opens the door to new opportunities and cultures.",
+      "uz": "Ustozim Abdurahmon Nasriddinovga qiziqarli, quvnoq va samarali dars uslubi uchun chin dildan minnatdorman — u o'qishni zavqli qildi va shu natijalarga erishishimga yordam berdi. Ingliz tilini o'rganing: u yangi imkoniyatlar va madaniyatlar eshigini ochadi.",
+      "ru": "Искренне благодарю Абдурахмона Насриддинова за интересный, весёлый и эффективный стиль преподавания — учёба была в радость и привела к этим результатам. Учите английский: он открывает двери к новым возможностям и культурам."
+    }
+  },
+  {
+    "id": "sardor",
+    "name": "Sardor",
+    "photo": "/stories/sardor.webp",
+    "chips": ["Iqtidorli Farzandlar", "TATU Lyceum", "IT internship"],
+    "title": {
+      "en": "IT intern — alumnus of the President's talent programme",
+      "uz": "IT-stajyor — Prezident \"Iqtidorli farzandlar\" dasturi ishtirokchisi",
+      "ru": "IT-стажёр — участник президентской программы \"Иқтидорли фарзандлар\""
+    },
+    "story": {
+      "en": "Learning English opened doors I once thought were out of reach. Thanks to my English, I was selected for the President's Iqtidorli Farzandlar national programme and studied at the Renessans camp — surrounded by talented, ambitious students who motivated me to work harder and aim higher. I was also accepted to the TATU Academic Lyceum: an important milestone, even though I chose to keep building my own path in IT. Today English lets me learn programming from the best international resources, and it helped me land an IT internship. Looking back, English wasn't just another language — it gave me opportunities, connected me with inspiring people, and helped shape my future.",
+      "uz": "Ingliz tili men uchun bir paytlar imkonsiz tuyulgan eshiklarni ochdi. Aynan ingliz tilim tufayli Prezidentning \"Iqtidorli farzandlar\" milliy dasturiga tanlab olindim va \"Renessans\" oromgohida o'qidim — u yerda iqtidorli, maqsadli tengdoshlar orasida yanada ko'proq mehnat qilishga va yuksakroq maqsadlar qo'yishga o'rgandim. TATU akademik litseyiga ham qabul qilindim — IT dagi o'z yo'limni davom ettirishni tanlagan bo'lsam-da, bu men uchun muhim bosqich edi. Bugun ingliz tili menga dasturlashni eng yaxshi xalqaro manbalardan o'rganish imkonini beradi va IT bo'yicha stajirovka olishimga ham yordam berdi. Ortga qarasam: ingliz tili shunchaki til emas — u menga imkoniyatlar berdi, ilhomlantiruvchi insonlar bilan bog'ladi va kelajagimni shakllantirdi.",
+      "ru": "Английский открыл мне двери, которые когда-то казались недосягаемыми. Благодаря английскому меня отобрали в президентскую национальную программу \"Иқтидорли фарзандлар\", и я учился в лагере \"Ренессанс\" — среди талантливых, целеустремлённых ребят, рядом с которыми хочется работать больше и целиться выше. Меня также приняли в академический лицей ТАТУ — важная веха, хотя я решил продолжать собственный путь в IT. Сегодня английский помогает мне изучать программирование по лучшим мировым ресурсам и помог получить стажировку в IT. Оглядываясь назад, понимаю: английский — не просто ещё один язык. Он дал возможности, познакомил с вдохновляющими людьми и помог сформировать моё будущее."
+    },
+    "quote": null
+  },
+  {
     "id": "xumoyun",
     "name": "Xumoyun Normamatov",
     "photo": "/stories/xumoyun.webp",

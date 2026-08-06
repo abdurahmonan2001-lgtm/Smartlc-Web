@@ -554,7 +554,9 @@ export function EnglishGives() {
  *  Photo falls back to an initials avatar until a portrait is provided. */
 export function SuccessStories() {
   const { t, lang } = useLang();
-  if (!stories.length) return null;
+  // drafts wait for missing details (e.g. the student's name) before showing
+  const live = stories.filter((s) => !s.draft);
+  if (!live.length) return null;
   const L = (v) => (v ? v[lang] ?? v.en : null);
   return (
     <section className="section section--alt" id="stories">
@@ -562,7 +564,7 @@ export function SuccessStories() {
         <h2 className="section__title">{t.stories.title}</h2>
         <p className="section__sub">{t.stories.sub}</p>
         <div className="stories">
-          {stories.map((s, i) => (
+          {live.map((s, i) => (
             <article className={`story ${i % 2 ? "story--flip" : ""}`} key={s.id}>
               <div className="story__media">
                 {s.photo ? (
