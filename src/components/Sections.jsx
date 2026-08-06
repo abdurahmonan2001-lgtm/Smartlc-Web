@@ -552,8 +552,11 @@ export function EnglishGives() {
 /** Alumni success stories — rich feature cards from src/data/stories.json:
  *  [{ id, name, photo|null, chips, title/story/quote: {en, uz, ru} }].
  *  Photo falls back to an initials avatar until a portrait is provided. */
+const STORIES_PAGE = 2;
+
 export function SuccessStories() {
   const { t, lang } = useLang();
+  const [shown, setShown] = useState(STORIES_PAGE);
   // drafts wait for missing details (e.g. the student's name) before showing
   const live = stories.filter((s) => !s.draft);
   if (!live.length) return null;
@@ -564,7 +567,7 @@ export function SuccessStories() {
         <h2 className="section__title">{t.stories.title}</h2>
         <p className="section__sub">{t.stories.sub}</p>
         <div className="stories">
-          {live.map((s, i) => (
+          {live.slice(0, shown).map((s, i) => (
             <article className={`story ${i % 2 ? "story--flip" : ""}`} key={s.id}>
               <div className="story__media">
                 {s.photo ? (
@@ -589,6 +592,13 @@ export function SuccessStories() {
             </article>
           ))}
         </div>
+        {shown < live.length && (
+          <div className="stories__more-wrap">
+            <button className="stories__more" type="button" onClick={() => setShown(shown + STORIES_PAGE)}>
+              {t.stories.more} (+{live.length - shown})
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -900,6 +900,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   background: var(--green-dim); border-radius: 0 14px 14px 0;
   color: var(--ink); font-size: 14.5px; line-height: 1.6; font-style: italic;
 }
+.stories__more-wrap { text-align: center; margin-top: 26px; }
+.stories__more {
+  padding: 12px 28px; border-radius: 999px; font-weight: 800; font-size: 14.5px;
+  color: var(--green-dark); border: 1.5px solid var(--green);
+  transition: all 0.25s;
+}
+.stories__more:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
 @media (max-width: 860px) {
   .story, .story--flip { grid-template-columns: 1fr; gap: 18px; padding: 20px; }
   .story--flip .story__media { order: 0; }

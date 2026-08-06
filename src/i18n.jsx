@@ -114,6 +114,7 @@ const dict = {
     stories: {
       title: "Success Stories",
       sub: "The certificate is a key — here is what our students opened with it:",
+      more: "Show more stories",
     },
     levelCheck: {
       title: "Not sure where to start?",
@@ -338,6 +339,7 @@ const dict = {
     stories: {
       title: "Muvaffaqiyat tarixlari",
       sub: "Sertifikat — bu kalit. Mana talabalarimiz u bilan qanday eshiklarni ochdi:",
+      more: "Yana tarixlarni ko'rish",
     },
     levelCheck: {
       title: "Qayerdan boshlashni bilmayapsizmi?",
@@ -562,6 +564,7 @@ const dict = {
     stories: {
       title: "Истории успеха",
       sub: "Сертификат — это ключ. Вот какие двери им открыли наши студенты:",
+      more: "Показать ещё истории",
     },
     levelCheck: {
       title: "Не знаете, с чего начать?",
