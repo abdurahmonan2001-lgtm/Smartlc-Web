@@ -143,11 +143,10 @@
     }
   },
   {
-    "id": "awakening",
-    "draft": true,
-    "name": "",
+    "id": "masturabonu",
+    "name": "Masturabonu",
     "photo": null,
-    "chips": ["🌍 Global mindset"],
+    "chips": ["IELTS 7.0", "🌍 Global mindset"],
     "title": {
       "en": "English as an awakening — access to the global conversation",
       "uz": "Ingliz tili — uyg'onish: global suhbatga yo'l",
