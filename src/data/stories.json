@@ -162,5 +162,26 @@
       "uz": "Ingliz tilini shunchaki imtihon topshirish yoki ravon gapirish uchun o'rganmang — dunyoni ochiq ko'zlar bilan ko'rish uchun o'rganing. Dunyo kezishni xohlaysizmi? Muvaffaqiyatli CEO bo'lishni-chi? Bu — birinchi qadamingiz.",
       "ru": "Учите английский не ради экзаменов и беглой речи — учите, чтобы видеть мир открытыми глазами. Хотите путешествовать по миру? Стать успешным CEO? Это ваш первый шаг."
     }
+  },
+  {
+    "id": "ibrohim",
+    "name": "Ibrohim",
+    "photo": null,
+    "chips": ["IELTS 6.0", "15 y.o."],
+    "title": {
+      "en": "IELTS 6.0 at fifteen — started at eleven",
+      "uz": "15 yoshda IELTS 6.0 — 11 yoshda boshlagan",
+      "ru": "IELTS 6.0 в 15 лет — начал в 11"
+    },
+    "story": {
+      "en": "My name is Ibrohim, I'm 15 — and studying with teacher Abdurahmon I scored IELTS 6.0. Many people think IELTS is hard, or that someone my age is too young for it. But I started English at 11 and finished the whole road in a year and two months. There was nobody my age in the group — I studied with adults. I failed the first two levels, Beginner and Elementary, but I kept going and passed all the rest. In the final groups we studied every single day: a lesson one day, a mock the next — and on Sundays the teacher himself gave us a mock, checked it himself and explained every mistake. Even with lessons every day I was never bored: the jokes we shared made every class fun. Once, during a family holiday in the mountains, I came all the way down for a lesson and went back up afterwards — that's how interesting the classes were. I'll never forget those days.",
+      "uz": "Mening ismim Ibrohim, 15 yoshdaman — Abdurahmon ustozda o'qib, IELTSdan 6.0 oldim. Ko'pchilik IELTS olish yoki ingliz tilini o'rganish qiyin, 'senga hali erta' deb o'ylashi mumkin. Lekin men ingliz tilini 11 yoshimda boshlaganman va butun yo'lni 1 yilu 2 oyda bosib o'tganman. Guruhda tengdoshlarim yo'q edi — o'zimdan katta studentlar bilan o'qidim. Birinchi ikkita bosqichdan — Beginner va Elementarydan yiqildim, lekin to'xtamadim va qolgan guruhlardan o'tib ketdim. Oxirgi bosqichlarda haftaning har kuni o'qirdik: kunora dars, kunora mock, yakshanba kuni esa ustozning o'zlari mock olib, o'zlari tekshirib, xatolarni tushuntirib berardilar. Har kuni dars bo'lsa ham umuman zerikmasdim — ustoz bilan hazillashib, darsni qiziq qilib yuborardik. Hatto oilam bilan toqqa dam olishga chiqqanimizda, dars uchun tog'dan tushib kelib ketganman — darslar shunchalik qiziqarli o'tardi. Bu vaqtlarni hech qachon unutmayman.",
+      "ru": "Меня зовут Иброхим, мне 15 — занимаясь у устоза Абдурахмона, я сдал IELTS на 6.0. Многие думают, что IELTS — это сложно, или что в моём возрасте ещё рано. Но я начал английский в 11 лет и прошёл весь путь за год и два месяца. В группе не было ровесников — я учился со взрослыми. Первые два уровня, Beginner и Elementary, я провалил, но не остановился и прошёл все остальные. На последних этапах мы занимались каждый день: через день урок, через день mock, а по воскресеньям устоз сам принимал mock, сам проверял и разбирал каждую ошибку. Даже при ежедневных занятиях мне не было скучно: шутки с учителем делали каждый урок живым. Однажды во время семейного отдыха в горах я спустился ради урока и вернулся обратно — настолько интересными были занятия. Я никогда не забуду то время."
+    },
+    "quote": {
+      "en": "I want to take IELTS again — and I know exactly whose door to go to.",
+      "uz": "Yana IELTS topshirmoqchiman — va buning uchun kimning oldiga borishni aniq bilaman.",
+      "ru": "Хочу сдать IELTS ещё раз — и точно знаю, к кому идти."
+    }
   }
 ]
