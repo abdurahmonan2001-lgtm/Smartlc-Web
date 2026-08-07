@@ -186,8 +186,23 @@ const CARD_LINKS = {
   1: "/#pricing", // weekly teacher/mentor rhythm -> listed in what's included
   3: "/#teachers", // small classes -> who teaches them
   4: "/#faq", // Oxford program -> materials answer in the FAQ
-  5: "/#results", // score podium -> the certificates
+  5: "/#courses", // structured system -> the level-by-level journey
+  6: "/#results", // score podium -> the certificates
 };
+
+/** Checklist visual for the structured-system card: checks pulse in turn. */
+function MethodSteps({ steps }) {
+  return (
+    <ul className="method-steps" aria-hidden="true">
+      {steps.map((s, i) => (
+        <li style={{ "--i": i }} key={s}>
+          <span className="method-steps__check">✓</span>
+          {s}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 /** Band-score column chart for the results card, computed from the real
  *  manifest. Column heights use a sqrt scale so the gold 8.0 column stays
@@ -364,7 +379,8 @@ export function AdvCarousel({ mode = "track" }) {
                 <img src="/adv/tutor.webp" alt="" loading="lazy" />
               </div>
             )}
-            {i === 5 && <ScorePodium />}
+            {i === 5 && card.steps && <MethodSteps steps={card.steps} />}
+            {i === 6 && <ScorePodium />}
             {i === 2 && (
               <div className="adv-card__phone adv-card__phone--parent">
                 <img src="/brand/parent-home.webp" alt="Smart LC Parent App home screen" loading="lazy" />
@@ -379,7 +395,8 @@ export function AdvCarousel({ mode = "track" }) {
         if (i === 2) cls.push("adv-card--parent-app");
         if (i === 3) cls.push("adv-card--classes");
         if (i === 4) cls.push("adv-card--oxford");
-        if (i === 5) cls.push("adv-card--results");
+        if (i === 5) cls.push("adv-card--method");
+        if (i === 6) cls.push("adv-card--results");
         if (link) cls.push("adv-card--link");
         return (
           <article className={cls.join(" ")} key={`${card.t}-${copy}`}>

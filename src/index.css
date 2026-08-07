@@ -422,6 +422,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .adv-card--oxford .adv-card__photo { border-bottom: 3px solid #1d3a6b; }
 .adv-card--oxford .adv-card__body h3 { color: #1d3a6b; }
 
+/* structured-system card: syllabus checklist, checks pulse in sequence */
+.adv-card--method { background: linear-gradient(165deg, #ffffff 40%, #e7f2ee 100%); border: 1.5px solid rgba(0, 116, 90, 0.35); }
+.method-steps { list-style: none; margin: 4px 0 8px; padding: 0 22px; display: grid; gap: 11px; }
+.method-steps li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13.5px; font-weight: 700; color: var(--ink); text-align: left;
+}
+.method-steps__check {
+  display: grid; place-items: center; width: 22px; height: 22px; flex-shrink: 0;
+  background: var(--green-dim); color: var(--green-dark);
+  border-radius: 50%; font-size: 12px; font-weight: 900;
+  animation: check-pulse 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.55s);
+}
+@keyframes check-pulse {
+  0%, 16%, 100% { transform: none; background: var(--green-dim); color: var(--green-dark); }
+  8% { transform: scale(1.22); background: var(--green-dark); color: #fff; }
+}
+
 .adv-card--results { background: linear-gradient(180deg, #ffffff 45%, #e2f5ee 100%); border: 1.5px solid rgba(0, 148, 114, 0.45); }
 .adv-card--results .adv-card__body h3 { color: var(--green-dark); }
 
@@ -932,6 +951,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .lcheck__cta { display: grid; gap: 10px; justify-items: center; text-align: center; }
 .lcheck__cta .btn--lg { width: 100%; }
 .lcheck__or { color: var(--ink-3); font-size: 13px; font-weight: 700; }
+/* the ghost button is white-on-dark elsewhere; on this white card it needs ink */
+.lcheck__cta .btn--ghost { border-color: rgba(0, 116, 90, 0.45); color: var(--green-dark); }
+.lcheck__cta .btn--ghost:hover { border-color: var(--green-dark); color: var(--green-dark); }
 @media (max-width: 860px) {
   .lcheck { grid-template-columns: 1fr; gap: 24px; padding: 30px 22px; }
   .lcheck .section__title { text-align: center; }
