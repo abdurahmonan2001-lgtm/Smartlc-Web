@@ -181,6 +181,7 @@ const dict = {
         abdurakhmon: "IELTS 8.5 (C2) with a perfect 9.0 in both Listening and Reading. Specialist in IELTS preparation with 7 years of experience — helps students break through plateaus with proven band-score strategies.",
         sardorbek: "A specialist with 2 years of English-teaching experience, focused on making complex grammar topics and language rules simple, clear and memorable. Every lesson is built around the individual student — their level, goal and learning style. Modern methods and hands-on practice grow confident, fluent spoken English.",
         fazilat: "An English specialist holding IELTS 7.0 (C1). Across her work in schools and learning centres she has helped many students grow their language skills. Her lessons rely on interactive methods that make English engaging and effective.",
+        mashxura: "An English teacher with an IELTS 7.5 certificate and 2 years of experience. Her goal is to teach English not as a school subject but as a skill you use freely in everyday life. Lessons focus on speaking, grammar, vocabulary and real-life communication — shaped around each student's individual needs, with progress followed closely.",
       },
     },
     results: {
@@ -406,6 +407,7 @@ const dict = {
         abdurakhmon: "IELTS 8.5 (C2), Listening va Reading bo'yicha mukammal 9.0. 7 yillik tajribaga ega IELTS tayyorgarligi mutaxassisi — isbotlangan strategiyalar bilan talabalarga to'siqlardan o'tishga yordam beradi.",
         sardorbek: "Ingliz tili o'qitish bo'yicha 2 yillik tajribaga ega mutaxassis. Murakkab grammatik mavzular va til qoidalarini sodda, tushunarli va esda qolarli usullar bilan o'rgatishga ixtisoslashgan. Har bir o'quvchining bilim darajasi, maqsadi va o'rganish uslubidan kelib chiqib, individual yondashuvda dars o'tadi. Zamonaviy metodlar va amaliy mashg'ulotlar orqali o'quvchilarning ingliz tilida erkin muloqot qilishi va o'ziga ishonchini oshirishga e'tibor qaratadi.",
         fazilat: "IELTS 7.0 (C1) darajasiga ega ingliz tili mutaxassisi. Maktab va o'quv markazlaridagi tajribasi davomida ko'plab o'quvchilarning til ko'nikmalarini rivojlantirishga hissa qo'shgan. Darslarda interaktiv metodlardan foydalanib, ingliz tilini qiziqarli va samarali tarzda o'rgatadi.",
+        mashxura: "IELTS 7.5 sertifikati va 2 yillik tajribaga ega ingliz tili o'qituvchisi. Asosiy maqsadi — o'quvchilarga ingliz tilini faqat fan sifatida emas, kundalik hayotda erkin qo'llanadigan ko'nikma sifatida o'rgatish. Darslarida speaking, grammar, vocabulary va real-life communicationga alohida e'tibor beradi; har bir o'quvchining individual ehtiyojidan kelib chiqib ishlash va rivojlanishini kuzatib borish u uchun muhim.",
       },
     },
     results: {
@@ -631,6 +633,7 @@ const dict = {
         abdurakhmon: "IELTS 8.5 (C2), идеальные 9.0 по Listening и Reading. Специалист по подготовке к IELTS с 7-летним опытом — помогает студентам преодолевать плато с помощью проверенных стратегий.",
         sardorbek: "Специалист с 2-летним опытом преподавания английского языка. Объясняет сложные грамматические темы и правила языка просто, понятно и так, что они запоминаются. Строит каждое занятие индивидуально — с учётом уровня, цели и стиля обучения студента. С помощью современных методик и практических заданий развивает свободную речь и уверенность в английском.",
         fazilat: "Специалист по английскому языку с IELTS 7.0 (C1). За время работы в школах и учебных центрах помогла многим ученикам развить языковые навыки. На занятиях использует интерактивные методы, делая английский увлекательным и эффективным.",
+        mashxura: "Преподаватель английского с сертификатом IELTS 7.5 и 2-летним опытом. Её цель — научить английскому не как школьному предмету, а как навыку для свободной повседневной жизни. Особое внимание на занятиях — speaking, grammar, vocabulary и живое общение; работа строится от индивидуальных потребностей каждого ученика с постоянным отслеживанием прогресса.",
       },
     },
     results: {

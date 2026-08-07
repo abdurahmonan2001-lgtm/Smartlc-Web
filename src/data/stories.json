@@ -99,5 +99,26 @@
       "uz": "Ustozga alohida rahmat aytaman — qayta-qayta tashlab qo'ysam ham, qattiq turib o'qitdilar.",
       "ru": "Отдельное спасибо учителю — сколько бы раз я ни бросала, он твёрдо продолжал меня учить."
     }
+  },
+  {
+    "id": "muslima",
+    "name": "Muslima",
+    "photo": null,
+    "chips": ["🇸🇦 summer job", "16 y.o."],
+    "title": {
+      "en": "Administrator at a tourism company in Saudi Arabia — at 16",
+      "uz": "16 yoshda Saudiya Arabistonidagi turizm kompaniyasida administrator",
+      "ru": "В 16 лет — администратор туристической компании в Саудовской Аравии"
+    },
+    "story": {
+      "en": "My name is Muslima, and I'm 16. I started English young because my parents wanted me to — but as I grew, I realised this journey deserved to be taken seriously, so I studied harder and looked for every chance to improve. At 14, many of my classmates got interested in English too, and a healthy competition grew between us; by 15, some of them had already reached IELTS 6.0 and higher. Now I'm in the 11th grade — and thanks to my English, I've come to Saudi Arabia for the three-month summer holiday, working as an administrator at a tourism company. Life after learning English is completely different: I've met people from many countries, learned their cultures, traditions and ways of thinking, and it has widened how I see the world. I can talk to people confidently, listen to their life stories, and learn valuable lessons from them.",
+      "uz": "Mening ismim Muslima, 16 yoshdaman. Ingliz tilini kichikligimda, ota-onam xohlagani uchun boshlaganman — lekin ulg'aygach, bu yo'lga jiddiy qarash kerakligini angladim va qattiqroq o'qib, o'sish uchun har bir imkoniyatni izlay boshladim. 14 yoshimda sinfdoshlarimning ko'pi ham ingliz tiliga qiziqib qoldi va oramizda sog'lom raqobat paydo bo'ldi; 15 yoshga borib ularning ba'zilari allaqachon IELTS 6.0 va undan yuqori natijaga erishgandi. Hozir 11-sinfda o'qiyman — ingliz tilim tufayli uch oylik yozgi ta'tilga Saudiya Arabistoniga keldim va bu yerda turizm kompaniyasida administrator bo'lib ishlayapman. Ingliz tilidan keyingi hayotim avvalgidan butunlay boshqacha: ko'plab davlatlardan bo'lgan insonlar bilan tanishdim, ularning madaniyati, an'analari va fikrlash tarzini o'rgandim — bu dunyoga qarashimni kengaytirdi. Endi odamlar bilan bemalol suhbatlashaman, hayotiy hikoyalarini tinglab, ulardan qimmatli saboqlar olaman.",
+      "ru": "Меня зовут Муслима, мне 16 лет. Я начала учить английский в детстве, потому что этого хотели родители, — но, взрослея, поняла, что к этому пути стоит отнестись серьёзно: стала заниматься усерднее и искать любые возможности расти. В 14 лет английским увлеклись и многие мои одноклассники — между нами появилась здоровая конкуренция; к 15 годам некоторые из них уже получили IELTS 6.0 и выше. Сейчас я в 11-м классе — и благодаря английскому приехала на три летних месяца в Саудовскую Аравию, где работаю администратором в туристической компании. Жизнь после английского совершенно другая: я познакомилась с людьми из многих стран, узнала их культуру, традиции и образ мышления — это расширило мой взгляд на мир. Я уверенно общаюсь, слушаю жизненные истории людей и учусь у них."
+    },
+    "quote": {
+      "en": "If you learn English, the doors of the world will open for you.",
+      "uz": "Ingliz tilini o'rgansangiz, dunyo eshiklari siz uchun ochiladi.",
+      "ru": "Выучите английский — и двери мира откроются перед вами."
+    }
   }
 ]
