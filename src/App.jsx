@@ -55,6 +55,7 @@ export default function App() {
             {/* Act 1 — why learn English at all */}
             <Hero />
             <EnglishGives />
+            <SuccessStories />
             {/* Act 2 — how you do it with Smart LC */}
             <Advantages />
             <ContactBand kind="telegram" />
@@ -66,7 +67,6 @@ export default function App() {
             <Unlocks />
             <Stats />
             <Results />
-            <SuccessStories />
             <LevelCheck />
             <Testimonials />
             <Location />
