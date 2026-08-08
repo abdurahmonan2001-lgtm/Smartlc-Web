@@ -438,6 +438,7 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
                         className="ins-item"
                         ref={(el) => g.qs.forEach((q) => { qRefs.current[q.n] = el; })}
                       >
+                        {g.meta.box && <OptionBox g={g} />}
                         {g.meta.table && (
                           <table className="ins-table">
                             {g.meta.table.title && <caption>{g.meta.table.title}</caption>}
@@ -458,12 +459,12 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
                         {g.meta.notes && (
                           <div className="ins-notes">
                             {g.meta.notes.title && <div className="ins-notes__title">{g.meta.notes.title}</div>}
-                            {g.meta.notes.lines.map((line, li) => (
-                              <p key={li}><GapText text={line} {...gapProps} /></p>
-                            ))}
+                            {g.meta.notes.lines.map((line, li) => line.startsWith("## ")
+                              ? <p key={li} className="ins-notes__head">{line.slice(3)}</p>
+                              : <p key={li}><GapText text={line} {...gapProps} /></p>
+                            )}
                           </div>
                         )}
-                        {g.meta.box && <OptionBox g={g} />}
                       </div>
                     );
                   })()}

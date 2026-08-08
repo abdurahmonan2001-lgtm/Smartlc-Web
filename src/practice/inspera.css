@@ -115,8 +115,9 @@
 }
 .ins-select:focus { outline: 2px solid #418ec8; outline-offset: 0; }
 
-/* map / plan image for labelling */
-.ins-map { display: block; max-width: 100%; height: auto; margin: 4px 0 12px 25px; border: 1px solid #e5e5e5; }
+/* map / plan image for labelling — kept compact so the answer rows stay
+   visible right below it */
+.ins-map { display: block; max-width: 420px; width: 100%; height: auto; margin: 4px 0 10px 25px; border: 1px solid #e5e5e5; }
 
 /* table completion */
 .ins-table { border-collapse: collapse; margin: 4px 0 12px 25px; max-width: 100%; }
@@ -130,6 +131,7 @@
 /* notes completion */
 .ins-notes { margin: 4px 0 12px 25px; max-width: 640px; }
 .ins-notes__title { font-weight: 700; text-align: center; margin-bottom: 8px; }
+.ins-notes .ins-notes__head { font-weight: 700; margin: 12px 0 4px; }
 .ins-notes p { margin: 0 0 8px; line-height: 28px; }
 
 .ins-inlinegap { white-space: nowrap; }
