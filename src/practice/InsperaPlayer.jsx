@@ -52,8 +52,15 @@ const groupRubric = (g) => {
     const L = boxLetters(g);
     return `Label the ${g.meta.labelKind || "plan"} below. Write the correct letter, ${L[0]}–${L[L.length - 1]}, next to ${range}.`;
   }
+  if (type === "gap" && g.meta.box) {
+    const L = boxLetters(g);
+    return `Complete the summary using the list of words, ${L[0]}–${L[L.length - 1]}, below.`;
+  }
   if (type === "gap" && g.meta.table) return `Complete the table below. Write ${note || "ONE WORD ONLY"} for each answer.`;
-  if (type === "gap" && g.meta.notes) return `Complete the notes below. Write ${note || "ONE WORD ONLY"} for each answer.`;
+  if (type === "gap" && g.meta.notes) {
+    const kind = /^summary/i.test(g.meta.notes.title || "") ? "summary" : "notes";
+    return `Complete the ${kind} below. Write ${note || "ONE WORD ONLY"} for each answer.`;
+  }
   if (type === "gap") return `Complete the sentences below. Write ${note || "ONE WORD ONLY"} for each answer.`;
   if (type === "mcq" || type === "select") return "Choose the correct answer.";
   return "";
@@ -93,8 +100,9 @@ function OptionBox({ g }) {
 }
 
 /* Splits table-cell / notes-line text on {{n}} markers and renders the
- * inline numbered answer boxes exactly where the markers sit. */
-function GapText({ text, answers, setAns, activeN, setActiveN }) {
+ * inline numbered answer boxes exactly where the markers sit. When
+ * `letters` is given (word-list summary), the box is a letter dropdown. */
+function GapText({ text, answers, setAns, activeN, setActiveN, letters }) {
   return text.split(/(\{\{\d+\}\})/).map((part, i) => {
     const m = part.match(/^\{\{(\d+)\}\}$/);
     if (!m) return <span key={i}>{part}</span>;
@@ -102,14 +110,27 @@ function GapText({ text, answers, setAns, activeN, setActiveN }) {
     return (
       <span key={i} className="ins-inlinegap">
         <span className={`ins-num ${activeN === n ? "is-active" : ""}`}>{n}</span>
-        <input
-          className="ins-gap"
-          type="text"
-          value={answers[n] || ""}
-          onFocus={() => setActiveN(n)}
-          onChange={(e) => setAns(n, e.target.value)}
-          aria-label={`Answer ${n}`}
-        />
+        {letters ? (
+          <select
+            className="ins-select"
+            value={answers[n] || ""}
+            onFocus={() => setActiveN(n)}
+            onChange={(e) => setAns(n, e.target.value)}
+            aria-label={`Answer ${n}`}
+          >
+            <option value=""></option>
+            {letters.split("").map((L) => <option key={L} value={L}>{L}</option>)}
+          </select>
+        ) : (
+          <input
+            className="ins-gap"
+            type="text"
+            value={answers[n] || ""}
+            onFocus={() => setActiveN(n)}
+            onChange={(e) => setAns(n, e.target.value)}
+            aria-label={`Answer ${n}`}
+          />
+        )}
       </span>
     );
   });
@@ -406,39 +427,46 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
                     </div>
                   )}
 
-                  {/* table / notes completion: rendered layout with inline gaps */}
-                  {g.type === "gap" && (g.meta.table || g.meta.notes) && (
-                    <div
-                      className="ins-item"
-                      ref={(el) => g.qs.forEach((q) => { qRefs.current[q.n] = el; })}
-                    >
-                      {g.meta.table && (
-                        <table className="ins-table">
-                          {g.meta.table.title && <caption>{g.meta.table.title}</caption>}
-                          {g.meta.table.headers && (
-                            <thead><tr>{g.meta.table.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
-                          )}
-                          <tbody>
-                            {g.meta.table.rows.map((row, ri) => (
-                              <tr key={ri}>
-                                {row.map((cell, ci) => (
-                                  <td key={ci}><GapText text={cell} answers={answers} setAns={setAns} activeN={activeN} setActiveN={setActiveN} /></td>
-                                ))}
-                              </tr>
+                  {/* table / notes completion: rendered layout with inline gaps.
+                      With a word box (g.meta.box) the gaps become letter
+                      dropdowns — the summary-from-wordlist type. */}
+                  {g.type === "gap" && (g.meta.table || g.meta.notes) && (() => {
+                    const letters = g.meta.box ? boxLetters(g) : null;
+                    const gapProps = { answers, setAns, activeN, setActiveN, letters };
+                    return (
+                      <div
+                        className="ins-item"
+                        ref={(el) => g.qs.forEach((q) => { qRefs.current[q.n] = el; })}
+                      >
+                        {g.meta.table && (
+                          <table className="ins-table">
+                            {g.meta.table.title && <caption>{g.meta.table.title}</caption>}
+                            {g.meta.table.headers && (
+                              <thead><tr>{g.meta.table.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+                            )}
+                            <tbody>
+                              {g.meta.table.rows.map((row, ri) => (
+                                <tr key={ri}>
+                                  {row.map((cell, ci) => (
+                                    <td key={ci}><GapText text={cell} {...gapProps} /></td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        )}
+                        {g.meta.notes && (
+                          <div className="ins-notes">
+                            {g.meta.notes.title && <div className="ins-notes__title">{g.meta.notes.title}</div>}
+                            {g.meta.notes.lines.map((line, li) => (
+                              <p key={li}><GapText text={line} {...gapProps} /></p>
                             ))}
-                          </tbody>
-                        </table>
-                      )}
-                      {g.meta.notes && (
-                        <div className="ins-notes">
-                          {g.meta.notes.title && <div className="ins-notes__title">{g.meta.notes.title}</div>}
-                          {g.meta.notes.lines.map((line, li) => (
-                            <p key={li}><GapText text={line} answers={answers} setAns={setAns} activeN={activeN} setActiveN={setActiveN} /></p>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
+                          </div>
+                        )}
+                        {g.meta.box && <OptionBox g={g} />}
+                      </div>
+                    );
+                  })()}
 
                   {["multiselect", "match", "label"].includes(g.type) || (g.type === "gap" && (g.meta.table || g.meta.notes)) ? null : g.qs.map((q) => (
                     <div
