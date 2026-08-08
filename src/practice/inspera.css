@@ -108,10 +108,11 @@
 
 /* per-item dropdown (Inspera select control) */
 .ins-matchrow { align-items: center; margin-bottom: 8px; }
+.ins-matchrow .ins-text { flex: 0 1 auto; }
 .ins-select {
-  margin-left: auto; min-width: 64px; height: 26px; padding: 0 6px;
+  margin-left: 14px; min-width: 64px; height: 26px; padding: 0 6px;
   border: 1px solid #535353; border-radius: 3px; background: #fff;
-  font: inherit; font-size: 1em; color: #000;
+  font: inherit; font-size: 1em; color: #000; flex-shrink: 0;
 }
 .ins-select:focus { outline: 2px solid #418ec8; outline-offset: 0; }
 
