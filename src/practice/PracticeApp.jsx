@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, testsForBook, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults } from "./api.js";
+import InsperaPlayer from "./InsperaPlayer.jsx";
 
 const SESSION_KEY = "slc_practice_user";
 const PENDING_KEY = "slc_practice_pending";
@@ -25,11 +26,6 @@ const bandFor = (raw, total, module) => {
 
 const norm = (s) =>
   String(s ?? "").trim().toLowerCase().replace(/[.,;:!?'"]/g, "").replace(/\s+/g, " ");
-
-function fmtTime(sec) {
-  const m = Math.floor(sec / 60), s = sec % 60;
-  return `${m}:${String(s).padStart(2, "0")}`;
-}
 
 /* ─── Login ─── */
 function Login({ onLogin }) {
@@ -118,25 +114,15 @@ function Library({ user, onStart, onLogout, onResults }) {
   );
 }
 
-/* ─── Player (Inspera-style) ─── */
+/* ─── Player: the Inspera-replica UI plus scoring/saving on finish ─── */
 function Player({ test, user, onExit, onFinished }) {
-  const all = useMemo(() => test.sections.flatMap((s, si) => s.questions.map((q) => ({ ...q, si }))), [test]);
-  const [si, setSi] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [flags, setFlags] = useState({});
-  const [left, setLeft] = useState(test.durationMin * 60);
-  const [confirm, setConfirm] = useState(false);
-  const [split, setSplit] = useState(50); // passage pane width, %
   const startRef = useRef(Date.now());
   const finishedRef = useRef(false);
-  const mainRef = useRef(null);
-  const qRefs = useRef({});
 
-  const section = test.sections[si];
-
-  const finish = async () => {
+  const finish = async (answers) => {
     if (finishedRef.current) return;
     finishedRef.current = true;
+    const all = test.sections.flatMap((s) => s.questions);
     // essays are stored for teacher review, everything else auto-scores
     const scorable = all.filter((qq) => qq.type !== "essay");
     let raw = 0;
@@ -168,184 +154,7 @@ function Player({ test, user, onExit, onFinished }) {
     onFinished({ ...result, saved });
   };
 
-  useEffect(() => {
-    const iv = setInterval(() => setLeft((s) => Math.max(0, s - 1)), 1000);
-    return () => clearInterval(iv);
-  }, []);
-  useEffect(() => { if (left === 0) finish(); }, [left]);
-
-  // draggable divider between passage and questions
-  const startDrag = (e) => {
-    e.preventDefault();
-    const main = mainRef.current;
-    const move = (ev) => {
-      const rect = main.getBoundingClientRect();
-      const pct = ((ev.clientX - rect.left) / rect.width) * 100;
-      setSplit(Math.min(72, Math.max(28, pct)));
-    };
-    const up = () => {
-      window.removeEventListener("pointermove", move);
-      window.removeEventListener("pointerup", up);
-    };
-    window.addEventListener("pointermove", move);
-    window.addEventListener("pointerup", up);
-  };
-
-  const jumpTo = (qq) => {
-    const go = () => qRefs.current[qq.n]?.scrollIntoView({ behavior: "smooth", block: "start" });
-    if (qq.si !== si) { setSi(qq.si); setTimeout(go, 60); }
-    else go();
-  };
-
-  const setAns = (n, v) => setAnswers((a) => ({ ...a, [n]: v }));
-
-  return (
-    <div className="pr-player">
-      <header className="pr-player__top">
-        <span className="pr-player__title">{test.title}</span>
-        {test.sections.length > 1 && (
-          <span className="pr-player__sections">
-            {test.sections.map((s, i) => (
-              <button key={i} className={i === si ? "is-cur" : ""} onClick={() => setSi(i)}>
-                {i + 1}
-              </button>
-            ))}
-          </span>
-        )}
-        <span className={`pr-player__timer ${left < 300 ? "is-low" : ""}`}>⏱ {fmtTime(left)}</span>
-        <span className="pr-player__user">{user.full_name}</span>
-        <button className="pr-player__finish" onClick={() => setConfirm(true)}>Finish test</button>
-      </header>
-
-      <div
-        className="pr-player__main pr-player__main--split"
-        ref={mainRef}
-        style={{ "--split": `${split}%` }}
-      >
-        <div className="pr-pane pr-pane--passage">
-          <p className="pr-pane__instructions">{section.instructions}</p>
-          {section.audioSrc && (
-            <div className="pr-audio">
-              <strong>🎧 {section.passageTitle || "Listening"}</strong>
-              <audio controls src={section.audioSrc} preload="auto" />
-              <p>In the real exam the recording plays only once. Play it when you are ready.</p>
-            </div>
-          )}
-          {!section.audioSrc && section.passageTitle && <h2>{section.passageTitle}</h2>}
-          {section.passage && section.passage.split("\n\n").map((para, i) => <p key={i}>{para}</p>)}
-          {section.image && (
-            <img className="pr-pane__image" src={section.image} alt="Task diagram" loading="lazy" />
-          )}
-        </div>
-
-        <div
-          className="pr-divider"
-          onPointerDown={startDrag}
-          role="separator"
-          aria-orientation="vertical"
-          title="Drag to resize"
-        >
-          <span />
-        </div>
-
-        <div className="pr-pane pr-pane--question">
-          {section.questions.map((q) => (
-            <div className="pr-q" key={q.n} ref={(el) => { qRefs.current[q.n] = el; }}>
-              <div className="pr-q__head">
-                <span className="pr-q__num">Question {q.n}</span>
-                <button
-                  className={`pr-q__flag ${flags[q.n] ? "is-on" : ""}`}
-                  onClick={() => setFlags((f) => ({ ...f, [q.n]: !f[q.n] }))}
-                >
-                  ⚑ {flags[q.n] ? "Flagged" : "Flag"}
-                </button>
-              </div>
-              <p className="pr-q__prompt">{q.prompt}</p>
-              {q.note && <p className="pr-q__note">{q.note}</p>}
-
-              {(q.type === "tfng" || q.type === "ynng") && (
-                <div className="pr-q__options">
-                  {(q.type === "tfng" ? ["TRUE", "FALSE", "NOT GIVEN"] : ["YES", "NO", "NOT GIVEN"]).map((o) => (
-                    <label className={`pr-opt ${answers[q.n] === o ? "is-sel" : ""}`} key={o}>
-                      <input type="radio" name={`q${q.n}`} checked={answers[q.n] === o} onChange={() => setAns(q.n, o)} />
-                      {o}
-                    </label>
-                  ))}
-                </div>
-              )}
-              {(q.type === "mcq" || q.type === "select") && (
-                <div className="pr-q__options">
-                  {q.options.map((o) => {
-                    const letter = o.slice(0, 1);
-                    return (
-                      <label className={`pr-opt ${answers[q.n] === letter ? "is-sel" : ""}`} key={o}>
-                        <input type="radio" name={`q${q.n}`} checked={answers[q.n] === letter} onChange={() => setAns(q.n, letter)} />
-                        {o}
-                      </label>
-                    );
-                  })}
-                </div>
-              )}
-              {q.type === "gap" && (
-                <input
-                  className="pr-q__input"
-                  placeholder="Type your answer"
-                  value={answers[q.n] || ""}
-                  onChange={(e) => setAns(q.n, e.target.value)}
-                />
-              )}
-              {q.type === "essay" && (() => {
-                const words = (answers[q.n] || "").trim().split(/\s+/).filter(Boolean).length;
-                return (
-                  <>
-                    <textarea
-                      className="pr-essay"
-                      placeholder="Write your answer here…"
-                      value={answers[q.n] || ""}
-                      onChange={(e) => setAns(q.n, e.target.value)}
-                    />
-                    <div className={`pr-essay__count ${words >= (q.minWords || 0) ? "is-ok" : ""}`}>
-                      {words} words{q.minWords ? ` · minimum ${q.minWords}` : ""}
-                    </div>
-                  </>
-                );
-              })()}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <footer className="pr-palette">
-        {all.map((qq) => (
-          <button
-            key={qq.n}
-            className={`pr-palette__q ${answers[qq.n] ? "is-done" : ""} ${flags[qq.n] ? "is-flag" : ""}`}
-            onClick={() => jumpTo(qq)}
-          >
-            {qq.n}
-          </button>
-        ))}
-      </footer>
-
-      {confirm && (
-        <div className="pr-modal" onClick={() => setConfirm(false)}>
-          <div className="pr-modal__card" onClick={(e) => e.stopPropagation()}>
-            <h3>Finish the test?</h3>
-            <p>
-              {all.filter((qq) => answers[qq.n]).length} of {all.length} questions answered.
-              {all.some((qq) => flags[qq.n]) ? " You still have flagged questions." : ""}
-            </p>
-            <div className="pr-modal__row">
-              <button className="btn btn--band" onClick={() => setConfirm(false)}>Keep working</button>
-              <button className="btn btn--primary" onClick={finish}>Submit</button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <button className="pr-player__exit" onClick={onExit} title="Exit without saving">✕</button>
-    </div>
-  );
+  return <InsperaPlayer test={test} user={user} onExit={onExit} onFinish={finish} />;
 }
 
 /* ─── Result + history ─── */
