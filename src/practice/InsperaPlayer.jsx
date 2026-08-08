@@ -29,26 +29,91 @@ const fmtLeft = (sec) => {
   return m >= 60 ? `${Math.floor(m / 60)} hour${Math.floor(m / 60) > 1 ? "s" : ""} ${m % 60} minutes left` : `${m} minute${m !== 1 ? "s" : ""} left`;
 };
 
+const letterFor = (i) => "ABCDEFGHIJKLMN"[i];
+const boxLetters = (g) => (g.meta.letters || (g.meta.box || []).map((_, i) => letterFor(i)).join(""));
+
 // Standard IELTS rubric line for each run of same-type questions, matching
 // how Inspera groups them under a "Questions X–Y" headline.
-const groupRubric = (type, note) => {
+const groupRubric = (g) => {
+  if (g.meta.rubric) return g.meta.rubric;
+  const { type, note } = g.meta;
+  const range = g.qs.length > 1 ? `Questions ${g.qs[0].n}–${g.qs[g.qs.length - 1].n}` : `Question ${g.qs[0].n}`;
   if (type === "tfng") return "Do the following statements agree with the information given in the text? Choose TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.";
   if (type === "ynng") return "Do the following statements agree with the claims of the writer? Choose YES if the statement agrees with the claims of the writer, NO if the statement contradicts the claims of the writer, or NOT GIVEN if it is impossible to say what the writer thinks about this.";
+  if (type === "multiselect") {
+    const count = ["TWO", "THREE", "FOUR"][g.qs.length - 2] || "TWO";
+    return `Choose ${count} letters, A–${letterFor((g.meta.options || []).length - 1)}.`;
+  }
+  if (type === "match") {
+    const L = boxLetters(g);
+    return `Choose the correct answer and write the correct letter, ${L[0]}–${L[L.length - 1]}, next to ${range}.`;
+  }
+  if (type === "label") {
+    const L = boxLetters(g);
+    return `Label the ${g.meta.labelKind || "plan"} below. Write the correct letter, ${L[0]}–${L[L.length - 1]}, next to ${range}.`;
+  }
+  if (type === "gap" && g.meta.table) return `Complete the table below. Write ${note || "ONE WORD ONLY"} for each answer.`;
+  if (type === "gap" && g.meta.notes) return `Complete the notes below. Write ${note || "ONE WORD ONLY"} for each answer.`;
   if (type === "gap") return `Complete the sentences below. Write ${note || "ONE WORD ONLY"} for each answer.`;
   if (type === "mcq" || type === "select") return "Choose the correct answer.";
   return "";
 };
 
-/* Groups a section's questions into contiguous same-type runs. */
+/* Groups a section's questions into blocks. Questions sharing an explicit
+ * `group` id form one interactive block (multi-select pair, matching run,
+ * labelled map, table/notes completion); otherwise contiguous same-type
+ * questions group under one headline as before. */
 const groupQuestions = (questions) => {
   const groups = [];
   for (const q of questions) {
     const g = groups[groups.length - 1];
-    if (g && g.type === q.type && q.type !== "essay") g.qs.push(q);
-    else groups.push({ type: q.type, note: q.note, qs: [q] });
+    const sameExplicit = g && q.group && g.gid === q.group;
+    const sameImplicit = g && !q.group && !g.gid && g.type === q.type && q.type !== "essay" &&
+      !["multiselect", "match", "label"].includes(q.type);
+    if (sameExplicit || sameImplicit) g.qs.push(q);
+    else groups.push({ type: q.type, gid: q.group, meta: q, note: q.note, qs: [q] });
   }
   return groups;
 };
+
+/* Lettered option box shown above matching/labelling runs (Inspera style). */
+function OptionBox({ g }) {
+  if (!g.meta.box) return null;
+  return (
+    <div className="ins-box">
+      {g.meta.boxTitle && <div className="ins-box__title">{g.meta.boxTitle}</div>}
+      {g.meta.box.map((text, i) => (
+        <div className="ins-box__row" key={i}>
+          <strong>{letterFor(i)}</strong>
+          <span>{text}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* Splits table-cell / notes-line text on {{n}} markers and renders the
+ * inline numbered answer boxes exactly where the markers sit. */
+function GapText({ text, answers, setAns, activeN, setActiveN }) {
+  return text.split(/(\{\{\d+\}\})/).map((part, i) => {
+    const m = part.match(/^\{\{(\d+)\}\}$/);
+    if (!m) return <span key={i}>{part}</span>;
+    const n = +m[1];
+    return (
+      <span key={i} className="ins-inlinegap">
+        <span className={`ins-num ${activeN === n ? "is-active" : ""}`}>{n}</span>
+        <input
+          className="ins-gap"
+          type="text"
+          value={answers[n] || ""}
+          onFocus={() => setActiveN(n)}
+          onChange={(e) => setAns(n, e.target.value)}
+          aria-label={`Answer ${n}`}
+        />
+      </span>
+    );
+  });
+}
 
 /* Inline gap sentence: the ______ in the prompt becomes the answer box. */
 function GapPrompt({ q, value, onChange }) {
@@ -265,10 +330,117 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
                       <h3 className="ins-headline">
                         {g.qs.length > 1 ? `Questions ${g.qs[0].n}–${g.qs[g.qs.length - 1].n}` : `Question ${g.qs[0].n}`}
                       </h3>
-                      <p>{groupRubric(g.type, g.note)}</p>
+                      <p>{groupRubric(g)}</p>
                     </div>
                   )}
-                  {g.qs.map((q) => (
+
+                  {/* multi-select pair: one checkbox list answering 2+ numbers */}
+                  {g.type === "multiselect" && (() => {
+                    const ns = g.qs.map((q) => q.n);
+                    const chosen = ns.map((n) => answers[n]).filter(Boolean);
+                    const toggle = (letter) => {
+                      const set = new Set(chosen);
+                      if (set.has(letter)) set.delete(letter);
+                      else if (set.size < ns.length) set.add(letter);
+                      const arr = [...set].sort();
+                      ns.forEach((n, i) => setAns(n, arr[i] || ""));
+                    };
+                    return (
+                      <div
+                        className="ins-item"
+                        ref={(el) => ns.forEach((n) => { qRefs.current[n] = el; })}
+                        onPointerDown={() => setActiveN(ns.find((n) => !answers[n]) ?? ns[0])}
+                      >
+                        <p className="ins-prompt">
+                          {ns.map((n) => (
+                            <span key={n} className={`ins-num ${activeN === n ? "is-active" : ""}`}>{n}</span>
+                          ))}
+                          <span className="ins-text">{g.meta.prompt}</span>
+                        </p>
+                        <ul className="ins-options">
+                          {(g.meta.options || []).map((o, i) => {
+                            const letter = letterFor(i);
+                            return (
+                              <li key={o}>
+                                <input
+                                  type="checkbox"
+                                  id={`g${ns[0]}-${letter}`}
+                                  checked={chosen.includes(letter)}
+                                  onChange={() => toggle(letter)}
+                                />
+                                <label htmlFor={`g${ns[0]}-${letter}`}><span>{o}</span></label>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    );
+                  })()}
+
+                  {/* matching / labelling: shared lettered box + a dropdown per item */}
+                  {(g.type === "match" || g.type === "label") && (
+                    <div
+                      className="ins-item"
+                      ref={(el) => g.qs.forEach((q) => { qRefs.current[q.n] = el; })}
+                    >
+                      {g.type === "label" && g.meta.image && (
+                        <img className="ins-map" src={g.meta.image} alt="Plan to label" />
+                      )}
+                      <OptionBox g={g} />
+                      {g.qs.map((q) => (
+                        <p className="ins-prompt ins-matchrow" key={q.n}>
+                          <span className={`ins-num ${activeN === q.n ? "is-active" : ""}`}>{q.n}</span>
+                          <span className="ins-text">{q.prompt}</span>
+                          <select
+                            className="ins-select"
+                            value={answers[q.n] || ""}
+                            onFocus={() => setActiveN(q.n)}
+                            onChange={(e) => setAns(q.n, e.target.value)}
+                            aria-label={`Answer ${q.n}`}
+                          >
+                            <option value=""></option>
+                            {boxLetters(g).split("").map((L) => <option key={L} value={L}>{L}</option>)}
+                          </select>
+                        </p>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* table / notes completion: rendered layout with inline gaps */}
+                  {g.type === "gap" && (g.meta.table || g.meta.notes) && (
+                    <div
+                      className="ins-item"
+                      ref={(el) => g.qs.forEach((q) => { qRefs.current[q.n] = el; })}
+                    >
+                      {g.meta.table && (
+                        <table className="ins-table">
+                          {g.meta.table.title && <caption>{g.meta.table.title}</caption>}
+                          {g.meta.table.headers && (
+                            <thead><tr>{g.meta.table.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+                          )}
+                          <tbody>
+                            {g.meta.table.rows.map((row, ri) => (
+                              <tr key={ri}>
+                                {row.map((cell, ci) => (
+                                  <td key={ci}><GapText text={cell} answers={answers} setAns={setAns} activeN={activeN} setActiveN={setActiveN} /></td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      )}
+                      {g.meta.notes && (
+                        <div className="ins-notes">
+                          {g.meta.notes.title && <div className="ins-notes__title">{g.meta.notes.title}</div>}
+                          {g.meta.notes.lines.map((line, li) => (
+                            <p key={li}><GapText text={line} answers={answers} setAns={setAns} activeN={activeN} setActiveN={setActiveN} /></p>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {["multiselect", "match", "label"].includes(g.type) || (g.type === "gap" && (g.meta.table || g.meta.notes)) ? null : g.qs.map((q) => (
                     <div
                       className="ins-item"
                       key={q.n}

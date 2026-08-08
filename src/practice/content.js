@@ -134,9 +134,71 @@ const SAMPLE_WRITING = {
   ],
 };
 
+// Demonstrates every question type the player supports, including the
+// grouped blocks added for full IELTS authenticity: multi-select pairs,
+// matching from a lettered box, map labelling, and table/notes completion.
+// Doubles as living documentation of the authoring schema:
+//   q.group          — questions sharing a group id render as ONE block
+//   q.options        — checkbox options for multiselect (letters auto A–)
+//   q.box/boxTitle   — shared lettered option box for match groups
+//   q.image/letters  — plan image + letter range for label groups
+//   q.table/notes    — completion layout; cells/lines hold {{n}} gap markers
+//   q.rubric         — overrides the auto-generated instruction line
+//   q.answer         — string or array of accepted variants
+// Multi-select keys MUST be authored in alphabetical order across the group.
+const SAMPLE_TYPES = {
+  id: "sample-types-1",
+  bookId: "sample",
+  title: "Sample — All Question Types",
+  module: "reading",
+  durationMin: 15,
+  sections: [
+    {
+      title: "Question-type demo",
+      instructions: "This demo shows every question format used in the real test, in the order you might meet them.",
+      passageTitle: "The Greyfield Visitor Centre",
+      passage: `The Greyfield Visitor Centre opened in 2019 on the site of the town's old fish market. Its library stays open until 9 p.m. on weekdays, while the swimming pool on Station Road closes every Monday for maintenance. Entry to both the library and the museum is free for residents.
+
+The library reopened last spring after a full renovation, and the pool is popular with families throughout the summer. Guided tours of the town leave from the harbour every hour, and every ticket includes a free map of the old quarter.`,
+      questions: [
+        { n: 1, type: "gap", group: "t1", note: "ONE WORD AND/OR A NUMBER",
+          table: {
+            title: "Greyfield Visitor Centre",
+            headers: ["Facility", "Location", "Notes"],
+            rows: [
+              ["Library", "Main Street", "open until {{1}} p.m. on weekdays"],
+              ["Swimming pool", "{{2}} Road", "closed on Mondays"],
+            ],
+          },
+          answer: "9" },
+        { n: 2, type: "gap", group: "t1", answer: "station" },
+        { n: 3, type: "multiselect", group: "ms1",
+          prompt: "Which TWO facilities are free for residents?",
+          options: ["the library", "the swimming pool", "the gym", "the cinema", "the museum"],
+          answer: "A" },
+        { n: 4, type: "multiselect", group: "ms1", answer: "E" },
+        { n: 5, type: "match", group: "m1", boxTitle: "Comments",
+          box: ["popular with families", "recently renovated", "closing next year"],
+          prompt: "the library", answer: "B" },
+        { n: 6, type: "match", group: "m1", prompt: "the swimming pool", answer: "A" },
+        { n: 7, type: "label", group: "l1", image: "/practice-img/sample-map.svg", letters: "ABCDE",
+          prompt: "Information desk", answer: "C" },
+        { n: 8, type: "label", group: "l1", prompt: "Café", answer: "E" },
+        { n: 9, type: "gap", group: "n1", note: "ONE WORD ONLY",
+          notes: {
+            title: "Guided tours",
+            lines: ["Tours leave from the {{9}} every hour.", "Each ticket includes a free {{10}}."],
+          },
+          answer: "harbour" },
+        { n: 10, type: "gap", group: "n1", answer: ["map", "maps"] },
+      ],
+    },
+  ],
+};
+
 export const TESTS = [
   MOCK1_LISTENING, MOCK1_READING, MOCK1_WRITING,
-  SAMPLE_LISTENING, SAMPLE_READING, SAMPLE_WRITING,
+  SAMPLE_LISTENING, SAMPLE_READING, SAMPLE_WRITING, SAMPLE_TYPES,
 ];
 
 export const testsForBook = (bookId) => TESTS.filter((t) => t.bookId === bookId);

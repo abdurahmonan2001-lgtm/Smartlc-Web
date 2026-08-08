@@ -14,7 +14,7 @@
 import { env } from './_session.js'
 
 const MODULES = ['listening', 'reading', 'writing']
-const Q_TYPES = ['tfng', 'ynng', 'mcq', 'select', 'gap', 'essay']
+const Q_TYPES = ['tfng', 'ynng', 'mcq', 'select', 'gap', 'essay', 'multiselect', 'match', 'label']
 const MAX_BODY_TESTS = 1
 const MAX_SECTIONS = 8
 const MAX_QUESTIONS = 60
@@ -46,14 +46,20 @@ function validateTest(t) {
       if (seen.has(q.n)) return `${qw}.n=${q.n} is duplicated — question numbers must be unique across the test`
       seen.add(q.n)
       if (!Q_TYPES.includes(q.type)) return `${qw}.type must be one of ${Q_TYPES.join(', ')}`
-      if (!q.prompt || typeof q.prompt !== 'string') return `${qw}.prompt is required`
-      if ((q.type === 'mcq' || q.type === 'select')) {
-        if (!Array.isArray(q.options) || q.options.length < 2) return `${qw}.options must list at least 2 options`
-        if (typeof q.answer !== 'string' || !q.answer) return `${qw}.answer is required (the correct option letter)`
+      const inLayoutGroup = !!(q.group || q.table || q.notes)
+      if ((!q.prompt || typeof q.prompt !== 'string') && !inLayoutGroup) return `${qw}.prompt is required`
+      // keys may be a string or an array of accepted variants
+      const answerOk = typeof q.answer === 'string' && q.answer
+        ? true
+        : Array.isArray(q.answer) && q.answer.length > 0 && q.answer.every((a) => typeof a === 'string' && a)
+      if (q.type === 'mcq' || q.type === 'select' || q.type === 'multiselect') {
+        const first = q.group ? t.sections[si].questions.find((x) => x.group === q.group) : q
+        if (!Array.isArray((first || q).options) || (first || q).options.length < 2) return `${qw}.options must list at least 2 options (on the group's first question)`
+        if (!answerOk) return `${qw}.answer is required (the correct option letter${q.type === 'multiselect' ? ', keys in alphabetical order across the group' : ''})`
       } else if (q.type !== 'essay') {
-        if (typeof q.answer !== 'string' || !q.answer) return `${qw}.answer is required`
+        if (!answerOk) return `${qw}.answer is required`
       }
-      if (q.type === 'gap' && !/_{3,}/.test(q.prompt)) return `${qw}: gap prompts need a ______ blank where the answer box goes`
+      if (q.type === 'gap' && !inLayoutGroup && !/_{3,}/.test(q.prompt)) return `${qw}: gap prompts need a ______ blank where the answer box goes (or a table/notes layout via group)`
     }
   }
   if (nQuestions > MAX_QUESTIONS) return `too many questions (${nQuestions}; max ${MAX_QUESTIONS})`

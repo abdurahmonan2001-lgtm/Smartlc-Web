@@ -59,7 +59,7 @@
   display: flex; align-items: center; justify-content: center; color: #535353;
   cursor: ew-resize; touch-action: none; z-index: 2;
 }
-.ins-questions { overflow-y: auto; padding: 16px 16px 48px 17px; flex: 1; }
+.ins-questions { overflow-y: auto; overflow-x: auto; padding: 16px 16px 48px 17px; flex: 1; }
 
 /* question groups */
 .ins-group__rubric { margin-bottom: 8px; }
@@ -90,6 +90,50 @@
   display: inline-flex; background: #fff;
   padding: 9.6px 8px 9.6px 32px; line-height: 24px; cursor: pointer;
 }
+
+/* checkboxes reuse the radio option-list styling */
+.ins-options input[type="checkbox"] {
+  position: absolute; left: 5px; top: 13px;
+  width: 13px; height: 13px; margin: 0; accent-color: #000;
+}
+
+/* lettered option box for matching/labelling (Inspera bordered box) */
+.ins-box {
+  display: inline-block; min-width: 260px; max-width: 100%;
+  border: 1px solid #595959; margin: 4px 0 12px 25px; padding: 8px 14px;
+}
+.ins-box__title { font-weight: 700; margin-bottom: 4px; }
+.ins-box__row { display: flex; gap: 10px; line-height: 24px; }
+.ins-box__row strong { min-width: 14px; }
+
+/* per-item dropdown (Inspera select control) */
+.ins-matchrow { align-items: center; margin-bottom: 8px; }
+.ins-select {
+  margin-left: auto; min-width: 64px; height: 26px; padding: 0 6px;
+  border: 1px solid #535353; border-radius: 3px; background: #fff;
+  font: inherit; font-size: 1em; color: #000;
+}
+.ins-select:focus { outline: 2px solid #418ec8; outline-offset: 0; }
+
+/* map / plan image for labelling */
+.ins-map { display: block; max-width: 100%; height: auto; margin: 4px 0 12px 25px; border: 1px solid #e5e5e5; }
+
+/* table completion */
+.ins-table { border-collapse: collapse; margin: 4px 0 12px 25px; max-width: 100%; }
+.ins-table caption { font-weight: 700; text-align: center; padding-bottom: 8px; caption-side: top; }
+.ins-table th, .ins-table td {
+  border: 1px solid #595959; padding: 8px 12px; text-align: left;
+  vertical-align: top; line-height: 24px;
+}
+.ins-table th { font-weight: 700; }
+
+/* notes completion */
+.ins-notes { margin: 4px 0 12px 25px; max-width: 640px; }
+.ins-notes__title { font-weight: 700; text-align: center; margin-bottom: 8px; }
+.ins-notes p { margin: 0 0 8px; line-height: 28px; }
+
+.ins-inlinegap { white-space: nowrap; }
+.ins-inlinegap .ins-num { display: inline-block; vertical-align: middle; margin-left: 2px; }
 
 /* inline gap input */
 .ins-gap {

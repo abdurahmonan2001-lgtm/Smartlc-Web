@@ -124,14 +124,20 @@ function Player({ test, user, onExit, onFinished }) {
     if (finishedRef.current) return;
     finishedRef.current = true;
     const all = test.sections.flatMap((s) => s.questions);
-    // essays are stored for teacher review, everything else auto-scores
+    // essays are stored for teacher review, everything else auto-scores.
+    // Keys may list accepted variants (answer: ["colour", "color"]).
+    // Multi-select pairs store chosen letters alphabetically, so keys
+    // authored in alphabetical order compare per-number like any letter.
     const scorable = all.filter((qq) => qq.type !== "essay");
+    const keyVariants = (qq) => (Array.isArray(qq.answer) ? qq.answer : [qq.answer]).map(norm);
     let raw = 0;
     for (const qq of scorable) {
       const given = norm(answers[qq.n]);
+      if (!given) continue;
+      const keys = keyVariants(qq);
       if (qq.type === "mcq" || qq.type === "select") {
-        if (given === norm(qq.answer) || given.startsWith(norm(qq.answer) + " ")) raw++;
-      } else if (given && given === norm(qq.answer)) raw++;
+        if (keys.some((k) => given === k || given.startsWith(k + " "))) raw++;
+      } else if (keys.includes(given)) raw++;
     }
     const total = scorable.length;
     const result = {
