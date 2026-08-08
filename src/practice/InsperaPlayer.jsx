@@ -174,6 +174,8 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [notes, setNotes] = useState([]);
   const [popup, setPopup] = useState(null);          // {x, y, text}
+  const [endedParts, setEndedParts] = useState({});  // section idx -> recording finished
+  const [marked, setMarked] = useState({});          // question n -> marked for review
   const mainRef = useRef(null);
   const qRefs = useRef({});
   const audioRef = useRef(null);
@@ -201,7 +203,10 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
     const audio = new Audio(src);
     audioRef.current = audio;
     audio.play().then(() => setAudioPlaying(true)).catch(() => setAudioPlaying(false));
-    audio.onended = () => setAudioPlaying(false);
+    audio.onended = () => {
+      setAudioPlaying(false);
+      setEndedParts((e) => ({ ...e, [idx]: true }));
+    };
   };
   const passGate = () => { setAudioGate(false); startSectionAudio(si); };
   useEffect(() => () => { audioRef.current?.pause(); }, []);
@@ -543,7 +548,9 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
         <button className="ins-nav__btn" aria-label="Next" onClick={() => step(1)}>{I.next}</button>
       </div>
 
-      {/* ─ footer ─ */}
+      {/* ─ footer: every question of every part, always visible.
+             green = answered · red = unanswered after that part's recording
+             has finished · round = marked to come back to ─ */}
       <footer className="ins-footer">
         <div className="ins-footer__parts">
           {test.sections.map((s, i) => {
@@ -552,25 +559,39 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
               <div className={`ins-part ${selected ? "is-selected" : ""}`} key={i}>
                 <button className="ins-part__label" onClick={() => selectPart(i)}>
                   <span>Part</span> <span>{i + 1}</span>
-                  {!selected && <span className="ins-part__count">{attempted(i)} of {s.questions.length}</span>}
                 </button>
-                {selected && s.questions.length > 1 && (
-                  <div className="ins-part__squares">
-                    {s.questions.map((q) => (
+                <div className="ins-part__squares">
+                  {s.questions.map((q) => {
+                    const done = String(answers[q.n] ?? "").trim() !== "";
+                    const missed = !done && !!s.audioSrc && !!endedParts[i];
+                    return (
                       <button
                         key={q.n}
-                        className={`ins-sq ${activeN === q.n ? "is-active" : ""}`}
+                        className={[
+                          "ins-sq",
+                          activeN === q.n ? "is-active" : "",
+                          marked[q.n] ? "is-marked" : "",
+                          done ? "is-done" : missed ? "is-missed" : "",
+                        ].join(" ")}
                         onClick={() => jumpTo(q.n, i)}
                       >
                         {q.n}
                       </button>
-                    ))}
-                  </div>
-                )}
+                    );
+                  })}
+                </div>
               </div>
             );
           })}
         </div>
+        <label className="ins-mark" title="Mark this question to come back to it">
+          <input
+            type="checkbox"
+            checked={!!marked[activeN]}
+            onChange={() => setMarked((m) => ({ ...m, [activeN]: !m[activeN] }))}
+          />
+          <span>Mark</span>
+        </label>
         <button
           className={`ins-deliver ${page === "toc" ? "is-active" : ""}`}
           aria-label="Review your answers"

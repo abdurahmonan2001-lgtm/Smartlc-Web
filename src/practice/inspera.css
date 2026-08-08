@@ -168,27 +168,39 @@
 
 /* ─ footer: 53px, part tabs + deliver check ─ */
 .ins-footer { display: flex; height: 53px; flex-shrink: 0; background: #fff; position: relative; }
-.ins-footer__parts { flex: 1; display: flex; min-width: 0; }
-.ins-part {
-  flex: 1; display: flex; min-width: 0; background: #fff;
-  border-top: 3px solid #fff; border-right: 1px solid #e5e5e5;
+.ins-footer__parts {
+  flex: 1; display: flex; min-width: 0;
+  overflow-x: auto; scrollbar-width: none;
 }
-.ins-part.is-selected { flex: 0 0 auto; }
-.ins-part:not(.is-selected) { justify-content: flex-start; }
+.ins-footer__parts::-webkit-scrollbar { display: none; }
+.ins-part {
+  flex: 0 0 auto; display: flex; background: #fff;
+  border-top: 3px solid #fff; border-right: 1px solid #e5e5e5; padding-right: 10px;
+}
 .ins-part__label {
   border: 0; background: none; color: #333; font-size: 1em;
-  padding: 16px 20px; white-space: nowrap; display: flex; gap: 5px; align-items: baseline;
+  padding: 16px 8px 16px 14px; white-space: nowrap; display: flex; gap: 5px; align-items: baseline;
 }
-.ins-part.is-selected .ins-part__label { font-weight: 600; }
-.ins-part__count { margin-left: 8px; color: #333; font-weight: 400; }
-.ins-part__squares { display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
-.ins-part__squares::-webkit-scrollbar { display: none; }
+.ins-part.is-selected .ins-part__label { font-weight: 700; }
+.ins-part__squares { display: flex; align-items: center; gap: 1px; }
 .ins-sq {
-  min-width: 21px; height: 27px; padding: 2.4px 4px; margin: 0;
+  min-width: 22px; height: 24px; padding: 2px 3px; margin: 0;
   border: 2px solid transparent; border-radius: 3px; background: none;
-  color: #333; font-size: 1em; line-height: 1;
+  color: #333; font-size: 13px; line-height: 1;
 }
 .ins-sq.is-active { border-color: #418fc6; background: #fff; font-weight: 700; }
+.ins-sq.is-done { background: #009472; border-color: #009472; color: #fff; }
+.ins-sq.is-missed { background: #dc2626; border-color: #dc2626; color: #fff; }
+.ins-sq.is-done.is-active, .ins-sq.is-missed.is-active { border-color: #418fc6; }
+.ins-sq.is-marked { border-radius: 50%; }
+
+/* mark-for-review tick at the end of the panel */
+.ins-mark {
+  display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+  padding: 0 14px; border-left: 1px solid #e5e5e5;
+  font-size: 13px; color: #333; cursor: pointer; user-select: none;
+}
+.ins-mark input { width: 15px; height: 15px; accent-color: #000; cursor: pointer; }
 .ins-deliver {
   width: 77px; flex-shrink: 0; border: 0;
   background: #efefef; color: #535353;

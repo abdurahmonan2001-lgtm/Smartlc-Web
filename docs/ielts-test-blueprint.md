@@ -315,6 +315,11 @@ Cambridge-20 passages. Numbers are averages.
 1. Write each listening part to its trap profile (P1: 2–3 corrections +
    one spelling; P2: all-options-mentioned MCQ distractors; P3: hedged
    opinions and mentioned-vs-agreed; P4: zero traps, maximum density).
+   **P1/P4 notes rule (Abdurahmon, 2026-08-08): every main idea of the
+   recording appears as a bullet — gapped OR plain-information — so the
+   notes mirror the whole talk, grouped under bold sub-headings. The
+   plain bullets anchor the listener between gaps; never write notes
+   that are only a list of the questions.**
 2. Keep audio-per-answer at 75–95 words; answers strictly in order.
 3. Hold reading vocabulary CONSTANT across passages (~16% long words) and
    ascend via abstraction + question type, not word rarity.
