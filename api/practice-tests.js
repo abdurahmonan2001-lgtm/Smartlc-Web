@@ -103,7 +103,8 @@ export default async function handler(req, res) {
     if (b.op === 'sign') {
       const path = String(b.path || '')
       if (!AUDIO_PATH.test(path)) return res.status(400).json({ error: 'Audio path must be like tests/vol2-test3/part1.mp3' })
-      const r = await rest(`/storage/v1/object/upload/sign/practice-audio/${path}`, { method: 'POST' })
+      // the storage endpoint parses the body as JSON, so an empty body 400s
+      const r = await rest(`/storage/v1/object/upload/sign/practice-audio/${path}`, { method: 'POST', body: '{}' })
       const j = await r.json().catch(() => ({}))
       if (!r.ok || !j.url) return res.status(502).json({ error: `Could not create an upload URL (${r.status}). Does the practice-audio bucket exist?` })
       // browser PUTs the file to signedUrl; publicUrl is what goes in audioSrc
