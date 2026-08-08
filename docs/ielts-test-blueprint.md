@@ -330,6 +330,98 @@ Cambridge-20 passages. Numbers are averages.
 6. Target the 40/35/25 easy/mid/hard mix so our raw scores map honestly
    onto the official band tables.
 
+---
+
+# Part III — Reverse-engineered construction rules & solving keys
+
+Measured on the answer keys of 19 complete retired IELTS tests (Vol 3
+spreadsheets: 10 listening + 9 reading, 760+ keyed answers), plus the
+transcript/passage analyses of Parts I–II. These are the regularities the
+test-makers evidently follow — and the solving shortcuts each one implies.
+
+## 12. Answer-key statistics (real retired tests)
+
+**TRUE/FALSE/NOT GIVEN & YES/NO/NOT GIVEN (109 items, 9 reading tests):**
+- TRUE 39% · FALSE 39% · NOT GIVEN 22% — T and F are engineered to balance;
+  NG is deliberately rarer (~1 in 5, i.e. 1–2 per group of 6).
+- **Longest run of identical answers: 2. Zero runs of three anywhere in
+  nine tests.** This is the strongest construction rule found.
+- Solving keys: expect roughly equal T/F with fewer NG; if you have three
+  identical answers in a row, one is wrong; a group with zero NG or three
+  NGs deserves a second look.
+
+**Multiple choice / matching letters:**
+- Listening 3-option MCQ: A 29% / B 28% / C 26% — statistically flat.
+  Reading letters A–D: 17–22% each, flat. No lucky letter exists; "when
+  unsure pick B" is superstition. Guessing gains nothing over randomness,
+  so blanks should be guessed but never left empty (no negative marking).
+- Matching boxes: every option letter distribution is near-uniform, and
+  headings (roman numerals) spread evenly — the unused distractor headings
+  carry no positional pattern.
+
+**Completion answers (306 items):**
+- Listening: 78% ONE word; 13% contain digits (prices "5.60", "21.50",
+  dates, quantities); 7% capitalised proper nouns (months, countries);
+  19% of one-word answers are plurals.
+- Reading: 67% one word, 31% two words, digits rarer (7%).
+- Overwhelmingly **concrete nouns** (campsite, passport, gardens, wall);
+  occasional adjectives (safe, long); verbs rare.
+- **Answers virtually never repeat within a test** (5 repeats in 306 —
+  and none within the same reading test). If you've written the same word
+  twice, one is probably wrong.
+- Solving keys: the gap's grammar predicts the answer's class (article or
+  adjective before the gap → noun; "to ___" → verb; number slot signalled
+  by units); plural agreement with the verb is a free check; in listening,
+  expect at least one price/number and one spelled proper noun in Part 1.
+
+## 13. How the questions appear to be built (inferred process)
+
+Working backwards from the artefacts, each group behaves as if written so:
+1. Pick the answer WORDS first — content nouns spread evenly through the
+   text (one per ~80 words of audio; one per paragraph zone in reading),
+   never the same word twice.
+2. Write the stem by PARAPHRASING the sentence around the kept answer word
+   — the answer itself stays verbatim, everything around it is re-worded
+   (synonyms for verbs/adjectives, re-ordered clauses). Paraphrase distance
+   is dialled up with question number (§10).
+3. Build distractors from material ACTUALLY PRESENT: the corrected first
+   version (P1), the option another speaker rejects (P3), the time-shifted
+   or scope-shifted fact (yesterday/usually/only-today; all/some/most).
+   Every MCQ option is anchored to something said or written — nothing is
+   invented — which is why "I heard that word" is the trap, and why the
+   correct option is usually the PARAPHRASED one while wrong options tend
+   to echo the source wording.
+4. For TFNG: TRUE items paraphrase a stated fact; FALSE items contradict a
+   stated fact head-on (usually by flipping a quantity, time, or scope
+   word); NOT GIVEN items add a plausible detail the text never addresses
+   (comparisons and reasons are favourites: "X was the first/best/cheaper
+   than Y" where the text ranks nothing).
+5. Balance the key (T/F counts, letter spread, no 3-runs) as a final pass.
+
+## 14. The practical "ease keys" (what to teach students)
+
+1. Answers come in order (except matching-information) — never search the
+   whole text for the next answer; search FORWARD of the last one.
+2. Anchor on what cannot be paraphrased: names, numbers, dates, places in
+   the stem locate the answer zone; the words AROUND the gap will not
+   appear in the text — their synonyms will.
+3. In MCQ, distrust the option that repeats the text's exact words; trust
+   the one that says the same thing differently.
+4. FALSE/NO needs a contradiction you can point at; if you're merely not
+   sure, that's what NOT GIVEN is for — and NG appears only ~1 in 5 times.
+5. Word-limit discipline: "ONE WORD" answers are single concrete nouns —
+   if your candidate answer is a phrase, you've grabbed the wrong slot.
+6. Check the key's own grammar: article agreement, plural-verb agreement,
+   and the no-repeats rule are free error detectors.
+7. Never leave blanks — the letter distribution is flat, and there is no
+   penalty.
+
+**Authoring implication for Smart LC tests:** apply the same quotas —
+T/F/NG ≈ 40/40/20 with no 3-runs, flat letter spread, unique concrete-noun
+answers, distractors built only from in-text material, correct options
+paraphrased while distractors echo the source. Part I §5's wording bank +
+Part II §11's ascension rules + these quotas together fully specify a test.
+
 Suggested authoring recipe per original Smart LC test:
 - Listening: P1 form/table 10×(word+number) with example; P2 monologue
   MCQ+matching or labelling; P3 discussion MCQ+multi-select; P4 lecture
