@@ -26,7 +26,7 @@ The consequences reached far beyond the docks. Because moving goods became aston
         { n: 5, type: "tfng", prompt: "Sealed containers made stealing cargo easier.", answer: "FALSE" },
         { n: 6, type: "tfng", prompt: "The standard container sizes agreed in the 1960s satisfied nobody completely.", answer: "TRUE" },
         { n: 7, type: "tfng", prompt: "London's docklands now employ more people than in the 1950s.", answer: "FALSE" },
-        { n: 8, type: "gap", prompt: "The greatest cost in ocean trade that containers attacked was time in ______.", note: "ONE WORD ONLY", answer: "port" },
+        { n: 8, type: "gap", prompt: "For shipping companies, the biggest expense the container removed was time spent in ______.", note: "ONE WORD ONLY", answer: "port" },
         { n: 9, type: "gap", prompt: "With sealed containers, loading time fell from weeks to ______.", note: "ONE WORD ONLY", answer: "hours" },
         { n: 10, type: "gap", prompt: "International agreement was needed so that boxes fitted every country's ______.", note: "ONE WORD ONLY", answer: "cranes" },
         { n: 11, type: "gap", prompt: "Cheap transport meant factories moved to where ______ costs were lowest.", note: "ONE WORD ONLY", answer: "production" },
@@ -69,7 +69,7 @@ E — Perhaps the most durable argument for growing food in cities is not effici
             title: "Summary — Growing upwards",
             lines: [
               "Vertical farms reuse the same ground area on every floor, and their closed systems cut {{19}} use by up to ninety-five per cent.",
-              "Their weakness is the cost of electricity: {{20}} alone can be more than half of a farm's running costs.",
+              "Electricity is the technology's weak point: {{20}} alone can swallow over half of what a farm spends to operate.",
               "Critics argue an indoor salad is only greener when the power is {{21}}.",
               "Commercially, farms stick to light, fast crops sold at {{22}} prices to nearby buyers.",
             ],
