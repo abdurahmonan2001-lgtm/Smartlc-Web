@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Visits to a museum by three types of visitor, 1997–2012 (thousands)</text>
+
+  <line x1="70" y1="350" x2="610" y2="350" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="350" x2="70" y2="55" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555">
+    <line x1="70" y1="70" x2="610" y2="70" stroke="#eee"/><text x="60" y="74" text-anchor="end">400</text>
+    <line x1="70" y1="140" x2="610" y2="140" stroke="#eee"/><text x="60" y="144" text-anchor="end">300</text>
+    <line x1="70" y1="210" x2="610" y2="210" stroke="#eee"/><text x="60" y="214" text-anchor="end">200</text>
+    <line x1="70" y1="280" x2="610" y2="280" stroke="#eee"/><text x="60" y="284" text-anchor="end">100</text>
+    <text x="60" y="354" text-anchor="end">0</text>
+  </g>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="70" y="368">1997</text><text x="250" y="368">2002</text><text x="430" y="368">2007</text><text x="610" y="368">2012</text>
+  </g>
+
+  <!-- adults: 300,310,400,380 -->
+  <polyline points="70,140 250,133 430,70 610,84" fill="none" stroke="#1d3a6b" stroke-width="2.5"/>
+  <!-- children under 15: 120,108,95,82 -->
+  <polyline points="70,266 250,274 430,284 610,293" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <!-- special exhibitions: 28,32,37,42 -->
+  <polyline points="70,330 250,328 430,324 610,321" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/>
+
+  <g font-size="12" fill="#000">
+    <line x1="90" y1="44" x2="116" y2="44" stroke="#1d3a6b" stroke-width="2.5"/><text x="121" y="48">Adults</text>
+    <line x1="190" y1="44" x2="216" y2="44" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="221" y="48">Children under 15</text>
+    <line x1="360" y1="44" x2="386" y2="44" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="391" y="48">Special exhibitions</text>
+  </g>
+</svg>

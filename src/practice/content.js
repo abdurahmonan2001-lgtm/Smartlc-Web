@@ -32,10 +32,41 @@ import { MOCK1_WRITING } from "./mock1-writing.js";
 import { MOCK2_LISTENING } from "./mock2-listening.js";
 import { MOCK2_READING } from "./mock2-reading.js";
 import { MOCK2_WRITING } from "./mock2-writing.js";
+import WRITING_BANK from "./writing-bank.json";
+
+// The centre's own writing collection: 93 days of paired Task 1 + Task 2
+// questions (extracted by scripts/extract-writing-bank.mjs). Days 1 and 2
+// are used inside Mock Tests 1 and 2; the rest become standalone writing
+// tests here, each with its original task-1 visual.
+const WRITING_PRACTICE = WRITING_BANK.filter((d) => d.day >= 3).map((d) => ({
+  id: `writing-day-${d.day}`,
+  bookId: "wbank",
+  title: `Day ${d.day} — ${d.t1Type} + ${d.t2Type}`.replace(/\s*-\s*pdf\s*$/i, ""),
+  module: "writing",
+  durationMin: 60,
+  sections: [
+    {
+      title: "Writing Task 1",
+      passageTitle: "Writing Task 1",
+      instructions: "You should spend about 20 minutes on this task. Write at least 150 words.",
+      image: d.image,
+      passage: d.t1,
+      questions: [{ n: 1, type: "essay", prompt: "Write your report below.", minWords: 150 }],
+    },
+    {
+      title: "Writing Task 2",
+      passageTitle: "Writing Task 2",
+      instructions: "You should spend about 40 minutes on this task. Write at least 250 words.",
+      passage: d.t2,
+      questions: [{ n: 2, type: "essay", prompt: "Write your essay below.", minWords: 250 }],
+    },
+  ],
+}));
 
 export const BOOKS = [
   { id: "mock1", title: "Smart LC Mock Test 1", short: "M1" },
   { id: "mock2", title: "Smart LC Mock Test 2", short: "M2" },
+  { id: "wbank", title: "Writing Practice", short: "W" },
   { id: "cam9", title: "Cambridge IELTS 9", short: "9" },
   { id: "cam10", title: "Cambridge IELTS 10", short: "10" },
   { id: "cam11", title: "Cambridge IELTS 11", short: "11" },
@@ -65,6 +96,7 @@ export const BOOKS = [
 export const TESTS = [
   MOCK1_LISTENING, MOCK1_READING, MOCK1_WRITING,
   MOCK2_LISTENING, MOCK2_READING, MOCK2_WRITING,
+  ...WRITING_PRACTICE,
 ];
 
 export const testsForBook = (bookId) => TESTS.filter((t) => t.bookId === bookId);
