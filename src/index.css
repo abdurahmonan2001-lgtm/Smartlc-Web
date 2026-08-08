@@ -1220,6 +1220,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .reg__main--split .reg__motto { display: none; }
   .reg__main--split .reg__form { gap: 10px; }
   .reg__main--split .reg__form input { padding: 12px 18px; }
+  /* keep the phone input clear of the +998 prefix (the rule above resets padding) */
+  .reg__main--split .reg__phone input { padding-left: 70px; }
+  .reg__main--split .reg__phone span { left: 18px; }
   .reg__main--split .reg__form .btn--lg { padding: 13px 26px; }
   .adv-pager__dots { margin-top: 10px; }
   /* compact pager cards — the register frame is much shorter here */
