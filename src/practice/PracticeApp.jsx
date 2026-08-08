@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults, fetchRemoteTests } from "./api.js";
 import InsperaPlayer from "./InsperaPlayer.jsx";
-import UploadTests from "./UploadTests.jsx";
 
 const SESSION_KEY = "slc_practice_user";
 const PENDING_KEY = "slc_practice_pending";
@@ -64,7 +63,7 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onLogout, onResults, onUpload }) {
+function Library({ user, books, tests, onStart, onLogout, onResults }) {
   const [openBook, setOpenBook] = useState(null);
   const forBook = (bookId) => tests.filter((t) => t.bookId === bookId);
   return (
@@ -76,7 +75,6 @@ function Library({ user, books, tests, onStart, onLogout, onResults, onUpload })
         </span>
         <div className="pr-lib__user">
           <button className="pr-link" onClick={onResults}>My results</button>
-          <button className="pr-link" onClick={onUpload}>Upload tests</button>
           <span>{user.full_name}</span>
           <button className="pr-link" onClick={onLogout}>Log out</button>
         </div>
@@ -237,7 +235,7 @@ export default function PracticeApp() {
   const [user, setUser] = useState(() => {
     try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; } catch { return null; }
   });
-  const [view, setView] = useState({ name: "library" }); // library | player | result | history | upload
+  const [view, setView] = useState({ name: "library" }); // library | player | result | history
   const [remote, setRemote] = useState([]);
 
   const loadRemote = () => { fetchRemoteTests().then(setRemote); };
@@ -269,7 +267,6 @@ export default function PracticeApp() {
   }
   if (view.name === "result") return <ResultView result={view.result} onBack={() => setView({ name: "library" })} />;
   if (view.name === "history") return <History user={user} onBack={() => setView({ name: "library" })} />;
-  if (view.name === "upload") return <UploadTests onBack={() => setView({ name: "library" })} onUploaded={loadRemote} />;
 
   return (
     <Library
@@ -278,7 +275,6 @@ export default function PracticeApp() {
       tests={allTests}
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
-      onUpload={() => setView({ name: "upload" })}
       onStart={(testId) => setView({ name: "player", testId })}
     />
   );

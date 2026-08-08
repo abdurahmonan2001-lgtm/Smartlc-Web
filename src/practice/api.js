@@ -53,18 +53,6 @@ export async function fetchRemoteTests() {
   }
 }
 
-/** Staff ops, proxied through the service-role API. Throws on failure. */
-export async function adminTestsOp(body) {
-  const res = await fetch("/api/practice-tests", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  const j = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(j.error || `Request failed (${res.status})`);
-  return j;
-}
-
 export async function fetchResults(username) {
   const q = `${URL_BASE}/rest/v1/practice_results?student_username=eq.${encodeURIComponent(username)}&order=taken_at.desc&limit=50`;
   const res = await fetch(q, { headers });
