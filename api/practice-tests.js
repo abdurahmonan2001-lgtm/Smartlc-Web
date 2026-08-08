@@ -61,6 +61,12 @@ function validateTest(t) {
 }
 
 export default async function handler(req, res) {
+  // The Education Dept panel in the Admin app calls this from its own origin.
+  // Open CORS is safe here: every mutating op requires the admin key.
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+  if (req.method === 'OPTIONS') return res.status(204).end()
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' })
 
   const url = (env('SUPABASE_URL') || env('VITE_SUPABASE_URL') || '').replace(/\/+$/, '')
