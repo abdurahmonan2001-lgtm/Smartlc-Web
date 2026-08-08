@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { BOOKS, TESTS, testsForBook, getTest } from "./content.js";
-import { loginStudent, saveResult, fetchResults } from "./api.js";
+import { BOOKS, TESTS, getTest } from "./content.js";
+import { loginStudent, saveResult, fetchResults, fetchRemoteTests } from "./api.js";
 import InsperaPlayer from "./InsperaPlayer.jsx";
+import UploadTests from "./UploadTests.jsx";
 
 const SESSION_KEY = "slc_practice_user";
 const PENDING_KEY = "slc_practice_pending";
@@ -63,8 +64,9 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, onStart, onLogout, onResults }) {
+function Library({ user, books, tests, onStart, onLogout, onResults, onUpload }) {
   const [openBook, setOpenBook] = useState(null);
+  const forBook = (bookId) => tests.filter((t) => t.bookId === bookId);
   return (
     <div className="pr-lib">
       <header className="pr-lib__top">
@@ -74,15 +76,16 @@ function Library({ user, onStart, onLogout, onResults }) {
         </span>
         <div className="pr-lib__user">
           <button className="pr-link" onClick={onResults}>My results</button>
+          <button className="pr-link" onClick={onUpload}>Upload tests</button>
           <span>{user.full_name}</span>
           <button className="pr-link" onClick={onLogout}>Log out</button>
         </div>
       </header>
 
       <div className="pr-lib__grid">
-        {BOOKS.map((b) => {
-          const tests = testsForBook(b.id);
-          const has = tests.length > 0;
+        {books.map((b) => {
+          const has = forBook(b.id).length > 0;
+          const count = forBook(b.id).length;
           return (
             <button
               className={`pr-book ${has ? "" : "pr-book--empty"} ${openBook === b.id ? "is-open" : ""}`}
@@ -91,7 +94,7 @@ function Library({ user, onStart, onLogout, onResults }) {
             >
               <span className="pr-book__cover">{b.short}</span>
               <span className="pr-book__title">{b.title}</span>
-              <span className="pr-book__count">{has ? `${tests.length} test${tests.length > 1 ? "s" : ""}` : "coming soon"}</span>
+              <span className="pr-book__count">{has ? `${count} test${count > 1 ? "s" : ""}` : "coming soon"}</span>
             </button>
           );
         })}
@@ -99,7 +102,7 @@ function Library({ user, onStart, onLogout, onResults }) {
 
       {openBook && (
         <div className="pr-lib__tests">
-          {testsForBook(openBook).map((t) => (
+          {forBook(openBook).map((t) => (
             <div className="pr-test-row" key={t.id}>
               <div>
                 <strong>{t.title}</strong>
@@ -234,7 +237,18 @@ export default function PracticeApp() {
   const [user, setUser] = useState(() => {
     try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; } catch { return null; }
   });
-  const [view, setView] = useState({ name: "library" }); // library | player | result | history
+  const [view, setView] = useState({ name: "library" }); // library | player | result | history | upload
+  const [remote, setRemote] = useState([]);
+
+  const loadRemote = () => { fetchRemoteTests().then(setRemote); };
+  useEffect(loadRemote, []);
+
+  // uploaded tests appear as extra shelves after the built-in books
+  const allTests = [...TESTS, ...remote];
+  const remoteBooks = [...new Map(remote.map((t) => [t.bookId, t.bookTitle])).entries()]
+    .map(([id, title]) => ({ id, title, short: title.split(/\s+/).map((w) => w[0]).join("").slice(0, 3).toUpperCase() }));
+  const allBooks = [...remoteBooks, ...BOOKS];
+  const findTest = (id) => getTest(id) || remote.find((t) => t.id === id);
 
   const login = (u) => { localStorage.setItem(SESSION_KEY, JSON.stringify(u)); setUser(u); };
   const logout = () => { localStorage.removeItem(SESSION_KEY); setUser(null); setView({ name: "library" }); };
@@ -242,7 +256,8 @@ export default function PracticeApp() {
   if (!user) return <Login onLogin={login} />;
 
   if (view.name === "player") {
-    const test = getTest(view.testId);
+    const test = findTest(view.testId);
+    if (!test) { setView({ name: "library" }); return null; }
     return (
       <Player
         test={test}
@@ -254,12 +269,16 @@ export default function PracticeApp() {
   }
   if (view.name === "result") return <ResultView result={view.result} onBack={() => setView({ name: "library" })} />;
   if (view.name === "history") return <History user={user} onBack={() => setView({ name: "library" })} />;
+  if (view.name === "upload") return <UploadTests onBack={() => setView({ name: "library" })} onUploaded={loadRemote} />;
 
   return (
     <Library
       user={user}
+      books={allBooks}
+      tests={allTests}
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
+      onUpload={() => setView({ name: "upload" })}
       onStart={(testId) => setView({ name: "player", testId })}
     />
   );
