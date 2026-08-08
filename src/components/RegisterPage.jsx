@@ -20,11 +20,14 @@ export default function RegisterPage() {
   const { t, lang, setLang } = useLang();
   const r = t.register;
   const [name, setName] = useState("");
+  const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
   const [state, setState] = useState("idle"); // idle | sending | done | error
 
   const digits = phone.replace(/\D/g, "");
-  const valid = name.trim().length >= 2 && digits.length === 9;
+  const ageNum = Number(age);
+  const ageValid = age !== "" && ageNum >= 3 && ageNum <= 99;
+  const valid = name.trim().length >= 2 && ageValid && digits.length === 9;
 
   // after a successful registration, return the visitor to the main site
   // (the thank-you screen shows for a few seconds first)
@@ -40,6 +43,7 @@ export default function RegisterPage() {
     setState("sending");
     const lead = {
       name: name.trim(),
+      age: ageNum,
       phone: `+998${digits}`,
       lang,
       page: "register",
@@ -90,6 +94,16 @@ export default function RegisterPage() {
                 placeholder={r.name}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                className="reg__age"
+                type="text"
+                inputMode="numeric"
+                maxLength={2}
+                placeholder={r.age}
+                value={age}
+                onChange={(e) => setAge(e.target.value.replace(/\D/g, "").slice(0, 2))}
                 required
               />
               <div className="reg__phone">
