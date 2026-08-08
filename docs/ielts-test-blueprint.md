@@ -1,12 +1,16 @@
 # IELTS Academic Test Blueprint — Smart LC authoring spec
 
-Compiled 2026-08-08 from a structural analysis of the materials on disk:
-Cambridge IELTS 20 (4 complete tests, machine-readable — the primary sample:
-16 listening parts, 12 reading passages, 74 classified question groups),
-Cambridge 9/11–17 editions (reading-passage compilations used for passage
-conventions), and the Mock volumes (Vol 1 full tests: writing tasks, answer
-keys, and the four listening transcripts of Test 1). Only STRUCTURE was
-analyzed and retained — no test content was copied, and none may be.
+Compiled 2026-08-08 from a structural analysis of:
+- Cambridge IELTS 20 on disk (4 complete tests, machine-readable — 74
+  classified question groups, passage word counts, complexity metrics);
+- **Cambridge 15, 16, 17, 18, 19, 21 via engnovate.com (23 more tests,
+  listening + reading group structure per test)** — so the sample spans
+  the whole post-2020 standardized format: 7 books, 27 tests;
+- Cambridge 9/11–17 disk editions (passage conventions), Mock volumes
+  (writing tasks, answer keys, Vol 1 transcripts — NOTE these transcripts
+  are pre-2020 format: "Section" naming + worked example).
+Only STRUCTURE was analyzed and retained — no test content was copied,
+and none may be.
 
 ## 1. Overall architecture
 
@@ -26,28 +30,32 @@ analyzed and retained — no test content was copied, and none may be.
 ## 2. Listening — part-by-part pattern
 
 **Part 1 — everyday transactional dialogue (2 speakers: caller + service).**
-In ALL 4 sampled tests: a single completion group of 10 (form ×2, table ×2,
-notes ×2 across the sample), word limit `ONE WORD AND/OR A NUMBER`.
-Always contains the worked **Example** ("There is an example that has been
-done for you. On this occasion only, the conversation relating to this will
-be played first."). Content staples: names spelled letter-by-letter, phone
-numbers, prices/deposits, dates, addresses, times.
+Completion in 27 of 27 sampled tests (notes ~16, table ~6, form ~4, one
+form+table split), word limit `ONE WORD AND/OR A NUMBER` in all but ~3.
+**Post-2020 format (Cambridge 16 onward): sections are called "Parts" and
+the old worked Example before Q1 is GONE** — the Vol 1 mock transcripts
+("Section 1" + example) follow the pre-2020 format and should not be
+copied on this point. Content staples: names spelled letter-by-letter,
+phone numbers, prices/deposits, dates, addresses, times.
 
 **Part 2 — one speaker, everyday monologue (tour guide, event organizer,
-council rep).** 2 groups. Observed combos: MCQ(6)+multi-select(2+2);
-matching-box(6)+MCQ(4); MCQ(6)+map/plan labelling(4);
-multi-select(2+2)+matching-box(6). This is where **map/plan labelling**
-lives when it appears.
+council rep).** 2–3 groups built from: MCQ 3-option (~20/27 tests),
+multi-select pairs (~13), matching-box (~10), **map/plan labelling
+(7/27 tests ≈ every 4th test — a must-support type)**, rare table
+completion. Canonical combos: MCQ+map, MCQ+matching-box,
+multi-select×2+matching-box.
 
 **Part 3 — academic discussion, 2–4 speakers (students ± tutor).**
-2–3 groups. Observed: multi-select pairs (heavily favoured here: 7 of the
-sample's 12 multi-select groups), MCQ 3-option, matching-box (opinions →
-speakers/topics). Hardest listening discrimination: opinion, agreement,
-stance.
+2–3 groups. Multi-select pairs appear in ~17/27 tests (their heartland),
+plus MCQ 3-option runs, matching-box (opinions → speakers/topics), and a
+newer variant: **flow-chart completion from a lettered box** (3
+occurrences, Cam 16/19/21). Rarely a completion group instead (1 test).
+Hardest listening discrimination: opinion, agreement, stance.
 
 **Part 4 — academic lecture, one speaker, no mid-part pause.**
-In ALL 4 tests: a single **note-completion group of 10**, word limit
-`ONE WORD ONLY`. Notes are hierarchical (headed sections, bullet lines).
+A single **note-completion group of 10, word limit ONE WORD ONLY, in 27
+of 27 sampled tests** — the strongest invariant in the whole exam.
+Notes are hierarchical (headed sections, bullet lines).
 
 **Audio script conventions (from the Vol 1 transcripts):**
 - Opening announcement: "You will hear a number of different recordings…
@@ -85,11 +93,25 @@ Hardest.** 3 groups. The ONLY passage where 4-option MCQ appears (all 3
 occurrences), plus YES/NO/NOT GIVEN (writer's claims), summary-from-wordlist
 (letters A–J box), matching-sentence-endings, matching features.
 
-**Type inventory measured across the 12 passages (groups):**
+**Type inventory measured across the 12 C20 passages (groups):**
 completion (notes/sentences/summary) 11 · TFNG 5 · matching (features/
 people) 4 · matching-information 4 · multi-select pairs 4 · MCQ-4 3 ·
 matching-sentence-endings 2 · YNNG 1 · summary-wordlist 1 ·
 matching-headings 1.
+
+**Seven-book confirmation (Cambridge 15–21, 27 tests, via engnovate):**
+- Passage 1 = completion + TFNG in ~85% of tests; rare deviations swap in
+  matching-information (15 T2, 18 T3) or add diagram labelling /
+  short-answer (16 T4 — the only occurrences in the sample).
+- Passage 2 = matching-information (~17/27) + completion + features/
+  two-letter picks; matching-headings only 3/27. Books 16 and 18
+  occasionally push MCQ-4 or YNNG into passage 2 — variance to imitate
+  sparingly.
+- Passage 3 = MCQ-4 in ~24/27 and YNNG in ~17/27; summary-from-wordlist
+  ~12/27; matching-sentence-endings ~5/27. TFNG appears in passage 3 in a
+  minority of tests (F/NG then replaces Y/NG).
+- Reading word limits post-2020 trend strongly to `ONE WORD ONLY`, with
+  occasional `NO MORE THAN TWO WORDS AND/OR A NUMBER` (books 15/18).
 
 ## 4. Writing (from Mock Vol 1 + official format)
 
@@ -161,7 +183,9 @@ To author fully authentic tests the content schema needs:
    with rows).
 5. **Group-level rubric objects** (instruction text + optional box/word
    list + optional image for maps/diagrams) instead of per-question notes.
-6. **Example item** support for listening part 1 (shown, not scored).
+6. ~~Example item for listening part 1~~ — NOT needed: the post-2020
+   format dropped the worked example (verified in Cam 16+). Also add
+   **map/plan image labelling** (7/27 tests) and **flow-chart-from-box**.
 7. **Answer variants** per key: `answer: ["colour", "color"]` + word-limit
    enforcement at scoring time.
 8. **Review key** fields for the location-justified answer table.
