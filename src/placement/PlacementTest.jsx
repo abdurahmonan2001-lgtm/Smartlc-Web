@@ -80,6 +80,7 @@ export default function PlacementTest() {
   const [bank, setBank] = useState(null);
   const [loadErr, setLoadErr] = useState("");
   const [fullName, setFullName] = useState("");
+  const [candAge, setCandAge] = useState("");
   const [phone, setPhone] = useState("");
   const [honey, setHoney] = useState("");        // honeypot — hidden from humans
   const [gAns, setGAns] = useState({});
@@ -93,8 +94,11 @@ export default function PlacementTest() {
 
   useEffect(() => { document.title = "Placement Test · Smart Learning Centre"; }, []);
 
+  const ageOk = Number(candAge) >= 3 && Number(candAge) <= 99;
+  const infoOk = fullName.trim() && ageOk && phone.replace(/\D/g, "").length >= 9;
+
   const start = async () => {
-    if (!fullName.trim() || phone.replace(/\D/g, "").length < 9) return;
+    if (!infoOk) return;
     setBusy(true); setError("");
     try {
       const r = await fetch("/api/placement-start", { method: "POST" });
@@ -116,7 +120,7 @@ export default function PlacementTest() {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          token: bank.token, fullName: fullName.trim(), phone,
+          token: bank.token, fullName: fullName.trim(), age: Number(candAge), phone,
           grammarAnswers: gAns, readingAnswers: rAns,
           writing: skipWriting ? "" : writing, skipWriting: !!skipWriting,
           website: honey,
@@ -156,6 +160,11 @@ export default function PlacementTest() {
           <input value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Ism va familiya"
             style={{ width: "100%", boxSizing: "border-box", padding: "13px 14px", borderRadius: "10px", border: "1.5px solid #e4e8e7", fontSize: "16px", outline: "none", background: "#F7FAF9", color: D, fontFamily: "inherit" }} />
         </div>
+        <div style={{ marginBottom: "14px" }}>
+          <label style={label}>Age *</label>
+          <input value={candAge} onChange={(e) => setCandAge(e.target.value.replace(/\D/g, "").slice(0, 2))} placeholder="17" inputMode="numeric" maxLength={2}
+            style={{ width: "100%", boxSizing: "border-box", padding: "13px 14px", borderRadius: "10px", border: "1.5px solid #e4e8e7", fontSize: "16px", outline: "none", background: "#F7FAF9", color: D, fontFamily: "inherit" }} />
+        </div>
         <div>
           <label style={label}>Phone number *</label>
           <input value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="+998 (90) 123-45-67" inputMode="numeric"
@@ -175,10 +184,10 @@ export default function PlacementTest() {
         ))}
       </div>
       {loadErr && <div style={{ background: "#fef2f2", border: "1.5px solid #fca5a5", borderRadius: "10px", padding: "11px 14px", fontSize: "13.5px", color: "#dc2626", marginBottom: "12px" }}>⚠️ {loadErr}</div>}
-      <button onClick={start} disabled={busy || !fullName.trim() || phone.replace(/\D/g, "").length < 9}
+      <button onClick={start} disabled={busy || !infoOk}
         style={{ width: "100%", padding: "15px", borderRadius: "12px", border: "none", color: "#fff", fontSize: "15px", fontWeight: 700, fontFamily: "inherit",
-          background: !busy && fullName.trim() && phone.replace(/\D/g, "").length >= 9 ? G : "#cbd5d1",
-          cursor: !busy && fullName.trim() ? "pointer" : "default" }}>
+          background: !busy && infoOk ? G : "#cbd5d1",
+          cursor: !busy && infoOk ? "pointer" : "default" }}>
         {busy ? "Loading…" : "Start the test →"}
       </button>
     </>

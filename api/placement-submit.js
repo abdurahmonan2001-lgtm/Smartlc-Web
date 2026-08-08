@@ -85,6 +85,10 @@ export default async function handler(req, res) {
   if (!fullName || phone.replace(/\D/g, '').length < 9) {
     return res.status(400).json({ error: 'Please provide your name and a valid phone number.' })
   }
+  // The form requires age, but a candidate who started on an older cached
+  // bundle may submit without one — accept null rather than discard their test.
+  const candidateAge = Number(b.age)
+  const ageValue = Number.isInteger(candidateAge) && candidateAge >= 3 && candidateAge <= 99 ? candidateAge : null
 
   // Answers arrive keyed by question id; values must be option STRINGS.
   const gA = (b.grammarAnswers && typeof b.grammarAnswers === 'object') ? b.grammarAnswers : {}
@@ -113,6 +117,7 @@ export default async function handler(req, res) {
 
   const row = {
     full_name: fullName,
+    age: ageValue,
     phone,
     grammar_score: grammarScore,
     reading_score: readingScore,
@@ -165,10 +170,10 @@ export default async function handler(req, res) {
   try {
     saved = await save(row)
     if (!saved.ok) {
-      // `source` may not exist as a column yet — retry without it rather than
-      // losing a real candidate's result.
-      const { source, ...noSource } = row      // eslint-disable-line no-unused-vars
-      saved = await save(noSource)
+      // `source` / `age` may not exist as columns yet — retry without them
+      // rather than losing a real candidate's result.
+      const { source, age: _age, ...minimal } = row      // eslint-disable-line no-unused-vars
+      saved = await save(minimal)
     }
   } catch (e) {
     console.error('placement save threw', e)

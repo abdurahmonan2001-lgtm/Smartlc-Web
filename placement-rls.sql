@@ -30,6 +30,10 @@ revoke all on table public.placement_results from anon, authenticated;
 -- adding it is safe at any time.
 alter table public.placement_results add column if not exists source text;
 
+-- Candidate's age, collected by the /placement form. Same deal: the API
+-- retries without it if the column is missing, so add whenever convenient.
+alter table public.placement_results add column if not exists age smallint;
+
 -- Sanity check — should return rowsecurity = true and zero policies:
 -- select relrowsecurity from pg_class where relname = 'placement_results';
 -- select * from pg_policies where tablename = 'placement_results';
