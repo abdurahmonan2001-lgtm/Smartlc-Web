@@ -166,6 +166,141 @@ To author fully authentic tests the content schema needs:
    enforcement at scoring time.
 8. **Review key** fields for the location-justified answer table.
 
+---
+
+# Part II — Difficulty ascension & skills tested
+
+Measured on the Vol 1 transcripts (Tests 1–3, per part) and the 12
+Cambridge-20 passages. Numbers are averages.
+
+## 8. The two modules ascend along DIFFERENT axes
+
+**Listening — vocabulary rises, syntax alternates by genre:**
+
+| Part | words | sent. len | %words ≥8 letters | corrections | hedges | academic connectors |
+|---|---|---|---|---|---|---|
+| 1 | 938 | 11.4 | 8.0 | 2.3 | 2.7 | 0.0 |
+| 2 | 749 | 16.4 | 10.3 | 0.7 | 1.3 | 1.7 |
+| 3 | 802 | 12.1 | 13.4 | 1.7 | 5.3 | 0.3 |
+| 4 | 803 | 17.6 | 15.2 | 0.3 | 0.7 | 3.0 |
+
+- Long-word share nearly DOUBLES from part 1 to part 4 (8% → 15.2%) —
+  the lexical ramp is monotonic.
+- Sentence length is NOT monotonic: dialogues (P1, P3) run short turns
+  (~11–12 words), monologues (P2, P4) long planned sentences (~16–18).
+  Difficulty in P3 is not syntax — it's speaker interaction.
+- **Trap signatures move by part:** corrections/self-repairs cluster in P1
+  (2.3 per script: "…actually", "no wait", plus letter-by-letter spelling
+  and "double T" moments); hedged opinion language peaks sharply in P3
+  (5.3 hedges vs ≤2.7 elsewhere); P4 has almost no traps — its difficulty
+  is pure density (academic connectors 3.0, the highest, with zero rescue
+  repetition).
+- Audio-per-answer is constant: ~75–94 words of audio per question in every
+  part. The exam never speeds up; it deepens.
+
+**Reading — vocabulary stays FLAT, abstraction and question type rise:**
+
+| Passage | words | sent. len | %words ≥8 letters | lexical density | connectors |
+|---|---|---|---|---|---|
+| 1 | 897 | 18.9 | 16.4 | 60.4 | 3.8 |
+| 2 | 895 | 19.2 | 16.0 | 57.3 | 2.8 |
+| 3 | 963 | 20.4 | 16.5 | 56.0 | 4.8 |
+
+- Long-word share is ~16% in ALL three passages — passage 3 is NOT harder
+  vocabulary. Sentence length creeps up (18.9 → 20.4) and length grows
+  (+70 words), but the real ascension is elsewhere:
+- Lexical density FALLS (60.4 → 56.0) while connectors rise: passage 1 is
+  fact-packed but transparent; passage 3 spends more words on argument
+  scaffolding (stance, concession, hedging). Difficulty = abstraction +
+  argument structure + paraphrase distance, delivered through the question
+  types (literal completion/TFNG → matching/synthesis → inference/MCQ-4/
+  YNNG), not through rarer words.
+
+## 9. What each question type actually tests
+
+**Listening**
+- Form/table/notes completion (P1): catching predicted specifics in real
+  time + orthographic accuracy (spelling read out letter-by-letter, numbers,
+  prices, dates) + surviving the correction trap. Skill: prediction from
+  the form's gaps, then verification.
+- MCQ 3-option (P2/P3): real-time paraphrase matching while REJECTING two
+  spoken distractors — every option is mentioned; only one survives the
+  correction/negation/time-shift.
+- Matching-box (P2/P3): holding 6–8 options in working memory while
+  tracking WHICH speaker/item each comment attaches to.
+- Multi-select pairs (P3): discriminating "mentioned" from "agreed/decided"
+  — the classic distractor is an option a speaker raises and the other
+  rejects.
+- Map/plan labelling (P2): spatial language processing (left/opposite/
+  beyond/just past) mapped onto a diagram while audio continues.
+- Lecture notes (P4): sustained attention across 5–6 minutes with no pause,
+  tracking signposting ("turning now to…") through the densest vocabulary
+  of the module.
+
+**Reading**
+- Completion (P1 dominant): scanning for specifics + word-form fit (the
+  gap's grammar tells you the answer's part of speech) + word-limit
+  discipline.
+- TRUE/FALSE/NOT GIVEN: truth-conditional comparison. The core trap is
+  scope words (all/only/most/first) and the F-vs-NG boundary: FALSE needs a
+  contradiction IN the text; NOT GIVEN is plausible-but-absent. Follows
+  passage order (an anchor for pacing).
+- Matching-information: paragraph-level gist + synonym recognition; does
+  NOT follow passage order — tests search strategy under time pressure
+  ("NB you may use any letter more than once" removes elimination).
+- Matching-headings: main-idea vs supporting-detail discrimination; wrong
+  headings are usually true details that aren't the paragraph's POINT.
+- Summary completion / wordlist: cohesion + grammatical-class awareness;
+  the wordlist variant (P3) adds distractor words of the right topic but
+  wrong class or wrong stance.
+- MCQ 4-option (P3 only): closest-reading inference; distractors are
+  near-paraphrases that fail on one modifier.
+- YES/NO/NOT GIVEN (P3): separating the WRITER's claim from views the
+  writer reports/attributes — argument-voice tracking.
+- Sentence-endings/features matching: proposition-level synthesis across
+  non-adjacent text.
+
+**Writing**
+- T1: data literacy — selection ("main features"), grouping, comparison
+  language, ~4-paragraph report discipline, no opinion.
+- T2: position management — thesis, concession, development with examples,
+  cohesion at 250+ words in 40 minutes.
+
+## 10. Within-part and within-group ascension rules
+
+- Groups inside a part get harder: P1-style literal tasks precede
+  inference tasks in the same passage; in listening the completion group
+  precedes the choice group when both appear.
+- Inside a group, answers come in text/audio order (except
+  matching-information, deliberately unordered).
+- Early questions in a group use nearer paraphrases; later ones are more
+  distant (measurable in the mock keys' "where it is located" column: Q1's
+  key sentence shares surface words with the question; Q13's shares almost
+  none).
+- Band discrimination by design: parts 1–2 / passage 1 + completion types
+  separate bands 4–6; part 3–4 / passage 3 + YNNG/MCQ-4/wordlist separate
+  bands 6.5–9. A 40-question set therefore needs ~40% easy-literal, ~35%
+  mid (matching/synthesis), ~25% hard (inference/stance) to reproduce the
+  official raw→band curve.
+- Timing pressure is a designed skill: reading = 90 s/question flat
+  (20 min/passage including transfer of answers); listening allows ~30–45 s
+  of preview per group, which is itself the tested skill of prediction.
+
+## 11. Authoring checklist for the ascension logic
+
+1. Write each listening part to its trap profile (P1: 2–3 corrections +
+   one spelling; P2: all-options-mentioned MCQ distractors; P3: hedged
+   opinions and mentioned-vs-agreed; P4: zero traps, maximum density).
+2. Keep audio-per-answer at 75–95 words; answers strictly in order.
+3. Hold reading vocabulary CONSTANT across passages (~16% long words) and
+   ascend via abstraction + question type, not word rarity.
+4. Grade paraphrase distance within every group (first questions near,
+   last questions far).
+5. Respect the F/NG and mentioned/agreed trap grammars — they are the
+   exam's core discriminators.
+6. Target the 40/35/25 easy/mid/hard mix so our raw scores map honestly
+   onto the official band tables.
+
 Suggested authoring recipe per original Smart LC test:
 - Listening: P1 form/table 10×(word+number) with example; P2 monologue
   MCQ+matching or labelling; P3 discussion MCQ+multi-select; P4 lecture
