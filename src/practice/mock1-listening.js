@@ -15,7 +15,7 @@ export const MOCK1_LISTENING = {
     {
       title: "Part 1",
       instructions: "You will hear a woman phoning a sports centre about swimming lessons.",
-      audioSrc: "/practice-audio/mock1-s1.wav",
+      audioSrc: "/practice-audio/mock1-s1.mp3",
       questions: [
         { n: 1, type: "gap", group: "p1", note: "ONE WORD AND/OR A NUMBER",
           notes: {
@@ -52,7 +52,7 @@ export const MOCK1_LISTENING = {
     {
       title: "Part 2",
       instructions: "You will hear a guide welcoming visitors to the new Riverside Library.",
-      audioSrc: "/practice-audio/mock1-s2.wav",
+      audioSrc: "/practice-audio/mock1-s2.mp3",
       questions: [
         { n: 11, type: "multiselect", group: "ms1",
           prompt: "Which TWO things at the library are completely free?",
@@ -89,7 +89,7 @@ export const MOCK1_LISTENING = {
     {
       title: "Part 3",
       instructions: "You will hear two students, Aziz and Malika, planning a class presentation about recycling.",
-      audioSrc: "/practice-audio/mock1-s3.wav",
+      audioSrc: "/practice-audio/mock1-s3.mp3",
       questions: [
         { n: 21, type: "mcq", prompt: "The presentation must last", options: ["A ten minutes", "B fifteen minutes", "C twenty minutes"], answer: "B" },
         { n: 22, type: "mcq", prompt: "They decide to focus on recycling of", options: ["A paper", "B glass", "C plastic"], answer: "C" },
@@ -109,7 +109,7 @@ export const MOCK1_LISTENING = {
     {
       title: "Part 4",
       instructions: "You will hear part of a lecture about the history of tea.",
-      audioSrc: "/practice-audio/mock1-s4.wav",
+      audioSrc: "/practice-audio/mock1-s4.mp3",
       questions: [
         { n: 31, type: "gap", group: "p4", note: "ONE WORD ONLY",
           notes: {

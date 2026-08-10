@@ -15,7 +15,7 @@ export const MOCK2_LISTENING = {
     {
       title: "Part 1",
       instructions: "You will hear a woman phoning a community hall about booking a room for a family event.",
-      audioSrc: "/practice-audio/mock2-s1.wav",
+      audioSrc: "/practice-audio/mock2-s1.mp3",
       questions: [
         { n: 1, type: "gap", group: "p1", note: "ONE WORD AND/OR A NUMBER",
           table: {
@@ -50,7 +50,7 @@ export const MOCK2_LISTENING = {
     {
       title: "Part 2",
       instructions: "You will hear the manager of Westfield City Farm talking to a group of visitors on its open day.",
-      audioSrc: "/practice-audio/mock2-s2.wav",
+      audioSrc: "/practice-audio/mock2-s2.mp3",
       questions: [
         { n: 11, type: "mcq", prompt: "The farm was originally created in order to", options: ["A supply vegetables to local shops", "B give city children contact with animals", "C bring an empty site back into use"], answer: "C" },
         { n: 12, type: "mcq", prompt: "What is different about today's open day?", options: ["A Entry is free of charge", "B A local chef is giving demonstrations", "C Visitors can feed the animals themselves"], answer: "B" },
@@ -79,7 +79,7 @@ export const MOCK2_LISTENING = {
     {
       title: "Part 3",
       instructions: "You will hear two psychology students, Karim and Nilufar, discussing their experiment on sleep and memory.",
-      audioSrc: "/practice-audio/mock2-s3.wav",
+      audioSrc: "/practice-audio/mock2-s3.mp3",
       questions: [
         { n: 21, type: "mcq", prompt: "Nilufar chose the topic of sleep and memory because", options: ["A she had read a popular book about it", "B her own exam results had surprised her", "C their tutor suggested it would be manageable"], answer: "B" },
         { n: 22, type: "mcq", prompt: "In the first experiment, participants were asked to memorise", options: ["A a list of unrelated words", "B a set of pictures", "C a short scientific text"], answer: "A" },
@@ -114,7 +114,7 @@ export const MOCK2_LISTENING = {
     {
       title: "Part 4",
       instructions: "You will hear part of a lecture about the history of rubber.",
-      audioSrc: "/practice-audio/mock2-s4.wav",
+      audioSrc: "/practice-audio/mock2-s4.mp3",
       questions: [
         { n: 31, type: "gap", group: "p4", note: "ONE WORD ONLY",
           notes: {
