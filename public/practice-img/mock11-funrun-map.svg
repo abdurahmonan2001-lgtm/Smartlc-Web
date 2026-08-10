@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" font-family="Arial, sans-serif">
+  <rect width="640" height="420" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#000">Oakwood Park — fun run route</text>
+  <rect x="20" y="44" width="600" height="340" fill="none" stroke="#595959" stroke-width="2"/>
+
+  <!-- route (dashed loop) -->
+  <path d="M 320 378 L 250 350 L 150 315 L 92 278 L 72 200 L 120 165 L 82 122 L 65 95
+           L 200 75 L 355 95 L 560 95 L 560 190 L 545 275 L 470 330 L 395 350 L 330 378"
+        fill="none" stroke="#8a8a8a" stroke-width="2.5" stroke-dasharray="8 6"/>
+
+  <!-- lake -->
+  <ellipse cx="160" cy="240" rx="88" ry="62" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="160" y="245" text-anchor="middle" font-size="12" fill="#333">Lake</text>
+
+  <!-- fountain -->
+  <circle cx="320" cy="100" r="17" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="320" y="135" text-anchor="middle" font-size="11" fill="#333">Fountain</text>
+
+  <!-- trees on the slope, north-west corner -->
+  <circle cx="95" cy="70" r="9" fill="#eef2f1" stroke="#8a8a8a"/>
+  <circle cx="120" cy="82" r="9" fill="#eef2f1" stroke="#8a8a8a"/>
+  <circle cx="145" cy="68" r="9" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="120" y="105" text-anchor="middle" font-size="11" fill="#333">Slope</text>
+
+  <!-- bandstand -->
+  <circle cx="355" cy="230" r="22" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="355" y="266" text-anchor="middle" font-size="11" fill="#333">Bandstand</text>
+
+  <!-- playground -->
+  <rect x="460" y="185" width="110" height="70" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="515" y="224" text-anchor="middle" font-size="11" fill="#333">Playground</text>
+
+  <!-- cafe -->
+  <rect x="205" y="322" width="70" height="42" fill="#eef2f1" stroke="#8a8a8a"/>
+  <text x="240" y="347" text-anchor="middle" font-size="11" fill="#333">Café</text>
+
+  <!-- lettered points -->
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <circle cx="250" cy="350" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="250" y="355">A</text>
+    <circle cx="150" cy="315" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="150" y="320">B</text>
+    <circle cx="120" cy="165" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="120" y="170">C</text>
+    <circle cx="65" cy="95" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="65" y="100">D</text>
+    <circle cx="355" cy="95" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="355" y="100">E</text>
+    <circle cx="560" cy="95" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="560" y="100">F</text>
+    <circle cx="545" cy="275" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="545" y="280">G</text>
+    <circle cx="395" cy="350" r="13" fill="#fff" stroke="#595959" stroke-width="1.5"/>
+    <text x="395" y="355">H</text>
+  </g>
+
+  <!-- entrance -->
+  <rect x="300" y="380" width="100" height="8" fill="#fff" stroke="#595959"/>
+  <text x="350" y="406" text-anchor="middle" font-size="12" fill="#333">Main gate</text>
+</svg>
