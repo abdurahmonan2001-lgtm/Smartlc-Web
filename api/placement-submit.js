@@ -10,6 +10,7 @@
 // field, per-IP rate limits, and hard input size caps.
 import { GRAMMAR, READING, WRITING_PROMPT, determineLevel } from './_bank.js'
 import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit, env } from './_session.js'
+import { telegramSend, placementMessage } from './_notify.js'
 
 // A whole family sharing one connection, or a queue of candidates on the
 // centre's own tablet, all look like a single IP — so the quota counts only
@@ -185,6 +186,16 @@ export default async function handler(req, res) {
   }
 
   recordHit(`done:${ip}`)   // charge the quota only for a test that actually completed
+
+  // Tell the office straight away. The Daily Tasks card only recounts hourly,
+  // so without this a fresh candidate can go unnoticed for an hour. Awaited so
+  // the serverless function is not frozen mid-request, but a failure to notify
+  // must never turn a saved result into an error for the candidate.
+  try {
+    await telegramSend(placementMessage(row, { grammar: GRAMMAR.length, reading: READING.length }))
+  } catch (e) {
+    console.error('placement notify threw', e)
+  }
 
   // Only the candidate's own outcome is returned — never any other row.
   return res.status(200).json({
