@@ -3,7 +3,10 @@
     "id": "azizbek",
     "name": "Azizbek",
     "photo": "/stories/azizbek.webp",
-    "chips": ["5 countries", "🇩🇪 🇫🇷 🇧🇪 🇳🇱 🇹🇷"],
+    "chips": [
+      "5 countries",
+      "🇩🇪 🇫🇷 🇧🇪 🇳🇱 🇹🇷"
+    ],
     "title": {
       "en": "World traveller — five countries and counting",
       "uz": "Sayohatchi — besh davlat, va bu hali boshlanishi",
@@ -24,7 +27,11 @@
     "id": "mirzokhid",
     "name": "Mirzokhid Saidov",
     "photo": "/stories/mirzokhid.webp",
-    "chips": ["IELTS 7.0", "SAT 1410", "100% scholarship 🇰🇷"],
+    "chips": [
+      "IELTS 7.0",
+      "SAT 1410",
+      "100% scholarship 🇰🇷"
+    ],
     "title": {
       "en": "Full-scholarship student in South Korea",
       "uz": "Janubiy Koreyada 100% grant asosida talaba",
@@ -45,7 +52,11 @@
     "id": "sardor",
     "name": "Sardor",
     "photo": "/stories/sardor.webp",
-    "chips": ["Iqtidorli Farzandlar", "TATU Lyceum", "IT internship"],
+    "chips": [
+      "Iqtidorli Farzandlar",
+      "TATU Lyceum",
+      "IT internship"
+    ],
     "title": {
       "en": "IT intern — alumnus of the President's talent programme",
       "uz": "IT-stajyor — Prezident \"Iqtidorli farzandlar\" dasturi ishtirokchisi",
@@ -62,7 +73,11 @@
     "id": "xumoyun",
     "name": "Xumoyun Normamatov",
     "photo": "/stories/xumoyun.webp",
-    "chips": ["IELTS 6.5 → 7.5", "CEFR C1", "WIUT"],
+    "chips": [
+      "IELTS 6.5 → 7.5",
+      "CEFR C1",
+      "WIUT"
+    ],
     "title": {
       "en": "Westminster International University in Tashkent student",
       "uz": "Toshkent xalqaro Vestminster universiteti talabasi",
@@ -83,7 +98,10 @@
     "id": "durdona",
     "name": "Durdona",
     "photo": null,
-    "chips": ["3 boshlanish · 1 natija", "🛍️"],
+    "chips": [
+      "3 boshlanish · 1 natija",
+      "🛍️"
+    ],
     "title": {
       "en": "Runs her own online shop — taught by the internet, in English",
       "uz": "O'z onlayn do'konini yuritadi — internetdan, ingliz tilida o'rganib",
@@ -104,7 +122,10 @@
     "id": "muslima",
     "name": "Muslima",
     "photo": null,
-    "chips": ["🇸🇦 summer job", "16 y.o."],
+    "chips": [
+      "🇸🇦 summer job",
+      "16 y.o."
+    ],
     "title": {
       "en": "Administrator at a tourism company in Saudi Arabia — at 16",
       "uz": "16 yoshda Saudiya Arabistonidagi turizm kompaniyasida administrator",
@@ -125,7 +146,10 @@
     "id": "mubina",
     "name": "Mubina",
     "photo": "/stories/mubina.webp",
-    "chips": ["IELTS Speaking & Writing", "🌍"],
+    "chips": [
+      "IELTS Speaking & Writing",
+      "🌍"
+    ],
     "title": {
       "en": "IELTS taught her more than English — a new way of thinking",
       "uz": "IELTS unga tildan ko'proq narsani — yangicha fikrlashni o'rgatdi",
@@ -146,7 +170,10 @@
     "id": "masturabonu",
     "name": "Masturabonu",
     "photo": null,
-    "chips": ["IELTS 7.0", "🌍 Global mindset"],
+    "chips": [
+      "IELTS 7.0",
+      "🌍 Global mindset"
+    ],
     "title": {
       "en": "English as an awakening — access to the global conversation",
       "uz": "Ingliz tili — uyg'onish: global suhbatga yo'l",
@@ -167,7 +194,10 @@
     "id": "ibrohim",
     "name": "Ibrohim",
     "photo": null,
-    "chips": ["IELTS 6.0", "15 y.o."],
+    "chips": [
+      "IELTS 6.0",
+      "15 y.o."
+    ],
     "title": {
       "en": "IELTS 6.0 at fifteen — started at eleven",
       "uz": "15 yoshda IELTS 6.0 — 11 yoshda boshlagan",
@@ -188,7 +218,10 @@
     "id": "behruz",
     "name": "Behruz",
     "photo": "/stories/behruz.webp",
-    "chips": ["🎯 Turning point", "🎓"],
+    "chips": [
+      "🎯 Turning point",
+      "🎓"
+    ],
     "title": {
       "en": "In the university he chose — earning from the work he loves",
       "uz": "O'zi tanlagan universitetda — sevgan kasbidan daromad qilmoqda",
@@ -209,7 +242,10 @@
     "id": "sanjar",
     "name": "Sanjar",
     "photo": "/stories/sanjar.webp",
-    "chips": ["WIUT", "💼 Own business"],
+    "chips": [
+      "WIUT",
+      "💼 Own business"
+    ],
     "title": {
       "en": "English stopped being a subject and became the way he thinks",
       "uz": "Ingliz tili fan bo'lishdan to'xtab, fikrlash tarziga aylandi",
@@ -224,6 +260,31 @@
       "en": "Don't chase the certificate. Chase the moment when the language stops being homework and starts being part of how you think. Everything else follows.",
       "uz": "Sertifikat ortidan quvmang. Til uy vazifasi bo'lishdan to'xtab, fikrlashingizning bir qismiga aylanadigan lahzani quving. Qolgani o'z-o'zidan keladi.",
       "ru": "Не гонитесь за сертификатом. Гонитесь за моментом, когда язык перестаёт быть домашним заданием и становится частью вашего мышления. Остальное придёт само."
+    }
+  },
+  {
+    "id": "oybek",
+    "name": "Oybek",
+    "photo": "/stories/oybek.webp",
+    "chips": [
+      "Reading 4.5 → 7.0",
+      "4 months",
+      "🎓 Dream university"
+    ],
+    "title": {
+      "en": "Four months — Reading from 4.5 to 7.0, and the university he wanted",
+      "uz": "To'rt oy — reading 4.5 dan 7.0 ga va orzudagi universitet",
+      "ru": "Четыре месяца — Reading с 4.5 до 7.0 и университет мечты"
+    },
+    "story": {
+      "en": "When I first started studying English with teacher Abdurahmon, I had some difficulties, especially with reading and writing. I studied with him for only four months, but during that time I made significant progress in all four IELTS skills. When I started the course I scored 5.0 on my mock IELTS exam, and my Reading was only 4.5. By the end of the course the improvement was remarkable: Reading had gone from 4.5 to 7.0. Thanks to the knowledge, guidance and motivation I received during those four months, I became much more confident in my English. I also achieved another important goal — I was accepted into the university I had always wanted to attend. I can confidently say that teacher Abdurahmon was one of the people who played an important role in helping me achieve that goal. I am truly grateful for his support, his teaching and his motivation throughout my learning journey.",
+      "uz": "Abdurahmon ustozda ingliz tilini o'rganishni boshlaganimda ancha qiynalgandim, ayniqsa reading va writing bo'yicha. U kishi bilan atigi to'rt oy shug'ullandim, lekin shu vaqt ichida IELTSning to'rtala ko'nikmasi bo'yicha ham sezilarli natijaga erishdim. Kursni boshlaganimda mock IELTS imtihonida 5.0 ball olgandim, reading esa bor-yo'g'i 4.5 edi. Kurs so'ngida natija sezilarli o'zgardi: reading balim 4.5 dan 7.0 ga ko'tarildi. Shu to'rt oy davomida olgan bilimim, ustozning yo'l-yo'riqlari va bergan motivatsiyasi tufayli ingliz tilida o'zimga bo'lgan ishonchim ancha ortdi. Bundan tashqari, men uchun muhim bo'lgan yana bir maqsadga erishdim — doim orzu qilgan universitetimga o'qishga kirdim. Ishonch bilan ayta olamanki, bu maqsadga erishishimda Abdurahmon ustozning hissasi katta bo'ldi. Butun o'quv yo'lim davomida qo'llab-quvvatlagani, bergan bilimi va motivatsiyasi uchun chin dildan minnatdorman.",
+      "ru": "Когда я только начал заниматься английским с преподавателем Абдурахмоном, мне было довольно трудно — особенно с чтением и письмом. Я занимался у него всего четыре месяца, но за это время заметно продвинулся по всем четырём навыкам IELTS. В начале курса на пробном IELTS я набрал 5.0, а Reading был всего 4.5. К концу курса результат изменился ощутимо: Reading вырос с 4.5 до 7.0. Благодаря знаниям, наставничеству и мотивации, которые я получил за эти четыре месяца, я стал гораздо увереннее в английском. И достиг ещё одной важной для меня цели — поступил в университет, о котором всегда мечтал. Могу с уверенностью сказать, что преподаватель Абдурахмон — один из тех, кто сыграл важную роль в достижении этой цели. Я искренне благодарен ему за поддержку, обучение и мотивацию на протяжении всего моего пути."
+    },
+    "quote": {
+      "en": "I studied with him for only four months — but in that time I improved in all four skills.",
+      "uz": "U kishi bilan atigi to'rt oy shug'ullandim, lekin shu vaqtda to'rtala ko'nikmam ham o'sdi.",
+      "ru": "Я занимался у него всего четыре месяца — но за это время вырос по всем четырём навыкам."
     }
   }
 ]
