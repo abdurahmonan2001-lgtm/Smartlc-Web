@@ -1301,6 +1301,48 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .pr-book__title { font-weight: 800; font-size: 13.5px; }
 .pr-book__count { font-size: 12px; color: var(--ink-3); font-weight: 600; }
+/* Mock / Practice section switch */
+.pr-tabs { display: flex; gap: 10px; margin-bottom: 22px; }
+.pr-tab {
+  flex: 1; max-width: 280px; text-align: left; padding: 12px 16px;
+  border-radius: 14px; border: 1.5px solid var(--line); background: #fff; cursor: pointer;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.pr-tab strong { display: block; font-size: 14.5px; font-weight: 800; color: var(--ink); }
+.pr-tab span { font-size: 11.5px; color: var(--ink-3); font-weight: 600; }
+.pr-tab.is-active { border-color: var(--green); box-shadow: 0 6px 24px rgba(0, 148, 114, 0.14); }
+.pr-tab.is-active strong { color: var(--green); }
+
+/* A completed mock stays visible but reads as spent */
+.pr-book.is-taken { opacity: 0.6; }
+.pr-book.is-taken .pr-book__count { color: var(--green); font-weight: 700; }
+
+/* Pre-mock briefing */
+.pr-brief {
+  margin-top: 26px; background: #fff; border: 1.5px solid var(--line);
+  border-radius: 16px; padding: 24px 26px; max-width: 640px;
+}
+.pr-brief h3 { font-size: 18px; margin-bottom: 10px; }
+.pr-brief__warn {
+  background: #fef6f6; border: 1px solid #fbd5d5; color: #b91c1c;
+  border-radius: 10px; padding: 10px 14px; font-size: 14px; margin-bottom: 14px;
+}
+.pr-brief__rules { margin: 0 0 18px 18px; display: grid; gap: 8px; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.pr-brief--done { border-color: #d1fae5; }
+.pr-brief--done p { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+
+/* Mock result: one line per paper */
+.pr-mockline {
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; margin: 8px 0;
+  font-size: 14px;
+}
+.pr-mockline__mod { text-transform: capitalize; font-weight: 700; }
+.pr-result__warn {
+  margin-top: 12px; background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
+  border-radius: 10px; padding: 10px 14px; font-size: 13px;
+}
+
 .pr-lib__tests { margin-top: 26px; display: grid; gap: 12px; }
 .pr-test-row {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;

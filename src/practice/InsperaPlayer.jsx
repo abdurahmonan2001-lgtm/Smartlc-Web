@@ -159,7 +159,7 @@ function GapPrompt({ q, value, onChange }) {
   );
 }
 
-export default function InsperaPlayer({ test, user, onExit, onFinish }) {
+export default function InsperaPlayer({ test, user, onExit, onFinish, examStep = null }) {
   const all = useMemo(() => test.sections.flatMap((s, si) => s.questions.map((q) => ({ ...q, si }))), [test]);
   const [si, setSi] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -290,7 +290,14 @@ export default function InsperaPlayer({ test, user, onExit, onFinish }) {
           <span>Smart&nbsp;LC</span>
         </div>
         <div className="ins-header__central">
-          <div className="ins-header__name">{user.full_name}</div>
+          <div className="ins-header__name">
+            {user.full_name}
+            {examStep && (
+              <span className="ins-header__exam">
+                {examStep.label} · paper {examStep.current} of {examStep.total} · {test.module}
+              </span>
+            )}
+          </div>
           <div className="ins-header__sub">
             {audioPlaying
               ? <span>{I.volume}<span className="ins-header__subtitle">Audio is Playing</span></span>

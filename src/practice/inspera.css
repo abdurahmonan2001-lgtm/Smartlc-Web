@@ -25,6 +25,8 @@
 .ins-header__logo span { font-weight: 700; font-size: 15px; white-space: nowrap; }
 .ins-header__central { flex: 1; padding: 8px 0 0 16px; min-width: 0; }
 .ins-header__name { font-weight: 600; font-size: 16px; line-height: 18px; }
+/* Mock sitting progress — sits beside the candidate name in the header. */
+.ins-header__exam { margin-left: 12px; font-size: 12px; font-weight: 400; color: #6b7280; text-transform: capitalize; }
 .ins-header__sub { display: flex; align-items: center; gap: 5px; font-size: 13px; line-height: 18px; color: #000; }
 .ins-header__sub svg { margin-right: 4px; }
 .ins-header__subtitle { font-size: 13px; }

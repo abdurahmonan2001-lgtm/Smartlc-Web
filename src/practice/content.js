@@ -97,24 +97,33 @@ const WRITING_PRACTICE = WRITING_BANK.filter((d) => d.day >= 13).map((d) => ({
   sections: writingSections(d),
 }));
 
+// `kind` splits the library in two:
+//   mock     — sat once, all three papers in one sitting, nothing saved
+//              unless the whole exam is finished
+//   practice — single papers, taken freely and repeatedly, the pool
+//              homework is set from
+// Mock books are deliberately NOT also offered as separate papers: a
+// student who could sit Mock 5's listening as practice would walk into
+// their one official attempt already knowing it.
 export const BOOKS = [
   ...Array.from({ length: 12 }, (_, i) => ({
     id: `mock${i + 1}`,
     title: `Smart LC Mock Test ${i + 1}`,
     short: `M${i + 1}`,
+    kind: "mock",
   })),
-  { id: "wbank", title: "Writing Practice", short: "W" },
-  { id: "cam9", title: "Cambridge IELTS 9", short: "9" },
-  { id: "cam10", title: "Cambridge IELTS 10", short: "10" },
-  { id: "cam11", title: "Cambridge IELTS 11", short: "11" },
-  { id: "cam12", title: "Cambridge IELTS 12", short: "12" },
-  { id: "cam13", title: "Cambridge IELTS 13", short: "13" },
-  { id: "cam14", title: "Cambridge IELTS 14", short: "14" },
-  { id: "cam15", title: "Cambridge IELTS 15", short: "15" },
-  { id: "cam16", title: "Cambridge IELTS 16", short: "16" },
-  { id: "cam17", title: "Cambridge IELTS 17", short: "17" },
-  { id: "cam18", title: "Cambridge IELTS 18", short: "18" },
-  { id: "cam19", title: "Cambridge IELTS 19", short: "19" },
+  { id: "wbank", title: "Writing Practice", short: "W", kind: "practice" },
+  { id: "cam9", title: "Cambridge IELTS 9", short: "9", kind: "practice" },
+  { id: "cam10", title: "Cambridge IELTS 10", short: "10", kind: "practice" },
+  { id: "cam11", title: "Cambridge IELTS 11", short: "11", kind: "practice" },
+  { id: "cam12", title: "Cambridge IELTS 12", short: "12", kind: "practice" },
+  { id: "cam13", title: "Cambridge IELTS 13", short: "13", kind: "practice" },
+  { id: "cam14", title: "Cambridge IELTS 14", short: "14", kind: "practice" },
+  { id: "cam15", title: "Cambridge IELTS 15", short: "15", kind: "practice" },
+  { id: "cam16", title: "Cambridge IELTS 16", short: "16", kind: "practice" },
+  { id: "cam17", title: "Cambridge IELTS 17", short: "17", kind: "practice" },
+  { id: "cam18", title: "Cambridge IELTS 18", short: "18", kind: "practice" },
+  { id: "cam19", title: "Cambridge IELTS 19", short: "19", kind: "practice" },
 ];
 
 
