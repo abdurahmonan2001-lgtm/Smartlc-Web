@@ -38,6 +38,129 @@ const label = {
   textTransform: "uppercase", letterSpacing: "0.06em", display: "block", marginBottom: "6px",
 };
 
+// One reviewed question. Wrong answers are the point of the screen, so they
+// carry the explanation and the correct answer; correct ones stay collapsed to
+// a single quiet line so a strong candidate is not made to scroll past fifty
+// green boxes to find the three they got wrong.
+function ReviewRow({ item, index }) {
+  const wrong = !item.ok;
+  return (
+    <div style={{
+      padding: wrong ? "14px 16px" : "9px 16px",
+      borderRadius: "12px",
+      background: wrong ? "#fef6f6" : "#fff",
+      border: `1px solid ${wrong ? "#fbd5d5" : "#eef1f0"}`,
+      marginBottom: "8px",
+    }}>
+      <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+        <span style={{
+          flexShrink: 0, width: "22px", height: "22px", borderRadius: "50%",
+          background: wrong ? "#dc2626" : "#d6f2e8", color: wrong ? "#fff" : G,
+          fontSize: "12px", fontWeight: 800, display: "flex",
+          alignItems: "center", justifyContent: "center", marginTop: "1px",
+        }}>{wrong ? "✕" : "✓"}</span>
+        <div style={{ minWidth: 0, flex: 1 }}>
+          <div style={{ fontSize: "13.5px", color: D, lineHeight: 1.55, fontWeight: wrong ? 600 : 400 }}>
+            <span style={{ color: "#94a3b8", fontWeight: 700 }}>{index}. </span>{item.q}
+          </div>
+          {wrong && (
+            <>
+              <div style={{ marginTop: "9px", fontSize: "13px", lineHeight: 1.7 }}>
+                <div style={{ color: "#b91c1c" }}>
+                  Your answer: <strong>{item.your ?? "not answered"}</strong>
+                </div>
+                <div style={{ color: G }}>
+                  Correct answer: <strong>{item.correct}</strong>
+                </div>
+              </div>
+              {item.why && (
+                <div style={{
+                  marginTop: "9px", padding: "9px 11px", borderRadius: "9px",
+                  background: "#fff", border: "1px solid #f0e2e2",
+                  fontSize: "12.5px", color: "#475569", lineHeight: 1.6,
+                }}>
+                  <strong style={{ color: D }}>Why: </strong>{item.why}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ReviewSection({ review }) {
+  const [open, setOpen] = useState(false);
+  const [onlyWrong, setOnlyWrong] = useState(true);
+  if (!review || !review.length) return null;
+
+  const wrongCount = review.filter((r) => !r.ok).length;
+  const grammar = review.filter((r) => r.section === "grammar");
+  const reading = review.filter((r) => r.section === "reading");
+
+  const block = (title, items) => {
+    const shown = onlyWrong ? items.filter((r) => !r.ok) : items;
+    if (!shown.length) {
+      return (
+        <div key={title} style={{ marginBottom: "16px" }}>
+          <div style={{ ...label, marginBottom: "8px" }}>{title}</div>
+          <div style={{ fontSize: "13px", color: G, padding: "10px 14px", background: "#f2fbf8", borderRadius: "10px", border: "1px solid #d6f2e8" }}>
+            Everything correct in this section. Well done.
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div key={title} style={{ marginBottom: "16px" }}>
+        <div style={{ ...label, marginBottom: "8px" }}>{title}</div>
+        {shown.map((r) => (
+          <ReviewRow key={`${r.section}-${r.id}`} item={r} index={items.indexOf(r) + 1} />
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ ...card, marginBottom: "14px" }}>
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        style={{
+          width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
+          background: "none", border: "none", padding: 0, cursor: "pointer", textAlign: "left",
+        }}
+      >
+        <span>
+          <span style={{ fontSize: "14px", fontWeight: 700, color: D, display: "block" }}>Review your answers</span>
+          <span style={{ fontSize: "12.5px", color: "#64748b" }}>
+            {wrongCount === 0
+              ? "You answered every question correctly."
+              : `${wrongCount} to look at — with an explanation for each`}
+          </span>
+        </span>
+        <span style={{ fontSize: "13px", fontWeight: 700, color: G, flexShrink: 0, marginLeft: "12px" }}>
+          {open ? "Hide ▲" : "Show ▼"}
+        </span>
+      </button>
+
+      {open && (
+        <div style={{ marginTop: "16px", borderTop: "1px solid #eef1f0", paddingTop: "16px" }}>
+          {wrongCount > 0 && (
+            <label style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "14px", cursor: "pointer" }}>
+              <input type="checkbox" checked={onlyWrong} onChange={() => setOnlyWrong(!onlyWrong)}
+                style={{ width: "16px", height: "16px", accentColor: G, cursor: "pointer" }} />
+              <span style={{ fontSize: "13px", color: "#475569", fontWeight: 600 }}>Show only my mistakes</span>
+            </label>
+          )}
+          {block("Grammar & Vocabulary", grammar)}
+          {block("Reading", reading)}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function OptionBtn({ letter, text, selected, onClick }) {
   return (
     <button type="button" onClick={onClick} style={{
@@ -330,6 +453,7 @@ export default function PlacementTest() {
             </div>
           ))}
         </div>
+        <ReviewSection review={results.review} />
         {results.writingFeedback && results.writingFeedback !== "No writing submitted." && (
           <div style={{ ...card, background: `${G}08`, borderColor: `${G}20`, marginBottom: "14px" }}>
             <div style={{ fontSize: "12px", fontWeight: 700, color: G, marginBottom: "6px" }}>AI writing feedback</div>

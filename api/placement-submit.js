@@ -116,6 +116,25 @@ export default async function handler(req, res) {
     wr.score != null ? wr.score / 10 : null,
   )
 
+  // A per-question review, built here because this is the only place that
+  // legitimately holds both the candidate's answers and the answer key.
+  //
+  // It is STORED rather than recomputed on demand: the admin app has no access
+  // to the server-only bank, and storing it also means an old result still
+  // reads correctly after the bank is edited — a review that silently changed
+  // to match a newer question set would be worse than none.
+  const reviewOf = (bank, given, section) => bank.map(q => {
+    const your = typeof given[q.id] === 'string' ? given[q.id] : null
+    return { section, id: q.id, q: q.q, your, correct: q.answer, ok: your === q.answer, why: q.explain || '' }
+  })
+  const review = [
+    // Grammar is re-ordered per candidate, so replay it in the order they saw.
+    ...seededShuffle(GRAMMAR.map(q => q.id), Number(session.seed))
+      .map(id => GRAMMAR.find(q => q.id === id))
+      .flatMap(q => reviewOf([q], gA, 'grammar')),
+    ...reviewOf(READING, rA, 'reading'),
+  ]
+
   const row = {
     full_name: fullName,
     age: ageValue,
@@ -128,6 +147,7 @@ export default async function handler(req, res) {
     level,
     grammar_answers: gA,
     reading_answers: rA,
+    review,
     // 'pending' = test taken, awaiting placement into a group. This is what
     // puts the candidate into the admin app's New Students pipeline and its
     // Daily Tasks counter; the office marks it 'added' on enrolment.
@@ -171,9 +191,11 @@ export default async function handler(req, res) {
   try {
     saved = await save(row)
     if (!saved.ok) {
-      // `source` / `age` may not exist as columns yet — retry without them
-      // rather than losing a real candidate's result.
-      const { source, age: _age, ...minimal } = row      // eslint-disable-line no-unused-vars
+      // `source` / `age` / `review` may not exist as columns yet — retry
+      // without them rather than losing a real candidate's result. The
+      // candidate still gets their review on screen; only the stored copy
+      // (and so the admin's view of it) waits for the migration.
+      const { source, age: _age, review: _review, ...minimal } = row   // eslint-disable-line no-unused-vars
       saved = await save(minimal)
     }
   } catch (e) {
@@ -198,6 +220,12 @@ export default async function handler(req, res) {
   }
 
   // Only the candidate's own outcome is returned — never any other row.
+  //
+  // The review carries the answer key, so it is returned ONLY here, in the
+  // response to a completed submission. There is deliberately no endpoint that
+  // hands back a review for a given result id: that would be a way to read the
+  // key without sitting the test, and it would expose one candidate's answers
+  // to anyone who could guess an id.
   return res.status(200).json({
     level, composite,
     grammarScore, grammarTotal: GRAMMAR.length,
@@ -205,5 +233,6 @@ export default async function handler(req, res) {
     writingScore: wr.score,
     writingFeedback: wr.feedback,
     firstName: fullName.split(' ')[0],
+    review,
   })
 }
