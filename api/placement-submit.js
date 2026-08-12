@@ -195,6 +195,14 @@ export default async function handler(req, res) {
       // without them rather than losing a real candidate's result. The
       // candidate still gets their review on screen; only the stored copy
       // (and so the admin's view of it) waits for the migration.
+      //
+      // LOUDLY, though: this fallback silently dropped every candidate's age
+      // for months because `source` had never been added, and a quiet retry
+      // looks identical to success. If this line appears in the logs, run the
+      // outstanding migration — it is data loss, not a hiccup.
+      console.error('placement save fell back to minimal row — a column is missing, '
+        + 'so age/source/review are NOT being stored. Reason:',
+        saved.status, await saved.clone().text().catch(() => ''))
       const { source, age: _age, review: _review, ...minimal } = row   // eslint-disable-line no-unused-vars
       saved = await save(minimal)
     }
