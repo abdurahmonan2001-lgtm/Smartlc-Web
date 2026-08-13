@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults, fetchRemoteTests } from "./api.js";
 import TRANSCRIPTS from "./transcripts.json";
+import AUDIO_CUES from "./audio-cues.json";
+import { norm, isMockResult, fmtTime, buildReview, VocabMatch } from "./review.jsx";
+import Notebook, { useCueAudio, hasCue } from "./Notebook.jsx";
 import InsperaPlayer from "./InsperaPlayer.jsx";
 
 const SESSION_KEY = "slc_practice_user";
@@ -25,8 +28,7 @@ const bandFor = (raw, total, module) => {
   return 2.5;
 };
 
-const norm = (s) =>
-  String(s ?? "").trim().toLowerCase().replace(/[.,;:!?'"]/g, "").replace(/\s+/g, " ");
+// norm/buildReview/etc. live in review.jsx, shared with the notebook.
 
 /* ─── Login ─── */
 function Login({ onLogin }) {
@@ -64,7 +66,7 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, takenMocks, completedMocks, takenPractice }) {
+function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice }) {
   const [section, setSection] = useState("mock");
   const [openBook, setOpenBook] = useState(null);
   const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
@@ -93,6 +95,7 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
           <span>Practice</span>
         </span>
         <div className="pr-lib__user">
+          <button className="pr-link" onClick={onNotebook}>My mistakes</button>
           <button className="pr-link" onClick={onResults}>My results</button>
           <span>{user.full_name}</span>
           <button className="pr-link" onClick={onLogout}>Log out</button>
@@ -390,41 +393,8 @@ function MockResultView({ outcome, onBack }) {
  * never shown, because a completed mock's answers shared with a
  * classmate who has not sat it yet would unseal the exam.
  */
-const isMockResult = (testId) => /^mock\d+-/.test(String(testId));
 
-function buildReview(test, answers) {
-  const items = [];
-  for (const s of test.sections) {
-    for (const q of s.questions) {
-      if (q.type === "essay") continue;
-      const given = norm(answers?.[q.n]);
-      const keys = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(norm);
-      const ok = q.type === "mcq" || q.type === "select"
-        ? keys.some((k) => given === k || given.startsWith(k + " "))
-        : keys.includes(given);
-      items.push({
-        n: q.n,
-        section: s.title,
-        prompt: q.prompt || (q.table ? `${q.table.title} — gap ${q.n}` : q.notes ? `${q.notes.title} — gap ${q.n}` : `Question ${q.n}`),
-        your: answers?.[q.n] ?? null,
-        correct: Array.isArray(q.answer) ? q.answer[0] : q.answer,
-        ok,
-        explain: q.explain || null,
-        evidence: q.evidence || null,
-        vocab: Array.isArray(q.vocab) && q.vocab.length === 2 ? q.vocab : null,
-      });
-    }
-  }
-  return items;
-}
-
-const fmtTime = (secs) => {
-  if (!secs && secs !== 0) return null;
-  const m = Math.floor(secs / 60), s = secs % 60;
-  return `${m}:${String(s).padStart(2, "0")}`;
-};
-
-function AnswerReviewList({ review }) {
+function AnswerReviewList({ review, testId = null, module = null, onListen = null, playing = null }) {
   const [onlyWrong, setOnlyWrong] = useState(true);
   const wrong = review.filter((r) => !r.ok);
   const shown = onlyWrong ? wrong : review;
@@ -458,6 +428,11 @@ function AnswerReviewList({ review }) {
                     </div>
                     {r.explain && <div className="pr-review__why"><strong>Why:</strong> {r.explain}</div>}
                     {r.evidence && <div className="pr-review__ev">“{r.evidence}”</div>}
+                    {module === "listening" && onListen && hasCue(testId, r.n) && (
+                      <button type="button" className="pr-listen" onClick={() => onListen(testId, r)}>
+                        {playing === `${testId}:${r.n}` ? "◼ Stop" : "▶ Listen from here"}
+                      </button>
+                    )}
                   </>
                 )}
               </div>
@@ -496,64 +471,6 @@ function TranscriptPanel({ testId }) {
   );
 }
 
-/* ─── Vocabulary from mistakes: a tap-to-match game pairing the source's
- * words with the question's paraphrase — the core IELTS skill, drilled
- * with exactly the pairs this student just got wrong. ─── */
-function VocabMatch({ review }) {
-  // Pairs from wrong answers first; top up with the paper's other pairs
-  // so there is always something to practise, capped to stay a game.
-  const pairs = [
-    ...review.filter((r) => !r.ok && r.vocab).map((r) => r.vocab),
-    ...review.filter((r) => r.ok && r.vocab).map((r) => r.vocab),
-  ].slice(0, 8);
-  const [left, setLeft] = useState(null);        // selected source phrase index
-  const [matched, setMatched] = useState({});    // pairIdx -> true
-  const [miss, setMiss] = useState(null);        // flash on a wrong pairing
-  if (pairs.length < 3) return null;
-
-  // Left column keeps source order; only the right is scrambled, with a
-  // deterministic sine ordering so re-renders never reshuffle mid-game.
-  const order = [...pairs.keys()];
-  const rightOrder = [...pairs.keys()].sort((a, b) =>
-    (Math.sin(a * 31 + pairs.length) - Math.sin(b * 31 + pairs.length)));
-  const done = Object.keys(matched).length === pairs.length;
-
-  const pickRight = (idx) => {
-    if (left == null || matched[idx]) return;
-    if (idx === left) { setMatched((m) => ({ ...m, [idx]: true })); setLeft(null); }
-    else { setMiss(idx); setTimeout(() => setMiss(null), 450); }
-  };
-
-  return (
-    <div className="pr-review pr-vocab">
-      <div className="pr-review__bar"><strong>Vocabulary practice — match the paraphrase</strong></div>
-      <p className="pr-vocab__hint">
-        The test never repeats the text's words — it paraphrases them. Tap a phrase on the
-        left, then its partner on the right.
-      </p>
-      <div className="pr-vocab__cols">
-        <div>
-          {order.map((i) => (
-            <button key={i} type="button"
-              className={`pr-vocab__chip ${matched[i] ? "is-done" : ""} ${left === i ? "is-picked" : ""}`}
-              disabled={matched[i]}
-              onClick={() => setLeft(i)}>{pairs[i][0]}</button>
-          ))}
-        </div>
-        <div>
-          {rightOrder.map((i) => (
-            <button key={i} type="button"
-              className={`pr-vocab__chip ${matched[i] ? "is-done" : ""} ${miss === i ? "is-miss" : ""}`}
-              disabled={matched[i]}
-              onClick={() => pickRight(i)}>{pairs[i][1]}</button>
-          ))}
-        </div>
-      </div>
-      {done && <p className="pr-vocab__done">All matched — these pairs are exactly how the test disguised its answers. 🎉</p>}
-    </div>
-  );
-}
-
 /* ─── Result + history ─── */
 function ResultView({ result, test, onBack }) {
   const isWriting = result.raw_score == null;
@@ -561,6 +478,7 @@ function ResultView({ result, test, onBack }) {
   // Review only for practice papers whose content we can still find.
   const review = test && !isMockResult(result.test_id) && !isWriting ? buildReview(test, result.answers) : null;
   const time = fmtTime(result.duration_seconds);
+  const { playing, toggle } = useCueAudio();
   return (
     <div className="pr-result">
       <div className="pr-result__card">
@@ -584,7 +502,10 @@ function ResultView({ result, test, onBack }) {
           <button className="btn btn--primary" onClick={onBack}>Back to library</button>
         </div>
       </div>
-      {review && <AnswerReviewList review={review} />}
+      {review && (
+        <AnswerReviewList review={review} testId={result.test_id} module={test.module}
+          onListen={toggle} playing={playing} />
+      )}
       {review && <VocabMatch review={review} />}
       {test && !isMockResult(result.test_id) && test.module === "listening" && (
         <TranscriptPanel testId={result.test_id} />
@@ -764,6 +685,9 @@ export default function PracticeApp() {
     );
   }
   if (view.name === "mockresult") return <MockResultView outcome={view.outcome} onBack={() => setView({ name: "library" })} />;
+  if (view.name === "notebook") {
+    return <Notebook user={user} findTest={findTest} onBack={() => setView({ name: "library" })} />;
+  }
   if (view.name === "history") {
     return (
       <History
@@ -784,6 +708,7 @@ export default function PracticeApp() {
       onResults={() => setView({ name: "history" })}
       onStart={(testId) => setView({ name: "player", testId })}
       onStartMock={startMock}
+      onNotebook={() => setView({ name: "notebook" })}
       completedMocks={completedMocks}
       takenPractice={takenPractice}
     />

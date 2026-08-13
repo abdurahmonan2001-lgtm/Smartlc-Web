@@ -26,7 +26,7 @@ import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const audioDir = path.join(root, "public", "practice-audio");
@@ -110,6 +110,51 @@ async function synth(voice, text, outFile) {
   }
 }
 
+// ── audio cues ───────────────────────────────────────────────────────
+// While concatenating we know exactly when each spoken line starts, so
+// for the PRACTICE sets we also emit per-question timestamps: the
+// review's "listen from here" jumps the recording to just before the
+// line that carries the answer. Questions are matched to lines through
+// their `evidence` quote (falling back to the answer text). Mocks are
+// skipped on purpose — cues ship in the bundle, and a mock's cue map
+// would index its answers.
+const FFPROBE = FFMPEG.replace(/ffmpeg(\.exe)?$/i, (m) => m.replace(/ffmpeg/i, "ffprobe"));
+const durCache = new Map();
+function durationOf(file) {
+  if (!durCache.has(file)) {
+    durCache.set(file, parseFloat(execFileSync(FFPROBE,
+      ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file]).toString()));
+  }
+  return durCache.get(file);
+}
+
+const normText = (s) => String(s).toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+// evidence strings may carry an attribution ('the receptionist says: "..."');
+// the quoted core is what actually matches a spoken line.
+function evidenceCore(ev) {
+  const q = String(ev).match(/"([^"]{8,})"|“([^”]{8,})”/);
+  return normText(q ? (q[1] || q[2]) : ev);
+}
+
+function cueQuestions(test, partIdx, lineStarts) {
+  const cues = {};
+  for (const q of test.sections[partIdx].questions) {
+    const targets = [];
+    if (q.evidence) targets.push(evidenceCore(q.evidence));
+    for (const a of Array.isArray(q.answer) ? q.answer : [q.answer]) {
+      if (a && String(a).length > 2) targets.push(normText(a));
+    }
+    let hit = null;
+    for (const t of targets) {
+      if (t.length < 3) continue;
+      hit = lineStarts.find((l) => l.text.includes(t));
+      if (hit) break;
+    }
+    if (hit) cues[q.n] = { p: partIdx + 1, t: Math.max(0, Math.round((hit.start - 3) * 10) / 10) };
+  }
+  return cues;
+}
+
 const silences = new Map();
 function silenceFile(seconds) {
   const key = seconds.toFixed(2);
@@ -129,9 +174,12 @@ async function renderPart(name, partIdx, lines, testIdx) {
   const fVoice = FEMALE[(testIdx + partIdx) % FEMALE.length];
   const mVoice = MALE[(testIdx * 2 + partIdx) % MALE.length];
   const segs = [];
+  const lineStarts = [];   // where each spoken line begins in the final part
+  let offset = 0;
+  const push = (file) => { segs.push(file); offset += durationOf(file); };
   for (const [i, raw] of lines.entries()) {
     const pause = raw.match(/^P\|(\d+(?:\.\d+)?)/);
-    if (pause) { segs.push(silenceFile(Number(pause[1]))); continue; }
+    if (pause) { push(silenceFile(Number(pause[1]))); continue; }
     const tag = raw.slice(0, 2);
     const text = forSpeech(raw.slice(2).trim());
     if (!text) continue;
@@ -139,8 +187,9 @@ async function renderPart(name, partIdx, lines, testIdx) {
     const seg = path.join(cacheDir,
       crypto.createHash("sha1").update(voice + "\u0000" + text).digest("hex") + ".mp3");
     if (!fs.existsSync(seg)) await synth(voice, text, seg);
-    if (i > 0) segs.push(silenceFile(0.45));       // breathing room between turns
-    segs.push(seg);
+    if (i > 0) push(silenceFile(0.45));            // breathing room between turns
+    lineStarts.push({ text: normText(text), start: offset });
+    push(seg);
   }
   const list = path.join(cacheDir, `${name}-s${partIdx + 1}.txt`);
   fs.writeFileSync(list, segs.map((s) => `file '${s.replace(/\\/g, "/").replace(/'/g, "'\\''")}'`).join("\n"));
@@ -148,7 +197,7 @@ async function renderPart(name, partIdx, lines, testIdx) {
   execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y",
     "-f", "concat", "-safe", "0", "-i", list,
     "-ac", "1", "-ar", "22050", "-codec:a", "libmp3lame", "-q:a", "5", out]);
-  return out;
+  return { out, lineStarts };
 }
 
 // ── main ─────────────────────────────────────────────────────────────
@@ -156,15 +205,30 @@ const ALL = [...Array.from({ length: 12 }, (_, i) => `mock${i + 1}`),
              ...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`)];
 const wanted = process.argv.slice(2).length ? process.argv.slice(2) : ALL;
 
+const cuesPath = path.join(root, "src", "practice", "audio-cues.json");
+const cues = fs.existsSync(cuesPath) ? JSON.parse(fs.readFileSync(cuesPath, "utf8")) : {};
+
 for (const name of wanted) {
   const ps1 = path.join(root, "scripts", `generate-${name}-audio.ps1`);
   const parts = parseScript(ps1);
   const testIdx = ALL.indexOf(name);
+  // Cues for practice sets only — never for mocks (see note above cueQuestions).
+  const isPset = /^pset\d+$/.test(name);
+  const test = isPset
+    ? (await import(pathToFileURL(path.join(root, "src", "practice", `${name}-listening.js`)).href))[`${name.toUpperCase()}_LISTENING`]
+    : null;
+  const testCues = {};
   for (let p = 0; p < 4; p++) {
     const t0 = Date.now();
-    const out = await renderPart(name, p, parts[p], testIdx);
+    const { out, lineStarts } = await renderPart(name, p, parts[p], testIdx);
+    if (test) Object.assign(testCues, cueQuestions(test, p, lineStarts));
     const kb = Math.round(fs.statSync(out).size / 1024);
     console.log(`${name}-s${p + 1}.mp3  ${kb} KB  (${Math.round((Date.now() - t0) / 1000)}s)`);
   }
+  if (test) {
+    cues[`${name}-listening`] = testCues;
+    console.log(`  cues: ${Object.keys(testCues).length}/40 questions located`);
+  }
 }
+if (wanted.some((n) => /^pset\d+$/.test(n))) fs.writeFileSync(cuesPath, JSON.stringify(cues));
 console.log("done");
