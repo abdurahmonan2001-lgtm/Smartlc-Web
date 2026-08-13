@@ -29,3 +29,6 @@ dist-ssr
 # Listening recordings: the .wav files are working output from the TTS
 # scripts; only the compressed .mp3 the player loads is committed.
 public/practice-audio/*.wav
+
+# Neural TTS segment cache (generate-neural-audio.mjs working files)
+.neural-cache/
