@@ -1352,6 +1352,45 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-review__ans .is-key { color: var(--green); }
 
 .pr-result__actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+
+/* Explanation + evidence inside a wrong review row */
+.pr-review__why { margin-top: 6px; font-size: 12.5px; color: #475569; line-height: 1.6; }
+.pr-review__ev {
+  margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--green);
+  background: #f7fbfa; border-radius: 0 8px 8px 0;
+  font-size: 12.5px; color: var(--ink-2); font-style: italic; line-height: 1.55;
+}
+
+/* Once-only pre-start notice on a practice row */
+.pr-done-chip { font-size: 12.5px; font-weight: 700; color: var(--green); }
+.pr-arm { flex-basis: 100%; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 12px 14px; margin-top: 10px; }
+.pr-arm p { font-size: 13px; color: #92400e; line-height: 1.6; margin-bottom: 10px; }
+.pr-arm__btns { display: flex; gap: 12px; align-items: center; }
+
+/* Transcript reveal */
+.pr-transcript__toggle {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; padding: 0; cursor: pointer; font-size: 14.5px;
+}
+.pr-transcript__toggle span { font-size: 13px; font-weight: 700; color: var(--green); }
+.pr-transcript__line { display: flex; gap: 10px; font-size: 13.5px; line-height: 1.65; margin-bottom: 8px; color: var(--ink-2); }
+.pr-transcript__line span { flex-shrink: 0; width: 84px; font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 3px; }
+.pr-transcript__line.is-A span { color: var(--green); }
+
+/* Vocabulary match game */
+.pr-vocab__hint { font-size: 12.5px; color: #64748b; line-height: 1.6; margin-bottom: 12px; }
+.pr-vocab__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+.pr-vocab__cols > div { display: flex; flex-direction: column; gap: 8px; }
+.pr-vocab__chip {
+  padding: 9px 12px; border-radius: 10px; border: 1.5px solid var(--line);
+  background: #fff; font-size: 13px; font-weight: 600; color: var(--ink);
+  cursor: pointer; text-align: left; transition: border-color .12s ease, background .12s ease;
+}
+.pr-vocab__chip.is-picked { border-color: var(--green); background: #f2fbf8; }
+.pr-vocab__chip.is-done { border-color: #d6f2e8; background: #f2fbf8; color: var(--green); cursor: default; text-decoration: line-through; }
+.pr-vocab__chip.is-miss { border-color: #fca5a5; background: #fef2f2; animation: vshake .3s; }
+@keyframes vshake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.pr-vocab__done { margin-top: 12px; font-size: 13.5px; font-weight: 700; color: var(--green); }
 .btn--ghost-green {
   padding: 12px 20px; border-radius: 12px; border: 1.5px solid var(--green);
   background: #fff; color: var(--green); font-weight: 700; font-size: 14px; cursor: pointer;

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults, fetchRemoteTests } from "./api.js";
+import TRANSCRIPTS from "./transcripts.json";
 import InsperaPlayer from "./InsperaPlayer.jsx";
 
 const SESSION_KEY = "slc_practice_user";
@@ -63,9 +64,10 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, takenMocks, completedMocks }) {
+function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, takenMocks, completedMocks, takenPractice }) {
   const [section, setSection] = useState("mock");
   const [openBook, setOpenBook] = useState(null);
+  const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
   const forBook = (bookId) => tests.filter((t) => t.bookId === bookId);
 
   // Uploaded shelves carry no `kind`; they are homework material, so they
@@ -140,15 +142,34 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
 
       {openBookObj && section === "practice" && (
         <div className="pr-lib__tests">
-          {forBook(openBookObj.id).map((t) => (
-            <div className="pr-test-row" key={t.id}>
-              <div>
-                <strong>{t.title}</strong>
-                <span>{t.module} · {t.durationMin} min · {t.sections.reduce((n, s) => n + s.questions.length, 0)} questions</span>
+          {forBook(openBookObj.id).map((t) => {
+            const done = takenPractice.has(t.id);
+            return (
+              <div className="pr-test-row" key={t.id}>
+                <div>
+                  <strong>{t.title}</strong>
+                  <span>{t.module} · {t.durationMin} min · {t.sections.reduce((n, s) => n + s.questions.length, 0)} questions</span>
+                </div>
+                {done
+                  ? <span className="pr-done-chip">✓ done — review it under My results</span>
+                  : armed === t.id
+                    ? null
+                    : <button className="btn btn--primary" onClick={() => setArmed(t.id)}>Start</button>}
+                {armed === t.id && !done && (
+                  <div className="pr-arm">
+                    <p>
+                      You can do this paper <strong>once</strong> — your score, answers and the time
+                      you take are sent to your teachers. Work as carefully as you would in class.
+                    </p>
+                    <div className="pr-arm__btns">
+                      <button className="btn btn--primary" onClick={() => onStart(t.id)}>Start now</button>
+                      <button className="pr-link" onClick={() => setArmed(null)}>Cancel</button>
+                    </div>
+                  </div>
+                )}
               </div>
-              <button className="btn btn--primary" onClick={() => onStart(t.id)}>Start</button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
@@ -388,6 +409,9 @@ function buildReview(test, answers) {
         your: answers?.[q.n] ?? null,
         correct: Array.isArray(q.answer) ? q.answer[0] : q.answer,
         ok,
+        explain: q.explain || null,
+        evidence: q.evidence || null,
+        vocab: Array.isArray(q.vocab) && q.vocab.length === 2 ? q.vocab : null,
       });
     }
   }
@@ -427,10 +451,14 @@ function AnswerReviewList({ review }) {
               <div className="pr-review__body">
                 <div className="pr-review__q">{r.n}. {r.prompt}</div>
                 {!r.ok && (
-                  <div className="pr-review__ans">
-                    <span className="is-yours">Your answer: <strong>{r.your || "not answered"}</strong></span>
-                    <span className="is-key">Correct: <strong>{r.correct}</strong></span>
-                  </div>
+                  <>
+                    <div className="pr-review__ans">
+                      <span className="is-yours">Your answer: <strong>{r.your || "not answered"}</strong></span>
+                      <span className="is-key">Correct: <strong>{r.correct}</strong></span>
+                    </div>
+                    {r.explain && <div className="pr-review__why"><strong>Why:</strong> {r.explain}</div>}
+                    {r.evidence && <div className="pr-review__ev">“{r.evidence}”</div>}
+                  </>
                 )}
               </div>
             </div>
@@ -441,8 +469,93 @@ function AnswerReviewList({ review }) {
   );
 }
 
+/* ─── Transcript: what the speakers said, revealed only after the paper
+ * is finished. Practice listening only — mock transcripts are never in
+ * the bundle at all (see scripts/extract-transcripts.mjs). ─── */
+function TranscriptPanel({ testId }) {
+  const [open, setOpen] = useState(false);
+  const parts = TRANSCRIPTS[testId];
+  if (!parts) return null;
+  return (
+    <div className="pr-review pr-transcript">
+      <button type="button" className="pr-transcript__toggle" onClick={() => setOpen(!open)}>
+        <strong>Recording transcript</strong>
+        <span>{open ? "Hide ▲" : "Read what was said ▼"}</span>
+      </button>
+      {open && parts.map((lines, i) => (
+        <div key={i}>
+          <div className="pr-review__sec">Part {i + 1}</div>
+          {lines.map((l, j) => (
+            <p key={j} className={`pr-transcript__line is-${l.s}`}>
+              <span>{l.s === "A" ? "Speaker A" : "Speaker B"}</span>{l.t}
+            </p>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── Vocabulary from mistakes: a tap-to-match game pairing the source's
+ * words with the question's paraphrase — the core IELTS skill, drilled
+ * with exactly the pairs this student just got wrong. ─── */
+function VocabMatch({ review }) {
+  // Pairs from wrong answers first; top up with the paper's other pairs
+  // so there is always something to practise, capped to stay a game.
+  const pairs = [
+    ...review.filter((r) => !r.ok && r.vocab).map((r) => r.vocab),
+    ...review.filter((r) => r.ok && r.vocab).map((r) => r.vocab),
+  ].slice(0, 8);
+  const [left, setLeft] = useState(null);        // selected source phrase index
+  const [matched, setMatched] = useState({});    // pairIdx -> true
+  const [miss, setMiss] = useState(null);        // flash on a wrong pairing
+  if (pairs.length < 3) return null;
+
+  // Left column keeps source order; only the right is scrambled, with a
+  // deterministic sine ordering so re-renders never reshuffle mid-game.
+  const order = [...pairs.keys()];
+  const rightOrder = [...pairs.keys()].sort((a, b) =>
+    (Math.sin(a * 31 + pairs.length) - Math.sin(b * 31 + pairs.length)));
+  const done = Object.keys(matched).length === pairs.length;
+
+  const pickRight = (idx) => {
+    if (left == null || matched[idx]) return;
+    if (idx === left) { setMatched((m) => ({ ...m, [idx]: true })); setLeft(null); }
+    else { setMiss(idx); setTimeout(() => setMiss(null), 450); }
+  };
+
+  return (
+    <div className="pr-review pr-vocab">
+      <div className="pr-review__bar"><strong>Vocabulary practice — match the paraphrase</strong></div>
+      <p className="pr-vocab__hint">
+        The test never repeats the text's words — it paraphrases them. Tap a phrase on the
+        left, then its partner on the right.
+      </p>
+      <div className="pr-vocab__cols">
+        <div>
+          {order.map((i) => (
+            <button key={i} type="button"
+              className={`pr-vocab__chip ${matched[i] ? "is-done" : ""} ${left === i ? "is-picked" : ""}`}
+              disabled={matched[i]}
+              onClick={() => setLeft(i)}>{pairs[i][0]}</button>
+          ))}
+        </div>
+        <div>
+          {rightOrder.map((i) => (
+            <button key={i} type="button"
+              className={`pr-vocab__chip ${matched[i] ? "is-done" : ""} ${miss === i ? "is-miss" : ""}`}
+              disabled={matched[i]}
+              onClick={() => pickRight(i)}>{pairs[i][1]}</button>
+          ))}
+        </div>
+      </div>
+      {done && <p className="pr-vocab__done">All matched — these pairs are exactly how the test disguised its answers. 🎉</p>}
+    </div>
+  );
+}
+
 /* ─── Result + history ─── */
-function ResultView({ result, test, onBack, onRetake }) {
+function ResultView({ result, test, onBack }) {
   const isWriting = result.raw_score == null;
   const pct = isWriting ? null : Math.round((result.raw_score / result.total) * 100);
   // Review only for practice papers whose content we can still find.
@@ -468,13 +581,14 @@ function ResultView({ result, test, onBack, onRetake }) {
         )}
         {!result.saved && <p className="pr-result__warn">Saved on this device — will sync when the results table is set up.</p>}
         <div className="pr-result__actions">
-          {onRetake && !isMockResult(result.test_id) && (
-            <button className="btn btn--ghost-green" onClick={onRetake}>↺ Try this paper again</button>
-          )}
           <button className="btn btn--primary" onClick={onBack}>Back to library</button>
         </div>
       </div>
       {review && <AnswerReviewList review={review} />}
+      {review && <VocabMatch review={review} />}
+      {test && !isMockResult(result.test_id) && test.module === "listening" && (
+        <TranscriptPanel testId={result.test_id} />
+      )}
     </div>
   );
 }
@@ -544,6 +658,7 @@ export default function PracticeApp() {
   const [remote, setRemote] = useState([]);
   const [takenMocks, setTakenMocks] = useState(() => new Set());
   const [completedMocks, setCompletedMocks] = useState(() => new Set());
+  const [takenPractice, setTakenPractice] = useState(() => new Set());
 
   const loadRemote = () => { fetchRemoteTests().then(setRemote); };
   useEffect(loadRemote, []);
@@ -566,6 +681,12 @@ export default function PracticeApp() {
       setTakenMocks(new Set(mine.map((r) => mockOf(r.test_id)).filter(Boolean)));
       setCompletedMocks(new Set(
         mine.filter((r) => r.module === "writing").map((r) => mockOf(r.test_id)).filter(Boolean),
+      ));
+      // Practice papers are once-only too: a finished paper is homework
+      // handed in, and doing it again with the answers fresh would only
+      // inflate the score the teacher sees. One result per test id.
+      setTakenPractice(new Set(
+        mine.filter((r) => r.module !== "attempt" && !mockOf(r.test_id)).map((r) => r.test_id),
       ));
     });
   };
@@ -638,8 +759,7 @@ export default function PracticeApp() {
       <ResultView
         result={view.result}
         test={findTest(view.result.test_id)}
-        onBack={() => setView({ name: view.from === "history" ? "history" : "library" })}
-        onRetake={() => setView({ name: "player", testId: view.result.test_id })}
+        onBack={() => { loadTaken(); setView({ name: view.from === "history" ? "history" : "library" }); }}
       />
     );
   }
@@ -665,6 +785,7 @@ export default function PracticeApp() {
       onStart={(testId) => setView({ name: "player", testId })}
       onStartMock={startMock}
       completedMocks={completedMocks}
+      takenPractice={takenPractice}
     />
   );
 }
