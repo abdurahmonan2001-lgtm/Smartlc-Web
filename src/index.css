@@ -1331,6 +1331,33 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-brief--done { border-color: #d1fae5; }
 .pr-brief--done p { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
 
+/* Post-test answer review (practice papers only) */
+.pr-review {
+  max-width: 640px; margin: 18px auto 0; background: #fff;
+  border: 1.5px solid var(--line); border-radius: 16px; padding: 20px 22px;
+}
+.pr-review__bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.pr-review__bar strong { font-size: 14.5px; }
+.pr-review__bar label { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #475569; font-weight: 600; cursor: pointer; }
+.pr-review__bar input { width: 15px; height: 15px; accent-color: var(--green); cursor: pointer; }
+.pr-review__perfect { font-size: 13.5px; color: var(--green); background: #f2fbf8; border: 1px solid #d6f2e8; border-radius: 10px; padding: 10px 14px; }
+.pr-review__sec { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin: 14px 0 8px; }
+.pr-review__row { display: flex; gap: 10px; padding: 8px 12px; border: 1px solid #eef1f0; border-radius: 10px; margin-bottom: 7px; }
+.pr-review__row.is-wrong { background: #fef6f6; border-color: #fbd5d5; }
+.pr-review__mark { flex-shrink: 0; font-weight: 800; font-size: 13px; color: var(--green); margin-top: 2px; }
+.pr-review__row.is-wrong .pr-review__mark { color: #dc2626; }
+.pr-review__q { font-size: 13.5px; color: var(--ink); line-height: 1.5; }
+.pr-review__ans { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 5px; font-size: 12.5px; line-height: 1.6; }
+.pr-review__ans .is-yours { color: #b91c1c; }
+.pr-review__ans .is-key { color: var(--green); }
+
+.pr-result__actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+.btn--ghost-green {
+  padding: 12px 20px; border-radius: 12px; border: 1.5px solid var(--green);
+  background: #fff; color: var(--green); font-weight: 700; font-size: 14px; cursor: pointer;
+}
+.pr-mockline__time { font-size: 12px; color: #94a3b8; font-weight: 600; }
+
 /* Mock result: one line per paper */
 .pr-mockline {
   display: flex; justify-content: space-between; align-items: center; gap: 14px;

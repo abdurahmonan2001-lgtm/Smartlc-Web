@@ -344,6 +344,7 @@ function MockResultView({ outcome, onBack }) {
         {outcome.results.map((r) => (
           <div className="pr-mockline" key={r.test_id}>
             <span className="pr-mockline__mod">{r.module}</span>
+            <span className="pr-mockline__time">{fmtTime(r.duration_seconds)}</span>
             {r.raw_score == null
               ? <span>sent to your teacher for marking</span>
               : <span><strong>{r.raw_score}</strong> / {r.total}{r.band ? ` · Band ${r.band.toFixed(1)}` : ""}</span>}
@@ -361,10 +362,92 @@ function MockResultView({ outcome, onBack }) {
   );
 }
 
+/* ─── Answer review ───
+ * Rebuilt from the test content + the stored answers with the SAME
+ * matching rules as scoreTest, so what the review marks right is
+ * exactly what scoring counted. Practice papers only: a mock's key is
+ * never shown, because a completed mock's answers shared with a
+ * classmate who has not sat it yet would unseal the exam.
+ */
+const isMockResult = (testId) => /^mock\d+-/.test(String(testId));
+
+function buildReview(test, answers) {
+  const items = [];
+  for (const s of test.sections) {
+    for (const q of s.questions) {
+      if (q.type === "essay") continue;
+      const given = norm(answers?.[q.n]);
+      const keys = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(norm);
+      const ok = q.type === "mcq" || q.type === "select"
+        ? keys.some((k) => given === k || given.startsWith(k + " "))
+        : keys.includes(given);
+      items.push({
+        n: q.n,
+        section: s.title,
+        prompt: q.prompt || (q.table ? `${q.table.title} — gap ${q.n}` : q.notes ? `${q.notes.title} — gap ${q.n}` : `Question ${q.n}`),
+        your: answers?.[q.n] ?? null,
+        correct: Array.isArray(q.answer) ? q.answer[0] : q.answer,
+        ok,
+      });
+    }
+  }
+  return items;
+}
+
+const fmtTime = (secs) => {
+  if (!secs && secs !== 0) return null;
+  const m = Math.floor(secs / 60), s = secs % 60;
+  return `${m}:${String(s).padStart(2, "0")}`;
+};
+
+function AnswerReviewList({ review }) {
+  const [onlyWrong, setOnlyWrong] = useState(true);
+  const wrong = review.filter((r) => !r.ok);
+  const shown = onlyWrong ? wrong : review;
+  const sections = [...new Set(shown.map((r) => r.section))];
+  if (!review.length) return null;
+  return (
+    <div className="pr-review">
+      <div className="pr-review__bar">
+        <strong>Your answers · {wrong.length} to work on</strong>
+        {wrong.length > 0 && (
+          <label>
+            <input type="checkbox" checked={onlyWrong} onChange={() => setOnlyWrong(!onlyWrong)} />
+            <span>mistakes only</span>
+          </label>
+        )}
+      </div>
+      {wrong.length === 0 && <p className="pr-review__perfect">Every question correct. Excellent work.</p>}
+      {sections.map((sec) => (
+        <div key={sec}>
+          <div className="pr-review__sec">{sec}</div>
+          {shown.filter((r) => r.section === sec).map((r) => (
+            <div key={r.n} className={`pr-review__row ${r.ok ? "" : "is-wrong"}`}>
+              <span className="pr-review__mark">{r.ok ? "✓" : "✕"}</span>
+              <div className="pr-review__body">
+                <div className="pr-review__q">{r.n}. {r.prompt}</div>
+                {!r.ok && (
+                  <div className="pr-review__ans">
+                    <span className="is-yours">Your answer: <strong>{r.your || "not answered"}</strong></span>
+                    <span className="is-key">Correct: <strong>{r.correct}</strong></span>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /* ─── Result + history ─── */
-function ResultView({ result, onBack }) {
+function ResultView({ result, test, onBack, onRetake }) {
   const isWriting = result.raw_score == null;
   const pct = isWriting ? null : Math.round((result.raw_score / result.total) * 100);
+  // Review only for practice papers whose content we can still find.
+  const review = test && !isMockResult(result.test_id) && !isWriting ? buildReview(test, result.answers) : null;
+  const time = fmtTime(result.duration_seconds);
   return (
     <div className="pr-result">
       <div className="pr-result__card">
@@ -377,17 +460,26 @@ function ResultView({ result, onBack }) {
             <div className="pr-result__score">
               <strong>{result.raw_score}</strong> / {result.total}
             </div>
-            <p>{pct}% correct{result.band ? ` · Band ${result.band.toFixed(1)}` : ""}</p>
+            <p>
+              {pct}% correct{result.band ? ` · Band ${result.band.toFixed(1)}` : ""}
+              {time ? ` · ${time} spent` : ""}
+            </p>
           </>
         )}
         {!result.saved && <p className="pr-result__warn">Saved on this device — will sync when the results table is set up.</p>}
-        <button className="btn btn--primary" onClick={onBack}>Back to library</button>
+        <div className="pr-result__actions">
+          {onRetake && !isMockResult(result.test_id) && (
+            <button className="btn btn--ghost-green" onClick={onRetake}>↺ Try this paper again</button>
+          )}
+          <button className="btn btn--primary" onClick={onBack}>Back to library</button>
+        </div>
       </div>
+      {review && <AnswerReviewList review={review} />}
     </div>
   );
 }
 
-function History({ user, onBack }) {
+function History({ user, onBack, onReview }) {
   const [rows, setRows] = useState(null);
   useEffect(() => {
     (async () => {
@@ -413,6 +505,9 @@ function History({ user, onBack }) {
         <div className="pr-history">
           {rows.map((r, i) => {
             const t = getTest(r.test_id);
+            // Reviewable = a practice paper whose content still exists and
+            // whose answers were stored. Mock rows stay sealed here too.
+            const reviewable = t && !isMockResult(r.test_id) && r.raw_score != null && r.answers;
             return (
               <div className="pr-test-row" key={i}>
                 <div>
@@ -421,9 +516,13 @@ function History({ user, onBack }) {
                     {new Date(r.taken_at).toLocaleDateString()}
                     {r.raw_score != null ? ` · ${r.raw_score}/${r.total}` : " · awaiting teacher review"}
                     {r.band ? ` · Band ${Number(r.band).toFixed(1)}` : ""}
+                    {fmtTime(r.duration_seconds) ? ` · ${fmtTime(r.duration_seconds)}` : ""}
                     {r.pending ? " · not synced" : ""}
                   </span>
                 </div>
+                {reviewable && (
+                  <button className="pr-link" onClick={() => onReview(r)}>Review</button>
+                )}
                 <span className="band-chip">
                   {r.raw_score != null ? `${Math.round((r.raw_score / r.total) * 100)}%` : "✍"}
                 </span>
@@ -534,9 +633,26 @@ export default function PracticeApp() {
       />
     );
   }
-  if (view.name === "result") return <ResultView result={view.result} onBack={() => setView({ name: "library" })} />;
+  if (view.name === "result") {
+    return (
+      <ResultView
+        result={view.result}
+        test={findTest(view.result.test_id)}
+        onBack={() => setView({ name: view.from === "history" ? "history" : "library" })}
+        onRetake={() => setView({ name: "player", testId: view.result.test_id })}
+      />
+    );
+  }
   if (view.name === "mockresult") return <MockResultView outcome={view.outcome} onBack={() => setView({ name: "library" })} />;
-  if (view.name === "history") return <History user={user} onBack={() => setView({ name: "library" })} />;
+  if (view.name === "history") {
+    return (
+      <History
+        user={user}
+        onBack={() => setView({ name: "library" })}
+        onReview={(row) => setView({ name: "result", result: { ...row, saved: !row.pending }, from: "history" })}
+      />
+    );
+  }
 
   return (
     <Library
