@@ -63,7 +63,7 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, takenMocks }) {
+function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, takenMocks, completedMocks }) {
   const [section, setSection] = useState("mock");
   const [openBook, setOpenBook] = useState(null);
   const forBook = (bookId) => tests.filter((t) => t.bookId === bookId);
@@ -119,7 +119,7 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
               <span className="pr-book__title">{b.title}</span>
               <span className="pr-book__count">
                 {!has ? "coming soon"
-                  : taken ? "✓ completed"
+                  : taken ? (completedMocks.has(b.id) ? "✓ completed" : "attempt used")
                   : section === "mock" ? `${count} papers · ${Math.floor(mins / 60)}h ${mins % 60 ? `${mins % 60}m` : ""}`
                   : `${count} test${count > 1 ? "s" : ""}`}
               </span>
@@ -133,6 +133,7 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
           book={openBookObj}
           papers={forBook(openBookObj.id)}
           taken={takenMocks.has(openBookObj.id)}
+          completed={completedMocks.has(openBookObj.id)}
           onStart={() => onStartMock(openBookObj.id)}
         />
       )}
@@ -156,17 +157,26 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
 
 /* The rules a student agrees to before a mock begins. Stated plainly and
  * before they commit, because after this point there is no second go. */
-function MockBrief({ book, papers, taken, onStart }) {
+function MockBrief({ book, papers, taken, completed, onStart }) {
   const mins = papers.reduce((n, p) => n + p.durationMin, 0);
   if (taken) {
     return (
       <div className="pr-brief pr-brief--done">
-        <h3>{book.title} — already completed</h3>
-        <p>
-          You have sat this mock exam. Each mock can be taken once only, so it cannot be
-          started again. Your result is under <strong>My results</strong>; pick another mock,
-          or work through the Practice section.
-        </p>
+        <h3>{book.title} — {completed ? "completed" : "attempt used"}</h3>
+        {completed ? (
+          <p>
+            You have sat this mock exam. Each mock can be taken once only, so it cannot be
+            started again. Your result is under <strong>My results</strong>; pick another mock,
+            or work through the Practice section.
+          </p>
+        ) : (
+          <p>
+            This mock was started but not finished, so the attempt is used and there is
+            no result. Each mock can be taken once only. If a technical problem — a power
+            cut, a crash — ended your exam, speak to your teacher: the centre can restore
+            your attempt.
+          </p>
+        )}
       </div>
     );
   }
@@ -174,18 +184,20 @@ function MockBrief({ book, papers, taken, onStart }) {
     <div className="pr-brief">
       <h3>{book.title}</h3>
       <p className="pr-brief__warn">
-        <strong>You can sit this mock once only.</strong> Read this before you begin.
+        <strong>You can sit this mock once only, and your attempt is used the moment you
+        press start.</strong> Read this before you begin.
       </p>
       <ol className="pr-brief__rules">
         <li>All three papers are sat one after another, in order: {papers.map((p) => p.module).join(" → ")}.</li>
-        <li>Nothing is saved until you hand in the last paper. If you stop halfway, or close
-            this page, you get no result for any of it.</li>
+        <li>Pressing start spends your only attempt. If you leave, close the page, or lose
+            power before the last paper is handed in, the mock is used up and <strong>no result
+            is saved</strong> — exactly like walking out of a real exam.</li>
         <li>Allow about {Math.floor(mins / 60)}h {mins % 60}m without a break, and check your
-            audio before you start — the listening recording plays once.</li>
+            audio and internet connection before you start — the listening recording plays once.</li>
         <li>Listening and Reading are marked automatically. Your writing goes to your teacher.</li>
       </ol>
       <button className="btn btn--primary btn--lg" onClick={onStart}>
-        I understand — start the mock exam
+        I understand — use my attempt and start
       </button>
     </div>
   );
@@ -254,9 +266,14 @@ function Player({ test, user, onExit, onFinished }) {
 
 /* ─── MockRun: the three papers of one mock, sat in a single sitting ───
  * Listening → Reading → Writing, in that order, with no way back.
- * Nothing is written to the database until the writing paper is handed
- * in: a student who stops halfway has no result, which is the whole
- * point of a mock being one measured attempt rather than three.
+ *
+ * The attempt is CONSUMED at the start: entering the mock stores an
+ * attempt marker, so leaving midway spends the mock with no result —
+ * exactly like walking out of a real exam. Paper scores are still only
+ * written when the final paper is handed in. Staff can restore an
+ * attempt lost to a genuine technical failure by deleting that
+ * student's `mockN-attempt` row (and any partial rows) from
+ * practice_results.
  */
 function MockRun({ book, tests, user, onQuit, onFinished }) {
   const [index, setIndex] = useState(0);
@@ -282,15 +299,16 @@ function MockRun({ book, tests, user, onQuit, onFinished }) {
     onFinished({ book, results, saved: savedFlags.every(Boolean) });
   };
 
-  // Leaving mid-exam throws the sitting away. Confirm in the strongest
-  // terms available, because there is no recovering it afterwards.
+  // Leaving mid-exam forfeits the sitting. The attempt was consumed the
+  // moment the mock started, so this is permanent — say so in the
+  // strongest terms available.
   const quit = () => {
     const done = doneRef.current.length;
-    const msg = done === 0
-      ? "Leave the mock exam? Nothing will be saved."
-      : `Leave the mock exam? You have finished ${done} of ${tests.length} papers, `
-        + "and none of it will be saved. You would have to start this mock again from the beginning.";
-    if (window.confirm(msg)) onQuit();
+    const progress = done === 0 ? "" : `You have finished ${done} of ${tests.length} papers. `;
+    if (window.confirm(
+      `Leave the mock exam? ${progress}Your one attempt is already used: if you leave now, `
+      + "this mock is spent, NOTHING is saved, and it cannot be taken again."
+    )) onQuit();
   };
 
   if (saving) {
@@ -376,7 +394,10 @@ function History({ user, onBack }) {
       const remote = (await fetchResults(user.username)) || [];
       const pending = JSON.parse(localStorage.getItem(PENDING_KEY) || "[]")
         .filter((r) => r.student_username === user.username);
-      setRows([...pending.map((r) => ({ ...r, pending: true })), ...remote]);
+      // Attempt markers enforce the once-only rule; they are bookkeeping,
+      // not results, so the student's history should not show them.
+      setRows([...pending.map((r) => ({ ...r, pending: true })), ...remote]
+        .filter((r) => r.module !== "attempt"));
     })();
   }, [user.username]);
 
@@ -423,14 +444,18 @@ export default function PracticeApp() {
   const [view, setView] = useState({ name: "library" }); // library | player | mock | result | mockresult | history
   const [remote, setRemote] = useState([]);
   const [takenMocks, setTakenMocks] = useState(() => new Set());
+  const [completedMocks, setCompletedMocks] = useState(() => new Set());
 
   const loadRemote = () => { fetchRemoteTests().then(setRemote); };
   useEffect(loadRemote, []);
 
-  // Which mocks this student has already sat. Derived from their results
-  // rather than a flag of its own: a stored result IS the attempt, so the
-  // two cannot drift apart. Results queued offline count as well, or a
-  // student who finished on a bad connection could sit the mock twice.
+  // Which mocks this student has used up. Starting a mock stores an
+  // `mockN-attempt` marker, and finishing stores the three paper results,
+  // so "used" is derived from stored rows rather than a flag of its own —
+  // the two cannot drift apart. Rows queued offline count as well, or a
+  // student on a bad connection could sit the same mock twice.
+  // `completed` (a writing result exists) is kept separately from `taken`
+  // so an abandoned mock can be labelled honestly.
   const loadTaken = () => {
     if (!user) return;
     const mockOf = (testId) => (String(testId).match(/^(mock\d+)-/) || [])[1];
@@ -438,14 +463,32 @@ export default function PracticeApp() {
       try { return JSON.parse(localStorage.getItem(PENDING_KEY) || "[]"); } catch { return []; }
     })();
     fetchResults(user.username).then((rows) => {
-      const ids = [...(rows || []), ...pending]
-        .filter((r) => r.student_username === user.username || rows?.includes(r))
-        .map((r) => mockOf(r.test_id))
-        .filter(Boolean);
-      setTakenMocks(new Set(ids));
+      const mine = [...(rows || []), ...pending.filter((r) => r.student_username === user.username)];
+      setTakenMocks(new Set(mine.map((r) => mockOf(r.test_id)).filter(Boolean)));
+      setCompletedMocks(new Set(
+        mine.filter((r) => r.module === "writing").map((r) => mockOf(r.test_id)).filter(Boolean),
+      ));
     });
   };
   useEffect(loadTaken, [user]);   // eslint-disable-line react-hooks/exhaustive-deps
+
+  // The moment of no return: the attempt marker is stored BEFORE the first
+  // paper opens. If it cannot reach the database it queues locally and
+  // still counts, so going offline is not a way around the once-only rule.
+  const startMock = (bookId) => {
+    persist({
+      student_username: user.username,
+      test_id: `${bookId}-attempt`,
+      module: "attempt",
+      raw_score: null,
+      total: 0,
+      band: null,
+      answers: null,
+      duration_seconds: 0,
+      taken_at: new Date().toISOString(),
+    });
+    setView({ name: "mock", bookId });
+  };
 
   // uploaded tests appear as extra shelves after the built-in books
   const allTests = [...TESTS, ...remote];
@@ -486,7 +529,7 @@ export default function PracticeApp() {
         book={book}
         tests={papers}
         user={user}
-        onQuit={() => setView({ name: "library" })}
+        onQuit={() => { loadTaken(); setView({ name: "library" }); }}
         onFinished={(outcome) => { loadTaken(); setView({ name: "mockresult", outcome }); }}
       />
     );
@@ -504,7 +547,8 @@ export default function PracticeApp() {
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
       onStart={(testId) => setView({ name: "player", testId })}
-      onStartMock={(bookId) => setView({ name: "mock", bookId })}
+      onStartMock={startMock}
+      completedMocks={completedMocks}
     />
   );
 }
