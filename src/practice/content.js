@@ -52,6 +52,16 @@ import { MOCK11_LISTENING } from "./mock11-listening.js";
 import { MOCK11_READING } from "./mock11-reading.js";
 import { MOCK12_LISTENING } from "./mock12-listening.js";
 import { MOCK12_READING } from "./mock12-reading.js";
+import { PSET1_LISTENING } from "./pset1-listening.js";
+import { PSET1_READING } from "./pset1-reading.js";
+import { PSET2_LISTENING } from "./pset2-listening.js";
+import { PSET2_READING } from "./pset2-reading.js";
+import { PSET3_LISTENING } from "./pset3-listening.js";
+import { PSET3_READING } from "./pset3-reading.js";
+import { PSET4_LISTENING } from "./pset4-listening.js";
+import { PSET4_READING } from "./pset4-reading.js";
+import { PSET5_LISTENING } from "./pset5-listening.js";
+import { PSET5_READING } from "./pset5-reading.js";
 import WRITING_BANK from "./writing-bank.json";
 
 // Builds the two writing sections from one day of the centre's collection.
@@ -112,6 +122,14 @@ export const BOOKS = [
     short: `M${i + 1}`,
     kind: "mock",
   })),
+  // Practice sets: mock-format single papers, taken freely and repeatedly.
+  // Authored separately from the mocks so homework never leaks exam content.
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `pset${i + 1}`,
+    title: `Practice Set ${i + 1}`,
+    short: `P${i + 1}`,
+    kind: "practice",
+  })),
   { id: "wbank", title: "Writing Practice", short: "W", kind: "practice" },
   { id: "cam9", title: "Cambridge IELTS 9", short: "9", kind: "practice" },
   { id: "cam10", title: "Cambridge IELTS 10", short: "10", kind: "practice" },
@@ -152,6 +170,11 @@ export const TESTS = [
   MOCK10_LISTENING, MOCK10_READING,
   MOCK11_LISTENING, MOCK11_READING,
   MOCK12_LISTENING, MOCK12_READING,
+  PSET1_LISTENING, PSET1_READING,
+  PSET2_LISTENING, PSET2_READING,
+  PSET3_LISTENING, PSET3_READING,
+  PSET4_LISTENING, PSET4_READING,
+  PSET5_LISTENING, PSET5_READING,
   ...MOCK_WRITING,
   ...WRITING_PRACTICE,
 ];
