@@ -152,14 +152,11 @@ export const BOOKS = [
     short: `M${i + 1}`,
     kind: "mock",
   })),
-  // Practice sets: mock-format single papers for the IELTS levels.
-  // Authored separately from the mocks so homework never leaks exam content.
-  ...Array.from({ length: 5 }, (_, i) => ({
-    id: `pset${i + 1}`,
-    title: `Practice Set ${i + 1}`,
-    short: `P${i + 1}`,
-    kind: "practice",
-  })),
+  // Practice papers for the IELTS levels: mock-format, authored separately
+  // from the mocks so homework never leaks exam content. Shelved by skill
+  // rather than by set — see PRACTICE_LISTENING / PRACTICE_READING.
+  { id: "practice-listening", title: "Listening Practice", short: "L", kind: "practice" },
+  { id: "practice-reading", title: "Reading Practice", short: "R", kind: "practice" },
   // Pre-IELTS sets (sat by the Upper-Intermediate level): taken in thirds
   // across three lessons — see upper.js. Both the full papers and their
   // thirds sit on the shelf, so a student can open exactly the piece their
@@ -214,6 +211,21 @@ const UPPER_FULL = [
 const UPPER_CHUNKS = UPPER_FULL.flatMap((t) =>
   t.module === "listening" ? listeningChunks(t) : readingChunks(t));
 
+// The IELTS-level practice sets are shelved by skill, not by set: one
+// Listening shelf and one Reading shelf, each running in the order the
+// lessons reach them. A student looking for "this week's reading" finds
+// it in one place instead of hunting through five mixed sets.
+//
+// Only the shelf changes — the paper ids are untouched, so results,
+// once-only locking and the lesson schedule all carry on unchanged.
+const shelve = (t, bookId) => ({ ...t, bookId });
+const PRACTICE_LISTENING = [
+  PSET1_LISTENING, PSET2_LISTENING, PSET3_LISTENING, PSET4_LISTENING, PSET5_LISTENING,
+].map((t) => shelve(t, "practice-listening"));
+const PRACTICE_READING = [
+  PSET1_READING, PSET2_READING, PSET3_READING, PSET4_READING, PSET5_READING,
+].map((t) => shelve(t, "practice-reading"));
+
 export const TESTS = [
   MOCK1_LISTENING, MOCK1_READING, MOCK1_WRITING,
   MOCK2_LISTENING, MOCK2_READING, MOCK2_WRITING,
@@ -227,11 +239,8 @@ export const TESTS = [
   MOCK10_LISTENING, MOCK10_READING,
   MOCK11_LISTENING, MOCK11_READING,
   MOCK12_LISTENING, MOCK12_READING,
-  PSET1_LISTENING, PSET1_READING,
-  PSET2_LISTENING, PSET2_READING,
-  PSET3_LISTENING, PSET3_READING,
-  PSET4_LISTENING, PSET4_READING,
-  PSET5_LISTENING, PSET5_READING,
+  ...PRACTICE_LISTENING,
+  ...PRACTICE_READING,
   ...UPPER_FULL,
   ...UPPER_CHUNKS,
   ...MOCK_WRITING,
