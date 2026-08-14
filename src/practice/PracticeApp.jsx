@@ -45,7 +45,11 @@ function Login({ onLogin }) {
       const student = await loginStudent(u.trim(), p);
       if (!student) setErr("Wrong username or password. Use your Student App login.");
       else onLogin(student);
-    } catch {
+    } catch (e) {
+      // A swallowed error here once cost us a production outage: a malformed
+      // env var made fetch throw, and the message below sent everyone hunting
+      // a network fault that did not exist. Leave a trace.
+      console.error("practice login failed:", e);
       setErr("Could not reach the server. Check your connection and try again.");
     }
     setBusy(false);

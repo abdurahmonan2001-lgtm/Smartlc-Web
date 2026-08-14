@@ -1,7 +1,16 @@
 // Thin Supabase REST helpers for the practice platform.
 // Uses the same project (and `students` table) as the Student / Parent apps.
-const URL_BASE = import.meta.env.VITE_SUPABASE_URL;
-const KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Environment values have reached Vercel with a UTF-8 BOM in front of them
+// (a PowerShell `>` redirect writes one, and it is invisible in the
+// dashboard). A BOM in a header value makes fetch throw before the request
+// leaves the browser -- "String contains non ISO-8859-1 code point" -- which
+// the UI then reports as a connection problem, so the real cause is well
+// hidden. api/_session.js strips it server-side; do the same here. Neither a
+// URL nor a JWT contains whitespace or non-ASCII, so dropping those is safe.
+const env = (v) => String(v ?? "").replace(/[^\x21-\x7e]/g, "");
+
+const URL_BASE = env(import.meta.env.VITE_SUPABASE_URL);
+const KEY = env(import.meta.env.VITE_SUPABASE_ANON_KEY);
 
 const headers = {
   apikey: KEY,
