@@ -201,9 +201,15 @@ async function renderPart(name, partIdx, lines, testIdx) {
 }
 
 // ── main ─────────────────────────────────────────────────────────────
+// Order matters: a test's POSITION here picks its voices (see renderPart),
+// so new tests are appended rather than slotted in. Inserting pset6-20 after
+// pset5 would shift every upset index and hand the existing recordings
+// different voices the next time they were built. A name missing from this
+// list gets index -1, which silently resolves to an undefined voice.
 const ALL = [...Array.from({ length: 12 }, (_, i) => `mock${i + 1}`),
              ...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`),
-             ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`)];
+             ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`),
+             ...Array.from({ length: 15 }, (_, i) => `pset${i + 6}`)];
 const wanted = process.argv.slice(2).length ? process.argv.slice(2) : ALL;
 
 const cuesPath = path.join(root, "src", "practice", "audio-cues.json");
@@ -213,6 +219,10 @@ for (const name of wanted) {
   const ps1 = path.join(root, "scripts", `generate-${name}-audio.ps1`);
   const parts = parseScript(ps1);
   const testIdx = ALL.indexOf(name);
+  if (testIdx < 0) {
+    throw new Error(`"${name}" is not in ALL, so it has no voice assignment. `
+      + "Add it to the end of that list before generating.");
+  }
   // Cues for practice sets only — never for mocks (see note above cueQuestions).
   const isPset = /^u?pset\d+$/.test(name);
   const test = isPset
