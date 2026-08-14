@@ -285,6 +285,11 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
 
       {/* ─ header ─ */}
       <header className="ins-header">
+        {/* Leaving used to be a double-click on the logo and nothing else,
+            which no student would ever discover. onExit warns first. */}
+        <button className="ins-header__back" onClick={onExit} aria-label="Back to the library">
+          <span aria-hidden="true">←</span> Back
+        </button>
         <div className="ins-header__logo" onDoubleClick={onExit} title="">
           <img src="/brand/icon-96.png" alt="" />
           <span>Smart&nbsp;LC</span>

@@ -20,6 +20,18 @@
 
 /* ─ header: 56px, white, plain icons ─ */
 .ins-header { display: flex; align-items: stretch; height: 56px; flex-shrink: 0; background: #fff; }
+/* Leaving a paper is deliberate, never a slip: the control is plainly
+   visible but quiet, and it always asks before it acts. */
+.ins-header__back {
+  display: flex; align-items: center; gap: 6px;
+  margin-left: 12px; padding: 6px 12px;
+  border: 1px solid #d1d5db; border-radius: 6px;
+  background: #fff; color: #374151;
+  font: inherit; font-size: 13px; font-weight: 600;
+  cursor: pointer; white-space: nowrap;
+}
+.ins-header__back:hover { background: #f3f4f6; color: #111827; }
+.ins-header__back:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
 .ins-header__logo { display: flex; align-items: center; gap: 8px; padding: 0 16px; width: 125px; flex-shrink: 0; }
 .ins-header__logo img { width: 27px; height: 27px; }
 .ins-header__logo span { font-weight: 700; font-size: 15px; white-space: nowrap; }

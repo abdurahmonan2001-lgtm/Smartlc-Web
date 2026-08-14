@@ -583,6 +583,32 @@ function History({ user, onBack, onReview }) {
   );
 }
 
+/* ─── Routing ───
+ * Every view gets its own URL and its own history entry, so a test opens
+ * as a page of its own and the phone's back gesture does what the Back
+ * button does.
+ *
+ * Only these three are restorable FROM a URL. A test path is written to
+ * the address bar but never reopened from one: following a shared link
+ * or pressing forward would start the test, and starting a mock spends
+ * the student's single attempt.
+ */
+const RESTORABLE = {
+  "/practice": "library",
+  "/practice/results": "history",
+  "/practice/notebook": "notebook",
+};
+const pathOf = (v) =>
+  v.name === "player" ? `/practice/test/${encodeURIComponent(v.testId)}`
+    : v.name === "mock" ? `/practice/mock/${encodeURIComponent(v.bookId)}`
+      : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
+
+const LEAVE_WARNING = {
+  mock: "Leave the mock exam? Your one attempt is already used: if you leave now, "
+    + "this mock is spent, NOTHING is saved, and it cannot be taken again.",
+  player: "Leave this paper? Your answers are not saved unless you finish and submit it.",
+};
+
 /* ─── Root ─── */
 export default function PracticeApp() {
   const [user, setUser] = useState(() => {
@@ -651,6 +677,39 @@ export default function PracticeApp() {
   const allBooks = [...remoteBooks, ...BOOKS];
   const findTest = (id) => getTest(id) || remote.find((t) => t.id === id);
 
+  // Keep the address bar in step with the view. The first pass replaces
+  // rather than pushes, so landing on a test URL corrects itself instead
+  // of leaving an entry the student never navigated to.
+  const firstRoute = useRef(true);
+  useEffect(() => {
+    const path = pathOf(view);
+    const first = firstRoute.current;
+    firstRoute.current = false;
+    if (window.location.pathname === path) return;
+    window.history[first ? "replaceState" : "pushState"](null, "", path);
+  }, [view]);
+
+  // Back/forward must respect the same rules as the on-screen button: a
+  // student halfway through a paper gets the warning either way, and a
+  // refused exit puts the entry back.
+  useEffect(() => {
+    const onPop = () => {
+      const warning = LEAVE_WARNING[view.name];
+      if (warning && !window.confirm(warning)) {
+        window.history.pushState(null, "", pathOf(view));
+        return;
+      }
+      const name = RESTORABLE[window.location.pathname] || "library";
+      if (pathOf({ name }) !== window.location.pathname) {
+        window.history.replaceState(null, "", pathOf({ name }));
+      }
+      if (warning) loadTaken();   // a spent mock must show as spent
+      setView({ name });
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [view]);   // eslint-disable-line react-hooks/exhaustive-deps
+
   const login = (u) => { localStorage.setItem(SESSION_KEY, JSON.stringify(u)); setUser(u); };
   const logout = () => { localStorage.removeItem(SESSION_KEY); setUser(null); setView({ name: "library" }); };
 
@@ -663,7 +722,7 @@ export default function PracticeApp() {
       <Player
         test={test}
         user={user}
-        onExit={() => setView({ name: "library" })}
+        onExit={() => { if (window.confirm(LEAVE_WARNING.player)) setView({ name: "library" }); }}
         onFinished={(result) => setView({ name: "result", result })}
       />
     );
