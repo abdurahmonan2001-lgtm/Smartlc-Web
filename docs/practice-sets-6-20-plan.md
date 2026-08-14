@@ -13,7 +13,14 @@ listening scenarios already in the catalogue (mocks 1–12, practice sets
 Fixed by `docs/ielts-test-blueprint.md`; repeated here so a set can be
 written without re-deriving it.
 
-**Reading** — P1 factual history, 800–900 words (completion + TFNG);
+**Reading** — passages run **800–1000 words**, rising gently from Passage 1
+(~850–920) to Passage 3 (~880–1000), which is what the blueprint measured
+in Cambridge 20. Sets 6–20 were first written against a tighter 800–900
+ceiling, so their passages are flat at ~880 and several agents had to cut
+examples and argument steps to fit; anything written from now on should use
+the full band and let Passage 3 be the longest.
+
+P1 factual history (completion + TFNG);
 P2 discursive with lettered paragraphs (matching information + summary +
 people matching, one extra name); P3 argumentative science (MCQ-4 + YNNG +
 sentence endings). Every question carries `answer`, `explain` and a
