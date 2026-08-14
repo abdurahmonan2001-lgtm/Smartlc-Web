@@ -323,7 +323,7 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
             <h2 className="ins-toc__title">Table of contents</h2>
             {test.sections.map((s, i) => (
               <button className="ins-toc__row" key={i} onClick={() => selectPart(i)}>
-                <span>Part {i + 1}</span>
+                <span>Part {s.part ?? i + 1}</span>
                 <span className="ins-toc__count">{attempted(i)} of {s.questions.length} questions attempted</span>
               </button>
             ))}
@@ -335,7 +335,8 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
       {page === "test" && (
         <div className="ins-content" onMouseUp={onMouseUp}>
           <section className="ins-rubric">
-            <h2>Part {si + 1}</h2>
+            {/* chunk papers carry the parent's part number (see upper.js) */}
+            <h2>Part {section.part ?? si + 1}</h2>
             <p>{section.instructions}</p>
           </section>
 
@@ -565,7 +566,7 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
             return (
               <div className={`ins-part ${selected ? "is-selected" : ""}`} key={i}>
                 <button className="ins-part__label" onClick={() => selectPart(i)}>
-                  <span>Part</span> <span>{i + 1}</span>
+                  <span>Part</span> <span>{s.part ?? i + 1}</span>
                 </button>
                 <div className="ins-part__squares">
                   {s.questions.map((q) => {

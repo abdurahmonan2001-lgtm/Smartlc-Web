@@ -1377,6 +1377,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-transcript__line span { flex-shrink: 0; width: 84px; font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 3px; }
 .pr-transcript__line.is-A span { color: var(--green); }
 
+/* A third of an Upper-Inter paper, shown under its full paper */
+.pr-test-row.is-chunk {
+  margin-left: 26px; border-left: 3px solid var(--green);
+  border-top-left-radius: 4px; border-bottom-left-radius: 4px;
+  background: #fbfdfc;
+}
+.pr-test-row.is-chunk strong { font-size: 14px; font-weight: 700; }
+
 /* Question-type analytics bars */
 .pr-stat { margin-bottom: 12px; }
 .pr-stat__head { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 600; color: var(--ink-2); margin-bottom: 4px; }
@@ -1647,4 +1655,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .road-cta { margin-top: 18px; }
   .result-card { width: 250px; }
   .location__info { padding: 26px 20px; }
+}
+
+/* Fallback while a lazily-loaded route (practice / placement) arrives. */
+.route-loading {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted, #6b7280);
+  font-size: 15px;
 }

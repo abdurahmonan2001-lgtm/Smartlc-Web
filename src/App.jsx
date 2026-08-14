@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { LangProvider } from "./i18n.jsx";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
@@ -7,8 +7,11 @@ import Results from "./components/Results.jsx";
 import { Testimonials, Location, Faq, Footer } from "./components/Closing.jsx";
 import RegisterPage from "./components/RegisterPage.jsx";
 import ContactBand from "./components/ContactBand.jsx";
-import PracticeApp from "./practice/PracticeApp.jsx";
-import PlacementTest from "./placement/PlacementTest.jsx";
+// Loaded on demand: between them these carry every mock, practice paper and
+// placement item, which is most of the bundle. A visitor reading the home page
+// should not download the IELTS library to get there.
+const PracticeApp = lazy(() => import("./practice/PracticeApp.jsx"));
+const PlacementTest = lazy(() => import("./placement/PlacementTest.jsx"));
 import Magnifier from "./components/Magnifier.jsx";
 
 /** Fades each section in as it scrolls into view (skipped for reduced-motion users). */
@@ -41,8 +44,13 @@ export default function App() {
   const isPlacement = path === "/placement";
   useScrollReveal(!isRegister && !isPractice && !isPlacement);
 
-  if (isPractice) return <PracticeApp />;
-  if (isPlacement) return <PlacementTest />;
+  if (isPractice || isPlacement) {
+    return (
+      <Suspense fallback={<div className="route-loading">Loading…</div>}>
+        {isPractice ? <PracticeApp /> : <PlacementTest />}
+      </Suspense>
+    );
+  }
 
   return (
     <LangProvider>

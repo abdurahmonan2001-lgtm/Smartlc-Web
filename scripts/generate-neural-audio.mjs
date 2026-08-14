@@ -202,7 +202,8 @@ async function renderPart(name, partIdx, lines, testIdx) {
 
 // ── main ─────────────────────────────────────────────────────────────
 const ALL = [...Array.from({ length: 12 }, (_, i) => `mock${i + 1}`),
-             ...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`)];
+             ...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`),
+             ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`)];
 const wanted = process.argv.slice(2).length ? process.argv.slice(2) : ALL;
 
 const cuesPath = path.join(root, "src", "practice", "audio-cues.json");
@@ -213,7 +214,7 @@ for (const name of wanted) {
   const parts = parseScript(ps1);
   const testIdx = ALL.indexOf(name);
   // Cues for practice sets only — never for mocks (see note above cueQuestions).
-  const isPset = /^pset\d+$/.test(name);
+  const isPset = /^u?pset\d+$/.test(name);
   const test = isPset
     ? (await import(pathToFileURL(path.join(root, "src", "practice", `${name}-listening.js`)).href))[`${name.toUpperCase()}_LISTENING`]
     : null;
@@ -230,5 +231,7 @@ for (const name of wanted) {
     console.log(`  cues: ${Object.keys(testCues).length}/40 questions located`);
   }
 }
-if (wanted.some((n) => /^pset\d+$/.test(n))) fs.writeFileSync(cuesPath, JSON.stringify(cues));
+// Same test as `isPset` above — the upper sets carry cues too, and missing
+// the "u" here silently dropped every one of them.
+if (wanted.some((n) => /^u?pset\d+$/.test(n))) fs.writeFileSync(cuesPath, JSON.stringify(cues));
 console.log("done");

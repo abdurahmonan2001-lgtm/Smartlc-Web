@@ -62,6 +62,35 @@ import { PSET4_LISTENING } from "./pset4-listening.js";
 import { PSET4_READING } from "./pset4-reading.js";
 import { PSET5_LISTENING } from "./pset5-listening.js";
 import { PSET5_READING } from "./pset5-reading.js";
+import { UPSET1_LISTENING } from "./upset1-listening.js";
+import { UPSET1_READING } from "./upset1-reading.js";
+import { UPSET2_LISTENING } from "./upset2-listening.js";
+import { UPSET2_READING } from "./upset2-reading.js";
+import { UPSET3_LISTENING } from "./upset3-listening.js";
+import { UPSET3_READING } from "./upset3-reading.js";
+import { UPSET4_LISTENING } from "./upset4-listening.js";
+import { UPSET4_READING } from "./upset4-reading.js";
+import { UPSET5_LISTENING } from "./upset5-listening.js";
+import { UPSET5_READING } from "./upset5-reading.js";
+import { UPSET6_LISTENING } from "./upset6-listening.js";
+import { UPSET6_READING } from "./upset6-reading.js";
+import { UPSET7_LISTENING } from "./upset7-listening.js";
+import { UPSET7_READING } from "./upset7-reading.js";
+import { UPSET8_LISTENING } from "./upset8-listening.js";
+import { UPSET8_READING } from "./upset8-reading.js";
+import { UPSET9_LISTENING } from "./upset9-listening.js";
+import { UPSET9_READING } from "./upset9-reading.js";
+import { UPSET10_LISTENING } from "./upset10-listening.js";
+import { UPSET10_READING } from "./upset10-reading.js";
+import { UPSET11_LISTENING } from "./upset11-listening.js";
+import { UPSET11_READING } from "./upset11-reading.js";
+import { UPSET12_LISTENING } from "./upset12-listening.js";
+import { UPSET12_READING } from "./upset12-reading.js";
+import { UPSET13_LISTENING } from "./upset13-listening.js";
+import { UPSET13_READING } from "./upset13-reading.js";
+import { UPSET14_LISTENING } from "./upset14-listening.js";
+import { UPSET14_READING } from "./upset14-reading.js";
+import { listeningChunks, readingChunks } from "./upper.js";
 import WRITING_BANK from "./writing-bank.json";
 
 // Builds the two writing sections from one day of the centre's collection.
@@ -130,6 +159,15 @@ export const BOOKS = [
     short: `P${i + 1}`,
     kind: "practice",
   })),
+  // Upper-Intermediate sets: sat in thirds across three lessons (see
+  // upper.js). Both the full papers and their thirds sit on the shelf, so a
+  // student can open exactly the piece their homework names.
+  ...Array.from({ length: 14 }, (_, i) => ({
+    id: `upset${i + 1}`,
+    title: `Upper-Inter Set ${i + 1}`,
+    short: `U${i + 1}`,
+    kind: "practice",
+  })),
   { id: "wbank", title: "Writing Practice", short: "W", kind: "practice" },
   { id: "cam9", title: "Cambridge IELTS 9", short: "9", kind: "practice" },
   { id: "cam10", title: "Cambridge IELTS 10", short: "10", kind: "practice" },
@@ -157,6 +195,28 @@ export const BOOKS = [
 //   q.rubric         — overrides the auto-generated instruction line
 //   q.answer         — string or array of accepted variants
 // Multi-select keys MUST be authored in alphabetical order across a group.
+// Upper-Intermediate papers, plus the thirds the homework rule assigns:
+// Listening Parts 1-2 / Part 3 / Part 4 and one paper per Reading passage.
+// Derived from the full papers so there is a single source of truth.
+const UPPER_FULL = [
+  UPSET1_LISTENING, UPSET1_READING,
+  UPSET2_LISTENING, UPSET2_READING,
+  UPSET3_LISTENING, UPSET3_READING,
+  UPSET4_LISTENING, UPSET4_READING,
+  UPSET5_LISTENING, UPSET5_READING,
+  UPSET6_LISTENING, UPSET6_READING,
+  UPSET7_LISTENING, UPSET7_READING,
+  UPSET8_LISTENING, UPSET8_READING,
+  UPSET9_LISTENING, UPSET9_READING,
+  UPSET10_LISTENING, UPSET10_READING,
+  UPSET11_LISTENING, UPSET11_READING,
+  UPSET12_LISTENING, UPSET12_READING,
+  UPSET13_LISTENING, UPSET13_READING,
+  UPSET14_LISTENING, UPSET14_READING,
+];
+const UPPER_CHUNKS = UPPER_FULL.flatMap((t) =>
+  t.module === "listening" ? listeningChunks(t) : readingChunks(t));
+
 export const TESTS = [
   MOCK1_LISTENING, MOCK1_READING, MOCK1_WRITING,
   MOCK2_LISTENING, MOCK2_READING, MOCK2_WRITING,
@@ -175,6 +235,8 @@ export const TESTS = [
   PSET3_LISTENING, PSET3_READING,
   PSET4_LISTENING, PSET4_READING,
   PSET5_LISTENING, PSET5_READING,
+  ...UPPER_FULL,
+  ...UPPER_CHUNKS,
   ...MOCK_WRITING,
   ...WRITING_PRACTICE,
 ];

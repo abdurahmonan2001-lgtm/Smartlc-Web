@@ -5,6 +5,7 @@ import TRANSCRIPTS from "./transcripts.json";
 import AUDIO_CUES from "./audio-cues.json";
 import { norm, isMockResult, fmtTime, buildReview, VocabMatch } from "./review.jsx";
 import Notebook, { useCueAudio, hasCue } from "./Notebook.jsx";
+import { parentListeningId, chunkParts } from "./upper.js";
 import InsperaPlayer from "./InsperaPlayer.jsx";
 
 const SESSION_KEY = "slc_practice_user";
@@ -104,7 +105,7 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
 
       <div className="pr-tabs">
         {tab("mock", "Mock exams", "Full test · one attempt")}
-        {tab("practice", "Practice", "Single papers · repeatable")}
+        {tab("practice", "Practice", "Single papers · one attempt each")}
       </div>
 
       <div className="pr-lib__grid">
@@ -145,12 +146,16 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
 
       {openBookObj && section === "practice" && (
         <div className="pr-lib__tests">
+          {/* Upper-Inter shelves carry both the full papers and the thirds
+              the homework rule assigns; the full papers head the list and
+              their pieces are indented beneath. */}
           {forBook(openBookObj.id).map((t) => {
+            const isChunk = /-(a|b|c|p[123])$/.test(t.id);
             const done = takenPractice.has(t.id);
             return (
-              <div className="pr-test-row" key={t.id}>
+              <div className={`pr-test-row ${isChunk ? "is-chunk" : ""}`} key={t.id}>
                 <div>
-                  <strong>{t.title}</strong>
+                  <strong>{isChunk ? t.title.split(" · ").slice(1).join(" · ") : t.title}</strong>
                   <span>{t.module} · {t.durationMin} min · {t.sections.reduce((n, s) => n + s.questions.length, 0)} questions</span>
                 </div>
                 {done
@@ -449,7 +454,11 @@ function AnswerReviewList({ review, testId = null, module = null, onListen = nul
  * the bundle at all (see scripts/extract-transcripts.mjs). ─── */
 function TranscriptPanel({ testId }) {
   const [open, setOpen] = useState(false);
-  const parts = TRANSCRIPTS[testId];
+  // Chunk papers share the parent's transcript, filtered to their parts.
+  const all = TRANSCRIPTS[parentListeningId(testId)];
+  const partNums = chunkParts(testId);
+  const parts = all && partNums ? partNums.map((p) => ({ n: p, lines: all[p - 1] }))
+    : all ? all.map((lines, i) => ({ n: i + 1, lines })) : null;
   if (!parts) return null;
   return (
     <div className="pr-review pr-transcript">
@@ -457,9 +466,9 @@ function TranscriptPanel({ testId }) {
         <strong>Recording transcript</strong>
         <span>{open ? "Hide ▲" : "Read what was said ▼"}</span>
       </button>
-      {open && parts.map((lines, i) => (
+      {open && parts.map(({ n, lines }, i) => (
         <div key={i}>
-          <div className="pr-review__sec">Part {i + 1}</div>
+          <div className="pr-review__sec">Part {n}</div>
           {lines.map((l, j) => (
             <p key={j} className={`pr-transcript__line is-${l.s}`}>
               <span>{l.s === "A" ? "Speaker A" : "Speaker B"}</span>{l.t}

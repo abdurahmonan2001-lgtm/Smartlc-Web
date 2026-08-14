@@ -10,6 +10,7 @@ import { useEffect, useMemo, useState } from "react";
 import { fetchResults } from "./api.js";
 import AUDIO_CUES from "./audio-cues.json";
 import { buildReview, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
+import { parentListeningId } from "./upper.js";
 
 const PENDING_KEY = "slc_practice_pending";
 const QUIZABLE = new Set(["mcq", "select", "tfng", "ynng", "gap"]);
@@ -26,9 +27,11 @@ export function useCueAudio() {
   const toggle = (testId, item) => {
     const key = `${testId}:${item.n}`;
     if (playing === key) { audio.pause(); setPlaying(null); return; }
-    const cue = AUDIO_CUES[testId]?.[item.n];
+    // Chunk papers (upsetN-listening-a/b/c) share the parent's recording.
+    const parent = parentListeningId(testId);
+    const cue = AUDIO_CUES[parent]?.[item.n];
     if (!cue) return;
-    audio.src = `/practice-audio/${testId.replace(/-listening$/, "")}-s${cue.p}.mp3`;
+    audio.src = `/practice-audio/${parent.replace(/-listening$/, "")}-s${cue.p}.mp3`;
     audio.currentTime = 0;
     audio.onloadedmetadata = () => { audio.currentTime = cue.t; audio.play(); };
     audio.onended = () => setPlaying(null);
@@ -38,7 +41,7 @@ export function useCueAudio() {
   return { playing, toggle };
 }
 
-export const hasCue = (testId, n) => !!AUDIO_CUES[testId]?.[n];
+export const hasCue = (testId, n) => !!AUDIO_CUES[parentListeningId(testId)]?.[n];
 
 /* Re-answer old mistakes, one at a time, immediate feedback, not saved. */
 function QuizMe({ items }) {
