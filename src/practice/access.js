@@ -66,7 +66,8 @@ export const familyOf = (testId) =>
   /^upset\d+-/.test(testId) ? "upper"
     : /^pset\d+-/.test(testId) ? "ielts"
       : /^mock\d+-/.test(testId) ? "mock"
-        : "other";
+        : /^writing-day-/.test(testId) ? "writing"
+          : "other";
 
 /** What this student may see, and of that, what they may open.
  *  `lessonNum` null means we could not establish it — nothing unlocks,
@@ -79,6 +80,10 @@ export function accessFor(level, lessonNum) {
   const mine = (testId) => {
     const family = familyOf(testId);
     if (family === "mock") return mocks;
+    // Standalone writing is teacher-set: a student never picks one up on
+    // their own, so it is refused here as well as absent from the shelves.
+    // This does not touch mock writing, which is family "mock".
+    if (family === "writing") return false;
     if (family === "other") return practice;         // not lesson work
     return index.has(testId);                        // this level's schedule
   };

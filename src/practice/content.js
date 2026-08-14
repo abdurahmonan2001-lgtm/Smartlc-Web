@@ -168,18 +168,13 @@ export const BOOKS = [
     short: `U${i + 1}`,
     kind: "practice",
   })),
-  { id: "wbank", title: "Writing Practice", short: "W", kind: "practice" },
-  { id: "cam9", title: "Cambridge IELTS 9", short: "9", kind: "practice" },
-  { id: "cam10", title: "Cambridge IELTS 10", short: "10", kind: "practice" },
-  { id: "cam11", title: "Cambridge IELTS 11", short: "11", kind: "practice" },
-  { id: "cam12", title: "Cambridge IELTS 12", short: "12", kind: "practice" },
-  { id: "cam13", title: "Cambridge IELTS 13", short: "13", kind: "practice" },
-  { id: "cam14", title: "Cambridge IELTS 14", short: "14", kind: "practice" },
-  { id: "cam15", title: "Cambridge IELTS 15", short: "15", kind: "practice" },
-  { id: "cam16", title: "Cambridge IELTS 16", short: "16", kind: "practice" },
-  { id: "cam17", title: "Cambridge IELTS 17", short: "17", kind: "practice" },
-  { id: "cam18", title: "Cambridge IELTS 18", short: "18", kind: "practice" },
-  { id: "cam19", title: "Cambridge IELTS 19", short: "19", kind: "practice" },
+  // No Writing Practice shelf: writing is set by a teacher, not chosen by
+  // a student. The papers themselves stay in TESTS (see WRITING_PRACTICE)
+  // so they can be assigned, and mock writing is untouched — a mock still
+  // ends with its Task 1 + Task 2.
+  //
+  // The Cambridge 9-19 shelves are gone too: they were "coming soon"
+  // placeholders that never had content behind them.
 ];
 
 

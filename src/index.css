@@ -1680,3 +1680,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   border: 1px solid #e5e7eb; border-radius: 12px;
   background: #fff; color: #4b5563; text-align: center; line-height: 1.55;
 }
+
+/* A shelf opened as its own page. */
+.pr-back { font-weight: 600; }
+.pr-book__heading {
+  margin: 8px auto 20px; max-width: 900px; padding: 0 20px;
+  font-size: 26px; font-weight: 700; letter-spacing: -.4px;
+}

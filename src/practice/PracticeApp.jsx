@@ -71,39 +71,35 @@ function Login({ onLogin }) {
   );
 }
 
+/* The papers of one shelf this student may see. Uploaded shelves are set
+ * by staff for a particular class, so they sit outside the schedule. */
+const testsOfBook = (tests, access, bookId) => tests.filter((t) =>
+  t.bookId === bookId && (String(bookId).startsWith("up:") || access.inProgramme(t.id)));
+
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access }) {
+function Library({ user, books, tests, onOpenBook, onLogout, onResults, onNotebook, takenMocks, completedMocks, access, picked, setSection }) {
   // Mocks are IELTS-only and hidden below that. The level arrives a moment
   // after first paint, so the chosen tab is resolved on every render
   // rather than fixed at mount — otherwise a student can be left looking
-  // at a tab that has since been taken away.
-  const [picked, setSection] = useState("mock");
+  // at a tab that has since been taken away. The choice itself is held by
+  // the root, so opening a shelf and coming back does not silently throw
+  // the student onto the other tab.
   const section = picked === "mock" && !access.mocks ? "practice" : picked;
-  const [openBook, setOpenBook] = useState(null);
-  const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
 
-  // What belongs on this student's shelves. Mocks are gated as a whole by
-  // level rather than by lesson, uploaded shelves are set by staff for a
-  // particular class and so sit outside the schedule, and everything else
-  // must be part of this level's programme.
-  const visible = (t) => String(t.bookId).startsWith("up:") || access.inProgramme(t.id);
-  const forBook = (bookId) => tests.filter((t) => t.bookId === bookId && visible(t));
+  const forBook = (bookId) => testsOfBook(tests, access, bookId);
 
   // Uploaded shelves carry no `kind`; they are homework material, so they
   // belong with practice. A shelf whose papers are all outside this
-  // student's programme disappears; a genuinely empty "coming soon" shelf
-  // still shows, because that is about content, not permission.
-  const stocked = (bookId) => tests.some((t) => t.bookId === bookId);
+  // student's programme disappears entirely.
   const shown = books
     .filter((b) => (b.kind || "practice") === section)
     .filter(() => (section === "mock" ? access.mocks : access.practice))
-    .filter((b) => !stocked(b.id) || forBook(b.id).length > 0);
-  const openBookObj = shown.find((b) => b.id === openBook);
+    .filter((b) => forBook(b.id).length > 0);
   const tab = (id, label, hint) => (
     <button
       key={id}
       className={`pr-tab ${section === id ? "is-active" : ""}`}
-      onClick={() => { setSection(id); setOpenBook(null); }}
+      onClick={() => setSection(id)}
     >
       <strong>{label}</strong>
       <span>{hint}</span>
@@ -144,20 +140,18 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
         {shown.map((b) => {
           const bookTests = forBook(b.id);
           const count = bookTests.length;
-          const has = count > 0;
           const taken = takenMocks.has(b.id);
           const mins = bookTests.reduce((n, t) => n + t.durationMin, 0);
           return (
             <button
-              className={`pr-book ${has ? "" : "pr-book--empty"} ${openBook === b.id ? "is-open" : ""} ${taken ? "is-taken" : ""}`}
+              className={`pr-book ${taken ? "is-taken" : ""}`}
               key={b.id}
-              onClick={() => has && setOpenBook(openBook === b.id ? null : b.id)}
+              onClick={() => onOpenBook(b.id)}
             >
               <span className="pr-book__cover">{b.short}</span>
               <span className="pr-book__title">{b.title}</span>
               <span className="pr-book__count">
-                {!has ? "coming soon"
-                  : taken ? (completedMocks.has(b.id) ? "✓ completed" : "attempt used")
+                {taken ? (completedMocks.has(b.id) ? "✓ completed" : "attempt used")
                   : section === "mock" ? `${count} papers · ${Math.floor(mins / 60)}h ${mins % 60 ? `${mins % 60}m` : ""}`
                   : `${count} test${count > 1 ? "s" : ""}`}
               </span>
@@ -165,23 +159,45 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
           );
         })}
       </div>
+    </div>
+  );
+}
 
-      {openBookObj && section === "mock" && (
+/* ─── One shelf, as a page of its own ───
+ * Opening a shelf used to unfold a panel underneath the grid, which left
+ * the student scrolling past every other shelf to reach their papers.
+ * It is a page now, with its own URL and its own way back. */
+function BookPage({ book, tests, user, access, onBack, onStart, onStartMock, takenMocks, completedMocks, takenPractice }) {
+  const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
+  const papers = testsOfBook(tests, access, book.id);
+  const isMock = (book.kind || "practice") === "mock";
+
+  return (
+    <div className="pr-lib">
+      <header className="pr-lib__top">
+        <button className="pr-link pr-back" onClick={onBack}>← Library</button>
+        <div className="pr-lib__user">
+          <span>{user.full_name}</span>
+        </div>
+      </header>
+
+      {/* MockBrief carries its own title, so only practice needs one. */}
+      {!isMock && <h1 className="pr-book__heading">{book.title}</h1>}
+
+      {isMock ? (
         <MockBrief
-          book={openBookObj}
-          papers={forBook(openBookObj.id)}
-          taken={takenMocks.has(openBookObj.id)}
-          completed={completedMocks.has(openBookObj.id)}
-          onStart={() => onStartMock(openBookObj.id)}
+          book={book}
+          papers={papers}
+          taken={takenMocks.has(book.id)}
+          completed={completedMocks.has(book.id)}
+          onStart={() => onStartMock(book.id)}
         />
-      )}
-
-      {openBookObj && section === "practice" && (
+      ) : (
         <div className="pr-lib__tests">
           {/* Upper-Inter shelves carry both the full papers and the thirds
               the homework rule assigns; the full papers head the list and
               their pieces are indented beneath. */}
-          {forBook(openBookObj.id).map((t) => {
+          {papers.map((t) => {
             const isChunk = /-(a|b|c|p[123])$/.test(t.id);
             const done = takenPractice.has(t.id);
             // Papers the class has not reached stay visible but shut, so a
@@ -638,7 +654,18 @@ const RESTORABLE = {
 const pathOf = (v) =>
   v.name === "player" ? `/practice/test/${encodeURIComponent(v.testId)}`
     : v.name === "mock" ? `/practice/mock/${encodeURIComponent(v.bookId)}`
-      : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
+      : v.name === "book" ? `/practice/book/${encodeURIComponent(v.bookId)}`
+        : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
+
+/** A URL back to a view. Book pages are safe to restore — looking at a
+ *  shelf starts nothing — but test and mock paths deliberately fall back
+ *  to the library, since opening one would spend an attempt. */
+const viewOfPath = (path) => {
+  if (RESTORABLE[path]) return { name: RESTORABLE[path] };
+  const book = path.match(/^\/practice\/book\/(.+)$/);
+  if (book) return { name: "book", bookId: decodeURIComponent(book[1]) };
+  return { name: "library" };
+};
 
 const LEAVE_WARNING = {
   mock: "Leave the mock exam? Your one attempt is already used: if you leave now, "
@@ -651,7 +678,9 @@ export default function PracticeApp() {
   const [user, setUser] = useState(() => {
     try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; } catch { return null; }
   });
-  const [view, setView] = useState({ name: "library" }); // library | player | mock | result | mockresult | history
+  // library | book | player | mock | result | mockresult | history | notebook
+  const [view, setView] = useState(() => viewOfPath(window.location.pathname));
+  const [section, setSection] = useState("mock");   // which library tab
   const [remote, setRemote] = useState([]);
   // null until the group's level and lesson are known. Until then nothing
   // unlocks: a failed lookup must never be read as permission.
@@ -753,12 +782,12 @@ export default function PracticeApp() {
         window.history.pushState(null, "", pathOf(view));
         return;
       }
-      const name = RESTORABLE[window.location.pathname] || "library";
-      if (pathOf({ name }) !== window.location.pathname) {
-        window.history.replaceState(null, "", pathOf({ name }));
+      const next = viewOfPath(window.location.pathname);
+      if (pathOf(next) !== window.location.pathname) {
+        window.history.replaceState(null, "", pathOf(next));
       }
       if (warning) loadTaken();   // a spent mock must show as spent
-      setView({ name });
+      setView(next);
     };
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
@@ -768,6 +797,30 @@ export default function PracticeApp() {
   const logout = () => { localStorage.removeItem(SESSION_KEY); setUser(null); setView({ name: "library" }); };
 
   if (!user) return <Login onLogin={login} />;
+
+  if (view.name === "book") {
+    const book = allBooks.find((b) => b.id === view.bookId);
+    const kind = (book?.kind || "practice");
+    // A shelf the student may not have (wrong level, or a mock below IELTS)
+    // sends them back rather than showing an empty page.
+    const allowed = book && (kind === "mock" ? access.mocks : access.practice)
+      && testsOfBook(allTests, access, book.id).length > 0;
+    if (!allowed) { setView({ name: "library" }); return null; }
+    return (
+      <BookPage
+        book={book}
+        tests={allTests}
+        user={user}
+        access={access}
+        onBack={() => setView({ name: "library" })}
+        onStart={(testId) => setView({ name: "player", testId })}
+        onStartMock={startMock}
+        takenMocks={takenMocks}
+        completedMocks={completedMocks}
+        takenPractice={takenPractice}
+      />
+    );
+  }
 
   if (view.name === "player") {
     const test = findTest(view.testId);
@@ -839,12 +892,12 @@ export default function PracticeApp() {
       takenMocks={takenMocks}
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
-      onStart={(testId) => setView({ name: "player", testId })}
-      onStartMock={startMock}
+      onOpenBook={(bookId) => setView({ name: "book", bookId })}
       onNotebook={() => setView({ name: "notebook" })}
       completedMocks={completedMocks}
-      takenPractice={takenPractice}
       access={access}
+      picked={section}
+      setSection={setSection}
     />
   );
 }
