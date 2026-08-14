@@ -73,6 +73,24 @@ export async function saveResult(result) {
   return res.ok;
 }
 
+/** Records a finished Quiz me session over the mistake notebook.
+ *  Silent no-op until practice_reviews.sql has been run — a student working
+ *  through their mistakes must never be interrupted by a save failure. */
+export async function saveReview(review) {
+  try {
+    const res = await fetch(`${URL_BASE}/rest/v1/practice_reviews`, {
+      method: "POST",
+      headers: { ...headers, Prefer: "return=minimal" },
+      body: JSON.stringify(review),
+    });
+    if (!res.ok) console.warn("[practice] review not saved:", res.status);
+    return res.ok;
+  } catch (e) {
+    console.warn("[practice] review not saved:", e?.message);
+    return false;
+  }
+}
+
 /** Active staff-uploaded tests, converted to the content.js test shape.
  *  Returns [] until practice_tests.sql has been run (or when offline). */
 export async function fetchRemoteTests() {

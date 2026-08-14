@@ -7,7 +7,7 @@
 // type reveals no answers); their questions never appear in the list or
 // the quiz, keeping the exams sealed.
 import { useEffect, useMemo, useState } from "react";
-import { fetchResults } from "./api.js";
+import { fetchResults, saveReview } from "./api.js";
 import AUDIO_CUES from "./audio-cues.json";
 import { buildReview, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
 import { parentListeningId } from "./upper.js";
@@ -43,14 +43,37 @@ export function useCueAudio() {
 
 export const hasCue = (testId, n) => !!AUDIO_CUES[parentListeningId(testId)]?.[n];
 
-/* Re-answer old mistakes, one at a time, immediate feedback, not saved. */
-function QuizMe({ items }) {
+/* Re-answer old mistakes, one at a time, with immediate feedback.
+ * The session is recorded when it finishes: the notebook list is derived from
+ * practice_results and needs no saving, but whether the student actually went
+ * back over their mistakes was previously nowhere, so a teacher could not see
+ * it. Nothing here blocks on the save. */
+function QuizMe({ items, username }) {
   const [i, setI] = useState(0);
   const [given, setGiven] = useState(null);   // chosen option / typed text
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
   const [text, setText] = useState("");
+  const [answered, setAnswered] = useState([]);   // {test_id, n, type, right}
+  const [startedAt] = useState(() => Date.now());
+  const [saved, setSaved] = useState(false);
   const q = items[i];
+
+  // Fires once, on the finish screen. A session abandoned half way is not
+  // recorded — claiming a student reviewed their mistakes when they walked
+  // away would be worse than recording nothing.
+  useEffect(() => {
+    if (q || saved || !answered.length || !username) return;
+    setSaved(true);
+    saveReview({
+      student_username: username,
+      right_count: score,
+      total_count: answered.length,
+      items: answered,
+      seconds: Math.round((Date.now() - startedAt) / 1000),
+    });
+  }, [q, saved, answered, score, username, startedAt]);
+
   if (!items.length) return null;
   if (!q) {
     return (
@@ -59,6 +82,7 @@ function QuizMe({ items }) {
         <p className="pr-vocab__done">
           {score} of {items.length} of your old mistakes answered correctly this time.
           {score === items.length ? " All of them — they are not mistakes any more." : " The rest stay in the notebook for next time."}
+          <br />Your teacher can see that you worked on these.
         </p>
       </div>
     );
@@ -78,7 +102,11 @@ function QuizMe({ items }) {
   const submit = (val) => {
     if (checked) return;
     setGiven(val); setChecked(true);
-    if (isRight(val)) setScore((s) => s + 1);
+    const right = isRight(val);
+    if (right) setScore((s) => s + 1);
+    setAnswered((a) => a.some((x) => x.test_id === q.testId && x.n === q.n)
+      ? a
+      : [...a, { test_id: q.testId, n: q.n, type: q.type, right }]);
   };
   const next = () => { setI(i + 1); setGiven(null); setChecked(false); setText(""); };
 
@@ -191,7 +219,7 @@ export default function Notebook({ user, findTest, onBack }) {
             ))}
           </div>
 
-          {mode === "quiz" && <QuizMe key={data.quizItems.length} items={data.quizItems} />}
+          {mode === "quiz" && <QuizMe key={data.quizItems.length} items={data.quizItems} username={user.username} />}
           {mode === "vocab" && <VocabMatch review={data.vocabReview} cap={10} />}
           {mode === "mistakes" && data.practiceReviews.map((p) => {
             const wrong = p.items.filter((it) => !it.ok);
