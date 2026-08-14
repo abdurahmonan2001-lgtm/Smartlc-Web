@@ -1,4 +1,4 @@
-// Smart LC Upper-Inter Set 13 — Academic Reading (40 questions, 3 passages).
+// Smart LC Pre-IELTS Set 13 — Academic Reading (40 questions, 3 passages).
 // Original material authored for Smart LC to the blueprint: P1 factual
 // history (completion + TFNG), P2 discursive with lettered paragraphs
 // (matching paragraph-information + summary + people matching with one
@@ -9,7 +9,7 @@
 export const UPSET13_READING = {
   id: "upset13-reading",
   bookId: "upset13",
-  title: "Upper-Inter Set 13 — Reading",
+  title: "Pre-IELTS Set 13 — Reading",
   module: "reading",
   durationMin: 60,
   sections: [

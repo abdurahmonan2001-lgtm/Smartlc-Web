@@ -1,4 +1,4 @@
-// Smart LC Upper-Inter Set 1 — Listening (40 questions, 4 parts).
+// Smart LC Pre-IELTS Set 1 — Listening (40 questions, 4 parts).
 // Original material authored for Smart LC to the blueprint
 // (docs/ielts-test-blueprint.md): P1 form completion with corrections +
 // spelling, P2 monologue MCQ + matching box, P3 discussion MCQ +
@@ -9,7 +9,7 @@
 export const UPSET1_LISTENING = {
   id: "upset1-listening",
   bookId: "upset1",
-  title: "Upper-Inter Set 1 — Listening",
+  title: "Pre-IELTS Set 1 — Listening",
   module: "listening",
   durationMin: 30,
   sections: [

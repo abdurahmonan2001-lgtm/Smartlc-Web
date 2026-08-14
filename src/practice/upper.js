@@ -1,6 +1,6 @@
-// Upper-Intermediate homework support.
+// Pre-IELTS homework support (the Upper-Intermediate level).
 //
-// Upper-Inter students sit each practice set in thirds across three
+// Pre-IELTS students sit each practice set in thirds across three
 // lessons (the owner's rule): Lesson 1 = Listening Parts 1+2 AND Reading
 // Passage 1; Lesson 2 = Part 3 AND Passage 2; Lesson 3 = Part 4 AND
 // Passage 3 — repeating, so sets 1–13 cover lessons 1–39, and lesson 40
@@ -62,8 +62,8 @@ export function upperAssignment(lessonNum) {
     return {
       full: true,
       items: [
-        { testId: "upset14-listening", label: "Upper-Inter Set 14 — full Listening" },
-        { testId: "upset14-reading", label: "Upper-Inter Set 14 — full Reading" },
+        { testId: "upset14-listening", label: "Pre-IELTS Set 14 — full Listening" },
+        { testId: "upset14-reading", label: "Pre-IELTS Set 14 — full Reading" },
       ],
     };
   }

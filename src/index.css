@@ -1687,3 +1687,5 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   margin: 8px auto 20px; max-width: 900px; padding: 0 20px;
   font-size: 26px; font-weight: 700; letter-spacing: -.4px;
 }
+
+.pr-brief__cancel { display: block; margin: 14px auto 0; }

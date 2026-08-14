@@ -116,8 +116,9 @@ const writingSections = (d) => [
 // questions (extracted by scripts/extract-writing-bank.mjs). Day N supplies
 // the writing paper of Mock Test N for the first twelve days — days 1 and 2
 // have redrawn SVG visuals of their own (mock1/mock2-writing.js), days 3–12
-// keep their original images. Everything from day 13 on becomes a
-// standalone writing test on the Writing Practice shelf.
+// keep their original images. Everything from day 13 on stays in the
+// catalogue as a standalone writing paper for a teacher to assign — there
+// is no Writing shelf, because students do not pick writing themselves.
 const MOCK_WRITING = WRITING_BANK.filter((d) => d.day >= 3 && d.day <= 12).map((d) => ({
   id: `mock${d.day}-writing`,
   bookId: `mock${d.day}`,
@@ -139,8 +140,8 @@ const WRITING_PRACTICE = WRITING_BANK.filter((d) => d.day >= 13).map((d) => ({
 // `kind` splits the library in two:
 //   mock     — sat once, all three papers in one sitting, nothing saved
 //              unless the whole exam is finished
-//   practice — single papers, taken freely and repeatedly, the pool
-//              homework is set from
+//   practice — single papers set as homework, one attempt each, opened
+//              lesson by lesson (see access.js)
 // Mock books are deliberately NOT also offered as separate papers: a
 // student who could sit Mock 5's listening as practice would walk into
 // their one official attempt already knowing it.
@@ -151,7 +152,7 @@ export const BOOKS = [
     short: `M${i + 1}`,
     kind: "mock",
   })),
-  // Practice sets: mock-format single papers, taken freely and repeatedly.
+  // Practice sets: mock-format single papers for the IELTS levels.
   // Authored separately from the mocks so homework never leaks exam content.
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `pset${i + 1}`,
@@ -159,13 +160,14 @@ export const BOOKS = [
     short: `P${i + 1}`,
     kind: "practice",
   })),
-  // Upper-Intermediate sets: sat in thirds across three lessons (see
-  // upper.js). Both the full papers and their thirds sit on the shelf, so a
-  // student can open exactly the piece their homework names.
+  // Pre-IELTS sets (sat by the Upper-Intermediate level): taken in thirds
+  // across three lessons — see upper.js. Both the full papers and their
+  // thirds sit on the shelf, so a student can open exactly the piece their
+  // homework names.
   ...Array.from({ length: 14 }, (_, i) => ({
     id: `upset${i + 1}`,
-    title: `Upper-Inter Set ${i + 1}`,
-    short: `U${i + 1}`,
+    title: `Pre-IELTS Set ${i + 1}`,
+    short: `PI${i + 1}`,
     kind: "practice",
   })),
   // No Writing Practice shelf: writing is set by a teacher, not chosen by
@@ -190,7 +192,7 @@ export const BOOKS = [
 //   q.rubric         — overrides the auto-generated instruction line
 //   q.answer         — string or array of accepted variants
 // Multi-select keys MUST be authored in alphabetical order across a group.
-// Upper-Intermediate papers, plus the thirds the homework rule assigns:
+// Pre-IELTS papers, plus the thirds the homework rule assigns:
 // Listening Parts 1-2 / Part 3 / Part 4 and one paper per Reading passage.
 // Derived from the full papers so there is a single source of truth.
 const UPPER_FULL = [

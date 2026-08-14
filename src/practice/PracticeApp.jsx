@@ -167,8 +167,7 @@ function Library({ user, books, tests, onOpenBook, onLogout, onResults, onNotebo
  * Opening a shelf used to unfold a panel underneath the grid, which left
  * the student scrolling past every other shelf to reach their papers.
  * It is a page now, with its own URL and its own way back. */
-function BookPage({ book, tests, user, access, onBack, onStart, onStartMock, takenMocks, completedMocks, takenPractice }) {
-  const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
+function BookPage({ book, tests, user, access, onBack, onOpenBrief, onStartMock, takenMocks, completedMocks, takenPractice }) {
   const papers = testsOfBook(tests, access, book.id);
   const isMock = (book.kind || "practice") === "mock";
 
@@ -217,26 +216,51 @@ function BookPage({ book, tests, user, access, onBack, onStart, onStartMock, tak
                   ? <span className="pr-lock-chip" title={`Opens at lesson ${opensAt}`}>🔒 opens at lesson {opensAt}</span>
                   : done
                     ? <span className="pr-done-chip">✓ done — review it under My results</span>
-                    : armed === t.id
-                      ? null
-                      : <button className="btn btn--primary" onClick={() => setArmed(t.id)}>Start</button>}
-                {armed === t.id && !done && (
-                  <div className="pr-arm">
-                    <p>
-                      You can do this paper <strong>once</strong> — your score, answers and the time
-                      you take are sent to your teachers. Work as carefully as you would in class.
-                    </p>
-                    <div className="pr-arm__btns">
-                      <button className="btn btn--primary" onClick={() => onStart(t.id)}>Start now</button>
-                      <button className="pr-link" onClick={() => setArmed(null)}>Cancel</button>
-                    </div>
-                  </div>
-                )}
+                    : <button className="btn btn--primary" onClick={() => onOpenBrief(t.id)}>Start</button>}
               </div>
             );
           })}
         </div>
       )}
+    </div>
+  );
+}
+
+/* ─── The same brief, for a single practice paper ───
+ * Practice is one attempt too, so it gets the same treatment as a mock:
+ * its own page, the rule stated before the student commits, rather than
+ * a panel unfolding under the row they clicked. */
+function PracticeBrief({ test, user, onBack, onStart }) {
+  const questions = test.sections.reduce((n, s) => n + s.questions.length, 0);
+  return (
+    <div className="pr-lib">
+      <header className="pr-lib__top">
+        <button className="pr-link pr-back" onClick={onBack}>← Back</button>
+        <div className="pr-lib__user"><span>{user.full_name}</span></div>
+      </header>
+      <div className="pr-brief">
+        <h3>{test.title}</h3>
+        <p className="pr-brief__warn">
+          <strong>You can do this paper once only, and your attempt is used the moment
+          you press start.</strong> Read this before you begin.
+        </p>
+        <ol className="pr-brief__rules">
+          <li>{test.module === "listening"
+            ? "The recording plays once and cannot be paused or rewound, so check your "
+              + "sound before you start."
+            : "You have the whole time to read, answer and check — the passage stays on "
+              + "screen throughout."}</li>
+          <li>Allow about {test.durationMin} minutes without a break. {questions} questions.</li>
+          <li>Your score, your answers and the time you took are sent to your teachers, so
+              work as carefully as you would in class.</li>
+          <li>It is marked as soon as you hand it in, with an explanation for every question
+              under <strong>My results</strong>.</li>
+        </ol>
+        <button className="btn btn--primary btn--lg" onClick={onStart}>
+          I understand — use my attempt and start
+        </button>
+        <button className="pr-link pr-brief__cancel" onClick={onBack}>Not yet — go back</button>
+      </div>
     </div>
   );
 }
@@ -653,9 +677,10 @@ const RESTORABLE = {
 };
 const pathOf = (v) =>
   v.name === "player" ? `/practice/test/${encodeURIComponent(v.testId)}`
-    : v.name === "mock" ? `/practice/mock/${encodeURIComponent(v.bookId)}`
-      : v.name === "book" ? `/practice/book/${encodeURIComponent(v.bookId)}`
-        : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
+    : v.name === "brief" ? `/practice/start/${encodeURIComponent(v.testId)}`
+      : v.name === "mock" ? `/practice/mock/${encodeURIComponent(v.bookId)}`
+        : v.name === "book" ? `/practice/book/${encodeURIComponent(v.bookId)}`
+          : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
 
 /** A URL back to a view. Book pages are safe to restore — looking at a
  *  shelf starts nothing — but test and mock paths deliberately fall back
@@ -813,11 +838,27 @@ export default function PracticeApp() {
         user={user}
         access={access}
         onBack={() => setView({ name: "library" })}
-        onStart={(testId) => setView({ name: "player", testId })}
+        onOpenBrief={(testId) => setView({ name: "brief", testId })}
         onStartMock={startMock}
         takenMocks={takenMocks}
         completedMocks={completedMocks}
         takenPractice={takenPractice}
+      />
+    );
+  }
+
+  if (view.name === "brief") {
+    const test = findTest(view.testId);
+    const staffAssigned = String(test?.bookId || "").startsWith("up:");
+    if (!test || (!staffAssigned && !access.isOpen(test.id))) {
+      setView({ name: "library" }); return null;
+    }
+    return (
+      <PracticeBrief
+        test={test}
+        user={user}
+        onBack={() => setView({ name: "book", bookId: test.bookId })}
+        onStart={() => setView({ name: "player", testId: test.id })}
       />
     );
   }
