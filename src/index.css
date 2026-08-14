@@ -1665,3 +1665,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   color: var(--muted, #6b7280);
   font-size: 15px;
 }
+
+/* Practice papers the class has not reached yet: visible, so a student
+   can see what is coming, but plainly not startable. */
+.pr-test-row.is-locked { opacity: .62; }
+.pr-lock-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 999px;
+  background: #f3f4f6; color: #6b7280;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.pr-lib__gate {
+  margin: 24px auto; max-width: 560px; padding: 18px 20px;
+  border: 1px solid #e5e7eb; border-radius: 12px;
+  background: #fff; color: #4b5563; text-align: center; line-height: 1.55;
+}

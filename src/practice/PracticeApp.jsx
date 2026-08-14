@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
-import { loginStudent, saveResult, fetchResults, fetchRemoteTests } from "./api.js";
+import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext } from "./api.js";
+import { accessFor } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
 import AUDIO_CUES from "./audio-cues.json";
 import { norm, isMockResult, fmtTime, buildReview, VocabMatch } from "./review.jsx";
@@ -71,15 +72,32 @@ function Login({ onLogin }) {
 }
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice }) {
-  const [section, setSection] = useState("mock");
+function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access }) {
+  // Mocks are IELTS-only and hidden below that. The level arrives a moment
+  // after first paint, so the chosen tab is resolved on every render
+  // rather than fixed at mount — otherwise a student can be left looking
+  // at a tab that has since been taken away.
+  const [picked, setSection] = useState("mock");
+  const section = picked === "mock" && !access.mocks ? "practice" : picked;
   const [openBook, setOpenBook] = useState(null);
   const [armed, setArmed] = useState(null);   // practice paper awaiting its once-only confirm
-  const forBook = (bookId) => tests.filter((t) => t.bookId === bookId);
+
+  // What belongs on this student's shelves. Mocks are gated as a whole by
+  // level rather than by lesson, uploaded shelves are set by staff for a
+  // particular class and so sit outside the schedule, and everything else
+  // must be part of this level's programme.
+  const visible = (t) => String(t.bookId).startsWith("up:") || access.inProgramme(t.id);
+  const forBook = (bookId) => tests.filter((t) => t.bookId === bookId && visible(t));
 
   // Uploaded shelves carry no `kind`; they are homework material, so they
-  // belong with practice.
-  const shown = books.filter((b) => (b.kind || "practice") === section);
+  // belong with practice. A shelf whose papers are all outside this
+  // student's programme disappears; a genuinely empty "coming soon" shelf
+  // still shows, because that is about content, not permission.
+  const stocked = (bookId) => tests.some((t) => t.bookId === bookId);
+  const shown = books
+    .filter((b) => (b.kind || "practice") === section)
+    .filter(() => (section === "mock" ? access.mocks : access.practice))
+    .filter((b) => !stocked(b.id) || forBook(b.id).length > 0);
   const openBookObj = shown.find((b) => b.id === openBook);
   const tab = (id, label, hint) => (
     <button
@@ -107,10 +125,20 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
         </div>
       </header>
 
+      {/* Mocks are not merely locked below IELTS level — they are absent. */}
       <div className="pr-tabs">
-        {tab("mock", "Mock exams", "Full test · one attempt")}
-        {tab("practice", "Practice", "Single papers · one attempt each")}
+        {access.mocks && tab("mock", "Mock exams", "Full test · one attempt")}
+        {access.practice && tab("practice", "Practice", "Single papers · one attempt each")}
       </div>
+
+      {!access.practice && !access.mocks && (
+        <p className="pr-lib__gate">
+          {access.level
+            ? `Practice papers open up at Upper-Intermediate. Your group is on ${access.level} — keep going.`
+            : "We couldn't load your class details, so we can't tell which papers are yours yet. "
+              + "Please reload, or ask your teacher if it keeps happening."}
+        </p>
+      )}
 
       <div className="pr-lib__grid">
         {shown.map((b) => {
@@ -156,17 +184,26 @@ function Library({ user, books, tests, onStart, onStartMock, onLogout, onResults
           {forBook(openBookObj.id).map((t) => {
             const isChunk = /-(a|b|c|p[123])$/.test(t.id);
             const done = takenPractice.has(t.id);
+            // Papers the class has not reached stay visible but shut, so a
+            // student can see what is coming without jumping ahead.
+            const locked = !String(t.bookId).startsWith("up:") && !access.isOpen(t.id);
+            const opensAt = access.opensAt(t.id);
             return (
-              <div className={`pr-test-row ${isChunk ? "is-chunk" : ""}`} key={t.id}>
+              <div className={`pr-test-row ${isChunk ? "is-chunk" : ""} ${locked ? "is-locked" : ""}`} key={t.id}>
                 <div>
                   <strong>{isChunk ? t.title.split(" · ").slice(1).join(" · ") : t.title}</strong>
-                  <span>{t.module} · {t.durationMin} min · {t.sections.reduce((n, s) => n + s.questions.length, 0)} questions</span>
+                  <span>
+                    {t.module} · {t.durationMin} min · {t.sections.reduce((n, s) => n + s.questions.length, 0)} questions
+                    {opensAt ? ` · lesson ${opensAt}` : ""}
+                  </span>
                 </div>
-                {done
-                  ? <span className="pr-done-chip">✓ done — review it under My results</span>
-                  : armed === t.id
-                    ? null
-                    : <button className="btn btn--primary" onClick={() => setArmed(t.id)}>Start</button>}
+                {locked
+                  ? <span className="pr-lock-chip" title={`Opens at lesson ${opensAt}`}>🔒 opens at lesson {opensAt}</span>
+                  : done
+                    ? <span className="pr-done-chip">✓ done — review it under My results</span>
+                    : armed === t.id
+                      ? null
+                      : <button className="btn btn--primary" onClick={() => setArmed(t.id)}>Start</button>}
                 {armed === t.id && !done && (
                   <div className="pr-arm">
                     <p>
@@ -616,12 +653,26 @@ export default function PracticeApp() {
   });
   const [view, setView] = useState({ name: "library" }); // library | player | mock | result | mockresult | history
   const [remote, setRemote] = useState([]);
+  // null until the group's level and lesson are known. Until then nothing
+  // unlocks: a failed lookup must never be read as permission.
+  const [context, setContext] = useState({ level: null, lessonNum: null });
   const [takenMocks, setTakenMocks] = useState(() => new Set());
   const [completedMocks, setCompletedMocks] = useState(() => new Set());
   const [takenPractice, setTakenPractice] = useState(() => new Set());
 
   const loadRemote = () => { fetchRemoteTests().then(setRemote); };
   useEffect(loadRemote, []);
+
+  useEffect(() => {
+    if (!user) return;
+    fetchStudentContext(user)
+      .then(setContext)
+      .catch((e) => {
+        console.error("could not read the student's level/lesson:", e);
+        setContext({ level: null, lessonNum: null });
+      });
+  }, [user]);
+  const access = accessFor(context.level, context.lessonNum);
 
   // Which mocks this student has used up. Starting a mock stores an
   // `mockN-attempt` marker, and finishing stores the three paper results,
@@ -656,6 +707,9 @@ export default function PracticeApp() {
   // paper opens. If it cannot reach the database it queues locally and
   // still counts, so going offline is not a way around the once-only rule.
   const startMock = (bookId) => {
+    // The tab is hidden below IELTS level, but hiding a control is not the
+    // same as enforcing a rule — this is the one that spends an attempt.
+    if (!access.mocks) return;
     persist({
       student_username: user.username,
       test_id: `${bookId}-attempt`,
@@ -717,7 +771,12 @@ export default function PracticeApp() {
 
   if (view.name === "player") {
     const test = findTest(view.testId);
-    if (!test) { setView({ name: "library" }); return null; }
+    // Uploaded papers are assigned by staff and sit outside the lesson
+    // schedule; everything else must be open to this student.
+    const staffAssigned = String(test?.bookId || "").startsWith("up:");
+    if (!test || (!staffAssigned && !access.isOpen(test.id))) {
+      setView({ name: "library" }); return null;
+    }
     return (
       <Player
         test={test}
@@ -736,7 +795,9 @@ export default function PracticeApp() {
     const papers = allTests
       .filter((t) => t.bookId === view.bookId)
       .sort((a, b) => order[a.module] - order[b.module]);
-    if (!book || papers.length < 3 || takenMocks.has(book.id)) { setView({ name: "library" }); return null; }
+    if (!book || papers.length < 3 || takenMocks.has(book.id) || !access.mocks) {
+      setView({ name: "library" }); return null;
+    }
     return (
       <MockRun
         book={book}
@@ -783,6 +844,7 @@ export default function PracticeApp() {
       onNotebook={() => setView({ name: "notebook" })}
       completedMocks={completedMocks}
       takenPractice={takenPractice}
+      access={access}
     />
   );
 }

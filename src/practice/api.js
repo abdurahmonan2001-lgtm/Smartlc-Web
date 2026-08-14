@@ -19,14 +19,48 @@ const headers = {
 };
 
 export async function loginStudent(username, password) {
-  const q = `${URL_BASE}/rest/v1/students?username=eq.${encodeURIComponent(username)}&password=eq.${encodeURIComponent(password)}&select=username,full_name,status`;
+  // The class triple comes back with the student because what a student may
+  // open depends on their group's level and how far that group has got.
+  const q = `${URL_BASE}/rest/v1/students?username=eq.${encodeURIComponent(username)}&password=eq.${encodeURIComponent(password)}&select=username,full_name,status,teacher_username,day,class_time`;
   const res = await fetch(q, { headers });
   if (!res.ok) throw new Error(`login failed: ${res.status}`);
   const rows = await res.json();
   const s = rows[0];
   if (!s) return null;
   if (s.status && s.status !== "active") return null;
-  return { username: s.username, full_name: s.full_name };
+  return {
+    username: s.username,
+    full_name: s.full_name,
+    teacher_username: s.teacher_username,
+    day: s.day,
+    class_time: s.class_time,
+  };
+}
+
+/** The group's level and the lesson it has reached — the two facts that
+ *  decide what this student is allowed to open. Mirrors the Student App's
+ *  fetchLevel: today's lesson if the class has one, else the most recent
+ *  one on or before today. Throws so the caller can tell "not allowed"
+ *  apart from "could not check", which must not silently unlock anything. */
+export async function fetchStudentContext(student) {
+  const { teacher_username, day, class_time } = student || {};
+  if (!teacher_username || !day || !class_time) return { level: null, lessonNum: null };
+  const cls = `teacher_username=eq.${encodeURIComponent(teacher_username)}`
+    + `&day=eq.${encodeURIComponent(day)}&class_time=eq.${encodeURIComponent(class_time)}`;
+
+  const gRes = await fetch(`${URL_BASE}/rest/v1/groups?${cls}&select=level&limit=1`, { headers });
+  if (!gRes.ok) throw new Error(`group lookup failed: ${gRes.status}`);
+  const level = (await gRes.json())[0]?.level ?? null;
+
+  const d = new Date();
+  const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const lRes = await fetch(
+    `${URL_BASE}/rest/v1/lessons?${cls}&lesson_date=lte.${today}`
+    + "&select=lesson_number&order=lesson_date.desc&limit=1", { headers });
+  if (!lRes.ok) throw new Error(`lesson lookup failed: ${lRes.status}`);
+  const lessonNum = (await lRes.json())[0]?.lesson_number ?? 1;
+
+  return { level, lessonNum };
 }
 
 /** Saves a finished attempt; on failure the caller keeps it locally. */
