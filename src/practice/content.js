@@ -62,6 +62,36 @@ import { PSET4_LISTENING } from "./pset4-listening.js";
 import { PSET4_READING } from "./pset4-reading.js";
 import { PSET5_LISTENING } from "./pset5-listening.js";
 import { PSET5_READING } from "./pset5-reading.js";
+import { PSET6_LISTENING } from "./pset6-listening.js";
+import { PSET6_READING } from "./pset6-reading.js";
+import { PSET7_LISTENING } from "./pset7-listening.js";
+import { PSET7_READING } from "./pset7-reading.js";
+import { PSET8_LISTENING } from "./pset8-listening.js";
+import { PSET8_READING } from "./pset8-reading.js";
+import { PSET9_LISTENING } from "./pset9-listening.js";
+import { PSET9_READING } from "./pset9-reading.js";
+import { PSET10_LISTENING } from "./pset10-listening.js";
+import { PSET10_READING } from "./pset10-reading.js";
+import { PSET11_LISTENING } from "./pset11-listening.js";
+import { PSET11_READING } from "./pset11-reading.js";
+import { PSET12_LISTENING } from "./pset12-listening.js";
+import { PSET12_READING } from "./pset12-reading.js";
+import { PSET13_LISTENING } from "./pset13-listening.js";
+import { PSET13_READING } from "./pset13-reading.js";
+import { PSET14_LISTENING } from "./pset14-listening.js";
+import { PSET14_READING } from "./pset14-reading.js";
+import { PSET15_LISTENING } from "./pset15-listening.js";
+import { PSET15_READING } from "./pset15-reading.js";
+import { PSET16_LISTENING } from "./pset16-listening.js";
+import { PSET16_READING } from "./pset16-reading.js";
+import { PSET17_LISTENING } from "./pset17-listening.js";
+import { PSET17_READING } from "./pset17-reading.js";
+import { PSET18_LISTENING } from "./pset18-listening.js";
+import { PSET18_READING } from "./pset18-reading.js";
+import { PSET19_LISTENING } from "./pset19-listening.js";
+import { PSET19_READING } from "./pset19-reading.js";
+import { PSET20_LISTENING } from "./pset20-listening.js";
+import { PSET20_READING } from "./pset20-reading.js";
 import { UPSET1_LISTENING } from "./upset1-listening.js";
 import { UPSET1_READING } from "./upset1-reading.js";
 import { UPSET2_LISTENING } from "./upset2-listening.js";
@@ -221,9 +251,15 @@ const UPPER_CHUNKS = UPPER_FULL.flatMap((t) =>
 const shelve = (t, bookId) => ({ ...t, bookId });
 const PRACTICE_LISTENING = [
   PSET1_LISTENING, PSET2_LISTENING, PSET3_LISTENING, PSET4_LISTENING, PSET5_LISTENING,
+  PSET6_LISTENING, PSET7_LISTENING, PSET8_LISTENING, PSET9_LISTENING, PSET10_LISTENING,
+  PSET11_LISTENING, PSET12_LISTENING, PSET13_LISTENING, PSET14_LISTENING, PSET15_LISTENING,
+  PSET16_LISTENING, PSET17_LISTENING, PSET18_LISTENING, PSET19_LISTENING, PSET20_LISTENING,
 ].map((t) => shelve(t, "practice-listening"));
 const PRACTICE_READING = [
   PSET1_READING, PSET2_READING, PSET3_READING, PSET4_READING, PSET5_READING,
+  PSET6_READING, PSET7_READING, PSET8_READING, PSET9_READING, PSET10_READING,
+  PSET11_READING, PSET12_READING, PSET13_READING, PSET14_READING, PSET15_READING,
+  PSET16_READING, PSET17_READING, PSET18_READING, PSET19_READING, PSET20_READING,
 ].map((t) => shelve(t, "practice-reading"));
 
 export const TESTS = [

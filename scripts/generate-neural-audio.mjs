@@ -243,5 +243,14 @@ for (const name of wanted) {
 }
 // Same test as `isPset` above — the upper sets carry cues too, and missing
 // the "u" here silently dropped every one of them.
-if (wanted.some((n) => /^u?pset\d+$/.test(n))) fs.writeFileSync(cuesPath, JSON.stringify(cues));
+//
+// Re-read before writing rather than dumping the copy loaded at startup.
+// Two generators run side by side each read the file, add their own tests
+// and write the whole thing back, so whichever finished second silently
+// erased the other's cues — the recordings were fine and the cues simply
+// vanished. Merging at write time makes concurrent runs safe.
+if (wanted.some((n) => /^u?pset\d+$/.test(n))) {
+  const onDisk = fs.existsSync(cuesPath) ? JSON.parse(fs.readFileSync(cuesPath, "utf8")) : {};
+  fs.writeFileSync(cuesPath, JSON.stringify({ ...onDisk, ...cues }));
+}
 console.log("done");

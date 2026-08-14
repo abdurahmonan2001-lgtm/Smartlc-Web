@@ -22,7 +22,7 @@ const isAnnouncer = (text) =>
   /^(Now listen|Before you hear|You now have|That is the end)/i.test(text);
 
 const out = {};
-const NAMES = [...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`), ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`)];
+const NAMES = [...Array.from({ length: 20 }, (_, i) => `pset${i + 1}`), ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`)];
 for (const name of NAMES) {
   const p1 = path.join(root, "scripts", `generate-${name}-audio.ps1`);
   if (!fs.existsSync(p1)) continue;

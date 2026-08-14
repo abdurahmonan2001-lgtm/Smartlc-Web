@@ -25,7 +25,7 @@ import fsSync from "node:fs";
 
 const names = [
   ...Array.from({ length: 12 }, (_, i) => `mock${i + 1}`),
-  ...Array.from({ length: 5 }, (_, i) => `pset${i + 1}`),
+  ...Array.from({ length: 20 }, (_, i) => `pset${i + 1}`),
   ...Array.from({ length: 14 }, (_, i) => `upset${i + 1}`),
 ];
 const add = (t) => {

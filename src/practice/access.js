@@ -26,7 +26,9 @@ export const LEVEL_ORDER = [
 const UPPER = "Upper-Intermediate";
 const IELTS_LEVELS = ["IELTS Foundation", "IELTS Proficiency"];
 const TOTAL_LESSONS = 40;
-const PSETS = 5;   // IELTS-level practice pool; lessons beyond it recycle
+// IELTS-level practice pool. Twenty sets x two papers = 40 papers, one per
+// lesson, so lessons 1-40 each get their own paper and nothing recycles.
+const PSETS = 20;
 
 export const isIeltsLevel = (level) => IELTS_LEVELS.includes(level);
 export const allowsMocks = (level) => isIeltsLevel(level);
