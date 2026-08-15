@@ -35,26 +35,26 @@ values ('<<OWNER_USERNAME>>', '<<OWNER_PASSWORD>>', 'Owner', 'active',
 -- expected: level = Owner
 
 -- ---------------------------------------------------------------------
--- READ THIS BEFORE YOU RELY ON THE ACCOUNT BEING PRIVATE
+-- ON THE PASSWORD
 -- ---------------------------------------------------------------------
--- Today this account is NOT private, and neither is any student's.
+-- Choose a long one and keep it in a password manager. It is worth doing
+-- properly: this account can open every paper in the library.
 --
--- The practice platform signs in by asking the database directly, using the
--- public anon key that ships inside the website's JavaScript. Anyone who
--- opens the browser's developer tools can read that key, and the key is
--- currently allowed to SELECT the students table — including the password
--- column, which stores passwords as plain text.
+-- When this file was first written the advice here was the opposite --
+-- that the account could not be private, because the practice platform
+-- checked credentials by querying students.password with the public key,
+-- which meant that column had to be readable and the whole roster was
+-- dumpable in plain text. That was true, and it was verified against the
+-- live database on 2026-08-15.
 --
--- Verified on 2026-08-15: a request carrying only the public key returned a
--- readable, unhashed password.
+-- It has since been fixed. Sign-in goes through student_login(), which
+-- compares a bcrypt hash held in a table the public key cannot read, and
+-- the plaintext column is emptied by a trigger the moment a password is
+-- written. A request carrying only the public key now returns no password
+-- for any of the 139 students. A strong password on this account is
+-- therefore worth exactly what it should be.
 --
--- So any student, or anyone who visits the site, can list every account and
--- its password, this owner account included. A strong password does not fix
--- that, because the password itself is readable.
---
--- Closing it properly means the browser must stop reading the students
--- table at all: move the credential check behind a database function or a
--- server route (the placement API already holds a service-role key for
--- exactly this kind of work), then withdraw the anon key's access to the
--- table and hash what is stored. Until that is done, treat this account as
--- convenient rather than secure.
+-- Still outstanding, and worth knowing: the roster itself (names, phone
+-- numbers, dates of birth, staff notes) remains readable with the public
+-- key. That is a separate piece of work -- see the JWT the login routes
+-- already issue, which is what row-level security would key on.
