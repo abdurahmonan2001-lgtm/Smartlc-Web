@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext } from "./api.js";
-import { accessFor } from "./access.js";
+import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
 import AUDIO_CUES from "./audio-cues.json";
 import { norm, isMockResult, fmtTime, buildReview, VocabMatch } from "./review.jsx";
@@ -77,7 +77,7 @@ const testsOfBook = (tests, access, bookId) => tests.filter((t) =>
   t.bookId === bookId && (String(bookId).startsWith("up:") || access.inProgramme(t.id)));
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onOpenBook, onLogout, onResults, onNotebook, takenMocks, completedMocks, access, picked, setSection }) {
+function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection }) {
   // Mocks are IELTS-only and hidden below that. The level arrives a moment
   // after first paint, so the chosen tab is resolved on every render
   // rather than fixed at mount — otherwise a student can be left looking
@@ -95,6 +95,19 @@ function Library({ user, books, tests, onOpenBook, onLogout, onResults, onNotebo
     .filter((b) => (b.kind || "practice") === section)
     .filter(() => (section === "mock" ? access.mocks : access.practice))
     .filter((b) => forBook(b.id).length > 0);
+
+  // Which programme's lessons to lay out. A student has exactly one; the
+  // owner's account belongs to neither, so it gets both.
+  const byId = new Map(tests.map((t) => [t.id, t]));
+  const levels = access.owner ? PROGRAMMES : [{ level: access.level, label: levelLabel(access.level) }];
+  const programmes = levels
+    .map(({ level, label }) => ({
+      level, label,
+      lessons: lessonPlan(level)
+        .map(({ n, testIds }) => ({ n, tests: testIds.map((id) => byId.get(id)).filter(Boolean) }))
+        .filter((l) => l.tests.length > 0),
+    }))
+    .filter((p) => p.lessons.length > 0);
   const tab = (id, label, hint) => (
     <button
       key={id}
@@ -136,26 +149,99 @@ function Library({ user, books, tests, onOpenBook, onLogout, onResults, onNotebo
         </p>
       )}
 
-      <div className="pr-lib__grid">
-        {shown.map((b) => {
-          const bookTests = forBook(b.id);
-          const count = bookTests.length;
-          const taken = takenMocks.has(b.id);
-          const mins = bookTests.reduce((n, t) => n + t.durationMin, 0);
+      {/* Mocks stay whole books: a mock is a sitting, not a lesson. */}
+      {section === "mock" && (
+        <div className="pr-lib__grid">
+          {shown.map((b) => {
+            const bookTests = forBook(b.id);
+            const taken = takenMocks.has(b.id);
+            const mins = bookTests.reduce((n, t) => n + t.durationMin, 0);
+            return (
+              <button
+                className={`pr-book ${taken ? "is-taken" : ""}`}
+                key={b.id}
+                onClick={() => onOpenBook(b.id)}
+              >
+                <span className="pr-book__cover">{b.short}</span>
+                <span className="pr-book__title">{b.title}</span>
+                <span className="pr-book__count">
+                  {taken ? (completedMocks.has(b.id) ? "✓ completed" : "attempt used")
+                    : `${bookTests.length} papers · ${Math.floor(mins / 60)}h ${mins % 60 ? `${mins % 60}m` : ""}`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Practice is arranged by lesson, because that is how it is set and how
+          a student is told about it — "lesson 12", not "set 6, reading". */}
+      {section === "practice" && programmes.map(({ level, label, lessons }) => (
+        <div key={level}>
+          {programmes.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
+          <div className="pr-lib__grid pr-lib__grid--lessons">
+            {lessons.map(({ n, tests }) => {
+              const open = tests.some((t) => access.isOpen(t.id));
+              const done = tests.length > 0 && tests.every((t) => takenPractice.has(t.id));
+              const mins = tests.reduce((s, t) => s + t.durationMin, 0);
+              return (
+                <button
+                  className={`pr-lesson ${open ? "" : "is-locked"} ${done ? "is-done" : ""}`}
+                  key={level + n}
+                  disabled={!open}
+                  onClick={() => open && onOpenLesson(level, n)}
+                >
+                  <span className="pr-lesson__n">{n}</span>
+                  <span className="pr-lesson__title">{label} Lesson {n}</span>
+                  <span className="pr-lesson__count">
+                    {!open ? "🔒 not yet"
+                      : done ? "✓ done"
+                        : `${tests.length} paper${tests.length > 1 ? "s" : ""} · ${mins} min`}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── One lesson, as a page of its own ───
+ * Pre-IELTS lessons carry two short papers (a listening third and a reading
+ * passage); IELTS lessons carry one full paper. Either way this is the page
+ * a student lands on when their homework says "lesson 12". */
+function LessonPage({ level, label, n, tests, user, access, onBack, onOpenBrief, takenPractice }) {
+  return (
+    <div className="pr-lib">
+      <header className="pr-lib__top">
+        <button className="pr-link pr-back" onClick={onBack}>← Library</button>
+        <div className="pr-lib__user"><span>{user.full_name}</span></div>
+      </header>
+
+      <h1 className="pr-book__heading">{label} Lesson {n}</h1>
+
+      <div className="pr-lib__tests">
+        {tests.map((t) => {
+          const done = takenPractice.has(t.id);
+          const locked = !access.isOpen(t.id);
+          const isChunk = /-(a|b|c|p[123])$/.test(t.id);
           return (
-            <button
-              className={`pr-book ${taken ? "is-taken" : ""}`}
-              key={b.id}
-              onClick={() => onOpenBook(b.id)}
-            >
-              <span className="pr-book__cover">{b.short}</span>
-              <span className="pr-book__title">{b.title}</span>
-              <span className="pr-book__count">
-                {taken ? (completedMocks.has(b.id) ? "✓ completed" : "attempt used")
-                  : section === "mock" ? `${count} papers · ${Math.floor(mins / 60)}h ${mins % 60 ? `${mins % 60}m` : ""}`
-                  : `${count} test${count > 1 ? "s" : ""}`}
-              </span>
-            </button>
+            <div className={`pr-test-row ${locked ? "is-locked" : ""}`} key={t.id}>
+              <div>
+                <strong>{isChunk ? t.title.split(" · ").slice(1).join(" · ") : t.title}</strong>
+                <span>
+                  {t.module} · {t.durationMin} min ·{" "}
+                  {t.sections.reduce((s, x) => s + x.questions.length, 0)} questions
+                </span>
+              </div>
+              {locked
+                ? <span className="pr-lock-chip">🔒 not open yet</span>
+                : done
+                  ? <span className="pr-done-chip">✓ done — review it under My results</span>
+                  : <button className="btn btn--primary" onClick={() => onOpenBrief(t.id)}>Start</button>}
+            </div>
           );
         })}
       </div>
@@ -688,6 +774,7 @@ const pathOf = (v) =>
     : v.name === "brief" ? `/practice/start/${encodeURIComponent(v.testId)}`
       : v.name === "mock" ? `/practice/mock/${encodeURIComponent(v.bookId)}`
         : v.name === "book" ? `/practice/book/${encodeURIComponent(v.bookId)}`
+        : v.name === "lesson" ? `/practice/lesson/${encodeURIComponent(v.level)}/${v.n}`
           : Object.keys(RESTORABLE).find((p) => RESTORABLE[p] === v.name) || "/practice";
 
 /** A URL back to a view. Book pages are safe to restore — looking at a
@@ -697,6 +784,8 @@ const viewOfPath = (path) => {
   if (RESTORABLE[path]) return { name: RESTORABLE[path] };
   const book = path.match(/^\/practice\/book\/(.+)$/);
   if (book) return { name: "book", bookId: decodeURIComponent(book[1]) };
+  const lesson = path.match(/^\/practice\/lesson\/(.+)\/(\d+)$/);
+  if (lesson) return { name: "lesson", level: decodeURIComponent(lesson[1]), n: Number(lesson[2]) };
   return { name: "library" };
 };
 
@@ -838,6 +927,31 @@ export default function PracticeApp() {
 
   if (!user) return <Login onLogin={login} />;
 
+  if (view.name === "lesson") {
+    // A lesson belongs to a programme, and a student only has their own.
+    // The owner has neither level, so both are allowed for them.
+    const mine = access.owner || view.level === access.level;
+    const papers = mine
+      ? lessonPapers(view.level, view.n).map(findTest).filter(Boolean)
+      : [];
+    if (!papers.length || !papers.some((t) => access.isOpen(t.id))) {
+      setView({ name: "library" }); return null;
+    }
+    return (
+      <LessonPage
+        level={view.level}
+        label={levelLabel(view.level)}
+        n={view.n}
+        tests={papers}
+        user={user}
+        access={access}
+        onBack={() => setView({ name: "library" })}
+        onOpenBrief={(testId) => setView({ name: "brief", testId })}
+        takenPractice={usedPractice}
+      />
+    );
+  }
+
   if (view.name === "book") {
     const book = allBooks.find((b) => b.id === view.bookId);
     const kind = (book?.kind || "practice");
@@ -949,6 +1063,8 @@ export default function PracticeApp() {
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
       onOpenBook={(bookId) => setView({ name: "book", bookId })}
+      onOpenLesson={(level, n) => setView({ name: "lesson", level, n })}
+      takenPractice={usedPractice}
       onNotebook={() => setView({ name: "notebook" })}
       completedMocks={doneMocks}
       access={access}

@@ -55,6 +55,29 @@ export function lessonPapers(level, lessonNum) {
   return [];
 }
 
+/** The whole programme as lessons, which is how the library is arranged and
+ *  how a teacher talks about it — "lesson 12", not "practice set 6 reading".
+ *  Every lesson 1-40 appears, including ones the class has not reached; those
+ *  show as locked so a student can see what is coming. */
+export function lessonPlan(level) {
+  if (!allowsPractice(level)) return [];
+  return Array.from({ length: TOTAL_LESSONS }, (_, i) => ({
+    n: i + 1,
+    testIds: lessonPapers(level, i + 1),
+  }));
+}
+
+/** What a level is called on the shelves. The database name is not the name
+ *  students know: Upper-Intermediate sit the Pre-IELTS programme. */
+export const levelLabel = (level) =>
+  level === UPPER ? "Pre-IELTS" : isIeltsLevel(level) ? "IELTS" : "";
+
+/** The two programmes, for the owner's account, which belongs to neither. */
+export const PROGRAMMES = [
+  { level: UPPER, label: "Pre-IELTS" },
+  { level: IELTS_LEVELS[0], label: "IELTS" },
+];
+
 /** test id -> the earliest lesson that assigns it, for this level. */
 export function lessonIndex(level) {
   const map = new Map();
