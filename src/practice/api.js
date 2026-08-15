@@ -18,14 +18,41 @@ const headers = {
   "Content-Type": "application/json",
 };
 
+/** Signs a student in through student_login(), which compares a bcrypt hash
+ *  held in a table the public key cannot read and returns the student row
+ *  without the password.
+ *
+ *  This platform used to match credentials with a plain filter on
+ *  students.password, which required that column to be readable by the
+ *  anon key that ships inside this bundle — so the whole roster, passwords
+ *  included, could be dumped by anyone who opened developer tools. The
+ *  Student App moved to this function in migration 003; the practice
+ *  platform was the last caller still forcing the column to stay readable.
+ *
+ *  The legacy path below exists only for deployment order, and only fires
+ *  on an ERROR — a null result with no error is simply wrong credentials.
+ *  Once 004_drop_student_password.sql has been applied it can no longer
+ *  match anything and should be deleted.
+ */
 export async function loginStudent(username, password) {
-  // The class triple comes back with the student because what a student may
-  // open depends on their group's level and how far that group has got.
-  const q = `${URL_BASE}/rest/v1/students?username=eq.${encodeURIComponent(username)}&password=eq.${encodeURIComponent(password)}&select=username,full_name,status,teacher_username,day,class_time`;
-  const res = await fetch(q, { headers });
-  if (!res.ok) throw new Error(`login failed: ${res.status}`);
-  const rows = await res.json();
-  const s = rows[0];
+  const rpc = await fetch(`${URL_BASE}/rest/v1/rpc/student_login`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ p_username: username, p_password: password }),
+  });
+
+  let s = null;
+  if (rpc.ok) {
+    s = await rpc.json();
+  } else {
+    const q = `${URL_BASE}/rest/v1/students?username=eq.${encodeURIComponent(username)}`
+      + `&password=eq.${encodeURIComponent(password)}`
+      + "&select=username,full_name,status,teacher_username,day,class_time";
+    const res = await fetch(q, { headers });
+    if (!res.ok) throw new Error(`login failed: ${res.status}`);
+    s = (await res.json())[0] ?? null;
+  }
+
   if (!s) return null;
   if (s.status && s.status !== "active") return null;
   return {

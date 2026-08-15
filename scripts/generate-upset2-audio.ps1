@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man telephoning a bakery to order a birthday cake for his daughter. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, the Honeycomb Bakery.",
   "M|Good morning. My neighbour had one of your cakes at the weekend and it was extraordinary, so I'd like to order a birthday cake for my daughter, if I may.",
@@ -53,7 +55,7 @@ $s1 = @(
   "F|We can, and it's my own favourite. With a raspberry filling, perhaps? Lemon and raspberry is a beautiful combination.",
   "M|A raspberry filling, yes. That sounds perfect.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Now, the icing. What colours does she like?",
   "M|Pink, I suppose - oh, no, wait. That was two years ago; she'd be horrified now. Purple, please - purple and white.",
@@ -71,13 +73,13 @@ $s1 = @(
   "M|I'll collect it, then. What time do you open on a Sunday?",
   "F|The shop opens at nine, but the decorators are often still finishing the celebration cakes at that hour, so I'd say any time after nine thirty. Ask for me at the counter and I'll bring it out myself.",
   "M|Any time after nine thirty. Thank you - she is going to be delighted.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the manager of a recently reopened heritage tram line welcoming a group of visitors. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning, everyone, and welcome to the Riverbank Heritage Tramway. Before we get on board, let me tell you a little about how this line came back to life, and one or two practical things you'll need to know.",
   "M|Trams ran along this valley from eighteen ninety-eight until nineteen fifty-nine. People often assume the line closed because nobody was using it, but that isn't true at all - the trams were full right up to the final week, and the ticket receipts prove it. Others blame the flood of nineteen fifty-two, which is closer, but the flood damaged the track for one winter only, and the service was running again by the spring. The real explanation is duller: the council worked out that buses were far cheaper for it to run, and that was the end of the argument. The rails were tarred over within a year.",
@@ -85,7 +87,7 @@ $s2 = @(
   "M|Now, a question I'm asked constantly is who actually drives these things. There are a couple of retired professional drivers among us, and they're worth their weight in gold, but almost all our crews are ordinary volunteers - a student, two schoolteachers, a dentist. They train here at the depot for six months before they're allowed to take a tram out with passengers on board.",
   "M|And tickets. Our website is being rebuilt after a crash last month, so you can't buy online at present, and the ticket office at the depot has a queue halfway down the yard on a Sunday. So the simplest thing is to buy your ticket on the tram itself. The conductor will come round once we're moving, and he takes cards as well as cash.",
   "M|Before we set off, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "M|Let me take you along the line, place by place, in the order we'll meet them.",
   "M|We start here at the depot, which is a working workshop - lathes turning, welding, a tram in pieces over the inspection pit. For that reason I can't let you wander round it on your own, and the only way to see inside is on one of our guided tours, which run at eleven and at two.",
@@ -95,13 +97,13 @@ $s2 = @(
   "M|Then we go through the tunnel. It's short, it's dark, and it's a favourite with children, who shriek all the way through. It was cut in eighteen ninety-eight, a year before the first tram ran, which makes it older than the depot, older than every carriage we own - it's the oldest structure anywhere on the line.",
   "M|And finally the terminus, where we turn round. The old waiting room there has been converted into a tea room, run entirely by our volunteers - the same people who drive the trams bake the cakes, which tells you something about them. The soup is excellent and the walnut cake disappears by two o'clock.",
   "M|Right. Mind the step, hold the rail, and let's get you on board.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two engineering students, Jasur and Kamola, discussing the wind-tunnel test of their model footbridge. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Kamola, before we write the introduction - remind me how we ended up testing a footbridge. Was it because Dr Aliyeva said it would be a straightforward structure?",
   "F|Quite the opposite, Jasur. She warned us that bridge aerodynamics was one of the harder topics we could pick. No, it came from the storm in October. The new footbridge by the stadium was shut for two whole days, and nobody could tell me why a brand-new bridge should have to close in a bit of wind. That's where the whole project started.",
@@ -120,7 +122,7 @@ $s3 = @(
   "M|That's what I expected too, but no. She was quite specific: she wants a results chapter in which we compare our measurements with the published figures for decks of a similar shape. Nothing else was compulsory.",
   "F|Comparison it is. That's a day in the library, then.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, what are we actually changing on the model before Friday? Let's keep the list short.",
   "M|The mounting, obviously.",
@@ -135,13 +137,13 @@ $s3 = @(
   "F|No need - the conversion was checked twice and the technician agreed with it. But there is one thing we both have to do: read the case study Dr Aliyeva keeps recommending, about the famous bridge that tore itself apart in the wind in nineteen forty. It's twenty pages, and apparently everything we're measuring is in there.",
   "M|I'll read it tonight. And no, we're not sending our data to the other group before we've written our own chapter.",
   "F|Certainly not. Friday, then.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of the calendar. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today I want to look at an invention so familiar that we forget it is an invention at all: the calendar. Every calendar is an attempt to solve one awkward problem - the sky does not divide neatly. The day, the month and the year are set by three separate motions that refuse to fit inside one another, and the whole history of the calendar is the history of people trying to force them to.",
   "M|The earliest calendars followed the moon, and you can see why. The phases are impossible to miss: anyone can look up and say that the moon is new, or half, or full. Some archaeologists argue that the notched bones found at prehistoric sites across Europe and Africa are early tallies of those cycles, scratched night by night - the evidence is debated, but the idea is plausible enough.",

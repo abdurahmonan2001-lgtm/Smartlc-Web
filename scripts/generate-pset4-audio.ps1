@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a car hire company to book a car for a week. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Skyline Car Hire, good afternoon. Rustam speaking.",
   "F|Oh, good afternoon. I'd like to book a car for a week in July, please. Seven days.",
@@ -53,7 +55,7 @@ $s1 = @(
   "M|Full cover is included in the price. And ours is better than most, because it also covers the tyres and the windscreen. Most companies make you pay separately for those, and on mountain roads it's the windscreen that suffers.",
   "F|That's reassuring.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|There is one payment I should mention - the deposit. We hold five hundred thousand som on your card when you collect the car, and it's released as soon as the car comes back undamaged.",
   "F|Five hundred thousand. Understood. And where do I pick the car up? Your city-centre office?",
@@ -68,13 +70,13 @@ $s1 = @(
   "M|By email, of course. Do check your junk folder - our messages sometimes land there. And one last thing: if your plans change, cancellation is free up to forty-eight hours before pick-up.",
   "F|Perfect. Thank you so much - you've been very helpful.",
   "M|A pleasure. We'll see you on the twelfth. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the organiser of the new Bridgefield evening food market talking to local traders who are interested in taking a stall. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming. You're all here because you've asked about a stall at Bridgefield's new evening food market, so let me tell you exactly where things stand.",
   "F|First, the site, because I've heard three different rumours this week. We did look hard at the main square - it's the obvious place - but the buildings around it are people's homes, and the residents made it very clear they did not want noise under their windows late every week. Some of you suggested the station forecourt, and we went and measured it, and it simply isn't big enough for more than a dozen stalls. So the market will be held on the riverside car park. It's flat, it's well lit, and there's room for sixty stalls with space to walk between them.",
@@ -82,7 +84,7 @@ $s2 = @(
   "F|Now, what you have to do before you can trade with us. You do not need your own insurance - the market's policy covers every stallholder, and that's included in your pitch fee. The food-hygiene course people keep asking me about is only compulsory if you're cooking on site; for everyone else it is recommended, nothing more. But what every single stallholder must do, before their first market, is pay a deposit. It is returnable - you get every som back when you leave us, provided your pitch is left clean - but nobody trades without paying it.",
   "F|Vehicles. You can drive onto the site from four o'clock to unload - and then your van must come off the site before we open at five. The fire officer was absolutely firm about that, so there is no parking behind the stalls, I'm sorry. The station car park is three minutes away, and traders get a reduced evening rate there - not free, I'm afraid, but cheap.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Now let me walk you around the plan, area by area.",
   "F|The hot-food section sits at the far end, along the river wall. And I want to be completely clear about this one: it is the only part of the market where cooking is permitted. Gas, grills, fryers - all of that happens there and nowhere else, because that is where the safety equipment and the extinguishers will be.",
   "F|The bakery stalls. We've put those right beside the entrance - the nearest pitches to the gate - for the simple reason that nothing pulls people in off the street like the smell of fresh bread.",
@@ -91,13 +93,13 @@ $s2 = @(
   "F|The dessert stalls. I'll be honest with you: we have places for six, and we have received nineteen applications. So there is a waiting list, and if dessert is your trade, get your form in quickly.",
   "F|And finally the seating area, in the middle of the site. Here's something not everyone realises: it will be open from two in the afternoon, hours before the stalls - the only part of the market that is - so that office workers can bring their lunch, get to know the place, and still be sitting there when you all open at five.",
   "F|Right. Forms are at the back, and the deposit desk is by the door. Let's make this a good one.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two linguistics students, Aziz and Kamila, discussing their project to build a corpus of local radio speech. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Aziz, the project report needs a background section - why local radio? We should get our story straight.",
   "M|Well, it wasn't Dr Alimova's idea, whatever people in the department think. She actually suggested television, remember - we had to talk her out of it.",
@@ -121,7 +123,7 @@ $s3 = @(
   "M|Next is the boring job: a proper catalogue. Every recording gets a number, a date, a programme name and a list of speakers. Without an index, the corpus is just a heap of files nobody can use.",
   "F|The catalogue first, then. And not the second radio station - one station is plenty for this year.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Let's fix the final list of programmes, once and for all. The early-morning news bulletins?",
   "M|Out. Every word of a bulletin is scripted - it's written language read aloud, and we want real speech.",
@@ -137,13 +139,13 @@ $s3 = @(
   "M|And second, quality. We take a sample of the transcripts and check it word by word against the audio, and we write down the error rate. If it's high, everything gets rechecked.",
   "F|Speaker profiles and the transcript check. That's the term, then. Tea?",
   "M|Tea.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of neon signs. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Tonight, when you walk home past the shopfronts, look up. Here and there, among the flat glowing panels, you may still see a sign written in bent tubes of coloured light. That is neon - and its story runs through chemistry, art and business for more than a century.",
   "F|Let's begin with the gas itself. Neon is all around us in this room: it is one of the rare gases present in tiny amounts in ordinary air - a few parts in every hundred thousand. It was found in London, in 1898, by two chemists who were studying liquid air. They cooled air until it condensed, boiled it away fraction by fraction, and examined what was left - and among the leftovers was a gas nobody had ever seen. When they passed an electric current through a sample, it blazed a brilliant red, and they named it after the Greek word for new. A fitting name, as you will see, for a gas whose whole career has been about novelty.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a dental practice to make an appointment with the hygienist. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Bright Lane Dental Practice.",
   "F|Good morning. I'd like to book an appointment with the hygienist, please. I've never been to one before.",
@@ -53,7 +55,7 @@ $s1 = @(
   "M|Yes. And she spends a few minutes showing you how to clean properly at home. Most patients are given a small brush for the gaps between the teeth - far more use than mouthwash, whatever the adverts tell you.",
   "F|A brush for the gaps. Right.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And what does it cost?",
   "M|It was two hundred thousand som last year, but the practice reduced the hygienist fee in January, so it's a hundred and eighty thousand now.",
@@ -69,13 +71,13 @@ $s1 = @(
   "M|It always is. Right, that's booked. We used to post reminder letters, but half of them arrived after the appointment, so you'll get a reminder by text the day before instead.",
   "F|By text. Lovely. Thank you very much.",
   "M|We'll see you on the twenty-second. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the manager of a new market hall in the town of Ashfield talking to a group of local residents. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming. I manage the new market hall, and I'd like to tell you how it came about, and then take you round it.",
   "F|People ask why the council spent this money at all. Two stories are going round, and neither is right. The first is that we were forced into it by the fire. There was a fire, yes, but it was in a storage shed behind the old market and it damaged nothing else. The second is that the council wanted the open site for housing. Nothing has ever been proposed there; it will be a public square. The real reason is duller and sadder. The outdoor market had been shrinking for fifteen years, and when we asked the stallholders who had left why they went, almost every one of them gave the same answer: standing in the rain from six in the morning through a northern winter is not a living. We built a roof to stop the traders leaving.",
@@ -83,7 +85,7 @@ $s2 = @(
   "F|The building work took nineteen months, and I'm sorry to say we tested your patience. We had complaints about the noise, of course, although the contractor kept to the agreed hours. We had complaints about dust, and we paid to have the windows on Chapel Row cleaned twice. But one subject filled the postbag week after week, and it was parking - forty spaces closed for a year and a half, and I understood every letter.",
   "F|And what do the traders themselves say now? They are pleased about the hours: we open at seven and close at eight, far longer than the old market ever managed. They are less pleased about the rents, which are higher than they were outdoors, for the reason I have just given. But the thing they mention first, every single time, is the cold store. Twenty traders share one large cold store in the basement, and nobody has to drive their stock home overnight any more. That is what has changed their working lives.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Now, the building itself, and I'll take it in order.",
   "F|You come in by the north entrance, on Market Street. When the old corn exchange was pulled down in the nineteen sixties, somebody had the sense to keep the stone arch and the clock above it, and both went into storage for sixty years. They stand in the north entrance today, so the first thing you meet is a piece of the building that was here before this one.",
   "F|Straight ahead of you are the fish and meat counters. I'll be honest about those: they cost more than we planned. Refrigerated counters, drainage, tiling to the standard the inspectors require - the final bill was nearly double the figure in the original budget, and the rest of the scheme had to be trimmed to pay for it.",
@@ -93,13 +95,13 @@ $s2 = @(
   "F|And last, the roof terrace. I can't show you that tonight, because it isn't finished. The planting and the railings are booked for the spring, so it will not be open until next year. When it is, it will be free to everybody, and the view down the valley is worth the wait.",
   "F|Two things you may have heard about elsewhere. The benches all round the hall were paid for by donations from local people, and I thank everyone who gave. And the six stalls at the far end are reserved for producers from the surrounding villages, at half rent, because a market that sells nothing local is only a shop with poor lighting.",
   "F|Right. Follow me, and watch the step.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Otabek and Zarina, planning a noise survey of their town. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Right, Otabek. The form wants a paragraph on why we chose noise.",
   "M|Well, Doctor Karimov suggested traffic flow, not noise, so we can't pretend it was his idea.",
@@ -123,7 +125,7 @@ $s3 = @(
   "M|That's exactly my fear too. Random events we can't control. We'll take three readings at every visit and note anything unusual.",
   "F|Agreed.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So at each site we record the sound level. What else do we write down?",
   "M|The number of vehicles passing, obviously. If we can't relate the noise to the traffic we have no explanation, only numbers.",
@@ -144,13 +146,13 @@ $s3 = @(
   "F|And two of the six sites are four kilometres out. We can't carry the meters out there at eleven at night and walk home afterwards.",
   "M|My cousin has a car. I'll arrange transport for the outer sites - that's the other job.",
   "F|Then we're ready. Meters on Monday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture on the history of perfume. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Last week we followed the history of soap. Today, its more glamorous relative: perfume.",
   "F|Start with the word itself. Perfume comes from the Latin per fumum, which means through smoke, and the name is a piece of history in itself. The first perfumes were not worn at all; they were burned. Aromatic gums and resins were thrown on the temple fire so that the rising smoke would carry a prayer upwards, and for something like a thousand years that was what perfume was for.",

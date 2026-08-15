@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a photography studio to book a portrait session. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Bright Room Photography, Green Lane. How can I help you?",
   "F|Oh, hello. I'd like to book a portrait session, if you have anything free next month.",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|Three hundred and twenty. Do you want a deposit today?",
   "M|No deposit at all. You settle the whole amount on the day, at the desk.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And what do we actually get for that?",
   "M|All the digital files, and a set of prints. It used to be twenty prints, but people told us they only ever framed a handful of them, so the package now includes twelve printed photographs, and you choose which twelve.",
@@ -69,13 +71,13 @@ $s1 = @(
   "F|It is, yes.",
   "M|Lovely. I'll put the booking through, and the text will reach you on the Thursday.",
   "F|Thank you very much indeed. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the officer in charge of a new wildlife pond speaking to residents at a park meeting. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on such a cold night. I'm the project officer for the new wildlife pond in Ashgrove Park, and I want to tell you where the money went and what happens next.",
   "F|First, why we built it at all. There's a story going round that the pond was the idea of a wildlife charity, and it's quite true that the county wildlife trust advised us and still does - but they came in afterwards, once the digging had started. There was also a very good school competition, and one of the winning drawings is on the noticeboard by the gate. The real reason, though, was far less romantic. The bottom corner of the park, where the football pitch is, flooded four winters in a row and the pitch was unplayable from October to March. An engineer told us that the cheapest cure was not a drain but a pond - somewhere for all that water to go.",
@@ -83,7 +85,7 @@ $s2 = @(
   "F|What surprised us? Well, the volunteers were wonderful, though we did expect that - this is a park with a very active friends group. The liner was expensive, but the quotation was accurate, so there was no surprise there either. What genuinely astonished every one of us was the speed of the wildlife. We filled the pond in April and expected a quiet first summer. By June we had dragonflies, by August there were frogs, and this spring a pair of herons. Nobody on the team predicted anything like that.",
   "F|One request before we go on. There are three things people always ask me about. Feeding the ducks is fine, in small amounts, with the proper food we sell at the kiosk. Walking on the grass is fine too - it is a park, after all. The one thing we do ask, and I'm afraid we have to insist on it, is that you keep your dog on a lead anywhere near the water. A dog in a wildlife pond in May will undo a year of work in ten minutes.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you round the site, area by area.",
   "F|The main pond first, the big one in the middle. It should have taken eight weeks. It took seven months. We hit clay, then a Victorian drain that nobody had recorded, then the wettest autumn for years, and the contractors were on site far longer than any of us had planned. That is where the contingency budget went.",
   "F|Beside it is the shallow pool, which is really just a wide muddy edge, and it is my favourite thing in the whole park. We put it in for tadpoles. What we got, last June, was a great crested newt - a protected species that had not been recorded anywhere in this district for thirty years. Nobody expected that, least of all me.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|The bird hide is the one thing I have to apologise for this evening. The frame is up, but the roof and the viewing screens are not, so it stays locked and no visitor has been inside it yet. We hope to open it before the summer, but I am not going to promise you a date tonight.",
   "F|And finally the picnic area, by the eastern gate. Some of you will remember what stood there before: the old staff car park, twenty spaces of cracked tarmac. We lifted every slab of it, and there are now eight tables and a small orchard where the cars used to stand.",
   "F|Right - the tea is at the back, and I'll take questions for as long as you like.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two architecture students, Bakhtiyor and Kamola, planning a study of light in university study spaces. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Kamola, the proposal form. Box one: why did we choose this topic?",
   "F|Do you want the official answer or the true one?",
@@ -115,7 +117,7 @@ $s3 = @(
   "M|Fixed times. That's fair. And I suppose that's what worries me, actually. Not the volunteers - there are two hundred students in that building every afternoon. It's the sky. If we get a week of cloud, our daylight rooms won't look like daylight rooms at all.",
   "F|That's exactly my fear too. The weather could ruin the whole comparison. We'll have to record the conditions outside every single time and hope for a mixed fortnight.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So what exactly are we recording in each room?",
   "M|The obvious one is the brightness at desk level. That's the number the meter gives us, that's what the standards are written in, and it goes straight into the comparison.",
@@ -132,13 +134,13 @@ $s3 = @(
   "F|Perfect. The posters can wait - we don't need to recruit anyone until the pilot is finished.",
   "M|And last year's data isn't worth analysing; it was taken with the phone app.",
   "F|Then that's the two of us sorted. Consent form and meter, and we meet on Monday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of the calendar. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we looked at how societies measured the hour. Today I want to look at the longer unit: the year, and the extraordinary trouble people have taken to keep a calendar in step with the sky.",
   "F|The trouble begins with the moon, because the moon is the obvious clock. It is large, it is public, and it changes shape on a fixed schedule, so almost every early calendar followed the phases of the moon. The difficulty is arithmetic. A lunar month is roughly twenty-nine and a half days, so twelve of them come to three hundred and fifty-four days, which leaves a lunar year about eleven days short of the true solar year. Eleven days does not sound like much, but it accumulates: after three years your calendar is more than a month adrift, and the harvest festival is arriving before the harvest. The seasons, in effect, slide backwards through the calendar.",

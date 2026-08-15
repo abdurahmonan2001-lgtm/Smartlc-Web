@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning an airport parking company to book a space for his car while he is away on a long trip. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, Ashford Airport Parking, Katie speaking. How can I help?",
   "M|Oh, hello. I'm flying out of Ashford at the end of next month, and I'd like to book long-stay parking for the whole trip, please.",
@@ -52,7 +54,7 @@ $s1 = @(
   "M|The Meadow car park. Is that far from the terminal?",
   "F|A little further out, but the shuttle bus runs every twelve minutes, day and night, and the journey to the terminal only takes eight minutes.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|That sounds easy enough. So what will seventeen days cost me?",
   "F|If you paid at the gate it would be a hundred and ten pounds, but as you're booking in advance you get the online price, which is ninety-four pounds - and that includes the booking fee, so there's nothing on top.",
@@ -68,13 +70,13 @@ $s1 = @(
   "F|Yes. We'd normally email it, but our email system is being replaced this week, so I'll send your booking reference by text instead - it usually arrives within the hour. Nothing comes in the post these days, I'm afraid.",
   "M|A text is perfect. Thank you so much, you've been really helpful.",
   "F|You're very welcome, Mr Mirzaev. Have a wonderful trip.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a volunteer from a mountain rescue team talking to visitors at the team's open day. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to Hollowdale Mountain Rescue. I'm Carol, one of the volunteers, and I'll be showing you round the base this morning. Before we set off, let me tell you a little about who we are.",
   "F|People always ask how somebody ends up doing this. In my case, my brother-in-law had been on the team for years and kept inviting me to open days just like this one, and I'd also seen the team in a television documentary. But what actually brought me in was rather less comfortable. Eight years ago I slipped on wet rock up on Crag Fell and broke my ankle, and it was this team that found me and carried me down in the dark. I applied to join a month after the plaster came off.",
@@ -82,7 +84,7 @@ $s2 = @(
   "F|And what do we actually get called out for? Everyone imagines climbers falling from the crags, and sadly that does happen, but it's rare - a handful of times a year. Flooding gives us the odd busy weekend too. But the great majority of our call-outs are walkers who have lost their way - usually late in the day, and often with a phone battery that died an hour earlier.",
   "F|One more thing before we walk round, because it always surprises people: the money. We receive no regular government funding at all - not a penny. Local companies are very good to us - the garage services our vehicles at cost, and the outdoor shop in town gives us discounts on kit - but nearly all of our running costs are covered by donations from the public: collecting tins, sponsored walks, and gifts people leave us in their wills, which brings me to the tour.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|So, let me tell you what you'll see as we go round, starting with the control room, just behind me. This is where every rescue is coordinated, and it was completely refitted only last month - new screens and brand-new mapping software - so you're seeing it at its best. Do peer in, but please don't touch the desks.",
   "F|Out in the yard is our response vehicle, the big red one everybody photographs. A vehicle like that costs more than this building, and we could never have raised the money ourselves. It was paid for by a single legacy: a walker who loved these hills all her life left the team a gift in her will, and the vehicle carries her initials on the door.",
@@ -91,13 +93,13 @@ $s2 = @(
   "F|Then there are the search dogs, who are of course everybody's favourites. Be patient with them this morning, they're working. But at two o'clock the dogs and their handlers will give a full demonstration on the field, finding a volunteer we've hidden somewhere - the children usually enjoy that more than anything.",
   "F|And finally the radio room, at the end of the corridor. It doesn't look like much, I admit, but the main set in there has been in service for over thirty years - it is the oldest equipment we still use, and it has outlasted three of its fancy modern replacements.",
   "F|Right - follow me, stay behind the ropes in the yard, and ask as many questions as you like.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two media students, Jasur and Madina, discussing the audience figures for their podcast. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Right, Madina, I've printed out the download figures for all ten episodes. If we're presenting this analysis on Friday, we need to agree what the numbers actually mean.",
   "F|Then let's start at the beginning, Jasur. Episode one - ninety-two listeners. Our worst ever.",
@@ -124,7 +126,7 @@ $s3 = @(
   "M|That's the strange thing - she said we already have plenty of charts. And she told me not to bother comparing the different platforms; she called it a distraction. Her advice was to pick the single most interesting trend and explain it properly - cause, evidence, conclusion - instead of skating over ten things at once.",
   "F|One trend, examined properly. All right, that's our structure.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, decisions. What do we actually change for next term?",
   "M|First, a regular day. Every Tuesday, without fail. The figures show our regulars come back weekly, and at the moment we publish whenever the editing happens to be finished.",
@@ -144,13 +146,13 @@ $s3 = @(
   "M|So: the radio interview and the competition. And I'll email all our old guests tonight as well.",
   "F|We emailed them last month, Jasur. Twice in six weeks looks desperate.",
   "M|You're right, forget that. Friday it is, then. I'll bring the printouts.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of tunnels. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Today I want to talk about a kind of structure we hardly notice until we are inside one: the tunnel. Bridges get the photographs; tunnels get forgotten. Yet people have been digging through the earth for at least five thousand years, and how they did it is, in miniature, the story of engineering itself.",
   "F|Let us start at the very beginning. Some of the earliest tunnels we know of were mines. At several sites in northern Europe, prehistoric people sank pits deep into the chalk and then opened narrow galleries out sideways, working by the light of small lamps with picks made of antler, to reach flint - the hard stone they needed for their axes and knives. Crawling through those galleries today, archaeologists still find the miners' tools lying exactly where they were dropped.",

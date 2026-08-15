@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a student telephoning a company to confirm gown hire and photography for her graduation ceremony. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Milestone Ceremonies. How can I help?",
   "F|Oh, hello. I'm graduating from City University this summer, and my department said you handle the gowns and the official photographs. I'd like to get everything confirmed, please.",
@@ -51,7 +53,7 @@ $s1 = @(
   "M|Purple is the Business school, I'm afraid. You're in the faculty of Science, so your hood will be gold.",
   "F|Gold - even better.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Can we talk about money? What does the gown cost?",
   "M|The hire fee is a hundred and eighty thousand som, and that includes the cleaning - there's nothing extra to pay for that. There is also a deposit. It used to be two hundred thousand, but it went up this year, so it's now two hundred and fifty thousand som. You get every som of it back, as long as the gown comes home undamaged.",
@@ -67,13 +69,13 @@ $s1 = @(
   "M|Then you're in luck. Normally we say two weeks, but we take on extra editors in graduation season, so for July ceremonies it's ten days, and everything arrives as digital files.",
   "F|Ten days - that's before they leave. Wonderful. Thank you so much.",
   "M|A pleasure. Congratulations, and we'll see you on the fourth of July.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the coordinator of a new city ice rink briefing staff and volunteers about its opening week. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming in before we open on Monday. After three years of planning, the city finally has its own ice rink, and by the end of this briefing I want everyone to know exactly how the first week will run.",
   "F|Let me start with the question I'm asked every single day: who paid for all this? Most people assume it was the city council. In fact, the council could only find about a quarter of the money. This building exists because our application to the national sports fund was successful - that grant covered most of the construction costs. Local businesses helped as well, and I'll come back to one of them in a moment, but the fund is the reason we're standing here.",
@@ -81,7 +83,7 @@ $s2 = @(
   "F|Opening day itself needs care, because it's different from the posters. The posters give our normal opening time, ten in the morning, and from Tuesday onwards that's exactly right. But on Monday the morning belongs to the schools and the official ceremony, so the doors open to the public at two in the afternoon. If people arrive at ten on Monday, please explain politely and point them to the cafe.",
   "F|One more thing before we walk the building: queues. Saturday will be enormous, and the ticket desk will struggle. When visitors ask how to avoid the wait, the answer is simple: book on the website. Online bookings have their own entrance on the left and go straight through. Coming on a weekday morning won't help - that's when the school groups are in - and the evenings will honestly be the busiest hours of all.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Right - the building, area by area, in the order you'll show visitors round.",
   "F|First, the beginners' area. It's the short stretch of ice at the far end, and it's separated from the main ice by a low barrier, so new skaters can find their feet without faster skaters flying past their elbows.",
@@ -91,13 +93,13 @@ $s2 = @(
   "F|The late-night session, Fridays and Saturdays from nine, with music and coloured lights - I can save you some conversations here, because every place for the whole of opening week has sold out. Not one ticket left, so don't let anyone queue for it.",
   "F|And finally, the viewing gallery, up the stairs beside the main entrance. It costs nothing at all: anyone can go up and watch for as long as they like without paying a thing. Mention it to grandparents - they love it.",
   "F|That's the tour. Skates on, everyone - let's walk the ice before the whole city arrives.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two final-year biology students, Timur and Laylo, planning their research poster for the end-of-year exhibition. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|So, Timur - three years of green roofs and insect traps, and it all has to fit on one sheet of paper. Where do we start?",
   "M|By deciding what the poster is actually for. My instinct is to squeeze the whole dissertation onto it - every method, every table, every number.",
@@ -119,7 +121,7 @@ $s3 = @(
   "M|We tried scripts at the conference practice, remember? Word for word - and we sounded like robots. And printed handouts are officially discouraged now; all that paper ends up in the bin by five o'clock. Simpler idea: we take turns at the poster, an hour on, an hour off. One of us is always there, and we each still get to see everyone else's work.",
   "F|Turns it is. I'll draw up a rota tonight.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|You know what the discussion section still needs? One honest line about why the project worked. Everyone will ask what we'd tell next year's students, and we should agree on the answer now.",
   "M|For me it was the pilot study, no contest. Those two trial roofs in October showed us the traps flooded in heavy rain, and we fixed the design before the real fieldwork began. Without that, we'd have lost the whole spring.",
@@ -135,13 +137,13 @@ $s3 = @(
   "M|Agreed. What about that photograph of the insect traps you took in spring?",
   "F|I looked again - it's far too blurry to survive printing at poster size. And before you suggest it, a map of the six sites would just be six dots scattered across the city. It tells nobody anything.",
   "M|Fine - the code and the acknowledgements, and we print on Thursday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of underwater diving. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. This is the final lecture in our series on exploration, and we finish by going in the one direction we haven't yet tried: straight down, under the sea. The story of diving is a journey completed in stages, with each invention letting people go a little deeper, and stay a little longer, than the generation before. Looking back across it, you can watch human beings slowly winning an argument with their own bodies.",
   "M|For thousands of years there was only one way to work under water: you took a breath at the surface and you held it. Breath-hold divers are as old as coastal life itself. They gathered food, naturally, and they brought up shells and sponges - the natural sponge was so valuable in the ancient Mediterranean that whole island communities lived on the trade. Divers had military careers too: Greek writers describe war divers who swam out in darkness and cut the anchor cables of enemy ships, setting whole fleets drifting onto the rocks. But the body set hard limits. A trained diver of the ancient world could stay under for about two minutes, and reach a depth of perhaps twenty metres. Beyond that, flesh and lungs simply refused.",

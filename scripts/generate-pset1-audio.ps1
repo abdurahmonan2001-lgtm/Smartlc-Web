@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a dental clinic to register as a new patient and book her first appointment. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good afternoon, Pearl Dental Clinic. How can I help you?",
   "F|Oh, hello. I've just moved to this part of the city, and I'd like to register as a new patient, please.",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|Neither, actually. A colleague of mine is a patient here, and she recommended you.",
   "M|A recommendation - always nice to hear. Right, that's the registration details done.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Could you tell me about the fees? I believe there's a charge for registering.",
   "M|There is. The registration fee is one hundred thousand som - oh, forgive me, no, that's the rate for a whole family. For one adult it's eighty thousand, and that does include your first X-ray, so it's better value than it sounds.",
@@ -73,13 +75,13 @@ $s1 = @(
   "F|Behind the building, off Cherry Lane. Great.",
   "M|And finally, we send every patient a reminder the day before their visit. We used to telephone, but people rarely answer numbers they don't know - so it comes by email now. Could I take your email address?",
   "F|Of course, it's...",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a transport officer explaining changes that are being made to the city bus network. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming. My name's Dilbar Rasulova, I'm a transport officer with the city council, and I'm here to walk you through the changes we're making to the bus network over the coming year.",
   "F|Let me start with the obvious question: why change anything at all? Some people assume it's about congestion in the city centre. In fact, since the tram line opened, traffic in the centre is actually moving better than it has for years. Others have suggested our vehicles are simply worn out - but more than half the fleet is under five years old. The real issue is this: over the last decade, tens of thousands of people have moved into the new housing districts on the eastern side of the city, and the buses still follow routes that were drawn up twenty years ago, when those districts were empty fields. Whole neighbourhoods are effectively without a service, and that is what we are putting right.",
@@ -87,7 +89,7 @@ $s2 = @(
   "F|Ticketing is changing too. From January, you will no longer be able to pay the driver in cash. I know some passengers will find that hard at first, but counting coins at the door is the single biggest cause of delay at stops. You'll still be able to pay by bank card, just by touching it on the reader, and of course the transport app continues exactly as before.",
   "F|One more general point. Where should you go for information as the changes come in? The notices at bus stops will be replaced in stages, so I'm afraid some of them will be out of date for a while, and the free newspaper only prints a short summary once a month. The one place that is always current is the city website - everything is updated there the moment a change is confirmed, so please make that your first stop.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Right - let me go through the routes that are affected, one by one.",
   "F|First, route four. There was a lot of talk in the spring about route four being withdrawn altogether, and I'm glad to say that is not happening - it stays. But it will not look quite the same: in the city centre, it currently crawls along Market Street, which is being pedestrianised, so within the centre the buses will follow a completely different route, going around by the ring road and approaching the square from the north. Outside the centre, nothing changes.",
@@ -97,13 +99,13 @@ $s2 = @(
   "F|Route twenty-three is the one I'm most excited about. It has been chosen as the first route in the city to be operated entirely by the new electric buses. They're quieter, they're smoother, and there are no exhaust fumes at all. If the trial goes well, other routes will follow.",
   "F|And finally route thirty-one, which serves the central market. The traders there start work at dawn, and they have told us for years that the first bus arrives too late to be any use. We've listened: from March the first departure will be at five in the morning instead of six. The rest of the timetable is unchanged.",
   "F|That's everything for tonight - thank you, and I'm happy to take questions over coffee.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two geology students, Sardor and Zilola, planning their coastal field trip. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Zilola, we need to get this field trip plan to Dr Amirova by Friday. Shall we start with why we picked Redgate Cliffs? She'll want a justification.",
   "F|Sure. And let's be honest about it - it's not the easiest place to get to. The bus only goes as far as the village, and it's a forty-minute walk after that.",
@@ -123,7 +125,7 @@ $s3 = @(
   "F|Photos are encouraged, but they're not what's marked. And we're definitely not bringing back rock samples - the site's protected, you can't remove anything. What she requires is a scale drawing of the cliff face, with every bed measured and labelled. That's the assessed piece of work.",
   "M|A scale drawing. OK, noted.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Let's sort out equipment. What do we need from the department store room?",
   "M|Well, not a camera tripod - you've got that little folding one, haven't you?",
@@ -138,13 +140,13 @@ $s3 = @(
   "F|Not for a daytime visit - the department office does that automatically when they file our plan. And there's nothing to print, either, now we're using the tablet.",
   "M|So: you pack the first-aid kit, I download the map. Wednesday, safety briefing. I'll start the risk assessment form tonight.",
   "F|Deal. Redgate Cliffs, here we come.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of soap and cleanliness. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. This week we've been looking at the chemistry of everyday substances, and today I want to talk about one of the oldest manufactured products in human history: soap. It's something you used this morning without thinking - and yet its story runs through four and a half thousand years of technology, trade, medicine and even advertising.",
   "F|Let's begin at the beginning. The oldest soap recipe we know of is written on a Babylonian clay tablet that is about four and a half thousand years old. And the recipe is essentially the one humanity used ever after: you boil animal fat together with ash - the ash taken from burned wood. The alkali in the ash reacts with the fat, and the result is a crude but genuine soap. What's interesting is what it was for. This early soap wasn't used on the body at all. It was used for washing wool, to strip out the grease before the fibres were dyed. Soap, in other words, began its life as an industrial product, not a personal one.",

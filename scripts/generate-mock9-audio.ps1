@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a furniture store to arrange the delivery of her order. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Orion Furniture, deliveries department. How can I help?",
   "F|Good morning. I ordered some furniture from you last week, and I'd like to arrange the delivery, please.",
@@ -50,7 +52,7 @@ $s1 = @(
   "F|The fourth. But please don't worry about that - there's a lift in the building, so your men won't have to carry anything up the stairs.",
   "M|That is always good to hear. Thank you.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|So when could you deliver?",
   "M|Let me look at next week for you. We have space on Monday, though I should warn you Monday is always our worst day for delays. Wednesday is completely full.",
@@ -68,13 +70,13 @@ $s1 = @(
   "M|The driver leaves the warehouse at about half past eight, and he'll send you a text - not a phone call, a text - roughly twenty minutes before he arrives.",
   "F|A text. Perfect. Thank you very much for your help.",
   "M|My pleasure. See you on Tuesday.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a parks officer talking to local residents about planned improvements to Northbrook Park. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening everyone, and thank you for coming out tonight. I'm the parks officer for this area, and I'm here to explain what we plan to do with Northbrook Park over the next two years.",
   "F|Let me start with why this is happening now. As many of you know, the park will be a hundred years old the year after next, and yes, we do intend to mark that. But the anniversary is not what set this off. Nor is it - as a letter in the local paper suggested last month - some instruction from central government telling councils to spend money before the end of a budget year. What actually started it was you. Eighteen months ago we posted a questionnaire to every household within a mile of the park, and we had more than two thousand replies. Every item in this plan comes out of the answers you gave us.",
@@ -91,13 +93,13 @@ $s2 = @(
   "F|The cafe, now. It's popular, and on a Sunday afternoon there is nowhere to sit. Several of you asked for longer opening hours, and I'm sorry to say that isn't in this plan. What we are doing instead is extending the building, roughly doubling the space inside, with a new terrace facing the lake.",
   "F|And the sports courts at the far end. They stay exactly where they are - moving them was discussed and rejected, because that corner is the only flat ground we have. But the tarmac dates from the nineteen eighties, it's cracked, and it is dangerous in the wet. It is being dug up and given a new all-weather surface.",
   "F|That is the plan. There are drawings on the tables at the back, and I'll take questions in a moment.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two engineering students, Timur and Zarina, discussing their model-bridge project. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Timur, we have to write the introduction today. Why did we choose a truss design in the first place? Shall I put that Dr Ismailova suggested it?",
   "M|She didn't, though. All she said was that we should choose something we could actually build. No, be honest: it was the field trip. That old railway bridge we walked across in the second week - I stood underneath it looking up at all those triangles and I couldn't stop thinking about it. I came back and told you we had to build a truss.",
@@ -118,7 +120,7 @@ $s3 = @(
   "F|She was happy with the calculations, and she didn't ask for more photographs - she said there were plenty already. Her one real criticism was that we only show the bridge that worked. She wants the unsuccessful designs in there too - the first collapse, the sketches we abandoned - because that is where the learning is.",
   "M|Fine. More failure, then.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Before we finish, the self-assessment. What actually went well?",
   "M|The drawings, I'd say. They looked professional.",
@@ -135,13 +137,13 @@ $s3 = @(
   "F|And I'm not making it shorter. The competition span is fixed at a metre anyway.",
   "M|And painting it would only add weight. So: reinforce the centre, and test the joints first.",
   "F|Perfect. I'll start typing.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about how whales communicate. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. Today we are going to look at how whales communicate, and I want to begin not with the animals themselves but with the water they live in.",
   "M|If you dive down in the open sea, the first thing you notice is that the light goes. Even in clear tropical water, light fades within metres, and below a certain depth there is simply nothing to see. So for an animal that spends its whole life down there, vision is of very limited use. Sound, on the other hand, behaves beautifully. It travels roughly five times faster in water than it does in air - about fifteen hundred metres a second - and it carries much further before it fades away. And the lower the sound, the further it goes. The very deepest calls, at the bottom of human hearing and below it, can in the right conditions carry right across an entire ocean. An animal off the coast of Africa may in principle be heard by another off the coast of Brazil.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning an arts centre to sign up for a weekend photography course. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Fairview Arts Centre, good afternoon. How can I help?",
   "F|Oh, hello. I'm ringing about the weekend photography course - I saw it on the noticeboard in your cafe. Are there still places?",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|Four hundred and fifty thousand. Do you need a deposit from me now?",
   "M|No, no deposit. You simply pay the full amount on the first morning, at the desk.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And how many people will there be? I don't want to be lost in a crowd.",
   "M|You won't be. We used to take twelve, but people said they didn't get enough individual attention, so the class size is now a maximum of ten students.",
@@ -69,13 +71,13 @@ $s1 = @(
   "F|Of course, it's laylo, dot, n, at silkmail, dot, com.",
   "M|Perfect. The confirmation will be with you by email this evening, and we'll see you on the fourteenth.",
   "F|Thank you so much. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a presenter at Brookfield Community Radio showing a group of visitors around the station. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to Brookfield Community Radio. Before we walk round, let me tell you a little about who we are.",
   "F|People make all sorts of guesses about how the station began. Because we take students on placement, many assume we grew out of the journalism course at the college - we didn't. Others have heard that two local journalists founded us, and it's true that a pair of reporters from the town paper joined us early on and taught us a great deal. But the station itself actually grew out of something much smaller: the little studio that used to broadcast music and messages to patients at the hospital. When the hospital moved to its new site, the volunteers decided the whole town deserved a station, and Brookfield Radio was born.",
@@ -83,7 +85,7 @@ $s2 = @(
   "F|We have about sixty volunteers, and some of you may be thinking of joining them. I should manage your expectations. Newcomers always imagine they'll be reading the news in week one, or interviewing the mayor. In fact, everybody - and I do mean everybody, including me, twenty years ago - starts in the same place: down in the basement, sorting and cataloguing the music collection. It sounds dull; it's actually the best training there is, because you learn what the station owns and how the playout system works.",
   "F|And what am I proudest of? People often mention our podcast about the history of the town, which has listeners as far away as Canada. The young musicians' competition we ran last summer drew our biggest ever audience for a single evening. But for me, the station proved what it was for two winters ago, during the floods, when the power was out across half the district and we stayed on air all night, every night, reading out road closures and shelter addresses. That week, I think, was our finest hour.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right, let me take you round, room by room.",
   "F|We'll start in Studio One, the main broadcast studio, straight ahead of you. When we rebuilt it, the volunteers voted on what to call it, and it now carries the name of the man who started the station all those years ago at the hospital - he was, I'm glad to say, here to unveil the sign himself.",
   "F|Next door is Studio Two, where we record interviews and drama. Everything in that room - the desk, the microphones, the screens - was bought with the money from a national community-radio prize we won three years ago. We spent every penny of the award in that one room, and you can hear the difference.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|Beside it is the training room, where our volunteers learn the desk before we let them anywhere near a live microphone. It doesn't look like it now, but that room was originally the caretaker's flat, back when this building was the town's telephone exchange - you can still see his fireplace behind the equipment rack.",
   "F|And finally the performance space, our small live-music venue. When it was built, the acoustic engineers rather showed off: it is soundproofed to a standard you'd normally only find in a big city concert studio. A band can play at full volume in there while we broadcast the news next door, and not a whisper gets through.",
   "F|Right - follow me, and mind the stairs.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two sport-science students, Sardor and Kamila, planning a study of warm-up routines. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Kamila, the proposal form. The first box asks why we chose the topic.",
   "F|Ha. Do we tell the truth?",
@@ -116,7 +118,7 @@ $s3 = @(
   "F|That's my biggest fear too. If we lose a third of them before the final session, the whole design collapses. We should send reminder messages the night before each session.",
   "M|Good idea. Let's do that.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Right - which warm-ups do we actually compare? The bike is the classic one, ten minutes of gentle cycling.",
   "M|The classic, but the gym only has two bikes free at peak times, and we'd need six people warming up at once. It's out, practically speaking.",
@@ -131,13 +133,13 @@ $s3 = @(
   "F|Later. We only hand it out at the first session, so we can write it after the pilot. And don't buy stopwatches, whatever you do - the department is lending us the electronic timing gates.",
   "M|Which also means we don't need to train up a second timekeeper - the gates record everything themselves. Right. You do ethics, I book the hall, and we meet Thursday.",
   "F|Thursday it is.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of kites. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we looked at the history of the balloon. Today I want to go much further back, to the oldest flying machine of all: the kite.",
   "F|The kite was invented in China, and it is genuinely ancient - well over two thousand years old. The earliest Chinese kites were built on a light frame of bamboo, and the frame was covered with silk, which made them beautiful, strong and extremely expensive. That changed when paper became cheap enough to waste: paper replaced silk as the covering, and the kite stopped being a luxury and became something ordinary families could make at home.",

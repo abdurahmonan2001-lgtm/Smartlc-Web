@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a campsite to book a pitch for a family holiday. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Willow Bank Campsite, good morning.",
   "F|Good morning. I'd like to book a pitch for a tent, if you have anything left in August.",
@@ -50,7 +52,7 @@ $s1 = @(
   "F|No, we'll manage without.",
   "M|And you can bring one car per pitch and park it beside the tent, so you won't be carrying everything across the field.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Is there anything I ought to bring that people usually forget?",
   "M|There is. The ground in the orchard is very stony, so do bring a mallet for the tent pegs. People turn up with pegs and nothing to knock them in with, and then they borrow ours all week.",
@@ -67,13 +69,13 @@ $s1 = @(
   "F|By card on arrival. And will I get anything in writing?",
   "M|You will. We used to post a booking letter out, but it never arrived in time, so now everything goes by text. Your confirmation will reach you as a text within the hour.",
   "F|Wonderful. Thank you very much indeed.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a heritage officer speaking at the launch of a new town heritage trail. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on such a wet night to open the Northgate Heritage Trail.",
   "F|People keep asking me whose idea this was, and I am always pleased to correct them. It was not the museum. My colleagues there have done an enormous amount of the research, and I could not have written a word of the guide without them, but the idea was not theirs. Nor was it the walking club, although they walked every step of the route for us last spring and told us where the mud was. The trail began as a class project at Northgate Primary: a group of nine-year-olds drew a map of the buildings they thought a stranger ought to see, and it was so good that the council simply built the trail around it.",
@@ -81,7 +83,7 @@ $s2 = @(
   "F|Now, this town has had guided walks before, and you may be wondering what makes this one different. It is not the length, and it is not the leaflet. What is new is that eleven of our twenty markers stand in front of nothing at all. Wherever a building has been pulled down, we have put up a post carrying a picture of what used to stand there. This trail is as much about what the town has lost as about what it has kept.",
   "F|One practical warning. The printed map tells you to begin at the museum, and we shall be correcting that in the next edition, because the museum does not open until eleven and half of you will want to set off long before that. Begin at the market square instead - the first marker is beside the old water pump - and you will reach the museum at about the right time for coffee.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Let me say a word about six of the places the trail will take you past.",
   "F|The old mill is the obvious landmark, and everybody photographs it. Do read the post beside it, though, because the building you are looking at is not the medieval one. That burned down in nineteen eleven, and what you see went up two years later on the same walls, which is why the windows are the wrong shape.",
   "F|The tannery yard is immediately behind it, and visitors expect a ruin. In fact a firm of joiners has worked in those buildings since the nineteen fifties, and if you go on a weekday they will wave at you through the doorway. It is a working yard, and it always has been.",
@@ -90,13 +92,13 @@ $s2 = @(
   "F|The ropewalk is the one I would not miss: a long narrow shed where rope was twisted by hand, three hundred feet of it. Every other ropewalk in the region has been demolished, so this is the only one left standing anywhere in the county.",
   "F|And finally the ice house, which is my favourite, because nobody knew it was there. When the contractors were digging out the foundations for the new car park, a machine went straight through the roof of it, and we found a brick chamber nobody had opened since the eighteen nineties.",
   "F|Right. The rain has stopped, so let us go and look at the first post.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two environmental science students, Sherzod and Gulnora, discussing a survey of a river. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Gulnora, before we write the introduction - why did we settle on the Kelesh in the end? Doctor Rahimova is bound to ask.",
   "F|She is, and it was not her suggestion, whatever she remembers. She wanted us on the canal, because of the easy access. And it was not the stream behind the halls of residence either - I know you liked that one, but it is two metres wide and we would have finished in a day.",
@@ -119,7 +121,7 @@ $s3 = @(
   "M|But those photographs. You can see the bank at every reach, and how much of it has fallen into the river since.",
   "F|The photographs are worth more than the rest of that report put together. That is what I would say in the review.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So in the review we also have to say what was wrong with the old survey.",
   "M|There is plenty. Although it was published, at least - it sits in the departmental library, so we cannot complain about that. And they took samples enough, three replicates at every point, which is more than we are doing.",
@@ -131,13 +133,13 @@ $s3 = @(
   "M|And I will book the minibus. There is one department vehicle and the field course takes it every Thursday, so if I leave it we will be carrying nets on the public bus.",
   "F|Charts we already have - the library set is perfectly good, so do not buy anything.",
   "M|Letter and minibus. See you Thursday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of clocks. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we discussed the calendar, which divides up the year. This week we go the other way, and divide up the day: the history of clocks.",
   "F|For most of human history the sun did the work. The Egyptians raised tall stone obelisks in their squares, and the citizens told the time by watching the shadow move across the paving around them. The device we now call the sundial is simply that idea made portable. It has one obvious weakness, and the ancient world felt it keenly: on a cloudy day, or at night, it tells you nothing whatsoever.",

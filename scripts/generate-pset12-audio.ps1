@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a repair company to arrange a visit from an engineer. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Ashford Home Repairs, good morning.",
   "F|Good morning. I'd like to book an engineer to come and look at an appliance, if that's possible this week.",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|Ninety thousand. And how would you like me to pay?",
   "M|Card or cash on the day, whichever is easier for you.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|There is one difficulty. I have to be at work by half past eight, so I probably won't be here when he comes.",
   "M|That's not a problem at all, as long as somebody can let him in. Is there a relative nearby who could hold a key?",
@@ -72,13 +74,13 @@ $s1 = @(
   "M|Every repair we do carries a three-month guarantee. If the same fault returns inside that period we come out again, and there is no second call-out charge.",
   "F|That's reassuring. Thank you very much indeed.",
   "M|Thank you for calling. We'll see you on the nineteenth.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a transport officer talking to a community meeting about a new bus-on-demand service in the town of Marden. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone. Six months ago the number thirty-one bus disappeared and something called Marden Connect took its place, and I know some of you are still not sure what happened or why.",
   "F|Let me deal with the why first, because there are two explanations going round that are simply wrong. People assume we did it to save money on fuel. Fuel is expensive, certainly, but that is not what drove the decision. And several of you have asked whether it was because of the new houses out at Ashcombe; those came later, and the plan was already written. The plain fact is that the number thirty-one, running its fixed route four times a day, was carrying an average of two passengers a journey. Two. A service that empty cannot be defended, and the choice in front of us was between cancelling it altogether and reinventing it.",
@@ -86,7 +88,7 @@ $s2 = @(
   "F|What are people unhappy about? Waiting times, you would expect. In fact the average wait has been eleven minutes and we have had almost no complaints about it. Fares are exactly what they were on the old bus, so nobody complains about those either. No - every complaint we have received, and there have been plenty, is about where the vehicle stops. People expected to be collected outside their own front door, and in most of the town they walk to a corner up to four hundred metres away.",
   "F|And what is changing? From April the service will run later. At the moment the last booking is at seven in the evening; from April you will be able to travel until eleven, which the college students have been asking for since the day we started. Fares are not going up this year. The area we cover will grow as well, but not in April - that is for next year, once the second minibus is delivered.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you through the main destinations one by one, because each of them has its own story.",
   "F|The hospital first. More journeys end at the hospital than anywhere else on the network - it accounts for almost a third of everything we carry, and if you travel at two in the afternoon you will certainly be sharing the minibus.",
   "F|Marden railway station. The pick-up point there used to be on the forecourt, but the taxi firms objected and, to be fair to them, the forecourt is chaotic at half past seven in the morning. So since the middle of last month we have collected and set down in Bridge Lane, at the side of the station.",
@@ -95,13 +97,13 @@ $s2 = @(
   "F|The leisure centre. It sits at the far end of the zone and the road out there is slow, so it is the one destination we ask you to book the day before, rather than an hour before. If you try to book it at short notice the app will simply refuse you.",
   "F|And the market. We run to the market square on Saturdays only - there is no service to it during the week, because on weekdays the square is closed to vehicles altogether. On Saturday mornings, though, we run every twenty minutes.",
   "F|Right, that is the tour. I'll take questions now.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two psychology students, Javlon and Madina, discussing a memory test they are preparing. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Javlon, before we write anything else, the report wants a paragraph on why we chose this topic. Memory for spoken instructions.",
   "M|Do we say the tutor suggested it?",
@@ -128,7 +130,7 @@ $s3 = @(
   "F|I'll draw it. Limitations she was happy with, then?",
   "M|Happy enough.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, the word lists themselves. What do we change?",
   "M|Two things, I think. First, length. We had cinema next to refrigerator next to cat, and the long ones were remembered worse simply because they are long. Every word should be about the same length - two syllables, say.",
@@ -147,13 +149,13 @@ $s3 = @(
   "F|Thursday. And we don't need to buy headphones, do we?",
   "M|No, the department has twenty pairs. And the instructions stay in English, so nothing to translate.",
   "F|Right. Consent form and the pilot data. That's the week.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of purple dye. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed the history of indigo. Today I want to take the colour that sits opposite it in every sense: purple. For three thousand years purple was not simply a colour. It was a statement about who you were.",
   "F|The story begins on the coast of what is now Lebanon, in the Phoenician city of Tyre, which gave the dye the name it still carries: Tyrian purple. And the source of that dye was, of all things, a sea snail. Two or three related species were used, and the dye came from a single small gland inside the animal. Fresh from the gland the liquid is not purple at all - it is a pale cream, and it turns through green and blue to deep red-purple only when it is exposed to air and sunlight.",

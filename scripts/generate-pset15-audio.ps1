@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a driving school to book an intensive driving course. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Highfield Driving School, good morning.",
   "F|Good morning. I'd like to book one of your intensive courses, if there are any places left this summer.",
@@ -53,7 +55,7 @@ $s1 = @(
   "M|Normally he would pick you up outside our office, but the office car park is being resurfaced that fortnight. So for the first lesson, wait outside the station and he'll collect you there. After that he comes to your home.",
   "F|Outside the station. Fine.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And what does the week cost?",
   "M|The published price is nine hundred thousand som, but if you book all five days at once there's a package rate, so it comes to seven hundred and eighty.",
@@ -72,13 +74,13 @@ $s1 = @(
   "F|A text is perfect.",
   "M|Then I'll send the confirmation by text this afternoon, and we'll see you on the twenty-second.",
   "F|Thank you very much. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a librarian talking to visitors at the opening of a new makerspace at Ashgrove Library. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and welcome to Ashgrove Library. Before I show you round the makerspace, let me answer the four questions I have been asked most often this week.",
   "F|The first is whose idea this was. The culture department at the council has taken a certain amount of the credit, and they did pay for part of it, but the idea was not theirs. Nor did it come out of the reader survey we ran two years ago - the survey came afterwards and simply confirmed what we already knew. The truth is that a group of teenagers who came in every Thursday spent about eighteen months asking us, politely at first and then rather less politely, to buy a three D printer. In the end we bought a good deal more than that.",
@@ -86,7 +88,7 @@ $s2 = @(
   "F|The third question is what went wrong, because everybody enjoys that one. Money, oddly, was the easy part - the grant came through first time. Finding staff was easier than we had feared, too, once the volunteers heard what we were planning. What nearly stopped the project was the building: we had designed the makerspace for the first floor, and then the engineers told us the floor there would not carry the weight of the equipment. So the whole thing came downstairs, which is why you are standing in what used to be the reference room.",
   "F|And the fourth question is what it is for. Not, principally, to train people for employment, though if that happens we shan't complain. And it is not a youth club, whatever the Friday evening timetable suggests. The purpose is simpler and much older: to help people mend and alter the things they already own, and to make the things they cannot buy. A library lends you books you could not afford to own. This room lends you tools on exactly the same principle.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right - let me take you round the room, corner by corner.",
   "F|We start at the door with the print bay, which holds the three D printers and the laser cutter. Everything else in this room is free to use, but the print bay is our one exception: we charge for the plastic filament and the sheet material by weight, at exactly what it costs us. It is the only corner of the makerspace where anybody will ask you for money.",
   "F|Along the window is the textile room, with the sewing and embroidery machines. Some of you will recognise the equipment. The Tuesday sewing group used to meet in the hall behind the church, and when the hall was sold last year they brought the whole lot across to us - same machines, same members, new address.",
@@ -95,13 +97,13 @@ $s2 = @(
   "F|Opposite the booth is the electronics bench, with the soldering irons, the microscopes and those beautiful component drawers. We could never have afforded any of it. An engineering firm on the industrial estate replaced their workshop last year and gave us the old one, complete, on the single condition that we never mention their name. So I shan't.",
   "F|And finally the display cabinet by the entrance, where finished projects go on show. That was not our design at all: we ran a competition in the primary schools, and the winning class worked with the joiner on the shelves, the lighting and even the little labels. They chose that colour too, as you can probably tell.",
   "F|Right. Do go in, and please touch things.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two geography students, Farrukh and Nilufar, planning a study of wind on their university campus. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Nilufar, before we write the proposal - how do we explain why we picked wind?",
   "F|Honestly? The student newspaper. Three weeks running there were letters about the wind at the library entrance - somebody's coffee, somebody's essay, somebody nearly knocked off her feet. That is what made me think there was a project in it.",
@@ -123,7 +125,7 @@ $s3 = @(
   "F|Not the city council - the campus isn't theirs. Future students will read it, but that's not a use. It's the estates department. They're planting the new avenue next spring and they still haven't decided where the trees go. If we can show them which corners are worst, that decision gets made with evidence instead of guesswork.",
   "M|Estates. Right - that goes in the introduction.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So which features are actually making the wind? Let's agree on that before we choose the sites.",
   "M|The obvious one is the gap between the two towers. It's a funnel - everything that hits the south face has to go somewhere, and it goes through there. That's where the letters came from.",
@@ -143,13 +145,13 @@ $s3 = @(
   "M|And the recording app you wanted?",
   "F|Forget the app. Try tapping a screen in a gale with cold hands. Paper sheets on a clipboard, and we type them up in the evening.",
   "M|Paper it is. Right - I write the risk assessment, you email estates.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of glass. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Today's lecture is about a material so ordinary that you are almost certainly looking through some of it, or at it, at this very moment: glass.",
   "F|Glass existed long before anybody made it. Where a volcano cools its lava quickly enough, it forms a natural glass called obsidian, and our ancestors were shaping obsidian into knives and arrow points hundreds of thousands of years before the first furnace was lit. It takes an edge finer than steel; a few surgeons still use it.",

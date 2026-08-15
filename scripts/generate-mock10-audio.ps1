@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a cafe about a part-time job that has been advertised. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|The Willow Cafe, good morning.",
   "F|Oh, hello. I'm calling about the part-time job - I saw your advertisement in the local newspaper this week. Is the position still open?",
@@ -47,7 +49,7 @@ $s1 = @(
   "M|And there's one other thing people like: you get a free meal on every shift. The cook makes dinner for the staff at half past five, before things get busy.",
   "F|Oh, lovely.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Do I need to buy a uniform?",
   "M|Not really. You wear your own black trousers and a white shirt - most people have those already. And we provide an apron, a green one with the cafe's name on the front.",
@@ -63,12 +65,13 @@ $s1 = @(
   "M|We're closed on Tuesday afternoons, so the front door will be locked. Come round to the side door - it's the one right next to the bakery - and just knock.",
   "F|The side door by the bakery. Wonderful. Thank you so much for your help.",
   "M|You're very welcome. Good luck with the interview.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the organiser of the Greenvale Walking Festival describing this year's programme to a public meeting. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone - lovely to see so many of you here. As chair of the organising committee, my job tonight is to tell you what's happening at this year's Greenvale Walking Festival.",
   "F|Now, people always ask what's new this year, so let me clear a few things up. The walks will still leave from different points around the town - we tried a single meeting place two years ago and, frankly, it was chaos, so we won't be repeating that. Our evening walks, which many of you enjoyed last summer, continue exactly as before. The real change is the size of the festival itself: for the first time it will run for ten days instead of seven, which lets us cover two full weekends. We think that's the biggest step forward since the festival began.",
@@ -76,7 +79,7 @@ $s2 = @(
   "F|A word about what to bring. Good shoes, obviously. The longer walks include a food stop, so you needn't carry lunch, and the long-range forecast is dry, so waterproofs shouldn't be necessary. But whichever walk you choose, you must bring something to drink. Once you leave town there is almost nowhere to fill a bottle, and we've had people taken ill in previous years.",
   "F|Finally, money. Every walker pays a small fee, and you deserve to know where it goes. Last year the fees paid for repairing the footpaths up on the ridge - you'll notice the difference. The new visitors' map some of you have seen was paid for by the town council, not by us. This year, everything we raise will buy new signposts for the whole network of paths; the old ones have almost rusted away.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|So let me take you through the six walks on this year's programme.",
   "F|We open with the Riverside Walk. It's level the whole way and follows a smooth, paved path beside the water, which means it's fully suitable for wheelchair users - and for pushchairs, come to that. Everyone can join this one.",
   "F|Then there's the Castle Walk, up to the old ruins. This year it will be led by a historian from the town museum, who'll stop at a dozen places along the way to explain what you're actually looking at. I've heard him speak - don't miss it.",
@@ -85,12 +88,13 @@ $s2 = @(
   "F|The Valley Walk is completely new - we have never been able to offer it before, because it crosses private farmland. This year, for the first time, the farmer has kindly opened his gates to us. None of the committee has even walked it yet - you'll be the very first.",
   "F|And finally the Ridge Walk, our longest and, I'd say, our most beautiful. Be aware that it's the only walk that doesn't bring you back to where you started: it finishes in the village of Elmford, on the far side of the hills, and a special bus brings walkers back to town at five o'clock.",
   "F|Right - now let me say a little about the closing ceremony...",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Timur and Zarina, planning a study of university students' reading habits. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Zarina, before we plan anything else - the proposal form asks why we chose the topic. Reading habits. Was it because your own reading changed when you started university? Mine certainly did.",
   "F|Honestly, no - I read much the same as I did at school. What actually started it was a national report I came across, about how little university students read for pleasure. The figures genuinely shocked me, and I wanted to know whether our university looks the same. We can ask the librarian for borrowing data later, but the idea came straight from that report.",
@@ -103,7 +107,7 @@ $s3 = @(
   "M|Good catch - that would have distorted everything. And what did the tutor say when you showed her the plan?",
   "F|She was positive, mostly. She said the research question is already narrow enough, and that there's no hurry to start collecting data. Her one firm instruction was to read more of the earlier studies first - she says half of what we're planning has been tried before, and we should learn from it.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Right - the diary itself. What goes on the page?",
   "M|I originally wanted a daily word count - the number of words each person read.",
@@ -117,12 +121,13 @@ $s3 = @(
   "M|Good idea - first week, before anyone starts. The librarian can wait until we have results to show her; there's no point meeting her yet. And for recruiting, let's go through the lecturers rather than advertising on social media - we need every department, remember, not just the people who follow us.",
   "F|Agreed. And no rewards, I'm afraid - we simply haven't the budget for gifts. People will have to do it for science.",
   "M|For science, then. To the library?",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about how scientists monitor volcanoes. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today I want to look at one of the most practical branches of the earth sciences: the monitoring of volcanoes. Why does it matter? Around eight hundred million people - roughly one person in ten on this planet - live within a hundred kilometres of an active volcano. And here is the encouraging part: unlike earthquakes, which strike without notice, volcanoes almost always give warnings before they erupt. Monitoring is the science of reading those warnings in time.",
   "M|The first and oldest family of signals is earthquakes. As magma - molten rock - forces its way upwards, it has to break the solid rock around it, and every crack produces a small earthquake. These are usually far too weak for anyone to feel, but they are detected by instruments called seismometers, planted in networks across the volcano's slopes. And the pattern matters as much as the events themselves. Alongside the individual snaps and cracks, instruments sometimes record a continuous, rhythmic shaking known as tremor - and this is a signal of a different order, because tremor tells us that magma is not merely present but actually moving. Just as important, swarms of tiny earthquakes typically become more frequent in the days before an eruption, which is why seismic networks are the backbone of every warning system in the world.",

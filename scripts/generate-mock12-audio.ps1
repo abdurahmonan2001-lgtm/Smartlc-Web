@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a removals company to ask for a quote for moving house. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, Greenway Removals. How can I help you?",
   "M|Good morning. We're moving house next month and I'd like a quote, please.",
@@ -57,7 +59,7 @@ $s1 = @(
   "F|A piano, down three flights. That means two extra staff on the day - we won't attempt it with the standard crew.",
   "M|Two extra men for the piano. I understand.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|So what is all this going to cost?",
   "F|For a move of that size on a weekday, the price is eight hundred thousand som, and the fuel is included - no extra charge for the distance. Had you wanted the Saturday, it would have been nine hundred and fifty thousand.",
@@ -73,13 +75,13 @@ $s1 = @(
   "F|One thing, and please don't forget it. Could you send us some photos of the staircase? With a piano coming down, the team likes to see the corners in advance.",
   "M|Photos of the staircase. I'll take them this evening and email them across.",
   "F|Thank you, Mr Rakhimov. I'll put the ninth of October in the diary.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a member of staff welcoming visitors to the Harbourside Aquarium. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning everyone, and welcome to the Harbourside Aquarium. Before I let you through, a little about the place and about today.",
   "F|People always ask about this building. Standing here on the old docks, most visitors guess it was the city's fish market. There was one, but it stood two streets away and was pulled down years ago. Others assume this was the ferry terminal. The ferries did leave from the quay outside, though from a wooden shed, not from here. In fact this brick hall was a power station, generating electricity for the whole harbour for sixty years. When it closed, the tanks went in where the machinery had stood.",
@@ -87,7 +89,7 @@ $s2 = @(
   "F|Two requests before you set off. You may walk round in any order - there is no fixed route, whatever the arrows on the floor suggest. And you may keep your bags; the lockers are there if you want one, but nobody will make you use them. The single rule I do ask you to keep is this: please switch off the flash on your cameras and phones. Photograph as much as you wish, but a flash frightens the fish, and in one or two tanks it genuinely harms them.",
   "F|People often ask how they can support us, because we are a charity and receive nothing from the city. The gift shop by the exit helps, of course, and every purchase is welcome. Membership is good value if you live locally, and lets you come as often as you like. But what really keeps this place alive is our adoption scheme. For a small sum each month you adopt one of our animals - a turtle, a penguin, whichever you fall in love with - and that steady, year-round income pays for the food and the veterinary care. Adopting an animal is far and away the most useful thing you can do for us.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you through the six areas you'll be seeing today.",
   "F|We begin with the Coral Reef Hall, straight ahead of you. It was paid for by a university research grant, and the architecture is nothing to write home about. But every year, when we ask visitors what they enjoyed most, the Coral Reef Hall comes top of the list - more people choose it than choose all the other areas put together.",
   "F|Next to it is the jellyfish gallery. Do give your eyes a moment when you walk in, because we keep the lighting very low in there. Jellyfish show up best against a black background, and strong light distresses them. Visitors sometimes think we are saving electricity. We are not.",
@@ -96,13 +98,13 @@ $s2 = @(
   "F|The penguin pool is next, and it is the one part of the aquarium I'm a little embarrassed about. The colony has grown faster than we expected and the pool is now simply too small. Work begins in the spring to double it, so if you come back next summer you will find it twice the size it is today.",
   "F|And finally the turtle rescue centre, where we look after turtles injured out at sea. I'm sorry to say you won't get in there today - or rather, not this morning. The vet is operating and the doors stay shut until one o'clock. Do come back this afternoon.",
   "F|Right. Tickets scanned, and off you go.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Timur and Zarina, planning a questionnaire about tourism in their city. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Zarina, the form asks us to say how we chose the topic. Shall I put down Doctor Karimova's lecture on the tourist economy? We were both at that one.",
   "F|We were, but that isn't where it came from, Timur. It was that piece in the city newspaper - the figures showing visitor numbers had doubled in three years. I read it on the bus and thought, nobody has actually asked those people anything.",
@@ -126,7 +128,7 @@ $s3 = @(
   "F|I asked her after the seminar. She wasn't worried about a timetable - we'd learn the timing by doing it. And there's nothing to spend money on, so no budget. But she was firm on one point: the proposal must include some of the actual questions, written out word for word. She can't judge a questionnaire from a description of it.",
   "M|Sample questions in the proposal. Understood.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, which visitors do we interview? We can't do all of them.",
   "M|Business travellers first, surely. The hotels are full of them.",
@@ -145,13 +147,13 @@ $s3 = @(
   "F|Email, through the hotels. Three have agreed to send our link to guests after they check out. It reaches people who really did stay here, and they answer at home when they've time.",
   "M|Emails through the hotels, and forms at the information office. That's our two.",
   "F|Then we can start writing the proposal.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about pearls. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today we're looking at the only gemstone made by a living animal: the pearl.",
   "M|Pearls are produced by molluscs - oysters above all, but mussels too, in the sea and in fresh water. The process begins when something gets inside the shell that has no business being there. Now, almost everybody here was taught that this something is a grain of sand. It is a charming story, and it is false. Sand washes in and out of a shell all day and the animal ignores it. What actually starts a natural pearl, in the great majority of cases, is a parasite - a small worm that bores through the shell and lodges in the soft tissue.",

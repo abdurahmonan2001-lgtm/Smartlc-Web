@@ -347,7 +347,15 @@ function scoreTest(test, answers, username, startedAt) {
 
 // Saves a result, falling back to the browser when the database is
 // unreachable so a finished paper is never simply lost.
+// The owner's own account sits outside the record: their attempts are not
+// stored, so the teacher dashboard keeps showing students' work only, and
+// nothing they open ever counts as "used up".
+let SUPPRESS_SAVES = false;
+export const setSuppressSaves = (v) => { SUPPRESS_SAVES = !!v; };
+const EMPTY_SET = new Set();
+
 async function persist(result) {
+  if (SUPPRESS_SAVES) return true;
   let saved = false;
   try { saved = await saveResult(result); } catch { saved = false; }
   if (!saved) {
@@ -727,6 +735,13 @@ export default function PracticeApp() {
       });
   }, [user]);
   const access = accessFor(context.level, context.lessonNum);
+  // An owner browses the library; they do not sit it for a record. Nothing
+  // is saved, and nothing reads as used up, so every paper can be reopened.
+  setSuppressSaves(!!access.owner);
+  const NONE = EMPTY_SET;
+  const usedMocks = access.owner ? NONE : takenMocks;
+  const doneMocks = access.owner ? NONE : completedMocks;
+  const usedPractice = access.owner ? NONE : takenPractice;
 
   // Which mocks this student has used up. Starting a mock stores an
   // `mockN-attempt` marker, and finishing stores the three paper results,
@@ -840,9 +855,9 @@ export default function PracticeApp() {
         onBack={() => setView({ name: "library" })}
         onOpenBrief={(testId) => setView({ name: "brief", testId })}
         onStartMock={startMock}
-        takenMocks={takenMocks}
-        completedMocks={completedMocks}
-        takenPractice={takenPractice}
+        takenMocks={usedMocks}
+        completedMocks={doneMocks}
+        takenPractice={usedPractice}
       />
     );
   }
@@ -889,7 +904,7 @@ export default function PracticeApp() {
     const papers = allTests
       .filter((t) => t.bookId === view.bookId)
       .sort((a, b) => order[a.module] - order[b.module]);
-    if (!book || papers.length < 3 || takenMocks.has(book.id) || !access.mocks) {
+    if (!book || papers.length < 3 || usedMocks.has(book.id) || !access.mocks) {
       setView({ name: "library" }); return null;
     }
     return (
@@ -930,12 +945,12 @@ export default function PracticeApp() {
       user={user}
       books={allBooks}
       tests={allTests}
-      takenMocks={takenMocks}
+      takenMocks={usedMocks}
       onLogout={logout}
       onResults={() => setView({ name: "history" })}
       onOpenBook={(bookId) => setView({ name: "book", bookId })}
       onNotebook={() => setView({ name: "notebook" })}
-      completedMocks={completedMocks}
+      completedMocks={doneMocks}
       access={access}
       picked={section}
       setSection={setSection}

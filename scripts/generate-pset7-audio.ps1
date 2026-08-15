@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a removal company to book a van for a house move. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Citywide Removals. How can I help you?",
   "F|Hello. I'm moving out of my flat next month and I'd like to book a van and some help with the furniture.",
@@ -57,7 +59,7 @@ $s1 = @(
   "M|The large van with two men is eight hundred thousand som for the first four hours. The medium is seven hundred, and that includes the two men, the fuel and the insurance.",
   "F|Seven hundred thousand. That's within my budget.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Do you need any money from me today?",
   "M|We ask for a ten per cent deposit to hold the date. You can pay it by card over the phone now, or in the office - what we can't take any more is a bank transfer, it took too long to appear and we lost too many bookings.",
@@ -74,13 +76,13 @@ $s1 = @(
   "F|A permit, ten days ahead. I'll go in on Monday.",
   "M|Then that's everything. I'll email the booking through to you this afternoon.",
   "F|Thank you very much indeed. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a member of staff at the Riverside Museum talking about the museum's late-opening evenings. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and welcome to the Riverside Museum. Before you go off and explore, let me tell you how our late openings work and what there is to see tonight.",
   "F|People often ask how the late evenings started. A few visitors assume it was a money-raising idea, and I understand why - most museums our size are looking for income - but that wasn't it, and in fact the evenings cost us more than they earn. Others think the city council asked us to do it; the council has been supportive, but the request never came from them. The real reason was a piece of research. Three years ago we surveyed people who had never visited us, and the answer that came back again and again was that they were at work whenever we were open. We were open ten to five, Monday to Friday. If you have a full-time job, that museum does not exist. So we opened in the evening instead, and two-thirds of the people who come on a late evening have never been inside the building before.",
@@ -88,7 +90,7 @@ $s2 = @(
   "F|What has worked best? Well, the archaeologist's talk on the Roman river crossing filled the lecture room, and last month's jazz concert in the courtyard was a lovely evening, if a rather cold one. But nothing has come close to the family sleepover in February. We took ninety children, they slept under the whale skeleton, and the tickets were gone in forty minutes - the fastest we have ever sold anything. We are running four of them next year.",
   "F|One practical point before you set off, and it matters. During the day you come in through the main doors on Bridge Street. In the evening those doors are locked, because the ticket hall is closed, and everybody comes in and out through the garden entrance at the side of the building. Do remember that when you leave, or you will find yourself walking round the outside of the museum in the dark.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right - let me take you quickly through the building, so you know where to go.",
   "F|We're standing in the Great Hall, which on a Thursday evening is not a quiet place. From seven o'clock there is a band in here every week - folk, jazz, brass, whatever we can persuade to come - and the sound is remarkable under that roof. If you want to look at the paintings in peace, come back on a Saturday.",
   "F|Straight ahead of you is the textile gallery, with the embroidery collection. Do see it tonight if you are interested, because from the middle of next month it shuts for the roof to be repaired and the scaffolding will be up until the spring. It is the last chance for six months.",
@@ -97,13 +99,13 @@ $s2 = @(
   "F|Back down on the ground floor, past the lift, is the children's studio. That room exists because of one person: a woman who worked in our shop for thirty years left us everything she had when she died, and she asked that it be spent on children. So it was.",
   "F|And finally the courtyard cafe. Do use it tonight - it serves soup and bread until half past eight. But please don't come looking for it on a Sunday afternoon, because we simply haven't the staff: the cafe opens on late evenings and at no other time.",
   "F|Right. Off you go, and enjoy the museum.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two environmental science students, Anvar and Malika, planning a study of soil. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Malika, we have to fill in the project form today. The first question is why we chose soil quality as our subject.",
   "F|Do you want the official answer or the real one?",
@@ -125,7 +127,7 @@ $s3 = @(
   "F|That's exactly my fear too. We should take a plank to stand on, and fill every hole properly before we leave it.",
   "M|Agreed. Let's write that into the method.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, how do we measure organic matter? There's that hand-held electronic probe in the store cupboard.",
   "M|There is, and it gives you a number in four seconds, which is why I don't trust it. The technician says it hasn't been calibrated since it was bought, and neither of us knows how.",
@@ -140,13 +142,13 @@ $s3 = @(
   "F|I will. The auger we can borrow any time - there are four of them and nobody wants them. And the sample bags arrived last week, a thousand of them, so don't order more.",
   "M|And the spreadsheet for the results can wait until we have results. Right - you write to the committee, I book the oven, and we meet on Friday.",
   "F|Friday. See you then.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of tea. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed sugar around the world. Today I want to take the other half of that story: tea, the drink that, after water, more human beings consume than any other.",
   "F|Let me begin with the plant, because there is a common misunderstanding here. Green tea, black tea, white tea, oolong - students often assume these come from different plants. They do not. Every kind of tea comes from a single species, Camellia sinensis, and the differences between them are created entirely after picking, by how long the leaf is allowed to oxidise before it is dried. Black tea is simply a leaf that has been allowed to go on oxidising; green tea is one that was heated quickly to stop it.",

@@ -25,6 +25,15 @@ export const LEVEL_ORDER = [
 
 const UPPER = "Upper-Intermediate";
 const IELTS_LEVELS = ["IELTS Foundation", "IELTS Proficiency"];
+
+// The owner's own account: every paper open, always, with no lesson gate and
+// no once-only lock, so the whole library can be inspected at any time.
+//
+// The privilege lives in the database, not here: an account gets it by
+// belonging to a group whose level is this value. Nothing in this file is a
+// credential — knowing the word "Owner" grants nothing without the username
+// and password of a student row attached to such a group.
+export const OWNER_LEVEL = "Owner";
 const TOTAL_LESSONS = 40;
 // IELTS-level practice pool. Twenty sets x two papers = 40 papers, one per
 // lesson, so lessons 1-40 each get their own paper and nothing recycles.
@@ -75,6 +84,15 @@ export const familyOf = (testId) =>
  *  `lessonNum` null means we could not establish it — nothing unlocks,
  *  because guessing here would hand out papers a class has not reached. */
 export function accessFor(level, lessonNum) {
+  if (level === OWNER_LEVEL) {
+    return {
+      level, lessonNum: null, owner: true,
+      mocks: true, practice: true,
+      inProgramme: () => true,
+      isOpen: () => true,
+      opensAt: () => null,
+    };
+  }
   const index = lessonIndex(level);
   const reached = Number(lessonNum) || 0;
   const practice = allowsPractice(level);

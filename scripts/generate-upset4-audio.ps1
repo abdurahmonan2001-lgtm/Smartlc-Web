@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning an allotment site about renting a garden plot. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Fieldgate Allotments, good morning.",
   "F|Good morning. There is a notice on your gate saying you have plots free this year. I live in the flats opposite, and I have wanted a garden for as long as I can remember.",
@@ -50,7 +52,7 @@ $s1 = @(
   "F|Forty-five thousand a year. That is less than I feared.",
   "M|There is a deposit as well, twenty thousand som. That is not really a charge - the twenty thousand is returned as soon as you give the key back, whenever you decide to give up the plot.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Is there water on the site? I cannot carry buckets from home.",
   "M|There are taps along the main path, so you are never more than thirty metres from one. Hosepipes are not permitted, though - watering cans only. Forty families sharing one supply, you understand.",
@@ -66,12 +68,13 @@ $s1 = @(
   "M|I will send you the agreement and a copy of the site rules. We email most things these days, but the agreement has to be signed, so it goes out by post - it should reach you in two or three days. Sign both copies and bring one with you to the open day.",
   "F|By post, right. Thank you, you have been very kind.",
   "M|A pleasure. Welcome to Fieldgate.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide talking to visitors at an open-air museum of village life. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning everyone, and welcome to Fieldgate Green, our open-air museum of village life. Before I let you loose on the site, a little history and a few practical points.",
   "M|People often assume that a wealthy family left us this estate, and I am asked at least once a week whether the university started us off as a research project. Neither story is true, though both would have been easier. Fifty years ago a new road was planned through three villages north of here, and the buildings in its path were to be demolished. A group of local people campaigned to rescue buildings that were about to be pulled down, raised the money themselves, took the houses apart beam by beam, and rebuilt them on this field. Everything you will walk through today was saved by neighbours with no money and a great deal of stubbornness.",
@@ -79,7 +82,7 @@ $s2 = @(
   "M|A word about how to behave here, and it is not the usual list. Unlike most museums, we want you to touch things. Pick up the tools, sit on the chairs, open the cupboards, turn the handle of the butter churn. And you are welcome to walk anywhere on the grass, including all the way round the pond. The one thing we do ask is that you keep food and drink outside the buildings - the floors are three hundred years old and jam is forever. There is a picnic field beside the car park.",
   "M|Finally, how to see the place. There is a guided tour at twelve, which is very good but only covers half the site in the hour available. The horse and cart is a delight and the children will demand it, but it goes round the outside of the village and stops at nothing. If you want to see everything, follow the numbered path - it begins at this gate and takes you past every building in order, and it takes about ninety minutes at a gentle pace.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "M|Let me say a word about each building, in the order the path will take you.",
   "M|You begin at the farmhouse, the largest building we ever moved. Almost nothing inside it was bought. When word went round the district that we were furnishing the house, families arrived with what was in their own attics - beds, plates, a clock, a wedding photograph, a child's boots - so everything you see inside was given by local families. Some of them still come back at Christmas to look at their grandmother's chair.",
@@ -89,12 +92,13 @@ $s2 = @(
   "M|I am sorry to say the village shop is shut this month. The roof is being repaired - every tile is coming off and going back on - and while the scaffolding is up nobody can go inside. You can still look through the window at the jars and the scales, which is some consolation.",
   "M|And at the end of the path, the great barn. People always ask which of our buildings was the most expensive to move, and after fifty years the records are too muddled to say. The barn, though, is the exception to everything I have told you this morning. Every other building here arrived on a lorry in numbered pieces from somewhere else. The barn did not - it has stood on this spot since 1780, and the museum was quite literally built around it.",
   "M|Right. The path starts here, the tea room is by the pond, and I shall be at the forge until four if you have questions.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two geography students, Timur and Gulnora, discussing the measurements they have collected for a glacier study. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Timur, before we write the introduction - remind me why you settled on the Falkner Glacier. There are three others in the same valley system.",
   "M|Two reasons that are true but are not the reason, and one that is. Yes, we can get to it and back in a day, which is convenient, and yes, our tutor did fieldwork on it years ago, which is why she likes the topic. But I chose it because people have been measuring the end of that glacier since 1892. Every year, in the same way, by the same club. A hundred and thirty years of numbers. You simply cannot get that anywhere else in the region.",
@@ -112,7 +116,7 @@ $s3 = @(
   "M|Fine, error bars. And what did she actually say about the draft? I was braced for a lecture about using too few sources.",
   "F|That is the surprise. She said the reading list was fine, and she rather liked the background section, which I had been ready to cut. Her one real criticism was the method. She said a reader cannot tell how the measurements were made - who took them, with what instrument, standing where - and until we explain that, the numbers mean nothing at all.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So in the reliability section, which weaknesses do we actually flag? We cannot list ten, or it looks as though the data are worthless. The equipment, for a start?",
   "M|I would leave the equipment out of it. A steel tape in 1900 measures a distance just as well as a steel tape today. And the same goes for the people - they were trained surveyors, they knew what they were doing, so I am not going to question the observers.",
@@ -127,12 +131,13 @@ $s3 = @(
   "F|Not this term - we are not going back to the glacier, so there is no point borrowing it now.",
   "M|And I am not redrawing the map, it is perfectly clear as it is. Somebody in the seminar suggested interviewing the old mountain guide in the village, which is a lovely idea, but he is away until May.",
   "F|Two jobs each week is plenty. See you Thursday.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of mirrors. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. You looked into one this morning without a thought, and you will look into several more before you go to bed tonight. The mirror is so ordinary an object that it takes an effort to remember that, for almost the whole of human history, a clear reflection was a luxury - and a rather disappointing one at that.",
   "M|Let us begin before glass. The earliest known mirrors were not made of glass at all, but of obsidian - a natural volcanic glass, black and extremely hard, which takes a very high polish. Pieces cut and polished for exactly this purpose have been excavated in Anatolia, in what is now Turkey, and the oldest of them are about eight thousand years old. Hold one and you see yourself dimly, as though looking into dark water.",

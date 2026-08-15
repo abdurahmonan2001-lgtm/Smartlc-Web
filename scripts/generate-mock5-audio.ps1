@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a letting agency about a flat she has seen advertised. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Rushmore Lettings, good morning. How can I help?",
   "F|Good morning. I'm calling about a flat you advertised on your website last week - the one-bedroom one with the new kitchen. Is it still available?",
@@ -47,7 +49,7 @@ $s1 = @(
   "M|Completely refitted last year. Everything in there is new.",
   "F|That sounds promising. Can we talk about money?",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Of course. Shall I start with the rent?",
   "F|Please.",
@@ -68,13 +70,13 @@ $s1 = @(
   "M|I could, but our emails go into people's junk folders half the time. I'll send them by text instead, to the number you're calling from. Much quicker.",
   "F|By text, perfect. Thank you very much indeed.",
   "M|My pleasure. Wednesday at five thirty, then. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the director of the Silverdale Museum talking to invited guests about its reopening after two years of renovation. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, and welcome back to the Silverdale Museum. Two years is a long time to shut a museum, so let me explain what we have been doing, and why.",
   "F|People have offered me all sorts of theories about why we closed. The most popular one is that visitor numbers had collapsed - and that simply isn't true. Our last full year before the closure was one of the busiest we have ever had. Another rumour was that the city had offered us a bigger site across the park. That was discussed, years ago, and it came to nothing. The truth is duller. A survey of the roof and the upper floors found that parts of this building were no longer safe to stand in. We closed because we had no choice.",
@@ -82,7 +84,7 @@ $s2 = @(
   "F|So, what will you find when you walk in? The entrance hall has been completely rebuilt. There is a proper cloakroom now, and I'm pleased to say that leaving your coat and your bag there costs you nothing. We used to charge for it, and it always felt wrong. You will also see a ticket desk with a real person behind it - we looked seriously at machines and decided against them - and guided tours, which run at weekends only, I'm afraid, rather than every hour as several of you have asked.",
   "F|And the change I care about most? Well, we do have longer opening hours, that's true - an extra hour on four evenings a week. And we have a lift at last, although, and this is my one regret, it still doesn't reach the top gallery. But the thing I am proudest of is this. From this month, every Sunday, admission to this museum is completely free, for everybody. A city museum should belong to the city.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Now let me take you round, gallery by gallery, so you know what to expect.",
   "F|The Egyptian gallery first. I know several of you have asked whether we have brought new material out of store for it. We haven't - every single object in there has been on display before. What has changed is where it is. It used to be up on the second floor, at the end of a long corridor, and half our visitors never found it at all. It is now on the ground floor, immediately to your right as you come in.",
   "F|The costume gallery. It is exactly the same size as it always was, whatever the newspaper printed last week. The difference there is the light. Textiles fade, and the damage cannot be undone, so we have taken out the strong lighting and kept the whole room considerably darker than before.",
@@ -91,13 +93,13 @@ $s2 = @(
   "F|The sculpture court is entirely new, and I want to say how it came about. We did not raise the money in small sums, and the city did not pay for it either. Every som of the cost was given by one woman, a student here fifty years ago, who has asked us not to put her name on the wall.",
   "F|And the roof terrace - the part all of you have seen in the photographs. I am sorry to disappoint you this evening. The floor surface failed its safety test in June, and it will not be open to the public until October.",
   "F|Right. The doors are open, the coffee is hot, and the building is yours again.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two chemistry students, Timur and Madina, discussing their water-quality testing project. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Madina, before we start on the results, the tutor wants a paragraph on how we chose the topic in the first place. What do we say?",
   "F|The honest thing, Timur. It wasn't Professor Karimov's lecture, much as I enjoyed it - that came weeks afterwards.",
@@ -121,7 +123,7 @@ $s3 = @(
   "F|That's exactly my fear as well. Working out what the results actually mean will be far and away the hardest part of this. We should book a session with the statistics adviser.",
   "M|Let's do that this week.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|All right - site by site, then. What do we say about the canal?",
   "M|Well, the bacteria there were low, and the oxygen was better than I expected. I did wonder whether the rain would push the readings around, but they were the same week after week, wet or dry. The one thing that stood out was zinc, and a trace of copper as well - not dangerous levels, but definitely present, at every single visit.",
@@ -140,13 +142,13 @@ $s3 = @(
   "F|So, pollution from agriculture at the village well. That's all six.",
   "M|And you didn't fall in once.",
   "F|Very nearly, at the canal. Come on - statistics adviser.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of timekeeping. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Every one of you glanced at a clock before you sat down, without giving it a second thought. Today I want to make you think about it, by going back to the beginning.",
   "F|The oldest method of telling the time needs no equipment whatsoever: you follow the shadow of the sun. Push a stick upright into the ground, watch the shadow travel round it, and you have divided your day into parts. The Egyptians refined that stick into the sundial, a proper instrument with marked hours. But the sundial has two obvious weaknesses. It tells you nothing at night, and it tells you nothing on a dull, cloudy day either.",

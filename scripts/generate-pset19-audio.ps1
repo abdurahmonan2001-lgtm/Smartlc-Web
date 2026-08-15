@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a community centre to ask about a language exchange group. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Riverside Community Centre, good morning.",
   "F|Good morning. I saw a poster in the library about a language exchange group that meets at your centre. Could you tell me a little more about it?",
@@ -53,7 +55,7 @@ $s1 = @(
   "M|It was in the Oak Room, just by the entrance, but that's been given to the children's club this year. The language exchange is in the Willow Room now, up on the first floor.",
   "F|The Willow Room, first floor. Right.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And what does it cost to join?",
   "M|It was seventy-five thousand som a term when we started, but the council gives us a small grant now, so it has come down to sixty thousand som per term. That covers twelve sessions.",
@@ -71,13 +73,13 @@ $s1 = @(
   "M|Her name is Gulbahor - sorry, no, wait, Gulbahor took over the choir in September. The language exchange coordinator is Malika. Ask for Malika at reception if you have any trouble with the form.",
   "F|That's very helpful. Thank you.",
   "M|You're very welcome. We'll see you on Thursday.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a woman from a local energy advice service speaking at a neighbourhood meeting. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on a cold night - which is, I suppose, exactly the point. I'm from Green Doorstep, the free energy advice service for this neighbourhood.",
   "F|People always ask first how we are paid for, usually because they are waiting for me to sell them something. I'm not. We did apply to a national research fund two years ago, and I'm sorry to say we were turned down. And no, there is no subscription - some advice services do charge residents a small annual fee, but we don't and we never have. Every penny of our funding comes from the borough council, out of its climate budget, and it is agreed until at least 2029.",
@@ -85,7 +87,7 @@ $s2 = @(
   "F|If you want us to look at your own home, we do free visits. Please don't telephone the office - there is one phone, and it is usually in my pocket while I'm out on a visit. And I know some of you have tried the online form; it has been broken since the website changed, and I do apologise for that. The way that actually works is to come and find us at the library: we are there every Wednesday morning, nine until twelve, with the diary open in front of us.",
   "F|And the one thing I would most like you to borrow from us. We lend all sorts of equipment, but the star of the collection is a thermal camera. You point it at your own wall and you see the heat pouring out - round the letterbox, under the front door, up the side of the chimney breast. Nothing I say tonight will convince you half as fast as ten minutes with that camera. There is a waiting list, but it moves quickly.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Let me take you through the measures themselves, in the order I would normally suggest them.",
   "F|Draught-proofing comes first. Strips round the doors and the window frames, a brush on the letterbox, something in the gaps under the floorboards. It costs very little, and the important thing about it is that you do not need us, and you do not need a contractor: two people can fit the whole lot themselves in a weekend.",
   "F|Loft insulation next. Nearly every house on these streets has some already, put in during the nineteen eighties, and that is why so many people tell me they have done it. Go up and measure it. The old standard was five centimetres; the standard now is thirty. In almost every loft I visit the insulation is there but far too thin.",
@@ -94,13 +96,13 @@ $s2 = @(
   "F|Solar panels. The reason so many have appeared on these roofs in the last few years is quite simply the price: the panels themselves now cost roughly a fifth of what they cost ten years ago. That fall is the whole story, and it is why we no longer argue about whether they are worth it.",
   "F|And finally heat pumps. They work, they work in this climate, and they work in old houses - I have one myself. But do go into it with your eyes open: a heat pump runs at a lower temperature than a gas boiler, so in most houses on these streets you will need bigger radiators fitted at the same time. Budget for that from the start and you will not be disappointed.",
   "F|Right. Forms at the back, the camera list is on the table by the door, and I will stay as long as anybody has questions.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two geography students, Doniyor and Zebo, discussing a long record of rainfall measurements. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Zebo, before we start on the analysis - when the tutor asks why we picked this project, what do we actually say?",
   "F|The truth. Not that Professor Iskandarov recommended it, because he didn't - he wanted us to do the river project. And not because the data were already digitised either; they weren't, and typing them up has been half our work. It was the notebook.",
@@ -126,7 +128,7 @@ $s3 = @(
   "F|No. The story is that the rain arrives differently now. The number of days with more than twenty-five millimetres has gone up by about half since the nineteen twenties. The same water, in fewer and heavier days.",
   "M|That's the finding. That's what we lead with.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Right - jobs to do before Thursday's tutorial.",
   "M|I'll photograph the notebook pages. Oh - actually, no. The library has already scanned every one of them at high resolution and put them on the shared drive. So that's done.",
@@ -145,13 +147,13 @@ $s3 = @(
   "F|And two - this is the big one - it is one gauge in one town. We cannot say anything about the region from a single location, and we must not pretend otherwise.",
   "M|Different observers, and only one site. Yes, those are the honest ones.",
   "F|Right. Tuesday for the maps, and I'll draft the graph tonight.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of the violin. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Last week we traced the harp. Today, the violin - an instrument that reached a kind of perfection within about sixty years of being invented, and has resisted improvement ever since.",
   "F|First, where the bow comes from. Plucked strings are ancient and worldwide, but drawing a bow across a string appears to be a Central Asian idea, and it travelled west along the trade routes, entering Europe through Byzantium and through Muslim Spain. By the eleventh century Europe had bowed instruments of its own, and the important medieval one - the ancestor every tutor mentions - is the fiddle, a flat-backed instrument held against the chest or the shoulder and played by professional musicians all over Europe for four hundred years.",

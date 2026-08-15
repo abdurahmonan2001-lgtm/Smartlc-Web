@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a health centre to register as a new patient. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Riverside Health Centre, good morning. Reception speaking.",
   "F|Oh, good morning. I've just moved into the area and I'd like to register with a doctor here. Is that something I can do over the telephone?",
@@ -52,7 +54,7 @@ $s1 = @(
   "F|Just one. I have asthma - I've had it since I was a child, and I use an inhaler most days.",
   "M|Asthma. Thank you, I'll add that now, and the nurse will go through it with you properly.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Right. The last thing is to book your new-patient health check. Every new patient sees one of our nurses before they see a doctor. I can put you in on Wednesday morning.",
   "F|Wednesday is difficult, I'm afraid. Wednesday is my busiest day at the hotel - I do the lunch service as well.",
@@ -68,13 +70,13 @@ $s1 = @(
   "F|Yes, a text is ideal. I always have my phone on me at work.",
   "M|Then that's everything. Thursday, eight forty-five, nothing to eat beforehand, and please bring your passport and the list.",
   "F|Thank you so much. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a transport officer from Marston Town Council talking to residents about a new cycle-hire scheme. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out. I'm here to talk about the Greenway cycle-hire scheme, which opens across Marston next month.",
   "F|Let me start with why we are doing it, because I get this wrong-footed at every meeting. Almost everybody assumes the point is to take cars out of the town centre. It isn't - traffic in the centre has been falling for six years without any help from us. And I know the shops hope it will bring more tourists in; it may well do, and we'd be delighted, but no council spends this kind of money on a hope. The real reason is much narrower. Our travel survey found that the single biggest block of car journeys in Marston is people driving one or two miles to the railway station, because the first bus of the day arrives after the London train has gone. The station car park is full by twenty past seven every weekday. So the scheme exists, first and foremost, to get people to the railway station without a car.",
@@ -82,7 +84,7 @@ $s2 = @(
   "F|We ran a six-month trial in the north of the town, and I want to tell you what it taught us. We had braced ourselves for vandalism - every scheme in the country warns you about it - and we lost precisely one bike, which turned up in a hedge. Pleasing, but not a surprise, because the newer schemes all report the same thing. Night-time use was low, again as we predicted. What genuinely astonished us was the distance. We designed this scheme for short hops of a mile or so, and the average journey turned out to be more than four miles. People are riding to the next village and back.",
   "F|And the complaints. A handful of people found the saddles uncomfortable, and we've changed the design. The app was criticised in the first fortnight and has been rewritten since. But the complaint that filled my inbox, over and over, in that first month, was people arriving at a stand and finding every single space already taken, so they couldn't leave the bike and get to work. We now move bikes between stands twice a day in a van.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Let me take you round the six stands, one by one, because they are not at all alike.",
   "F|The railway station stand is the reason the scheme exists, and it behaves exactly as we hoped: nine out of ten journeys that begin there begin between seven and nine in the morning. It is, overwhelmingly, a stand for people on their way to work.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|The leisure centre stand is, I'm sorry to say, shut at the moment, and will be until the autumn, because the new swimming pool is being built directly on top of it. Please don't cycle down there expecting to leave a bike.",
   "F|And the Hill Park stand is in the wrong place. It sits fifty metres inside the gates where nobody walking past can see it, and it takes about a third of the traffic we expected. So in March it moves out to the corner by the bus stop, where people will actually find it.",
   "F|Right. There are leaflets at the back, and I'll take questions now.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two biology students, Nodira and Timur, discussing a bird survey they are carrying out. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Timur, we have to write the introduction today. The first thing it asks is how the project came about.",
   "M|Everyone assumes the nature reserve asked us to do it. They didn't - the warden only rang us in October, weeks after we'd chosen the topic.",
@@ -123,7 +125,7 @@ $s3 = @(
   "F|And the warden asked for a poster for the visitor centre. I had to say no, honestly - we won't have time before the deadline.",
   "M|So the results go to the national bird database, which is what Doctor Rashidova wants anyway. Our numbers join thirty years of records for the same marsh, and that's the whole point of doing it properly.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Now, we can't report on everything. Which birds do we actually write up?",
   "M|Not the geese, whatever the warden says. Everybody counts the geese, and the county figures are published every winter anyway - we'd be adding nothing.",
@@ -140,13 +142,13 @@ $s3 = @(
   "F|And no more paper sheets, obviously. What about asking Sanjar to come as a third counter?",
   "M|Doctor Rashidova won't have it. She says an untrained observer would make the numbers worse, not better.",
   "F|Then it's the permit and the tide table. I'll do the tides tonight.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of fireworks. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed the history of glass. Today I want to look at something that has been used to celebrate almost everything, for almost two thousand years: the firework.",
   "F|Like a great many useful things, gunpowder was found by people looking for something else entirely. Chinese alchemists spent centuries mixing minerals in search of a medicine that would give long life, and what they eventually produced was a powder that exploded. But the firework is actually older than the powder. Long before anyone had mixed anything, people in China had noticed that a piece of green bamboo thrown on a fire will burst with a very loud bang, because the air trapped inside the sections expands until the wood splits. That bang was the first firework, and it had a purpose: the noise was believed to drive away evil spirits, which is why bamboo was thrown on the fire at the New Year and at weddings. When the powder arrived, it simply made the bang bigger and more reliable. By about the year one thousand the recipe had settled into the mixture we still use: saltpetre, charcoal and sulphur, ground fine and packed into a paper tube. And, inevitably, within a century the same tubes were being tied to arrows and fired at people.",

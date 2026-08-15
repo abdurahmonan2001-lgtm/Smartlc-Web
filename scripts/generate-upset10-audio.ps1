@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning the organiser of a local quiz league to register a new team. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Riverside Quiz League, Dilfuza speaking.",
   "M|Oh, hello. Some colleagues and I would like to enter a team in your quiz league this season. Could you tell me how it all works?",
@@ -50,7 +52,7 @@ $s1 = @(
   "M|Hmm - I'm in meetings most of the day, so calls often go unanswered, I'm afraid. A text is much better - I always answer those in the end.",
   "F|By text, then - I've made a note.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Now, how many players are we allowed?",
   "F|Teams can be any size up to a maximum of six. Bring four or five by all means, but six is the absolute limit - bigger tables just shout over one another.",
@@ -66,12 +68,13 @@ $s1 = @(
   "F|Just the one rule we're strict about: no phones at the table during the rounds. Keep them in a bag or a pocket - any team caught looking at a screen loses ten points.",
   "M|Fair enough - we'll survive without them. Thank you so much; you've been very helpful.",
   "F|A pleasure. We'll see The Magpies on the second of October.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the curator of a historic ship museum welcoming visitors and describing the vessel. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome aboard the Meridian. I'm the ship's curator, and before you set off around the decks, let me tell you a little about the old lady you're standing on.",
   "F|Visitors often assume the Meridian began life as a passenger liner, because of her elegant lines, and others guess she was a naval training ship, since our volunteers wear rather naval-looking uniforms. In fact she was built in 1891 as a cargo steamer, and for nearly forty years she carried wool from Australia to Europe - thousands of bales on every voyage, packed so tightly the crew joked that not even a mouse could travel as a passenger.",
@@ -79,7 +82,7 @@ $s2 = @(
   "F|Now, we like to offer something new each season, and I should be clear about what is new. You may have heard that visitors can climb the rigging - I'm sorry, but that remains a job for our trained staff only. And you have always been welcome to hold the ship's wheel, so that's nothing new either. What is new is this: for the first time, you can sleep on board. Once a month we sling the crew hammocks for an overnight stay, and I warn you, the first three dates sold out within a week.",
   "F|A few practical points before we move. Unlike most museums, we positively want you to touch things - feel the ropes, work the pumps, knock on the hull. There is only one place where you must keep to the marked route, and that's the lower hold, where the floor is uneven. But I do have one firm request for everybody: the ship's ladders are steep and the decks can be slippery, so please - flat shoes. Every accident we have ever had on board involved somebody in heels.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Let me take you round the ship, area by area, in the order you'll come to them.",
   "F|We begin at the stern, with the captain's cabin. It's a small miracle of survival: when the ship was sold, the captain's family took the contents home and kept them for sixty years, then gave everything back to us. So almost every piece of furniture in that cabin is original - the desk, the bunk, even the barometer on the wall.",
@@ -89,12 +92,13 @@ $s2 = @(
   "F|I'm afraid the chart room will be a disappointment today. A leak appeared in its roof last month, and workmen are in there now putting it right, so you can only look in from the doorway. It will be open again by the summer.",
   "F|And finally, my own favourite: the engine room, four decks of polished steel and brass. The ladders down are narrow and the lighting is dim, so the engine room can only be visited with a guide - tours leave from beside the funnel every half hour, and I promise you the climb down is worth it.",
   "F|Right - enjoy the old lady, and do come and find me on deck if you have questions.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two linguistics students, Aziza and Bekzod, planning a survey of local slang. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Right, Bekzod - the proposal form first. It asks why we chose local slang. Shall I mention that lecture on dialects we both went to?",
   "M|The lecture was interesting, but honestly it wasn't the reason. It really started at my grandmother's birthday dinner. My cousins were chatting away, and she leaned over and whispered that she couldn't understand half the words they were using - and everyone at that table was speaking the same language. I haven't stopped thinking about it since.",
@@ -113,7 +117,7 @@ $s3 = @(
   "F|Yesterday. She was happy with the reading list, and she certainly doesn't want us rushing out to collect data yet. Her one firm piece of advice was about the area we cover: the whole city is far too big for a single term, she said - we should narrow it to a single district and do it properly.",
   "M|That makes sense. The old town, then - both our families are from there.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, within the district - who exactly do we interview? We can't stop everyone in the street. I wondered about the market traders; they talk to hundreds of people a day.",
   "M|They do, but I once tried interviewing a stallholder for another project - a lovely man with no time at all. Traders are working; we'd get two minutes at most. What about schoolteachers?",
@@ -131,12 +135,13 @@ $s3 = @(
   "F|Notes it is. And thank-you gifts? Somebody in the seminar gives every participant chocolate.",
   "M|Mm - I think gifts would make it feel like a transaction. A warm thank-you and a copy of the results will mean far more.",
   "F|Consent form and the shorter question list, then - and I'll book us in at the retirement club for Thursday.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of gardens. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today I want to trace the history of an art form we walk straight past every day - the garden. Gardening is among the oldest of all human arts, older than writing, and a garden, wherever you find one, is always the same thing: a piece of nature arranged by people to please people.",
   "M|But the first gardens were not made to be admired. They were practical spaces. They supplied food, and in hot lands they supplied shade - a leafy tree beside a house was worth as much as an extra room. Beauty arrived later, as a guest, and then stayed on as the owner.",

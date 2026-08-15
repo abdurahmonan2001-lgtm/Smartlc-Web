@@ -31,8 +31,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a sports centre about swimming lessons. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Northside Sports Centre. How can I help you?",
   "F|Oh, hello. I hope I've got the right number - is this where I can book swimming lessons?",
@@ -49,7 +51,7 @@ $s1 = @(
   "M|Ours is longer than that. The full course lasts for twelve weeks, one lesson a week, and most people are swimming confidently by the end.",
   "F|Twelve weeks sounds much more sensible.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Great. Now the important question - how much does it all cost?",
   "M|The advanced squad pays one hundred and ten thousand, but the course you want, the beginner one, is ninety thousand som per month.",
@@ -64,12 +66,13 @@ $s1 = @(
   "F|One small photo. Got it. You've been really helpful - thank you so much!",
   "M|You're very welcome. See you on Friday. Goodbye.",
   "F|Goodbye.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide welcoming visitors to the new Riverside Library. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning everyone, and a very warm welcome to the new Riverside Library. I've worked here since the old building closed, so nobody is happier than I am to see readers walking in again. Before we walk around, let me deal with the two questions people always ask first: what does everything cost, and what has actually changed this year?",
   "F|Money first, and I'll be honest with you - most of our services do carry a small charge, because a building like this has to pay for itself somehow. Printing, for example, costs two hundred som a page. And reserving books online needs a paid membership card - the free accounts can search the catalogue, but they can't reserve.",
@@ -88,12 +91,13 @@ $s2 = @(
   "F|Now walk with me towards the middle of the building. You see the staircase ahead of you. The small room tucked in right beside it, on its far side, is the recording studio I mentioned earlier. It's soundproofed, which is why it had to go in the middle, away from the windows.",
   "F|If you carry on straight past the stairs to the back wall, the room directly ahead of you, in the centre, leads out to the garden. We simply call it the garden door, and in summer it stays open all day, so you can take your book outside.",
   "F|And finally, the room I'm proudest of in the whole building. In the back corner on the right, with the tall windows over the river, is the reading hall. The morning light in there is honestly wonderful. Right - enough from me. Let's begin the tour properly.",
-  "F|That is the end of part two."
+  "F|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Aziz and Malika, planning a class presentation about recycling. First, you have some time to look at questions twenty-one to twenty-four.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions twenty-one to twenty-four.",
   "M|OK Malika, we've only got until the end of lunch, so let's plan this properly. First things first - how long does our presentation actually have to be? I had ten minutes written down in my notes.",
   "F|That was last term, Aziz - ten minutes was for the science fair talks. And somebody in our group was saying it's twenty now, but that's just a rumour. The teacher told me herself yesterday that it must last fifteen minutes. She was quite firm about it.",
@@ -105,7 +109,7 @@ $s3 = @(
   "F|Tuesday is the biology test - that's probably why. No, we have a bit more time than that. The teacher wants the slides by Thursday. Though honestly, I'd like us to finish them on Wednesday ourselves, so we have a whole day spare for checking.",
   "M|Sensible. Thursday for her, Wednesday for us.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-five to thirty.",
-  "P|6",
+  "P|21",
   "M|Now listen and answer questions twenty-five to thirty.",
   "M|Good. Let's divide up the jobs, then, and write it all down so nobody forgets anything. Who writes the survey questions? I don't mind drafting them if you'd rather not.",
   "F|Actually - no offence, Aziz - I'll design the survey questions myself. I enjoy that kind of thing, and we covered questionnaires in maths club, so I know about not asking leading questions.",
@@ -117,12 +121,13 @@ $s3 = @(
   "F|That's fair. You write better endings than I do anyway - mine just stop. And the timing? Fifteen minutes is strict. She said she'll actually cut people off this time.",
   "M|Then we can't just hope for the best. We'll practise the timing together the evening before - both of us, with a stopwatch, a full run-through, twice if we have to.",
   "F|Perfect. You know, I think we actually have a plan. That must be a first.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of tea. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Today I want to trace the long journey of the world's most popular drink after water. Tea. It's a good subject for this course, because the story of tea touches almost everything we've discussed this term - trade, technology, fashion, and the sheer power of everyday habit. Around two billion cups of it are drunk every single day, and yet most of the people drinking them know almost nothing about how it reached their table.",
   "M|Tea begins in ancient China, and the written record there takes it back well over two thousand years. According to legend, an emperor was boiling his drinking water outdoors when a few leaves drifted down from a wild tea tree into the pot, and he found the result strangely refreshing. It's a charming story, and almost certainly untrue, but it preserves an important detail, because what's often forgotten is that for centuries nobody drank tea for pleasure. Tea was first drunk as a kind of medicine - a bitter tonic, prescribed for tiredness and poor digestion, and taken in careful doses rather than by the cup. Early Chinese medical writers list it alongside herbs, not alongside foods.",

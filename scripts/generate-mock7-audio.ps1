@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man telephoning an arts studio to enrol in an evening pottery class. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good afternoon, Valley Arts Studio.",
   "M|Oh, hello. I picked up a leaflet about your evening pottery classes, and I'd like to sign up, if there's still a place.",
@@ -51,7 +53,7 @@ $s1 = @(
   "F|Ten weeks. It was eight weeks when we first ran the programme, but ten works far better - you need time for the pieces to dry and be fired properly.",
   "M|Ten weeks. That sounds ideal.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Now, the practical details. We keep the classes small - a maximum of twelve students, so the tutor can get round everybody at the wheel.",
   "M|That's good to hear. And what does it cost?",
@@ -66,13 +68,13 @@ $s1 = @(
   "F|We used to hand out paper forms, but not any more. Just complete the enrolment form on the website - it takes about two minutes - and pay a deposit of one hundred thousand som. The rest is due at the first class.",
   "M|Form on the website, and a hundred thousand deposit. That's everything, I think. Thank you very much.",
   "F|My pleasure. We'll see you on the second. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the volunteer coordinator at the Grand Avenue Community Theatre giving an induction talk to a group of new volunteers. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening everyone, and welcome to the Grand Avenue Community Theatre. I'm the volunteer coordinator, and this hour is your induction: a little history, a few rules, then a walk round the building.",
   "F|People love guessing what this place used to be. The most popular answer is a cinema, and that is half right: it was a cinema from nineteen fifty-two until nineteen eighty. But that was its second life. Go back further, to eighteen ninety, and these walls went up as the covered market for this part of the city - the fruit and vegetable market. The church that people sometimes ask about is the building next door, and it has nothing to do with us.",
@@ -80,7 +82,7 @@ $s2 = @(
   "F|Next, what to do if a member of the public is taken ill. Your instinct will be to help directly - to walk them outside for some fresh air, or to fetch them a glass of water. Please do neither of those things, however kind they seem. Both can make matters worse, and it is the duty manager who will know whether an ambulance is needed. Find the duty manager, or radio for one. That is the whole of the rule.",
   "F|And finally, people always ask me how best to prepare before a first shift. Some of you will want to learn the season's programme by heart. It is a lovely thing to know, but the box office answers those questions, not you. Others ask whether they ought to watch a few rehearsals - please do, if you enjoy it, though it won't help you much on a busy Friday evening. The genuinely useful preparation is duller than either: learn your way around the building. A volunteer who knows the building is worth three who know the programme.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. The plan in front of you shows the ground floor, and I'll take you round it in the order you will walk it on your first evening, starting at the main entrance at the bottom of the plan.",
   "F|Come in through those doors and you are standing in the foyer, in the middle of the building. Two rooms open off the foyer, one on each side. The one on your right as you come in, in that corner of the building, is the box office - the glass window you can see from the street belongs to it.",
   "F|Directly opposite the box office, on the other side of the foyer, on your left as you enter, is the volunteers' room. That is where you sign in, leave your coat, and find the kettle.",
@@ -90,13 +92,13 @@ $s2 = @(
   "F|That leaves the two rooms at the very top of the plan, one on either side of the stage. The one on the left, the same side as the rehearsal studio, is the green room, where the actors wait before they go on.",
   "F|And the room across from it, on the other side of the stage, is the costume store. If you are ever sent to fetch something from there, take the key from the volunteers' room first, because that door locks itself behind you.",
   "F|That is the whole ground floor. Bring your plan and we'll walk it together now.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two business students, Madina and Timur, discussing a case study of a bicycle courier company called Pedal Express. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Timur, shall we start with why the two founders set the company up at all? I assumed they couldn't find work after graduating.",
   "M|That's what I thought too, Madina, but read the second page again. Both of them had job offers. What set it off was the traffic - they were sitting in a cafe watching delivery vans crawling down the same street for twenty minutes, and one of them said a bicycle would have done it in three.",
@@ -122,7 +124,7 @@ $s3 = @(
   "M|True. Then let's take the environmental angle - what replacing a fleet of vans with thirty bicycles actually does to emissions in a city centre. There are real figures for that in the appendix.",
   "F|The environmental effect it is. That's our closing section.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Now, why is demand for bicycle couriers growing everywhere? The article lists five reasons and I don't accept all of them.",
   "M|Nor do I. The first one is solid, though - people ordering food online. That market has roughly tripled in five years, and somebody has to carry it.",
@@ -142,13 +144,13 @@ $s3 = @(
   "M|The introduction? I quite liked it.",
   "F|We wrote it in week one, before we knew what the conclusion would be. It promises a completely different assignment. It needs rewriting from the beginning.",
   "M|You're right, it does. Financial data in the charts, and a new introduction. Then we're finished.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of salt. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Today I want to talk about a substance sitting on every table in this country, costing almost nothing, and yet responsible for trade routes, taxes, wars and at least one revolution. Salt.",
   "F|Let's begin with why it mattered so much. Salt is not a luxury for the human body; it is a requirement. Your nerves and your muscles simply cannot work without it. And here is the difficulty: unlike so many other things, the body cannot manufacture it. We have to eat it, every week of our lives. Put that together with a second fact - that for most of history salt was genuinely hard to obtain - and you have the recipe for something extremely valuable.",

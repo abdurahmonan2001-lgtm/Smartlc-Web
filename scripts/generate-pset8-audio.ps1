@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man telephoning an adult learning centre to enrol on an evening course. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good evening, Northgate Adult Learning Centre, Malika speaking.",
   "M|Oh, good evening. I saw your leaflet in the library - I'd like to enrol on the furniture restoration course, if there are still places on it.",
@@ -50,7 +52,7 @@ $s1 = @(
   "M|Three hundred and twenty. Do you want a deposit from me now, over the phone?",
   "F|No, no deposit. You pay the full amount at the first class, in cash or by card, whichever is easier for you. And I should say there are never more than twelve students in the workshop, so nobody gets ignored.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Is there anything I need to bring with me?",
   "F|There is one thing, and it matters, because we start work in the first hour. Everybody brings an old chair to restore. A table is far too big for our benches and a cupboard is simply impossible, so please, a chair - and the older and more broken it is, the more you'll learn.",
@@ -66,13 +68,13 @@ $s1 = @(
   "F|And the last thing is your confirmation. We e-mail most of our students, but the workshop list goes out by post, because it has a map of the site and a materials sheet folded in with it. So watch for it in the post - it should reach you within about a week.",
   "M|By post. Lovely. Thank you very much indeed.",
   "F|You're very welcome. We'll see you on the eighteenth.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the secretary of a community allotment site talking to a group of new plot holders. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everybody, and welcome to Larkfield Allotments. You have all just been given a plot, so this half hour is about how the site works and what our rules actually mean in practice.",
   "F|A word first about where we are, because there are three stories and only one of them is true. People often assume the site was once part of the big house garden up the hill. It wasn't, although that old wall at the top does belong to the house. Others have been told it was the school playing field; the playing field is on the far side of the road and always has been. In fact this long strip of ground belonged to the railway. It was the embankment side, left over when the line was straightened in the nineteen thirties, and the railway rented it out to its own workers for vegetables. When the line closed, the council took it on, and we have been growing here ever since.",
@@ -80,7 +82,7 @@ $s2 = @(
   "F|Now, losing a plot. The rent is due in March and hardly anybody forgets it - in ten years I have taken back exactly one plot for unpaid rent. Bonfires cause endless argument, but nobody has ever lost a tenancy over one. What we do take plots back for, about six a year and it always upsets me, is simple neglect: a plot that has not been dug or planted for an entire season, when two hundred people are waiting for it. We write to you twice before we act, so it never comes as a surprise.",
   "F|And the change this year, which several of you have already heard about, is bonfires. From April there is no burning on the site at any time, for any reason. The committee vote was very close, the argument in the shed afterwards went on for two hours, and I am still getting letters about it. By comparison, the new fee structure and the longer opening hours at the shop passed without a murmur.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you round the site in order, because the rules are not the same in every part of it.",
   "F|We start at the top field, above the path. That is where the very biggest plots used to be, and that is where the division I mentioned happened: every plot up there has been cut into two. So if your number is in the eighties, you have half a plot, a shared water butt and a really excellent hedge.",
   "F|Below that are the lower plots, along the ditch. That is the best soil on the whole site and everybody wants to be there, but I have to be honest with new tenants: they flood after heavy rain, twice most winters, and anything you leave lying on the ground in December will float away.",
@@ -89,13 +91,13 @@ $s2 = @(
   "F|Next to it is the pond, which the children from the primary school helped us to dig. Please keep out of it this summer: it is being surveyed for wildlife, and a group from the university is counting frogs and dragonflies there every fortnight until the autumn.",
   "F|And finally the car park, which is the one thing on this site that nobody complains about. It was resurfaced last year with money from the garden centre out on the ring road. They paid for the entire job in exchange for a small sign on the gate, and we were very glad of it.",
   "F|Two rules that apply everywhere, and then I'll let you go. Nobody on the site after dark, please, and dogs on a lead at all times.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two geography students, Dilshod and Sabina, discussing a traffic count for their project. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Sabina, we need to write the introduction to the traffic project. How do we explain why we picked the topic?",
   "F|Honestly? Because the residents' association asked us to. They wrote to the department in October saying they wanted evidence about the junction before the council consultation, and we said yes.",
@@ -113,7 +115,7 @@ $s3 = @(
   "F|Before, if we possibly can. And for the write-up, the useful thing is the comparison. The council did a count at the same junction five years ago and the figures are public.",
   "M|That's much better than comparing with the national average, which I was going to do. Five years of change at the same spot - that's an actual finding.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, categories. We obviously count cars and lorries, but what do we separate out beyond that?",
   "M|Buses were my first thought.",
@@ -129,13 +131,13 @@ $s3 = @(
   "M|Then the other job is the recording sheets. The new ones with the direction columns only exist on my laptop, and there's no power at the junction, so we can't use the tablet.",
   "F|Then print them - plenty of spares, and on thick paper in case it rains. High-visibility jackets and printed sheets, and we're ready.",
   "M|I'll print them tonight. See you Thursday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of salt. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we looked at the spice trade. Today I want to talk about a substance that is far cheaper and was once far more important: salt.",
   "F|Start with why it mattered so much. The human body cannot store salt in any quantity, so it has to be taken in regularly, and a diet built on grain and vegetables simply does not supply enough. That is the biological reason. The economic reason is bigger. Before refrigeration, salt was the only reliable way of keeping food through the winter, and above all of preserving fish. A barrel of salted herring could travel a thousand miles and feed a city in February. Take salt away from medieval Europe and the whole food system collapses.",

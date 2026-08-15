@@ -19,6 +19,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 const isAnnouncer = (text) =>
   /^Part (one|two|three|four)[.,]/i.test(text) ||
+  /^You will hear a number of different recordings/i.test(text) ||
   /^(Now listen|Before you hear|You now have|That is the end)/i.test(text);
 
 const out = {};

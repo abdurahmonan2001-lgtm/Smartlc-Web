@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a teacher phoning a coach company to book a minibus for a school day-trip. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Brightway Coaches, good morning. How can I help?",
   "F|Oh, good morning. I'm calling from Greenside Primary School. We're planning a day-trip for one of our classes next month, and we'd like to book a minibus.",
@@ -49,7 +51,7 @@ $s1 = @(
   "M|Mmm, half past eight puts you right into the town traffic. I'd say leave at eight fifteen - those fifteen minutes make a surprising difference. We'd pick you up outside the school gates, if that suits.",
   "F|Eight fifteen at the gates, perfect.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And we do need to be back at school by half past four, when the children are collected.",
   "M|No problem at all. If you leave the reserve at three, you'll be back at the school by four thirty comfortably. Now, the cost. For a full day - minibus, driver and fuel all included - it comes to nine hundred thousand som.",
@@ -65,12 +67,13 @@ $s1 = @(
   "M|We used to post out booking forms, but people found the post far too slow. I'll send everything by text this afternoon - the price, the times, and the account details for the deposit. Just reply to accept.",
   "F|By text, lovely. Thank you so much - the children will be thrilled.",
   "M|Our pleasure. Speak soon.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the operations manager of the Silverhill Funicular Railway briefing new staff before the railway reopens to the public. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to the Silverhill Funicular. In three days we reopen to the public, so this morning I want to tell you what has changed while we were closed, and what visitors are going to ask you.",
   "F|First, the closure itself, because passengers will certainly raise it. People assume we shut because the carriages were worn out, and one newspaper even claimed the lower station was falling down. Neither is true. The carriages were perfectly sound, and the station needed nothing worse than a coat of paint. The real problem was at the top of the hill: the winding machinery that hauls the cars up the slope dated from the nineteen sixties, and spare parts for it simply no longer existed. Replacing that equipment took the best part of two years, and that is the whole story of the closure.",
@@ -78,7 +81,7 @@ $s2 = @(
   "F|Weather. Under the old rules, the moment ice formed on the rails we stopped running altogether, and everybody stood at the bottom feeling cold. The new carriages have a braking system designed for exactly those conditions, so from now on, in icy weather the service continues, but at half the usual speed - the journey takes eight minutes instead of four, and nobody minds. We did consider carrying fewer passengers in each car instead, but the engineers say it makes no difference. We only stop completely for lightning, which is rare.",
   "F|One more general point. Between twelve and two the queue at the bottom can reach forty minutes, and the terrace gets uncomfortably full. When visitors ask for advice, tell them honestly that the quietest hours are before eleven and after three - anyone who wants the hill to themselves should simply avoid the middle of the day. People sometimes ask whether weekdays are quieter. A little, but the real difference is the time of day, not the day of the week - and booking online saves no time at busy periods, because the queue is for the carriages, not the tickets.",
   "M|Before you hear the rest of the briefing, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Now let me walk you round the railway itself, from the bottom of the hill to the top.",
   "F|The lower station is where visitors form their first impression. The building has been repainted, of course, but the change everyone notices is inside: the old storeroom has become a cafe - proper coffee, and cakes from the bakery in town. There is no cafe at the top any more, by the way - the kiosk up there has closed for good - so if passengers ask where to eat, the answer is the lower station.",
   "F|The upper station is the one part of the project that is not quite done. The booking hall is ready, but the waiting room is still being plastered and painted, so parts of the building are behind screens for another month. Passengers can walk through perfectly safely - just warn them about the noise on weekday mornings.",
@@ -87,12 +90,13 @@ $s2 = @(
   "F|Beside the upper station is the new viewing platform, and I want you to know its story, because it is a good one. The railway did not pay for it. The money was raised entirely by donations from local people - more than three thousand of them - and their names are engraved along the railing.",
   "F|And finally the footpath, which zigzags down the hillside beside the track. Plenty of visitors like to ride up and walk down, and the path costs nothing to use - though after rain, do warn people that the lower section gets slippery.",
   "F|Right - questions in a moment, but first, let's go and look at those carriages.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two biology students, Aziz and Kamola, discussing their project on urban foxes. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Right, Kamola - the draft introduction. I've written that we chose urban foxes because Dr Melieva suggested the topic. That is true, isn't it?",
   "F|Not really, Aziz. She approved it, but the suggestion didn't come from her - and it wasn't that television documentary either; I only watched that afterwards, for background. What actually happened is that last spring a fox family moved in behind my apartment block, and I watched the cubs from my balcony every evening for a month. After that I couldn't think about anything else.",
@@ -110,7 +114,7 @@ $s3 = @(
   "F|She was firm about two things we should not do: no mapping of territories, because that needs a full year of data, and no counting cubs, because we'd have to approach the dens. What she wants is for us to compare our results with the published studies of countryside foxes. Apparently the differences in diet and range are dramatic, and that comparison would give the project a real argument.",
   "M|City fox against country fox. I like it.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|Now, the interim report needs a section on weaknesses. Which ones do we admit to? Someone in the seminar said studying a single district was a fatal flaw.",
   "F|I asked Dr Melieva about exactly that, and she said depth in one district is worth more than thin data from five. So no, not that. And the rain? A few clips are blurred.",
@@ -122,12 +126,13 @@ $s3 = @(
   "F|Good - I'll draft the questions tonight. And the other job is the backlog: we have forty hours of clips that nobody has watched properly. We should start coding the footage this weekend - species, time, individual, behaviour, straight into the spreadsheet.",
   "M|Questionnaire and coding, then. And no, before you ask - we are not spending another Sunday looking for tracks along the canal. Last time we found two dog prints and a shopping trolley.",
   "F|Agreed. The foxes can keep the canal.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of cheese. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today we turn to one of the oldest manufactured foods on earth - cheese. Every supermarket sells a hundred kinds of it, yet almost nobody stops to ask where the idea came from, and the answer takes us back a very long way indeed.",
   "M|Cheese was almost certainly discovered by accident, more than eight thousand years ago, soon after people first began keeping sheep and goats. The likeliest story involves transport. Herders carried milk in bags made from the stomach of a sheep or a goat - the ancient world's waterproof container. Now, the lining of such a bag naturally contains rennet, the very substance cheesemakers still use today, and on a warm day's journey the milk separated into solid curds and a thin liquid called whey. Some traveller opened the bag expecting a drink and found, instead, the first fresh cheese.",

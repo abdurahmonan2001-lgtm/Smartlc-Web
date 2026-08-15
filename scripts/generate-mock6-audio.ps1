@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a taxi company to book an airport transfer for her family. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Comet Cars, good morning. How can I help you?",
   "F|Good morning. I'd like to book a car to take my family to the airport, please.",
@@ -52,7 +54,7 @@ $s1 = @(
   "F|No, Maple like the tree. M, A, P, L, E. Maple Street. It's the block opposite the small park, so the driver won't miss it.",
   "M|Fourteen Maple Street, opposite the small park. I have that.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Now, the vehicle. With five of you and your luggage, a standard car simply won't do - it's far too small for a family your size. What I'd send you is a minivan. It seats seven, and there's room for six suitcases in the back.",
   "F|A minivan sounds right. We'll have four large cases and a couple of bags.",
@@ -69,13 +71,13 @@ $s1 = @(
   "M|We used to telephone people the night before, and we still email the invoice afterwards, but the reminder itself now goes by text. You'll get a text the evening before each journey with the driver's name and his mobile number.",
   "F|A text the evening before. That's everything, I think. Thank you very much.",
   "M|Our pleasure. Safe travels.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the manager of the Oakfield Sports Centre talking about its new facilities and changes to its opening arrangements. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming to our reopening evening. I'm Ruth, the manager here at Oakfield, and I'd like to explain what we've done to the building and what changes from next week.",
   "F|Let me start with the closure, because I know four weeks without a sports centre was frustrating. There were stories going round that we'd been flooded. It's true we had water across the lower floor two winters ago, but all of that was repaired long before June. Somebody else told me we were fitting a new heating system for the pool - that project is on the list for next year, not this one. The real reason we shut is much duller: the changing rooms. They were the original ones from the nineteen-eighties, the pipework was failing, and taking them out and building new ones meant closing the whole building while the work was done.",
@@ -83,7 +85,7 @@ $s2 = @(
   "F|Opening hours. Saturday evenings stay exactly as they are, closing at nine, and I'm afraid Sunday morning is still not happening - we can't staff it. What has changed is the start of the day. Monday to Friday we always used to open at seven; from next week the doors open at half past five in the morning, for everyone who wants to swim or train before work.",
   "F|And booking a class. Until now you've either rung reception or come to the desk, and on Monday mornings that queue has been out of the door. From next week, all class bookings move to our new phone app - search for Oakfield Leisure and you'll find it. The website will still show you the timetable, of course, but the actual booking has to be done in the app from now on.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you round the facilities themselves, one at a time, because each has its own news.",
   "F|The swimming pool first. Physically it's unchanged - same six lanes, same water, same slightly grumpy lifeguards. What has changed is the pricing. Between ten in the morning and three in the afternoon, when the pool is practically empty, a swim now costs half the usual price. So if you can come mid-morning, you'll pay considerably less than the people who come at six.",
   "F|The gym. The machines in there were fifteen years old and held together mostly by hope. Every one of them has been taken out and replaced - the treadmills, the bikes, the rowing machines, the whole weights section. There is nothing in that room now that was there in May.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|The tennis courts, I'm sorry to say, you can't use at the moment. The surface is being relaid and the whole area is fenced off. Give us three weeks and they'll be back exactly as they were.",
   "F|And the sauna. This is the one part of the building that isn't ready. The tiling is finished, but we're still waiting for the equipment to arrive, so it won't open with everything else - we're aiming for November. Keep an eye on the noticeboard by the door.",
   "F|That's everything from me. There's tea at the back, and I'll be here for another half hour if you have questions.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear a business student called Madina discussing her marketing survey of the campus cafe with her tutor. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Come in, Madina. Right - the customer survey. Before we look at your questions, remind me how you ended up choosing the campus cafe.",
   "F|Well, you did mention it once in a seminar, but that wasn't really the reason. And I should admit I hardly ever eat there myself - I bring sandwiches from home. What actually happened was that the manager, Bekzod, came to our marketing society in March and said he had no idea what his customers wanted, and could a student find out. I put my hand up.",
@@ -132,7 +134,7 @@ $s3 = @(
   "M|Take ten people - your flatmates, the students sitting near you - and watch them fill it in in front of you. You will find three questions nobody understands. Test it small, first.",
   "F|A trial run with about ten people. Understood.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So which topics have to be in the survey? I have five on my list. Opening hours.",
   "M|Fixed by the university, and Bekzod can't change them however many people complain. That just wastes a question.",
@@ -153,13 +155,13 @@ $s3 = @(
   "F|So next week: meet the manager, and spend a lunchtime observing. Should I interview the staff as well?",
   "M|Later, if at all. Two things is plenty for one week.",
   "F|Right. Thank you.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of chocolate. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good afternoon. Today I want to trace the history of a product that almost everybody in this room has eaten this week without a second thought: chocolate.",
   "F|We start in the rainforests of Central America, because that is where the cacao tree grows, and the tree is a demanding neighbour. It will only live where the temperature stays high all year round; it needs shade, since in the wild it grows in the shadow of taller forest trees; and it needs a great deal of rain. Heat, shade and heavy rainfall - remove any one of the three and the tree simply fails. That is why cacao is still confined to a narrow belt on either side of the equator.",

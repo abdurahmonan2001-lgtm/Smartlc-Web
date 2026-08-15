@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning the secretary of a community choir about joining. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Riverside Community Choir, good evening.",
   "F|Good evening. I saw your poster in the library, and I'd like to join. Are you still taking new singers?",
@@ -49,7 +51,7 @@ $s1 = @(
   "M|That has changed as well. It used to be the church hall on Bridge Street, but the roof is being repaired, so until the summer we are in the school hall in Mill Lane. There is parking behind it.",
   "F|The school hall, Mill Lane. I know it.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Can I ask about the cost?",
   "M|There is a membership fee for the year. It was a hundred and eighty thousand som - no, I do apologise, that was last season. The committee brought it down when the council grant came through, so it is a hundred and twenty thousand now, and you may pay it in two halves if that helps.",
@@ -63,13 +65,13 @@ $s1 = @(
   "M|One thing. There is a short form - contact details and an emergency number. We used to hand it round on paper, but half of them came back unreadable, so it is on the website now. Fill it in tonight and the director will have your name in front of her.",
   "F|I'll do that this evening. Thank you very much indeed.",
   "M|You are very welcome. We will see you on Wednesday at half past seven.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a council project officer speaking at a public meeting about a proposed new footbridge. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on such a wet night to hear about the Weir Lane footbridge.",
   "F|Let me begin with why we are building it at all, because there are several theories going round the town. The riverside walking trail does bring visitors, and one or two people have told me the bridge is really for tourists - it is not. Others remember that the little passenger ferry stopped running eight years ago, and yes, we did look at a bridge then and decided we could not afford one. What has actually forced our hand is the railway. The company is closing the level crossing at the end of Weir Lane on safety grounds next year, and without it the whole Northfield estate is cut off from the station and the shops. The bridge replaces that crossing.",
@@ -77,7 +79,7 @@ $s2 = @(
   "F|We have had four hundred and twelve written responses so far, and I want to be honest about them. A handful of people think the money would be better spent on the roads. The trees caused a good deal of worry early on, but once we confirmed that only two willows have to be moved, that fell away almost completely. The objection that comes up again and again, in more than half of the responses, is what happens on the bridge after dark. People are afraid it will attract groups at night and that the estate will get the noise. We take that seriously, and I will come back to it.",
   "F|So what happens next? A number of you have asked whether the builders arrive in the spring. They do not. We will redraw the design where these responses tell us to, and then put the new drawings on show again in the autumn, here in this hall, before anything goes near the planning committee.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Let me take you through the scheme piece by piece.",
   "F|The north landing, on this side of the river, is not where it was in March. The drawings showed it beside the pumping station, until the water company pointed out the main that runs underneath, so the landing has shifted forty metres upstream, opposite the allotments.",
   "F|The south ramp is the long, gentle slope up to the estate, and it is the one part of this project the council is not paying for. The company building the ninety houses at Northfield is meeting the whole cost of it as a condition of their permission.",
@@ -86,13 +88,13 @@ $s2 = @(
   "F|The viewing platform over the weir is the part I am sorriest about. It was a fine wide half circle in the first design, but the tender prices came back well above our budget, and it is now half the size it was. It is still worth standing on.",
   "F|And finally the riverside path, which we will resurface from the north landing down to the mill. The stone for that is coming from the old level crossing - the setts and kerbs will be lifted before it is taken out, and laid again on the path, which pleases the history society more than anything else in the scheme.",
   "F|Right. There are plans on the tables, and my colleagues have the comment forms.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Aziz and Shahnoza, discussing a survey of queues that they are carrying out. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Shahnoza, before we go any further - the report wants a paragraph on why we picked queues. What do we say?",
   "F|The truth, I suppose. Not that documentary you keep quoting, the one about airports.",
@@ -113,7 +115,7 @@ $s3 = @(
   "M|Exactly. Our stopwatch says nothing about them, and they are the unhappiest customers in the building. If we do not record them, we are measuring the patient people only.",
   "F|That worries me just as much. We will add a column for it.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, where do we go? We cannot be everywhere.",
   "M|The bank was my first thought, but you need clearance from their head office, and that takes a month.",
@@ -129,13 +131,13 @@ $s3 = @(
   "M|Not needed. The phones are accurate to a hundredth of a second and we both have one.",
   "F|And the reading can wait - eleven papers is plenty for the draft. Shall I book the computer room for the analysis?",
   "M|Not yet, that is weeks away. The letter and the practice, then.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of pepper. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed sugar around the world. Today I want to look at a spice that was, for most of recorded history, worth a great deal more than sugar ever was: pepper.",
   "F|Let us start with the plant, because almost everything else follows from where it grows. Black pepper comes from a single species native to the Malabar coast, the wet south-western edge of India. It is not a tree and not a bush: it is a climbing vine, and growers train it up living trees or wooden poles, where it can reach eight or nine metres. The fruit is a small berry, and here is the point that surprises people every year - black, green and white pepper all come from the same berry, and the difference lies entirely in the treatment. For black pepper the berries are picked while they are still unripe and green, then dried in the sun until they wrinkle and turn black. For white pepper the berries are left to ripen fully and are then soaked in water for a week or so, until the outer skin can be rubbed off, leaving the pale seed inside.",

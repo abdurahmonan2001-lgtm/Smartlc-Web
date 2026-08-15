@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a businessman telephoning a language agency about hiring an interpreter for a business meeting. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, Bridgeway Language Services.",
   "M|Good morning. I need to hire an interpreter for a business meeting next month.",
@@ -54,7 +56,7 @@ $s1 = @(
   "M|Their flight lands at eight, so there is time to get into the city. The meeting starts at half past nine, and we would expect the contract discussion to run until about one.",
   "F|Nine thirty, then. I will put her down for the whole day.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Can I ask about the cost? I have no idea what this sort of thing comes to.",
   "F|Our standard rate is three hundred thousand som per hour, with a minimum of two hours. But for a meeting plus a factory visit you would be better with the full-day rate, which is two million som and works out considerably cheaper.",
@@ -73,13 +75,13 @@ $s1 = @(
   "F|Then just let us know. Cancellation is free of charge up to forty-eight hours in advance. After that we have to charge for the day, because she will have turned other work down.",
   "M|That is very reasonable. Thank you for your help.",
   "F|My pleasure. I will send the confirmation within the hour.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear an archivist talking to visitors on the open day of the city archives. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to the city archives. I have worked here for eleven years, and open day is my favourite day of the year, because for once the building is full of people who did not come to look up a will.",
   "F|Let me begin with the building itself, since visitors always ask why the archives are out here rather than in the centre. We were housed in the town hall for eighty years, and I will admit we had outgrown the rooms - we were stacking boxes in corridors by the end. But we managed, and we would probably have stayed if it were not for one night in February, when a burst main flooded the basement. We lost some very fine nineteenth-century ledgers, and within a year we had moved here. And no, before anyone asks, the town hall was not sold; it is still there, doing what it always did.",
@@ -87,7 +89,7 @@ $s2 = @(
   "F|There is one formality, though, and I would hate anyone to be turned away tomorrow. Before you can use the reading room for the first time, you must show us proof of identity - a passport or a driving licence - and we make you a reader's card, which takes about four minutes. You do not need to book a desk, whatever the internet says, and the lockers are there if you want them but nobody insists. Just bring that document.",
   "F|And a word about what is coming, because this year is a big one for us. The roof, I am glad to say, is finished - that was last summer, and it took most of our reserves. There is a rumour going round that we are buying a large private photograph collection, and I would love that to be true, but it is not, at least not this year. What we are actually doing, and what the grant is paying for, is putting the whole newspaper collection on the internet, page by page, going back to 1841.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Right - let me take you through the different parts of the archive, in the order you will see them on the tour.",
   "F|We start with the photograph collection, which is the one everybody wants to see. People assume it came to us from one great family, and it did not: there are pictures here from several hundred different donors, some of them handed in at the front desk in a carrier bag. It is currently being sorted and catalogued by a wonderful team of volunteers, who come in every Tuesday and have so far worked through about a third of it.",
@@ -97,13 +99,13 @@ $s2 = @(
   "F|Then we come to the family history room, and here you will have to forgive the crowd. More than half of everyone who comes through our doors is tracing an ancestor, so it is the busiest part of the archive - on a Saturday morning every seat is taken by nine o'clock, and there is a queue at the microfilm readers.",
   "F|And finally the conservation studio, where documents are repaired. I am afraid this is the one place I cannot simply walk you into, because there are scalpels, chemicals and irreplaceable papers spread out on the benches, so it can only be visited by appointment - but our conservator has kindly agreed to stand in the doorway today and answer questions.",
   "F|Right. Coats on - the corridors are cold - and we will begin.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Bekzod and Sabina, discussing an audio guide they are designing for a local museum. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Sabina, we should write the first section of the proposal - why we chose this project at all. What do we say?",
   "F|Well, the honest answer is the right one. It was not that the museum came to us - we wrote to them, remember, and waited three weeks for a reply. And it was not that there was nothing else on offer; there were two other projects, and the river survey was probably easier.",
@@ -129,7 +131,7 @@ $s3 = @(
   "M|She liked it. She said the testing plan was obvious - we had already put that in - and she quite liked the music idea, which was ours anyway. Her one real piece of advice was about length: she told us to cut the number of stops. Twelve, maximum.",
   "F|Twelve. That hurts, but she is right.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|So if we are down to twelve stops, we have to decide what actually goes in. What are we certain about?",
   "F|For me the interviews with the former workers are the best material we have. The woman describing the noise on her first morning is worth ten information panels.",
@@ -146,13 +148,13 @@ $s3 = @(
   "M|Good. What about visiting the guide at the transport museum?",
   "F|Worth doing, but not next week - it is a whole day. And the extra funding application is not open until March, so there is no point drafting it now.",
   "M|Agreed. Timing and the drama department, then. See you Tuesday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of locks and keys. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. Today I want to talk about a piece of technology that most of you used twice before you got here this morning, and have almost certainly never thought about: the lock, and its inseparable companion, the key.",
   "M|Let us start at the beginning. The oldest lock we know of was found in the ruins of an Assyrian palace, and it is roughly four thousand years old. It was built almost entirely from wood, which is one reason so few early examples survive - wood rots, while the iron and bronze of later centuries stay in the ground for us to dig up.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a hotel to book a conference room for a business event. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good afternoon, Rosewood Hotel, events desk. How can I help you?",
   "F|Oh, good afternoon. I'd like to book a conference room for a company training day, please.",
@@ -50,7 +52,7 @@ $s1 = @(
   "F|Theatre style is exactly what we want, yes.",
   "M|Good. And I should say, the room comes with a projector, a screen and two microphones - those are all included, there's no extra charge for equipment.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|That's very helpful. And what will all this cost?",
   "M|Well, there are two rates. For a half day - that's any four hours - it's five hundred thousand som. But you'll want the room from morning until evening, I imagine, and the full-day rate is eight hundred and fifty thousand som.",
@@ -66,13 +68,13 @@ $s1 = @(
   "M|Come straight to the front desk and ask for the events manager. That's me, as it happens, so I'll be expecting you.",
   "F|Perfect. Thank you so much for your help.",
   "M|My pleasure. We'll see you on the twelfth. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the volunteer coordinator at the City Zoo giving a briefing to a group of new volunteers. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to the City Zoo. I'm the volunteer coordinator, and by the end of this morning you'll know exactly where you fit in. First, let me deal with the question I've been asked a dozen times already: why are we taking on so many new volunteers this year?",
   "F|Some of you have heard that our visitor numbers have shot up. They haven't, actually - last year was almost identical to the year before. And no, none of our paid keepers have left us either; the team is the same as ever, I'm glad to say. The real reason is much happier. In July we open a completely new section of the zoo - the children's farm, down by the lake - and a new area simply cannot run without extra pairs of hands.",
@@ -80,7 +82,7 @@ $s2 = @(
   "F|Uniforms. You each get two polo shirts and a fleece, and there's nothing to pay - not a deposit, not a penny, and when you leave us the uniform is yours to keep. What you do need to do is collect it from the volunteers' office - that's the green door behind the gift shop. Please don't ask at the main gate; they don't keep them there.",
   "F|And one more piece of housekeeping. I'm often asked what volunteers get free. I have to be honest: meals in the staff canteen are discounted, but not free, and I'm afraid we can't give free tickets to your families - I wish we could. What every volunteer can use free of charge is the staff car park, next to the west entrance. Just show your badge at the barrier.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right - let me tell you about the six teams you can join, and a little about each one.",
   "F|First, the education team, who work with school groups in the classroom by the aquarium. It's wonderful work, but be aware of the timing: schools don't visit over the summer, so this team won't begin until the school year starts in September - later than everyone else. If you want to be busy immediately, it isn't the team for you.",
   "F|The tour guides take the public round the zoo twice a day. You get a route and a script to learn, and the animals do most of the entertaining. But you'll be talking to thirty or forty people at a time, out in the open, so we do ask that you're comfortable addressing a large group. If the idea makes your knees knock, choose something else.",
@@ -89,13 +91,13 @@ $s2 = @(
   "F|The animal kitchen team prepares the feeds - chopping fruit, weighing out grain, labelling every bucket. The animals eat before the visitors arrive, which means the kitchen starts at seven in the morning, a good two hours before any other team. If you're not an early riser, think carefully.",
   "F|And finally the events team, who help with birthday parties, evening openings and our big summer festival. Because those events involve contracts and safety plans, this is the one team you'll never run on your own: it always works under the direction of our paid events officer, and you'll be assisting her rather than organising things yourselves.",
   "F|So - have a think over coffee, and come and give me your first and second choices before you leave. Thank you.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two physics students, Karim and Dilnoza, discussing the report on their pendulum experiment. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Dilnoza, we should sort out the introduction first. The report has to say why we picked the pendulum experiment, and I can't remember what we agreed.",
   "F|Well, let's be honest about it, Karim. It wasn't because of the lectures - Dr Aliyeva didn't cover pendulum theory until two weeks after we'd started.",
@@ -117,7 +119,7 @@ $s3 = @(
   "F|The weak part is the error analysis. At the moment it's two sentences. We say our answer is close to nine point eight, but we never say how confident we are, or where the uncertainty comes from.",
   "M|You're right - the error section needs the most work of anything. Let's plan it now.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, which sources of error do we actually discuss? There's a list of candidates. Air resistance?",
   "M|I'd leave it out. The bob is small and slow - Dr Aliyeva said air resistance is negligible at our speeds, and we've no way to measure it anyway.",
@@ -130,13 +132,13 @@ $s3 = @(
   "F|So, two additions. First, a graph - length on one axis, the square of the period on the other. It should be a straight line, and the slope gives us g. It makes the whole argument visible.",
   "M|Lovely. And second, the raw numbers. At the moment we only show averages, and the marker can't check anything. A table of every timing we took goes in the appendix.",
   "F|The graph and the table of raw measurements, then. That's Saturday taken care of.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of coffee. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Most of you, I suspect, are holding a cup of the very substance this lecture is about, so let us give it some overdue attention: coffee, and how it conquered the world.",
   "F|The story begins in Africa. Coffee trees first grew wild in the highlands of Ethiopia, and nobody planted them - they were simply part of the forest. How people discovered what the berries could do, we honestly don't know, but the legend is too good not to tell. A young herder, the story goes, noticed that his goats became strangely lively after eating the red berries from a certain tree - skipping about, refusing to sleep - and when he tried the berries himself, he understood why. What we can say with confidence is that in the earliest period nobody brewed anything: the beans were chewed, sometimes pressed with fat into a ball, a portable food for travellers rather than a drink.",

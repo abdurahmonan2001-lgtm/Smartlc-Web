@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a repair company to arrange a visit for her washing machine. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Rapid Repairs, good morning. How can I help?",
   "F|Oh, hello. My washing machine has broken down, and I'd like to arrange a repair visit, please.",
@@ -46,7 +48,7 @@ $s1 = @(
   "F|Yes, one more thing. Right at the end of the spin cycle there's a loud banging. The whole kitchen shakes.",
   "M|A banging noise at the end of the spin. I'll note that down for the engineer.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Now, could I take your address?",
   "F|It's flat six, number fourteen, Bustan Street.",
@@ -67,12 +69,13 @@ $s1 = @(
   "M|Lastly, your booking reference. It's W R five eight. W for window, R for river, then the numbers five and eight.",
   "F|W R five eight. Lovely. Thank you so much for your help.",
   "M|Thank you, Mrs Rashidova. The engineer will see you on Wednesday.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the organiser of a charity fun run giving information to the people taking part. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good evening everyone, and thank you for coming to the briefing for Sunday's charity fun run in Oakwood Park. I'm Anvar, the race organiser, and in the next few minutes I'll tell you everything you need to know.",
   "M|First - why we run. Some of you took part two years ago, when the money went towards repairing the sports club building. That work is finished now, I'm glad to say. And there's been some talk that we're collecting for training courses for young athletes - in fact that's a separate fund with its own events. This year, every som you raise will buy new equipment for the children's hospital on Park Road. The hospital's own staff will be running with us.",
@@ -80,7 +83,7 @@ $s2 = @(
   "M|A word about souvenirs. The green T-shirts you may have seen are worn by our volunteers, so you can spot them if you need help - they're not for sale, I'm afraid, and the caps we advertised sold out weeks ago. But everyone who crosses the finish line, fast or slow, will be given a medal, so do finish!",
   "M|And your bags. Please don't leave anything valuable in your cars - the car park is open to the public all morning. Last year we stored bags at the bandstand, but on Sunday the bandstand is being used by the brass band, who are playing us home. So this year, leave your bag at the pavilion, where volunteers will look after it until you finish.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now let me walk you round the route - you can follow it on the map of the park.",
   "M|Everything begins at the main gate at the bottom of the park. As you come through the gate, the bag storage is immediately on your left, just past the cafe - hand your bag in there before you do anything else.",
   "M|Then make your way to the lake. The start line is on the wide path that runs along the south side of the lake, below the water - please line up there from half past eight.",
@@ -89,12 +92,13 @@ $s2 = @(
   "M|Keep going to the north-east corner, where you turn towards the bottom of the park. Our photographer had planned to stand at that corner, but the morning light there is poor, so instead you'll find the photo point beside the playground, on the east side. Slow down and smile as you pass - the pictures will be on the website.",
   "M|And then it's the finishing stretch: down past the playground and back towards the gate. The finish line is just in front of the main gate, on the opposite side from where you handed in your bag. The medals - and the band - will be waiting for you there.",
   "M|That's everything from me. Sunday morning, half past eight at the lake. Sleep well, and good luck.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Jasur and Laylo, discussing the educational phone app they are developing for their course project. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Laylo, the proposal form asks where the idea for the app came from. Shall we say it was that lecture on educational games? It certainly impressed me.",
   "F|The lecture was good, Jasur, but honestly, the idea was in my head before that. Last summer I spent six weeks helping my little brother with his maths, and I kept thinking - if this practice were a game on a phone, he'd do it without me sitting next to him. That's where the app really comes from.",
@@ -112,7 +116,7 @@ $s3 = @(
   "F|You'll learn faster than you expect. And for the final report - did you write down what she said it must include?",
   "M|Yes. Whatever else we put in, there has to be a plan for testing the app: who tries it, what we measure, and how we use what we find. Screenshots are nice but optional, she said, and she doesn't need a list of costs.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Right - features for version one. I made a list of five ideas. First: a daily practice reminder?",
   "M|Hmm. My weather app sends me a reminder every day, and I've grown to hate it. Leave reminders out for now - maybe later, if parents ask for them.",
@@ -130,12 +134,13 @@ $s3 = @(
   "M|She said not yet - after the school visit, when we know more. And the logo and all of that can wait too.",
   "F|What about the name? The name is easy. We'll call it...",
   "M|We are not deciding the name today, Laylo.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of wool and the wool trade. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Today I want to talk about a material so ordinary that we forget how much history is knitted into it. Wool.",
   "M|Sheep were among the very first animals that humans ever farmed - they were being kept more than ten thousand years ago. But here is the surprising part: those earliest sheep had no fleece worth cutting. They were kept for two products only - their meat, and their milk. The woolly sheep we know today is really a human invention, created over thousands of years as herders bred, again and again, from their woolliest animals.",

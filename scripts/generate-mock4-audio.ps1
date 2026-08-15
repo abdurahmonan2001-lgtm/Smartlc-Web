@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a bus company's lost property office about a bag she left on a bus. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Greenline Buses, lost property office. How can I help?",
   "F|Oh, hello. I left a bag on one of your buses yesterday evening, and I'm hoping someone has handed it in.",
@@ -50,7 +52,7 @@ $s1 = @(
   "F|It's a canvas bag, the kind with a shoulder strap. Not black - grey. A light grey.",
   "M|A grey canvas bag with a shoulder strap. Noted.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|And what was inside the bag? Anything valuable?",
   "F|Unfortunately, yes - my laptop. And some library books, which are due back on Friday, of all things. At least my purse was in my coat pocket.",
@@ -65,13 +67,13 @@ $s1 = @(
   "M|There is a small handling fee, I'm afraid. It was five thousand som for years, but it went up in January - it's ten thousand now, and the office takes cash only.",
   "F|Ten thousand, in cash. That's fine. Thank you so much for your help.",
   "M|You're welcome. We'll call you as soon as we've checked the shelves. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the volunteer coordinator of the Ashford Park Summer Music Festival briefing this year's volunteers. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening everyone, and thank you for giving up an evening for this briefing. I'll keep it short, because I know some of you have buses to catch.",
   "F|First - what's new this year. You may have seen rumours online about a second stage. I'm sorry to disappoint you: that idea has been postponed until next year at the earliest. And no, we are not moving anywhere - Ashford Park has been our home for nine years and it stays that way. What has changed is the length. For the first time, the festival will run for three days instead of two - which is exactly why we've recruited more volunteers than ever before.",
@@ -79,7 +81,7 @@ $s2 = @(
   "F|Food. Those of you who volunteered before will remember getting half price at the food stalls. That arrangement has gone - and it's been replaced with something better. Every shift now comes with a voucher for a free hot meal at any stall on the site. You're welcome to bring your own food if you prefer, but honestly, you won't need to.",
   "F|One serious point before the jobs. If you feel unwell during a shift - too much sun, or simply worn out - please don't take yourself off to the first-aid tent; we keep that clear for visitors and real emergencies. And don't ring the festival office either, because during the day nobody is sitting next to that phone. The right thing to do is simple: tell your team leader. Every leader carries a radio, and they will sort you out within minutes.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right - the jobs themselves. Let me take the six teams one by one, because each has its own character.",
   "F|The car park team. I'll be honest with you: your day begins before everyone else's. The gates open to vehicles at eight, which means the team meets at seven sharp, while the grass is still wet. Bring a warm jumper and you'll be fine.",
   "F|The information desk. We save this one for volunteers who speak more than one language. We get visitors from right across the region and beyond, and last year the desk handled questions in five different languages in a single afternoon.",
@@ -88,13 +90,13 @@ $s2 = @(
   "F|The recycling team. Last year, frankly, we didn't give them enough people, and by Sunday evening they were exhausted. So this year we've doubled the number of helpers on that team. It's cheerful work, and you're outdoors all day.",
   "F|And finally, the campsite team. Campers mostly arrive after five o'clock, once they've finished work, so nearly all the campsite jobs happen in the evening - guiding people to their pitches, sorting out lost bookings, and keeping the noise friendly. If you're not a morning person, that is the team for you.",
   "F|Right - the team lists are on the board by the door. Come and find your name, and thank you again.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two architecture students, Timur and Zarina, discussing their scale-model assignment. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Zarina, we need to settle this today - which building are we actually modelling?",
   "F|Well, my first idea was the railway station, Timur. I love that roofline. But it's a working station - we'd never get permission to measure inside.",
@@ -120,7 +122,7 @@ $s3 = @(
   "F|No, the deadline's fine. And the display spaces were allocated last week, so there's nothing to gain there. But think about the ironwork arches - we'll never cut those cleanly by hand. We should ask for access to the laser cutter. Second years are allowed to use it with supervision.",
   "M|Good idea. That's our one request, then.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Let's decide what actually goes into the model. The glass roof, obviously - it's the whole point of the building.",
   "M|Obviously. And I'd add the fountain in the square outside. It costs us almost nothing to make, and it gives the whole model a sense of scale.",
@@ -136,13 +138,13 @@ $s3 = @(
   "M|True on both. What about the project diary? She checks it first, every single time.",
   "F|I'll update the diary tonight - we're three weeks behind on entries.",
   "M|Perfect. Base and diary before Tuesday, then. Coffee?",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about beavers and their effect on rivers and landscapes. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we looked at how human engineers reshape rivers. Today I want to introduce you to an engineer that was reshaping rivers several million years before we existed: the beaver.",
   "F|Let's begin with the animal itself. The beaver is Europe's largest rodent - a full-grown adult can weigh about thirty kilos, roughly the weight of a ten-year-old child. Two features make it unmistakable. First, the teeth. A beaver's front teeth never stop growing - they can't afford to, because the animal wears them down daily by felling trees. And they are hardened with iron, taken from the diet and built into the enamel; it is the iron that gives beaver teeth their striking orange colour. Second, the fur - which, as we'll see, was very nearly the animal's undoing. Beaver fur is astonishingly dense, with tens of thousands of hairs packed into every square centimetre, and the layers trap so much air that the coat is effectively waterproof. A beaver can spend a quarter of an hour under freezing water and come out dry at the skin.",

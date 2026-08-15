@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning an agency about renting a holiday cottage. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Hollowdale Holiday Cottages, good morning.",
   "F|Oh, good morning. I'm ringing about renting one of your cottages in August, for my family.",
@@ -51,7 +53,7 @@ $s1 = @(
   "M|Seven nights, lovely. Now, the rent. You may have seen five hundred and eighty pounds on our website, but I'm afraid prices went up in April. For August it's six hundred and forty pounds for the week - and that does include all your electricity.",
   "F|Six hundred and forty. All right, that's fine.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Do you need any money from us now?",
   "M|We ask for a deposit of one hundred and fifty pounds to hold the booking. It's fully refundable - we return it within a week of your departure, provided nothing is damaged.",
@@ -67,12 +69,13 @@ $s1 = @(
   "M|Now this is important, because the satnav sends everyone the wrong way. It tells you to turn at the church - ignore it. Carry straight on through the village, and turn left just after the bridge. The cottage is right at the end of the lane.",
   "F|Left just after the bridge. Wonderful. Thank you so much for your help.",
   "M|A pleasure. I'll email the booking form to you today. Goodbye.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide talking to a group of visitors at the start of a tour of a recycling centre. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning everyone, and welcome to the Greenvale Recycling Centre. Before we set off around the site, let me tell you a little about where you're standing.",
   "F|Visitors always ask about this enormous curved roof. Most people guess the building was a bus depot - it does have that look - and there was in fact a street market held on the open ground here for a few years after the original business closed. But the truth is that this site was built over a century ago as a brick factory. Millions of bricks left this yard, and some of them are probably in your own houses.",
@@ -90,12 +93,13 @@ $s2 = @(
   "F|And finally, electrical items - kettles, radios, laptops. These never go anywhere near the crusher. They go straight to our repair workshop, where a team of volunteers fixes them up so they can be used again, and about half of everything that comes in gets a second life.",
   "F|The one thing we cannot take here, I'm afraid, is mattresses - the council website will tell you who accepts those.",
   "F|Right - vests on, everyone? Then follow me.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear a nursing student called Madina discussing her hospital placement with her supervisor. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Come in, Madina, sit down. So - we're halfway through your placement, which makes it a good moment to look back. Let's start at the beginning. The surgical ward. Was it your friend Zarina who talked you into that? She was with us last year.",
   "F|Actually, Zarina tried to talk me out of it - she found the ward exhausting. And it's certainly not for convenience; I spend forty minutes on the bus each way. No, the honest reason is that I'd worked in a clinic and in a care home, but I'd never done anything surgical at all. It was the one gap, and I wanted it filled.",
@@ -112,7 +116,7 @@ $s3 = @(
   "M|Everyone says exactly that, and it fades with practice - we'll run two mock assessments first. And your reflective journal. I read last month's entries. The length is fine, and please don't start filling it with academic references - it isn't an essay. What I want is different: every entry should finish with what you would do differently next time. That is the whole point of reflection.",
   "F|All right. I can do that.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|Let's talk about the programme itself. Which parts have actually taught you the most? You went into theatre, didn't you?",
   "F|I did, and watching the operation was thrilling - but standing at the back for three hours, I can't honestly say I learned much. And meeting patients' families I found more stressful than instructive.",
@@ -130,12 +134,13 @@ $s3 = @(
   "M|A ward handbook. Good - those are our two proposals, then. Someone also suggested more night shifts for students, but I feel nights should wait until the final year.",
   "F|Definitely.",
   "M|Right - same time next week, Madina.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of silk and the silk trade. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Today I want to talk about a fabric that, for roughly two thousand years, was worth more than its weight in gold - silk.",
   "M|Let's begin with what silk actually is. The fibre comes from the cocoon of a caterpillar - the larva of a moth that feeds on the leaves of the mulberry tree. When the caterpillar is ready to transform, it spins a protective case around itself from a single continuous strand, and it is that strand we weave.",

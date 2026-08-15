@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a language exchange club to ask about becoming a member. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good evening, Riverside Language Exchange Club, Gulnora speaking.",
   "M|Oh, hello. I saw a poster about your club in the central library, and I'd like to find out about joining.",
@@ -52,7 +54,7 @@ $s1 = @(
   "M|Thursday. That actually suits me better.",
   "F|Good. We run from half past six until half past eight, though people often stay talking long after that.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|And where exactly do you meet?",
   "F|Upstairs at the Compass Cafe, on Bridge Street - do you know it? There's a big brass compass hanging over the door, you can't miss it. The upstairs room is ours for the whole evening.",
@@ -66,13 +68,13 @@ $s1 = @(
   "F|People used to just email me, but messages kept getting lost, so now everything goes through the club's website. There's a short form - your name, your languages - it takes two minutes, and you get a confirmation straight back.",
   "M|On the website. Perfect - I'll do it tonight. Thank you, you've been really helpful.",
   "F|My pleasure, Bekzod. See you on Thursday!",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a harbour officer explaining changes being made to the local ferry services. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning, everyone. I'm the passenger services officer here at Millhaven Harbour, and I've been asked to explain the changes you'll see on the ferries from next month. There's been a lot of guessing in the local paper, so let me give you the facts.",
   "M|First, why is the timetable changing at all? Some people assume it's because passenger numbers have grown - in fact, numbers have been steady for the last five years. Others think the boats themselves are wearing out, but our fleet is modern - the newest vessel only joined us last summer. The real reason is this: from the first of next month, engineers will begin strengthening the harbour wall, which has stood since the eighteen nineties, and sections of the harbour will have to close one after another while they work. Every service is affected in some way, and the new timetable is built around that project.",
@@ -80,7 +82,7 @@ $s2 = @(
   "M|Tickets next, because the system has just changed. You can still pay on board, and you can still queue at the harbour office - prices there are exactly what they were. What's new is the mobile app: book through the new app and you pay fifteen per cent less than at the office, on every route, at any time of day.",
   "M|One more practical point: bicycles. Space in the cycle racks is limited to eight bikes per crossing, and even outside the rush hour they fill up quickly. Turning up early no longer guarantees anything, I'm afraid - cyclists should reserve a space before they travel. It's free to do, on the app or by phone, and it means nobody is left standing on the quay with a bike.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "M|Right - let me run through the services one by one, in the order they appear on the timetable board.",
   "M|The Grayton ferry first. Nothing changes about the boats or the pier, but we know commuters found the old timetable frustrating, so from next month it runs every twenty minutes instead of every forty, all day, seven days a week.",
@@ -90,13 +92,13 @@ $s2 = @(
   "M|The Denholm ferry is directly affected by the engineering work, because its berth is one of the sections being rebuilt. So for the whole of this season it will leave from the East Pier instead - that's the pier beside the fish market, about five minutes' walk from its usual spot.",
   "M|And finally the night ferry. It has never attracted many passengers between autumn and spring, and with the works going on we can't justify it, so it will not run between November and March. It returns, as normal, at the start of April.",
   "M|Full details of all these changes are on the harbour website, and printed timetables are available from the office. Thank you very much - and I'm happy to take questions at the end.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two psychology students, Aziza and Timur, designing an experiment on a memory technique known as chunking. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Aziza - the proposal form wants a sentence on why we chose chunking. Was it that video I sent you, the memory champion memorising a pack of cards in a minute?",
   "F|The video was fun, Timur, but no. For me it was the demonstration our lecturer did in class. She read out fourteen digits and nobody could repeat them - then she grouped the same digits into two dates and a phone code, and suddenly the whole room could do it. I couldn't stop thinking about that. The articles she gave us afterwards just confirmed it was a real effect.",
@@ -110,7 +112,7 @@ $s3 = @(
   "F|Sensible. Then let's divide the jobs. Finding participants can wait until the task actually works, and the room's already booked. My next job is the instruction sheet - wording it so that both groups hear exactly the same thing, apart from the one sentence about grouping.",
   "M|Perfect.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|So - who do we recruit, and who do we keep out? Someone in the seminar said we should exclude anyone under eighteen.",
   "F|Not necessary - everyone on the volunteer list is an adult already. And your worry about close friends taking part - I've thought about it, and as long as the instructions are read from the script, friends are fine.",
@@ -122,13 +124,13 @@ $s3 = @(
   "F|Someone suggested reaction times, but that needs special software, and speed isn't our question. Occupation tells us nothing either. And age - the whole list is between eighteen and twenty-five, so it would be a column of nearly identical numbers. What I do want is a difficulty rating - one to seven, straight after the task - because if the chunking group finds the task easier, that supports the whole idea.",
   "M|Good. And we need the strategy question - did you group the digits deliberately, yes or no. Without it, we can't tell whether people in the control group started chunking on their own.",
   "F|Exactly. The rating and the strategy question - just those two, then. Come on, let's write up the design while it's fresh.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of perfume. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Today I want to trace the history of something invisible - perfume. It has been traded like gold, taxed like wine, and at times worshipped like a god; and the story begins with the word itself. Perfume comes from the Latin per fumum - literally, through smoke. That is no accident, because the earliest perfumes were not liquids in bottles at all. They were incense - fragrant resins and woods burned in temples, their smoke rising as a religious offering. Scent, for the first civilisations, was a way of speaking to the gods.",
   "F|The industry, though, is far older than most people imagine. Some years ago, archaeologists working on the island of Cyprus uncovered what may be the world's oldest perfume factory - a workshop about four thousand years old, complete with stills, mixing bowls and storage jars, on a scale that suggests production for trade, not private pleasure.",

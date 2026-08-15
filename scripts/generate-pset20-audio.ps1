@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a coach company to book places on a day trip. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Highfield Coaches, good morning. How can I help you?",
   "M|Good morning. I'm ringing about your day trips. My neighbour went on one in the spring and hasn't stopped talking about it.",
@@ -52,7 +54,7 @@ $s1 = @(
   "M|Quarter to eight, arrive by half past seven. And when are we home?",
   "F|Back in the city by about seven in the evening, traffic permitting.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Right - and how much does the trip cost?",
   "F|It was a hundred and ten thousand som last season, but we've agreed a group rate with the castle, so it's ninety-five thousand som per adult now. And that price includes your entrance ticket, which people often forget when they compare us with other companies.",
@@ -70,13 +72,13 @@ $s1 = @(
   "F|Please do. The last thing is your tickets. For most trips we email them, but the castle insists on a paper ticket for every visitor, so for this one they go in the post. They should reach you early next week.",
   "M|By post. Thank you very much indeed.",
   "F|Thank you for calling. We'll see you on the twenty-second.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a project officer talking to visitors about a new open-water swimming lake. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good afternoon, everyone, and welcome to Ashwood Lake. Before I show you round, let me tell you how all this came about.",
   "F|People make some odd guesses about what this place used to be. Because of the shape of it, most visitors assume it was a reservoir that once supplied the city - it wasn't; the city water has always come from the hills. There was a proposal in the nineteen nineties to turn it into a fish farm, and you'll still find that in some of the old guidebooks, but nothing was ever built. What this actually is, is a hole. Gravel was dug out of here for thirty years to build the motorway, and when the diggers left, the ground water simply filled it up.",
@@ -84,7 +86,7 @@ $s2 = @(
   "F|Now, the rules, because there are only three that really matter. You do not have to book every session - we only ask for bookings in July and August, when it gets crowded. We recommend that you swim with a friend, and most people do, but it isn't compulsory. The one absolute rule is this: every swimmer must wear a brightly coloured hat, which we hand out at the gate. In open water a head is a very small thing to see, and our lifeguards need to be able to count you.",
   "F|And what am I proudest of? Well, we have two and a half thousand members, which is more than any similar lake in the country, but numbers are not really an achievement, they're just a queue. The children's club on Sunday mornings is wonderful and I'd love to claim it, but it was the schools who set that up. No - what I am proudest of is that every one of our lifeguards is a volunteer from this town, trained here, at our expense, over two winters. Not one of them is paid, and not one of them was brought in from outside.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you round the site, and I'll say a word about each part of it as we go.",
   "F|We're standing at the shallow bay, here at the southern end, where the water never comes above chest height. Nobody who can already swim a kilometre needs to be in here at all, and we ask them not to be: the bay is set aside for beginners, and for the lessons we run on weekday evenings.",
   "F|Out to your right is the jetty, which is where the serious swimmers get into the water. We could never have afforded to build it ourselves - it was paid for by a local business, the engineering firm on the industrial estate, whose staff swim here most lunchtimes.",
@@ -93,13 +95,13 @@ $s2 = @(
   "F|Then there's the car park, which is, frankly, far too small. We built it for a hundred cars and on a hot Saturday we get three hundred. The land next to it has now been bought, and it will be made larger next year, with a proper cycle store at the same time.",
   "F|And finally, out in the middle, the island. It looks tempting on a calm day, and I know exactly what you are thinking. Please don't. The island is a nesting site for terns, it must not be entered by swimmers at any time of year, and the buoys around it mark the limit of the swimming area.",
   "F|Right - follow me down to the jetty, and mind the step.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Islom and Sitora, discussing a survey of bees they are carrying out. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Sitora, the project form. Question one: how did we come to choose the bee count?",
   "F|The honest answer, or the impressive one?",
@@ -121,7 +123,7 @@ $s3 = @(
   "F|Telling the species apart, without a doubt. Half the bumblebees in a park are two species that differ by a band of hair, and I can't do it at two metres with a bee in motion.",
   "M|That's exactly my fear too. If we get the species wrong the whole data set is worthless - the numbers would still add up, but they'd mean nothing.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, what do we write down besides the bees?",
   "M|Air temperature, surely. Bees hardly fly below about thirteen degrees, so a cold morning would look like an empty park.",
@@ -138,13 +140,13 @@ $s3 = @(
   "F|Agreed. And I did ask Doctor Karimova about a training session, but she's abroad until October, so that can't happen before we start. She has offered to check our photographs afterwards, which is nearly as good.",
   "M|And we don't need to borrow a camera - our phones are better than the department's old one anyway. Right: you write to the parks, I make the chart, and we start on the fourteenth.",
   "F|The fourteenth it is.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of map projections. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we discussed how the size of the earth was first measured - by Eratosthenes, in Egypt, more than two thousand years ago, using shadows and a great deal of nerve. Today I want to look at the problem that measurement creates: how do you draw a round earth on a flat sheet of paper?",
   "F|The first serious attempt we still have belongs to Ptolemy, working in Alexandria around one hundred and fifty AD. Ptolemy did two things that mattered. He listed the coordinates of some eight thousand places, and he set the known world on a curved grid of latitude and longitude lines, so that the map could be rebuilt by anyone who had the numbers. That grid is the ancestor of every map you have ever used.",

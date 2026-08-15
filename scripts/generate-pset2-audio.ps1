@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a swimming pool to arrange lessons for her daughter. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good afternoon, Oakford Pool. How can I help you?",
   "F|Oh, good afternoon. I'd like to enrol my daughter for swimming lessons, please. You do run classes for children, don't you?",
@@ -51,7 +53,7 @@ $s1 = @(
   "M|Let me check. The new term begins on the fifteenth of March - oh, hang on, no, forgive me. The fifteenth is the adult course. The children start one week later, on the twenty-second of March.",
   "F|The twenty-second. Let me write that down.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|And what will the course cost me?",
   "M|It's two hundred and fifty thousand som for the whole term. That includes her entry to the pool each week, so you don't pay anything at the door. And if you ever sign up a second child, they get ten per cent off.",
@@ -67,13 +69,13 @@ $s1 = @(
   "M|Perfect. The confirmation will be with you this afternoon, and we'll see Amina on the twenty-second.",
   "F|Wonderful. Thank you so much for your help. Goodbye.",
   "M|Goodbye now.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the head librarian of the Westbrook Public Library talking to a residents' meeting about the library's new services. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming. A lot has changed at Westbrook Library this year, so let me take you through it.",
   "F|First, opening hours, because that's what our survey asked about. The single most common request was for earlier openings on weekday mornings, and I'm sorry to say we simply can't staff them - eight o'clock starts are beyond us. We also looked again at late opening on Friday evenings. We actually tried that a few years ago, and so few people came that the lighting cost more than the books we lent. But here is what we can do, and I'm delighted about it: from the first of next month, the library will open on Sunday afternoons, from two until six. That's the first time in its history.",
@@ -81,7 +83,7 @@ $s2 = @(
   "F|Third, we're starting a home delivery service. When we announced it, people assumed it was for our older members, and certainly many older people will use it. But I want to be clear: it isn't about age at all. The service is for anybody, young or old, who is unable to get to the library - because of illness, disability, or because they're caring for someone at home. A volunteer driver will bring books every two weeks and collect the previous ones.",
   "F|And that brings me to volunteers, because we need more of you. Not for repairing damaged books - those go away to a professional bindery. And our own staff will keep running the little ones' story sessions, don't worry. Where we genuinely need help is with our beginners' computer classes. If you can show another adult how to send an email or fill in a form online, and you can spare one hour a week, please come and talk to me afterwards.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Now, let me walk you round the building, room by room, so you know what's where.",
   "F|The computer room first. We've installed twelve new machines, and they've been so popular that turning up and hoping is no longer realistic. So we've introduced a booking system: you reserve your hour in advance, at the desk or online, up to a week ahead. Booked users always take priority.",
   "F|The local history collection - our maps, our old photographs, the parish records. For years it lived on the top floor, where, let's be honest, nobody ever found it. It has now moved down to the ground floor, right next to the newspaper area, and the difference in visitors has been immediate.",
@@ -90,13 +92,13 @@ $s2 = @(
   "F|The cafe by the entrance. Everyone assumes the council paid for it. In fact, the council didn't contribute one som - the whole thing was funded by local businesses. Eight firms from the high street put up the money between them, and I think they deserve our thanks.",
   "F|And finally, upstairs, the media room. Music, films, games consoles, recording software. I'll be honest with you about its purpose: it has been designed for teenagers, twelve to eighteen, and it is deliberately their space, not ours. If you're over twenty, admire it from the doorway.",
   "F|The lift, I'm sorry to say, is still out of action until the spring, so do ask staff if the stairs are difficult. There are leaflets with all the new opening hours at the desk. Thank you.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two psychology students, Nodira and Jasur, discussing the questionnaire they are preparing about mobile phone use. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Jasur, before we get into the questions, I need to write the background section. How did we actually settle on phone use as the topic?",
   "M|Do you remember? Doctor Aliyeva suggested sleep patterns at first, and neither of us was keen.",
@@ -118,7 +120,7 @@ $s3 = @(
   "M|And sitting in the library watching people is creepy and slow. No - my plan is this. We ask a small group of volunteers, say twenty, to open the screen-time settings on their phones and share the weekly figure with us. Then we compare what the phone recorded with what they claimed on the form.",
   "F|A proper accuracy check. I like it.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Right, the new sections. We said we'd add two. Money is a dead end, isn't it - nobody has any idea what they spend on apps.",
   "M|A dead end, agreed. And I've already cut the navigation questions - how people use maps interested nobody, including me, frankly.",
@@ -130,13 +132,13 @@ $s3 = @(
   "M|Yes, you take three, I'll take two. And remember she told us not to email her drafts - she wants to see it at the Thursday meeting, on paper.",
   "F|No emailing, then. And no room to book, since it's all online, and posters can wait until we actually launch. Consent statement and the five classmates - that's the week.",
   "M|That's the week. Coffee?",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of ice cream. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Today's lecture is about something you all know very well, and know nothing about: ice cream. It has a longer and stranger history than almost any food in the freezer.",
   "F|Let me start with a correction to the popular story. Frozen desserts are far, far older than ice cream itself. More than a thousand years ago, in the cities of Tang dynasty China, cooks were already serving a chilled delicacy made from milk that had been mixed with rice, then packed into snow to freeze. It wasn't ice cream as we know it, but milk, frozen and sweetened, was on aristocratic tables in China a millennium before Europe managed it. Further west, in Persia, there was a different tradition: elegant fruit drinks, flavoured with rose water and cherries, that were cooled with snow - real mountain snow, carried down from the peaks by runners and stored through the summer in deep, cleverly ventilated ice houses. The Roman emperors, incidentally, had the same appetite: they too sent runners to the mountains to fetch ice for flavoured desserts, and paid handsomely for it.",

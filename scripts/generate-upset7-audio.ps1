@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "F|Part one. You will hear a man phoning a company that hires out party equipment, to arrange a family celebration. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "F|Now listen carefully and answer questions one to five.",
   "F|Silverbird Party Hire, good morning. How can I help?",
   "M|Oh, hello. We're organising a big family party in August, and a colleague of mine said you supplied everything for his son's wedding. I'd like to arrange something similar, please.",
@@ -51,7 +53,7 @@ $s1 = @(
   "F|Ideal - we can peg straight into grass. And how many guests are you expecting?",
   "M|About seventy-five, once you count all the cousins.",
   "F|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "F|Now listen and answer questions six to ten.",
   "F|Now, for seventy-five people I wouldn't recommend our nine-metre marquee - it would be a squeeze. The twelve-metre one is the right size. It's twelve metres long and six metres wide, and if the weather is hot we can take the side walls out completely.",
   "M|The twelve-metre one, then. And we'll need tables as well. Round ones, if you have them.",
@@ -72,12 +74,13 @@ $s1 = @(
   "F|By bank transfer, please - the details are on the booking form, and the balance needs to reach us at least five days before the event.",
   "M|By bank transfer, no problem. Thank you, you've made this very easy.",
   "F|My pleasure. I'll email the form this afternoon - and I hope your mother has a wonderful birthday.",
-  "F|That is the end of part one."
+  "F|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a member of staff at a science centre telling visitors about its new gallery and exhibits. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning, everyone, and welcome to Brightwater Science Centre. My name's Adam, I'm one of the education officers here, and my job this morning is to introduce our brand-new Discovery Gallery before you go in.",
   "M|First, a little background, because people keep asking how we paid for it. It wasn't the city council - they support our schools programme, and we're grateful, but there was no council money in this building. And it wasn't ticket sales either; honestly, tickets barely cover our running costs. The real story is rather moving. A retired engineer called Vera Holden, who visited us with her grandchildren for years, left the centre a very large sum of money in her will, and that gift paid for the entire gallery.",
@@ -95,12 +98,13 @@ $s2 = @(
   "M|Then comes the sound tunnel, a curved corridor where your voice comes back to you changed - stretched, deepened, multiplied. The whole thing was designed and built by engineering students at the university as their final-year project, and I think it's extraordinary.",
   "M|And finally, at the far end, the planetarium dome. We expected it to appeal mainly to children. The surprise has been the grown-ups: it has become especially popular with adult visitors, so much so that we now run evening sessions just for them, with the coffee machine on.",
   "M|Right - that's everything. Members, the Discovery Gallery is yours. Enjoy it.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two nutrition students, Aziz and Laylo, planning a study of their university canteen. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Laylo, before we write the proposal, we should agree on how this canteen idea actually started. Was it your job in that sandwich shop?",
   "F|Everyone assumes that, Aziz, but no - the shop was just a holiday job. What actually got me thinking was that national survey of student eating habits that came out in the spring. The findings were genuinely shocking - half the students surveyed hadn't eaten a single vegetable in the previous two days. I read it and immediately thought of our own canteen. Our tutor did say food was a rich area when we mentioned it, but by then I'd already decided.",
@@ -115,7 +119,7 @@ $s3 = @(
   "M|I did. She liked the question, she liked the two-stage design, and she wants one addition: a week-by-week timetable for the whole term. Which weeks we observe, which weeks we hand out questionnaires, when we analyse. She said proposals without a timetable always run late. No budget section needed, since we're not spending anything, and she said our reading list was already long enough.",
   "F|Then let's draft the timetable tonight.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, from the reading we've both done - what do we actually expect to influence choice? The posters, for instance. The canteen has all those healthy-eating posters above the counter.",
   "M|And every study I found says posters like that change almost nothing. People look straight past them. I wouldn't put them anywhere near the top of the list.",
@@ -127,12 +131,13 @@ $s3 = @(
   "M|The evidence on calorie labels is genuinely mixed - some studies show a small effect, others none at all. I wouldn't stake our report on it. And someone in the seminar suggested longer opening hours, but that's a staffing question, way beyond our study. No - the price finding gives us a strong one: they should cut the price of salad. Even a small cut shifted choices in the studies I read.",
   "F|Cheaper salad, definitely. And there was that lovely plate study - people served themselves less and wasted less when the plates were smaller, without even noticing. The canteen's plates are enormous, and smaller ones would cost almost nothing.",
   "M|Cheaper salad and smaller plates - those are our two recommendations. That's a proposal, Laylo. Let's write it up.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of shorthand writing. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. Before recording machines, before typewriters, there was only one way to capture the human voice at the speed of speech, and that was shorthand - systems of strokes and symbols that let a trained hand write as fast as a person can talk. Today I want to trace its history, because it is really a history of who controls the record of what was said.",
   "M|The story begins, by tradition, in ancient Rome. The system's inventor is usually named as Tiro, who worked as Cicero's secretary. Tiro was born a slave and was later freed, and he served the great orator for decades, managing his letters and his library. To keep up with his master's words he devised a set of several thousand symbols, and with them he took down speeches word for word in the Senate - including, famously, the speeches Cicero delivered against the conspirator Catiline. The symbols became known as Tironian notes, and they long outlived both men: for many centuries they remained in use among monks across Europe, who abbreviated their manuscripts with them.",

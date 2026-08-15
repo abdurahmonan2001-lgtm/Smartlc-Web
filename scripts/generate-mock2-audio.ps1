@@ -1,4 +1,4 @@
-﻿# Generates the four Mock Test 2 listening recordings with Windows TTS.
+# Generates the four Mock Test 2 listening recordings with Windows TTS.
 # Same conventions as Mock 1: "F|"/"M|" pick the voice, "P|<seconds>" is a
 # silent question-preview pause; post-2020 announcer format throughout.
 Add-Type -AssemblyName System.Speech
@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning a community hall about booking a room for a family event. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Riverton Community Hall, good afternoon.",
   "F|Oh hello. A friend of mine held a party at your hall in the spring, and she hasn't stopped praising it since. I'd like to book a room for a family party myself, please.",
@@ -49,7 +51,7 @@ $s1 = @(
   "M|Sixty, noted. Now, that size fits two of our rooms. The Main Hall takes two hundred, but honestly, with sixty guests it will feel empty and the speeches will echo. I'd suggest the Garden Room - it holds up to eighty, and it opens straight onto the lawn, which is lovely in June if the weather behaves.",
   "F|The Garden Room sounds perfect. My parents love being outdoors, so the lawn would be a real bonus for the photographs.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Now, the practical side. What does the room cost?",
   "M|It depends on the day. On weekdays the Garden Room is thirty-five thousand som per hour, but for a Saturday you'll be on the weekend rate, which is forty thousand som per hour.",
@@ -65,12 +67,13 @@ $s1 = @(
   "M|We used to post out booking forms, but everything is electronic now. I'll send the confirmation by email today - just read it through, reply to accept, and pay the deposit using the reference in the message.",
   "F|By email, perfect. I'll watch out for it this evening. Thank you so much, you've been really helpful.",
   "M|My pleasure. We'll see you on the fourteenth - and congratulations to your parents.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the manager of Westfield City Farm talking to a group of visitors on its open day. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning everyone, and welcome to Westfield City Farm. I've managed the farm for six years now, and it's a real pleasure to see so many new faces. Before we start the tour, let me give you a little history and a few practical points.",
   "M|People often assume the farm was set up to supply vegetables to the shops round here, or as a place for city children to meet animals for the first time. Both of those things happen now, of course - you'll see school groups here most mornings, and our produce does reach a few local shelves. But the real reason we exist is simpler. Thirty years ago this site was an abandoned railway yard, full of rubbish, and a group of neighbours decided to bring the empty land back into use. The animals came later, almost by accident, when somebody donated a pair of goats.",
@@ -87,12 +90,13 @@ $s2 = @(
   "M|I'm sorry to say the pond is off limits today. The old safety fence is being replaced this week, and while the posts are out of the ground we can't let anyone near the water, so it's closed to visitors - the ducks, I promise, are perfectly fine.",
   "M|And finally, for the youngest visitors, the play area by the gate - the climbing frame, the sandpit, the little wooden tractor. It's brand new this year, and I want to say a public thank you to the family bakery on Mill Road, whose generous donation paid for every bit of it.",
   "M|Right - wellies on, cameras ready, and follow me.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two psychology students, Karim and Nilufar, discussing their experiment on sleep and memory. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Nilufar, we should decide what goes in the introduction about why we picked sleep and memory in the first place. Was it that book I lent you?",
   "F|The book was interesting, Karim, but no. Honestly, it was my own results last term. I slept about four hours before one exam and did far worse than anyone expected, including me, and I wanted to know whether the bad night was really the reason, or whether I was just making excuses. The tutor did approve the topic when we suggested it, but the idea itself was mine.",
@@ -108,7 +112,7 @@ $s3 = @(
   "F|That's the funny thing - she said the references were fine, actually, and she didn't ask us to cut the method section either, which I'd been dreading. Her main point was that pages of numbers are unreadable - she wants the results presented visually, charts and graphs, before anything else.",
   "M|Visual results it is, then. I'll draft the charts this weekend.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So for the write-up, which problems do we actually call serious? We should be selective - if we list ten weaknesses it looks as though the whole project failed. You mentioned the room was noisy once.",
   "M|Someone slammed a door during one session, that's all - a single moment. I don't think the noise mattered, and the scores from that session look completely normal. The two real issues, for me, are the testing times and the number of people.",
@@ -120,12 +124,13 @@ $s3 = @(
   "M|Honestly, the room was fine - thick walls, hardly any noise from the corridor. Nothing to change there. And someone in the seminar suggested offering people a small reward for taking part. Tempting, but we have no budget at all, so that's out.",
   "F|Agreed. As for the questionnaire, we'll reword the sleep question, but I wouldn't make it any shorter - it only takes five minutes as it is. So we're decided. Same hour for everyone, and a wider age range - just those two changes, done properly.",
   "M|To the library, then. Those charts won't draw themselves.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of rubber. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today's material is something you have touched a hundred times before breakfast - the soles of your shoes, the seal on the fridge door, the grip of your toothbrush. Rubber. It looks like the most ordinary substance in the world, and its history, as we shall see, is anything but ordinary.",
   "M|Let us begin with what it actually is. Natural rubber begins as latex - the milky sap of a tropical tree. Cut the bark at an angle, and the tree bleeds this white liquid, which can be collected in a cup, drop by drop, without harming the tree itself. The peoples of the Amazon rainforest were collecting it centuries before any European arrived, and they understood the material remarkably well - they waterproofed baskets and cloth with it, and made bottles and simple shoes by smoking layer after layer of it over a fire.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a community hall to book it for a party. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Hillside Community Hall, good morning.",
   "F|Good morning. I'm ringing to ask about hiring the hall for a private party. Is there someone I can speak to?",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|We live two streets away, so one hundred and eighty thousand. Is anything included in that?",
   "M|Tables, chairs, the kitchen and the car park are all included - there's no extra charge for any of them.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|There'll be some speeches. Is there anywhere for people to stand?",
   "M|There is. We keep a set of platforms in the store cupboard, and the caretaker will put up a small stage for you at no charge at all. People usually have it at the far end, under the windows.",
@@ -70,13 +72,13 @@ $s1 = @(
   "M|The caretaker. He opens the hall at half past five so you can decorate, he stays in the building all evening, and he locks up after you leave. His name's Anvar and he's extremely helpful.",
   "F|That's everything, I think. Thank you very much.",
   "M|My pleasure. I'll send the booking form today.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a project officer talking to a local group about a new footpath along the river. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on such a wet night. I'm the project officer for the river footpath, and I want to tell you how it came about, how it was paid for, and what we're asking of you now that it's open.",
   "F|People are generous about who gets the credit. The walking club is usually named first, and it's true they've campaigned for years for better access - though for other routes, not this one. Others point to the open-space survey the council carried out three years ago, which certainly helped later on. But the honest answer is that this path began with a class of eleven-year-olds at Marsh Lane School. They walked the riverbank for a geography project, mapped every blocked gate and broken fence, and sent the council a report with photographs. Nobody could quite bring themselves to file it, and here we are.",
@@ -84,7 +86,7 @@ $s2 = @(
   "F|We were also slower than we promised, and I'd rather explain why than pretend otherwise. Yes, the spring was wet, and we lost days to it. There was also a fortnight when we simply could not trace the owner of one small field, which sounds worse than it was - it was settled with a phone call in the end. What actually cost us five months was wildlife. A colony of water voles was found in the bank just above the weir. They're a protected species, everything stopped, and we could not touch that stretch until the ecologists had surveyed it and moved them safely upstream.",
   "F|And now the path is open, we do ask one thing of you above all. Dogs are welcome, on a lead near the meadow but loose elsewhere, so that's not it. The new planting will look after itself, and you're welcome to walk on the banks. The request is this: after heavy rain, please stay off the path altogether for a day or two. The surface is bound gravel and it is soft when it's saturated - a single wet weekend of boots can undo two months of work, and we haven't the budget to lay it twice.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Let me take you along the route, west to east, and tell you what you'll find.",
   "F|You start at the iron bridge. Everyone assumes it has always been there, but it hasn't. It was brought here from another site - it spanned a stream on the old railway ten miles north, and when that line was lifted the engineers took the bridge apart, numbered every piece and rebuilt it here over the mill stream. It's a hundred and forty years old and good for another hundred.",
   "F|Two hundred metres on you come to the weir. Stand still there for ten minutes at dawn and you'll understand why we put a bench on it. It is far and away the best place on the river to watch birds - kingfishers most mornings, herons, and in winter the whole pool fills with ducks. Bring binoculars and patience.",
@@ -93,13 +95,13 @@ $s2 = @(
   "F|After the meadow comes the boatyard stretch, which is the part I'm proudest of. It's level, it's three metres wide and it's tarred rather than gravelled, so it has a surface that wheelchairs can use - and pushchairs, and anyone unsteady on their feet. Two families told me it is the first riverside walk they have been able to do together.",
   "F|And the path ends at the picnic area by the boathouse, with its tables and its little shelter. That was paid for by a single donor, a woman who grew up in the cottages behind it and asked us not to name her. She sat with the plans for an hour and then wrote a cheque for the lot.",
   "F|That's the route. Do come and walk it - and do tell us what needs fixing.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two psychology students, Rustam and Nigora, planning a study using sleep diaries. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Nigora, before we write anything, we need the first section of the form - why we chose sleep.",
   "F|Do you want the polite answer or the true one?",
@@ -121,7 +123,7 @@ $s3 = @(
   "F|Yes. And it follows that the entry has to be made as soon as they wake, before anything else. Not at lunchtime, when the night has blurred, and certainly not the following bedtime.",
   "M|Straight after waking. I'll put that in bold on page one.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So what exactly goes on the morning page? It has to fit on half a side.",
   "M|Bedtime, surely.",
@@ -138,13 +140,13 @@ $s3 = @(
   "F|A small pilot with friends. Yes, that's essential. Nothing survives contact with a real user.",
   "M|Instruction sheet and pilot, then. We meet on Friday.",
   "F|Friday.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of bread. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed the history of salt. Today I want to look at the food that salt was mostly used to season: bread. And I want to begin much earlier than most people expect.",
   "F|Until recently, everyone taught that bread came after farming - that people first grew grain, and then, some centuries later, thought of baking it. That order is now wrong. At a site in the Jordanian desert, archaeologists found burnt crumbs of a flat bread in a stone fireplace, and those crumbs are about fourteen thousand years old. Under the microscope, the flour turned out to be a mixture of wild grains and the ground roots of a marsh plant, a kind of rush that grew by the water. So bread was being baked at least four thousand years before anybody planted a field. Bread did not follow farming. If anything, the appetite for bread may have helped to cause it.",

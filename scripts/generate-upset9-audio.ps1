@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman phoning the organiser of a weekend craft fair to book a stall. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Maplebridge Craft Fair, good morning. Anvar speaking.",
   "F|Oh, hello. I make handmade candles, and a friend who had a stall with you last year suggested I apply. Could I book a stall for this summer's fair?",
@@ -51,7 +53,7 @@ $s1 = @(
   "M|Three metres, noted. Now, the cost. That size is two hundred thousand som - oh, hold on, no, I'm looking at the corner stalls. A standard three-metre stall is one hundred and eighty thousand som for the day, and that includes a table and two chairs.",
   "F|One hundred and eighty thousand - fine, that's less than I feared.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Now, I melt wax on site for little demonstrations, so I'd need power at the stall. Is that possible?",
   "M|It is, in the courtyard. An electricity socket is an extra twenty-five thousand som, and you must book it in advance - we can't add sockets on the morning of the fair.",
@@ -65,12 +67,13 @@ $s1 = @(
   "M|Setting up starts early. Arrive by eight forty-five - no, wait, I'm reading the indoor list. You're in the courtyard, so arrive by eight fifteen, because the gates shut to cars at nine, and you'll want everything unloaded well before that.",
   "F|Eight fifteen, understood. Thank you so much - you've been really helpful. See you in June!",
   "M|We look forward to it. Goodbye.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide welcoming visitors to a restored watermill beside a river. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "M|Good morning, everyone, and welcome to Alderford Mill. I'm Tom, one of the volunteer guides, and before we go inside I'll give you a little background and a few practical points.",
   "M|There has been a mill on this spot beside the river for at least four hundred years, grinding flour for all the villages around. People sometimes assume it shut down because of the great flood of 1928 - the water did reach the first floor, and you can still see the mark on the staircase wall - but the mill was repaired and worked for years afterwards. Others imagine the last miller simply retired with nobody to follow him. In fact he stayed on, grinding animal feed, well into his seventies. What really finished the mill as a business was the flour itself: the big steam-driven roller mills in the cities could produce whiter flour at half the price, and by the 1950s no bakery would pay extra for stone-ground. The wheel stopped turning in 1957.",
@@ -87,12 +90,13 @@ $s2 = @(
   "M|Out on the riverbank is the sluice gate, which controls the water reaching the wheel. At two o'clock, and again at four, visitors can operate the sluice gate themselves, under our supervision - children especially love bringing the wheel to life.",
   "M|And finally, the miller's cottage beside the gate. We no longer show it as a house; it is used for school workshops, so if you hear flour being ground by hand, and a great deal of laughter, that will be year four from Alderford Primary.",
   "M|Right - follow me, and mind the step at the door.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two chemistry students, Jasur and Madina, discussing their project on recycling batteries. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Right, Madina - the introduction. We need a sentence on why we chose battery recycling. Should I say the idea came out of Professor Aliyeva's lecture on metals?",
   "F|We could, but it wouldn't really be true, would it? The lecture came weeks later. And people keep assuming it's because of my weekend job at the electronics shop, but honestly, that had nothing to do with it either. What actually started it was that news report - the fire at the waste depot outside town, the one caused by old batteries thrown in with ordinary rubbish. That report was the start of everything.",
@@ -107,7 +111,7 @@ $s3 = @(
   "F|Oh, and I saw the tutor about the presentation. You keep worrying we'll run over time - she wasn't worried about the timing at all. Fifteen minutes is plenty, she said. What she really wants is a comparison: our low-temperature method set against the furnace process industry uses - costs, energy, recovery rates, side by side. She said comparing the two methods should be the heart of the talk.",
   "M|Then that's how we'll build it.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|We should also write something about collecting the used batteries, because that was harder than the chemistry. Which problems do we actually mention?",
   "M|Not the shops - I expected them to refuse, and in fact every shop we asked agreed to keep a collection box. And we can't complain about the numbers: three hundred batteries in a fortnight is far more than we needed.",
@@ -121,12 +125,13 @@ $s3 = @(
   "M|The filter, and everything measured three times - I'll write those down now. What about the acid itself? Someone in the seminar suggested switching to sulphuric.",
   "F|No. Citric acid works, it's safe, and changing it now would mean starting the whole project again. The acid stays as it is.",
   "M|Agreed. Coffee, then - and I'll draft the aim tonight.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of the spice trade. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. Open your kitchen cupboard tonight and you will find, sitting quietly in little jars, the substances that once moved fleets, built cities and redrew the map of the world. Pepper. Cinnamon. Cloves. Nutmeg. Today I want to trace how the trade in these spices shaped several thousand years of history.",
   "M|Let us start with the plants themselves, because their geography explains everything that follows. Pepper grows on a climbing vine, and for most of history it came from one region only: the wet forests of south-west India. Cinnamon is stranger still. It is not a seed or a fruit but the dried bark of a tropical tree, peeled away in strips that curl as they dry, and it came chiefly from the island we now call Sri Lanka. Rarest of all were cloves and nutmeg, which grew on a handful of tiny volcanic islands in eastern Indonesia and, for thousands of years, nowhere else on earth. A plant that grows in only one place, and is wanted everywhere, is a recipe for extraordinary trade - and extraordinary profit.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a music school to book a course of guitar lessons. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good afternoon, Northgate Music School. How can I help you?",
   "M|Oh, hello. I'd like to book a course of guitar lessons, please. My sister did a singing course with you last year and she hasn't stopped talking about it.",
@@ -52,7 +54,7 @@ $s1 = @(
   "M|Six forty-five suits me even better, actually - straight after work.",
   "F|Then six forty-five is yours.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Now, the autumn term. Lessons run in blocks of ten weeks, and your first one would be Wednesday the seventeenth of September.",
   "M|The seventeenth of September. I'll put that in my phone.",
@@ -71,12 +73,13 @@ $s1 = @(
   "F|Wait at reception on the ground floor, and the teacher will come down and collect you.",
   "M|Wonderful. Thank you so much for your help.",
   "F|Thank you, Timur. We'll see you on the seventeenth.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the director of the city planetarium talking on local radio about the planetarium's new season. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone. I'm the director of the City Planetarium, and I'm here to tell you about our new season, which opens next Friday evening.",
   "F|First, let me clear something up, because I keep hearing theories about why we've been shut since June. Some people say the summer storm damaged the roof - well, the storm did lift a few panels, but that was mended in a single weekend. Others heard we were putting in new seating; that really is planned, but not until next year. The truth is more exciting: we have spent the whole summer installing a completely new star projector. The old one served us faithfully for thirty years; the new machine shows twice as many stars, and planets so sharp you'll want to reach out and touch them.",
@@ -85,7 +88,7 @@ $s2 = @(
   "F|Now, the season itself. For families we have a brand-new show called The Bear Who Stole the Moon. It's aimed at children of six and over - a little too intense for the very youngest, we think. Our own education team wrote the script, but the reason everybody is talking about it is the voice: the story is narrated by one of the country's best-known television actors. I'm not allowed to say who until Friday, but you'll recognise the voice in the first sentence.",
   "F|People often ask how they can get involved with the planetarium. We're lucky with our telescope evenings - those are always led by qualified astronomers - and the school tours have a full team of guides already. Where we genuinely need volunteers is the shop. If you could spare a Saturday morning to sell star maps and model rockets, please do email us.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Let me finish with a quick tour of the building, because a few things have changed while we were closed.",
   "F|Start with the exhibition area. For twenty years it lived upstairs, next to the office, where frankly half our visitors never found it. It has now moved down to the ground floor, right beside the entrance, so from Friday you'll walk straight into it.",
@@ -95,12 +98,13 @@ $s2 = @(
   "F|The children's activity room has been completely refitted over the summer. Everything in it is new - touch tables where you can steer a comet, a model rocket you can climb inside, and a whole wall of moon photographs.",
   "F|And one last piece of news, for the drivers. You no longer pay to use the car park. The ticket machines have gone; parking is now free for all visitors, though the spaces do fill up quickly on show nights.",
   "F|That's everything from me. Clear skies, and see you on Friday.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two sociology students, Aziz and Madina, discussing the problem of bias in the interviews for their research project. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Madina, the tutor wants a whole section in our report about interview bias. Before we write it, remind me why you pushed for interviews in the first place. Was it the response rate? Everyone says nobody fills in questionnaires any more.",
   "F|Actually the class got a perfectly good response rate with questionnaires last year, so no, that wasn't it. And the tutor didn't steer us either - she just approved what we proposed. The reason was the answers themselves. A questionnaire gives you ticks in boxes; when you sit down with a person, you get reasons and stories - the why behind the tick. I wanted that depth.",
@@ -116,7 +120,7 @@ $s3 = @(
   "F|No - she says our numbers are fine for a student project, and she doesn't want the topic changed either. Her main point was that we should set our findings beside the published research. If our results differ wildly from the big national surveys, that's a warning that our method, not the world, is what's unusual.",
   "M|That's a good discipline. Right, let's get practical.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, the next round of interviews. What do we actually change about the way we ask our questions?",
   "M|First proposal: we write every question on a card and read each one out word for word, like a script.",
@@ -129,12 +133,13 @@ $s3 = @(
   "F|It is, and that's the first thing I'd flag. I'm not worried about the room - the library is booked for the whole of November. My worry is the typing. Transcribing one hour of talk took me nearly four hours, and we're planning twelve more interviews.",
   "M|The transcription, yes - that's the other big one. The analysis itself doesn't scare me: we built the coding sheet together, so we mostly agree on what the answers mean. And the interviews are short anyway - about twenty-five minutes on average.",
   "F|So: strangers and typing. Those are our two mountains. Let's put a plan for each of them in the report.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of chess. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. This week we are looking at the history of games, and I want to give today's lecture to the most studied game of them all: chess. Perhaps sixty million people play it regularly, yet very few of them could tell you where it comes from - and its story crosses more borders than almost any object I can think of.",
   "M|The earliest form of the game that we can identify with confidence appeared in northern India, at some point before the sixth century. It was called chaturanga, and the name is revealing: it described the four parts of an army of that period - foot soldiers, horsemen, chariots and elephants - and each of the four became a different piece on the board. From its very first day, then, chess was a picture of war. I should add that the early game was not always the pure contest of skill we know today: in some versions, players threw dice to decide which piece they were allowed to move.",

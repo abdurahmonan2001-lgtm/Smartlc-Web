@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a bus company to report an item she has lost. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Hillcrest Bus Company, lost property office. Good morning.",
   "F|Good morning. I left a bag on one of your buses yesterday evening, and I'm hoping somebody has handed it in.",
@@ -54,7 +56,7 @@ $s1 = @(
   "F|Dark blue. No - hold on, I'm describing the one I had before. It's green. Definitely green, with a grey strap and a small pocket on the front.",
   "M|Green with a grey strap. I have that.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|And whereabouts on the bus did you leave it?",
   "F|That's what I keep asking myself. I thought at first I'd pushed it under the seat, but I remember now - the bus was full, so I put it up on the luggage rack by the middle door. Then I got off in a hurry.",
@@ -72,13 +74,13 @@ $s1 = @(
   "F|Twenty-five thousand. I'd rather collect it, I think.",
   "M|Very sensible. I'll send you a text with your report number this morning, and you'll hear from us tomorrow either way.",
   "F|Thank you very much indeed. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the coordinator of a volunteer lifeguard scheme speaking at a public meeting. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out on such a wet night. I coordinate the volunteer lifeguard scheme, and I'm here to explain what we do and, I hope, to sign a few of you up.",
   "F|People are often surprised by how the scheme began. Because we work closely with the town council now, most people assume the council created us; in fact the council refused the idea twice before it changed its mind. Others remember the accident at the harbour two summers ago and assume that was the starting point - but we were already patrolling by then; what the accident changed was our funding. The scheme actually began with a group from the winter swimming club, who were in the water all year anyway and got tired of being the only people on the beach who knew what to do.",
@@ -86,7 +88,7 @@ $s2 = @(
   "F|If you would like to join, there is one hurdle you have to clear yourself. You do not need a first-aid certificate - we teach you all of that, and we teach it properly, over six weekends. You do not have to be eighteen, either; we take volunteers from sixteen with a parent's signature. What you do have to do, before anything else, is the swim test: four hundred metres in under nine minutes, in open water, not a heated pool. That is the one thing we cannot be flexible about.",
   "F|And our difficulties? Equipment, I'm glad to say, is not one of them - a local firm replaced all our boards and radios last year. Nor is the standard of applicants; we get plenty of strong swimmers. Our problem is the calendar. Everybody wants the summer Saturday shifts, and almost nobody is free on a Tuesday afternoon, which is precisely when the schools are out and the water is warm. Filling the weekday rota is the hardest thing I do.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take you round the six places we cover, because they are not at all alike.",
   "F|Harbour Beach first, the one everybody knows. It looks like the safest water in the district, and on a calm day it is - but at low tide the channel empties past the point and the pull along the shore there is strong enough to carry an adult swimmer out. Two of our four rescues last season happened at that spot, on the ebb tide.",
   "F|Mill Lake is quite different: shallow, warm and slow. That is why we hold all our beginner sessions there. Every volunteer in this room did their first eight weekends at Mill Lake, learning boards and casualty handling before going anywhere near the sea.",
@@ -95,13 +97,13 @@ $s2 = @(
   "F|Sandy Cove is the busy one. It appears in every guidebook to the coast, and on a hot weekend two thirds of the cars in the car park have come from other regions, some of them a three-hour drive away. That matters to us, because visitors do not know the beach, and people who do not know a beach take risks that local families never would.",
   "F|And finally the canal basin, right in the middle of town. We simply do not have the people to staff it every day, so we cover it on Saturdays and Sundays only, from May to September, and rely on signs for the rest of the week.",
   "F|Right. Application forms are on the table by the door, and I shall be here for another half hour.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two students, Umid and Sevara, planning an audit of food waste in their university canteen. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Sevara, the project form wants a paragraph on why we chose food waste. What do we say?",
   "F|The honest thing, I hope. Not that documentary everybody watched - half the class will write that, and anyway we'd already chosen by the time it was shown.",
@@ -124,7 +126,7 @@ $s3 = @(
   "M|Exactly. If the kitchen serves smaller portions in our audit week because they know we're counting, our figures mean nothing at all.",
   "F|It frightens me too. I think we say as little as possible about what we are measuring, and weigh at the same times every day so it becomes ordinary.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So what goes into the audit and what stays out? Plate waste is in, obviously.",
   "M|Obviously - that's the whole point of the study. What people leave on their plates goes on the first line of the form.",
@@ -141,13 +143,13 @@ $s3 = @(
   "F|Labels, yes. Both of those before the week starts. The questionnaire for diners can wait, can't it?",
   "M|Easily - that's for the second round, if we do one at all. And I don't think we need to train anybody else to help; there are only two services a day.",
   "F|Agreed. Scales and labels this week, then.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of rubber. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we followed the history of glass. Today I want to look at a material that is younger as an industry but far older as an invention: rubber.",
   "F|Rubber begins in Central America, and it begins at least three thousand years ago. The peoples of the region cut the bark of a local tree and collected the white liquid, the latex, that ran out of it. On its own that latex dries into a weak, sticky film. Their discovery, and it is a genuine piece of chemistry, was that if you stir the latex together with the juice of a vine that grew nearby, the mixture stiffens into a solid, springy lump. What they made from those lumps were balls, and the balls were not toys. They were used in a ceremonial game played on stone courts in front of large crowds, a game with religious meaning and, in some cities, serious consequences for the losing side.",

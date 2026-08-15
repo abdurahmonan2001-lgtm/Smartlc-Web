@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a cycle workshop about booking a repair for his bicycle. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Brookfield Cycle Workshop, good morning.",
   "M|Oh, hello. My bicycle needs some work done, and a friend of mine says you're the best place in town. Could I book it in, please?",
@@ -51,7 +53,7 @@ $s1 = @(
   "F|Then on top of that there's the labour, which is ninety thousand som an hour, and yours is probably an hour's work.",
   "M|Understood. That all sounds reasonable.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|So when could I bring the bike in?",
   "F|Let me look at the diary. We could take it on Tuesday morning... oh no, wait - our mechanic is away on a training course on Tuesday. Wednesday morning would be fine, though.",
@@ -70,13 +72,13 @@ $s1 = @(
   "M|Of course - the key. I'd never have thought of that. I'll tape it to the handlebars so I don't forget.",
   "F|Wonderful. So that's Wednesday morning, then. We'll see you and the bike then, Mr Nazarov.",
   "M|Thank you very much for your help. Goodbye.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide giving an introductory talk to visitors at Halton Botanical Gardens. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to Halton Botanical Gardens. My name's Karina, I'm one of the guides here, and before you set off to explore I'd like to tell you a little about the place and about what's happening today.",
   "F|First, a bit of history, because visitors often get this wrong. People see the grand gates and the long stone wall and assume the gardens began as the private grounds of some wealthy family. Not at all. The gardens were laid out in 1810 by the university's medical school, as a teaching collection where students training to be doctors could learn to recognise the plants their medicines came from. In those days almost every treatment began as a leaf or a root, so a garden like this mattered as much to a young doctor as a library. It only opened to the general public fifty years later.",
@@ -84,7 +86,7 @@ $s2 = @(
   "F|A practical word about lunch. There's a lovely little cafe beside the lake, but little is the word - it has a dozen tables, and from about half past twelve you'll be queueing for a long time. You're welcome to bring your own food, but picnics are only allowed in the paved courtyard, which has very little shade on a hot day. So my honest advice is to go to the cafe early - arrive by noon and you'll walk straight in.",
   "F|One more thing before we set off. People often ask how they can support the gardens. Money, for once, is not the problem - a generous grant last year is paying for all the building work you'll see around you. And the shop is always glad of your custom, of course. But what we're truly short of is people. Every season we run a wildlife survey, counting the birds, butterflies and dragonflies that live here, and we badly need volunteers to help with the counting. No experience is needed - we train you. If you can spare one morning a month, please put your name down at the desk.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Right - let me take you round the main areas of the gardens, in the order you'll reach them from this gate.",
   "F|Straight ahead of you is the rose garden, and this summer we are especially proud of it: in June it won a national award, the Gold Medal of the Rose Society, and that's the first time any garden in this region has taken it. Expect photographers everywhere.",
@@ -94,13 +96,13 @@ $s2 = @(
   "F|Then comes my own favourite, the Japanese garden, with its red bridge and its maple trees. It was a gift: the city of Okayama, which is twinned with ours, presented it to mark thirty years of friendship, and even sent two of its own gardeners here to build it.",
   "F|And finally, at the far end, the arboretum - our tree collection. If you want to stand where everything began, go there: several of the oaks were planted in the gardens' very first year, so it holds the oldest plants anywhere in the gardens. Older than the wall, older than the gates.",
   "F|That's quite enough from me. Do take a map from the desk, and enjoy your day.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two statistics students, Timur and Gulnora, planning a survey about how students travel to their campus. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Gulnora, the project proposal is due on Friday, and we need to explain why we chose the topic. When I tell people we're surveying how students get to campus, they assume it's because you're always complaining about the buses.",
   "F|I do complain about the buses, Timur, and being late twice in one week did start me thinking. But that's not the reason to put in the proposal. The real point is that the university is about to redraw its parking rules - next term they decide how much of the car park to keep and whether to charge for it - and at the moment nobody has any actual data about how people travel in. If we collect it properly, the planning office might genuinely use our numbers.",
@@ -125,7 +127,7 @@ $s3 = @(
   "M|Not decoration, she was very clear. She actually warned me against spending our evenings making the charts colourful, and she doesn't want the full tables in the main report either - those go in the appendix. What she insists on, for every percentage we give, is the margin of error around it, so nobody treats five hundred forms as if they were the whole university.",
   "F|Fair enough - that's the statistics, after all. A margin of error on everything, then.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|Can we talk about what might go wrong? I keep thinking about things that could make the results unrepresentative.",
   "F|Go on.",
@@ -144,13 +146,13 @@ $s3 = @(
   "M|And I checked the software licence, by the way - the university gives it to students free, so there's nothing to buy. And reading that Danish study can wait until we write the discussion section.",
   "F|Agreed. Emails and rewording - that's the week. To the library?",
   "M|To the library.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of bread. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. In this series of lectures on the foods that shaped civilisation, we come today to the most fundamental of them all: bread. For most of recorded history, across most of the western world, bread has not been part of the meal - it has been the meal, with everything else merely something to put on it. And its story begins earlier than you might expect.",
   "M|For a long time, historians assumed that bread came after farming: first people learned to grow wheat, then they learned to bake. We now know it was the other way round. At a site in the desert in Jordan, archaeologists have identified crumbs of actual bread in an ancient fireplace about fourteen thousand years old - which is some four thousand years before anyone planted a crop. Those earliest loaves were flat, of course, and they were made from crushed wild grains, gathered rather than grown, mixed with water into a paste. The dough was baked on hot stones placed in the fire, and the result would have looked much like the flatbreads still made across the Middle East and Central Asia today. Some historians argue, in fact, that it was the desire for bread that pushed people towards farming in the first place. We did not invent bread because we had wheat; we tamed wheat because we wanted bread.",

@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a company that cleans carpets, to arrange a visit to his home. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, Crestwell Carpet Cleaning, Nargiza speaking. How can I help you?",
   "M|Oh, hello. We moved into an older house in the spring, and the carpets really need a proper clean. Could I arrange for someone to come out?",
@@ -52,7 +54,7 @@ $s1 = @(
   "M|No - coffee, unfortunately, and it was very dark. It's dried right into the carpet.",
   "F|A coffee stain, near the window. Noted - the team deal with those all the time.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Right, when would suit you? Let me look at the diary. I could book you in for Tuesday morning... oh, no, wait - our big cleaning machine is being serviced on Tuesday, I'm sorry. The first day I can offer you is Friday.",
   "M|Friday is fine - I work from home at the end of the week anyway.",
@@ -69,13 +71,13 @@ $s1 = @(
   "F|On the day, by card, once the work is done. We did take cash until last year, but the teams were carrying too much money around town, so I'm afraid it's card only now.",
   "M|By card is easier for me anyway. Thank you very much - Friday at half past nine, then.",
   "F|That's right. Thank you, Mr Ergashev - the team will see you on Friday.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear the coordinator of a botanical seed bank talking to visitors at the start of its annual open day. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and a very warm welcome to the Fernleigh Seed Bank. My name is Malika, I'm the coordinator here, and my job today is to make sure you see as much as possible and break as little as possible - I'm joking, of course. Before we set off on the tour, let me tell you a little about who we are and how today will work.",
   "F|People often assume the bank was set up to preserve the seeds of old crop varieties - the vegetables and grains our great-grandparents grew - and we do hold a small collection of those now. Others imagine our main task is supplying seeds to botanical gardens overseas, and yes, small packets do leave here for gardens on every continent. But neither of those is why we exist. The bank was founded twenty years ago with one purpose: to save the seeds of wild plants whose habitats are disappearing - the meadows, heathlands and wetlands that are vanishing year by year. Everything else grew out of that.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|Beyond the library is the herbarium, where dried, pressed plants are kept on paper sheets. The oldest sheets there are over two hundred years old - they are the oldest things in the entire building, far older than the bank itself, and they let us compare today's plants with their ancestors.",
   "F|And we finish in the tropical seed room, which holds material from our partner banks overseas. So much is arriving now that next year we'll knock through into the store beside it and double the size of the room - the builders start in January.",
   "F|Right - questions at any point, follow me, and mind those narrow corridors.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two engineering students, Aziz and Laylo, who are preparing their solar-powered car for a national competition. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Right, Laylo, let's go through the job list before the workshop closes. First, the thing people keep asking me: why are we building a completely new body shell? Someone told the department it was because of the new regulations.",
   "F|Which is wrong - the rule changes this year only affect the batteries, not the bodywork. And it's nothing to do with the sponsor either; they gave us money, not materials. The truth is less exciting: the old shell got cracked on the trailer coming back from last year's event. One of the straps wore right through the fibreglass. It couldn't be repaired properly, so - new shell.",
@@ -117,7 +119,7 @@ $s3 = @(
   "M|Not what I expected. She didn't mention money at all, and she doesn't want extra testing either - she thinks we test quite enough. What she kept repeating was: write everything down. Keep a log of every single change we make to the car, however small, because the scrutineers at the competition will ask for the car's full history, and teams have been turned away without one.",
   "F|Then the log starts tonight.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So, realistically, what do we finish this week? Not the paint - the sponsor still hasn't sent us the final logo files, and I'm not painting the shell twice.",
   "M|Agreed, the paint waits. The new tyres, though - they arrived yesterday, and fitting them is a morning's work. I'll do it tomorrow.",
@@ -129,13 +131,13 @@ $s3 = @(
   "M|Agreed, transport goes on the list. And the other one, I'd say, is the battery storage rules. The rulebook is genuinely vague about where the batteries have to be kept overnight during the event, and she knows the organisers personally - she can find out in one phone call.",
   "F|Yes - those two, then. The trailer money and the battery rules. The hotel, by the way, is already handled; the faculty office booked our rooms last week.",
   "M|Perfect. Right - I'll open a document tonight, and the famous log begins.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of fireworks. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good afternoon. Tonight, somewhere in the world, a crowd will stand in the dark and watch the sky explode into colour - and nobody will find it strange. Fireworks are so familiar that we forget how old, and how odd, they are. Today I want to trace their story, from a Chinese campfire to the computer-controlled displays of the present day.",
   "M|The story begins before gunpowder existed at all. In ancient China, people discovered that sections of green bamboo, thrown onto a fire, would burst with a tremendously loud crack - the air and sap sealed inside the hollow stems expanded in the heat until the wood exploded. And that noise was not a nuisance; it was the whole point. Loud bangs were believed to frighten away evil spirits, and burning bamboo became part of festivals and new year celebrations - a tradition of protective noise that fireworks have never really lost.",

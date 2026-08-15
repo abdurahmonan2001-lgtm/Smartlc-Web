@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man phoning a fitness centre about becoming a member. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Good morning, Silverdale Fitness Centre. How can I help you?",
   "M|Oh, hello. I'd like to become a member, please. A friend of mine trains with you and he never stops talking about the place.",
@@ -48,7 +50,7 @@ $s1 = @(
   "F|Ah, unfortunately not the first - the whole centre is closed that day for staff training. Could we make it the day after, the second?",
   "M|The second of September. Yes, that's fine.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|And what are your opening hours? I usually train quite late.",
   "F|On weekdays we're open from six thirty in the morning right through to ten at night. Weekends are a little shorter - we close at eight in the evening.",
@@ -64,13 +66,13 @@ $s1 = @(
   "F|It's normally a week, but September is a quiet month, so at the moment it's five days. You collect it from reception - we don't post cards out any more.",
   "M|Five days, from reception. Wonderful. Thank you so much for your help.",
   "F|You're very welcome, Timur. We'll see you on the second.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a council officer telling local residents about a new cycle-hire scheme for the city centre. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming. My name is Carol Denning, I work in the transport department at Halton City Council, and I'm here to tell you about CityRide, the cycle-hire scheme we're launching at the end of this month.",
   "F|Now, whenever I present this scheme, people assume we're doing it to bring in more visitors, and the newspapers love to talk about the health benefits. Both of those are welcome, of course - but neither is the reason the council is paying for this. The number of cars entering the centre has grown by a third in ten years, and the scheme's real purpose is to cut that traffic. Every short car trip that becomes a bike trip means a little more space on our roads.",
@@ -78,7 +80,7 @@ $s2 = @(
   "F|A word about helmets. Legally, adult riders don't have to wear one, and I'm afraid you won't be able to rent helmets at the stations either. But we would much rather you wore one, so here's the good news: everyone who registers during the scheme's first year will be sent a helmet completely free of charge.",
   "F|And we're already thinking about where the scheme goes next. There's been a loud campaign for a station at the football stadium, but the ground is only busy on match days, so that made no sense. Others suggest the airport - honestly, it's twelve kilometres away, far too far for these bikes. What we will do, next year, is extend the scheme to the university. The students have been asking for it since the day we announced.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Now, if you'd all look at the map of the city centre, I'll show you where the docking stations will be. Find the bridge at the top of the map, where Station Road crosses the river.",
   "F|Coming over the bridge into the centre, the main docking station - the largest one, with fifty bikes - will be on your right, in the open space directly in front of the Town Hall. That's where most journeys will start and finish.",
@@ -88,13 +90,13 @@ $s2 = @(
   "F|One station will have a roof over it, for anyone who'd rather not unlock a wet bicycle. That covered station stands in the middle of Market Square, between the stalls.",
   "F|And finally, one more station is planned, but it won't open until next spring. It will stand on the riverbank to the west of the bridge, right beside the walking path, so that you'll be able to ride along the river itself.",
   "F|Right - I'll take questions in a moment, but first, the mayor has asked me to remind you that the first thirty minutes of every journey will be free for the whole of the opening month.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two marine biology students, Aisha and Daniel, planning a field trip with advice from their tutor. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|So, Aisha, we need to settle where we're actually going. I still think Merrick Sands has the greatest variety of species - we'd have a longer list by lunchtime.",
   "F|It does, Daniel, and it's easier to reach too - the bus stops practically on the beach. But think about what Dr Novak said: students from our department have been recording at Culver Point every autumn for nine years. If we go there, we can set our figures against all that earlier data. That's worth far more than a longer species list.",
@@ -114,7 +116,7 @@ $s3 = @(
   "M|I did, and I asked about it. The national scheme only accepts records checked by a professional, so ours don't qualify. And the department blog is really just for photos. What Dr Novak wants is for our numbers to be set against the records from previous years at Culver Point. That comparison is the whole point of the project.",
   "F|Compared with the past data. Agreed.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|Let's list what still has to happen before we leave.",
   "M|The minibus - oh, wait, no. Dr Novak booked that herself last week, remember? Cross it off.",
@@ -130,13 +132,13 @@ $s3 = @(
   "M|And last year's group measured the biggest shellfish in every square, didn't they?",
   "F|They did, and Dr Novak says it told them almost nothing, so we're dropping it. And before you suggest the rock pools - most quadrats won't even contain one, so measuring depth just isn't practical.",
   "M|Fine. Species count and seaweed cover. Let's get the plan written up.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of glass. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Glass feels like a modern material - the towers of our cities are wrapped in it from pavement to roof - and yet its story begins long before human beings had made anything at all. Nature made glass first. When volcanic lava cools very quickly, it hardens into obsidian: a natural glass, black and shining. Obsidian breaks with an edge sharper than any metal, and prehistoric peoples treasured it. They shaped it into knives, and traded those blades across enormous distances, hundreds of kilometres from any volcano.",
   "F|The first people to make glass for themselves lived in Mesopotamia and Egypt, more than four thousand years ago. Their recipe has, in essence, never changed: they melted sand together with the ashes of certain plants, at temperatures their ordinary fires could barely reach. Because it was so difficult to produce, early glass was a luxury. The oldest objects we have found are small beads, worn as jewellery and buried with their owners - at that time, glass was valued as highly as precious stones.",

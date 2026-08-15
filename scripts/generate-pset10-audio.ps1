@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a woman telephoning a sports centre to become a member. First, you have some time to look at questions one to five.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "M|Good morning, Riverbank Sports Centre.",
   "F|Good morning. I'd like to join the centre - can I do that over the phone?",
@@ -51,7 +53,7 @@ $s1 = @(
   "M|Before you use the gym you need an induction - somebody shows you the machines and takes you through the safety side. We have slots on Wednesday and Thursday evenings this week. Wednesday is already full, I'm afraid, so shall I put you down for Thursday at six?",
   "F|Thursday at six. Yes, please.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "F|Is there anything I should bring with me on Thursday?",
   "M|Two things. We make your membership card while you wait, so bring a passport-sized photo. We used to take the picture here, but the camera broke and nobody has replaced it.",
@@ -69,13 +71,13 @@ $s1 = @(
   "M|Do. And the last thing is the timetable. We used to print a booklet every term, but the classes change too often, so now everything lives on our app. Download it, log in with your membership number, and you can book a class or cancel it up to an hour before it starts.",
   "F|On the app. That's much easier. Thank you very much.",
   "M|You're welcome. We'll see you on Thursday.",
-  "M|That is the end of part one.",
+  "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a council officer explaining changes to the recycling collections in a town. First, you have some time to look at questions eleven to fourteen.",
-  "P|8",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good evening, everyone, and thank you for coming out. I work in the waste and recycling team at the council, and from the first of next month the way we collect your recycling changes completely. Let me explain why, and then exactly what you need to do.",
   "F|Most people assume we are doing this because of new national targets. There are new targets, and we will meet them, but they are not the reason - we were already close to them. Nor is it because of complaints, although I have read plenty of those. The honest answer is money. At the moment you put everything recyclable into one green bin, we take it to a plant, and machines and people separate it there. That sorting now costs us more than the material is worth, and the price has doubled in four years. If you sort it at home, the material is cleaner, it sells for more, and we stop paying twice for the same job.",
@@ -83,7 +85,7 @@ $s2 = @(
   "F|Now, what goes in them. Drinks cartons - the ones with a plastic lining - we have taken those for years, so nothing changes there. Garden waste stays exactly as it is, and I will come back to that. But from next month we can, at last, accept plastic film: carrier bags, the wrapping from a pack of vegetables, bread bags. There is a new machine at the plant that handles it. Rinse it, dry it, and put it in the blue box with the paper.",
   "F|And if we miss you? It happens, and I would much rather you told us straight away. Please telephone the depot on the same day - the number is on the leaflet. I know the website has a reporting form, and I would love to say use it, but I will be honest with you: it goes into a queue that somebody looks at once a week, and by then your box has been standing outside for six days. Telephone us, and we will normally come back within twenty-four hours. Please do not simply leave the boxes out until the following week, because that is how a street ends up covered in wet paper.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "F|Right. Let me take the materials one at a time, because each has its own arrangement, and this is where people go wrong.",
   "F|Food waste first. This is the big change: the brown box will be emptied every single week, even though the other two boxes are fortnightly. Food waste smells, and a fortnight in August is a fortnight too long. Every week, without exception.",
   "F|Garden waste. Grass, hedge clippings, prunings. That is not part of the free service and never has been. It is a separate subscription: you book it online, you pay for the year, and a brown wheeled bin is delivered. Please book before the end of March, because we cap the number of subscriptions and last year we ran out.",
@@ -92,13 +94,13 @@ $s2 = @(
   "F|Cardboard. We will take as much as you can produce, and with all the deliveries these days that is a great deal. The one thing I ask is that you flatten it. An unflattened box fills the blue container in seconds, and then the crew has to stand in the street breaking it up by hand.",
   "F|And finally batteries - please listen carefully to this one. Batteries must never go in any of the three boxes. They are crushed inside the vehicle, and a crushed battery starts a fire. We lost a lorry to one last year. Put them in a clear bag and hand the bag to the crew, or drop them at the supermarket.",
   "F|All of this is on the leaflet, and I am happy to take questions now.",
-  "M|That is the end of part two.",
+  "M|That is the end of part two. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two biology students, Bekzod and Feruza, planning an experiment on plant growth. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|8",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "F|Bekzod, the project form. Question one: how did you come to choose this topic?",
   "M|Honestly? The documentary. That programme about the vertical farm in Rotterdam, with the racks of lettuce under pink light. I watched it twice and I wanted to know why pink.",
@@ -125,7 +127,7 @@ $s3 = @(
   "F|That is my worry too. If the red box runs two degrees warmer than the blue one, we will never know whether we measured light or heat. We need a thermometer in every box and we will have to check them daily.",
   "M|Agreed.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|8",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "F|So which colours are we actually comparing?",
   "M|Blue has to be in. Every paper starts with blue - it is the one wavelength everybody agrees drives leaf growth.",
@@ -141,13 +143,13 @@ $s3 = @(
   "M|And scales? We need something accurate to a milligram.",
   "F|The technicians have a balance we can book by the hour, so there is no need to buy anything. And we do not need the greenhouse at all - the whole point is that our boxes are sealed.",
   "M|Right. Boxes and risk assessment this week.",
-  "M|That is the end of part three.",
+  "M|That is the end of part three. You now have half a minute to check your answers.",
   "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of cheese. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "F|Good morning. Last week we finished with the history of bread. Today, something that usually sits beside it on the table: cheese.",
   "F|Nobody invented cheese. It was almost certainly an accident, and the accident is easy to reconstruct. Early herders carried milk in bags made from the stomach of a calf or a lamb, because a stomach is watertight and comes free with the animal. The lining of that stomach contains an enzyme, rennet, which makes milk separate into solid curds and watery whey. After a day's walk in the sun, the traveller who opened the bag found not milk but soft white lumps - and then discovered that the lumps kept for weeks, where the milk would have kept for hours.",

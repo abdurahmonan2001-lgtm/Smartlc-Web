@@ -29,8 +29,10 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
+    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+    "P|3",
   "M|Part one. You will hear a man telephoning an adult education centre to enrol in a weekend first-aid course. First, you have some time to look at questions one to five.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions one to five.",
   "F|Hillcrest Adult Education Centre, good morning.",
   "M|Oh, hello. I'm calling about the weekend first-aid course. My sister took it last year and she hasn't stopped recommending it. Are there still places?",
@@ -47,7 +49,7 @@ $s1 = @(
   "F|The standard fee is three hundred and fifty thousand som, and that includes a printed manual, which is yours to keep. If you're a student, or over sixty-five, the reduced fee is two hundred and fifty thousand.",
   "M|I'm neither, I'm afraid, so the full fee it is.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions six to ten.",
   "M|Is there anything special I should wear on the day?",
   "F|Nothing formal - rather the opposite. Comfortable trousers are the main thing, because some of the practice is done kneeling on the floor, and you'll be doing chest compressions on a training dummy. Anything tight or smart would just get in the way.",
@@ -61,12 +63,13 @@ $s1 = @(
   "F|Payment is by card on the centre's website - there's a link on the course page. We can't take cash on the day any more, so do pay when you book, or the place isn't held.",
   "M|I'll do it tonight, then. Thank you very much - you've been really helpful.",
   "F|You're very welcome. We'll see you on the eighth of November.",
-  "M|That is the end of part one."
+  "M|That is the end of part one. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s2 = @(
   "M|Part two. You will hear a guide at a coastal shipwreck museum talking to a group of visitors. First, you have some time to look at questions eleven to fourteen.",
-  "P|6",
+  "P|20",
   "M|Now listen carefully and answer questions eleven to fourteen.",
   "F|Good morning, everyone, and welcome to the Salthaven Shipwreck Museum. I'm one of the volunteer guides here, and before we set off round the building I'd like to tell you a little about the place and how today will work.",
   "F|First, the building itself, because people always ask. Visitors usually guess it was the lifeboat station, because of the old stone slipway at the side, but the lifeboat house actually stood further along the shore, where the car park is now. Others assume boats were built here - there was a boatbuilder, but his workshop was across the harbour. In fact, this building itself was a store: for nearly a hundred years, barrels of salted fish stood here from floor to ceiling, waiting for the wagons that carried them inland. When the fishing trade collapsed, the building stood empty for decades until the museum rescued it.",
@@ -74,7 +77,7 @@ $s2 = @(
   "F|A quick word about photography. You may take photographs almost everywhere - in the entrance hall, in the galleries, with flash or without, because our lighting is designed to cope. The one exception is the Textile Room, where the flags and the sailors' clothing are so easily damaged by light that we allow no photography at all in there. Everywhere else, please snap away.",
   "F|And one recommendation before we start. At the end of the afternoon most people drift towards the shop, and the harbour wall outside makes a pleasant stroll. But whatever you do, do finish your visit on the viewing platform on the roof. On a clear day you can see the Blackrock reef, which sank half the ships whose remains fill this museum, and the whole collection suddenly makes sense.",
   "M|Before you hear the rest of the talk, you have some time to look at questions fifteen to twenty.",
-  "P|8",
+  "P|21",
   "M|Now listen and answer questions fifteen to twenty.",
   "F|Right - let me walk you through the six main things you'll see, in the order you'll meet them.",
   "F|We begin in the Cargo Gallery, which holds goods recovered from the seabed - pottery, tools, coins, even shoes. Unusually for a museum, everything on the long central table can be picked up: children are welcome to touch the objects there, turn the coins over, feel the weight of a pulley block. Everything in the glass cases, though, stays behind glass.",
@@ -84,12 +87,13 @@ $s2 = @(
   "F|Next to it stands the figurehead - the carved oak figure of a woman that once rode the bow of a merchant ship. People often assume we bought it at some grand auction abroad. In fact it has been in Salthaven since before the museum existed, and as it was carved around 1690, it is the oldest object we have.",
   "F|And finally, the model ships - forty of them, all built by one retired harbour pilot. At the moment they're squeezed into a corridor, which does them no justice at all, so they will move to a much larger room upstairs in the summer. One of the models appeared briefly in a television series, by the way - not, whatever anyone tells you, in a famous film.",
   "F|Right - if you're all ready, follow me into the Cargo Gallery.",
-  "M|That is the end of part two."
+  "M|That is the end of part two. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s3 = @(
   "M|Part three. You will hear two environmental science students, Jasur and Madina, discussing their project on microplastics in a local river. First, you have some time to look at questions twenty-one to twenty-six.",
-  "P|6",
+  "P|21",
   "M|Now listen carefully and answer questions twenty-one to twenty-six.",
   "M|Right, Madina, the introduction. We need a line on why we chose microplastics in the first place. Was it that documentary everyone was talking about last term?",
   "F|Everyone assumes that, Jasur, but I still haven't actually seen it. No - it was a news report that started it, for me. Plastic fibres had been found in fish from our own river - the one we cross every morning - and suddenly it wasn't a problem happening in some distant ocean. The visiting lecturer's talk came weeks later. It was useful, but we'd already decided by then.",
@@ -107,7 +111,7 @@ $s3 = @(
   "F|We can manage most of it ourselves. The drying oven just needs booking a day ahead, and your camera clips onto the microscope, so the photography is covered. The one thing we can't do alone is the polymer analysis - students aren't allowed to run that instrument without a training certificate. So we'll ask the technician to run the spectrometer for us. She's already said yes, provided we prepare the filters properly.",
   "M|Perfect. That goes in the plan, then.",
   "M|Before you hear the rest of the discussion, you have some time to look at questions twenty-seven to thirty.",
-  "P|6",
+  "P|20",
   "M|Now listen and answer questions twenty-seven to thirty.",
   "M|So - contamination. How do we make sure the blue fleece disaster never happens again? Someone in the seminar suggested rinsing the bottles in river water before we start.",
   "F|The field handbook actually warns against that - rinsing can wash particles into the bottle before the sample even exists. Clothing matters far more. From now on we wear cotton from head to foot - no fleece, no waterproof jackets, nothing synthetic anywhere near the water.",
@@ -122,12 +126,13 @@ $s3 = @(
   "M|A comparison panel - good. And should we add advice for visitors, about cutting their own plastic waste?",
   "F|The tutor was firm about that: findings, not campaigning. So no advice section. The microscope photographs and the river comparison - those are our two additions, and that's the poster full.",
   "M|Done. I'll book the microscope for Monday morning.",
-  "M|That is the end of part three."
+  "M|That is the end of part three. You now have half a minute to check your answers.",
+    "P|5"
 )
 
 $s4 = @(
   "M|Part four. You will hear part of a lecture about the history of natural dyes. First, you have some time to look at questions thirty-one to forty.",
-  "P|8",
+  "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Good morning. Today I want to talk about colour - or, more exactly, about how human beings put colour into cloth for most of history, using nothing but plants, minerals and a few unlucky animals. Until the middle of the nineteenth century, every coloured garment on earth owed its shade to a natural dye, and the story of those dyes is a story of trade, of secrecy, and of one very famous accident.",
   "M|Dyeing is far older than written history. Pieces of dyed cloth found in South America are at least six thousand years old, and some still show clear traces of blue and red. But the early dyers faced a stubborn problem: most colours made from plants fade rapidly when exposed to sunlight. A tunic that left the workshop glowing scarlet could be a tired pink by the end of a single summer. The answer was found remarkably early. Before dyeing, the cloth was soaked in substances called mordants, usually metal salts, and these bind the colour permanently into the fibre. With the right mordant, in fact, one and the same plant could be made to give several different shades.",
