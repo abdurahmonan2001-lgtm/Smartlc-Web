@@ -331,6 +331,30 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
 }
 
+/* ─── Fixed photographic backdrops ───
+   A photograph held still while the section's content scrolls over it, which
+   is what gives a page depth instead of the feel of flat panels stacked up.
+   The image is already darkened, blurred and green-washed at build time (see
+   scripts/process-backdrops.mjs), so no runtime overlay is needed and white
+   text is guaranteed readable over any part of it.
+
+   Applied only to the dark bands. This is a light-themed site: a photograph
+   behind white cards would go muddy and cost legibility for no gain. */
+.backdrop { position: relative; isolation: isolate; }
+.backdrop::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background-image: var(--backdrop);
+  background-size: cover; background-position: center;
+  background-attachment: fixed;
+}
+/* Touch devices get the same photograph, pinned rather than parallaxed. iOS
+   Safari has never honoured background-attachment: fixed properly — it
+   repaints the image a frame late on every scroll, which reads as juddering.
+   Anyone who asked for reduced motion gets the still version too. */
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .backdrop::before { background-attachment: scroll; }
+}
+
 /* ─── Method ───
    The argument for the programme. Two columns that read ACROSS: each line of
    ordinary preparation has its answer directly opposite, so the contrast is
@@ -413,7 +437,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 .method__quote {
   margin-top: 46px; padding: 34px 38px; border-radius: 22px;
-  background: var(--racing); color: #fff; position: relative; overflow: hidden;
+  color: #fff; position: relative; overflow: hidden;
+  /* A classroom behind the promise. The gradient sits over the (already
+     treated) photograph so the quotation stays crisp wherever the image
+     happens to be light. */
+  background-image:
+    linear-gradient(115deg, rgba(0, 43, 42, 0.94) 32%, rgba(0, 43, 42, 0.7)),
+    url("/backdrops/classroom.webp");
+  background-size: cover; background-position: center;
+  background-color: var(--racing);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .method__quote { background-attachment: scroll, fixed; }
 }
 .method__quote::before {
   content: "\201C"; position: absolute; top: -34px; left: 18px;
@@ -1015,6 +1050,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .score-row--lg .score-row__cell strong { font-size: 16px; }
 
 /* ─── "Where the bus goes" departures board ─── */
+/* A student on a rooftop over the city: the section is about where English
+   takes you, so the backdrop is the view rather than a classroom. */
+.unlocks { --backdrop: url("/backdrops/opportunity.webp"); }
 .unlocks .board {
   margin-top: 32px; border-radius: 18px; overflow: hidden;
   background: #04211f; border: 1px solid var(--border-dark);
