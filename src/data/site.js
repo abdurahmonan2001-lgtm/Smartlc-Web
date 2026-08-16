@@ -8,6 +8,23 @@ export const CONTACT = {
   email: "smartlearningcenter@gmail.com",
 };
 
+// The founder's record. It lives here rather than in the translations because
+// these are facts, not phrasing: the same numbers appear in the hero, the
+// method section and the team card, in all three languages, and they must
+// never drift apart. Every figure is a public claim — change it only against
+// the certificates.
+export const FOUNDER = {
+  name: "Abdurahmon Nasriddinov",
+  photo: "/brand/founder.webp",
+  photoSm: "/brand/founder-sm.webp",
+  years: 7,
+  // Achieved in two separate sittings each, which is the point: a single high
+  // band can be luck, the same band twice is method.
+  speaking: "9.0",
+  writing: "8.5",
+  sittings: 2,
+};
+
 export const BUS_ROUTES = [
   "2", "17", "19", "24", "26", "28", "30", "38", "40", "44", "46",
   "51", "67", "68", "72", "78", "85", "89", "91", "93", "115", "140",

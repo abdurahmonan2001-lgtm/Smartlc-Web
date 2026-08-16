@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from "react";
 import { LangProvider } from "./i18n.jsx";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
+import Method from "./components/Method.jsx";
 import { Stats, Advantages, Courses, Unlocks, EnglishGives, SuccessStories, LevelCheck, Pricing, Teachers } from "./components/Sections.jsx";
 import Results from "./components/Results.jsx";
 import { Testimonials, Location, Faq, Footer } from "./components/Closing.jsx";
@@ -60,8 +61,10 @@ export default function App() {
         <>
           <Nav />
           <main>
-            {/* Act 1 — why learn English at all */}
+            {/* Act 1 — who teaches you, and on what argument */}
             <Hero />
+            <Method />
+            <Stats />
             <EnglishGives />
             <SuccessStories />
             {/* Act 2 — how you do it with Smart LC */}
@@ -73,7 +76,6 @@ export default function App() {
             <ContactBand kind="instagram" />
             {/* Act 3 — what it gives you */}
             <Unlocks />
-            <Stats />
             <Results />
             <LevelCheck />
             <Testimonials />
