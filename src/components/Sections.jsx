@@ -478,7 +478,7 @@ export function Unlocks() {
   const { t } = useLang();
   const u = t.unlocks;
   return (
-    <section className="section section--dark unlocks backdrop" id="unlocks">
+    <section className="section section--dark unlocks" id="unlocks">
       <div className="container">
         <h2 className="section__title">{u.title}</h2>
         <p className="section__sub">{u.sub}</p>

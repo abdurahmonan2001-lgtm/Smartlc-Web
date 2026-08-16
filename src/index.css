@@ -32,7 +32,9 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font);
-  background: var(--bg);
+  /* transparent: the fixed .site-bg layer behind it supplies the page
+     colour, and an opaque body would hide it entirely */
+  background: transparent;
   color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -168,7 +170,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* ─── Hero ─── */
 .hero {
   position: relative; overflow: hidden;
-  background: radial-gradient(1100px 620px at 82% -10%, #0a5a51 0%, var(--racing) 58%);
+  /* Sheer at the same strength as the other dark bands, so Harvard Yard is
+     faintly present behind the portrait rather than the page starting solid
+     and only revealing the backdrop further down. */
+  background: radial-gradient(1100px 620px at 82% -10%, rgba(10, 90, 81, 0.94) 0%, rgba(0, 43, 42, 0.94) 58%);
   color: #fff; padding: 150px 0 90px;
 }
 .hero__glow {
@@ -331,35 +336,42 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
 }
 
-/* ─── Fixed photographic backdrops ───
-   A photograph held still while the section's content scrolls over it, which
-   is what gives a page depth instead of the feel of flat panels stacked up.
-   The image is already darkened, blurred and green-washed at build time (see
-   scripts/process-backdrops.mjs), so no runtime overlay is needed and white
-   text is guaranteed readable over any part of it.
+/* ─── The site backdrop ───
+   One photograph — Harvard Yard — behind the entire page, held still while
+   everything scrolls over it. This is what stops a page reading as flat
+   panels stacked on a flat colour.
 
-   Applied only to the dark bands. This is a light-themed site: a photograph
-   behind white cards would go muddy and cost legibility for no gain. */
-.backdrop { position: relative; isolation: isolate; }
-.backdrop::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background-image: var(--backdrop);
-  background-size: cover; background-position: center;
-  background-attachment: fixed;
+   It is a real fixed layer rather than a very tall background image, so it
+   genuinely does not move. Because it is a separate element (not
+   background-attachment: fixed) it also works correctly on iOS, which has
+   never repainted fixed backgrounds without juddering.
+
+   The photograph is lightened, desaturated and softened at BUILD time (see
+   scripts/process-backdrops.mjs), not with CSS filters: a filter on a
+   full-screen fixed layer is recomposited on every scroll frame, which is
+   precisely the stutter this is meant to avoid. */
+.site-bg {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background-image: url("/backdrops/site.webp");
+  background-size: cover; background-position: center center;
 }
-/* Touch devices get the same photograph, pinned rather than parallaxed. iOS
-   Safari has never honoured background-attachment: fixed properly — it
-   repaints the image a frame late on every scroll, which reads as juddering.
-   Anyone who asked for reduced motion gets the still version too. */
-@media (hover: none), (prefers-reduced-motion: reduce) {
-  .backdrop::before { background-attachment: scroll; }
+/* Phones get a 26KB plate instead of a 52KB one, and never see enough of the
+   image at once to notice the lower resolution. */
+@media (max-width: 900px) {
+  .site-bg { background-image: url("/backdrops/site-sm.webp"); }
+}
+/* The veil. Sections sit on top of this at varying opacity, so the veil only
+   has to guarantee readability where a section is fully transparent. */
+.site-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(245, 249, 248, 0.62), rgba(245, 249, 248, 0.78));
 }
 
 /* ─── Method ───
    The argument for the programme. Two columns that read ACROSS: each line of
    ordinary preparation has its answer directly opposite, so the contrast is
    made by the layout rather than by adjectives. */
-.method { background: var(--bg-alt); padding-top: 72px; }
+.method { background: rgba(234, 242, 240, 0.74); padding-top: 72px; }
 .method__head { text-align: center; }
 .method__eyebrow {
   color: var(--green-dark); font-weight: 800; letter-spacing: 0.16em;
@@ -438,17 +450,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .method__quote {
   margin-top: 46px; padding: 34px 38px; border-radius: 22px;
   color: #fff; position: relative; overflow: hidden;
-  /* A classroom behind the promise. The gradient sits over the (already
-     treated) photograph so the quotation stays crisp wherever the image
-     happens to be light. */
-  background-image:
-    linear-gradient(115deg, rgba(0, 43, 42, 0.94) 32%, rgba(0, 43, 42, 0.7)),
-    url("/backdrops/classroom.webp");
-  background-size: cover; background-position: center;
-  background-color: var(--racing);
-}
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .method__quote { background-attachment: scroll, fixed; }
+  /* Slightly sheer, like every other dark band, so the Harvard backdrop
+     carries through the quote instead of the page briefly going solid. */
+  background: rgba(0, 43, 42, 0.93);
 }
 .method__quote::before {
   content: "\201C"; position: absolute; top: -34px; left: 18px;
@@ -470,7 +474,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .method__quote figcaption em { font-style: normal; font-size: 12.5px; color: #8fb3ad; }
 
 /* ─── Stats ─── */
-.stats { background: var(--racing-2); color: #fff; padding: 34px 0; border-top: 1px solid var(--border-dark); }
+.stats { background: rgba(5, 64, 61, 0.93); color: #fff; padding: 34px 0; border-top: 1px solid var(--border-dark); }
 .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .stats__item { text-align: center; }
 .stats__value { display: block; font-size: 36px; font-weight: 900; color: var(--green-bright); letter-spacing: -0.02em; }
@@ -478,8 +482,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 /* ─── Sections ─── */
 .section { padding: 58px 0; }
-.section--alt { background: var(--bg-alt); }
-.section--dark { background: var(--racing); color: #fff; }
+.section--alt { background: rgba(234, 242, 240, 0.74); }
+.section--dark { background: rgba(0, 43, 42, 0.93); color: #fff; }
 .section__title { font-size: clamp(28px, 3.4vw, 40px); font-weight: 900; letter-spacing: -0.02em; text-align: center; }
 .section__sub { text-align: center; color: var(--ink-3); max-width: 640px; margin: 14px auto 0; font-size: 16.5px; }
 .section--dark .section__sub { color: #93b2ad; }
@@ -1050,9 +1054,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .score-row--lg .score-row__cell strong { font-size: 16px; }
 
 /* ─── "Where the bus goes" departures board ─── */
-/* A student on a rooftop over the city: the section is about where English
-   takes you, so the backdrop is the view rather than a classroom. */
-.unlocks { --backdrop: url("/backdrops/opportunity.webp"); }
 .unlocks .board {
   margin-top: 32px; border-radius: 18px; overflow: hidden;
   background: #04211f; border: 1px solid var(--border-dark);

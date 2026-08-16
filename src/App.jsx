@@ -59,6 +59,9 @@ export default function App() {
         <RegisterPage />
       ) : (
         <>
+          {/* Harvard Yard, fixed behind the whole page. Decorative, so it is
+              hidden from screen readers and carries no alt text. */}
+          <div className="site-bg" aria-hidden="true" />
           <Nav />
           <main>
             {/* Act 1 — who teaches you, and on what argument */}
