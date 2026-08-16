@@ -19,7 +19,11 @@ import Magnifier from "./components/Magnifier.jsx";
 function useScrollReveal(enabled) {
   useEffect(() => {
     if (!enabled || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const targets = document.querySelectorAll("main > section, main > .cta-band");
+    // Sections live one level deeper now that everything below the hero is
+    // wrapped in .sheet, so both depths are matched.
+    const targets = document.querySelectorAll(
+      "main > section, main > .cta-band, .sheet > section, .sheet > .cta-band"
+    );
     const io = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
@@ -64,8 +68,12 @@ export default function App() {
           <div className="site-bg" aria-hidden="true" />
           <Nav />
           <main>
-            {/* Act 1 — who teaches you, and on what argument */}
+            {/* The hero runs full width — it is the moment the backdrop is
+                most visible. Everything after it sits in a panel inset from
+                both edges, so the photograph shows continuously down each
+                side and the content reads as a separate window laid over it. */}
             <Hero />
+            <div className="sheet">
             <Method />
             <Stats />
             <SuccessStories />
@@ -87,6 +95,7 @@ export default function App() {
             <Pricing />
             <Faq />
             <ContactBand kind="telegram" />
+            </div>
           </main>
           <Footer />
           <Magnifier />

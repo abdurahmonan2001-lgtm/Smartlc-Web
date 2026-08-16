@@ -310,6 +310,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 35%, transparent 78%);
 }
 
+/* Sits behind the copy and the portrait, bled off both edges so it reads as
+   a fragment of something much larger than the screen. */
+.hero__watermark {
+  position: absolute; left: 50%; top: 46%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(180px, 27vw, 420px); font-weight: 900; letter-spacing: -0.06em;
+  line-height: 1; white-space: nowrap; pointer-events: none; user-select: none;
+  color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, 0.055);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 72%);
+  -webkit-background-clip: text; background-clip: text;
+}
+
 .hero__line { display: block; opacity: 0; transform: translateY(26px); animation: word-in 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .hero__line em { font-style: normal; color: var(--green-bright); }
 
@@ -360,11 +372,26 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 @media (max-width: 900px) {
   .site-bg { background-image: url("/backdrops/site-sm.webp"); }
 }
-/* The veil. Sections sit on top of this at varying opacity, so the veil only
-   has to guarantee readability where a section is fully transparent. */
+/* A light veil only. Most of the readability work is done by .sheet, which
+   sits over the middle of the screen — so this can stay sheer enough for
+   Harvard Yard to be plainly legible down both gutters. */
 .site-bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(245, 249, 248, 0.62), rgba(245, 249, 248, 0.78));
+  background: linear-gradient(180deg, rgba(245, 249, 248, 0.2), rgba(245, 249, 248, 0.34));
+}
+
+/* ─── The content panel ───
+   Everything below the hero, laid over the backdrop as a separate window
+   with the photograph running down both sides. It lifts over the foot of the
+   hero, which is what stops the join reading as two stacked blocks. */
+.sheet {
+  position: relative; z-index: 1;
+  width: min(1320px, 100% - 88px);
+  margin: -38px auto 46px;
+  border-radius: 34px;
+  overflow: clip;                       /* clip section fills to the corners */
+  background: rgba(246, 250, 249, 0.82);
+  box-shadow: 0 34px 90px rgba(0, 30, 28, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 /* ─── Method ───
@@ -1847,7 +1874,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .method__vs { justify-self: center; width: 40px; height: 40px; }
   .method__pillars { grid-template-columns: repeat(2, 1fr); }
 }
+@media (max-width: 900px) {
+  /* A phone has no width to spare, so the gutters narrow to a hairline —
+     enough that the window edge and the photograph beside it stay visible
+     without stealing room from the content. */
+  .sheet {
+    width: min(1320px, 100% - 18px);
+    margin: -22px auto 18px;
+    border-radius: 22px;
+  }
+}
 @media (max-width: 640px) {
+  .hero__watermark { font-size: clamp(140px, 46vw, 260px); top: 42%; }
   /* The headline is written as three deliberate lines. At the desktop size
      none of them fit a phone — every language spilled and re-wrapped into a
      ragged five or six, losing the rhythm the copy depends on. This scale
