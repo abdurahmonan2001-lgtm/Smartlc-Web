@@ -107,28 +107,33 @@ export default function Hero() {
         </div>
 
         <div className="hero__portrait" ref={tiltRef}>
-          <div className="hero__portrait-ring" aria-hidden="true" />
-          <figure className="hero__portrait-frame">
-            <img
-              src={FOUNDER.photo}
-              srcSet={`${FOUNDER.photoSm} 420w, ${FOUNDER.photo} 640w`}
-              sizes="(max-width: 900px) 280px, 420px"
-              width="640"
-              height="640"
-              alt={`${FOUNDER.name} — ${h.role}`}
-              fetchPriority="high"
-            />
-            <figcaption>
-              <span className="hero__portrait-name">{FOUNDER.name}</span>
-              <span className="hero__portrait-role">{h.role}</span>
-            </figcaption>
-          </figure>
+          {/* The seal is anchored to this wrapper, not to the column: the
+              column is full-width and the photograph is not, so anchoring to
+              the column left the badge floating in space on narrow screens. */}
+          <div className="hero__portrait-inner">
+            <div className="hero__portrait-ring" aria-hidden="true" />
+            <figure className="hero__portrait-frame">
+              <img
+                src={FOUNDER.photo}
+                srcSet={`${FOUNDER.photoSm} 420w, ${FOUNDER.photo} 640w`}
+                sizes="(max-width: 1000px) 300px, 420px"
+                width="640"
+                height="640"
+                alt={`${FOUNDER.name} — ${h.role}`}
+                fetchPriority="high"
+              />
+              <figcaption>
+                <span className="hero__portrait-name">{FOUNDER.name}</span>
+                <span className="hero__portrait-role">{h.role}</span>
+              </figcaption>
+            </figure>
 
-          {/* The single strongest credential, pulled out of the list so it
-              reads even to a visitor who only glances at the photograph. */}
-          <div className="hero__seal">
-            <span className="hero__seal-band">{FOUNDER.speaking}</span>
-            <span className="hero__seal-text">{h.seal}</span>
+            {/* The single strongest credential, pulled out of the list so it
+                reads even to a visitor who only glances at the photograph. */}
+            <div className="hero__seal">
+              <span className="hero__seal-band">{FOUNDER.speaking}</span>
+              <span className="hero__seal-text">{h.seal}</span>
+            </div>
           </div>
         </div>
       </div>

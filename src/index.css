@@ -187,7 +187,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .hero__eyebrow {
   color: var(--green-bright); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; font-size: 12.5px; margin-bottom: 18px;
 }
-.hero__motto { font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; font-weight: 900; letter-spacing: -0.03em; }
+/* Capped at 66px, not 84px. The container stops growing at 1180px, so the
+   copy column tops out around 623px however wide the window gets — and 66px
+   is the largest size at which the longest line in any of the three
+   languages still fits it on one row. */
+.hero__motto { font-size: clamp(44px, 6.4vw, 66px); line-height: 1.02; font-weight: 900; letter-spacing: -0.03em; }
 .hero__word {
   display: inline-block; margin-right: 0.22em; opacity: 0; transform: translateY(24px);
   animation: word-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -209,9 +213,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    light edge and a deep shadow — so the photograph carries the section and
    nothing competes with the face. */
 .hero__portrait {
-  position: relative; display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: center; align-items: center;
   perspective: 1000px;
 }
+/* Shrink-wraps the photograph, so the seal and the glow are positioned
+   against the image rather than against the full column width. */
+.hero__portrait-inner { position: relative; display: inline-block; }
 .hero__portrait-ring {
   position: absolute; inset: -6% -4% -10%;
   background:
@@ -1776,16 +1783,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 @media (max-width: 1080px) {
   .nav__phone span { display: none; }
 }
+/* The awkward band. Above 1000px the hero splits into two columns, so the
+   copy gets roughly half the width — but the headline is sized off the
+   VIEWPORT, which has just got wider. At 1002px that means 64px type in a
+   515px column, and all three lines wrap. Scale off the column instead until
+   the viewport is wide enough for the viewport-based size to fit again. */
+@media (min-width: 1001px) and (max-width: 1240px) {
+  .hero__motto { font-size: clamp(38px, 4.6vw, 56px); }
+}
 @media (max-width: 1000px) {
   /* The portrait leads on narrow screens rather than disappearing: the face is
      the first thing a visitor from an advert should meet. */
   .hero__inner { grid-template-columns: 1fr; gap: 34px; }
   .hero__portrait { order: -1; }
   .hero__portrait-frame { width: min(300px, 74vw); border-radius: 22px; }
-  .hero__seal { top: 4px; right: max(6px, calc(50% - 190px)); padding: 8px 13px 8px 10px; }
+  .hero__seal { top: 6px; right: -8px; padding: 8px 13px 8px 10px; }
   .hero__seal-band { font-size: 19px; }
   .hero__seal-text { font-size: 11px; max-width: 84px; }
   .hero__scroll { display: none; }
+  .hero { padding-top: 118px; }
   .location { grid-template-columns: 1fr; }
 
   .method__compare { grid-template-columns: 1fr; gap: 16px; }
@@ -1793,10 +1809,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .method__pillars { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .hero__creds { gap: 8px; }
-  .hero__creds li { padding: 8px 13px; }
-  .hero__creds strong { font-size: 18px; }
-  .hero__creds span { font-size: 12px; }
+  /* The headline is written as three deliberate lines. At the desktop size
+     none of them fit a phone — every language spilled and re-wrapped into a
+     ragged five or six, losing the rhythm the copy depends on. This scale
+     keeps all three lines intact down to about 360px; below that the longest
+     Russian line takes a second row, which `balance` makes look intentional. */
+  .hero__motto { font-size: clamp(27px, 8.4vw, 40px); line-height: 1.08; }
+  .hero__line { text-wrap: balance; }
+  .hero__sub { font-size: 16px; margin: 18px 0 24px; }
+
+  /* Full-width buttons: easier to hit with a thumb, and two ragged
+     part-width buttons stacked on a phone look like a mistake. */
+  .hero__ctas { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero__ctas .btn { width: 100%; text-align: center; }
+
+  /* One fact per row, each reading as a line rather than a stray chip. */
+  .hero__creds { flex-direction: column; align-items: stretch; gap: 8px; margin: 22px 0 26px; }
+  .hero__creds li { padding: 10px 14px; }
+  .hero__creds strong { font-size: 18px; min-width: 46px; }
+  .hero__creds span { font-size: 12.5px; }
   .method__pillars { grid-template-columns: 1fr; }
   .method__col { padding: 22px 20px 24px; }
   .method__quote { padding: 28px 24px; }
@@ -1832,7 +1863,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .nav__pill { padding: 7px 10px; gap: 8px; }
   .nav__actions { gap: 8px; }
   .lang-switch button { padding: 4px 8px; font-size: 12px; }
-  .hero__motto { font-size: clamp(38px, 13vw, 48px); }
+  .hero__seal { padding: 7px 11px 7px 9px; gap: 8px; }
+  .hero__seal-band { font-size: 17px; }
+  .hero__seal-text { font-size: 10.5px; max-width: 76px; }
   .price-card { padding: 26px 20px; }
   .contact__grid { grid-template-columns: 1fr 1fr; }
   .road { min-width: 760px; }
