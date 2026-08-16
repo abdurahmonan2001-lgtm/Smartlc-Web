@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLang } from "../i18n.jsx";
 import { CONTACT, FOUNDER } from "../data/site.js";
-import results from "../data/results.json";
 
 // A founder-led hero. The certificates that used to sit here now live on the
 // results wall further down: a visitor arriving from an advert needs to know
@@ -62,84 +61,70 @@ export default function Hero() {
           the eye registers structure at a size the headline cannot reach. */}
       <span className="hero__watermark" aria-hidden="true">IELTS</span>
       <div className="container hero__inner">
-        <div className="hero__copy">
-          <p className="hero__eyebrow">
-            <span className="hero__dot" aria-hidden="true" />
-            {h.eyebrow}
-          </p>
+        <p className="hero__eyebrow">
+          <span className="hero__dot" aria-hidden="true" />
+          {h.eyebrow}
+        </p>
 
-          <h1 className="hero__motto">
-            {h.headline.map((line, i) => (
-              <span className="hero__line" key={i} style={{ animationDelay: `${0.12 + i * 0.16}s` }}>
-                {line.accent ? <em>{line.text}</em> : line.text}
-              </span>
-            ))}
-          </h1>
-
-          <p className="hero__sub">{h.sub}</p>
-
-          {/* Speaking 9.0 is deliberately absent here — it is the seal on the
-              portrait, where the eye lands first. Repeating it would spend the
-              strongest fact twice and read as padding. */}
-          <ul className="hero__creds">
-            <li>
-              <strong>{FOUNDER.writing}</strong>
-              <span>{h.creds.writing}</span>
-            </li>
-            <li>
-              <strong>{FOUNDER.years}+</strong>
-              <span>{h.creds.years}</span>
-            </li>
-            <li>
-              <strong>{results.length}+</strong>
-              <span>{h.creds.results}</span>
-            </li>
-          </ul>
-
-          <div className="hero__ctas">
-            <a className="btn btn--primary btn--lg" href="/register">
-              {t.nav.enroll}
-            </a>
-            <a className="btn btn--ghost btn--lg" href="/placement">
-              {h.cta2}
-            </a>
+        {/* The portrait is the centrepiece, and the only things allowed to
+            share the space with it are the two band scores. Everything that
+            explains the offer waits until below the photograph. */}
+        <div className="hero__stage">
+          <div className="hero__score hero__score--left">
+            <strong>{FOUNDER.speaking}</strong>
+            <span>Speaking</span>
+            <em>{h.twice}</em>
           </div>
 
-          <a className="hero__badge" href="#method">
-            {h.badge} <span aria-hidden="true">↓</span>
+          <div className="hero__portrait" ref={tiltRef}>
+            <div className="hero__portrait-inner">
+              <div className="hero__portrait-ring" aria-hidden="true" />
+              <figure className="hero__portrait-frame">
+                <img
+                  src={FOUNDER.photo}
+                  srcSet={`${FOUNDER.photoSm} 420w, ${FOUNDER.photo} 640w`}
+                  sizes="(max-width: 720px) 260px, 400px"
+                  width="640"
+                  height="640"
+                  alt={`${FOUNDER.name} — ${h.role}`}
+                  fetchPriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <div className="hero__score hero__score--right">
+            <strong>{FOUNDER.writing}</strong>
+            <span>Writing</span>
+            <em>{h.twice}</em>
+          </div>
+        </div>
+
+        <p className="hero__name">{FOUNDER.name}</p>
+        <p className="hero__role">{h.role}</p>
+
+        <h1 className="hero__motto">
+          {h.headline.map((line, i) => (
+            <span className="hero__line" key={i} style={{ animationDelay: `${0.12 + i * 0.16}s` }}>
+              {line.accent ? <em>{line.text}</em> : line.text}
+            </span>
+          ))}
+        </h1>
+
+        <p className="hero__sub">{h.sub}</p>
+
+        <div className="hero__ctas">
+          <a className="btn btn--primary btn--lg" href="/register">
+            {t.nav.enroll}
+          </a>
+          <a className="btn btn--ghost btn--lg" href="/placement">
+            {h.cta2}
           </a>
         </div>
 
-        <div className="hero__portrait" ref={tiltRef}>
-          {/* The seal is anchored to this wrapper, not to the column: the
-              column is full-width and the photograph is not, so anchoring to
-              the column left the badge floating in space on narrow screens. */}
-          <div className="hero__portrait-inner">
-            <div className="hero__portrait-ring" aria-hidden="true" />
-            <figure className="hero__portrait-frame">
-              <img
-                src={FOUNDER.photo}
-                srcSet={`${FOUNDER.photoSm} 420w, ${FOUNDER.photo} 640w`}
-                sizes="(max-width: 1000px) 300px, 420px"
-                width="640"
-                height="640"
-                alt={`${FOUNDER.name} — ${h.role}`}
-                fetchPriority="high"
-              />
-              <figcaption>
-                <span className="hero__portrait-name">{FOUNDER.name}</span>
-                <span className="hero__portrait-role">{h.role}</span>
-              </figcaption>
-            </figure>
-
-            {/* The single strongest credential, pulled out of the list so it
-                reads even to a visitor who only glances at the photograph. */}
-            <div className="hero__seal">
-              <span className="hero__seal-band">{FOUNDER.speaking}</span>
-              <span className="hero__seal-text">{h.seal}</span>
-            </div>
-          </div>
-        </div>
+        <a className="hero__badge" href="#method">
+          {h.badge} <span aria-hidden="true">↓</span>
+        </a>
       </div>
 
       <a className="hero__scroll" href="#method" aria-label={h.badge}>
