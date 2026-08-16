@@ -32,3 +32,4 @@ public/practice-audio/*.wav
 
 # Neural TTS segment cache (generate-neural-audio.mjs working files)
 .neural-cache/
+.cutout-raw.png

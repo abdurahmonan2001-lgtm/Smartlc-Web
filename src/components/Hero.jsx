@@ -66,12 +66,19 @@ export default function Hero() {
           {h.eyebrow}
         </p>
 
-        {/* The portrait is the centrepiece, and the only things allowed to
-            share the space with it are the two band scores. Everything that
-            explains the offer waits until below the photograph. */}
+        {/* The name is set above the photograph in widely tracked capitals —
+            the treatment a masthead uses. At this tracking it reads as a
+            title rather than a caption, which is what lets the space around
+            the figure stay empty without looking unfinished. */}
+        <p className="hero__name">{FOUNDER.name}</p>
+
+        {/* The figure is the centrepiece, and the only things allowed to share
+            the space with it are the two band scores. Everything that explains
+            the offer waits until below. */}
         <div className="hero__stage">
           <div className="hero__score hero__score--left">
             <strong>{FOUNDER.speaking}</strong>
+            <i aria-hidden="true" />
             <span>Speaking</span>
             <em>{h.twice}</em>
           </div>
@@ -79,28 +86,27 @@ export default function Hero() {
           <div className="hero__portrait" ref={tiltRef}>
             <div className="hero__portrait-inner">
               <div className="hero__portrait-ring" aria-hidden="true" />
-              <figure className="hero__portrait-frame">
-                <img
-                  src={FOUNDER.photo}
-                  srcSet={`${FOUNDER.photoSm} 420w, ${FOUNDER.photo} 640w`}
-                  sizes="(max-width: 720px) 260px, 400px"
-                  width="640"
-                  height="640"
-                  alt={`${FOUNDER.name} — ${h.role}`}
-                  fetchPriority="high"
-                />
-              </figure>
+              <img
+                className="hero__figure"
+                src={FOUNDER.cutout}
+                srcSet={`${FOUNDER.cutoutSm} 520w, ${FOUNDER.cutout} 900w`}
+                sizes="(max-width: 780px) 300px, 470px"
+                width="900"
+                height="1213"
+                alt={`${FOUNDER.name} — ${h.role}`}
+                fetchPriority="high"
+              />
             </div>
           </div>
 
           <div className="hero__score hero__score--right">
             <strong>{FOUNDER.writing}</strong>
+            <i aria-hidden="true" />
             <span>Writing</span>
             <em>{h.twice}</em>
           </div>
         </div>
 
-        <p className="hero__name">{FOUNDER.name}</p>
         <p className="hero__role">{h.role}</p>
 
         <h1 className="hero__motto">

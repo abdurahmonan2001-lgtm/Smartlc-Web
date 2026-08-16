@@ -15,8 +15,16 @@ export const CONTACT = {
 // the certificates.
 export const FOUNDER = {
   name: "Abdurahmon Nasriddinov",
+  // The framed original, backdrop intact. Not on the page any more, but it is
+  // what founder-thumb.webp (the signature in Method) is cut from, and the
+  // fallback if the cut-out ever needs redoing.
   photo: "/brand/founder.webp",
   photoSm: "/brand/founder-sm.webp",
+  // Background removed, so he stands on the page instead of inside a box.
+  // 900px is a 2x upscale of the 446px the camera original actually holds —
+  // fine at the ~470px the hero uses, not beyond it.
+  cutout: "/brand/founder-cut.webp",
+  cutoutSm: "/brand/founder-cut-sm.webp",
   years: 7,
   // Achieved in two separate sittings each, which is the point: a single high
   // band can be luck, the same band twice is method.
