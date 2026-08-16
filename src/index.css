@@ -178,7 +178,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
      faintly present behind the portrait rather than the page starting solid
      and only revealing the backdrop further down. */
   background: radial-gradient(1100px 620px at 82% -10%, rgba(10, 90, 81, 0.94) 0%, rgba(0, 43, 42, 0.94) 58%);
-  color: #fff; padding: 112px 0 78px;
+  /* No bottom padding: the figure is the last thing in the hero, and the
+     white panel pulls up over its base so the two meet with no dark strip
+     between them. */
+  color: #fff; padding: 112px 0 0;
 }
 .hero__glow {
   position: absolute; width: 700px; height: 700px; border-radius: 50%;
@@ -206,11 +209,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    copy column tops out around 623px however wide the window gets — and 66px
    is the largest size at which the longest line in any of the three
    languages still fits it on one row. */
-.hero__motto {
-  margin-top: 34px; max-width: 900px;
-  font-family: var(--font-display); font-weight: 700;
-  font-size: clamp(42px, 6.1vw, 64px); line-height: 1.08; letter-spacing: -0.02em;
-}
 .hero__word {
   display: inline-block; margin-right: 0.22em; opacity: 0; transform: translateY(24px);
   animation: word-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -218,31 +216,42 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .hero__word:nth-child(2) { color: var(--green-bright); }
 .hero__word:nth-child(3) { color: var(--gold); }
 @keyframes word-in { to { opacity: 1; transform: translateY(0); } }
-.hero__sub { color: #a9c4bf; font-size: 17.5px; margin: 24px auto 30px; max-width: 660px; }
-.hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-.hero__badge {
-  display: inline-block; margin-top: 28px; color: var(--gold); font-weight: 700; font-size: 15px;
-  border-bottom: 1px dashed rgba(212, 168, 67, 0.5); padding-bottom: 2px; transition: color 0.2s;
-}
-.hero__badge:hover { color: #f0cd77; }
-.hero__badge strong { font-size: 18px; }
 
 /* ─── Hero stage ───
    The portrait with a band score either side of it, and nothing else. */
 .hero__stage {
   position: relative; display: flex; justify-content: center; align-items: center;
-  width: min(880px, 100%); margin: 14px auto 0;
+  width: min(1040px, 100%); margin: 14px auto 0;
 }
-/* Level with the face, not the chest. Sitting at the vertical midpoint of a
-   standing figure puts them somewhere around the forearms, which reads as an
-   accident; aligned with the head they read as deliberate. */
+
+/* ─── Wordmark ───
+   Set in the sans, not the display serif: at this size a serif's thin strokes
+   break up, and a heavy grotesque is what reads as a mark rather than as a
+   very large sentence. It is allowed to run wider than the container and is
+   clipped by the hero's own overflow, so it reads as a fragment of something
+   larger than the screen. */
+.hero__wordmark {
+  position: absolute; left: 50%; top: 7%; transform: translateX(-50%);
+  z-index: 0; pointer-events: none; user-select: none; white-space: nowrap;
+  font-family: var(--font); font-weight: 900;
+  font-size: clamp(64px, 13.5vw, 178px);
+  letter-spacing: -0.045em; line-height: 0.9; color: #fff;
+}
+/* Level with the shoulders. At the vertical midpoint of a standing figure they
+   land around the forearms, which reads as an accident; at shoulder height
+   they sit in the negative space either side of the head and read as placed. */
 .hero__score {
-  position: absolute; top: 33%; transform: translateY(-50%);
+  position: absolute; top: 42%; transform: translateY(-50%); z-index: 3;
   display: flex; flex-direction: column; align-items: center;
   animation: score-in 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) 0.5s both;
 }
-.hero__score--left { left: 0; }
-.hero__score--right { right: 0; }
+/* Anchored to the centre line, not to the edges of the stage, so each score
+   keeps the same distance from the figure however wide the stage gets. The
+   offset is the gap from centre to the score's INNER edge: the figure is
+   470px, so 300px leaves it about 65px clear of the shoulder. */
+.hero__score { --score-offset: 300px; }
+.hero__score--left { right: calc(50% + var(--score-offset)); left: auto; }
+.hero__score--right { left: calc(50% + var(--score-offset)); right: auto; }
 .hero__score strong {
   font-family: var(--font-display);
   font-size: clamp(46px, 5.2vw, 72px); font-weight: 700; color: var(--gold);
@@ -276,6 +285,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    chain content-derived all the way up, so the percentage resolved against
    the image's intrinsic size and the figure silently rendered at 300px. */
 .hero__portrait {
+  position: relative; z-index: 2;      /* in front of the wordmark behind him */
   flex: none; width: min(470px, 100%);
   display: flex; justify-content: center; align-items: center;
   perspective: 1000px;
@@ -366,23 +376,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .hero__line { display: block; opacity: 0; transform: translateY(26px); animation: word-in 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .hero__line em { font-style: normal; color: var(--green-bright); }
 
-.hero__scroll {
-  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
-  width: 26px; height: 42px; border-radius: 999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.24);
-}
-.hero__scroll span {
-  position: absolute; left: 50%; top: 9px; width: 3px; height: 7px; border-radius: 2px;
-  background: var(--green-bright); transform: translateX(-50%);
-}
-@media (prefers-reduced-motion: no-preference) {
-  .hero__scroll span { animation: scroll-hint 1.9s ease-in-out infinite; }
-  @keyframes scroll-hint {
-    0% { opacity: 0; transform: translate(-50%, 0); }
-    35% { opacity: 1; }
-    100% { opacity: 0; transform: translate(-50%, 16px); }
-  }
-}
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
@@ -428,11 +421,35 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .sheet {
   position: relative; z-index: 1;
   width: min(1320px, 100% - 88px);
-  margin: -38px auto 46px;
+  /* Tucks under the foot of the photograph, cropping it the way the panel
+     edge crops a figure in print. The overlap is what makes the join read as
+     one continuous surface rather than two blocks meeting. */
+  margin: -54px auto 46px;
   border-radius: 34px;
   overflow: clip;                       /* clip section fills to the corners */
   background: rgba(246, 250, 249, 0.82);
   box-shadow: 0 34px 90px rgba(0, 30, 28, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* ─── Intro ───
+   The statement, the paragraph and the buttons, at the head of the white
+   panel. They sit here rather than in the hero so the photograph runs down to
+   the panel's edge and the two meet with no dark strip between them — and the
+   longest text on the page ends up on a light background, where it is easiest
+   to read. */
+.intro { padding: 62px 0 8px; text-align: center; }
+.intro__motto {
+  margin: 0 auto; max-width: 900px;
+  font-family: var(--font-display); font-weight: 700; color: var(--ink);
+  font-size: clamp(34px, 5.4vw, 60px); line-height: 1.08; letter-spacing: -0.02em;
+}
+.intro__motto em { font-style: normal; color: var(--green-dark); }
+.intro__sub {
+  margin: 22px auto 0; max-width: 680px;
+  color: var(--ink-2); font-size: 17px; line-height: 1.68;
+}
+.intro__ctas {
+  margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
 }
 
 /* ─── Method ───
@@ -568,9 +585,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 2px 6px rgba(0, 43, 42, 0.05);
   border-radius: 14px; margin-bottom: 16px;
 }
-/* full-bleed carousel: cards run edge to edge, no side fade limiters —
-   the glass arrows float on top of the cards */
-.adv { position: relative; width: 100vw; margin: 32px 0 0 calc(50% - 50vw); }
+/* Full-bleed carousel: cards run edge to edge of the content panel, no side
+   fade limiters — the glass arrows float on top of the cards. Sized to the
+   panel rather than the viewport for the same reason as .road-scroller: at
+   100vw it overflowed the panel and was clipped by its corners. */
+.adv { position: relative; width: 100%; margin: 32px 0 0; }
 .adv__track {
   display: flex; gap: 20px; overflow-x: auto;
   padding: 6px 20px 22px; scrollbar-width: none;
@@ -886,10 +905,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    overflow-y to auto, which resurrected a draggable vertical scrollbar.
    Top/bottom padding gives the speech bubble and stop tags room, because
    clipping happens at the padding edge. */
-/* full-bleed: the sea stretches edge to edge of the screen */
+/* Full-bleed to the PANEL, not the viewport. It used to be 100vw with a
+   negative margin, from when this section spanned the whole screen; inside
+   the content panel that overflows the panel's width and is clipped by its
+   rounded corners, which cut the end of the journey off. The panel is now the
+   edge the sea stretches to. */
 .road-scroller {
   overflow: hidden; touch-action: pan-y; padding: 18px 0 14px;
-  width: 100vw; margin-left: calc(50% - 50vw);
+  width: 100%; margin-left: 0;
 }
 /* Stops are absolutely positioned, so padding can't inset them — the
    breathing room before Beginner / after IELTS lives in pos() in
@@ -1896,7 +1919,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 @media (max-width: 1000px) {
   .hero__portrait { width: min(390px, 78vw); }
-  .hero__scroll { display: none; }
   .hero { padding-top: 118px; }
   .location { grid-template-columns: 1fr; }
 
@@ -1910,28 +1932,33 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
      without stealing room from the content. */
   .sheet {
     width: min(1320px, 100% - 18px);
-    margin: -22px auto 18px;
+    margin: -34px auto 18px;
     border-radius: 22px;
   }
 }
 @media (max-width: 780px) {
-  /* Below this there is not enough room either side of the photograph for a
-     score to sit without crowding the face, so the two drop to a row
-     underneath it — still the only things sharing the stage. */
-  .hero__stage { flex-wrap: wrap; gap: 22px 34px; margin-top: 20px; }
-  /* The portrait takes a full row so the scores wrap beneath it. The row is
-     full width by definition, so the figure's own size has to move to the
-     inner wrapper — in viewport units, which are definite and so cannot fall
-     into the shrink-to-fit trap that a percentage would. */
-  .hero__portrait { flex: 1 0 100%; order: 1; width: auto; }
-  .hero__portrait-inner { width: min(390px, 78vw); }
-  .hero__score {
-    position: static; transform: none; order: 2; animation: none;
-    flex-direction: row; align-items: baseline; gap: 9px;
-  }
-  .hero__score strong { font-size: 38px; }
-  .hero__score span { margin-top: 0; font-size: 12px; }
-  .hero__score em { font-size: 11.5px; }
+  /* The scores stay ON the shoulders rather than dropping into a row below.
+     A phone has no room for them to sit clear of the figure, so instead they
+     tuck into the frame and overlap it: the numbers land against the dark
+     sweater and the backdrop, both of which gold reads cleanly on. */
+  .hero__stage { margin-top: 16px; }
+  .hero__portrait { width: min(300px, 62vw); }
+  /* Half the figure is 150px, so a 116px offset tucks each score just onto the
+     shoulder rather than clear of it — the only way to keep them flanking him
+     on a screen this narrow. */
+  .hero__score { top: 40%; --score-offset: 116px; }
+  .hero__score strong { font-size: clamp(34px, 10vw, 46px); }
+  .hero__score i { width: 22px; margin: 9px 0 7px; }
+  .hero__score span { font-size: 10.5px; letter-spacing: 0.16em; }
+  .hero__score em { font-size: 10.5px; margin-top: 3px; }
+}
+@media (max-width: 400px) {
+  /* At the very narrowest the labels are what has to give, not the numbers:
+     "9.0" beside a face still says everything, "SPEAKING" set at 8px does not. */
+  .hero__portrait { width: min(260px, 58vw); }
+  .hero__score { --score-offset: 96px; }
+  .hero__score span { font-size: 9.5px; letter-spacing: 0.12em; }
+  .hero__score em { display: none; }
 }
 @media (max-width: 640px) {
   .hero__watermark { font-size: clamp(140px, 46vw, 260px); top: 42%; }
@@ -1940,14 +1967,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
      ragged five or six, losing the rhythm the copy depends on. This scale
      keeps all three lines intact down to about 360px; below that the longest
      Russian line takes a second row, which `balance` makes look intentional. */
-  .hero__motto { font-size: clamp(27px, 8.4vw, 40px); line-height: 1.08; }
+  .intro__motto { font-size: clamp(27px, 8.4vw, 40px); line-height: 1.1; }
   .hero__line { text-wrap: balance; }
-  .hero__sub { font-size: 16px; margin: 18px 0 24px; }
+  .intro__sub { font-size: 15.5px; margin-top: 18px; }
 
   /* Full-width buttons: easier to hit with a thumb, and two ragged
      part-width buttons stacked on a phone look like a mistake. */
-  .hero__ctas { flex-direction: column; align-items: stretch; gap: 10px; }
-  .hero__ctas .btn { width: 100%; text-align: center; }
+  .intro__ctas { flex-direction: column; align-items: stretch; gap: 10px; }
+  .intro__ctas .btn { width: 100%; text-align: center; }
 
   /* One fact per row, each reading as a line rather than a stray chip. */
   .method__pillars { grid-template-columns: 1fr; }
@@ -1996,7 +2023,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .nav__cta-full { display: none; }
   .nav__cta-short { display: inline; }
   .nav__logo span { display: none; }
-  .hero { padding: 110px 0 64px; }
+  /* Bottom padding stays 0 here too, or it reopens the dark gap between the
+     foot of the photograph and the top of the white panel. */
+  .hero { padding: 96px 0 0; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
   .team__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .section { padding: 44px 0; }

@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense } from "react";
 import { LangProvider } from "./i18n.jsx";
 import Nav from "./components/Nav.jsx";
-import Hero from "./components/Hero.jsx";
+import Hero, { HeroIntro } from "./components/Hero.jsx";
 import Method from "./components/Method.jsx";
 import { Stats, Advantages, Courses, Unlocks, SuccessStories, LevelCheck, Pricing, Teachers } from "./components/Sections.jsx";
 import Results from "./components/Results.jsx";
@@ -74,6 +74,7 @@ export default function App() {
                 side and the content reads as a separate window laid over it. */}
             <Hero />
             <div className="sheet">
+            <HeroIntro />
             <Method />
             <Stats />
             <SuccessStories />

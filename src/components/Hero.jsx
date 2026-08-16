@@ -71,11 +71,21 @@ export default function Hero() {
             title rather than a caption, which is what lets the space around
             the figure stay empty without looking unfinished. */}
         <p className="hero__name">{FOUNDER.name}</p>
+        {/* Role sits ABOVE the stage, not below it. Anything after the stage
+            puts dark space between the foot of the photograph and the top of
+            the white panel, and the join stops being seamless. */}
+        <p className="hero__role">{h.role}</p>
 
         {/* The figure is the centrepiece, and the only things allowed to share
             the space with it are the two band scores. Everything that explains
             the offer waits until below. */}
         <div className="hero__stage">
+          {/* The wordmark sits BEHIND the figure and is deliberately wider
+              than him, so he stands in front of it and hides its middle. That
+              occlusion is the whole trick: it is what tells the eye the two
+              are in the same space rather than pasted into the same box. */}
+          <span className="hero__wordmark" aria-hidden="true">SMART LC</span>
+
           <div className="hero__score hero__score--left">
             <strong>{FOUNDER.speaking}</strong>
             <i aria-hidden="true" />
@@ -107,9 +117,26 @@ export default function Hero() {
           </div>
         </div>
 
-        <p className="hero__role">{h.role}</p>
+      </div>
 
-        <h1 className="hero__motto">
+      <p className="visually-hidden">{CONTACT.phone}</p>
+    </section>
+  );
+}
+
+/** The statement, the paragraph and the buttons.
+ *
+ *  These live at the top of the white panel rather than in the hero, so the
+ *  photograph runs all the way down to the panel's edge and the two meet with
+ *  no dark gap between them. It also means the longest text on the page is set
+ *  on a light background, which is where it is easiest to read. */
+export function HeroIntro() {
+  const { t } = useLang();
+  const h = t.hero;
+  return (
+    <section className="intro" id="intro">
+      <div className="container">
+        <h1 className="intro__motto">
           {h.headline.map((line, i) => (
             <span className="hero__line" key={i} style={{ animationDelay: `${0.12 + i * 0.16}s` }}>
               {line.accent ? <em>{line.text}</em> : line.text}
@@ -117,27 +144,17 @@ export default function Hero() {
           ))}
         </h1>
 
-        <p className="hero__sub">{h.sub}</p>
+        <p className="intro__sub">{h.sub}</p>
 
-        <div className="hero__ctas">
+        <div className="intro__ctas">
           <a className="btn btn--primary btn--lg" href="/register">
             {t.nav.enroll}
           </a>
-          <a className="btn btn--ghost btn--lg" href="/placement">
+          <a className="btn btn--ghost-green btn--lg" href="/placement">
             {h.cta2}
           </a>
         </div>
-
-        <a className="hero__badge" href="#method">
-          {h.badge} <span aria-hidden="true">↓</span>
-        </a>
       </div>
-
-      <a className="hero__scroll" href="#method" aria-label={h.badge}>
-        <span aria-hidden="true" />
-      </a>
-
-      <p className="visually-hidden">{CONTACT.phone}</p>
     </section>
   );
 }
