@@ -46,10 +46,17 @@ const graded = await sharp(trimmed)
   .toBuffer();
 
 for (const [w, name] of [[900, "founder-cut.webp"], [520, "founder-cut-sm.webp"]]) {
+  const upscale = w / tm.width;
   await sharp(graded)
     .resize({ width: w, kernel: "lanczos3" })
-    .webp({ quality: 90, effort: 6, alphaQuality: 100 })
+    // Sharpen AFTER resizing, and harder the further the image was stretched.
+    // Lanczos upscaling softens edges by definition; an unsharp mask puts back
+    // the acutance the eye reads as "in focus". m2 is kept low so flat areas
+    // (skin, the sweater) do not pick up grain — it is the eyelashes, the
+    // beard edge and the watch bezel that need to come back, not noise.
+    .sharpen({ sigma: upscale > 1.5 ? 1.1 : 0.7, m1: 0.5, m2: 2.2 })
+    .webp({ quality: 92, effort: 6, alphaQuality: 100 })
     .toFile(OUT + name);
   const m = await sharp(OUT + name).metadata();
-  console.log("wrote brand/" + name, m.width + "x" + m.height);
+  console.log("wrote brand/" + name, m.width + "x" + m.height, `(${upscale.toFixed(2)}x)`);
 }
