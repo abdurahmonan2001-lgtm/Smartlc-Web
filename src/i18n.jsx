@@ -73,6 +73,15 @@ const dict = {
       quote: "I do not want a student who can pass IELTS. I want a student who can think — and who then finds IELTS easy. In seven years I have never once seen it work the other way round.",
       signature: "Founder, Smart Learning Centre · IELTS 9.0 Speaking, 8.5 Writing",
     },
+    proof: {
+      eyebrow: "The evidence",
+      title: "The certificates behind those numbers",
+      sub: "Two sittings at Speaking 9.0, two at Writing 8.5. Every Test Report Form is here — open any of them full size. Candidate ID, date of birth and the form number are blurred; nothing else is.",
+      speaking: "Speaking",
+      writing: "Writing",
+      open: "Open the certificate",
+      note: "Any IELTS score can be checked by a recognising organisation at ielts.org/verify. We would rather you did.",
+    },
     stats: {
       results: "Official IELTS 7.0+ results",
       top: "Top student band score",
@@ -343,6 +352,15 @@ const dict = {
       quote: "Menga IELTS dan o'ta oladigan o'quvchi kerak emas. Menga fikrlay oladigan o'quvchi kerak — va unga IELTS oson bo'lib qoladi. Yetti yilda buning teskarisi ishlaganini bir marta ham ko'rmadim.",
       signature: "Asoschi, Smart Learning Centre · IELTS Speaking 9.0, Writing 8.5",
     },
+    proof: {
+      eyebrow: "Dalil",
+      title: "Bu raqamlar ortidagi sertifikatlar",
+      sub: "Speaking 9.0 — ikki marta, Writing 8.5 — ikki marta. Har bir Test Report Form shu yerda: istalganini bosib, to'liq hajmda ko'ring. Faqat nomzod ID raqami, tug'ilgan sana va forma raqami xiralashtirilgan — boshqa hech narsa emas.",
+      speaking: "Speaking",
+      writing: "Writing",
+      open: "Sertifikatni ochish",
+      note: "Har qanday IELTS natijasini tan oluvchi tashkilotlar ielts.org/verify orqali tekshirishi mumkin. Biz buni ma'qullaymiz.",
+    },
     stats: {
       results: "Rasmiy IELTS 7.0+ natijalar",
       top: "Talabalarning eng yuqori bali",
@@ -612,6 +630,15 @@ const dict = {
       ],
       quote: "Мне не нужен студент, который может сдать IELTS. Мне нужен студент, который умеет думать — и для которого IELTS становится лёгким. За семь лет я ни разу не видел, чтобы это работало наоборот.",
       signature: "Основатель, Smart Learning Centre · IELTS Speaking 9.0, Writing 8.5",
+    },
+    proof: {
+      eyebrow: "Доказательство",
+      title: "Сертификаты за этими цифрами",
+      sub: "Speaking 9.0 — дважды, Writing 8.5 — дважды. Каждый Test Report Form здесь: откройте любой в полном размере. Скрыты только идентификатор кандидата, дата рождения и номер формы — больше ничего.",
+      speaking: "Speaking",
+      writing: "Writing",
+      open: "Открыть сертификат",
+      note: "Любой результат IELTS можно проверить на ielts.org/verify. Мы только за.",
     },
     stats: {
       results: "Официальные результаты IELTS 7.0+",

@@ -553,6 +553,60 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .method__quote figcaption strong { font-size: 15.5px; font-weight: 800; }
 .method__quote figcaption em { font-style: normal; font-size: 12.5px; color: #8fb3ad; }
 
+/* ─── Proof ───
+   The founder's own Test Report Forms, directly after the argument they back.
+   Deliberately plain: a certificate is persuasive because of what it is, and
+   decorating it would only make it look less like a document. */
+.proof { padding-top: 54px; }
+.proof .method__eyebrow, .proof .section__title, .proof .section__sub { text-align: center; }
+/* minmax(0, 1fr), not 1fr. A bare 1fr floors each track at the card's
+   min-content width, and the score row inside is wide enough that two columns
+   then overflowed the panel on a phone. */
+.proof__grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 34px;
+}
+.proof__card {
+  display: flex; flex-direction: column; gap: 12px; padding: 14px 14px 16px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+  text-align: left; cursor: zoom-in;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.proof__card:hover {
+  transform: translateY(-4px); border-color: rgba(0, 148, 114, 0.42);
+  box-shadow: 0 20px 46px rgba(0, 74, 58, 0.14);
+}
+/* Fixed aspect and top-anchored: every form should crop at the same place, so
+   the four read as one set rather than four different documents. */
+.proof__shot {
+  display: block; border-radius: 11px; overflow: hidden; background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+.proof__shot img { width: 100%; height: 210px; object-fit: cover; object-position: top; display: block; }
+.proof__meta { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.proof__claim { display: flex; align-items: baseline; gap: 7px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.proof__claim strong {
+  font-family: var(--font-display); font-size: 26px; font-weight: 700;
+  color: var(--green-dark); line-height: 1; letter-spacing: -0.02em;
+}
+.proof__date { font-size: 12px; color: var(--ink-3); font-weight: 600; white-space: nowrap; }
+.proof__note {
+  margin: 26px auto 0; max-width: 620px; text-align: center;
+  font-size: 13.5px; color: var(--ink-3); line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .proof__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+@media (max-width: 520px) {
+  .proof__shot img { height: 168px; }
+  .proof__claim strong { font-size: 22px; }
+  .proof__claim { font-size: 12px; gap: 5px; }
+  .proof__card { padding: 11px 11px 13px; }
+  .proof__date { font-size: 11px; }
+  /* The four skill cells no longer fit on one row at this width. */
+  .proof__card .score-row { flex-wrap: wrap; }
+}
+
 /* ─── Stats ─── */
 .stats { background: rgba(5, 64, 61, 0.93); color: #fff; padding: 34px 0; border-top: 1px solid var(--border-dark); }
 .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
