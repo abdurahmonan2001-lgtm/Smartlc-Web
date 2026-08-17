@@ -42,7 +42,11 @@ async function gradeWriting(text) {
         messages: [{ role: 'user', content: `Prompt: ${WRITING_PROMPT}\n\nStudent writing:\n${text}` }],
       }),
     })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    // The body is the whole diagnosis: Anthropic names the reason there
+    // ("model not found", "credit balance is too low", an invalid field). A
+    // bare status code sent us hunting through the request shape for a fault
+    // that was never in it, so keep the body.
+    if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 300)}`)
     const data = await r.json()
     const raw = data.content?.[0]?.text || ''
     const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim())
