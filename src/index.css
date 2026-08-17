@@ -1981,47 +1981,48 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   }
 }
 @media (max-width: 860px) {
-  /* One column. A name split either side of a photograph needs a photograph
-     with room either side of it, which a phone does not have — so the halves
-     are dropped and the whole name shows instead, centred above everything.
-     The figure is ordered LAST so it still ends flush with the white panel. */
-  .hero__stage { grid-template-columns: 1fr; gap: 20px; margin-top: 8px; }
-  .hero__namepart { display: none; }
-  .hero__fullname {
-    position: static; width: auto; height: auto; clip: auto; clip-path: none;
-    white-space: normal; overflow: visible;
-    order: -3; text-align: center; color: #fff; text-transform: uppercase;
-    font-family: var(--font-display); font-weight: 600;
-    font-size: clamp(15px, 4.4vw, 22px);
-    letter-spacing: 0.28em; text-indent: 0.28em; line-height: 1.3;
-  }
-  .hero__side { align-items: center; text-align: center; gap: 18px; }
-  /* Centred with the copy it sits above. Anchored left, as it is on desktop,
-     it hangs off the side of a centred block and reads as a stray mark. */
-  .hero__statement::before { left: 50%; transform: translateX(-50%); }
-  .hero__side--left { order: -2; }
-  .hero__side--right { order: -1; }
-  .hero__portrait { order: 1; width: min(320px, 74vw); }
-  .hero__statement { font-size: clamp(23px, 6.4vw, 32px); }
+  /* The photograph must be the first thing on screen, so it is the only
+     element left in flow and everything else is lifted out of the column and
+     hung down its two sides. Stacked above him, the name, statement and scores
+     pushed the face most of a screen down the page, which defeats the whole
+     composition.
 
-  /* Side by side rather than stacked: two numbers in a column push the figure
-     an entire screen down the page. */
-  .hero__scores { flex-direction: row; gap: 34px; align-items: flex-start; justify-content: center; }
-  .hero__score { align-items: center; }
-  .hero__score { align-items: center; }
-  .hero__score strong { font-size: clamp(40px, 12vw, 56px); }
-  .hero__score i { width: 34px; margin: 9px 0 9px; }
-  /* Kept large here too. The skill is half the claim, and shrinking it to a
-     caption on the screen most visitors actually use would undo the point. */
-  .hero__score span { font-size: clamp(14px, 4.2vw, 18px); letter-spacing: 0.1em; }
-  .hero__score em { font-size: 11px; margin-top: 4px; }
+     Text lands either where the cut-out is transparent beside his head, or
+     over the dark sweater lower down. Both read cleanly for white and gold. */
+  .hero__stage { display: block; position: relative; margin-top: 4px; }
+  .hero__portrait { width: min(300px, 72vw); margin: 0 auto; }
+
+  .hero__side {
+    position: absolute; top: 0; z-index: 3; width: 36%;
+    padding-top: 0; gap: 14px;
+  }
+  .hero__side--left { left: 0; align-items: flex-start; text-align: left; }
+  .hero__side--right { right: 0; align-items: flex-end; text-align: right; }
+
+  /* The split halves come back — there are sides to put them on again. */
+  .hero__namepart { font-size: clamp(11px, 3vw, 14px); letter-spacing: 0.18em; text-indent: 0.18em; }
+  .hero__side--right .hero__namepart { text-indent: 0; margin-right: -0.18em; }
+
+  /* Small, and allowed to wrap freely. Three enforced lines need a column
+     wider than a third of a phone; as a short wrapped block it reads as the
+     tagline it is. */
+  .hero__statement { font-size: clamp(14px, 3.8vw, 17px); line-height: 1.34; padding-top: 15px; }
+  .hero__statement .hero__line { display: inline; }
+  .hero__statement .hero__line::after { content: " "; }
+  .hero__statement::before { width: 28px; }
+
+  .hero__scores { gap: 16px; align-items: flex-end; }
+  .hero__score { align-items: flex-end; }
+  .hero__score strong { font-size: clamp(32px, 9vw, 44px); }
+  .hero__score i { width: 26px; margin: 5px 0 5px; }
+  /* Proportionate to the number, as on desktop — the skill is half the claim,
+     and a caption-sized label would undo it. */
+  .hero__score span { font-size: clamp(11.5px, 3.2vw, 14px); letter-spacing: 0.07em; }
+  .hero__score em { font-size: 10px; margin-top: 2px; }
 }
 @media (max-width: 400px) {
-  .hero__portrait { width: min(270px, 72vw); }
-  .hero__scores { gap: 26px; }
-  /* Held at roughly a third of the number, the same ratio the label keeps to
-     it on desktop, so the pairing looks the same on both. */
-  .hero__score span { font-size: 15px; letter-spacing: 0.07em; }
+  .hero__portrait { width: min(258px, 66vw); }
+  .hero__side { width: 33%; }
   .hero__score em { display: none; }
 }
 @media (max-width: 640px) {

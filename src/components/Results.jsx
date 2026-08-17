@@ -84,16 +84,23 @@ export function CertLightbox({ cert, onClose }) {
   );
 }
 
-export function ScoreRow({ scores, size }) {
+/** `highlight` names the skill the row is evidence FOR ("l"|"r"|"w"|"s").
+ *  Without it the highest score is marked, which is right for a student's
+ *  certificate — but wrong where the row backs a specific claim. On the
+ *  founder's Writing 8.5 forms the Listening 9.0 was being highlighted
+ *  instead, drawing the eye away from the very number the card exists to
+ *  prove. */
+export function ScoreRow({ scores, size, highlight }) {
   if (!scores) return null;
-  const cells = [["L", scores.l], ["R", scores.r], ["W", scores.w], ["S", scores.s]];
+  const cells = [["L", scores.l, "l"], ["R", scores.r, "r"], ["W", scores.w, "w"], ["S", scores.s, "s"]];
   const top = Math.max(...cells.map(([, v]) => parseFloat(v)));
+  const marked = ([, v, key]) => (highlight ? key === highlight : parseFloat(v) === top);
   return (
     <div className={`score-row ${size === "lg" ? "score-row--lg" : ""}`}>
-      {cells.map(([k, v]) => (
-        <span className={`score-row__cell${parseFloat(v) === top ? " is-top" : ""}`} key={k}>
-          <em>{k}</em>
-          <strong>{v}</strong>
+      {cells.map((cell) => (
+        <span className={`score-row__cell${marked(cell) ? " is-top" : ""}`} key={cell[2]}>
+          <em>{cell[0]}</em>
+          <strong>{cell[1]}</strong>
         </span>
       ))}
     </div>

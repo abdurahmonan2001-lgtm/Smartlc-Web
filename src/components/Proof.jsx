@@ -71,7 +71,10 @@ export default function Proof() {
                 </span>
                 <span className="proof__date">{c.date}</span>
               </span>
-              <ScoreRow scores={c.scores} />
+              {/* Marks the skill this form is evidence for, not the highest
+                  number on it — otherwise the Writing cards highlight their
+                  Listening 9.0 and point away from the claim. */}
+              <ScoreRow scores={c.scores} highlight={c.claim === "speaking" ? "s" : "w"} />
             </button>
           ))}
         </div>
