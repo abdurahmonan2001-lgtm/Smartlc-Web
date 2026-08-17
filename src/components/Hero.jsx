@@ -69,7 +69,10 @@ export default function Hero() {
         <div className="hero__stage">
           {/* Behind the figure and wider than him, so he hides its middle.
               That occlusion is what tells the eye they share a space. */}
-          <span className="hero__wordmark" aria-hidden="true">SMART LC</span>
+          <span className="hero__wordmark" aria-hidden="true">
+            <span>SMART LC</span>
+            <span className="hero__wordmark-sub">IELTS</span>
+          </span>
 
           {/* The name whole, for screen readers and search engines, which
               should not have to reassemble it from two placed halves. */}

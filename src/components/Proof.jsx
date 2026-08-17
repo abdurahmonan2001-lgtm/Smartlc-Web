@@ -17,25 +17,25 @@ const CERTS = [
   {
     key: "speaking-9-jun2023", claim: "speaking", date: "03.06.2023",
     img: "/founder-certs/speaking-9-jun2023.webp",
-    thumb: "/founder-certs/speaking-9-jun2023-thumb.webp",
+    card: "/founder-certs/speaking-9-jun2023-card.webp",
     band: "8.5", scores: { l: "9.0", r: "8.5", w: "7.0", s: "9.0" },
   },
   {
     key: "speaking-9-aug2025", claim: "speaking", date: "03.08.2025",
     img: "/founder-certs/speaking-9-aug2025.webp",
-    thumb: "/founder-certs/speaking-9-aug2025-thumb.webp",
+    card: "/founder-certs/speaking-9-aug2025-card.webp",
     band: "8.5", scores: { l: "9.0", r: "8.5", w: "7.0", s: "9.0" },
   },
   {
     key: "writing-85-sep2023", claim: "writing", date: "03.09.2023",
     img: "/founder-certs/writing-85-sep2023.webp",
-    thumb: "/founder-certs/writing-85-sep2023-thumb.webp",
+    card: "/founder-certs/writing-85-sep2023-card.webp",
     band: "8.5", scores: { l: "9.0", r: "8.5", w: "8.5", s: "7.5" },
   },
   {
     key: "writing-85-sep2024", claim: "writing", date: "03.09.2024",
     img: "/founder-certs/writing-85-sep2024.webp",
-    thumb: "/founder-certs/writing-85-sep2024-thumb.webp",
+    card: "/founder-certs/writing-85-sep2024-card.webp",
     band: "8.5", scores: { l: "9.0", r: "9.0", w: "8.5", s: "8.0" },
   },
 ];
@@ -61,13 +61,15 @@ export default function Proof() {
               onClick={() => setZoom({ ...c, name: FOUNDER.name })}
               aria-label={`${p.open} — ${c.date}`}
             >
-              <span className="proof__shot">
-                <img src={c.thumb} alt="" loading="lazy" width="460" height="650" />
+              {/* `zoomable` is what the page-wide magnifier looks for, so the
+                  lens works over the whole form without opening it. */}
+              <span className="proof__shot zoomable">
+                <img src={c.card} alt="" loading="lazy" width="760" height="1075" />
               </span>
               <span className="proof__meta">
                 <span className="proof__claim">
                   <strong>{c.claim === "speaking" ? FOUNDER.speaking : FOUNDER.writing}</strong>
-                  {c.claim === "speaking" ? p.speaking : p.writing}
+                  <b>{c.claim === "speaking" ? p.speaking : p.writing}</b>
                 </span>
                 <span className="proof__date">{c.date}</span>
               </span>

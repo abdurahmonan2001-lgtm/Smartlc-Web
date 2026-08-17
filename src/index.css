@@ -272,12 +272,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   z-index: 0; pointer-events: none; user-select: none; white-space: nowrap;
   font-family: var(--font); font-weight: 900;
-  font-size: clamp(110px, 17vw, 300px);
-  letter-spacing: -0.045em; line-height: 0.9;
+  display: flex; flex-direction: column; align-items: center;
+  font-size: clamp(78px, 12.5vw, 210px);
+  letter-spacing: -0.045em; line-height: 0.88;
   color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, 0.085);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 74%);
   -webkit-background-clip: text; background-clip: text;
 }
+/* Tracked out so the shorter word measures the same as the line above it and
+   the two stack as a lockup rather than as a wide word with a small one
+   underneath. The indent cancels the trailing space that tracking adds after
+   the final S, which would otherwise push the line off centre. */
+.hero__wordmark-sub { letter-spacing: 0.331em; text-indent: 0.331em; }
 .hero__score {
   display: flex; flex-direction: column; align-items: flex-start;
   animation: score-in 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) 0.5s both;
@@ -571,18 +577,35 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   transform: translateY(-4px); border-color: rgba(0, 148, 114, 0.42);
   box-shadow: 0 20px 46px rgba(0, 74, 58, 0.14);
 }
-/* Fixed aspect and top-anchored: every form should crop at the same place, so
-   the four read as one set rather than four different documents. */
+/* The whole form, uncropped. A certificate cropped to a strip is a picture of
+   a certificate; shown end to end it is a document, and that difference is the
+   entire reason this section exists. */
 .proof__shot {
-  display: block; border-radius: 11px; overflow: hidden; background: var(--bg-alt);
-  border: 1px solid var(--border);
+  display: block; position: relative; border-radius: 11px; overflow: hidden;
+  background: var(--bg-alt); border: 1px solid var(--border); cursor: zoom-in;
 }
-.proof__shot img { width: 100%; height: 210px; object-fit: cover; object-position: top; display: block; }
+.proof__shot img { width: 100%; height: auto; display: block; }
+/* Tells a visitor the lens is there. The page-wide magnifier is hover-only, so
+   the hint is too — touch users tap through to the lightbox instead. */
+@media (hover: hover) {
+  .proof__shot::after {
+    content: "🔍"; position: absolute; right: 8px; bottom: 8px;
+    width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+    background: rgba(255, 255, 255, 0.94); box-shadow: 0 3px 10px rgba(0, 40, 34, 0.22);
+    font-size: 14px; opacity: 0; transition: opacity 0.25s;
+  }
+  .proof__card:hover .proof__shot::after { opacity: 1; }
+}
 .proof__meta { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-.proof__claim { display: flex; align-items: baseline; gap: 7px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.proof__claim { display: flex; align-items: baseline; gap: 8px; }
 .proof__claim strong {
-  font-family: var(--font-display); font-size: 26px; font-weight: 700;
+  font-family: var(--font-display); font-size: 30px; font-weight: 700;
   color: var(--green-dark); line-height: 1; letter-spacing: -0.02em;
+}
+/* The skill carries the claim, so it is set to be read, not skimmed past. */
+.proof__claim b {
+  font-size: 15px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink);
 }
 .proof__date { font-size: 12px; color: var(--ink-3); font-weight: 600; white-space: nowrap; }
 .proof__note {
@@ -594,11 +617,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .proof__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 }
 @media (max-width: 520px) {
-  .proof__shot img { height: 168px; }
-  .proof__claim strong { font-size: 22px; }
-  .proof__claim { font-size: 12px; gap: 5px; }
+  /* One per row. Two columns put each form at 122px wide — recognisable as a
+     certificate but far too small to read, which wastes the one section whose
+     job is to be read. */
+  .proof__grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .proof__claim strong { font-size: 24px; }
+  .proof__claim b { font-size: 12.5px; letter-spacing: 0.07em; }
+  .proof__claim { gap: 6px; }
   .proof__card { padding: 11px 11px 13px; }
   .proof__date { font-size: 11px; }
+  /* Under each other rather than side by side: at this width the score row
+     needs the full card, and the date beside a 24px figure crowds it. */
+  .proof__meta { flex-direction: column; align-items: flex-start; gap: 2px; }
   /* The four skill cells no longer fit on one row at this width. */
   .proof__card .score-row { flex-wrap: wrap; }
 }

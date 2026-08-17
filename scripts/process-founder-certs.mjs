@@ -79,11 +79,15 @@ for (const { f, out, fmt } of CERTS) {
 
   const redacted = await sharp(base).composite(overlays).toBuffer();
 
-  // Full size for the zoom view, and a thumbnail for the grid. The 2023 forms
-  // are printed on patterned security paper, whose texture is expensive in
-  // webp — 500KB each at full size — and completely invisible at grid size.
+  // Full size for the lightbox, and a card version for the grid.
+  //
+  // The card version is 760px, not 460px, because the hover magnifier reads
+  // the rendered <img>'s own src and enlarges it 2.5x. A card shows the form
+  // at roughly 270px, so the lens needs about 675px of real pixels behind it —
+  // a 460px file would magnify into mush, which is the opposite of what a
+  // magnifier is for.
   await sharp(redacted).webp({ quality: 78 }).toFile(OUT + out + ".webp");
-  await sharp(redacted).resize({ width: 460 }).webp({ quality: 72 })
-    .toFile(OUT + out + "-thumb.webp");
+  await sharp(redacted).resize({ width: 760 }).webp({ quality: 76 })
+    .toFile(OUT + out + "-card.webp");
   console.log(`ok ${out} (${width}x${height}, ${fmt} layout)`);
 }
