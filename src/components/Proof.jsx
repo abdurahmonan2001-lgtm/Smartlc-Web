@@ -48,7 +48,6 @@ export default function Proof() {
   return (
     <section className="section proof" id="proof">
       <div className="container">
-        <p className="method__eyebrow">{p.eyebrow}</p>
         <h2 className="section__title">{p.title}</h2>
         <p className="section__sub">{p.sub}</p>
 

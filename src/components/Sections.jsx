@@ -365,6 +365,19 @@ export function AdvCarousel({ mode = "track" }) {
               </div>
             )}
             {i === 1 && <WeekStrip />}
+            {i === 7 && (
+              <div className="pair" aria-hidden="true">
+                <span className="pair__who">
+                  <b>📖</b>{t.adv.week.teacher}
+                </span>
+                <span className="pair__arm" />
+                <span className="pair__you">🎓</span>
+                <span className="pair__arm" />
+                <span className="pair__who pair__who--mentor">
+                  <b>🧭</b>{t.adv.week.mentor}
+                </span>
+              </div>
+            )}
             <div className="adv-card__body">
               <h3>{card.t}</h3>
               <p>{card.d}</p>
@@ -397,6 +410,7 @@ export function AdvCarousel({ mode = "track" }) {
         if (i === 4) cls.push("adv-card--oxford");
         if (i === 5) cls.push("adv-card--method");
         if (i === 6) cls.push("adv-card--results");
+        if (i === 7) cls.push("adv-card--pair");
         if (link) cls.push("adv-card--link");
         return (
           <article className={cls.join(" ")} key={`${card.t}-${copy}`}>

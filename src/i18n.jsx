@@ -24,7 +24,6 @@ const dict = {
   en: {
     nav: { about: "Why us", courses: "Courses", unlocks: "Opportunities", pricing: "Prices", teachers: "Team", results: "Results", location: "Location", levelCheck: "Level check", contact: "Contact", enroll: "Enroll now", enrollShort: "Enroll" },
     hero: {
-      eyebrow: "Smart Learning Centre · Tashkent",
       role: "Founder & Lead IELTS Teacher",
       headline: [
         { text: "Practice tests don't" },
@@ -40,7 +39,6 @@ const dict = {
       badge: "See how the programme works",
     },
     method: {
-      eyebrow: "The programme",
       title: "A programme, not a question bank",
       lead: "Most IELTS courses are a queue of past papers. You sit one, you mark it, you sit the next, and you hope the pattern sinks in. Sometimes it does — slowly, and only for the questions you have already seen. My programme is built the other way round: understand what the examiner is measuring, and every new question becomes a version of one you can already handle.",
       themTitle: "Most IELTS preparation",
@@ -75,7 +73,6 @@ const dict = {
       signature: "Founder, Smart Learning Centre · IELTS 9.0 Speaking, 8.5 Writing",
     },
     proof: {
-      eyebrow: "The evidence",
       title: "The certificates behind those numbers",
       sub: "Two sittings at Speaking 9.0, two at Writing 8.5. Every Test Report Form is here — open any of them full size. Candidate ID, date of birth and the form number are blurred; nothing else is.",
       speaking: "Speaking",
@@ -92,7 +89,7 @@ const dict = {
     },
     adv: {
       title: "Why Smart LC?",
-      sub: "Seven reasons our students reach their target — and enjoy the road there.",
+      sub: "Eight reasons our students reach their target — and enjoy the road there.",
       app: {
         t: "Student App",
         d: "Our motto, built into an app. A fresh Word, Study Tip, Article, Podcast and Shadowing task every single day. Streaks and coins that make practice addictive, a built-in dictionary, live progress and group rankings — and one-tap mentor sessions.",
@@ -108,6 +105,7 @@ const dict = {
         { t: "Official Oxford Solutions, 3rd edition", d: "The Oxford University Press Solutions series — speaking practice in every lesson, step-by-step exam training, and a proven path used by millions of learners worldwide." },
         { t: "A system that guarantees results", d: "Nothing here is improvised: every level has a fixed syllabus, clear goals and regular progress checks — and you move up only once you truly meet the standard. That structure is exactly why we can promise good results.", steps: ["Precise level placement", "Fixed syllabus at every level", "Regular progress checks", "Level up only when you're ready"] },
         { t: "Real, verifiable results", d: "Every score we advertise is backed by an official IELTS Test Report Form — see them below." },
+        { t: "Two teachers, not one", d: "Every student works with a Main Teacher and a Mentor. The teacher drives the syllabus; the mentor drills what was taught, catches what slipped, and answers the questions nobody asks in front of a class. Nothing falls through the gap between them." },
       ],
     },
     courses: {
@@ -305,7 +303,6 @@ const dict = {
   uz: {
     nav: { about: "Nega biz", courses: "Kurslar", unlocks: "Imkoniyatlar", pricing: "Narxlar", teachers: "Jamoa", results: "Natijalar", location: "Manzil", levelCheck: "Daraja testi", contact: "Aloqa", enroll: "Ro'yxatdan o'tish", enrollShort: "Yozilish" },
     hero: {
-      eyebrow: "Smart Learning Centre · Toshkent",
       role: "Asoschi va bosh IELTS ustozi",
       headline: [
         { text: "Amaliy testlar" },
@@ -321,7 +318,6 @@ const dict = {
       badge: "Dastur qanday ishlashini ko'ring",
     },
     method: {
-      eyebrow: "Dastur",
       title: "Savollar to'plami emas — dastur",
       lead: "Ko'pchilik IELTS kurslari — o'tgan yillardagi testlar navbati. Bittasini ishlaysiz, tekshirasiz, keyingisiga o'tasiz va qonuniyat o'z-o'zidan singishiga umid qilasiz. Ba'zan singadi — sekin va faqat siz allaqachon ko'rgan savollar uchun. Mening dasturim teskari qurilgan: imtihonchi nimani o'lchayotganini tushunsangiz, har qanday yangi savol siz uddalay oladigan savolning bir ko'rinishiga aylanadi.",
       themTitle: "Odatdagi IELTS tayyorgarligi",
@@ -356,7 +352,6 @@ const dict = {
       signature: "Asoschi, Smart Learning Centre · IELTS Speaking 9.0, Writing 8.5",
     },
     proof: {
-      eyebrow: "Dalil",
       title: "Bu raqamlar ortidagi sertifikatlar",
       sub: "Speaking 9.0 — ikki marta, Writing 8.5 — ikki marta. Har bir Test Report Form shu yerda: istalganini bosib, to'liq hajmda ko'ring. Faqat nomzod ID raqami, tug'ilgan sana va forma raqami xiralashtirilgan — boshqa hech narsa emas.",
       speaking: "Speaking",
@@ -373,7 +368,7 @@ const dict = {
     },
     adv: {
       title: "Nega Smart LC?",
-      sub: "Talabalarimiz maqsadiga yetishining yettita sababi — va bu yo'ldan zavq olishlari.",
+      sub: "Talabalarimiz maqsadiga yetishining sakkizta sababi — va bu yo'ldan zavq olishlari.",
       app: {
         t: "Student App",
         d: "Shiorimiz — ilova ko'rinishida. Har kuni yangi So'z, O'quv maslahati, Maqola, Podkast va Shadowing vazifasi. Mashg'ulotni odatga aylantiradigan streak va coinlar, ichki lug'at, jonli progress va guruh reytingi — hamda bir bosishda mentor darsi.",
@@ -389,6 +384,7 @@ const dict = {
         { t: "Rasmiy Oxford Solutions, 3-nashr", d: "Oxford University Press ning Solutions seriyasi — har darsda speaking mashqi, bosqichma-bosqich imtihon tayyorgarligi va dunyo bo'ylab millionlab o'quvchilar sinovidan o'tgan yo'l." },
         { t: "Natijani kafolatlaydigan tizim", d: "Bizda hech narsa tavakkaliga qurilmagan: har bir bosqichning aniq dasturi, aniq maqsadlari va muntazam nazorati bor — keyingi bosqichga esa faqat standartga to'liq erishganingizda o'tasiz. Aynan shu tizim tufayli yaxshi natijani ishonch bilan kafolatlaymiz.", steps: ["Darajani aniq belgilash", "Har bosqichda aniq dastur", "Muntazam progress nazorati", "Keyingi bosqich — faqat tayyor bo'lganda"] },
         { t: "Haqiqiy, tekshirsa bo'ladigan natijalar", d: "Biz e'lon qilgan har bir ball rasmiy IELTS sertifikati bilan tasdiqlangan — quyida ko'ring." },
+        { t: "Bitta emas — ikkita ustoz", d: "Har bir o'quvchi bilan Asosiy ustoz va Mentor ishlaydi. Ustoz dastur bo'yicha olib boradi; mentor o'tilganini mustahkamlaydi, e'tibordan chetda qolgan joyni topadi va guruh oldida so'ralmaydigan savollarga javob beradi. Ular orasidagi bo'shliqdan hech narsa tushib qolmaydi." },
       ],
     },
     courses: {
@@ -586,7 +582,6 @@ const dict = {
   ru: {
     nav: { about: "Почему мы", courses: "Курсы", unlocks: "Возможности", pricing: "Цены", teachers: "Команда", results: "Результаты", location: "Адрес", levelCheck: "Тест уровня", contact: "Контакты", enroll: "Записаться", enrollShort: "Запись" },
     hero: {
-      eyebrow: "Smart Learning Centre · Ташкент",
       role: "Основатель и ведущий преподаватель IELTS",
       headline: [
         { text: "Практика" },
@@ -602,7 +597,6 @@ const dict = {
       badge: "Как устроена программа",
     },
     method: {
-      eyebrow: "Программа",
       title: "Программа, а не банк вопросов",
       lead: "Большинство курсов IELTS — это очередь из прошлых экзаменов. Вы решаете один, проверяете, беретесь за следующий и надеетесь, что закономерность уложится сама. Иногда укладывается — медленно и только для тех заданий, которые вы уже видели. Моя программа построена наоборот: поймите, что измеряет экзаменатор, и любой новый вопрос станет версией того, с которым вы уже справляетесь.",
       themTitle: "Обычная подготовка к IELTS",
@@ -637,7 +631,6 @@ const dict = {
       signature: "Основатель, Smart Learning Centre · IELTS Speaking 9.0, Writing 8.5",
     },
     proof: {
-      eyebrow: "Доказательство",
       title: "Сертификаты за этими цифрами",
       sub: "Speaking 9.0 — дважды, Writing 8.5 — дважды. Каждый Test Report Form здесь: откройте любой в полном размере. Скрыты только идентификатор кандидата, дата рождения и номер формы — больше ничего.",
       speaking: "Speaking",
@@ -654,7 +647,7 @@ const dict = {
     },
     adv: {
       title: "Почему Smart LC?",
-      sub: "Семь причин, по которым наши студенты достигают цели — и получают удовольствие от пути.",
+      sub: "Восемь причин, по которым наши студенты достигают цели — и получают удовольствие от пути.",
       app: {
         t: "Student App",
         d: "Наш девиз, встроенный в приложение. Каждый день — новое Слово, Совет, Статья, Подкаст и задание Shadowing. Стрики и монеты, которые превращают практику в привычку, встроенный словарь, живой прогресс и рейтинг группы — и запись к ментору в одно касание.",
@@ -670,6 +663,7 @@ const dict = {
         { t: "Официальный Oxford Solutions, 3-е издание", d: "Серия Solutions от Oxford University Press — разговорная практика на каждом уроке, пошаговая подготовка к экзаменам и путь, проверенный миллионами учеников по всему миру." },
         { t: "Система, которая гарантирует результат", d: "У нас ничего не строится на импровизации: у каждого уровня — чёткая программа, ясные цели и регулярный контроль прогресса, а на следующий уровень вы переходите, только действительно достигнув стандарта. Именно эта система позволяет нам уверенно гарантировать хороший результат.", steps: ["Точное определение уровня", "Чёткая программа каждого уровня", "Регулярный контроль прогресса", "Переход только по готовности"] },
         { t: "Реальные, проверяемые результаты", d: "Каждый балл подтверждён официальным сертификатом IELTS — смотрите ниже." },
+        { t: "Два преподавателя, а не один", d: "С каждым студентом работают основной преподаватель и ментор. Преподаватель ведёт программу; ментор закрепляет пройденное, находит пропущенное и отвечает на вопросы, которые не задают при всей группе. Между ними ничего не теряется." },
       ],
     },
     courses: {

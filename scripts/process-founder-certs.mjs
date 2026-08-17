@@ -43,14 +43,28 @@ const BOXES = {
   ],
 };
 
+// The one cell on each form that the card is evidence for. A visitor should
+// not have to hunt along a row of six numbers to find the one being claimed.
+// Fractions of page width/height, per layout, per skill.
+const SCORE_CELL = {
+  old: {
+    writing: { x: 0.421, y: 0.548, w: 0.070, h: 0.046 },
+    speaking: { x: 0.575, y: 0.548, w: 0.070, h: 0.046 },
+  },
+  new: {
+    writing: { x: 0.424, y: 0.583, w: 0.072, h: 0.047 },
+    speaking: { x: 0.585, y: 0.583, w: 0.072, h: 0.047 },
+  },
+};
+
 const CERTS = [
-  { f: "8 - 03.06.2023 - 8.5.pdf", out: "speaking-9-jun2023", fmt: "old" },
-  { f: "17 - 03.08.2025 - 8.5.pdf", out: "speaking-9-aug2025", fmt: "new" },
-  { f: "9 - 03.09.2023 - 8.5.pdf", out: "writing-85-sep2023", fmt: "old" },
-  { f: "13 - 03.09.2024 - 8.5.pdf", out: "writing-85-sep2024", fmt: "new" },
+  { f: "8 - 03.06.2023 - 8.5.pdf", out: "speaking-9-jun2023", fmt: "old", skill: "speaking" },
+  { f: "17 - 03.08.2025 - 8.5.pdf", out: "speaking-9-aug2025", fmt: "new", skill: "speaking" },
+  { f: "9 - 03.09.2023 - 8.5.pdf", out: "writing-85-sep2023", fmt: "old", skill: "writing" },
+  { f: "13 - 03.09.2024 - 8.5.pdf", out: "writing-85-sep2024", fmt: "new", skill: "writing" },
 ];
 
-for (const { f, out, fmt } of CERTS) {
+for (const { f, out, fmt, skill } of CERTS) {
   let input;
   if (extname(f).toLowerCase() === ".pdf") {
     const doc = await pdf(join(SRC, f), { scale: 3 });
@@ -77,7 +91,28 @@ for (const { f, out, fmt } of CERTS) {
     overlays.push({ input: await sharp(tiny).resize(w, h, { fit: "fill" }).blur(7).toBuffer(), left, top });
   }
 
-  const redacted = await sharp(base).composite(overlays).toBuffer();
+  // Ring the one score the card is claiming. Drawn as a vector overlay rather
+  // than a CSS box on top of the image, so it survives the lightbox, the
+  // magnifier and any future resize — the mark belongs to the document, not to
+  // one place the document happens to be shown.
+  const cell = SCORE_CELL[fmt][skill];
+  const cx = Math.round((cell.x + cell.w / 2) * width);
+  const cy = Math.round((cell.y + cell.h / 2) * height);
+  // Tight to the cell. Wider and the ring clips the label of the skill beside
+  // it, which makes the form look marked up rather than annotated.
+  const rx = Math.round((cell.w / 2) * width) + 7;
+  const ry = Math.round((cell.h / 2) * height) + 10;
+  const ring = Buffer.from(
+    `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+       <rect x="${cx - rx}" y="${cy - ry}" width="${rx * 2}" height="${ry * 2}" rx="10"
+             fill="rgb(212,168,67)" fill-opacity="0.16"
+             stroke="rgb(196,148,40)" stroke-opacity="0.95" stroke-width="5"/>
+     </svg>`
+  );
+
+  const redacted = await sharp(base)
+    .composite([...overlays, { input: ring, top: 0, left: 0 }])
+    .toBuffer();
 
   // Full size for the lightbox, and a card version for the grid.
   //

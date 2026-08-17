@@ -37,7 +37,6 @@ export default function Method() {
     <section className="section method" id="method">
       <div className="container">
         <header className="method__head">
-          <p className="method__eyebrow">{m.eyebrow}</p>
           <h2 className="section__title">{m.title}</h2>
           <p className="section__sub method__lead">{m.lead}</p>
         </header>

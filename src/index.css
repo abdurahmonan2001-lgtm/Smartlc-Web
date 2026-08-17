@@ -588,7 +588,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    The founder's own Test Report Forms, directly after the argument they back.
    Deliberately plain: a certificate is persuasive because of what it is, and
    decorating it would only make it look less like a document. */
-.proof { padding-top: 54px; }
+/* Tight to the quote above it. Both sections lost their eyebrow line, and
+   without that the stock section padding left a bare band of backdrop between
+   the signed promise and the paper backing it — they belong together. */
+.proof { padding-top: 22px; }
+.method { padding-bottom: 34px; }
 .proof .method__eyebrow, .proof .section__title, .proof .section__sub { text-align: center; }
 /* minmax(0, 1fr), not 1fr. A bare 1fr floors each track at the card's
    min-content width, and the score row inside is wide enough that two columns
@@ -992,6 +996,35 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .adv__arrow:hover { background: var(--green); color: #fff; transform: translateY(-50%) scale(1.07); }
 .adv__arrow--prev { left: 18px; }
 .adv__arrow--next { right: 18px; }
+
+/* ─── Two-teachers card ───
+   Both roles converging on one student, which is the claim stated as a
+   picture: the teacher and the mentor are not alternatives, they arrive
+   together. */
+.adv-card--pair { background: linear-gradient(160deg, #f2faf7, #e6f4ee); }
+.pair {
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  padding: 30px 12px 22px;
+}
+.pair__who {
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--green-dark); white-space: nowrap;
+}
+.pair__who b {
+  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px;
+  background: #fff; border: 1px solid var(--border); font-size: 21px;
+  box-shadow: 0 6px 16px rgba(0, 74, 58, 0.1);
+}
+.pair__who--mentor { color: #9a7a24; }
+.pair__who--mentor b { border-color: rgba(212, 168, 67, 0.5); }
+.pair__arm { flex: 1 1 auto; height: 2px; max-width: 40px; margin-bottom: 22px;
+  background: linear-gradient(90deg, rgba(0, 148, 114, 0.15), rgba(0, 148, 114, 0.5)); }
+.pair__you {
+  display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%;
+  background: var(--green); color: #fff; font-size: 25px; margin-bottom: 22px;
+  box-shadow: 0 10px 24px rgba(0, 148, 114, 0.32);
+}
 
 /* ─── Journey road (courses) ─── */
 .journey__level {
