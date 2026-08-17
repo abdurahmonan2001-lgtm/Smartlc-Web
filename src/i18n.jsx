@@ -105,7 +105,7 @@ const dict = {
         { t: "Official Oxford Solutions, 3rd edition", d: "The Oxford University Press Solutions series — speaking practice in every lesson, step-by-step exam training, and a proven path used by millions of learners worldwide." },
         { t: "A system that guarantees results", d: "Nothing here is improvised: every level has a fixed syllabus, clear goals and regular progress checks — and you move up only once you truly meet the standard. That structure is exactly why we can promise good results.", steps: ["Precise level placement", "Fixed syllabus at every level", "Regular progress checks", "Level up only when you're ready"] },
         { t: "Real, verifiable results", d: "Every score we advertise is backed by an official IELTS Test Report Form — see them below." },
-        { t: "Two teachers, not one", d: "Every student works with a Main Teacher and a Mentor. The teacher drives the syllabus; the mentor drills what was taught, catches what slipped, and answers the questions nobody asks in front of a class. Nothing falls through the gap between them." },
+        { t: "Two teachers, not one", d: "The teacher drives the syllabus. The mentor drills what was taught, catches what slipped, and answers the questions nobody asks in front of a class. Nothing falls through the gap between them." },
       ],
     },
     courses: {
@@ -384,7 +384,7 @@ const dict = {
         { t: "Rasmiy Oxford Solutions, 3-nashr", d: "Oxford University Press ning Solutions seriyasi — har darsda speaking mashqi, bosqichma-bosqich imtihon tayyorgarligi va dunyo bo'ylab millionlab o'quvchilar sinovidan o'tgan yo'l." },
         { t: "Natijani kafolatlaydigan tizim", d: "Bizda hech narsa tavakkaliga qurilmagan: har bir bosqichning aniq dasturi, aniq maqsadlari va muntazam nazorati bor — keyingi bosqichga esa faqat standartga to'liq erishganingizda o'tasiz. Aynan shu tizim tufayli yaxshi natijani ishonch bilan kafolatlaymiz.", steps: ["Darajani aniq belgilash", "Har bosqichda aniq dastur", "Muntazam progress nazorati", "Keyingi bosqich — faqat tayyor bo'lganda"] },
         { t: "Haqiqiy, tekshirsa bo'ladigan natijalar", d: "Biz e'lon qilgan har bir ball rasmiy IELTS sertifikati bilan tasdiqlangan — quyida ko'ring." },
-        { t: "Bitta emas — ikkita ustoz", d: "Har bir o'quvchi bilan Asosiy ustoz va Mentor ishlaydi. Ustoz dastur bo'yicha olib boradi; mentor o'tilganini mustahkamlaydi, e'tibordan chetda qolgan joyni topadi va guruh oldida so'ralmaydigan savollarga javob beradi. Ular orasidagi bo'shliqdan hech narsa tushib qolmaydi." },
+        { t: "Bitta emas — ikkita ustoz", d: "Ustoz dastur bo'yicha olib boradi. Mentor o'tilganini mustahkamlaydi, e'tibordan chetda qolganini topadi va guruh oldida so'ralmaydigan savollarga javob beradi. Ular orasidagi bo'shliqdan hech narsa tushib qolmaydi." },
       ],
     },
     courses: {
@@ -663,7 +663,7 @@ const dict = {
         { t: "Официальный Oxford Solutions, 3-е издание", d: "Серия Solutions от Oxford University Press — разговорная практика на каждом уроке, пошаговая подготовка к экзаменам и путь, проверенный миллионами учеников по всему миру." },
         { t: "Система, которая гарантирует результат", d: "У нас ничего не строится на импровизации: у каждого уровня — чёткая программа, ясные цели и регулярный контроль прогресса, а на следующий уровень вы переходите, только действительно достигнув стандарта. Именно эта система позволяет нам уверенно гарантировать хороший результат.", steps: ["Точное определение уровня", "Чёткая программа каждого уровня", "Регулярный контроль прогресса", "Переход только по готовности"] },
         { t: "Реальные, проверяемые результаты", d: "Каждый балл подтверждён официальным сертификатом IELTS — смотрите ниже." },
-        { t: "Два преподавателя, а не один", d: "С каждым студентом работают основной преподаватель и ментор. Преподаватель ведёт программу; ментор закрепляет пройденное, находит пропущенное и отвечает на вопросы, которые не задают при всей группе. Между ними ничего не теряется." },
+        { t: "Два преподавателя, а не один", d: "Преподаватель ведёт программу. Ментор закрепляет пройденное, находит пропущенное и отвечает на вопросы, которые не задают при всей группе. Между ними ничего не теряется." },
       ],
     },
     courses: {

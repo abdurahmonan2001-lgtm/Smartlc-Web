@@ -862,21 +862,42 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 /* structured-system card: syllabus checklist, checks pulse in sequence */
 .adv-card--method { background: linear-gradient(165deg, #ffffff 40%, #e7f2ee 100%); border: 1.5px solid rgba(0, 116, 90, 0.35); }
-.method-steps { list-style: none; margin: 4px 0 8px; padding: 0 22px; display: grid; gap: 11px; }
+/* A numbered ladder with a rail running through it, so the four stages read as
+   a sequence you climb rather than four unrelated ticks. The rail is what does
+   the work: it is the difference between a list and a process. */
+.method-steps {
+  list-style: none; margin: 14px 0 10px; padding: 0 22px;
+  display: grid; gap: 0; position: relative;
+}
 .method-steps li {
-  display: flex; align-items: center; gap: 10px;
+  position: relative; display: grid; grid-template-columns: 30px 1fr;
+  align-items: center; gap: 12px; padding: 9px 0;
   font-size: 13.5px; font-weight: 700; color: var(--ink); text-align: left;
 }
-.method-steps__check {
-  display: grid; place-items: center; width: 22px; height: 22px; flex-shrink: 0;
-  background: var(--green-dim); color: var(--green-dark);
-  border-radius: 50%; font-size: 12px; font-weight: 900;
-  animation: check-pulse 4.8s ease-in-out infinite;
-  animation-delay: calc(var(--i, 0) * 0.55s);
+/* The rail, drawn between one number and the next rather than behind the whole
+   column, so it never pokes out above the first or below the last. */
+.method-steps li:not(:last-child)::before {
+  content: ""; position: absolute; left: 14px; top: 50%; bottom: -50%;
+  width: 2px; background: linear-gradient(180deg, var(--green), rgba(0, 148, 114, 0.22));
 }
-@keyframes check-pulse {
-  0%, 16%, 100% { transform: none; background: var(--green-dim); color: var(--green-dark); }
-  8% { transform: scale(1.22); background: var(--green-dark); color: #fff; }
+.method-steps__num {
+  position: relative; z-index: 1;
+  display: grid; place-items: center; width: 30px; height: 30px;
+  border-radius: 50%; background: #fff; border: 2px solid var(--green);
+  color: var(--green-dark); font-size: 13px; font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+.method-steps__label { line-height: 1.35; }
+/* Each rung lights in turn — the sequence performing itself. */
+@media (prefers-reduced-motion: no-preference) {
+  .method-steps__num {
+    animation: rung 5.6s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.6s);
+  }
+  @keyframes rung {
+    0%, 14%, 100% { background: #fff; color: var(--green-dark); transform: none; }
+    7% { background: var(--green); color: #fff; transform: scale(1.14); }
+  }
 }
 
 .adv-card--results { background: linear-gradient(180deg, #ffffff 45%, #e2f5ee 100%); border: 1.5px solid rgba(0, 148, 114, 0.45); }
@@ -1004,7 +1025,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .adv-card--pair { background: linear-gradient(160deg, #f2faf7, #e6f4ee); }
 .pair {
   display: flex; align-items: center; justify-content: center; gap: 0;
-  padding: 30px 12px 22px;
+  padding: 44px 12px 30px;
 }
 .pair__who {
   display: flex; flex-direction: column; align-items: center; gap: 7px;

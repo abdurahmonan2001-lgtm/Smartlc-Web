@@ -86,7 +86,10 @@ export default function App() {
             <Advantages />
             <ContactBand kind="telegram" />
             <Courses />
-            <ContactBand kind="phone" />
+            {/* Straight from the journey to the people who take you along it —
+                no contact band between them. The question the road leaves a
+                visitor with is "who teaches this?", and the answer should be
+                the next thing they see. */}
             <Teachers />
             <ContactBand kind="instagram" />
             {/* Act 3 — what it gives you */}

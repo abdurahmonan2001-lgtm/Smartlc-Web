@@ -191,16 +191,22 @@ const CARD_LINKS = {
 };
 
 /** Checklist visual for the structured-system card: checks pulse in turn. */
+/** The four stages as a numbered ladder rather than a tick list.
+ *
+ *  This card was the most prose-heavy in the carousel — 277 characters of copy
+ *  against a visual holding 22% of the height. The claim it makes is that the
+ *  programme is a SEQUENCE, so drawing it as one lets the picture carry the
+ *  argument and the paragraph stop having to. */
 function MethodSteps({ steps }) {
   return (
-    <ul className="method-steps" aria-hidden="true">
+    <ol className="method-steps" aria-hidden="true">
       {steps.map((s, i) => (
         <li style={{ "--i": i }} key={s}>
-          <span className="method-steps__check">✓</span>
-          {s}
+          <span className="method-steps__num">{i + 1}</span>
+          <span className="method-steps__label">{s}</span>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 }
 
