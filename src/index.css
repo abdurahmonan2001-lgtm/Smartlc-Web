@@ -202,9 +202,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   position: relative; display: flex; flex-direction: column; align-items: center;
   text-align: center;
 }
-.hero__eyebrow {
-  color: var(--green-bright); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; font-size: 12.5px; margin-bottom: 8px;
-}
 /* Capped at 66px, not 84px. The container stops growing at 1180px, so the
    copy column tops out around 623px however wide the window gets — and 66px
    is the largest size at which the longest line in any of the three
@@ -220,43 +217,63 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* ─── Hero stage ───
    The portrait with a band score either side of it, and nothing else. */
 .hero__stage {
-  position: relative; display: flex; justify-content: center; align-items: center;
-  width: min(1040px, 100%); margin: 14px auto 0;
+  position: relative;
+  /* Top-aligned, so the two halves of the name start at the same height. With
+     the columns centred they floated to wherever their own content put them,
+     92px apart, and the name stopped reading as one line. */
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: start;
+  gap: 0 30px; width: min(1180px, 100%); margin: 0 auto;
 }
+/* Each side holds a half of the name and one block of content. Pushed away
+   from the figure's edge so nothing crowds him. */
+.hero__side { display: flex; flex-direction: column; gap: 22px; min-width: 0; padding-top: 30px; }
+.hero__side--left { align-items: flex-start; text-align: left; }
+.hero__side--right { align-items: flex-end; text-align: right; }
+
+/* Half a masthead. Tracked this far apart the words stop behaving like text
+   and start behaving like a title, which is what lets the photograph sit
+   between them without the line looking broken by accident. */
+.hero__namepart {
+  font-family: var(--font-display); font-weight: 600; color: #fff;
+  text-transform: uppercase; font-size: clamp(15px, 1.9vw, 25px);
+  letter-spacing: 0.3em; text-indent: 0.3em; line-height: 1.15;
+}
+.hero__side--right .hero__namepart { text-indent: 0; margin-right: -0.3em; }
+
+/* The statement, at tagline size rather than headline size: it has a column
+   to live in now, not the full width of the page. */
+.hero__statement {
+  font-family: var(--font-display); font-weight: 700; color: #fff;
+  font-size: clamp(21px, 2.5vw, 34px); line-height: 1.18; letter-spacing: -0.015em;
+}
+.hero__statement em { font-style: normal; color: var(--green-bright); }
+
+.hero__scores { display: flex; flex-direction: column; gap: 26px; align-items: flex-end; }
 
 /* ─── Wordmark ───
    Set in the sans, not the display serif: at this size a serif's thin strokes
-   break up, and a heavy grotesque is what reads as a mark rather than as a
-   very large sentence. It is allowed to run wider than the container and is
-   clipped by the hero's own overflow, so it reads as a fragment of something
-   larger than the screen. */
+   break up, and a heavy grotesque reads as a mark rather than as a very large
+   sentence. Drawn as an outline with a faint gradient fill — the ghost
+   treatment — so it gives the dark field structure without competing with the
+   name, the statement or the figure standing in front of it. */
 .hero__wordmark {
-  position: absolute; left: 50%; top: 7%; transform: translateX(-50%);
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   z-index: 0; pointer-events: none; user-select: none; white-space: nowrap;
   font-family: var(--font); font-weight: 900;
-  /* The floor is high on purpose. Scaled purely by viewport it came out only
-     28px wider than the figure on a phone, leaving a sliver of letter either
-     side that reads as a mistake. At 84px it runs off both edges and is
-     clipped by the hero, which is the intended effect: a fragment of
-     something larger than the screen. */
-  font-size: clamp(84px, 13.5vw, 178px);
-  letter-spacing: -0.045em; line-height: 0.9; color: #fff;
+  font-size: clamp(110px, 17vw, 300px);
+  letter-spacing: -0.045em; line-height: 0.9;
+  color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, 0.085);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 74%);
+  -webkit-background-clip: text; background-clip: text;
 }
-/* Level with the shoulders. At the vertical midpoint of a standing figure they
-   land around the forearms, which reads as an accident; at shoulder height
-   they sit in the negative space either side of the head and read as placed. */
 .hero__score {
-  position: absolute; top: 42%; transform: translateY(-50%); z-index: 3;
-  display: flex; flex-direction: column; align-items: center;
+  display: flex; flex-direction: column; align-items: flex-end;
   animation: score-in 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) 0.5s both;
 }
 /* Anchored to the centre line, not to the edges of the stage, so each score
    keeps the same distance from the figure however wide the stage gets. The
    offset is the gap from centre to the score's INNER edge: the figure is
    470px, so 300px leaves it about 65px clear of the shoulder. */
-.hero__score { --score-offset: 300px; }
-.hero__score--left { right: calc(50% + var(--score-offset)); left: auto; }
-.hero__score--right { left: calc(50% + var(--score-offset)); right: auto; }
 .hero__score strong {
   font-family: var(--font-display);
   font-size: clamp(46px, 5.2vw, 72px); font-weight: 700; color: var(--gold);
@@ -278,7 +295,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   font-style: normal; font-size: 11.5px; color: #7fa6a0; font-weight: 600;
   letter-spacing: 0.04em; margin-top: 5px;
 }
-@keyframes score-in { from { opacity: 0; transform: translateY(-50%) scale(0.86); } }
+@keyframes score-in { from { opacity: 0; transform: translateY(10px) scale(0.94); } }
 @media (prefers-reduced-motion: reduce) { .hero__score { animation: none; } }
 
 /* ─── Hero portrait ───
@@ -289,29 +306,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    with a definite width. Putting it on the inner wrapper instead left the
    chain content-derived all the way up, so the percentage resolved against
    the image's intrinsic size and the figure silently rendered at 300px. */
+/* The width must be DEFINITE. The centre grid track is `auto`, so a
+   percentage here resolves against a column that is itself sized by this
+   element — circular, and the browser fell back to the image's intrinsic size,
+   rendering him at 300px instead of 470px. Viewport units have no such
+   ambiguity. */
 .hero__portrait {
   position: relative; z-index: 2;      /* in front of the wordmark behind him */
-  flex: none; width: min(470px, 100%);
+  width: clamp(300px, 33vw, 470px);
   display: flex; justify-content: center; align-items: center;
   perspective: 1000px;
 }
 
-/* Masthead treatment: capitals, wide tracking, moderate weight. Tracked this
-   far apart the name stops behaving like a line of text and starts behaving
-   like a title, which is what allows the space around the figure to stay
-   empty without the composition looking unfinished. The last letter's
-   trailing space is removed so the whole line stays optically centred. */
-.hero__name {
-  margin: 6px 0 -18px; text-transform: uppercase;
-  font-family: var(--font-display);
-  font-size: clamp(16px, 2.2vw, 29px); font-weight: 600;
-  letter-spacing: 0.34em; text-indent: 0.34em;
-  line-height: 1.2; color: #fff;
-}
-.hero__role {
-  margin-top: 14px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--green-bright);
-}
 /* Shrink-wraps the photograph, so the seal and the glow are positioned
    against the image rather than against the full column width. */
 /* The width lives here, not on the image. An inline-block wrapper sized by
@@ -343,17 +349,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* ─── Hero credentials ───
    Three facts, stated as figures. These are the reason to keep reading. */
 
-.hero__dot {
-  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--green-bright); margin-right: 9px; vertical-align: middle;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .hero__dot { animation: dot-pulse 2.4s ease-in-out infinite; }
-  @keyframes dot-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 179, 137, 0.55); }
-    70% { box-shadow: 0 0 0 8px rgba(0, 179, 137, 0); }
-  }
-}
 
 /* A faint grid behind the hero — structure, not decoration; it gives the
    dark field a sense of depth the flat gradient alone does not have. */
@@ -425,26 +420,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   box-shadow: 0 34px 90px rgba(0, 30, 28, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
+
 /* ─── Intro ───
-   The statement, the paragraph and the buttons, at the head of the white
-   panel. They sit here rather than in the hero so the photograph runs down to
-   the panel's edge and the two meet with no dark strip between them — and the
-   longest text on the page ends up on a light background, where it is easiest
-   to read. */
-.intro { padding: 62px 0 8px; text-align: center; }
-.intro__motto {
-  margin: 0 auto; max-width: 900px;
-  font-family: var(--font-display); font-weight: 700; color: var(--ink);
-  font-size: clamp(34px, 5.4vw, 60px); line-height: 1.08; letter-spacing: -0.02em;
-}
-.intro__motto em { font-style: normal; color: var(--green-dark); }
-.intro__sub {
-  margin: 22px auto 0; max-width: 680px;
-  color: var(--ink-2); font-size: 17px; line-height: 1.68;
-}
-.intro__ctas {
-  margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
-}
+   The two buttons, at the head of the white panel. They sit here rather than
+   in the hero so the photograph runs to the panel's edge with no gap. */
+.intro { padding: 40px 0 4px; }
+.intro__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* ─── Method ───
    The argument for the programme. Two columns that read ACROSS: each line of
@@ -1984,39 +1965,44 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     border-radius: 22px;
   }
 }
-@media (max-width: 780px) {
-  /* The scores stay ON the shoulders rather than dropping into a row below.
-     A phone has no room for them to sit clear of the figure, so instead they
-     tuck into the frame and overlap it: the numbers land against the dark
-     sweater and the backdrop, both of which gold reads cleanly on. */
-  .hero__stage { margin-top: 16px; }
-  .hero__portrait { width: min(300px, 62vw); }
-  /* Half the figure is 150px, so a 116px offset tucks each score just onto the
-     shoulder rather than clear of it — the only way to keep them flanking him
-     on a screen this narrow. */
-  .hero__score { top: 40%; --score-offset: 116px; }
-  .hero__score strong { font-size: clamp(34px, 10vw, 46px); }
-  .hero__score i { width: 22px; margin: 9px 0 7px; }
+@media (max-width: 860px) {
+  /* One column. A name split either side of a photograph needs a photograph
+     with room either side of it, which a phone does not have — so the halves
+     are dropped and the whole name shows instead, centred above everything.
+     The figure is ordered LAST so it still ends flush with the white panel. */
+  .hero__stage { grid-template-columns: 1fr; gap: 20px; margin-top: 8px; }
+  .hero__namepart { display: none; }
+  .hero__fullname {
+    position: static; width: auto; height: auto; clip: auto; clip-path: none;
+    white-space: normal; overflow: visible;
+    order: -3; text-align: center; color: #fff; text-transform: uppercase;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(15px, 4.4vw, 22px);
+    letter-spacing: 0.28em; text-indent: 0.28em; line-height: 1.3;
+  }
+  .hero__side { align-items: center; text-align: center; gap: 18px; }
+  .hero__side--left { order: -2; }
+  .hero__side--right { order: -1; }
+  .hero__portrait { order: 1; width: min(320px, 74vw); }
+  .hero__statement { font-size: clamp(23px, 6.4vw, 32px); }
+
+  /* Side by side rather than stacked: two numbers in a column push the figure
+     an entire screen down the page. */
+  .hero__scores { flex-direction: row; gap: 34px; align-items: flex-start; justify-content: center; }
+  .hero__score { align-items: center; }
+  .hero__score strong { font-size: clamp(36px, 11vw, 52px); }
+  .hero__score i { width: 24px; margin: 10px 0 8px; }
   .hero__score span { font-size: 10.5px; letter-spacing: 0.16em; }
   .hero__score em { font-size: 10.5px; margin-top: 3px; }
 }
 @media (max-width: 400px) {
-  /* At the very narrowest the labels are what has to give, not the numbers:
-     "9.0" beside a face still says everything, "SPEAKING" set at 8px does not. */
-  .hero__portrait { width: min(260px, 58vw); }
-  .hero__score { --score-offset: 96px; }
+  .hero__portrait { width: min(270px, 72vw); }
+  .hero__scores { gap: 24px; }
   .hero__score span { font-size: 9.5px; letter-spacing: 0.12em; }
   .hero__score em { display: none; }
 }
 @media (max-width: 640px) {
-  /* The headline is written as three deliberate lines. At the desktop size
-     none of them fit a phone — every language spilled and re-wrapped into a
-     ragged five or six, losing the rhythm the copy depends on. This scale
-     keeps all three lines intact down to about 360px; below that the longest
-     Russian line takes a second row, which `balance` makes look intentional. */
-  .intro__motto { font-size: clamp(27px, 8.4vw, 40px); line-height: 1.1; }
   .hero__line { text-wrap: balance; }
-  .intro__sub { font-size: 15.5px; margin-top: 18px; }
 
   /* Full-width buttons: easier to hit with a thumb, and two ragged
      part-width buttons stacked on a phone look like a mistake. */

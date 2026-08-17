@@ -2,14 +2,17 @@ import { useEffect, useRef } from "react";
 import { useLang } from "../i18n.jsx";
 import { CONTACT, FOUNDER } from "../data/site.js";
 
-// A founder-led hero. The certificates that used to sit here now live on the
-// results wall further down: a visitor arriving from an advert needs to know
-// WHO is going to teach them before they are shown proof of what past students
-// scored, and a face does that in a way three certificate thumbnails cannot.
+// A founder-led hero, composed as three columns over one photograph.
 //
-// The portrait tracks the pointer very slightly (a few degrees of tilt). It is
-// pointer-only and disabled under prefers-reduced-motion, so it never affects
-// touch users or anyone who has asked for stillness.
+//   left   — given name, then the statement the whole site argues
+//   centre — the figure, cut out, standing in front of the wordmark
+//   right  — family name, then both band scores
+//
+// The name is split across the stage rather than set above it, so the
+// photograph interrupts it and the two read as one line broken by him instead
+// of a caption placed near him. Nothing sits above or below the stage: the
+// hero begins at the nav and ends at his feet, where the white panel takes
+// over.
 function useTilt(enabled) {
   const ref = useRef(null);
   useEffect(() => {
@@ -52,41 +55,35 @@ export default function Hero() {
   const tiltRef = useTilt(true);
   const h = t.hero;
 
+  // Split on the last space, so a middle name would stay with the given name
+  // rather than being orphaned on the wrong side of the photograph.
+  const cut = FOUNDER.name.lastIndexOf(" ");
+  const given = FOUNDER.name.slice(0, cut);
+  const family = FOUNDER.name.slice(cut + 1);
+
   return (
     <section className="hero" id="top">
       <div className="hero__glow" aria-hidden="true" />
       <div className="hero__grid" aria-hidden="true" />
       <div className="container hero__inner">
-        <p className="hero__eyebrow">
-          <span className="hero__dot" aria-hidden="true" />
-          {h.eyebrow}
-        </p>
-
-        {/* The name is set above the photograph in widely tracked capitals —
-            the treatment a masthead uses. At this tracking it reads as a
-            title rather than a caption, which is what lets the space around
-            the figure stay empty without looking unfinished. */}
-        <p className="hero__name">{FOUNDER.name}</p>
-        {/* Role sits ABOVE the stage, not below it. Anything after the stage
-            puts dark space between the foot of the photograph and the top of
-            the white panel, and the join stops being seamless. */}
-        <p className="hero__role">{h.role}</p>
-
-        {/* The figure is the centrepiece, and the only things allowed to share
-            the space with it are the two band scores. Everything that explains
-            the offer waits until below. */}
         <div className="hero__stage">
-          {/* The wordmark sits BEHIND the figure and is deliberately wider
-              than him, so he stands in front of it and hides its middle. That
-              occlusion is the whole trick: it is what tells the eye the two
-              are in the same space rather than pasted into the same box. */}
+          {/* Behind the figure and wider than him, so he hides its middle.
+              That occlusion is what tells the eye they share a space. */}
           <span className="hero__wordmark" aria-hidden="true">SMART LC</span>
 
-          <div className="hero__score hero__score--left">
-            <strong>{FOUNDER.speaking}</strong>
-            <i aria-hidden="true" />
-            <span>Speaking</span>
-            <em>{h.twice}</em>
+          {/* The name whole, for screen readers and search engines, which
+              should not have to reassemble it from two placed halves. */}
+          <h2 className="hero__fullname visually-hidden">{FOUNDER.name}</h2>
+
+          <div className="hero__side hero__side--left">
+            <p className="hero__namepart" aria-hidden="true">{given}</p>
+            <h1 className="hero__statement">
+              {h.headline.map((line, i) => (
+                <span className="hero__line" key={i} style={{ animationDelay: `${0.12 + i * 0.16}s` }}>
+                  {line.accent ? <em>{line.text}</em> : line.text}
+                </span>
+              ))}
+            </h1>
           </div>
 
           <div className="hero__portrait" ref={tiltRef}>
@@ -105,14 +102,24 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hero__score hero__score--right">
-            <strong>{FOUNDER.writing}</strong>
-            <i aria-hidden="true" />
-            <span>Writing</span>
-            <em>{h.twice}</em>
+          <div className="hero__side hero__side--right">
+            <p className="hero__namepart" aria-hidden="true">{family}</p>
+            <div className="hero__scores">
+              <div className="hero__score">
+                <strong>{FOUNDER.speaking}</strong>
+                <i aria-hidden="true" />
+                <span>Speaking</span>
+                <em>{h.twice}</em>
+              </div>
+              <div className="hero__score">
+                <strong>{FOUNDER.writing}</strong>
+                <i aria-hidden="true" />
+                <span>Writing</span>
+                <em>{h.twice}</em>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
 
       <p className="visually-hidden">{CONTACT.phone}</p>
@@ -120,36 +127,22 @@ export default function Hero() {
   );
 }
 
-/** The statement, the paragraph and the buttons.
+/** The buttons, at the top of the white panel.
  *
- *  These live at the top of the white panel rather than in the hero, so the
- *  photograph runs all the way down to the panel's edge and the two meet with
- *  no dark gap between them. It also means the longest text on the page is set
- *  on a light background, which is where it is easiest to read. */
+ *  They live here rather than in the hero so the photograph runs all the way
+ *  down to the panel's edge and the two meet with no dark gap between them. */
 export function HeroIntro() {
   const { t } = useLang();
   const h = t.hero;
   return (
     <section className="intro" id="intro">
-      <div className="container">
-        <h1 className="intro__motto">
-          {h.headline.map((line, i) => (
-            <span className="hero__line" key={i} style={{ animationDelay: `${0.12 + i * 0.16}s` }}>
-              {line.accent ? <em>{line.text}</em> : line.text}
-            </span>
-          ))}
-        </h1>
-
-        <p className="intro__sub">{h.sub}</p>
-
-        <div className="intro__ctas">
-          <a className="btn btn--primary btn--lg" href="/register">
-            {t.nav.enroll}
-          </a>
-          <a className="btn btn--ghost-green btn--lg" href="/placement">
-            {h.cta2}
-          </a>
-        </div>
+      <div className="container intro__ctas">
+        <a className="btn btn--primary btn--lg" href="/register">
+          {t.nav.enroll}
+        </a>
+        <a className="btn btn--ghost-green btn--lg" href="/placement">
+          {h.cta2}
+        </a>
       </div>
     </section>
   );
