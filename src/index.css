@@ -242,11 +242,21 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .hero__side--right .hero__namepart { text-indent: 0; margin-right: -0.3em; }
 
-/* The statement, at tagline size rather than headline size: it has a column
-   to live in now, not the full width of the page. */
+/* The statement, at tagline size rather than headline size: it has a column to
+   live in now, not the full width of the page. The ceiling is 29px because the
+   longest line in any of the three languages measures 291px at 34px against a
+   269px column — at 34 it re-wrapped "Practice tests don't" into two ragged
+   rows and the three deliberate lines fell apart. */
 .hero__statement {
+  position: relative; padding-top: 22px;
   font-family: var(--font-display); font-weight: 700; color: #fff;
-  font-size: clamp(21px, 2.5vw, 34px); line-height: 1.18; letter-spacing: -0.015em;
+  font-size: clamp(19px, 2vw, 29px); line-height: 1.2; letter-spacing: -0.015em;
+}
+/* The same gold rule the scores carry, so both columns share one grammar
+   rather than looking like two unrelated blocks either side of a photograph. */
+.hero__statement::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 42px; height: 2px;
+  background: linear-gradient(90deg, rgba(212, 168, 67, 0.85), rgba(212, 168, 67, 0.1));
 }
 .hero__statement em { font-style: normal; color: var(--green-bright); }
 
@@ -1986,6 +1996,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     letter-spacing: 0.28em; text-indent: 0.28em; line-height: 1.3;
   }
   .hero__side { align-items: center; text-align: center; gap: 18px; }
+  /* Centred with the copy it sits above. Anchored left, as it is on desktop,
+     it hangs off the side of a centred block and reads as a stray mark. */
+  .hero__statement::before { left: 50%; transform: translateX(-50%); }
   .hero__side--left { order: -2; }
   .hero__side--right { order: -1; }
   .hero__portrait { order: 1; width: min(320px, 74vw); }
@@ -2006,7 +2019,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 @media (max-width: 400px) {
   .hero__portrait { width: min(270px, 72vw); }
   .hero__scores { gap: 26px; }
-  .hero__score span { font-size: 13px; letter-spacing: 0.08em; }
+  /* Held at roughly a third of the number, the same ratio the label keeps to
+     it on desktop, so the pairing looks the same on both. */
+  .hero__score span { font-size: 15px; letter-spacing: 0.07em; }
   .hero__score em { display: none; }
 }
 @media (max-width: 640px) {
