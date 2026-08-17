@@ -235,9 +235,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    moving the block at all. The rule moves to that edge with the text. */
 .hero__side--left { align-items: flex-end; text-align: right; }
 .hero__side--left .hero__statement::before { left: auto; right: 0; }
-/* And pulled a little over his box. At this height he is only his head wide,
-   so the type sits in transparent space well clear of him. */
-.hero__side--left { margin-right: -22px; }
+/* Pulled well over his bounding box, because the box is not where he is.
+   Sampling the cut-out's alpha channel across the rows the statement occupies
+   (26–45% down) gives 29–45% of the frame's width as empty transparent margin
+   on that side — roughly 140–210px of nothing at a 470px figure. Stopping at
+   the box edge therefore left the type about 150px clear of his actual
+   outline, which is what read as a gap.
+   Sampled every row from 10% to 34%: the tightest is 39% of the frame, or
+   183px at a 470px figure. Pulling 164px over the box therefore still leaves
+   roughly 55px between the type and his outline, and the vw term keeps that
+   clearance at 50–90px as the figure scales down. */
+.hero__side--left { margin-right: max(-168px, -11.4vw); }
 .hero__side--right { align-items: flex-start; text-align: left; }
 
 /* Half a masthead. Tracked this far apart the words stop behaving like text
@@ -2047,7 +2055,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     position: absolute; top: 0; z-index: 3; width: 36%;
     padding-top: 0; gap: 14px;
   }
-  .hero__side--left { left: 0; align-items: flex-start; text-align: left; }
+  /* The desktop pull-over is meaningless here — the sides are positioned
+     absolutely against the stage, not laid out beside him. */
+  .hero__side--left { left: 0; align-items: flex-start; text-align: left; margin-right: 0; }
   .hero__side--right { right: 0; align-items: flex-end; text-align: right; }
 
   /* The split halves come back — there are sides to put them on again. */
