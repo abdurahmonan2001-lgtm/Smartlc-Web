@@ -130,22 +130,25 @@ export default function Hero() {
   );
 }
 
-/** The buttons, at the top of the white panel.
+/** The call to action, at the top of the white panel.
  *
- *  They live here rather than in the hero so the photograph runs all the way
- *  down to the panel's edge and the two meet with no dark gap between them. */
+ *  It lives here rather than in the hero so the photograph runs all the way
+ *  down to the panel's edge and the two meet with no dark gap between them.
+ *
+ *  One button, not two. A second outlined button beside the primary one splits
+ *  the decision and dilutes it; the offer that actually moves people — the
+ *  first lesson costing nothing — carries more weight as a sentence than as a
+ *  competing control. The level check is still reachable from the nav. */
 export function HeroIntro() {
   const { t } = useLang();
   const h = t.hero;
   return (
     <section className="intro" id="intro">
-      <div className="container intro__ctas">
+      <div className="container intro__cta">
         <a className="btn btn--primary btn--lg" href="/register">
           {t.nav.enroll}
         </a>
-        <a className="btn btn--ghost-green btn--lg" href="/placement">
-          {h.cta2}
-        </a>
+        <p className="intro__offer">{h.trial}</p>
       </div>
     </section>
   );

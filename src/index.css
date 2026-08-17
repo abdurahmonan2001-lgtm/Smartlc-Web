@@ -229,7 +229,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    the edges the two columns were a screen apart and the composition stopped
    being about him; hugging the photograph, they frame him. */
 .hero__side { display: flex; flex-direction: column; gap: 20px; min-width: 0; padding-top: 30px; }
-.hero__side--left { align-items: flex-end; text-align: left; }
+/* Text-align RIGHT on the left column, so every line ends on the edge facing
+   the photograph. Left-aligned, the block hugged him but its short lines left
+   a ragged gap that read as distance; ranged right, the gap closes without
+   moving the block at all. The rule moves to that edge with the text. */
+.hero__side--left { align-items: flex-end; text-align: right; }
+.hero__side--left .hero__statement::before { left: auto; right: 0; }
+/* And pulled a little over his box. At this height he is only his head wide,
+   so the type sits in transparent space well clear of him. */
+.hero__side--left { margin-right: -22px; }
 .hero__side--right { align-items: flex-start; text-align: left; }
 
 /* Half a masthead. Tracked this far apart the words stop behaving like text
@@ -268,22 +276,24 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
    sentence. Drawn as an outline with a faint gradient fill — the ghost
    treatment — so it gives the dark field structure without competing with the
    name, the statement or the figure standing in front of it. */
-.hero__wordmark {
-  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-  z-index: 0; pointer-events: none; user-select: none; white-space: nowrap;
+/* The two words are placed on opposite corners rather than stacked, so they
+   read as a field the figure stands in the middle of instead of a block behind
+   his head. Each carries its own outline and gradient fill: background-clip on
+   the container would not inherit down to positioned children. */
+.hero__wordmark { position: absolute; inset: 0; z-index: 0; pointer-events: none; user-select: none; }
+.hero__wordmark span {
+  position: absolute; white-space: nowrap;
   font-family: var(--font); font-weight: 900;
-  display: flex; flex-direction: column; align-items: center;
-  font-size: clamp(78px, 12.5vw, 210px);
+  font-size: clamp(78px, 12.5vw, 200px);
   letter-spacing: -0.045em; line-height: 0.88;
   color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, 0.085);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 74%);
   -webkit-background-clip: text; background-clip: text;
 }
-/* Tracked out so the shorter word measures the same as the line above it and
-   the two stack as a lockup rather than as a wide word with a small one
-   underneath. The indent cancels the trailing space that tracking adds after
-   the final S, which would otherwise push the line off centre. */
-.hero__wordmark-sub { letter-spacing: 0.331em; text-indent: 0.331em; }
+/* Top left, bleeding off the edge, and bottom right doing the same — a
+   diagonal, so neither word sits square behind him. */
+.hero__wordmark span:first-child { top: 1%; left: -5%; }
+.hero__wordmark-sub { bottom: 2%; right: -5%; letter-spacing: 0.06em; }
 .hero__score {
   display: flex; flex-direction: column; align-items: flex-start;
   animation: score-in 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) 0.5s both;
@@ -445,8 +455,19 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* ─── Intro ───
    The two buttons, at the head of the white panel. They sit here rather than
    in the hero so the photograph runs to the panel's edge with no gap. */
-.intro { padding: 40px 0 4px; }
-.intro__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+/* The top padding clears the 54px the panel overlaps the photograph by. Less
+   than that and the button sits in the seam, half on the photograph and half
+   on the panel, with the figure showing through behind it. */
+.intro { padding: 82px 0 6px; }
+.intro__cta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 22px; flex-wrap: wrap;
+}
+.intro__cta .btn { flex: none; }
+.intro__offer {
+  max-width: 380px; text-align: left;
+  font-size: 15px; line-height: 1.55; color: var(--ink-2);
+}
 
 /* ─── Method ───
    The argument for the programme. Two columns that read ACROSS: each line of
@@ -2060,8 +2081,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
   /* Full-width buttons: easier to hit with a thumb, and two ragged
      part-width buttons stacked on a phone look like a mistake. */
-  .intro__ctas { flex-direction: column; align-items: stretch; gap: 10px; }
-  .intro__ctas .btn { width: 100%; text-align: center; }
+  /* Button above, offer beneath and centred — side by side there is not enough
+     width for either to read properly. */
+  .intro__cta { flex-direction: column; align-items: stretch; gap: 14px; }
+  .intro__cta .btn { width: 100%; text-align: center; }
+  .intro__offer { text-align: center; max-width: none; font-size: 14.5px; }
 
   /* One fact per row, each reading as a line rather than a stray chip. */
   .method__pillars { grid-template-columns: 1fr; }
