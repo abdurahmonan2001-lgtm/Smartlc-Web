@@ -56,10 +56,6 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="hero__glow" aria-hidden="true" />
       <div className="hero__grid" aria-hidden="true" />
-      {/* An oversized ghost wordmark behind everything. It is what stops a
-          dark hero reading as an empty rectangle with a photo pasted on:
-          the eye registers structure at a size the headline cannot reach. */}
-      <span className="hero__watermark" aria-hidden="true">IELTS</span>
       <div className="container hero__inner">
         <p className="hero__eyebrow">
           <span className="hero__dot" aria-hidden="true" />
