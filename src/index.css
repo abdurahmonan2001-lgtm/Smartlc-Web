@@ -1392,18 +1392,26 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .english .stats__label { color: var(--ink-2); }
 
 /* success stories — rich feature cards */
-.stories { display: grid; gap: 26px; margin-top: 30px; }
+/* minmax(0, …) rather than a bare 1fr on every flexible track here: a bare
+   1fr floors at min-content, so any wide child (the photo strip) pushes the
+   card past the panel instead of scrolling inside it. */
+.stories { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; margin-top: 30px; }
 .story {
-  display: grid; grid-template-columns: 300px 1fr; gap: 34px; align-items: start;
+  display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 34px; align-items: start;
   background: var(--card); border: 1px solid var(--border); border-radius: 22px;
   padding: 30px; box-shadow: var(--shadow);
 }
-.story--flip { grid-template-columns: 1fr 300px; }
+.story--flip { grid-template-columns: minmax(0, 1fr) 300px; }
 .story--flip .story__media { order: 2; }
 /* text-only story: no photo column reserved at all */
-.story--nophoto, .story--nophoto.story--flip { grid-template-columns: 1fr; }
+.story--nophoto, .story--nophoto.story--flip { grid-template-columns: minmax(0, 1fr); }
 .story__media { border-radius: 16px; overflow: hidden; background: var(--bg-alt); }
 .story__media img { display: block; width: 100%; height: auto; }
+/* A grid item defaults to min-width:auto, i.e. it refuses to shrink below its
+   own min-content. The photo strip's min-content is all nine thumbs in a row,
+   which dragged the whole card wider than the panel. min-width:0 lets the
+   column win, and the strip scrolls inside it as intended. */
+.story__body { min-width: 0; }
 .story__chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .story__body h3 { font-size: 22px; font-weight: 900; letter-spacing: -0.01em; }
 .story__role { color: var(--green-dark); font-weight: 800; font-size: 13.5px; margin: 4px 0 14px; }
@@ -1413,6 +1421,42 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   background: var(--green-dim); border-radius: 0 14px 14px 0;
   color: var(--ink); font-size: 14.5px; line-height: 1.6; font-style: italic;
 }
+/* Photo strip for stories that come with a set of pictures. Scrolls sideways
+   rather than wrapping, so nine photos never push the story text off screen. */
+.story-gallery {
+  display: flex; gap: 8px; margin-top: 18px; padding-bottom: 4px;
+  overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x proximity;
+}
+.story-gallery__thumb {
+  flex: 0 0 auto; width: 74px; height: 74px; padding: 0; border-radius: 12px;
+  overflow: hidden; scroll-snap-align: start; cursor: zoom-in;
+  border: 1.5px solid transparent; transition: border-color 0.2s, transform 0.2s;
+}
+.story-gallery__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.story-gallery__thumb:hover { border-color: var(--green); transform: translateY(-2px); }
+.story-gallery__thumb:focus-visible { outline: 2px solid var(--green-bright); outline-offset: 2px; }
+
+/* Photos are portrait, so cap on height and let width follow — capping width
+   instead would run a 3:4 photo off the bottom of the viewport. */
+.story-lightbox__img {
+  display: block; max-height: 78vh; max-width: 100%; width: auto; margin: 0 auto;
+  border-radius: 12px; box-shadow: var(--shadow-lg); background: #0b1a18;
+}
+.story-lightbox__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 46px; height: 46px; border-radius: 50%; color: #fff; font-size: 30px; line-height: 1;
+  background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(4px); transition: background 0.2s;
+}
+.story-lightbox__nav:hover { background: rgba(255, 255, 255, 0.24); }
+.story-lightbox__nav--prev { left: 16px; }
+.story-lightbox__nav--next { right: 16px; }
+@media (max-width: 720px) {
+  .story-gallery__thumb { width: 64px; height: 64px; }
+  .story-lightbox__nav { width: 40px; height: 40px; font-size: 26px; }
+  .story-lightbox__nav--prev { left: 6px; }
+  .story-lightbox__nav--next { right: 6px; }
+}
+
 .stories__more-wrap { text-align: center; margin-top: 26px; }
 .stories__more {
   padding: 12px 28px; border-radius: 999px; font-weight: 800; font-size: 14.5px;

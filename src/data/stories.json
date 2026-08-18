@@ -49,6 +49,78 @@
     }
   },
   {
+    "id": "abror",
+    "name": "Abror",
+    "photo": "/stories/abror/1.webp",
+    "chips": [
+      "🏺 Archaeology",
+      "🇵🇱 UNESCO grant",
+      "🇫🇷 CNRS"
+    ],
+    "title": {
+      "en": "Archaeologist — from a first English lesson to CNRS and UNESCO",
+      "uz": "Arxeolog — ilk ingliz tili darsidan CNRS va UNESCOgacha",
+      "ru": "Археолог — от первого урока английского до CNRS и ЮНЕСКО"
+    },
+    "story": {
+      "en": "If you had told me four years ago that English would take me to Europe's centres of science, I probably would not have believed you. Back then I had simply started learning the language. Today it has become one of the biggest turning points of my life. Since then I have worked in archaeological research — both fieldwork and desk research. English gave me the chance to compete for international grants and scholarships, and I went on to win the international grant programme run by UNESCO and the Polish government, completing a research placement in Poland. English let me do more than train abroad: it also opened up the international archaeological expeditions here in Uzbekistan. Today I run excavations alongside foreign scholars on joint Uzbek–American, Uzbek–French, Uzbek–Chinese, Uzbek–Czech and Uzbek–German projects. Later I carried out research in the laboratories of France's National Centre for Scientific Research (CNRS), trained at the national museums in Berlin, Munich and Prague, and had the chance to lecture to students at European universities. My papers are now published in international journals and I collaborate with professors abroad. Looking back, I see that English opened not just a new language but the doors to a new life — to see the world, to become part of the international scientific community, to work shoulder to shoulder with scholars from many countries, and to have my own say among them. Special thanks to Mr Abdurahmon, who spared no effort along the way. Thank you for all the knowledge and the backing, Boss!",
+      "uz": "Agar menga to'rt yil oldin ingliz tili meni Yevropaning ilmiy markazlariga olib boradi, desangiz, ehtimol ishonmagan bo'lardim. O'shanda men oddiygina ingliz tilini o'rganishni boshlagan edim. Bugun esa aynan shu til hayotimdagi eng katta burilishlardan biriga aylandi. O'sha vaqtdan buyon arxeologiya sohasida ilmiy izlanishlar (fieldwork va desk research) bilan shug'ullanaman. Ingliz tili tufayli xalqaro grant va stipendiyalarda qatnashish imkoniyatiga ega bo'ldim. Natijada UNESCO va Polsha hukumatlarining xalqaro grant dasturi g'olibi bo'lib, Polshada ilmiy stajirovka o'tadim. Ingliz tili menga nafaqat chet elda malaka oshirish, balki O'zbekistondagi xalqaro arxeologik ekspeditsiyalarda ham faol ishtirok etish imkonini berdi. Bugungi kunda o'zbek-amerika, o'zbek-fransuz, o'zbek-xitoy, o'zbek-chex va o'zbek-nemis qo'shma arxeologik loyihalarida xorijlik olimlar bilan birgalikda arxeologiya qazishmalari olib bormoqdaman. Keyinchalik Fransiyaning Milliy ilmiy tadqiqotlar markazi (CNRS) laboratoriyalarida ilmiy tadqiqotlar olib bordim, Berlin, Myunxen va Praga milliy muzeylarida malaka oshirdim hamda Yevropadagi universitetlarda talabalar uchun ma'ruzalar o'tish imkoniyatiga ega bo'ldim. Bugungi kunda ilmiy maqolalarim xalqaro jurnallarda chop etilmoqda va xorijiy professorlar bilan hamkorlik qilmoqdaman. Ortga nazar tashlasam, ingliz tili menga shunchaki yangi til emas, balki yangi hayot eshiklarini ochganini anglayman. U menga dunyoni ko'rish, xalqaro ilmiy hamjamiyatning bir qismiga aylanish, dunyoning turli mamlakatlaridan olimlar bilan yelkama-yelka ishlash va o'z so'zimni ayta olish imkonini berdi. Bu jarayonda o'z mehnatini ayamagan Mr. Abdurahmonga alohida tashakkur. Barcha bilim va dastaklash uchun rahmat, Boss!",
+      "ru": "Если бы четыре года назад мне сказали, что английский приведёт меня в научные центры Европы, я, пожалуй, не поверил бы. Тогда я просто начинал учить язык. Сегодня именно он стал одним из главных поворотов в моей жизни. С тех пор я занимаюсь научными исследованиями в археологии — полевыми (fieldwork) и кабинетными (desk research). Благодаря английскому я получил возможность участвовать в международных грантах и стипендиях. В результате я стал победителем международной грантовой программы ЮНЕСКО и правительства Польши и прошёл научную стажировку в Польше. Английский дал мне не только повышение квалификации за рубежом, но и возможность активно участвовать в международных археологических экспедициях в Узбекистане. Сегодня я веду раскопки вместе с зарубежными учёными в совместных узбекско-американских, узбекско-французских, узбекско-китайских, узбекско-чешских и узбекско-немецких археологических проектах. Позже я вёл исследования в лабораториях Национального центра научных исследований Франции (CNRS), повышал квалификацию в национальных музеях Берлина, Мюнхена и Праги и читал лекции студентам европейских университетов. Сегодня мои научные статьи публикуются в международных журналах, и я сотрудничаю с зарубежными профессорами. Оглядываясь назад, я понимаю, что английский открыл мне не просто новый язык, а двери в новую жизнь: увидеть мир, стать частью международного научного сообщества, работать плечом к плечу с учёными из разных стран и иметь собственный голос. Отдельная благодарность Mr. Abdurahmon, который не жалел своих сил. Спасибо за все знания и поддержку, Boss!"
+    },
+    "quote": {
+      "en": "When I started learning English my goal was only to know the language. In time I understood that I was not learning a language at all — I was learning a whole new set of possibilities for myself.",
+      "uz": "Ingliz tilini o'rganishni boshlaganimda, maqsadim faqat til bilish edi. Ammo vaqt o'tib tushundimki, men aslida tilni emas, o'zim uchun butunlay yangi imkoniyatlarni o'rganayotgan ekanman.",
+      "ru": "Когда я начинал учить английский, моей целью было просто знать язык. Но со временем я понял, что учу не язык, а совершенно новые возможности для себя."
+    },
+    "gallery": [
+      {
+        "src": "/stories/abror/1.webp",
+        "thumb": "/stories/abror/thumb/1.webp",
+        "caption": "With research colleagues"
+      },
+      {
+        "src": "/stories/abror/2.webp",
+        "thumb": "/stories/abror/thumb/2.webp",
+        "caption": "The Louvre, Paris"
+      },
+      {
+        "src": "/stories/abror/3.webp",
+        "thumb": "/stories/abror/thumb/3.webp",
+        "caption": "Sacré-Cœur, Paris"
+      },
+      {
+        "src": "/stories/abror/4.webp",
+        "thumb": "/stories/abror/thumb/4.webp",
+        "caption": "Eiffel Tower, Paris"
+      },
+      {
+        "src": "/stories/abror/5.webp",
+        "thumb": "/stories/abror/thumb/5.webp",
+        "caption": "Frankfurt"
+      },
+      {
+        "src": "/stories/abror/6.webp",
+        "thumb": "/stories/abror/thumb/6.webp",
+        "caption": "Istanbul"
+      },
+      {
+        "src": "/stories/abror/7.webp",
+        "thumb": "/stories/abror/thumb/7.webp",
+        "caption": "Warsaw"
+      },
+      {
+        "src": "/stories/abror/8.webp",
+        "thumb": "/stories/abror/thumb/8.webp",
+        "caption": "Brandenburg Gate, Berlin"
+      },
+      {
+        "src": "/stories/abror/9.webp",
+        "thumb": "/stories/abror/thumb/9.webp",
+        "caption": "Reichstag, Berlin"
+      }
+    ]
+  },
+  {
     "id": "abdullo",
     "name": "Abdullo",
     "photo": "/stories/abdullo.webp",

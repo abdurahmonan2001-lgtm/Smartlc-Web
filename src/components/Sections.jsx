@@ -587,9 +587,79 @@ export function EnglishGives() {
 }
 
 /** Alumni success stories — rich feature cards from src/data/stories.json:
- *  [{ id, name, photo|null, chips, title/story/quote: {en, uz, ru} }].
+ *  [{ id, name, photo|null, chips, title/story/quote: {en, uz, ru}, gallery? }].
  *  Photo falls back to an initials avatar until a portrait is provided. */
 const STORIES_PAGE = 2;
+
+/** Optional photo strip for a story that comes with more than one picture.
+ *
+ *  The strip loads thumbnails only — nine full-size images on a card that is
+ *  itself below the fold would be about 1.8MB nobody asked for. The full file
+ *  is fetched when a photo is actually opened.
+ *
+ *  CertLightbox is not reused here: it captions with an IELTS band and score
+ *  row, which these photos do not have. */
+function StoryGallery({ photos, name }) {
+  const [open, setOpen] = useState(null);
+  const step = (d) => setOpen((i) => (i + d + photos.length) % photos.length);
+
+  useEffect(() => {
+    if (open === null) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(null);
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    };
+    addEventListener("keydown", onKey);
+    return () => removeEventListener("keydown", onKey);
+  }, [open, photos.length]);
+
+  return (
+    <>
+      <div className="story-gallery">
+        {photos.map((p, i) => (
+          <button
+            className="story-gallery__thumb"
+            key={p.src}
+            type="button"
+            onClick={() => setOpen(i)}
+            aria-label={p.caption}
+          >
+            <img src={p.thumb} alt={p.caption} loading="lazy" />
+          </button>
+        ))}
+      </div>
+      {open !== null && (
+        <div className="lightbox" onClick={() => setOpen(null)} role="dialog" aria-modal="true">
+          <button className="lightbox__close" aria-label="Close">✕</button>
+          <figure onClick={(e) => e.stopPropagation()}>
+            <img className="story-lightbox__img" src={photos[open].src} alt={`${name} — ${photos[open].caption}`} />
+            <figcaption>
+              <strong>{photos[open].caption}</strong>
+              <span>{open + 1} / {photos.length}</span>
+            </figcaption>
+          </figure>
+          {photos.length > 1 && (
+            <>
+              <button
+                className="story-lightbox__nav story-lightbox__nav--prev"
+                type="button"
+                aria-label="Previous photo"
+                onClick={(e) => { e.stopPropagation(); step(-1); }}
+              >‹</button>
+              <button
+                className="story-lightbox__nav story-lightbox__nav--next"
+                type="button"
+                aria-label="Next photo"
+                onClick={(e) => { e.stopPropagation(); step(1); }}
+              >›</button>
+            </>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
 
 export function SuccessStories() {
   const { t, lang } = useLang();
@@ -624,6 +694,7 @@ export function SuccessStories() {
                 <p className="story__role">{L(s.title)}</p>
                 <p className="story__text">{L(s.story)}</p>
                 {s.quote && <blockquote className="story__quote">{L(s.quote)}</blockquote>}
+                {s.gallery?.length > 0 && <StoryGallery photos={s.gallery} name={s.name} />}
               </div>
             </article>
           ))}
