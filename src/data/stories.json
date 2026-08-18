@@ -49,6 +49,31 @@
     }
   },
   {
+    "id": "abdullo",
+    "name": "Abdullo",
+    "photo": "/stories/abdullo.webp",
+    "chips": [
+      "🇹🇷 Istanbul",
+      "🎓 Haliç University",
+      "2 years abroad"
+    ],
+    "title": {
+      "en": "Two years in Istanbul — living it all in English",
+      "uz": "Istanbulda ikki yil — hammasi ingliz tili orqali",
+      "ru": "Два года в Стамбуле — и всё решает английский"
+    },
+    "story": {
+      "en": "In today's world, being without English is like giving up one of life's essentials. The first books you read and the first teachers you meet stay imprinted in your memory for a long time — and I can say that for me, that environment and that teacher was Mr Abdurahmon. I was fortunate to build a firm foundation in English with him, and as a result it has had an enormous effect on my studies abroad. I have been studying in Istanbul for two years now. In all that time I have not had the chance to learn Turkish, the local and official language — yet every time I have stepped out into society here, everything has been settled through English, and it still is. It is clear to everyone that the result traces back to the first foundation. Every time English brings me some benefit, my gratitude to Abdurahmon teacher passes through me again. I wish him success in his work and in the education he brings to people.",
+      "uz": "Hozirgi zamonaviy davrda ingliz tilidan holi bo'lish hayotning zaruriy omillaridan kechishdek gap. Shuni bilish kerakki, siz o'qigan birinchi kitoblar va siz ko'rgan birinchi ustozlaringiz xotirangizda uzoq vaqt muhrlanib qoladi. Ayta olamanki, menda bu muhit, bu ustoz Mr Abdurahmon bo'lganlar — ingliz tilining asosini pishiq qilib olishlik nasib qilgan. Buning natijasi o'laroq, bu mening chet eldagi o'qishlarimga katta ta'sir qilgan deb ayta olaman. Ikki yildan beri Istanbulda ta'lim olmoqdaman. Shu paytdan beri Turkiyaning mahalliy va rasmiy tilini o'rganishlikka fursat bo'lmadi, lekin har safar jamiyatga qo'shilganimda barcha ishlarim ingliz tili orqali hal bo'ldi va hal bo'lib kelmoqda. Natija birinchi poydevorga borib taqalishlik hammaga ayon. Har safar ingliz tili orqasidan foyda va manfaat kelsa, shubhasiz Abdurahmon teacherga minnatdorchiligim ichimdan o'tib turadi. Teacherning ishlariga va insonlarga ta'lim tarqatishlariga omad tilayman.",
+      "ru": "В наше время остаться без английского — всё равно что отказаться от одной из основ жизни. Первые книги, которые вы прочитали, и первые учителя, которых вы встретили, надолго остаются в памяти — и могу сказать, что для меня этой средой и этим учителем стал Mr Abdurahmon. Мне посчастливилось заложить с ним прочную основу английского, и в результате это сильно повлияло на мою учёбу за рубежом. Уже два года я учусь в Стамбуле. За всё это время у меня не было возможности выучить турецкий — местный и государственный язык, — но каждый раз, выходя в общество, я решал все свои дела через английский, и так продолжается до сих пор. Всем очевидно, что результат восходит к первому фундаменту. И каждый раз, когда английский приносит мне пользу, во мне снова поднимается благодарность к Abdurahmon teacher. Желаю ему успехов в работе и в том образовании, которое он несёт людям."
+    },
+    "quote": {
+      "en": "English is the key — and life is the work you do afterwards, towards the bigger goals.",
+      "uz": "Ingliz tili bu kalit, hayot esa undan keyingi katta maqsadlar sari mehnat qilishdadir.",
+      "ru": "Английский — это ключ, а жизнь — это труд ради больших целей, которые идут следом."
+    }
+  },
+  {
     "id": "sardor",
     "name": "Sardor",
     "photo": "/stories/sardor.webp",
