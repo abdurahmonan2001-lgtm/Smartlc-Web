@@ -62,10 +62,19 @@ Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria.
 
 For each of grammar, vocabulary and coherence write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
 
+Then list the individual mistakes in "corrections". This is the most important part of your reply: it is shown to the student marked onto their own essay, so they can see exactly what is wrong and why.
+- "quote" MUST be copied EXACTLY, character for character, from the candidate's response. Do not paraphrase it, do not correct its spelling, do not add or remove punctuation. If you cannot copy it exactly, leave the mistake out.
+- Keep each quote short — the words that are actually wrong, not the whole sentence.
+- "kind" is one of: grammar, vocabulary, spelling, punctuation, coherence.
+- "fix" is the corrected wording, ready to drop in.
+- "why" explains the rule in one or two plain sentences, so the student learns the pattern rather than memorising one correction. Write it for a learner, not for a linguist.
+Give every mistake worth learning from, up to 12. Order them as they appear in the response.
+
 Respond with ONLY this JSON, no prose around it:
 {"task":6,"coherence":6,"lexical":5,"grammar":5,
  "grammar_feedback":"...","vocabulary_feedback":"...","coherence_feedback":"...",
- "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."]}`
+ "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."],
+ "corrections":[{"quote":"the government have to provides","kind":"grammar","fix":"the government has to provide","why":"'Government' takes a singular verb here, and after 'has to' the verb stays in its base form — so 'has to provide', never 'has to provides'."}]}`
 
 async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   const wc = words(answer)
@@ -106,8 +115,28 @@ async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   // reached 7, and a single weak criterion always costs at least half a band
   // instead of being averaged away.
   const overall = floorHalf((four.task + four.coherence + four.lexical + four.grammar) / 4)
+
+  // A correction is only useful if its quote can be found in the essay — that
+  // is what lets the student see it marked on their own writing. A quote the
+  // model invented or tidied up would highlight nothing, so it is dropped
+  // rather than shown as a mistake the student cannot locate.
+  const KINDS = ['grammar', 'vocabulary', 'spelling', 'punctuation', 'coherence']
+  const text = String(answer || '')
+  const corrections = (Array.isArray(parsed.corrections) ? parsed.corrections : [])
+    .map((c) => ({
+      quote: String(c?.quote || '').trim(),
+      kind: KINDS.includes(String(c?.kind || '').toLowerCase()) ? String(c.kind).toLowerCase() : 'grammar',
+      fix: String(c?.fix || '').slice(0, 300),
+      why: String(c?.why || '').slice(0, 600),
+    }))
+    .filter((c) => c.quote && c.why && text.includes(c.quote))
+    .slice(0, 12)
+
   return {
-    task: taskNo, words: wc, band: overall, criteria: four,
+    // The essay travels with its marking. Both the student's screen and the
+    // teacher's need to show the corrections ON the writing, and keeping them
+    // together means neither has to re-fetch the answers and re-pair them.
+    task: taskNo, words: wc, band: overall, criteria: four, corrections, essay: text,
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
     vocabulary_feedback: String(parsed.vocabulary_feedback || '').slice(0, 1500),
     coherence_feedback: String(parsed.coherence_feedback || '').slice(0, 1500),

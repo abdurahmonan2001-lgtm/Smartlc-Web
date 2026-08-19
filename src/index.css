@@ -1939,6 +1939,49 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-fb__task ul { margin: 0 0 8px 18px; }
 .pr-fb__task li { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin-bottom: 3px; }
 .pr-fb__summary { font-style: italic; }
+
+/* The student's own writing, reproduced exactly, with the errors underlined
+   in place and numbered to match the list beneath it. */
+.pr-fb__essay {
+  white-space: pre-wrap; font-size: 15px; line-height: 1.85; color: var(--ink);
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; margin: 6px 0 4px;
+}
+.pr-mk {
+  background: none; color: inherit; padding: 0 1px;
+  border-bottom: 2px solid var(--mk, #e11d48);
+  text-decoration-color: var(--mk, #e11d48);
+}
+.pr-mk sup {
+  font-size: 10px; font-weight: 800; color: var(--mk, #e11d48);
+  margin-left: 2px; vertical-align: super;
+}
+.pr-mk--grammar     { --mk: #e11d48; }
+.pr-mk--vocabulary  { --mk: #7c3aed; }
+.pr-mk--spelling    { --mk: #ea580c; }
+.pr-mk--punctuation { --mk: #0891b2; }
+.pr-mk--coherence   { --mk: #ca8a04; }
+
+.pr-fb__fixes { list-style: none; margin: 6px 0 4px; padding: 0; counter-reset: fix; }
+.pr-fb__fixes li {
+  counter-increment: fix; position: relative;
+  padding: 10px 12px 10px 34px; margin-bottom: 8px;
+  background: var(--bg-alt); border-radius: 10px; font-size: 14px;
+}
+.pr-fb__fixes li::before {
+  content: counter(fix); position: absolute; left: 10px; top: 10px;
+  width: 18px; height: 18px; border-radius: 50%; background: var(--green);
+  color: #fff; font-size: 11px; font-weight: 800; display: grid; place-items: center;
+}
+.pr-fb__fixes li p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--ink-2); }
+.pr-fb__kind {
+  display: inline-block; font-size: 10.5px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.04em; padding: 2px 7px; border-radius: 6px; margin-right: 8px;
+  background: var(--green-dim); color: var(--green-dark);
+}
+.pr-fb__wrong { text-decoration: line-through; text-decoration-color: #e11d48; color: var(--ink-2); }
+.pr-fb__arrow { margin: 0 6px; color: var(--ink-2); }
+.pr-fb__right { font-weight: 700; color: var(--green-dark); }
 .pr-fb__crit { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .pr-fb__crit span {
   display: flex; flex-direction: column; gap: 1px; padding: 6px 12px;
