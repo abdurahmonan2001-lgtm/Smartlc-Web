@@ -74,9 +74,15 @@ export function placementMessage(row, totals) {
   line.push(`Level: <b>${esc(row.level)}</b>`)
   line.push(`Grammar: ${row.grammar_score}/${totals.grammar}`)
   line.push(`Reading: ${row.reading_score}/${totals.reading}`)
-  line.push(row.writing_score == null
-    ? 'Writing: not submitted'
-    : `Writing: ${row.writing_score}/10`)
+  // A candidate who wrote an essay that could not be graded and one who wrote
+  // nothing both stored a null score, so both used to read "not submitted" —
+  // which is how a broken grader stayed invisible while real essays went
+  // unmarked. Say which it is, and ask for a human when one is needed.
+  if (row.writing_score != null) line.push(`Writing: ${row.writing_score}/10`)
+  else if (row.writing_answer && row.writing_answer.trim()) {
+    line.push('⚠️ <b>Writing: SUBMITTED BUT NOT GRADED</b>')
+    line.push('<i>Automatic grading failed — mark this one by hand.</i>')
+  } else line.push('Writing: not submitted')
   line.push('')
   line.push('<i>Open the Admin app → Tests to process.</i>')
   return line.join('\n')

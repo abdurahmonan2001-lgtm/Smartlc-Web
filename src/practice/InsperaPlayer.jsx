@@ -195,31 +195,66 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
     if (left === 0 && !finishedRef.current) { finishedRef.current = true; onFinish(answers); }
   }, [left]);   // eslint-disable-line react-hooks/exhaustive-deps
 
-  /* ─ once-only audio per section ─ */
-  const startSectionAudio = (idx) => {
-    const src = test.sections[idx].audioSrc;
-    if (!src || playedRef.current[src]) return;
-    playedRef.current[src] = true;
+  /* ─ the recording plays straight through, as one tape ─
+   *
+   *  A listening test ships one audio file per part, but in a real exam they
+   *  are a single uninterrupted recording: it starts once, runs to the end,
+   *  and what the candidate is looking at has no bearing on it. So playback is
+   *  driven ONLY by the gate and by each part ending — never by navigation.
+   *  Previously selectPart/jumpTo started the clicked part's file, which meant
+   *  looking ahead to Part 3 both cut off Part 1 and left two recordings
+   *  playing over each other, since the earlier one was never paused. */
+  const nextPartWithAudio = (from) => {
+    for (let i = from; i < test.sections.length; i++) if (test.sections[i].audioSrc) return i;
+    return -1;
+  };
+
+  const playPart = (idx) => {
+    const src = test.sections[idx]?.audioSrc;
+    if (!src || playedRef.current[idx]) return;
+    playedRef.current[idx] = true;
+    audioRef.current?.pause();          // belt and braces: never two at once
     const audio = new Audio(src);
     audioRef.current = audio;
-    audio.play().then(() => setAudioPlaying(true)).catch(() => setAudioPlaying(false));
     audio.onended = () => {
-      setAudioPlaying(false);
       setEndedParts((e) => ({ ...e, [idx]: true }));
+      const next = nextPartWithAudio(idx + 1);
+      if (next >= 0) playPart(next);
+      else setAudioPlaying(false);
     };
+    audio.play().then(() => setAudioPlaying(true)).catch(() => {
+      // Chrome can refuse a play() that is not tied to a user gesture. The
+      // gate click covers part 1; if a later part is refused, resume it on the
+      // candidate's very next interaction rather than silently going quiet
+      // mid-exam.
+      setAudioPlaying(false);
+      const resume = () => {
+        audio.play().then(() => setAudioPlaying(true)).catch(() => {});
+        removeEventListener("pointerdown", resume);
+        removeEventListener("keydown", resume);
+      };
+      addEventListener("pointerdown", resume);
+      addEventListener("keydown", resume);
+    });
   };
-  const passGate = () => { setAudioGate(false); startSectionAudio(si); };
+
+  const passGate = () => {
+    setAudioGate(false);
+    const first = nextPartWithAudio(0);
+    if (first >= 0) playPart(first);
+  };
   useEffect(() => () => { audioRef.current?.pause(); }, []);
 
+  /* Navigation is deliberately audio-free: moving around the paper must never
+     start, stop or switch the recording. */
   const selectPart = (idx) => {
     setSi(idx); setPage("test");
     setActiveN(test.sections[idx].questions[0]?.n);
-    if (!audioGate) startSectionAudio(idx);
     mainRef.current?.scrollTo({ top: 0 });
   };
 
   const jumpTo = (n, sIdx) => {
-    if (sIdx !== si) { setSi(sIdx); setPage("test"); if (!audioGate) startSectionAudio(sIdx); }
+    if (sIdx !== si) { setSi(sIdx); setPage("test"); }
     setActiveN(n);
     setTimeout(() => qRefs.current[n]?.scrollIntoView({ block: "center" }), 50);
   };
