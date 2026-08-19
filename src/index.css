@@ -1914,6 +1914,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-transcript__line.is-A span { color: var(--green); }
 
 /* A third of an Upper-Inter paper, shown under its full paper */
+.pr-result__indic {
+  display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--ink-2); margin-top: 2px;
+}
+
 /* ─── Indicative writing feedback ─── */
 .pr-fb {
   position: fixed; inset: 0; z-index: 300; background: rgba(0, 13, 12, 0.62);

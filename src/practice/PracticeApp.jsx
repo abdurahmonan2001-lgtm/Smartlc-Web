@@ -692,6 +692,10 @@ function TranscriptPanel({ testId }) {
 /* ─── Result + history ─── */
 function ResultView({ result, test, onBack }) {
   const isWriting = result.raw_score == null;
+  const [showFb, setShowFb] = useState(false);
+  // Marking comes back with the submission, so a student who has just written
+  // for an hour sees it here rather than having to go looking for it.
+  const marked = result.marked?.band != null ? result.marked : null;
   const pct = isWriting ? null : Math.round((result.raw_score / result.total) * 100);
   // Review only for practice papers whose content we can still find.
   const review = test && !isMockResult(result.test_id) && !isWriting ? buildReview(test, result.answers) : null;
@@ -703,7 +707,23 @@ function ResultView({ result, test, onBack }) {
         <span className="reg__done-icon">✓</span>
         <h2>{isWriting ? "Writing submitted" : "Test complete"}</h2>
         {isWriting ? (
-          <p>Your answers have been saved and will be marked by your teacher.</p>
+          marked ? (
+            <>
+              <div className="pr-result__score">
+                <strong>{Number(marked.band).toFixed(1)}</strong>
+                <span className="pr-result__indic">indicative band</span>
+              </div>
+              <p>
+                Marked automatically so you get feedback straight away.
+                <br />Your teacher marks this paper too, and their band is the official one.
+              </p>
+              <button className="pr-link" onClick={() => setShowFb(true)}>
+                See detailed feedback
+              </button>
+            </>
+          ) : (
+            <p>Your answers have been saved and will be marked by your teacher.</p>
+          )
         ) : (
           <>
             <div className="pr-result__score">
@@ -727,6 +747,9 @@ function ResultView({ result, test, onBack }) {
       {review && <VocabMatch review={review} />}
       {test && !isMockResult(result.test_id) && test.module === "listening" && (
         <TranscriptPanel testId={result.test_id} />
+      )}
+      {showFb && marked && (
+        <WritingFeedback band={marked.band} feedback={marked.feedback} onClose={() => setShowFb(false)} />
       )}
     </div>
   );
