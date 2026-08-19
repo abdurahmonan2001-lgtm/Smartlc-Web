@@ -35,16 +35,19 @@ function rateLimited(key) {
 const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length
 
 // Smart LC marks DOWN, not to nearest — deliberately stricter than the public
-// IELTS rounding, so a band shown here is one a student has actually earned in
-// every criterion rather than one they averaged into.
+// IELTS rounding, so a band is one a student has actually earned rather than
+// one they rounded up into.
 //
-//   • each criterion  → a whole band (awarded by the examiner)
-//   • each task band  → the four criteria averaged and FLOORED to a whole band,
-//                       so a 7 in Task 1 requires a 7 in all four criteria
-//   • the final band  → Task 1 ⅓ + Task 2 ⅔, floored to a half band
+//   • each criterion → a whole band (as an examiner awards them)
+//   • each task band → the four criteria averaged, then FLOORED to a half band
+//   • the final band → Task 1 ⅓ + Task 2 ⅔, floored to a half band
 //
-// Half bands therefore exist only on the final figure, nowhere earlier.
-const floorWhole = (n) => Math.floor(n)
+// Flooring to the half is what makes the marking scheme's rules come out:
+//   6,6,6,5 → 5.75 → 5.5      three 6s and a 5 is half a band above the 5
+//   6,6,5,5 → 5.50 → 5.5      two and two, likewise
+//   6,5,5,5 → 5.25 → 5        one 6 against three 5s earns nothing extra
+//   7,7,7,7 → 7.00 → 7        a 7 still requires a 7 in all four
+//   7,7,7,6 → 6.75 → 6.5      one weak criterion always costs at least a half
 const floorHalf = (n) => Math.floor(n * 2) / 2
 
 const RUBRIC = `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors.
@@ -99,9 +102,10 @@ async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   const four = { task: band(parsed.task), coherence: band(parsed.coherence), lexical: band(parsed.lexical), grammar: band(parsed.grammar) }
   if (Object.values(four).some((v) => v == null)) throw new Error('grader returned a band outside 0-9')
 
-  // Floored, not rounded: a 7 here means every criterion reached 7. One weak
-  // criterion pulls the task band down instead of being averaged away.
-  const overall = floorWhole((four.task + four.coherence + four.lexical + four.grammar) / 4)
+  // Floored to the half, not rounded: a 7 here still means every criterion
+  // reached 7, and a single weak criterion always costs at least half a band
+  // instead of being averaged away.
+  const overall = floorHalf((four.task + four.coherence + four.lexical + four.grammar) / 4)
   return {
     task: taskNo, words: wc, band: overall, criteria: four,
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
