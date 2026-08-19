@@ -141,6 +141,29 @@ export async function fetchRemoteTests() {
   }
 }
 
+/** Asks the server for an indicative IELTS band on a writing paper.
+ *
+ *  Only the public task prompts are sent: the essays themselves are read from
+ *  the stored row by the server, so nothing here can change what gets marked,
+ *  and the band is written server-side rather than by this bundle.
+ *
+ *  Silent no-op on any failure — a student who has just written for an hour
+ *  must never be shown an error about marking. Their paper is saved, and the
+ *  teacher marks it either way. */
+export async function gradeMockWriting(username, testId, tasks) {
+  try {
+    const res = await fetch("/api/mock-writing-grade", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, testId, tasks }),
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchResults(username) {
   const q = `${URL_BASE}/rest/v1/practice_results?student_username=eq.${encodeURIComponent(username)}&order=taken_at.desc&limit=50`;
   const res = await fetch(q, { headers });

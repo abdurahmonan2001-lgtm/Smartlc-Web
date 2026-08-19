@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
-import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext } from "./api.js";
+import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
 import AUDIO_CUES from "./audio-cues.json";
@@ -440,6 +440,32 @@ let SUPPRESS_SAVES = false;
 export const setSuppressSaves = (v) => { SUPPRESS_SAVES = !!v; };
 const EMPTY_SET = new Set();
 
+/** The essay tasks of a writing paper, as the grader needs them: the prompt a
+ *  candidate actually saw, and the word target that carries the under-length
+ *  penalty. Task 1 is 150 words, Task 2 is 250 — the real exam's figures. */
+function essayTasks(test) {
+  return test.sections.flatMap((s, i) =>
+    s.questions
+      .filter((q) => q.type === "essay")
+      .map((q) => ({
+        n: q.n,
+        task: i + 1,
+        prompt: [s.passageTitle, s.instructions, s.passage].filter(Boolean).join("\n\n"),
+        wordTarget: i === 0 ? 150 : 250,
+      })),
+  );
+}
+
+/** Indicative marking, requested after the paper is safely stored.
+ *  Never throws and never blocks: the paper is already saved, and the
+ *  teacher's mark is the one that counts. */
+async function requestWritingBand(test, result) {
+  if (test.module !== "writing" || SUPPRESS_SAVES) return null;
+  const tasks = essayTasks(test);
+  if (!tasks.length) return null;
+  return gradeMockWriting(result.student_username, test.id, tasks);
+}
+
 async function persist(result) {
   if (SUPPRESS_SAVES) return true;
   let saved = false;
@@ -462,7 +488,10 @@ function Player({ test, user, onExit, onFinished }) {
     finishedRef.current = true;
     const result = scoreTest(test, answers, user.username, startRef.current);
     const saved = await persist(result);
-    onFinished({ ...result, saved });
+    // Marking is requested only once the paper is stored — the grader reads
+    // the essays back from that row rather than trusting anything sent here.
+    const marked = saved ? await requestWritingBand(test, result) : null;
+    onFinished({ ...result, saved, marked });
   };
 
   return <InsperaPlayer test={test} user={user} onExit={onExit} onFinish={finish} />;
@@ -500,7 +529,12 @@ function MockRun({ book, tests, user, onQuit, onFinished }) {
     const results = doneRef.current;
     const savedFlags = [];
     for (const r of results) savedFlags.push(await persist(r));
-    onFinished({ book, results, saved: savedFlags.every(Boolean) });
+    // The writing paper of the sitting gets its indicative band here, after
+    // every paper is safely stored.
+    let marked = null;
+    const wi = results.findIndex((r) => r.module === "writing");
+    if (wi >= 0 && savedFlags[wi]) marked = await requestWritingBand(tests[wi], results[wi]);
+    onFinished({ book, results, saved: savedFlags.every(Boolean), marked });
   };
 
   // Leaving mid-exam forfeits the sitting. The attempt was consumed the
@@ -698,8 +732,63 @@ function ResultView({ result, test, onBack }) {
   );
 }
 
+/** The indicative band for a writing paper, with the examiner-style detail.
+ *
+ *  It says "indicative" in three places on purpose. A machine band is useful
+ *  feedback and a poor verdict; the teacher's mark is the real one, and a
+ *  student should never be able to mistake one for the other. */
+export function WritingFeedback({ band, feedback, onClose }) {
+  const tasks = feedback?.tasks || [];
+  const CRIT = [
+    ["task", "Task achievement"],
+    ["coherence", "Coherence & cohesion"],
+    ["lexical", "Lexical resource"],
+    ["grammar", "Grammar"],
+  ];
+  return (
+    <div className="pr-fb" role="dialog" aria-modal="true">
+      <div className="pr-fb__panel">
+        <header className="pr-fb__top">
+          <div>
+            <strong>Indicative band {Number(band).toFixed(1)}</strong>
+            <span>Marked automatically · your teacher's mark is the official one</span>
+          </div>
+          <button className="pr-link" onClick={onClose}>Close</button>
+        </header>
+
+        {tasks.map((t) => (
+          <section className="pr-fb__task" key={t.task}>
+            <h3>Task {t.task} — band {Number(t.band).toFixed(1)} <em>({t.words} words)</em></h3>
+            <div className="pr-fb__crit">
+              {CRIT.map(([k, label]) => (
+                <span key={k}><em>{label}</em><strong>{Number(t.criteria[k]).toFixed(1)}</strong></span>
+              ))}
+            </div>
+            {t.summary && <p className="pr-fb__summary">{t.summary}</p>}
+            {t.grammar_feedback && <p><b>Grammar.</b> {t.grammar_feedback}</p>}
+            {t.vocabulary_feedback && <p><b>Vocabulary.</b> {t.vocabulary_feedback}</p>}
+            {t.coherence_feedback && <p><b>Coherence.</b> {t.coherence_feedback}</p>}
+            {t.task_feedback && <p><b>Task.</b> {t.task_feedback}</p>}
+            {t.strengths?.length > 0 && (
+              <><h4>What worked</h4><ul>{t.strengths.map((s, i) => <li key={i}>{s}</li>)}</ul></>
+            )}
+            {t.improve?.length > 0 && (
+              <><h4>What to fix next</h4><ul>{t.improve.map((s, i) => <li key={i}>{s}</li>)}</ul></>
+            )}
+          </section>
+        ))}
+        <p className="pr-fb__note">
+          This band is produced by software and can be wrong. Use the detail to see what to work
+          on — your teacher's mark is the one that counts.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function History({ user, onBack, onReview }) {
   const [rows, setRows] = useState(null);
+  const [fb, setFb] = useState(null);
   useEffect(() => {
     (async () => {
       const remote = (await fetchResults(user.username)) || [];
@@ -733,7 +822,11 @@ function History({ user, onBack, onReview }) {
                   <strong>{t ? t.title : r.test_id}</strong>
                   <span>
                     {new Date(r.taken_at).toLocaleDateString()}
-                    {r.raw_score != null ? ` · ${r.raw_score}/${r.total}` : " · awaiting teacher review"}
+                    {r.raw_score != null
+                      ? ` · ${r.raw_score}/${r.total}`
+                      : r.ai_band != null
+                        ? ` · Band ${Number(r.ai_band).toFixed(1)} (indicative)`
+                        : " · awaiting teacher review"}
                     {r.band ? ` · Band ${Number(r.band).toFixed(1)}` : ""}
                     {fmtTime(r.duration_seconds) ? ` · ${fmtTime(r.duration_seconds)}` : ""}
                     {r.pending ? " · not synced" : ""}
@@ -742,6 +835,9 @@ function History({ user, onBack, onReview }) {
                 {reviewable && (
                   <button className="pr-link" onClick={() => onReview(r)}>Review</button>
                 )}
+                {r.ai_feedback?.tasks?.length > 0 && (
+                  <button className="pr-link" onClick={() => setFb(r)}>Feedback</button>
+                )}
                 <span className="band-chip">
                   {r.raw_score != null ? `${Math.round((r.raw_score / r.total) * 100)}%` : "✍"}
                 </span>
@@ -749,6 +845,9 @@ function History({ user, onBack, onReview }) {
             );
           })}
         </div>
+      )}
+      {fb && (
+        <WritingFeedback band={fb.ai_band} feedback={fb.ai_feedback} onClose={() => setFb(null)} />
       )}
     </div>
   );
