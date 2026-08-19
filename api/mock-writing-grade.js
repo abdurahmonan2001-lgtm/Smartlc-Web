@@ -33,13 +33,25 @@ function rateLimited(key) {
 }
 
 const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length
-const toHalf = (n) => Math.round(n * 2) / 2
+
+// Smart LC marks DOWN, not to nearest — deliberately stricter than the public
+// IELTS rounding, so a band shown here is one a student has actually earned in
+// every criterion rather than one they averaged into.
+//
+//   • each criterion  → a whole band (awarded by the examiner)
+//   • each task band  → the four criteria averaged and FLOORED to a whole band,
+//                       so a 7 in Task 1 requires a 7 in all four criteria
+//   • the final band  → Task 1 ⅓ + Task 2 ⅔, floored to a half band
+//
+// Half bands therefore exist only on the final figure, nowhere earlier.
+const floorWhole = (n) => Math.floor(n)
+const floorHalf = (n) => Math.floor(n * 2) / 2
 
 const RUBRIC = `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors.
 
 Be honest and accurate. Do NOT inflate the band to be kind — an inflated band misleads the student about what they need to fix, which is worse than a disappointing number. Apply the descriptors as strictly as you would for a real candidate. A mid-range script is a 5.5 or 6, not a 7.
 
-Score each criterion 0-9 in whole or half bands:
+Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria. Never a half band. This is how IELTS examiners assess the criteria: each one gets a whole band, and only the averaged result is reported in halves. Choose the single descriptor that best fits; do not split the difference between two.
 - task: Task Achievement (Task 1) or Task Response (Task 2)
 - coherence: Coherence and Cohesion
 - lexical: Lexical Resource
@@ -48,7 +60,7 @@ Score each criterion 0-9 in whole or half bands:
 For each of grammar, vocabulary and coherence write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
 
 Respond with ONLY this JSON, no prose around it:
-{"task":6,"coherence":6,"lexical":5.5,"grammar":5.5,
+{"task":6,"coherence":6,"lexical":5,"grammar":5,
  "grammar_feedback":"...","vocabulary_feedback":"...","coherence_feedback":"...",
  "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."]}`
 
@@ -76,15 +88,20 @@ async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   const data = await r.json()
   const parsed = JSON.parse((data.content?.[0]?.text || '').replace(/```json|```/g, '').trim())
 
+  // Each criterion is a WHOLE band, as an examiner awards them. A model that
+  // hedges with 5.5 is snapped to a whole band rather than being let through:
+  // half bands on a criterion are not a finer measurement, they are a refusal
+  // to choose a descriptor.
   const band = (v) => {
     const n = Number(v)
-    return Number.isFinite(n) && n >= 0 && n <= 9 ? toHalf(n) : null
+    return Number.isFinite(n) && n >= 0 && n <= 9 ? Math.round(n) : null
   }
   const four = { task: band(parsed.task), coherence: band(parsed.coherence), lexical: band(parsed.lexical), grammar: band(parsed.grammar) }
   if (Object.values(four).some((v) => v == null)) throw new Error('grader returned a band outside 0-9')
 
-  // An IELTS task band is the average of the four criteria, to the nearest half.
-  const overall = toHalf((four.task + four.coherence + four.lexical + four.grammar) / 4)
+  // Floored, not rounded: a 7 here means every criterion reached 7. One weak
+  // criterion pulls the task band down instead of being averaged away.
+  const overall = floorWhole((four.task + four.coherence + four.lexical + four.grammar) / 4)
   return {
     task: taskNo, words: wc, band: overall, criteria: four,
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
@@ -148,11 +165,12 @@ export default async function handler(req, res) {
   }
   if (!graded.length) return res.status(200).json({ empty: true, message: 'No written response to mark.' })
 
-  // Task 2 counts double, as in the real exam. With only one task present,
-  // that task stands alone rather than being averaged against nothing.
+  // Task 1 is a third of the paper and Task 2 two thirds. This is the only
+  // place a half band can appear; with one task only, that task stands alone
+  // rather than being averaged against nothing.
   const t1 = graded.find((g) => g.task === 1)
   const t2 = graded.find((g) => g.task === 2)
-  const overall = t1 && t2 ? toHalf((t1.band + t2.band * 2) / 3) : toHalf(graded[0].band)
+  const overall = t1 && t2 ? floorHalf((t1.band + t2.band * 2) / 3) : floorHalf(graded[0].band)
 
   const feedback = { indicative: true, tasks: graded, gradedAt: new Date().toISOString() }
   const patch = await rest(`practice_results?id=eq.${row.id}`, {

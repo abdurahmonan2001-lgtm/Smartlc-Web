@@ -761,7 +761,7 @@ export function WritingFeedback({ band, feedback, onClose }) {
             <h3>Task {t.task} — band {Number(t.band).toFixed(1)} <em>({t.words} words)</em></h3>
             <div className="pr-fb__crit">
               {CRIT.map(([k, label]) => (
-                <span key={k}><em>{label}</em><strong>{Number(t.criteria[k]).toFixed(1)}</strong></span>
+                <span key={k}><em>{label}</em><strong>{t.criteria[k]}</strong></span>
               ))}
             </div>
             {t.summary && <p className="pr-fb__summary">{t.summary}</p>}
