@@ -11,6 +11,7 @@
 import { GRAMMAR, READING, WRITING_PROMPT, determineLevel } from './_bank.js'
 import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit, env } from './_session.js'
 import { telegramSend, placementMessage } from './_notify.js'
+import crypto from 'node:crypto'
 
 // A whole family sharing one connection, or a queue of candidates on the
 // centre's own tablet, all look like a single IP — so the quota counts only
@@ -55,7 +56,11 @@ async function gradeWriting(text) {
     const feedback = String(parsed.feedback || 'Graded.').slice(0, 400)
     return { score: Math.round(score), feedback }
   } catch (e) {
-    console.error('placement writing grading failed', e)
+    // Log a FINGERPRINT of the key, never the key: when grading fails the
+    // first question is always "which key is this deployment actually using?"
+    // and a hash answers it without putting a secret in the logs.
+    const fp = crypto.createHash('sha256').update(key).digest('hex').slice(0, 12)
+    console.error(`placement writing grading failed [key ${fp}, len ${key.length}]`, e)
     return { score: null, feedback: 'Grading unavailable — needs manual review.' }
   }
 }
