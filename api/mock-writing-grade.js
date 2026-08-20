@@ -90,7 +90,10 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
-      max_tokens: 2000,
+      // 2000 was enough against a short paraphrased rubric; against the full
+      // descriptors the reply grew and was being truncated mid-JSON, which
+      // surfaced only as a parse error. Leave real headroom.
+      max_tokens: 4000,
       system: rubricFor(taskNo),
       messages: [{
         role: 'user',
@@ -105,6 +108,9 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   })
   if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 200)}`)
   const data = await r.json()
+  // A truncated reply is not a malformed one — say which, or the next person
+  // debugging this reads "unexpected end of JSON" and goes looking at parsing.
+  if (data.stop_reason === 'max_tokens') throw new Error('grader reply hit max_tokens and was cut off')
   const parsed = JSON.parse((data.content?.[0]?.text || '').replace(/```json|```/g, '').trim())
 
   // Each criterion is a WHOLE band, as an examiner awards them. A model that
@@ -208,19 +214,21 @@ export default async function handler(req, res) {
   // The essays come from the stored row; the client only supplies the public
   // task prompts, which are test content rather than the student's work.
   const answers = row.answers || {}
-  const graded = []
-  for (const t of tasks) {
-    const answer = answers[t.n] ?? answers[String(t.n)]
-    if (!String(answer || '').trim()) continue
-    try {
-      graded.push(await gradeTask({
-        key, taskNo: t.task ?? t.n, prompt: t.prompt,
-        answer, wordTarget: t.wordTarget ?? ((t.task ?? t.n) === 1 ? 150 : 250),
-      }))
-    } catch (e) {
-      console.error('mock writing task grading failed', String(e).slice(0, 300))
-      return res.status(502).json({ error: 'Marking failed — your paper is saved and your teacher will mark it.' })
-    }
+  // Both tasks are graded AT ONCE. Sequentially they take roughly twice as
+  // long as one grading call, and the function is killed at 60s — a two-task
+  // paper was close enough to that ceiling to be a coin toss.
+  const wanted = tasks
+    .map((t) => ({ t, answer: answers[t.n] ?? answers[String(t.n)] }))
+    .filter((x) => String(x.answer || '').trim())
+  let graded
+  try {
+    graded = await Promise.all(wanted.map(({ t, answer }) => gradeTask({
+      key, taskNo: t.task ?? t.n, prompt: t.prompt,
+      answer, wordTarget: t.wordTarget ?? ((t.task ?? t.n) === 1 ? 150 : 250),
+    })))
+  } catch (e) {
+    console.error('mock writing task grading failed', String(e).slice(0, 300))
+    return res.status(502).json({ error: 'Marking failed — your paper is saved and your teacher will mark it.' })
   }
   if (!graded.length) return res.status(200).json({ empty: true, message: 'No written response to mark.' })
 
