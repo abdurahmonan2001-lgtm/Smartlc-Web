@@ -15,6 +15,7 @@
 //    this exists so a student gets specific feedback immediately and the
 //    teacher walks into the lesson already knowing what to look at.
 import { env } from './_session.js'
+import { TASK1_DESCRIPTORS, TASK2_DESCRIPTORS } from './_writing-descriptors.js'
 
 export const config = { maxDuration: 60 }
 
@@ -50,12 +51,18 @@ const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length
 //   7,7,7,6 → 6.75 → 6.5      one weak criterion always costs at least a half
 const floorHalf = (n) => Math.floor(n * 2) / 2
 
-const RUBRIC = `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors.
+const rubricFor = (taskNo) => `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors, which are reproduced in full below. They are the standard: judge against their wording, not against your impression of the script.
 
-Be honest and accurate. Do NOT inflate the band to be kind — an inflated band misleads the student about what they need to fix, which is worse than a disappointing number. Apply the descriptors as strictly as you would for a real candidate. A mid-range script is a 5.5 or 6, not a 7.
+OFFICIAL IELTS WRITING TASK ${taskNo} BAND DESCRIPTORS (public version, updated May 2023)
+${taskNo === 1 ? TASK1_DESCRIPTORS : TASK2_DESCRIPTORS}
+
+HOW TO USE THEM
+Work criterion by criterion. For each one, find the band whose descriptor the script actually matches — read the band above and the band below to confirm the fit before settling. Bolded text in the descriptors marks negative features that cap a rating.
+
+Be honest and accurate. Do NOT inflate the band to be kind — an inflated band misleads the student about what they need to fix, which is worse than a disappointing number. Equally, do not mark down out of caution: a script that meets the band 7 descriptors is a 7, and calling it a 6 to seem rigorous is just as wrong.
 
 Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria. Never a half band. This is how IELTS examiners assess the criteria: each one gets a whole band, and only the averaged result is reported in halves. Choose the single descriptor that best fits; do not split the difference between two.
-- task: Task Achievement (Task 1) or Task Response (Task 2)
+- task: ${taskNo === 1 ? 'Task Achievement' : 'Task Response'}
 - coherence: Coherence and Cohesion
 - lexical: Lexical Resource
 - grammar: Grammatical Range and Accuracy
@@ -76,7 +83,7 @@ Respond with ONLY this JSON, no prose around it:
  "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."],
  "corrections":[{"quote":"the government have to provides","kind":"grammar","fix":"the government has to provide","why":"'Government' takes a singular verb here, and after 'has to' the verb stays in its base form — so 'has to provide', never 'has to provides'."}]}`
 
-async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
+export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   const wc = words(answer)
   const r = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -84,7 +91,7 @@ async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
       max_tokens: 2000,
-      system: RUBRIC,
+      system: rubricFor(taskNo),
       messages: [{
         role: 'user',
         // The candidate's text is data, never instructions: only a band and
