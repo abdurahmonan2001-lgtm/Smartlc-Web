@@ -10,7 +10,7 @@
 import { env } from './_session.js'
 import { gradeTask } from './mock-writing-grade.js'
 
-export const config = { maxDuration: 60 }
+export const config = { maxDuration: 300 }
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' })

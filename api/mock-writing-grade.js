@@ -17,7 +17,7 @@
 import { env } from './_session.js'
 import { TASK1_DESCRIPTORS, TASK2_DESCRIPTORS } from './_writing-descriptors.js'
 
-export const config = { maxDuration: 60 }
+export const config = { maxDuration: 300 }
 
 const MAX_ESSAY_CHARS = 12000
 const RECENT_MINUTES = 180          // only a paper handed in recently may be graded
