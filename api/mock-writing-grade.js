@@ -130,6 +130,11 @@ async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
       why: String(c?.why || '').slice(0, 600),
     }))
     .filter((c) => c.quote && c.why && text.includes(c.quote))
+    // Drop a "fix" that is not a fix, and the same quote twice. Live output
+    // produced both on a near-blank script: the model, with almost nothing to
+    // mark, flagged the one phrase there twice and offered it back unchanged.
+    .filter((c) => c.fix.trim().toLowerCase() !== c.quote.trim().toLowerCase())
+    .filter((c, i, arr) => arr.findIndex((o) => o.quote === c.quote) === i)
     .slice(0, 12)
 
   return {
