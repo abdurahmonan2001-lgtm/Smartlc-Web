@@ -2934,5 +2934,329 @@
       "explain": "NO: 'What is not needed is yet more instruction' — given time, space and other children, they need no lessons.",
       "evidence": "the young of our species need no lessons in how to play"
     }
+  },
+  "mock9-listening": {
+    "1": {
+      "explain": "Spelled out on request: N-A-Z-A-R-O-V-A.",
+      "evidence": "N, A, Z, A, R, O, V, A. Nazarova."
+    },
+    "2": {
+      "explain": "Two numbers are on the receipt and the caller separates them herself: 331 is the branch code, and the order number is the four-digit one.",
+      "evidence": "the short one, three three one, is the branch code. The order number is four seven eight five."
+    },
+    "3": {
+      "explain": "The clerk says dining table and is corrected: it is the small round coffee table. The dining table was considered and dropped because the room was too small.",
+      "evidence": "Not a dining table, no - it's the coffee table, the small round one"
+    },
+    "4": {
+      "explain": "Confirmed by spelling and by meaning — Cherry like the fruit, C-H-E-R-R-Y — and located opposite the primary school.",
+      "evidence": "That's it - C, H, E, R, R, Y."
+    },
+    "5": {
+      "explain": "Flat nine is on the fourth floor, though the caller immediately reassures the clerk that there is a lift.",
+      "evidence": "The fourth. But please don't worry about that - there's a lift in the building"
+    },
+    "6": {
+      "explain": "Monday is available but risky for delays, Wednesday is full, and Friday is refused outright — the company does not serve her district then. Cherry Street gets Tuesday mornings only.",
+      "evidence": "For Cherry Street we deliver on Tuesdays only, and mornings only in that district"
+    },
+    "7": {
+      "explain": "Two morning slots are offered and the early one is rejected because of the school run.",
+      "evidence": "Let's say between ten o'clock and midday"
+    },
+    "8": {
+      "explain": "Her order is just under the two-million free-delivery threshold. The usual charge is a hundred thousand, reduced because her street is near the warehouse.",
+      "evidence": "but as your street is close to our warehouse it comes down to eighty thousand"
+    },
+    "9": {
+      "explain": "Taking old furniture to the tip is the former practice. Everything collected now — frame, foam and fabric — is recycled.",
+      "evidence": "but everything we collect now is recycled"
+    },
+    "10": {
+      "explain": "The clerk rules out the alternative as she says it: 'not a phone call, a text', about twenty minutes before arrival.",
+      "evidence": "he'll send you a text - not a phone call, a text"
+    },
+    "11": {
+      "explain": "B. The centenary is real but 'not what set this off', and the government-spending claim was a letter in the local paper. Two thousand replies to a household questionnaire produced every item in the plan.",
+      "evidence": "Every item in this plan comes out of the answers you gave us"
+    },
+    "12": {
+      "explain": "C. March was the original hope and is still on some posters; the tender process killed it. July was rejected because the park is busiest then.",
+      "evidence": "So the machinery moves in at the beginning of September"
+    },
+    "13": {
+      "explain": "C. Full closure and weekends-only are both named as rumours and denied. Areas are fenced off in turn and the fences move with the work.",
+      "evidence": "we fence off whichever area is being worked on, move the fences along as the work moves"
+    },
+    "14": {
+      "explain": "A. Local businesses contribute and the council pays for design and staff time, but close to eighty per cent comes from the national lottery fund.",
+      "evidence": "comes from the national lottery fund"
+    },
+    "15": {
+      "explain": "B. The iron gates themselves stay; it is the dull grey space around them that a sculptor has been commissioned to redesign.",
+      "evidence": "we have commissioned an artist - a sculptor who grew up two streets from here - to redesign that whole entrance area"
+    },
+    "16": {
+      "explain": "H. Repair was considered and rejected because the frames are worn out, so everything comes out and a new playground goes in.",
+      "evidence": "So everything comes out, and a completely new playground goes in"
+    },
+    "17": {
+      "explain": "G. The surface is sound and is being left alone. The problem is darkness from October to March, so lighting goes in all the way round.",
+      "evidence": "So we are putting in new lighting the whole way round"
+    },
+    "18": {
+      "explain": "F. 'It doesn't need rebuilding; it needs hands.' The gardening club takes it on from spring, with tools and training supplied.",
+      "evidence": "From next spring it will be looked after by volunteers"
+    },
+    "19": {
+      "explain": "A. Longer hours were requested and are explicitly not in the plan. Instead the building is extended, roughly doubling the space, with a terrace facing the lake.",
+      "evidence": "roughly doubling the space inside, with a new terrace facing the lake"
+    },
+    "20": {
+      "explain": "D. Moving them was discussed and rejected — that corner is the only flat ground. The 1980s tarmac is being dug up and replaced with an all-weather surface.",
+      "evidence": "It is being dug up and given a new all-weather surface"
+    },
+    "21": {
+      "explain": "A. Dr Ismailova only said to choose something buildable, and Zarina points out a truss has more joints to calculate than anything else. It was the old railway bridge on the field trip.",
+      "evidence": "That old railway bridge we walked across in the second week"
+    },
+    "22": {
+      "explain": "C. Balsa was out of stock that week and card was ruled out because it softens. They built the whole thing from bamboo skewers.",
+      "evidence": "In the end we built the whole thing out of bamboo skewers"
+    },
+    "23": {
+      "explain": "B. The design was checked afterwards and the maths was right, and the weights were added slowly as instructed. They rushed the assembly and under-glued the joints.",
+      "evidence": "we didn't put enough glue into the joints"
+    },
+    "24": {
+      "explain": "C. It held eleven kilograms against a calculated fifteen, and broke in a different place — but the surprise neither expected was the sideways tilt before failure.",
+      "evidence": "The whole structure tilted"
+    },
+    "25": {
+      "explain": "A. The calculations took two evenings and the shop trips twenty minutes. Waiting for glue cost three days — twelve hours a stage, four stages.",
+      "evidence": "we lost the best part of three days doing nothing whatsoever while the glue set"
+    },
+    "26": {
+      "explain": "B. She was happy with the calculations and said there were plenty of photographs. Her one criticism was that only the successful bridge appears.",
+      "evidence": "She wants the unsuccessful designs in there too"
+    },
+    "27": {
+      "explain": "B. The drawings are rejected as a success because two dimensions were wrong. What worked was the division of labour — neither student ever waited on the other.",
+      "evidence": "What did work was the way we split the job"
+    },
+    "28": {
+      "explain": "E. Six hundred and forty grams for a one-metre span, lighter than anything else in the class, and strength against weight is what the competition scores. The budget was overspent and the glue cost three days.",
+      "evidence": "Yes, put the weight down. Lightness was our best result."
+    },
+    "29": {
+      "explain": "A. Both models gave way near the centre, so a vertical member and a second diagonal go in there.",
+      "evidence": "Both models gave way near the centre, so we add a vertical member and a second diagonal"
+    },
+    "30": {
+      "explain": "D. Every joint gets glued, weighted and checked before assembly — ten minutes each, and it would have caught the first failure. The glue stays, the span is fixed at a metre, and paint would only add weight.",
+      "evidence": "And I want every joint tested before it goes anywhere near the bridge"
+    },
+    "31": {
+      "explain": "Sound travels about five times faster in water than in air — roughly fifteen hundred metres a second — and carries much further before fading.",
+      "evidence": "It travels roughly five times faster in water than it does in air"
+    },
+    "32": {
+      "explain": "The lower the sound the further it goes: the deepest calls can cross an entire ocean, so an animal off Africa may be heard off Brazil.",
+      "evidence": "can in the right conditions carry right across an entire ocean"
+    },
+    "33": {
+      "explain": "No female humpback has ever been recorded singing, and the singing peaks in the breeding season — hence the assumption about its purpose.",
+      "evidence": "The song is produced only by the male whales"
+    },
+    "34": {
+      "explain": "Having reached the end the whale returns to the beginning, so a performance runs with no real break for many hours.",
+      "evidence": "for many hours"
+    },
+    "35": {
+      "explain": "In the South Pacific new versions appear near Australia first and then travel east, reaching French Polynesia a year or two later.",
+      "evidence": "new versions of the song usually appear first near Australia"
+    },
+    "36": {
+      "explain": "Sperm whales exchange short click patterns — three clicks, a pause, two more — called codas, which identify family and clan.",
+      "evidence": "exchange short patterns of clicks"
+    },
+    "37": {
+      "explain": "Each orca pod has its own set of calls, learned by calves from their mothers, which is why related pods sound alike.",
+      "evidence": "its own dialect, in effect - and the calves learn it from their mothers"
+    },
+    "38": {
+      "explain": "The problem is not just loudness: engines and propellers occupy the low frequencies the large whales use for long-distance calls.",
+      "evidence": "precisely the frequencies that the large whales depend on for their long-distance calls"
+    },
+    "39": {
+      "explain": "A diving humpback lifts its tail clear of the water, and the black-and-white pattern on it differs in every animal — effectively a fingerprint.",
+      "evidence": "the pattern of black and white markings on the tail is different in every animal"
+    },
+    "40": {
+      "explain": "Listening no longer needs a boat: hydrophones anchored to the sea floor record continuously, and software sorts the calls automatically.",
+      "evidence": "networks of hydrophones - underwater microphones, anchored to the sea floor"
+    }
+  },
+  "mock9-reading": {
+    "1": {
+      "explain": "The Mesopotamian map is scratched onto a small clay tablet: a ring of ocean round a disc of land with Babylon at its heart.",
+      "evidence": "a small tablet of clay from Mesopotamia"
+    },
+    "2": {
+      "explain": "Ptolemy's idea was that a map could be rebuilt anywhere from nothing but a list of numbers, because every place had a pair of coordinates.",
+      "evidence": "gave every place he could learn about a pair of coordinates"
+    },
+    "3": {
+      "explain": "The cathedral mappae mundi placed Jerusalem at the centre and east at the top, with paradise on the upper rim.",
+      "evidence": "put Jerusalem at the centre of the circle"
+    },
+    "4": {
+      "explain": "Portolan charts were drawn on vellum, and on many the curve of the animal's neck is still visible along one edge.",
+      "evidence": "They were drawn on vellum"
+    },
+    "5": {
+      "explain": "The whole triangulation depends on one carefully measured short baseline on level ground; everything else is built outwards from it.",
+      "evidence": "measuring one short baseline across level ground with obsessive care"
+    },
+    "6": {
+      "explain": "The chain of triangles is fixed by reading angles with a theodolite, which is how thousands of square kilometres follow from one measured distance.",
+      "evidence": "whose angles were read with a theodolite"
+    },
+    "7": {
+      "explain": "TRUE: early maps recorded relationships — past that river, north of that mountain — without any consistent scale.",
+      "evidence": "without any consistent scale"
+    },
+    "8": {
+      "explain": "FALSE: 'Ptolemy himself surveyed none of it.' He worked from itineraries, sailing times and travellers' accounts, which is why his errors persisted.",
+      "evidence": "Ptolemy himself surveyed none of it"
+    },
+    "9": {
+      "explain": "FALSE: nobody consulted one before a journey. They were pictures of a moral order, not route-finding instruments.",
+      "evidence": "They were pictures of a moral order, not route-finding instruments"
+    },
+    "10": {
+      "explain": "NOT GIVEN: the passage says Chinese cartographers used a square grid centuries before Europe, but never says where the technique came from.",
+      "evidence": "official cartographers were already laying their country out on a square grid"
+    },
+    "11": {
+      "explain": "TRUE: the interior was left almost entirely blank, because it was of no use to anyone on a ship.",
+      "evidence": "the interior left almost entirely blank because it was of no use to anyone on a ship"
+    },
+    "12": {
+      "explain": "TRUE: the price of Mercator's projection is area distortion — Greenland swells to rival Africa, which is really fourteen times larger.",
+      "evidence": "on a Mercator map Greenland swells until it rivals Africa"
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage gives the Ordnance Survey's founding date and military purpose, but says nothing about selling maps to the public.",
+      "evidence": "it was begun by the army to map the vulnerable southern coast"
+    },
+    "14": {
+      "explain": "B: the hatchery stage — spores released onto twine in tanks of chilled seawater, then carried out to the longlines.",
+      "evidence": "In a hatchery, fertile fronds are induced to release spores"
+    },
+    "15": {
+      "explain": "D: Lindqvist's 'carbon loan, repaid in full within the year', and the researchers who are markedly cooler than the enthusiasts.",
+      "evidence": "That is not an argument against the crop, but it is an argument against the brochures"
+    },
+    "16": {
+      "explain": "A: over thirty-five million tonnes a year, mostly cultivated rather than gathered, with four countries producing most of it.",
+      "evidence": "Somewhere over thirty-five million tonnes of seaweed are now harvested each year"
+    },
+    "17": {
+      "explain": "C: the hydrocolloids — alginate, agar, carrageenan — in ice cream, toothpaste, paint and medicine capsules.",
+      "evidence": "They keep the crystals out of ice cream, hold toothpaste together"
+    },
+    "18": {
+      "explain": "F: Wijaya's warning that the industry should be breeding for variety now, while it is still small enough to change course.",
+      "evidence": "The industry should be breeding for variety now"
+    },
+    "19": {
+      "explain": "The opening paragraph's selling point: a crop that occupies no farmland, drinks no fresh water and takes no fertiliser.",
+      "evidence": "drinks no fresh water and takes no fertiliser"
+    },
+    "20": {
+      "explain": "The cycle starts on shore in a hatchery, where spores settle on fine twine wound around frames in tanks.",
+      "evidence": "The growing cycle starts on shore. In a hatchery"
+    },
+    "21": {
+      "explain": "The fronds strip nitrogen and phosphorus out of coastal water — nutrients that would otherwise feed oxygen-starving algal blooms.",
+      "evidence": "The fronds strip out nitrogen and phosphorus that have washed off farmland"
+    },
+    "22": {
+      "explain": "Planting a single variety densely across many hectares is 'an invitation to disease', which can sweep a crop in days.",
+      "evidence": "is an invitation to disease, which can sweep through a crop in days"
+    },
+    "23": {
+      "explain": "B: the closing line — for coastal communities watching their fisheries decline, even a modest high-value industry would be worth having. A is contradicted in paragraph D.",
+      "evidence": "For coastal communities watching their fisheries decline, even that would be worth having"
+    },
+    "24": {
+      "explain": "D: the fronds remove the nitrogen and phosphorus that cause algal blooms. Note that sheltering juvenile fish is not the same as increasing wild catches, so E goes too far.",
+      "evidence": "nutrients which would otherwise feed the algal blooms that starve estuaries of oxygen"
+    },
+    "25": {
+      "explain": "A: the harvest is about nine-tenths water and starts to spoil at once, so it must be dried or processed within hours.",
+      "evidence": "is around nine-tenths water and begins to spoil almost immediately"
+    },
+    "26": {
+      "explain": "C: labour is expensive in exactly the places where the new farms are being built, which is why analysts expect high-value niches rather than bulk tonnage.",
+      "evidence": "Labour costs are high in exactly the places where the new farms are being built"
+    },
+    "27": {
+      "explain": "B: counted across hundreds of stencils, the ratio is close to the modern figure, and the tooth scratches point the same way.",
+      "evidence": "counted across hundreds of such images, the ratio is close to the modern figure"
+    },
+    "28": {
+      "explain": "C: with hundreds of thousands of participants the expected single gene never appeared — instead dozens of locations each nudging the odds by a fraction of a percentage point.",
+      "evidence": "Instead they found dozens of locations, each nudging the odds by a fraction of a percentage point"
+    },
+    "29": {
+      "explain": "A: not coordination but rarity. The right-hander rarely meets mirrored angles of attack; the left-hander has faced the standard pattern since childhood.",
+      "evidence": "The explanation is not superior coordination but rarity itself"
+    },
+    "30": {
+      "explain": "D: older participants had grown up when switching was compulsory and were recorded as right-handed, so elderly left-handers were artificially scarce. Comparing people born in the same decade dissolved the gap.",
+      "evidence": "so the pool of elderly left-handers was artificially thin"
+    },
+    "31": {
+      "explain": "YES: the evidence is lists of famous left-handers — 'a method that would prove almost anything' — while controlled studies find small, inconsistent or absent differences.",
+      "evidence": "a method that would prove almost anything"
+    },
+    "32": {
+      "explain": "NO: the writer calls it pointless cruelty that produced anxiety and stammering without changing the underlying preference.",
+      "evidence": "now recognised as pointless cruelty that produced anxiety and stammering"
+    },
+    "33": {
+      "explain": "NOT GIVEN: the passage explains why left-handers are over-represented in face-to-face sports, but says nothing about pay.",
+      "evidence": "left-handers are represented at several times their share of the population"
+    },
+    "34": {
+      "explain": "YES: scissors, tin openers, notebooks, cameras, power tools and spiral bindings are all built around the right hand.",
+      "evidence": "are all designed around the right hand"
+    },
+    "35": {
+      "explain": "NO: the sporting advantage exists because the group is small and would shrink if it grew — the book-keeping the writer says helps keep the figure at ten per cent.",
+      "evidence": "which implies that it would shrink if left-handers ever became numerous"
+    },
+    "36": {
+      "explain": "D: a right-handed painter holding the pipe in the dominant hand stencils the left hand, and the ratio across hundreds of images matches today's.",
+      "evidence": "Whatever produces left-handedness, it has been producing it at much the same rate since before writing existed"
+    },
+    "37": {
+      "explain": "A: the genome-wide searches found dozens of locations, each with a tiny effect, together explaining only a small part of the variation.",
+      "evidence": "and together explaining only a small part of the variation"
+    },
+    "38": {
+      "explain": "F: the advantage belongs to the minority precisely because it is a minority.",
+      "evidence": "The advantage belongs to the minority precisely because it is a minority"
+    },
+    "39": {
+      "explain": "B: those older people grew up when switching was compulsory, so they had been recorded as right-handed — an artefact of upbringing, not health.",
+      "evidence": "Older people in the sample had grown up when switching was compulsory"
+    },
+    "40": {
+      "explain": "G: the mirror-image myth fails. Most left-handers process language in the left hemisphere exactly as right-handers do.",
+      "evidence": "The majority of left-handers process language in the left hemisphere exactly as right-handers do"
+    }
   }
 }
