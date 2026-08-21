@@ -1,0 +1,494 @@
+{
+  "mock1-listening": {
+    "1": {
+      "explain": "The name is spelled out letter by letter, which is the examiner's signal that spelling is being tested: S-A-L-I-M-O-V-A.",
+      "evidence": "Yes, it's Salimova. That's S, A, L, I, M, O, V, A."
+    },
+    "2": {
+      "explain": "Three levels are offered — beginner, intermediate and advanced — and the caller rules out the other two by saying she has never really swum before.",
+      "evidence": "so it would have to be the beginner class, please",
+      "vocab": [
+        "I've never really swum before",
+        "a complete newcomer"
+      ]
+    },
+    "3": {
+      "explain": "A correction: Thursday is said first and then cancelled. 'Used to meet' and 'our old leaflets still say so' both mark it as out of date, and the new day is Friday.",
+      "evidence": "from this month the classes take place every Friday evening instead",
+      "vocab": [
+        "used to meet",
+        "no longer"
+      ]
+    },
+    "4": {
+      "explain": "Six o'clock belongs to the intermediate group, not to hers. The word 'but' separates the distractor from the answer.",
+      "evidence": "The intermediate group goes in at six, but your lessons start at seven o'clock sharp"
+    },
+    "5": {
+      "explain": "Eight weeks is a friend's course somewhere else, offered as a comparison. This course is longer.",
+      "evidence": "The full course lasts for twelve weeks",
+      "vocab": [
+        "the full course lasts",
+        "length of course"
+      ]
+    },
+    "6": {
+      "explain": "One hundred and ten thousand is the advanced squad's price, given first to catch you out. Hers is the beginner price.",
+      "evidence": "the beginner one, is ninety thousand som per month"
+    },
+    "7": {
+      "explain": "Cash is raised by the caller and then refused; the centre changed its system, so payment must be by card.",
+      "evidence": "payment must be made by card",
+      "vocab": [
+        "we can't accept cash",
+        "cash is not accepted"
+      ]
+    },
+    "8": {
+      "explain": "The centre provides the equipment — floats, kickboards — so the only thing students supply is a towel.",
+      "evidence": "students must bring their own towel"
+    },
+    "9": {
+      "explain": "'For a small fee' in the recording matches the note's 'for a small fee': the thing rented at the desk is a locker.",
+      "evidence": "a locker can be rented at the front desk for a small fee"
+    },
+    "10": {
+      "explain": "The membership form needs one small photo, the passport kind. 'Photograph' is also accepted.",
+      "evidence": "please bring one small photo with you to the first lesson"
+    },
+    "11": {
+      "explain": "Free for under-eighteens, stated with 'completely free' and 'no charge at all'. Printing costs two hundred som a page, the studio has an hourly fee, and online reserving needs a paid card — so B, C and E are all charged for.",
+      "evidence": "Joining the library is completely free for anyone under eighteen"
+    },
+    "12": {
+      "explain": "The summer events in the garden are the other free thing, and the guide adds that you do not even need to be a member.",
+      "evidence": "entry to all of those summer events is free"
+    },
+    "13": {
+      "explain": "The borrowing limit rose from eight books to ten. Opening hours and the cafe menu are both raised as rumours and then denied, so A and C are wrong.",
+      "evidence": "From January, you may borrow up to ten",
+      "vocab": [
+        "you may borrow up to ten",
+        "a higher borrowing limit"
+      ]
+    },
+    "14": {
+      "explain": "The new story corner for children is the second change, and the guide stresses that nothing like it existed before. The tour time changed only for today, so D is not a change to the library.",
+      "evidence": "downstairs we've built a brand new story corner for children",
+      "vocab": [
+        "story corner",
+        "storytelling space"
+      ]
+    },
+    "15": {
+      "explain": "The guide is at the main entrance facing in. The children's section is on the right as you come in, in the front corner, beside the information desk.",
+      "evidence": "The large room beside the information desk, in the front corner, is the children's section"
+    },
+    "16": {
+      "explain": "The furthest point from the entrance: at the back, in the left-hand corner. The guide explains the position — deliberately far from the door, to keep it quiet.",
+      "evidence": "Right at the back, in the left-hand corner, is the computer room"
+    },
+    "17": {
+      "explain": "'Back at this end' returns you to the entrance end of the building; the room is on the left, just past the cafe.",
+      "evidence": "Back at this end, on your left, just past the cafe"
+    },
+    "18": {
+      "explain": "Middle of the building, tucked beside the staircase on its far side. The guide gives the reason — it is soundproofed, so it had to sit away from the windows.",
+      "evidence": "The small room tucked in right beside it, on its far side, is the recording studio"
+    },
+    "19": {
+      "explain": "Straight past the stairs to the back wall, in the centre: the room that leads out to the garden.",
+      "evidence": "the room directly ahead of you, in the centre, leads out to the garden"
+    },
+    "20": {
+      "explain": "The back corner on the right, identified by the tall windows over the river.",
+      "evidence": "In the back corner on the right, with the tall windows over the river, is the reading hall"
+    },
+    "21": {
+      "explain": "Both wrong numbers are said aloud first: ten was last term's science fair, twenty is 'just a rumour'. Only fifteen is attributed to the teacher.",
+      "evidence": "The teacher told me herself yesterday that it must last fifteen minutes"
+    },
+    "22": {
+      "explain": "Paper is rejected because everyone will choose it, glass because it is 'a bit boring'. Plastic is the one they settle on, and Aziz agrees immediately.",
+      "evidence": "I think we should focus on plastic",
+      "vocab": [
+        "let's focus on",
+        "decide to focus on"
+      ]
+    },
+    "23": {
+      "explain": "The long-questions worry is Aziz's, and Malika dismisses it — only eight questions, mostly tick-boxes. Her own worry is the response rate, and she backs it with last year's canteen survey.",
+      "evidence": "that too few people will answer it at all",
+      "vocab": [
+        "too few people will answer",
+        "not enough students will respond"
+      ]
+    },
+    "24": {
+      "explain": "Tuesday is the biology test, and Wednesday is the students' own private deadline for checking. The teacher's deadline is Thursday.",
+      "evidence": "The teacher wants the slides by Thursday"
+    },
+    "25": {
+      "explain": "Aziz offers to draft them and Malika takes the job off him, giving her reason: she covered questionnaires in maths club.",
+      "evidence": "I'll design the survey questions myself"
+    },
+    "26": {
+      "explain": "Aziz claims the posters, and the detail confirms it — his cousin works at a print shop.",
+      "evidence": "Then I'll take care of producing the posters"
+    },
+    "27": {
+      "explain": "Malika is nervous about going alone, and Aziz proposes going together — one asking, one writing.",
+      "evidence": "Let's interview her together then",
+      "vocab": [
+        "together",
+        "both of us"
+      ]
+    },
+    "28": {
+      "explain": "Malika takes the charts too, because she will already have the survey data in her spreadsheet. Aziz declines outright.",
+      "evidence": "I'll turn them into the charts as well",
+      "vocab": [
+        "turn them into charts",
+        "producing the charts"
+      ]
+    },
+    "29": {
+      "explain": "Aziz takes the conclusion in exchange for giving up the charts, and already has ideas for it.",
+      "evidence": "I'll write the final section",
+      "vocab": [
+        "the final section",
+        "the conclusion"
+      ]
+    },
+    "30": {
+      "explain": "The rehearsal is explicitly joint — 'both of us', a full run-through with a stopwatch the evening before.",
+      "evidence": "We'll practise the timing together the evening before - both of us, with a stopwatch"
+    },
+    "31": {
+      "explain": "The lecturer stresses that nobody drank tea for pleasure at first: it was a bitter tonic taken in doses, listed by medical writers alongside herbs.",
+      "evidence": "Tea was first drunk as a kind of medicine",
+      "vocab": [
+        "a bitter tonic",
+        "medicine"
+      ]
+    },
+    "32": {
+      "explain": "The problem is transport — loose leaves are bulky and spoil — so the leaves were pressed into hard blocks that survived months on the road.",
+      "evidence": "early traders pressed the tea leaves into hard bricks"
+    },
+    "33": {
+      "explain": "The century is given directly, and the lecturer adds the context: this is when coffee and chocolate arrived in Europe too.",
+      "evidence": "Tea reached Europe in the seventeenth century"
+    },
+    "34": {
+      "explain": "Tea was too valuable to leave out, so it was locked away and the lady of the house kept the key at her waist.",
+      "evidence": "tea was kept in a locked box"
+    },
+    "35": {
+      "explain": "The ships are named as the lecturer explains why speed mattered: the first cargo home each season sold highest.",
+      "evidence": "fast, slender sailing ships known as clippers",
+      "vocab": [
+        "fast, slender sailing ships",
+        "fast sailing ships"
+      ]
+    },
+    "36": {
+      "explain": "The note says the tea bag was invented in America by ______. The lecturer says it happened entirely by accident: the merchant never intended the bags to be brewed.",
+      "evidence": "and it happened entirely by accident"
+    },
+    "37": {
+      "explain": "The sample bags were sewn by hand from silk, to make the samples look elegant — customers then dropped them straight into the water.",
+      "evidence": "he packed them in small silk bags"
+    },
+    "38": {
+      "explain": "India and Kenya are named too, but as the countries that follow. The largest producer is where the story began.",
+      "evidence": "The world's largest producer of tea is China"
+    },
+    "39": {
+      "explain": "The lecturer answers the students' usual question directly: the two teas are not botanically different.",
+      "evidence": "Green tea and black tea come from the very same plant"
+    },
+    "40": {
+      "explain": "The difference happens after picking. Black tea is left exposed to the air and fully oxidised; green tea is heated at once, which stops the process.",
+      "evidence": "it is caused by oxidation of the leaves"
+    }
+  },
+  "mock1-reading": {
+    "1": {
+      "explain": "TRUE: McLean is introduced as a former truck driver, and 'former' places the job before 1956, the year the ship sailed.",
+      "evidence": "a former truck driver from North Carolina",
+      "vocab": [
+        "a former truck driver",
+        "had worked in the trucking industry"
+      ]
+    },
+    "2": {
+      "explain": "FALSE: the ship was a converted oil tanker, not a vessel built for the purpose. 'Converted' means an existing ship was adapted, which contradicts 'built specially'.",
+      "evidence": "a converted oil tanker left Newark, New Jersey",
+      "vocab": [
+        "a converted oil tanker",
+        "built specially in a shipyard"
+      ]
+    },
+    "3": {
+      "explain": "TRUE: the passage states this almost word for word — time at the quayside could equal time at sea.",
+      "evidence": "a cargo ship might spend as long at the quayside as it did at sea",
+      "vocab": [
+        "at the quayside",
+        "in port"
+      ]
+    },
+    "4": {
+      "explain": "NOT GIVEN: dock workers' pay is mentioned only to say that theft was treated as an unofficial addition to it. Factory workers are never mentioned, so there is no comparison to judge.",
+      "evidence": "dock workers in some ports considered it an unofficial part of their wages"
+    },
+    "5": {
+      "explain": "FALSE: the passage says the opposite — sealing the box made pilfering much harder, not easier.",
+      "evidence": "pilfering became dramatically more difficult",
+      "vocab": [
+        "pilfering",
+        "stealing cargo"
+      ]
+    },
+    "6": {
+      "explain": "TRUE: 'not anyone's ideal' means no party got what it wanted; each merely accepted it. That matches 'satisfied nobody completely'.",
+      "evidence": "was not anyone's ideal, but it was everyone's acceptable second choice",
+      "vocab": [
+        "not anyone's ideal",
+        "satisfied nobody completely"
+      ]
+    },
+    "7": {
+      "explain": "FALSE: the work moved out of the city to deep-water terminals, and the docklands that once employed tens of thousands are now run by a handful of operators — fewer jobs, not more.",
+      "evidence": "whose docklands once employed tens of thousands, watched the work move to deep-water terminals outside the city"
+    },
+    "8": {
+      "explain": "The passage names the greatest cost directly, and the container was designed to attack it: time in port.",
+      "evidence": "attacked the greatest cost in ocean trade: time in port",
+      "vocab": [
+        "the greatest cost",
+        "the biggest expense"
+      ]
+    },
+    "9": {
+      "explain": "'Collapsed from weeks to hours' gives both ends of the change; the gap needs the second one.",
+      "evidence": "Loading time collapsed from weeks to hours",
+      "vocab": [
+        "collapsed",
+        "fell"
+      ]
+    },
+    "10": {
+      "explain": "The reason a standard was needed is put as a problem: a box that fitted one country's cranes but not another's was useless.",
+      "evidence": "A box that fitted one country's cranes but not another's was of little use"
+    },
+    "11": {
+      "explain": "The passage explains the migration of factories by cost, and names production costs specifically.",
+      "evidence": "Factories migrated to wherever production costs were lowest",
+      "vocab": [
+        "migrated",
+        "moved"
+      ]
+    },
+    "12": {
+      "explain": "'Before completion' in the passage is 'before they are finished' in the question; the thing crossed is oceans.",
+      "evidence": "complex products began to cross oceans several times before completion",
+      "vocab": [
+        "before completion",
+        "before they are finished"
+      ]
+    },
+    "13": {
+      "explain": "'A handful of' is the passage's way of saying a small number, and the workers are crane operators.",
+      "evidence": "run by a handful of crane operators",
+      "vocab": [
+        "a handful of",
+        "a small number of"
+      ]
+    },
+    "14": {
+      "explain": "A is 'An industry that grew quickly'. Paragraph A ends by saying vertical farms went from experiment to industry in under twenty years, with commercial operations in four countries — speed of growth is its point.",
+      "evidence": "have moved from experiment to industry in less than two decades",
+      "vocab": [
+        "in less than two decades",
+        "quickly"
+      ]
+    },
+    "15": {
+      "explain": "E is 'Saving land and water'. The paragraph opens on scarce land and water and then gives a figure for each: many times more food per square metre, and up to ninety-five per cent less water.",
+      "evidence": "The attraction is easiest to see in places where land and water are scarce",
+      "vocab": [
+        "scarce",
+        "in short supply"
+      ]
+    },
+    "16": {
+      "explain": "B is 'The problem of electricity'. The paragraph names the weakness in its first line and spends the rest on the cost of power and LEDs.",
+      "evidence": "The technology's weakness is equally easy to name: electricity",
+      "vocab": [
+        "the technology's weakness",
+        "the problem"
+      ]
+    },
+    "17": {
+      "explain": "D is 'What vertical farms choose to grow'. The paragraph lists what is grown and why. Do not be pulled to 'The crops of the future': the paragraph says the opposite, that staple crops are not expected to move indoors.",
+      "evidence": "This economic pressure explains what vertical farms actually grow"
+    },
+    "18": {
+      "explain": "C is 'Insurance for uncertain times'. The paragraph argues the real case is resilience when ports close or droughts strike, and uses the word 'insurance' itself.",
+      "evidence": "as an insurance policy against a more turbulent world",
+      "vocab": [
+        "a more turbulent world",
+        "uncertain times"
+      ]
+    },
+    "19": {
+      "explain": "The ninety-five per cent figure in the passage belongs to water consumption, which the closed systems recycle.",
+      "evidence": "cutting consumption by as much as ninety-five per cent",
+      "vocab": [
+        "consumption",
+        "use"
+      ]
+    },
+    "20": {
+      "explain": "'More than half of running costs' matches 'over half of what a farm spends to operate', and the passage attributes it to lighting.",
+      "evidence": "Lighting can account for more than half of a vertical farm's running costs",
+      "vocab": [
+        "running costs",
+        "what a farm spends to operate"
+      ]
+    },
+    "21": {
+      "explain": "The critics' point is conditional: the indoor salad is worse for the climate unless the electricity is renewable.",
+      "evidence": "unless the electricity comes from renewable sources"
+    },
+    "22": {
+      "explain": "The passage says these crops are sold at premium prices to nearby buyers; 'premium' is the word the summary needs.",
+      "evidence": "sold at premium prices to nearby restaurants and supermarkets",
+      "vocab": [
+        "premium prices",
+        "high prices"
+      ]
+    },
+    "23": {
+      "explain": "A is right: yield per square metre of ground is stated as dozens of times higher than a field. B is a trap — the passage says costs are the technology's weakness, not an advantage; D and E are never mentioned.",
+      "evidence": "A vertical farm can produce, per square metre of ground, dozens of times more food than an open field",
+      "vocab": [
+        "dozens of times more food",
+        "far higher yield"
+      ]
+    },
+    "24": {
+      "explain": "C is the other one: water use falls even more sharply than land use, by as much as ninety-five per cent.",
+      "evidence": "Water use falls even more sharply",
+      "vocab": [
+        "falls sharply",
+        "much lower consumption"
+      ]
+    },
+    "25": {
+      "explain": "B, the staples. The passage calls wheat, rice and potatoes hopelessly uneconomic indoors and adds that few researchers expect that to change soon — which is the 'near future' in the question.",
+      "evidence": "remain hopelessly uneconomic indoors, and few serious researchers expect that to change soon",
+      "vocab": [
+        "hopelessly uneconomic",
+        "unlikely to be grown economically"
+      ]
+    },
+    "26": {
+      "explain": "A, the leafy greens and herbs. They head the list of crops that dominate commercially, and the same sentence says these crops are sold at premium prices to nearby restaurants and supermarkets.",
+      "evidence": "Leafy greens, herbs and strawberries dominate",
+      "vocab": [
+        "nearby restaurants and supermarkets",
+        "restaurants and supermarkets nearby"
+      ]
+    },
+    "27": {
+      "explain": "NO: the writer says psychology long treated forgetting as noise to be minimised, and only reversed that view in the past two decades. 'Always regarded as useful' contradicts this.",
+      "evidence": "Psychology long shared this view, treating memory's losses as noise to be minimised",
+      "vocab": [
+        "noise to be minimised",
+        "a failure"
+      ]
+    },
+    "28": {
+      "explain": "YES: the writer states the job of memory as serving the present rather than storing the past, and builds the whole filter argument on it.",
+      "evidence": "A memory system's job is not to store the past but to serve the present",
+      "vocab": [
+        "serve the present",
+        "present needs"
+      ]
+    },
+    "29": {
+      "explain": "NOT GIVEN: retrieval-induced forgetting is described through experiments on people, but where or in what species it was first observed is never said.",
+      "evidence": "When people are asked to retrieve a particular memory repeatedly, related but competing memories become measurably harder to recall"
+    },
+    "30": {
+      "explain": "NO: the passage says erasing is work too — that is the point of the sentence, and the reason evolution would not pay for the machinery unless it mattered.",
+      "evidence": "erasing one, it turns out, is also work",
+      "vocab": [
+        "is also work",
+        "requires energy"
+      ]
+    },
+    "31": {
+      "explain": "NO: they report old grievances and embarrassments returning with full force for decades, and the passage says outright they do not describe it as a gift.",
+      "evidence": "old grievances and embarrassments return with their original force",
+      "vocab": [
+        "with their original force",
+        "as strongly as ever"
+      ]
+    },
+    "32": {
+      "explain": "B: a mind that kept everything equally clearly would face an impossible search problem. The leaking vessel (A) describes how forgetting is usually spoken of, and fading paint (C) is the old view of decay.",
+      "evidence": "would face an impossible search problem every time it tried to recall a name or a route"
+    },
+    "33": {
+      "explain": "A: the paint image is introduced with 'was long assumed', which marks it as the older understanding that the new research overturns.",
+      "evidence": "Forgetting was long assumed to be passive decay, the mental equivalent of paint fading in sunlight",
+      "vocab": [
+        "was long assumed",
+        "was once understood"
+      ]
+    },
+    "34": {
+      "explain": "B: PTSD is defined here as an inability to weaken fear memories. D is wrong because the passage mentions therapies that assist natural forgetting.",
+      "evidence": "the inability to weaken fear memories is one way of describing post-traumatic stress disorder"
+    },
+    "35": {
+      "explain": "C, persuaded. The writer reports the case approvingly, adds supporting reasoning of their own ('Evolution does not usually pay for machinery that serves no purpose'), and states the conclusion as fact in the final paragraph. Nothing in the text is dismissive or alarmed, and the writer is not left undecided.",
+      "evidence": "Remembering and forgetting, long cast as opponents, are better understood as partners in the same enterprise"
+    },
+    "36": {
+      "explain": "A, filter. The passage uses the word itself for the function of letting the irrelevant fade so the relevant stays findable.",
+      "evidence": "Forgetting, on this view, is a filter",
+      "vocab": [
+        "keeps the relevant findable",
+        "keeps useful memories easy to find"
+      ]
+    },
+    "37": {
+      "explain": "F, decay. 'Passive decay' is exactly what the new evidence contradicts, so it is what forgetting is 'far from being'.",
+      "evidence": "Forgetting was long assumed to be passive decay"
+    },
+    "38": {
+      "explain": "C, cells. The passage says identifiable cells actively dismantle memories in some much-studied species.",
+      "evidence": "identifiable cells that actively dismantle memories",
+      "vocab": [
+        "dismantle",
+        "take apart"
+      ]
+    },
+    "39": {
+      "explain": "D, fire. The contrast the writer draws is between a filter, which selects, and a fire, which destroys indiscriminately.",
+      "evidence": "the losses of dementia are not a filter but a fire"
+    },
+    "40": {
+      "explain": "E, partners. The last sentence rejects the idea that the two are opponents and calls them partners in one enterprise.",
+      "evidence": "are better understood as partners in the same enterprise",
+      "vocab": [
+        "long cast as opponents",
+        "seen as enemies"
+      ]
+    }
+  }
+}

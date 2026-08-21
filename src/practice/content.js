@@ -26,6 +26,7 @@
 //   }]
 // }
 
+import MOCK_EXPLAIN from "./mock-explanations.json";
 import { MOCK1_LISTENING } from "./mock1-listening.js";
 import { MOCK1_READING } from "./mock1-reading.js";
 import { MOCK1_WRITING } from "./mock1-writing.js";
@@ -262,7 +263,28 @@ const PRACTICE_READING = [
   PSET16_READING, PSET17_READING, PSET18_READING, PSET19_READING, PSET20_READING,
 ].map((t) => shelve(t, "practice-reading"));
 
-export const TESTS = [
+// Every practice set was authored with a per-question explanation and a
+// quoted line of evidence; the twelve mocks were not, so a mock mistake in
+// the notebook showed the right answer and no reason for it. The 960
+// explanations live in one JSON file rather than inline — folded into
+// twenty-four already-long paper files they would bury the questions, and
+// keeping them apart means the papers themselves stay diffable.
+const explained = (t) => {
+  const notes = MOCK_EXPLAIN[t.id];
+  if (!notes) return t;
+  return {
+    ...t,
+    sections: t.sections.map((s) => ({
+      ...s,
+      questions: s.questions.map((q) => {
+        const e = notes[q.n];
+        return e ? { ...q, ...e } : q;
+      }),
+    })),
+  };
+};
+
+const MOCKS = [
   MOCK1_LISTENING, MOCK1_READING, MOCK1_WRITING,
   MOCK2_LISTENING, MOCK2_READING, MOCK2_WRITING,
   MOCK3_LISTENING, MOCK3_READING,
@@ -275,6 +297,10 @@ export const TESTS = [
   MOCK10_LISTENING, MOCK10_READING,
   MOCK11_LISTENING, MOCK11_READING,
   MOCK12_LISTENING, MOCK12_READING,
+].map(explained);
+
+export const TESTS = [
+  ...MOCKS,
   ...PRACTICE_LISTENING,
   ...PRACTICE_READING,
   ...UPPER_FULL,
