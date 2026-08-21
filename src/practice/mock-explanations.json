@@ -1961,7 +1961,7 @@
   },
   "mock6-listening": {
     "1": {
-      "explain": "Spelled out on request: R-U-S-T-A-M-O-V-A.",
+      "explain": "The operator asks for the spelling, and it is given letter by letter: R-U-S-T-A-M-O-V-A. Whenever a name is spelled aloud, the spelling is what is being marked.",
       "evidence": "R, U, S, T, A, M, O, V, A. Rustamova."
     },
     "2": {
@@ -2281,6 +2281,334 @@
     "40": {
       "explain": "NO: the honest summary offered is a family of partly solved problems, with much genuinely unknown.",
       "evidence": "animal navigation is not one solved problem but a family of partly solved ones"
+    }
+  },
+  "mock7-listening": {
+    "1": {
+      "explain": "Spelled out, with a warning attached: R-A-K-H-I-M-O-V, and the caller points out there is no C in it.",
+      "evidence": "People often want to put a C in it, but there isn't one."
+    },
+    "2": {
+      "explain": "The leaflet said Tuesday and the leaflet is out of date — that group filled in the first week. A second group runs on Thursday.",
+      "evidence": "and that one runs on Thursday evenings"
+    },
+    "3": {
+      "explain": "The ninth was the original plan; the tutor asked for it to be brought forward.",
+      "evidence": "so the first class is now the second of September"
+    },
+    "4": {
+      "explain": "It used to end at eight and was extended by half an hour after complaints that people were sent home just as the work got interesting.",
+      "evidence": "Half past six until half past eight"
+    },
+    "5": {
+      "explain": "Eight weeks was the original programme. Ten works better because the pieces need time to dry and be fired.",
+      "evidence": "Ten weeks. It was eight weeks when we first ran the programme"
+    },
+    "6": {
+      "explain": "Four hundred thousand was last year's price, before the spring rise. The current fee includes all clay and firing.",
+      "evidence": "Four hundred and fifty thousand som for the ten weeks"
+    },
+    "7": {
+      "explain": "Aprons are not supplied and clay is unavoidable, so the studio asks for an old shirt.",
+      "evidence": "Just an old shirt. We don't supply aprons"
+    },
+    "8": {
+      "explain": "The tutor's advice concerns rings specifically — wet clay gets underneath them. A watch is fine as long as it goes in the bag.",
+      "evidence": "Do take your rings off before you sit at the wheel"
+    },
+    "9": {
+      "explain": "The street is permit holders only after six, and the library car park is staff only in the evenings. The free one is behind the bank.",
+      "evidence": "There's a free car park behind the bank"
+    },
+    "10": {
+      "explain": "Paper forms are the old way. Enrolment is the form on the website, plus a hundred thousand som deposit.",
+      "evidence": "Just complete the enrolment form on the website"
+    },
+    "11": {
+      "explain": "B. The cinema answer is 'half right' but it was the building's second life, from 1952 to 1980. It went up in 1890 as the covered fruit and vegetable market. The church is next door.",
+      "evidence": "these walls went up as the covered market for this part of the city"
+    },
+    "12": {
+      "explain": "C. Forty-five minutes is when doors open to the public; one hour was the old rule and proved too tight. Volunteers now come ninety minutes before.",
+      "evidence": "please arrive an hour and a half before the performance begins. Ninety minutes."
+    },
+    "13": {
+      "explain": "A. Fresh air and water are named as the instinctive responses and forbidden — both can make matters worse. The duty manager decides about an ambulance.",
+      "evidence": "Find the duty manager, or radio for one. That is the whole of the rule."
+    },
+    "14": {
+      "explain": "C. The programme is the box office's job, and rehearsals are enjoyable but not much help on a busy Friday. 'A volunteer who knows the building is worth three who know the programme.'",
+      "evidence": "The genuinely useful preparation is duller than either: learn your way around the building"
+    },
+    "15": {
+      "explain": "Off the foyer, on the right as you come in through the main entrance — the corner room whose glass window is visible from the street.",
+      "evidence": "The one on your right as you come in, in that corner of the building, is the box office"
+    },
+    "16": {
+      "explain": "Directly across the foyer from the box office, on the left as you enter. This is where volunteers sign in and leave coats.",
+      "evidence": "Directly opposite the box office, on the other side of the foyer, on your left as you enter, is the volunteers' room"
+    },
+    "17": {
+      "explain": "Left-hand corridor, far end, beside the stage. The first room on that corridor is only a storeroom — a deliberate distractor.",
+      "evidence": "to the room beside the stage, and that one is the rehearsal studio"
+    },
+    "18": {
+      "explain": "One of the two rooms flanking the stage at the top of the plan — the one on the same side as the rehearsal studio, where actors wait to go on.",
+      "evidence": "The one on the left, the same side as the rehearsal studio, is the green room"
+    },
+    "19": {
+      "explain": "The other room beside the stage, across from the green room. You need a key from the volunteers' room because the door locks behind you.",
+      "evidence": "And the room across from it, on the other side of the stage, is the costume store"
+    },
+    "20": {
+      "explain": "Right-hand corridor, the first room, nearest the foyer. The dressing rooms lie beyond it, closer to the stage.",
+      "evidence": "that is the lighting control room"
+    },
+    "21": {
+      "explain": "B. Both founders had job offers, so A is out, and the first bank refused them. The trigger was watching vans crawl for twenty minutes down a street a bicycle would cross in three.",
+      "evidence": "they were sitting in a cafe watching delivery vans crawling down the same street"
+    },
+    "22": {
+      "explain": "A. Restaurants are 'what everybody remembers' but only appear in year two, and pharmacies in year three. Nearly seventy per cent of first-year income came from law firms.",
+      "evidence": "nearly seventy per cent of their income came from law firms"
+    },
+    "23": {
+      "explain": "C. They were never the cheap option, and Timur dismisses friendly riders as something every small firm claims. The advantage was a guaranteed thirty-minute delivery across the centre.",
+      "evidence": "For me it's simply how fast they were in the centre"
+    },
+    "24": {
+      "explain": "A. The rider's accident happened in year three but insurance covered it, and the new traffic rules actually helped. A rival halved prices and took a third of the customers in one quarter.",
+      "evidence": "a rival firm arriving and cutting its prices to about half of what Pedal Express charged"
+    },
+    "25": {
+      "explain": "B. Rider pay stayed the same and the second loan was refused. They went specialist: blood samples, urgent prescriptions and test results the cheap rival could not handle.",
+      "evidence": "What saved them was going specialist: medical deliveries"
+    },
+    "26": {
+      "explain": "C. Expansion has only two paragraphs of data, and rider training is already in section two. The environmental angle has real figures in the appendix.",
+      "evidence": "Then let's take the environmental angle"
+    },
+    "27": {
+      "explain": "A. Online food ordering is the one Timur calls solid — the market has roughly tripled in five years and somebody has to carry it.",
+      "evidence": "The first one is solid, though - people ordering food online"
+    },
+    "28": {
+      "explain": "C. Half the cities in the article close their centres to vans during the day, and that is what creates the work. Cheaper bikes is denied, government support does not exist, and the environmental motive is what people say in surveys but not what they buy on.",
+      "evidence": "Half the cities in the article have closed their centres to vans during the day"
+    },
+    "29": {
+      "explain": "B. The charts are 'pretty, and they're empty' — no revenue on them at all — so the financial data has to go in.",
+      "evidence": "We need to put the financial data into them"
+    },
+    "30": {
+      "explain": "E. The introduction was written in week one and promises a different assignment. Checking is finished, the founder was interviewed by video, and there is nothing left to see at the office.",
+      "evidence": "It needs rewriting from the beginning"
+    },
+    "31": {
+      "explain": "On warm coasts the work was almost free: sea water trapped in shallow pools, and the evaporation done by the sun.",
+      "evidence": "because the evaporation was done by the sun"
+    },
+    "32": {
+      "explain": "Boiling brine was expensive not in labour but in fuel — whole forests around the northern salt towns were felled and never grew back.",
+      "evidence": "the boiling consumed vast quantities of wood"
+    },
+    "33": {
+      "explain": "Slabs cut in the middle of the desert travelled south by camel caravan, sometimes several thousand animals together, on journeys of forty days.",
+      "evidence": "carried south by caravans of camels"
+    },
+    "34": {
+      "explain": "The legendary exchange rate. It makes sense once you know those southern kingdoms had gold in the rivers but no salt at all.",
+      "evidence": "salt was traded for an equal weight of gold"
+    },
+    "35": {
+      "explain": "Roman soldiers got an allowance to buy salt, and the Latin sal still sits inside the word for monthly pay.",
+      "evidence": "sits inside the word we still use for the money we earn each month: salary"
+    },
+    "36": {
+      "explain": "Before refrigeration the problem was surviving the winter, and salting was the main way of storing meat and fish.",
+      "evidence": "salt was the main way of storing meat and fish"
+    },
+    "37": {
+      "explain": "Bacteria need water to grow and salt draws it out — so what salting removes is the moisture, and without it the food lasts months.",
+      "evidence": "It is the moisture, then, that salting removes"
+    },
+    "38": {
+      "explain": "Salted cod, dried hard as a board, fed generations of sailors on voyages of a year or more, and made the great sea crossings possible.",
+      "evidence": "was the food that fed generations of sailors"
+    },
+    "39": {
+      "explain": "The gabelle fell as heavily on poor households as rich ones and varied wildly between provinces; historians count it among the grievances behind 1789.",
+      "evidence": "among the grievances that helped provoke the Revolution of seventeen eighty-nine"
+    },
+    "40": {
+      "explain": "Gandhi picked up natural salt from the beach and broke the law by doing so, because the British administration held the exclusive right to produce salt in India.",
+      "evidence": "because the British administration held a monopoly on salt in India"
+    }
+  },
+  "mock7-reading": {
+    "1": {
+      "explain": "The parasol was a badge of status: the bigger the canopy the more important its owner, and ordinary people were not entitled to its shade at all.",
+      "evidence": "the parasol was above all a mark of rank"
+    },
+    "2": {
+      "explain": "Paper stretched over bamboo ribs soaks up rain — until it is coated with oil, at which point it sheds water instead.",
+      "evidence": "they began coating the paper with oil, so that it shed water"
+    },
+    "3": {
+      "explain": "A man under an umbrella was thought to be confessing that he could not afford a carriage, and could expect open laughter in the street.",
+      "evidence": "But it was firmly understood that umbrellas were for women"
+    },
+    "4": {
+      "explain": "Passers-by jeered, but the coachmen had money at stake: a man who stayed dry under his own roof would never hire a cab in a shower.",
+      "evidence": "the fiercest hostility came from the city's coachmen"
+    },
+    "5": {
+      "explain": "Whalebone was the alternative to wood, and the passage says it was expensive and cracked easily — a gust could leave a ruined bird-cage on a stick.",
+      "evidence": "with a frame of wood or whalebone"
+    },
+    "6": {
+      "explain": "Fox's 1852 patent was a frame of curved steel ribs, U-shaped in section — lighter, stronger and far cheaper than whalebone.",
+      "evidence": "patented a frame of curved steel ribs"
+    },
+    "7": {
+      "explain": "FALSE: the earliest umbrellas were parasols, built to block sunlight. Rain protection came much later, and first in China.",
+      "evidence": "The earliest umbrellas were parasols, built to block sunlight rather than water"
+    },
+    "8": {
+      "explain": "TRUE: Chinese sources describe collapsible models whose ribs slid and folded along the stick — close to the modern mechanism.",
+      "evidence": "Chinese sources also describe collapsible models whose ribs could slide and fold"
+    },
+    "9": {
+      "explain": "TRUE: he began in the 1750s and kept it up 'for the next three decades', which is about thirty years.",
+      "evidence": "publicly, unapologetically, and for the next three decades",
+      "vocab": [
+        "three decades",
+        "about thirty years"
+      ]
+    },
+    "10": {
+      "explain": "FALSE: the passage is explicit that he had no commercial interest — he simply preferred to arrive dry.",
+      "evidence": "He had no commercial interest in the object"
+    },
+    "11": {
+      "explain": "NOT GIVEN: the passage describes what Fox patented and how well it worked, but says nothing about where his idea came from.",
+      "evidence": "when Samuel Fox, an English wire manufacturer, patented a frame of curved steel ribs"
+    },
+    "12": {
+      "explain": "TRUE: the telescopic design of the 1920s made the umbrella small enough for a pocket or handbag.",
+      "evidence": "creating the folding umbrella small enough for a pocket or a handbag"
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage covers mass production and cheapness, but never says where today's umbrellas are manufactured.",
+      "evidence": "mass production made the umbrella cheap enough to lose without regret"
+    },
+    "14": {
+      "explain": "B: the paragraph describes both methods and then explains reverse osmosis in detail — pressure, membrane, salt held back.",
+      "evidence": "The membrane's pores are so small that water molecules slip through while the dissolved salt is held back"
+    },
+    "15": {
+      "explain": "C: better membranes plus energy-recovery devices, and Rahman's figures — fifteen kilowatt-hours a cubic metre in the 1970s, under three today.",
+      "evidence": "which capture the pressure still stored in the outgoing brine stream"
+    },
+    "16": {
+      "explain": "A: twenty thousand plants in over a hundred and fifty countries, output doubled within a decade, three hundred million people relying on them.",
+      "evidence": "their combined output has roughly doubled within a decade"
+    },
+    "17": {
+      "explain": "D: the remedies at the end of the paragraph — screens, slower intakes, diffusers, and outfalls in deep water with strong currents.",
+      "evidence": "operators can fit screens and slow the speed of their intakes"
+    },
+    "18": {
+      "explain": "F: Ortega's container-sized solar unit supplying an island community that has never had a reliable source of fresh water.",
+      "evidence": "can now supply an island community that has never had a reliable source of fresh water"
+    },
+    "19": {
+      "explain": "Reverse osmosis works by force: sea water is driven at very high pressure against the membrane.",
+      "evidence": "sea water is forced at very high pressure against a fine synthetic membrane"
+    },
+    "20": {
+      "explain": "The synthetic membrane does the separating — its pores pass water molecules and stop dissolved salt.",
+      "evidence": "against a fine synthetic membrane"
+    },
+    "21": {
+      "explain": "What is left behind is brine, roughly twice as salty as the ocean, and it is piped back out to sea.",
+      "evidence": "a concentrated brine roughly twice as salty as the ocean"
+    },
+    "22": {
+      "explain": "The energy-recovery device captures pressure still held in the outgoing brine and reuses it on the next batch, which is what cut running costs so sharply.",
+      "evidence": "energy-recovery devices, which capture the pressure still stored in the outgoing brine stream"
+    },
+    "23": {
+      "explain": "The newest plants sit beside solar farms, and the container-sized units run entirely off their own panels with no grid connection.",
+      "evidence": "driven entirely by their own solar panels and needing no connection to any grid"
+    },
+    "24": {
+      "explain": "A, Rahman. She supplies the figures — around fifteen kilowatt-hours per cubic metre in the 1970s against under three today — and calls it the difference between emergency and city technology.",
+      "evidence": "The best plants today manage it with less than three"
+    },
+    "25": {
+      "explain": "C, Haddad. Her point is that the discharge is invisible from the beach, so its effects go underestimated — and her surveys found changes more than a kilometre from some outfalls.",
+      "evidence": "its effects are routinely underestimated"
+    },
+    "26": {
+      "explain": "D, Ortega. She sees the significance in the small machines: the future is not only giant plants for giant cities.",
+      "evidence": "The future of desalination is not only giant plants for giant cities"
+    },
+    "27": {
+      "explain": "D: fewer than one laugh in five followed anything resembling a joke. The rest came after greetings, farewells and flat observations.",
+      "evidence": "Fewer than one laugh in five followed anything that could generously be described as a joke"
+    },
+    "28": {
+      "explain": "B: the finding the passage calls most striking — the speaker laughed noticeably more often than the people listening.",
+      "evidence": "the person speaking laughed noticeably more often than the people listening"
+    },
+    "29": {
+      "explain": "A: primatologists have long treated the panting of young apes during chasing and tickling as laughter's direct ancestor.",
+      "evidence": "that primatologists have long treated as laughter's direct ancestor"
+    },
+    "30": {
+      "explain": "C: some claims have partial support, but the studies are small and short and cannot isolate laughter from everything else that differs between people.",
+      "evidence": "The honest summary is that the evidence remains limited"
+    },
+    "31": {
+      "explain": "NO: the everyday theory is set up in the first paragraph precisely so it can be dismantled — what predicted laughter was company, not wit.",
+      "evidence": "What predicted laughter was not wit but company"
+    },
+    "32": {
+      "explain": "YES: humans and these apes last shared an ancestor millions of years ago, so laughter in some form predates humanity.",
+      "evidence": "laughter in some form is almost certainly older than humanity itself"
+    },
+    "33": {
+      "explain": "NOT GIVEN: the passage compares speakers with listeners, groups with solitude, and juniors with superiors — but never men with women.",
+      "evidence": "people laughed around thirty times more often with others than when they were alone"
+    },
+    "34": {
+      "explain": "YES: because laughter advertises who belongs, it can advertise who does not — the writer adds that most adults can date their oldest social wounds to that sound.",
+      "evidence": "the shared laughter of a group can be aimed at an outsider as effectively as any insult"
+    },
+    "35": {
+      "explain": "NO: the closing lines say the opposite — judging laughter by blood pressure misses the point. 'Its business was never really the body.'",
+      "evidence": "Its business was never really the body. Its business is the bond."
+    },
+    "36": {
+      "explain": "F, speech. The recordings put laughter inside ordinary conversation — 'less like applause, and more like punctuation'.",
+      "evidence": "It belongs to speech, woven through ordinary conversation"
+    },
+    "37": {
+      "explain": "D, play. The panting appears during chasing and tickling — the rough-and-tumble games that make human children laugh too.",
+      "evidence": "was to serve as a signal during rough-and-tumble play"
+    },
+    "38": {
+      "explain": "E, signal. Its original job was to say that the wrestling, however fierce it looked, was not a real attack.",
+      "evidence": "an unmistakable message that the chasing and wrestling, however fierce it looked, was not a real attack"
+    },
+    "39": {
+      "explain": "H, bonding. A wave of laughter synchronises a group's mood in seconds and works like social grooming that reaches many people at once.",
+      "evidence": "it works as a kind of social grooming that can reach many companions at once"
+    },
+    "40": {
+      "explain": "C, medicine. The writer treats the therapy claims sceptically: small, short studies, modest effects, and no substitute for exercise.",
+      "evidence": "In recent years laughter has also been marketed as medicine"
     }
   }
 }
