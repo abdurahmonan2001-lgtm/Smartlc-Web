@@ -10,11 +10,13 @@
 // the band the examiner awarded. They are held in calibration-scripts.json
 // next to this file. Four Academic scripts, bands 4 to 7.5.
 //
-// Usage — the key never goes on the command line, so it stays out of shell
-// history:
-//     export ANTHROPIC_API_KEY=sk-ant-...        (Git Bash)
-//     $env:ANTHROPIC_API_KEY = "sk-ant-..."      (PowerShell)
+// Usage:
 //     node scripts/calibrate-writing.mjs
+//
+// The key is read from ANTHROPIC_API_KEY, either already in the environment
+// or from the .env file beside package.json. .env is covered by .gitignore,
+// so a key put there cannot be committed by accident — but it is a real
+// secret sitting in a real file, so remove the line once the run is done.
 //
 // Pass one or more script ids to grade just those. To compare a rubric change
 // against the version before it, run this, then `git stash` the change and run
@@ -26,11 +28,34 @@ import { gradeTask } from '../api/mock-writing-grade.js'
 
 const HERE = import.meta.dirname
 const SET = JSON.parse(fs.readFileSync(path.join(HERE, 'calibration-scripts.json'), 'utf8'))
-const key = process.env.ANTHROPIC_API_KEY
+
+// Vite loads .env for the app, but a plain node script gets nothing, so read
+// it here. Values may be quoted and may contain '=' (keys often do), hence the
+// split on the FIRST '=' only.
+const fromEnvFile = (name) => {
+  for (const f of ['.env', '.env.local']) {
+    const p = path.join(HERE, '..', f)
+    if (!fs.existsSync(p)) continue
+    for (const line of fs.readFileSync(p, 'utf8').split(/\r?\n/)) {
+      const at = line.indexOf('=')
+      if (at < 1 || line.trimStart().startsWith('#')) continue
+      if (line.slice(0, at).trim() !== name) continue
+      return line.slice(at + 1).trim().replace(/^["']|["']$/g, '')
+    }
+  }
+  return ''
+}
+
+const key = process.env.ANTHROPIC_API_KEY || fromEnvFile('ANTHROPIC_API_KEY')
 if (!key) {
-  console.error('ANTHROPIC_API_KEY is not set. See the header of this file.')
+  console.error('No ANTHROPIC_API_KEY found.')
+  console.error('Add a line to the .env file next to package.json:')
+  console.error('    ANTHROPIC_API_KEY=sk-ant-...')
   process.exit(2)
 }
+// Never print the key itself. A fingerprint is enough to tell two keys apart
+// when one of them turns out to be the dead one — which has happened here.
+console.log(`key ...${key.slice(-4)}, ${key.length} chars\n`)
 
 const only = process.argv.filter((a) => !a.startsWith('--'))
 const scripts = SET.filter((s) => !only.length || only.includes(s.id))
