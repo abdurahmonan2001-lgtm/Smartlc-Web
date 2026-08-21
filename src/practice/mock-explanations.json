@@ -2937,7 +2937,7 @@
   },
   "mock9-listening": {
     "1": {
-      "explain": "Spelled out on request: N-A-Z-A-R-O-V-A.",
+      "explain": "The clerk asks for the spelling and the caller gives it letter by letter: N-A-Z-A-R-O-V-A. A name spelled aloud is always a spelling question.",
       "evidence": "N, A, Z, A, R, O, V, A. Nazarova."
     },
     "2": {
@@ -3257,6 +3257,330 @@
     "40": {
       "explain": "G: the mirror-image myth fails. Most left-handers process language in the left hemisphere exactly as right-handers do.",
       "evidence": "The majority of left-handers process language in the left hemisphere exactly as right-handers do"
+    }
+  },
+  "mock10-listening": {
+    "1": {
+      "explain": "The job is mainly serving at tables, but the team is small, so there is washing up and simple preparation to help with as well.",
+      "evidence": "there's also some help needed in the kitchen"
+    },
+    "2": {
+      "explain": "A self-correction: Sunday is said first and immediately withdrawn — the cafe stopped opening on Sundays in January.",
+      "evidence": "We stopped opening on Sundays back in January. Friday and Saturday"
+    },
+    "3": {
+      "explain": "Ten is when the doors close to customers, which is already printed in the notes. The shift itself ends an hour later, after clearing and cleaning.",
+      "evidence": "so the shift officially ends at eleven o'clock"
+    },
+    "4": {
+      "explain": "Twenty-five thousand is the two-week trial rate and is already in the notes. The normal rate follows the trial.",
+      "evidence": "which is twenty-eight thousand"
+    },
+    "5": {
+      "explain": "Every shift includes a free meal, cooked for the staff at half past five before the rush starts.",
+      "evidence": "you get a free meal on every shift"
+    },
+    "6": {
+      "explain": "Black trousers and a white shirt are the worker's own; the cafe supplies a green apron with its name on the front.",
+      "evidence": "And we provide an apron, a green one with the cafe's name on the front"
+    },
+    "7": {
+      "explain": "Spelled out unprompted: R-A-S-H-I-D-O-V.",
+      "evidence": "R - A - S - H - I - D - O - V. Rashidov."
+    },
+    "8": {
+      "explain": "The seventeenth is given and then withdrawn — the manager is at a food fair that week. Interviews are the following Tuesday.",
+      "evidence": "It'll be the following Tuesday, the twenty-fourth of March"
+    },
+    "9": {
+      "explain": "A CV is explicitly not needed, since the cafe has its own application form. What to bring is a reference letter from a previous employer.",
+      "evidence": "But do bring a reference, a letter from a previous employer"
+    },
+    "10": {
+      "explain": "The cafe is shut on Tuesday afternoons so the front door is locked. The side door is the one next to the bakery.",
+      "evidence": "Come round to the side door - it's the one right next to the bakery"
+    },
+    "11": {
+      "explain": "A. A single meeting point was tried two years ago and was chaos, and evening walks continue as before. The change is length: ten days instead of seven, covering two weekends.",
+      "evidence": "for the first time it will run for ten days instead of seven"
+    },
+    "12": {
+      "explain": "C. The library can no longer manage bookings, and the website shows the walks but cannot take sign-ups. Booking is at the tourist office on Market Street.",
+      "evidence": "please call in at the tourist office on Market Street"
+    },
+    "13": {
+      "explain": "A. Lunch is unnecessary on the longer walks because they include a food stop, and the forecast is dry so waterproofs are not needed. Water is the requirement — there is nowhere to fill a bottle.",
+      "evidence": "you must bring something to drink"
+    },
+    "14": {
+      "explain": "B. Footpath repairs were last year's spending and the visitors' map was paid for by the town council. This year's fees buy new signposts for the whole network.",
+      "evidence": "everything we raise will buy new signposts for the whole network of paths"
+    },
+    "15": {
+      "explain": "A. Level all the way on a smooth paved path beside the water, so wheelchairs and pushchairs can manage it.",
+      "evidence": "which means it's fully suitable for wheelchair users"
+    },
+    "16": {
+      "explain": "D. Led this year by a historian from the town museum, who stops at a dozen places to explain what walkers are looking at.",
+      "evidence": "it will be led by a historian from the town museum"
+    },
+    "17": {
+      "explain": "H. It leaves in the dark at five, and if the evening forecast is cloud or rain it simply will not run — check the phone line the night before.",
+      "evidence": "if the evening forecast is for cloud or rain, the walk simply won't take place"
+    },
+    "18": {
+      "explain": "C. A gentle afternoon route ending with soup, fresh bread and fruit from the orchard, all included in the fee.",
+      "evidence": "and it ends with a proper meal: soup, fresh bread and fruit from the orchard itself"
+    },
+    "19": {
+      "explain": "G. Never offered before, because it crosses private farmland — the farmer has opened his gates for the first time this year.",
+      "evidence": "The Valley Walk is completely new - we have never been able to offer it before"
+    },
+    "20": {
+      "explain": "E. The only walk that does not return to its start: it ends at Elmford, with a special bus back to town at five.",
+      "evidence": "it's the only walk that doesn't bring you back to where you started"
+    },
+    "21": {
+      "explain": "A. Zarina says her own reading did not change, and the librarian is someone they may ask for data later. The trigger was a national report whose figures shocked her.",
+      "evidence": "What actually started it was a national report I came across"
+    },
+    "22": {
+      "explain": "C. Literature students are rejected because they have to read, so it says nothing about choice, and first-years are only part of the picture.",
+      "evidence": "we should include students from every department, and from every year"
+    },
+    "23": {
+      "explain": "C. Questionnaires invite exaggeration and interviews would take weeks they do not have. The diary measures behaviour rather than memory.",
+      "evidence": "What I'd like is for people to keep a reading diary"
+    },
+    "24": {
+      "explain": "A. Timur's worry is drop-out: people begin enthusiastically and stop writing, and half the sample vanishing would leave them with nothing.",
+      "evidence": "and then simply stop writing"
+    },
+    "25": {
+      "explain": "B. Three of the five pilot participants listened to audiobooks and never recorded them, so the definition of reading was rewritten to include screen and audio.",
+      "evidence": "reading now covers any book, whether on paper, on a screen, or listened to"
+    },
+    "26": {
+      "explain": "B. The tutor said the question was already narrow enough and there was no hurry to collect data. Her one firm instruction was to read the earlier studies.",
+      "evidence": "Her one firm instruction was to read more of the earlier studies first"
+    },
+    "27": {
+      "explain": "B. Format — paper, screen or audio — is called the heart of the whole study. The word count is dropped as too much effort and guesswork anyway.",
+      "evidence": "That's the heart of the whole study"
+    },
+    "28": {
+      "explain": "C. A one-to-five enjoyment rating costs two seconds and adds a dimension. The weekly summary is redundant, and a recommended-books list would change the habits being measured.",
+      "evidence": "And I'd add a rating for enjoyment"
+    },
+    "29": {
+      "explain": "A. The ethics committee meets monthly and no diary can be collected before approval, so the form must go in this week.",
+      "evidence": "we can't collect a single diary until they approve the study"
+    },
+    "30": {
+      "explain": "D. A ten-minute training session, because in the pilot everyone invented their own system. The librarian can wait, recruitment goes through lecturers rather than social media, and there is no budget for rewards.",
+      "evidence": "I think we should hold a short training session for all the participants"
+    },
+    "31": {
+      "explain": "Rising magma cracks the rock around it, producing earthquakes too weak to feel but detectable by instruments planted across the slopes.",
+      "evidence": "they are detected by instruments called seismometers"
+    },
+    "32": {
+      "explain": "Individual cracks say magma is present; continuous rhythmic shaking says it is moving. That is why tremor is 'a signal of a different order'.",
+      "evidence": "a continuous, rhythmic shaking known as tremor"
+    },
+    "33": {
+      "explain": "Magma needs space, so the pressure lifts the ground above it — the lecturer's image is a loaf rising in the oven.",
+      "evidence": "the pressure makes the ground above it swell"
+    },
+    "34": {
+      "explain": "GPS and tiltmeters work on the mountain itself; from orbit, satellites compare repeated radar images of the same slopes.",
+      "evidence": "satellites use radar, comparing repeated images of the same slopes"
+    },
+    "35": {
+      "explain": "Sulphur dioxide is the most useful gas because fresh magma releases it in large, recognisable quantities.",
+      "evidence": "The most useful gas to measure is sulphur dioxide"
+    },
+    "36": {
+      "explain": "Instruments are carried to the crater rim, flown through the plume, and increasingly mounted on drones that hover where nobody could safely stand.",
+      "evidence": "and increasingly mounted on drones"
+    },
+    "37": {
+      "explain": "Rising gas usually means rising magma — but a sudden drop is the dangerous case, because a blocked vent lets pressure build towards an explosion.",
+      "evidence": "a sudden fall in gas may mean the vent has become blocked"
+    },
+    "38": {
+      "explain": "Thermal cameras catch heat working its way upwards: crater lakes warm and snow melts in telltale patterns.",
+      "evidence": "Thermal cameras record a rise in the surface temperature of the ground"
+    },
+    "39": {
+      "explain": "Wells give a chemical fingerprint — the water level can rise or fall months before an eruption, and its chemistry changes as gases dissolve into it.",
+      "evidence": "The level of water in local wells can rise or fall in the months before an eruption"
+    },
+    "40": {
+      "explain": "No single signal is decisive. The skill is combining them, which happens at an observatory where every data stream arrives in one room.",
+      "evidence": "and that is the work of a volcano observatory"
+    }
+  },
+  "mock10-reading": {
+    "1": {
+      "explain": "Every platform hung from a single rope, and ropes wear out. The passage puts it in one line: the problem was never lifting, it was falling.",
+      "evidence": "Every platform hung from a single rope of hemp or, later, of iron wire, and ropes wear out"
+    },
+    "2": {
+      "explain": "The 1854 demonstration was theatre: Otis had an assistant cut the rope in full view of the crowd.",
+      "evidence": "to cut the hoisting rope with an axe"
+    },
+    "3": {
+      "explain": "A wagon spring on top of the platform, held flat by the rope's tension. When the rope broke, the spring sprang into the notched rails and locked the car.",
+      "evidence": "he mounted a metal spring taken from a wagon"
+    },
+    "4": {
+      "explain": "The first public passenger elevator went into a five-storey New York store selling imported china and glassware — shoppers queued to ride it as an attraction.",
+      "evidence": "in a five-storey New York store selling imported china and glassware"
+    },
+    "5": {
+      "explain": "Driven by steam, the first passenger car climbed at under twelve metres a minute — but the novelty, not the speed, was the point.",
+      "evidence": "Driven by steam, the car crawled upwards at less than twelve metres a minute"
+    },
+    "6": {
+      "explain": "Before the elevator, height meant hardship: the top floors were the coldest and cheapest rooms, occupied by servants, students and the poor.",
+      "evidence": "traditionally occupied by servants, students and the poor"
+    },
+    "7": {
+      "explain": "The word once meant a rough shed leaning against a wall, and was reborn as the name of the building's most expensive address.",
+      "evidence": "The word penthouse, which had once meant nothing grander than a rough shed leaning against a wall"
+    },
+    "8": {
+      "explain": "TRUE: Roman hoists under the Colosseum, monastery baskets on cliffs, and a Renaissance palace's 'flying chair' all precede the nineteenth century.",
+      "evidence": "Roman engineers installed hoisting platforms beneath the arena of the Colosseum"
+    },
+    "9": {
+      "explain": "FALSE: he was a master mechanic at a bedstead factory, told to build a hoist. He thought so little of the device that he did not even patent it at first.",
+      "evidence": "Elisha Graves Otis was employed as a master mechanic at a bedstead factory"
+    },
+    "10": {
+      "explain": "NOT GIVEN: the passage describes the demonstration and says orders began to arrive, but mentions no newspaper coverage.",
+      "evidence": "Orders at last began to arrive"
+    },
+    "11": {
+      "explain": "TRUE: electric machines were faster, smaller and far cheaper to run than steam — which is what let buildings rise past six or seven floors.",
+      "evidence": "Electric machines were faster, smaller and far cheaper to run than steam"
+    },
+    "12": {
+      "explain": "FALSE: for two decades after 1857 few buildings passed six or seven floors, limited by load-bearing walls and slow steam cars.",
+      "evidence": "few commercial buildings rose beyond six or seven floors"
+    },
+    "13": {
+      "explain": "TRUE: the elevator inverted the old hierarchy — once the top could be reached without effort, rents began to rise with the floor number.",
+      "evidence": "The elevator inverted that old hierarchy"
+    },
+    "14": {
+      "explain": "C: Delgado's account of maps that get made because the law demands it, and then get filed — action plans written in conditional language without budgets or deadlines.",
+      "evidence": "Measurement has quietly become a substitute for action"
+    },
+    "15": {
+      "explain": "E: porous asphalt, tyre standards, electric buses, earth banks and glazed barriers, night speed limits and delivery restrictions.",
+      "evidence": "Worn road surfaces can be relaid with porous, low-noise asphalt"
+    },
+    "16": {
+      "explain": "A: the WHO ranking that puts environmental noise second only to air pollution among environmental health threats in Europe.",
+      "evidence": "environmental noise now ranks second only to air pollution"
+    },
+    "17": {
+      "explain": "B: Halvorsen's finding that heart rate, blood pressure and stress hormones respond during sleep, 'even in people who do not remember waking at all'.",
+      "evidence": "even in people who do not remember waking at all"
+    },
+    "18": {
+      "explain": "'The ear has no lid' — the brain keeps processing sound while you sleep, and the body responds whether or not you wake.",
+      "evidence": "While you sleep, your brain goes on processing sound"
+    },
+    "19": {
+      "explain": "Three physical responses are listed: heart rate climbs, blood pressure rises, and stress hormones are released.",
+      "evidence": "and stress hormones are released"
+    },
+    "20": {
+      "explain": "Long-term studies link chronic road and aircraft noise to high blood pressure and heart disease, even after air quality and income are controlled for.",
+      "evidence": "with raised risks of high blood pressure and heart disease"
+    },
+    "21": {
+      "explain": "Housing beside the loudest infrastructure is the cheapest, so poorer residents live there and carry the health costs.",
+      "evidence": "so it is occupied disproportionately by poorer residents"
+    },
+    "22": {
+      "explain": "The first item in the engineering toolkit: relaying worn road surfaces with porous, low-noise asphalt, worth three to five decibels.",
+      "evidence": "Worn road surfaces can be relaid with porous, low-noise asphalt that cuts traffic sound by three to five decibels"
+    },
+    "23": {
+      "explain": "D, Mensah. He argues for designing soundscapes — fountains, planting, protected quiet areas — because 'a good city is not a silent city'.",
+      "evidence": "It is a city where you can hear the things worth hearing"
+    },
+    "24": {
+      "explain": "C, Weiss. His line is the memorable one: lay a noise map over an income map and you see almost the same picture.",
+      "evidence": "Lay a noise map over an income map"
+    },
+    "25": {
+      "explain": "A, Halvorsen. The residents insist they have got used to it; her data say their bodies have not.",
+      "evidence": "Their bodies, her data suggest, have not"
+    },
+    "26": {
+      "explain": "B, Delgado. Fifteen years as a city environmental officer, and her verdict on the mandatory five-yearly maps is that they get filed.",
+      "evidence": "The maps get made, because the law says they must. Then they get filed"
+    },
+    "27": {
+      "explain": "B: the groups matched on starting age, teachers and total time given to music. One variable separated them — accumulated hours of solitary, effortful practice.",
+      "evidence": "What separated them was one variable: the accumulated hours of solitary, effortful practice"
+    },
+    "28": {
+      "explain": "C: ten thousand was an average across a group, not a threshold, and the slogan dropped the quality of practice, which was the whole point.",
+      "evidence": "had been an average across a group, not a threshold for individuals"
+    },
+    "29": {
+      "explain": "A: about twelve per cent averaged across domains — a quarter in games, a fifth in music, almost nothing in the professions. 'Practice mattered everywhere; it was decisive nowhere.'",
+      "evidence": "Practice mattered everywhere; it was decisive nowhere"
+    },
+    "30": {
+      "explain": "D: among all the factors shaping expertise, deliberate practice is the largest one a person can actually control.",
+      "evidence": "deliberate practice remains the largest one that a person can actually control"
+    },
+    "31": {
+      "explain": "C: aimed just beyond current ability, guided by immediate feedback, mentally demanding and rarely enjoyable — playing a favourite piece again is repetition, not improvement.",
+      "evidence": "playing through a favourite piece yet again is repetition, not improvement"
+    },
+    "32": {
+      "explain": "A: the researchers' own objection — it was a group average, and some violinists needed far fewer hours and others far more.",
+      "evidence": "some violinists had needed far fewer hours, others far more"
+    },
+    "33": {
+      "explain": "B: roughly a quarter of the variation in games, about a fifth in music, four per cent in education and almost nothing in the professions.",
+      "evidence": "but only four per cent in education and almost nothing in the professions"
+    },
+    "34": {
+      "explain": "G: early starters outperform later ones even when total accumulated hours are identical — a gap practice alone cannot explain.",
+      "evidence": "outperform later starters even when their total accumulated hours are identical"
+    },
+    "35": {
+      "explain": "E: twin studies suggest that musical aptitude is partly heritable, and so is the propensity to practise in the first place.",
+      "evidence": "but so, remarkably, is the propensity to practise in the first place"
+    },
+    "36": {
+      "explain": "YES: the writer draws the distinction explicitly — deliberate practice is not the same as experience, and repetition is not improvement.",
+      "evidence": "Crucially, it is not the same as experience, and it is rarely enjoyable"
+    },
+    "37": {
+      "explain": "NO: the pooled analysis cut practice down to size without dismissing it — practice mattered in every domain measured.",
+      "evidence": "Practice mattered everywhere; it was decisive nowhere"
+    },
+    "38": {
+      "explain": "NOT GIVEN: working memory is mentioned as a predictor of skills such as sight-reading. Nothing is said about employers or hiring.",
+      "evidence": "measures of working memory predict skills such as sight-reading music"
+    },
+    "39": {
+      "explain": "YES: the writer says outright that the practical conclusion is not gloomy and need not discourage anyone.",
+      "evidence": "Yet the practical conclusion is not gloomy, and it need not discourage anyone"
+    },
+    "40": {
+      "explain": "NO: the closing line says the argument about genes, timing, memory and luck continues, and is likely to for some time.",
+      "evidence": "The argument about everything else — genes, timing, memory, luck — continues"
     }
   }
 }
