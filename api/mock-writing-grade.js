@@ -51,15 +51,38 @@ const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length
 //   7,7,7,6 → 6.75 → 6.5      one weak criterion always costs at least a half
 const floorHalf = (n) => Math.floor(n * 2) / 2
 
+// The ORDER of this reply is load-bearing, not cosmetic.
+//
+// The first version asked for the four band numbers as the opening tokens
+// of the JSON, with the analysis and the error list after them. A grader
+// that emits "task":5 before it has written a word of analysis is not
+// applying the descriptors; it is forming an impression and then
+// rationalising it, and against the official examiner-marked scripts that
+// impression came out roughly two bands low.
+//
+// So the reply now runs: evidence for each criterion, THEN the band for that
+// criterion, and the mistake list LAST. Because the model writes in order,
+// the bands cannot be coloured by a hunt for twelve errors that has not
+// happened yet — and the band must be preceded by the descriptor wording it
+// claims to match, which is much harder to do carelessly.
 const rubricFor = (taskNo) => `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors, which are reproduced in full below. They are the standard: judge against their wording, not against your impression of the script.
 
 OFFICIAL IELTS WRITING TASK ${taskNo} BAND DESCRIPTORS (public version, updated May 2023)
 ${taskNo === 1 ? TASK1_DESCRIPTORS : TASK2_DESCRIPTORS}
 
-HOW TO USE THEM
-Work criterion by criterion. For each one, find the band whose descriptor the script actually matches — read the band above and the band below to confirm the fit before settling. Bolded text in the descriptors marks negative features that cap a rating.
+WHAT YOU ARE MARKING
+This is an exam answer, produced in about ${taskNo === 1 ? 'twenty' : 'forty'} minutes under timed conditions, with no dictionary, no spellchecker and no chance to redraft. The descriptors are written for exactly that: they already expect the slips, the repetition and the unevenness that timed writing produces. Judge it as a piece of exam work, not as something that has been edited.
 
-Be honest and accurate. Do NOT inflate the band to be kind — an inflated band misleads the student about what they need to fix, which is worse than a disappointing number. Equally, do not mark down out of caution: a script that meets the band 7 descriptors is a 7, and calling it a 6 to seem rigorous is just as wrong.
+HOW TO USE THE DESCRIPTORS
+Work through one criterion at a time, and for each one do this in order:
+1. Say what the script actually ACHIEVES on that criterion — the features that are present and working. Quote the candidate.
+2. Say what LIMITS it — the features that hold it back. Quote the candidate.
+3. Name the band whose descriptor fits, and quote the phrase from that descriptor which the script matches.
+4. Only then give the number.
+
+Read the band above and the band below before settling: the right band is the one the script matches best, not the one it fails least. Bolded text in the descriptors marks negative features that cap a rating.
+
+Be honest and accurate in BOTH directions. Do not inflate to be kind — an inflated band misleads the student about what to fix. But do not mark down out of caution either, and this is the commoner error: a script that meets the band 7 descriptors is a 7, and calling it a 6 to seem rigorous is just as wrong as calling a 5 a 6. Errors are not by themselves evidence of a low band; every criterion above band 6 explicitly tolerates errors, so what matters is whether they match the frequency and the effect the descriptor names.
 
 Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria. Never a half band. This is how IELTS examiners assess the criteria: each one gets a whole band, and only the averaged result is reported in halves. Choose the single descriptor that best fits; do not split the difference between two.
 - task: ${taskNo === 1 ? 'Task Achievement' : 'Task Response'}
@@ -67,9 +90,9 @@ Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria.
 - lexical: Lexical Resource
 - grammar: Grammatical Range and Accuracy
 
-For each of grammar, vocabulary and coherence write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
+For each of grammar, vocabulary and coherence also write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
 
-Then list the individual mistakes in "corrections". This is the most important part of your reply: it is shown to the student marked onto their own essay, so they can see exactly what is wrong and why.
+LAST, and only after the bands are settled, list the individual mistakes in "corrections". This list is shown to the student marked onto their own essay, so they can see exactly what is wrong and why. It records what you found; it does not decide the band, which you have already given.
 - "quote" MUST be copied EXACTLY, character for character, from the candidate's response. Do not paraphrase it, do not correct its spelling, do not add or remove punctuation. If you cannot copy it exactly, leave the mistake out.
 - Keep each quote short — the words that are actually wrong, not the whole sentence.
 - "kind" is one of: grammar, vocabulary, spelling, punctuation, coherence.
@@ -77,8 +100,12 @@ Then list the individual mistakes in "corrections". This is the most important p
 - "why" explains the rule in one or two plain sentences, so the student learns the pattern rather than memorising one correction. Write it for a learner, not for a linguist.
 Give every mistake worth learning from, up to 12. Order them as they appear in the response.
 
-Respond with ONLY this JSON, no prose around it:
-{"task":6,"coherence":6,"lexical":5,"grammar":5,
+Respond with ONLY this JSON, no prose around it, and with the keys in exactly this order:
+{"analysis":{
+   "task":{"achieves":"...","limits":"...","descriptor":"band 6: addresses all parts of the task though some parts more fully covered than others","band":6},
+   "coherence":{"achieves":"...","limits":"...","descriptor":"...","band":6},
+   "lexical":{"achieves":"...","limits":"...","descriptor":"...","band":5},
+   "grammar":{"achieves":"...","limits":"...","descriptor":"...","band":5}},
  "grammar_feedback":"...","vocabulary_feedback":"...","coherence_feedback":"...",
  "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."],
  "corrections":[{"quote":"the government have to provides","kind":"grammar","fix":"the government has to provide","why":"'Government' takes a singular verb here, and after 'has to' the verb stays in its base form — so 'has to provide', never 'has to provides'."}]}`
@@ -92,8 +119,9 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
       model: 'claude-sonnet-4-6',
       // 2000 was enough against a short paraphrased rubric; against the full
       // descriptors the reply grew and was being truncated mid-JSON, which
-      // surfaced only as a parse error. Leave real headroom.
-      max_tokens: 4000,
+      // surfaced only as a parse error. The per-criterion analysis added
+      // another block again, so leave real headroom.
+      max_tokens: 6000,
       system: rubricFor(taskNo),
       messages: [{
         role: 'user',
@@ -121,7 +149,12 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     const n = Number(v)
     return Number.isFinite(n) && n >= 0 && n <= 9 ? Math.round(n) : null
   }
-  const four = { task: band(parsed.task), coherence: band(parsed.coherence), lexical: band(parsed.lexical), grammar: band(parsed.grammar) }
+  // The band now sits inside the per-criterion analysis, after the evidence
+  // for it. The flat top-level form is still accepted so a reply that comes
+  // back in the older shape is marked rather than thrown away.
+  const a = parsed.analysis || {}
+  const scoreOf = (k) => band(a?.[k]?.band ?? parsed[k])
+  const four = { task: scoreOf('task'), coherence: scoreOf('coherence'), lexical: scoreOf('lexical'), grammar: scoreOf('grammar') }
   if (Object.values(four).some((v) => v == null)) throw new Error('grader returned a band outside 0-9')
 
   // Floored to the half, not rounded: a 7 here still means every criterion
@@ -155,6 +188,18 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     // teacher's need to show the corrections ON the writing, and keeping them
     // together means neither has to re-fetch the answers and re-pair them.
     task: taskNo, words: wc, band: overall, criteria: four, corrections, essay: text,
+    // Why each criterion got its band, in the examiner's own terms. This is
+    // what a teacher needs to see to judge whether the marking is fair, and
+    // it is what makes a disputed band arguable rather than opaque.
+    reasons: ['task', 'coherence', 'lexical', 'grammar'].reduce((acc, k) => {
+      const r = a?.[k]
+      if (r) acc[k] = {
+        achieves: String(r.achieves || '').slice(0, 600),
+        limits: String(r.limits || '').slice(0, 600),
+        descriptor: String(r.descriptor || '').slice(0, 300),
+      }
+      return acc
+    }, {}),
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
     vocabulary_feedback: String(parsed.vocabulary_feedback || '').slice(0, 1500),
     coherence_feedback: String(parsed.coherence_feedback || '').slice(0, 1500),

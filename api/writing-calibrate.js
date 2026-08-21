@@ -40,6 +40,11 @@ export default async function handler(req, res) {
     return res.status(200).json({
       band: graded.band,
       criteria: graded.criteria,
+      // The band alone cannot be argued with. The evidence behind each
+      // criterion is what shows whether a disagreement with the examiner is
+      // the grader misreading the script or the descriptors being applied
+      // differently, so it comes back too.
+      reasons: graded.reasons,
       words: graded.words,
       corrections: (graded.corrections || []).length,
       summary: graded.summary,
