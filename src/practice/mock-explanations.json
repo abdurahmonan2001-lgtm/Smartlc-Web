@@ -1958,5 +1958,329 @@
       "explain": "A: the critics' first complaint is inconsistency — measured differences are often modest and vary between studies.",
       "evidence": "are often modest and vary from one study to the next"
     }
+  },
+  "mock6-listening": {
+    "1": {
+      "explain": "Spelled out on request: R-U-S-T-A-M-O-V-A.",
+      "evidence": "R, U, S, T, A, M, O, V, A. Rustamova."
+    },
+    "2": {
+      "explain": "A self-correction. The twelfth is last summer's booking still on her screen; the flight is on the twenty-second.",
+      "evidence": "oh, sorry, no, that's last summer's booking on the screen in front of me"
+    },
+    "3": {
+      "explain": "Six o'clock is what the operator would normally send for a 9.15 flight. Three children and August traffic move it earlier.",
+      "evidence": "Let's make it half past five"
+    },
+    "4": {
+      "explain": "The operator guesses M-A-P-E-L and is corrected: Maple like the tree, M-A-P-L-E.",
+      "evidence": "No, Maple like the tree. M, A, P, L, E. Maple Street."
+    },
+    "5": {
+      "explain": "A standard car is ruled out as far too small for five people and their luggage. The minivan seats seven with room for six suitcases.",
+      "evidence": "What I'd send you is a minivan"
+    },
+    "6": {
+      "explain": "A hundred and twenty thousand is the standard car, which is not an option for this family. The minivan price is fixed, with luggage included.",
+      "evidence": "The minivan to the airport is a hundred and eighty thousand som"
+    },
+    "7": {
+      "explain": "For the three-year-old the driver fits a child seat, and the operator stresses there is no charge at all for it.",
+      "evidence": "The driver will fit a child seat, and there's no charge for that at all"
+    },
+    "8": {
+      "explain": "Card is asked about and gently discouraged: the machines are often unreliable, and half past five in the morning is the wrong time to find out.",
+      "evidence": "and honestly I'd suggest cash"
+    },
+    "9": {
+      "explain": "Two wrong meeting points are ruled out first — not the taxi rank and not the exit doors, where people miss each other daily. The driver stands beside the escalator.",
+      "evidence": "He'll stand beside the escalator in the arrivals hall"
+    },
+    "10": {
+      "explain": "Telephoning is the old way and the email is only the invoice afterwards. The reminder itself now comes by text the evening before.",
+      "evidence": "but the reminder itself now goes by text"
+    },
+    "11": {
+      "explain": "B. The flooding was two winters ago and repaired long before June; the pool heating is next year's project. The changing rooms dated from the 1980s and the pipework was failing.",
+      "evidence": "The real reason we shut is much duller: the changing rooms"
+    },
+    "12": {
+      "explain": "A. Members-only is denied ('anyone can pay at the desk') and private hire is refused on insurance grounds. Every class in the studio is free for the first month.",
+      "evidence": "every single class in that studio is completely free"
+    },
+    "13": {
+      "explain": "C. Saturday evening is unchanged and Sunday morning still cannot be staffed. The weekday opening moves from seven to half past five.",
+      "evidence": "from next week the doors open at half past five in the morning"
+    },
+    "14": {
+      "explain": "C. Reception and the desk are the old routes, and the website will still show the timetable — but booking itself moves to the app.",
+      "evidence": "all class bookings move to our new phone app"
+    },
+    "15": {
+      "explain": "D. Physically unchanged — same lanes, same water. What changed is price: half the usual cost between ten and three, when it is practically empty.",
+      "evidence": "a swim now costs half the usual price"
+    },
+    "16": {
+      "explain": "B. Every machine has been replaced: treadmills, bikes, rowers, the whole weights section. 'Nothing in that room now that was there in May.'",
+      "evidence": "Every one of them has been taken out and replaced"
+    },
+    "17": {
+      "explain": "F. The new wall is deliberately gentle — large obvious holds, an instructor on the mat — and built for people who have never climbed.",
+      "evidence": "It has been built for people who have never climbed before"
+    },
+    "18": {
+      "explain": "E. Same staff and same cakes; what changed is the place. It has come down from upstairs to the ground floor, where the old office was.",
+      "evidence": "It's now on the ground floor, in the corner by the main entrance"
+    },
+    "19": {
+      "explain": "A. The surface is being relaid and the area is fenced off — but only for about three weeks, so this is temporary, not the delayed opening of the sauna.",
+      "evidence": "you can't use at the moment. The surface is being relaid"
+    },
+    "20": {
+      "explain": "H. The tiling is done but the equipment has not arrived, so the sauna misses the reopening and is aimed at November.",
+      "evidence": "so it won't open with everything else - we're aiming for November"
+    },
+    "21": {
+      "explain": "B. The tutor's seminar mention 'wasn't really the reason', and Madina hardly eats there. The manager Bekzod asked the marketing society for help.",
+      "evidence": "and said he had no idea what his customers wanted, and could a student find out"
+    },
+    "22": {
+      "explain": "C. Door interviews are dismissed — people say anything to get away — and paper forms mean a week of typing. The printed code opens the form online and the data arrives clean.",
+      "evidence": "I put a small printed code on every table, people scan it with their phone"
+    },
+    "23": {
+      "explain": "A. The tutor clears the other two: the questions are not too long and nothing is intrusive. The fault is wording that decides the answer in advance.",
+      "evidence": "You're pushing people towards the reply you want"
+    },
+    "24": {
+      "explain": "A. Madina proposes students, then students and staff, and the tutor widens it twice — office workers, parents at the sports centre. If they buy something, their opinion counts.",
+      "evidence": "If somebody buys something in that cafe, their opinion counts. Anyone who uses it."
+    },
+    "25": {
+      "explain": "B. The tutor says the money is nothing and prize draws are permitted. The worry is that voucher-chasers are a single crowd, so the sample will not look like the real customers.",
+      "evidence": "What worries me is who a prize brings in"
+    },
+    "26": {
+      "explain": "C. Showing Bekzod proves nothing about the questions, and translation can wait for version two. Ten people filling it in while she watches will expose the questions nobody understands.",
+      "evidence": "Test it small, first"
+    },
+    "27": {
+      "explain": "C, the queues. It is the complaint the tutor hears most, and the one thing the manager could actually fix by changing his staffing.",
+      "evidence": "How long people wait is the complaint I hear most often"
+    },
+    "28": {
+      "explain": "E, the vegetarian dishes — asked specifically, not as a general food question, because Bekzod has spent a year deciding whether to expand that menu. Hours are fixed by the university, prices are a foregone conclusion, and the furniture was replaced in January.",
+      "evidence": "ask specifically about the vegetarian dishes"
+    },
+    "29": {
+      "explain": "B, meeting the manager — 'with a notebook — that's your priority'. She needs permission for the table codes.",
+      "evidence": "Meet him properly, with a notebook - that's your priority"
+    },
+    "30": {
+      "explain": "D, a lunchtime watching the cafe. Madina calls it lazy and the tutor corrects her: an hour of watching will tell her what to ask. Posters and writing up are both premature, and staff interviews come later if at all.",
+      "evidence": "Take a lunch hour, buy a tea, sit in the corner and watch"
+    },
+    "31": {
+      "explain": "The solid bar lay three thousand years in the future. The paste was mixed with water and poured between vessels to raise a foam — whipped into a drink.",
+      "evidence": "in other words, they whipped it into a drink"
+    },
+    "32": {
+      "explain": "Two flavourings are named: chilli for heat, and vanilla, which grew in the same forests.",
+      "evidence": "and with vanilla, which grew in the very same forests"
+    },
+    "33": {
+      "explain": "In the Aztec empire beans circulated as currency, with surviving price lists — so many beans for a turkey — and forgeries made from clay.",
+      "evidence": "They were valuable enough to be used as money"
+    },
+    "34": {
+      "explain": "The Spanish court found it far too bitter. Cinnamon and warmth came too, but the lecturer names sugar as the change that mattered.",
+      "evidence": "they added sugar"
+    },
+    "35": {
+      "explain": "The price was not driven by production cost: heavy import taxes on cocoa kept it out of ordinary reach for two centuries.",
+      "evidence": "the import taxes on cocoa were so heavy that they kept the price beyond the reach of ordinary people"
+    },
+    "36": {
+      "explain": "Van Houten's 1828 press forced the fat out of the roasted bean — that fat is cocoa butter — leaving a dry cake that milled into powder.",
+      "evidence": "and that fat is cocoa butter"
+    },
+    "37": {
+      "explain": "In 1847 a Bristol firm added the butter back to powder and sugar, poured the mixture into a mould and let it set: the first solid bar sold to the public.",
+      "evidence": "The result was the first solid chocolate bar sold to the public"
+    },
+    "38": {
+      "explain": "Fresh milk ruined every attempt. The answer was milk dried into a powder, which gave Switzerland the first successful milk chocolate in 1875.",
+      "evidence": "Using dried milk, Swiss makers produced the first successful milk chocolate"
+    },
+    "39": {
+      "explain": "Early bars were gritty. Lindt found that stirring the warm chocolate for hours — sometimes three days — wears the particles down until nothing can be felt.",
+      "evidence": "and the chocolate becomes perfectly smooth"
+    },
+    "40": {
+      "explain": "About seventy per cent of the world's beans now grow in West Africa — Ivory Coast and Ghana above all — on millions of small family farms.",
+      "evidence": "are now grown in West Africa"
+    }
+  },
+  "mock6-reading": {
+    "1": {
+      "explain": "The Persian mill looked nothing like a European one: its sails were woven from bundles of reeds and fixed to a vertical shaft.",
+      "evidence": "Their sails, woven from bundles of reeds, were fixed to a vertical shaft"
+    },
+    "2": {
+      "explain": "In the post mill the whole building balanced on one massive upright post, so the miller could push it round to meet the wind.",
+      "evidence": "balanced on a single massive upright post"
+    },
+    "3": {
+      "explain": "The sails were lattice frames spread with canvas, and the miller worked them like a sailor — taking cloth in for a gale, spreading it all in light airs.",
+      "evidence": "long lattice frames spread with canvas"
+    },
+    "4": {
+      "explain": "The tower stayed still; only the cap, the small roof carrying the sails and their shaft, rotated on a curved track at the top of the wall.",
+      "evidence": "Only the cap — the small roof that carried the sails and their shaft — rotated"
+    },
+    "5": {
+      "explain": "Lee's 1745 fantail is a small wind-wheel set at right angles behind the cap. A change of wind spins it, and gearing winds the cap round unattended.",
+      "evidence": "when the English engineer Edmund Lee patented the fantail"
+    },
+    "6": {
+      "explain": "In the Low Countries mills pumped rather than ground, lifting water in stages from the fields to the channels and then the rivers.",
+      "evidence": "they lifted water in stages from the fields into drainage channels and finally into the rivers"
+    },
+    "7": {
+      "explain": "The steam engine worked in any weather at any hour wherever coal could be carted, and never had to wait for the sky.",
+      "evidence": "A steam engine worked in calm weather and foul, at any hour of any season"
+    },
+    "8": {
+      "explain": "FALSE: the earliest well-evidenced mills were in eastern Persia by the ninth century. Europe's records begin only at the end of the twelfth.",
+      "evidence": "The earliest windmills for which reliable evidence survives were working in eastern Persia by the ninth century"
+    },
+    "9": {
+      "explain": "TRUE: the design barely changed for a thousand years, and travellers were still photographing working examples in the 1960s.",
+      "evidence": "travellers were still photographing working examples in the region in the 1960s"
+    },
+    "10": {
+      "explain": "FALSE: the passage says outright that the European machine was no copy — horizontal axis, facing into the wind, rather than a vertical shaft sheltered by walls.",
+      "evidence": "What is certain is that the European machine was no copy"
+    },
+    "11": {
+      "explain": "NOT GIVEN: millwrights are described as travelling craftsmen carrying practical mechanics in their heads, but their earnings are never mentioned.",
+      "evidence": "the millwright — the travelling craftsman who built and repaired them"
+    },
+    "12": {
+      "explain": "TRUE: after the fantail the mill could steer itself day and night, with nobody watching — which is exactly what the miller used to do by hand.",
+      "evidence": "From that moment the mill could steer itself, day and night, with nobody watching"
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage says hundreds have been restored, but never compares how many survive in one country against another.",
+      "evidence": "today hundreds have been restored"
+    },
+    "14": {
+      "explain": "A: the opening paragraph lists the competing pledges — a million trees, a green corridor, a park within ten minutes' walk.",
+      "evidence": "One mayor promises a million new trees within a decade"
+    },
+    "15": {
+      "explain": "C: Osei's health studies cover many thousands of residents, and his team spent years testing whether income explained the pattern.",
+      "evidence": "In studies covering many thousands of residents"
+    },
+    "16": {
+      "explain": "E: in some celebrated campaigns as many as half the new trees died within five years.",
+      "evidence": "as many as half of the new trees have died within five years"
+    },
+    "17": {
+      "explain": "F: aerial canopy surveys show prosperous districts with several times the tree cover of poorer ones — measurable as heat and in health statistics.",
+      "evidence": "prosperous districts often enjoy several times the tree cover of poorer ones"
+    },
+    "18": {
+      "explain": "Shade is only half of it. The other half is transpiration — hundreds of litres of water vapour a day, cooling the air as sweat cools skin.",
+      "evidence": "a mature tree can release hundreds of litres of water vapour a day"
+    },
+    "19": {
+      "explain": "Lindqvist's sensors measured shaded streets up to five degrees cooler than bare streets a few hundred metres away.",
+      "evidence": "were up to five degrees cooler than bare streets a few hundred metres away"
+    },
+    "20": {
+      "explain": "Residents of tree-lined streets report better general health and lower stress, and Osei's controls show wealth explains only part of it.",
+      "evidence": "report better general health and lower stress"
+    },
+    "21": {
+      "explain": "Whitfield's audit finds a typical street tree returns several times its planting and maintenance cost across its lifetime.",
+      "evidence": "returns several times its planting and maintenance cost over its lifetime"
+    },
+    "22": {
+      "explain": "Duarte's rule: no tree goes in without a funded plan for its first decade — otherwise you get avenues of dead sticks.",
+      "evidence": "without a funded plan for its first decade"
+    },
+    "23": {
+      "explain": "D, Duarte. Her line is that the photograph is taken on planting day but the real work starts afterwards, and budgets that stop at the ceremony produce dead sticks.",
+      "evidence": "Budgets that pay for planting ceremonies and nothing afterwards produce avenues of dead sticks"
+    },
+    "24": {
+      "explain": "A, Lindqvist. Her image is the tree as a quiet outdoor air conditioner that runs on sunlight and costs a fraction as much.",
+      "evidence": "A big street tree works like a quiet outdoor air conditioner"
+    },
+    "25": {
+      "explain": "C, Whitfield. She is the economist who audits planting programmes and prices the tree as a machine no city would hesitate to buy.",
+      "evidence": "Trees are that machine, at a fraction of the price"
+    },
+    "26": {
+      "explain": "B, Osei. He tested the obvious objection that greener streets are richer streets, and found the association survives controls for income and education.",
+      "evidence": "The association survives when you control for income and education"
+    },
+    "27": {
+      "explain": "A: young starlings flew the inherited bearing and ended up somewhere their species never goes; the adults corrected for the displacement. Compass versus map.",
+      "evidence": "The experienced adults did something quite different: they corrected for the displacement"
+    },
+    "28": {
+      "explain": "C: the sun is useless unless its march across the sky is corrected for time of day. Shift a bird's internal clock and it flies off in a predictably wrong direction.",
+      "evidence": "an instrument that is useless unless its steady march across the sky is corrected for the time of day"
+    },
+    "29": {
+      "explain": "B: the passage says the two need not be rivals — one animal may use magnetite for position and cryptochrome as its compass. The evidence is 'suggestive for both and decisive for neither', so A and D are wrong.",
+      "evidence": "Nor need the two be rivals"
+    },
+    "30": {
+      "explain": "D: the conclusion is redundancy — sun, stars, magnetism, smell and landmarks, cross-checked like the overlapping instruments of an aircraft.",
+      "evidence": "What the accumulated evidence describes instead is redundancy"
+    },
+    "31": {
+      "explain": "D: hatchlings disappear into decades of open-ocean wandering and return to breed on their birth shore, sometimes within a few kilometres.",
+      "evidence": "return to breed on the shore where they hatched"
+    },
+    "32": {
+      "explain": "A: the planetarium birds learned no constellations. They watched which point the artificial sky turned around and called that north — and moved their pole when the experimenters moved the centre.",
+      "evidence": "but by watching the way the artificial sky rotated"
+    },
+    "33": {
+      "explain": "F: salmon find their home river by recognising the particular chemistry of its water, imprinted on them as young fish going the other way.",
+      "evidence": "by recognising the particular chemistry of its water"
+    },
+    "34": {
+      "explain": "C: in the cryptochrome account the field biases chemical reactions in the retina — implying a bird may in effect see the field laid over the visual world.",
+      "evidence": "implying, remarkably, that a bird might in effect see the magnetic field"
+    },
+    "35": {
+      "explain": "B: pigeons temporarily unable to smell struggled from unfamiliar release sites while intact birds flew straight home — repeated many times.",
+      "evidence": "have struggled to find their way back from unfamiliar release sites"
+    },
+    "36": {
+      "explain": "YES: the first-time migrants carried an inborn instruction — fly a certain bearing for a certain time — before they had ever made the journey.",
+      "evidence": "an inborn instruction to fly on a certain bearing for a certain time"
+    },
+    "37": {
+      "explain": "NO: neither mechanism is settled. The evidence is decisive for neither, and effects clear in one laboratory weaken in the next.",
+      "evidence": "The evidence is suggestive for both and decisive for neither"
+    },
+    "38": {
+      "explain": "NOT GIVEN: the passage discusses the animals' own senses and the arguments among researchers. Human structures and their effects are never raised.",
+      "evidence": "the magnetic sense still lacks an agreed mechanism"
+    },
+    "39": {
+      "explain": "YES: the writer says the century-long hunt for the single navigation sense 'now looks misconceived'.",
+      "evidence": "That search now looks misconceived"
+    },
+    "40": {
+      "explain": "NO: the honest summary offered is a family of partly solved problems, with much genuinely unknown.",
+      "evidence": "animal navigation is not one solved problem but a family of partly solved ones"
+    }
   }
 }
