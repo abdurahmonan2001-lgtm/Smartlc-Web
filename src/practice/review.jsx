@@ -17,13 +17,54 @@ export const fmtTime = (secs) => {
   return `${m}:${String(s).padStart(2, "0")}`;
 };
 
+/* A completion group (summary, notes, table) carries its text on the FIRST
+ * question of the group; questions 20, 21, 22 then hold nothing but a number
+ * and an answer. Rebuilding a review from the bare question therefore
+ * produced "21. Question 21 — Correct: renewable", which teaches nothing.
+ * These recover the line the gap actually sits in. Roughly a third of all
+ * questions across the library are in that shape. */
+const gapRe = (n) => new RegExp(`\\{\\{${n}\\}\\}`);
+const blankOut = (s, n) =>
+  String(s).replace(gapRe(n), "______").replace(/\{\{\d+\}\}/g, "…");
+
+function gapPrompt(block, n) {
+  if (!block) return null;
+  const line = block.notes?.lines?.find((l) => gapRe(n).test(l));
+  if (line) return blankOut(line, n);
+  for (const row of block.table?.rows || []) {
+    const col = row.findIndex((c) => gapRe(n).test(c));
+    if (col < 0) continue;
+    // The row's own label reads better than the column header ("Address:"
+    // rather than "Details:"), so prefer it and fall back to the header.
+    const label = row.slice(0, col).find(Boolean) || block.table.headers?.[col] || "";
+    return (label ? `${label}: ` : "") + blankOut(row[col], n);
+  }
+  return null;
+}
+
 /* Rebuilds a per-question review from the test content + stored answers,
  * mirroring scoreTest's matching exactly. */
 export function buildReview(test, answers) {
   const items = [];
   for (const s of test.sections) {
+    // group id -> the question carrying that group's summary/notes/table
+    const blocks = new Map();
+    // group id -> the first question of the group. A "choose TWO" is one
+    // question filling two answer slots: the second slot holds an answer and
+    // nothing else, and inherits the wording from the first.
+    const leaders = new Map();
+    for (const q of s.questions) {
+      if (!q.group) continue;
+      if (!leaders.has(q.group)) leaders.set(q.group, q);
+      if ((q.notes || q.table) && !blocks.has(q.group)) blocks.set(q.group, q);
+    }
+    let loose = null;   // the same, for runs that carry no group id
     for (const q of s.questions) {
       if (q.type === "essay") continue;
+      if (q.notes || q.table) loose = q;
+      const block = (q.group && blocks.get(q.group)) || loose;
+      const blockTitle = block?.table?.title || block?.notes?.title || null;
+      const leader = q.group ? leaders.get(q.group) : null;
       const given = norm(answers?.[q.n]);
       const keys = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(norm);
       const ok = q.type === "mcq" || q.type === "select"
@@ -33,8 +74,9 @@ export function buildReview(test, answers) {
         n: q.n,
         section: s.title,
         type: q.type,
-        prompt: q.prompt || (q.table ? `${q.table.title} — gap ${q.n}` : q.notes ? `${q.notes.title} — gap ${q.n}` : `Question ${q.n}`),
-        options: q.options || null,
+        prompt: q.prompt || gapPrompt(block, q.n) || leader?.prompt
+          || (blockTitle ? `${blockTitle} — gap ${q.n}` : `Question ${q.n}`),
+        options: q.options || leader?.options || null,
         note: q.note || null,
         your: answers?.[q.n] ?? null,
         correct: Array.isArray(q.answer) ? q.answer[0] : q.answer,

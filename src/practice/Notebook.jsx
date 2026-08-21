@@ -1,11 +1,14 @@
 // The personal mistake notebook: every question this student has ever
-// got wrong on a practice paper, in one place — with the explanations,
-// the evidence lines, a listen-from-here button for listening items, a
-// re-quiz over old mistakes, and the paraphrase vocabulary game.
+// got wrong, on a practice paper OR a mock, in one place — with the
+// explanations, the evidence lines, a listen-from-here button for
+// listening items, a re-quiz over old mistakes, and the paraphrase
+// vocabulary game.
 //
-// Mock results feed the question-TYPE analytics only (right/wrong per
-// type reveals no answers); their questions never appear in the list or
-// the quiz, keeping the exams sealed.
+// Mocks were once sealed here, so an exam could be re-used across
+// intakes. That was overruled: a student who sits a mock should be able
+// to study from it like any other paper. Mock papers are still marked
+// "Exam" in the list so a student knows which is which, and the seal
+// remains on the history screen, where a mock cannot be re-opened.
 import { useEffect, useMemo, useState } from "react";
 import { fetchResults, saveReview } from "./api.js";
 import AUDIO_CUES from "./audio-cues.json";
@@ -168,7 +171,7 @@ export default function Notebook({ user, findTest, onBack }) {
   const data = useMemo(() => {
     if (!rows) return null;
     const seen = new Set();
-    const practiceReviews = [];   // {testId,title,module,items}
+    const papers = [];   // {testId,title,module,isMock,items}
     const allReviews = [];
     for (const r of rows) {
       if (r.raw_score == null || !r.answers) continue;
@@ -178,15 +181,13 @@ export default function Notebook({ user, findTest, onBack }) {
       seen.add(r.test_id);
       const items = buildReview(t, r.answers);
       allReviews.push(items);
-      if (!isMockResult(r.test_id)) {
-        practiceReviews.push({ testId: r.test_id, title: t.title, module: t.module, items });
-      }
+      papers.push({ testId: r.test_id, title: t.title, module: t.module, isMock: isMockResult(r.test_id), items });
     }
-    const mistakes = practiceReviews.flatMap((p) =>
+    const mistakes = papers.flatMap((p) =>
       p.items.filter((it) => !it.ok).map((it) => ({ ...it, testId: p.testId, title: p.title, module: p.module })));
     return {
       stats: typeStats(allReviews),
-      practiceReviews,
+      papers,
       mistakes,
       quizItems: mistakes.filter((m) => QUIZABLE.has(m.type)),
       vocabReview: mistakes,
@@ -202,8 +203,8 @@ export default function Notebook({ user, findTest, onBack }) {
 
       {!rows || !data ? <p className="pr-empty">Loading…</p> : data.mistakes.length === 0 ? (
         <p className="pr-empty">
-          Nothing here yet — finish a practice paper and any mistakes will be collected
-          into this notebook to study from.
+          Nothing here yet — finish a practice paper or a mock and any mistakes will be
+          collected into this notebook to study from.
         </p>
       ) : (
         <>
@@ -221,12 +222,16 @@ export default function Notebook({ user, findTest, onBack }) {
 
           {mode === "quiz" && <QuizMe key={data.quizItems.length} items={data.quizItems} username={user.username} />}
           {mode === "vocab" && <VocabMatch review={data.vocabReview} cap={10} />}
-          {mode === "mistakes" && data.practiceReviews.map((p) => {
+          {mode === "mistakes" && data.papers.map((p) => {
             const wrong = p.items.filter((it) => !it.ok);
             if (!wrong.length) return null;
             return (
               <div className="pr-review" key={p.testId}>
-                <div className="pr-review__bar"><strong>{p.title}</strong><span className="pr-quiz__count">{wrong.length} to work on</span></div>
+                <div className="pr-review__bar">
+                  <strong>{p.title}</strong>
+                  {p.isMock && <span className="pr-tagx">Exam</span>}
+                  <span className="pr-quiz__count">{wrong.length} to work on</span>
+                </div>
                 {wrong.map((r) => (
                   <div key={r.n} className="pr-review__row is-wrong">
                     <span className="pr-review__mark">✕</span>
