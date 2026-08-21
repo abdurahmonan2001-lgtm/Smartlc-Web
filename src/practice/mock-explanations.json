@@ -3285,7 +3285,7 @@
       "evidence": "And we provide an apron, a green one with the cafe's name on the front"
     },
     "7": {
-      "explain": "Spelled out unprompted: R-A-S-H-I-D-O-V.",
+      "explain": "The name is spelled out letter by letter without being asked: R-A-S-H-I-D-O-V. Spelling aloud is always the signal that the spelling itself is being marked.",
       "evidence": "R - A - S - H - I - D - O - V. Rashidov."
     },
     "8": {
@@ -3581,6 +3581,330 @@
     "40": {
       "explain": "NO: the closing line says the argument about genes, timing, memory and luck continues, and is likely to for some time.",
       "evidence": "The argument about everything else — genes, timing, memory, luck — continues"
+    }
+  },
+  "mock11-listening": {
+    "1": {
+      "explain": "The caller offers the spelling herself: R-A-S-H-I-D-O-V-A.",
+      "evidence": "It's R - A - S - H - I - D - O - V - A. Rashidova."
+    },
+    "2": {
+      "explain": "Two years is the guarantee threshold, and five is a wrong guess she corrects herself. The machine is as old as her time in the flat.",
+      "evidence": "so it's actually seven years old"
+    },
+    "3": {
+      "explain": "The hose at the back is her first suspicion and she has already checked it. The leak is at the door — probably the rubber seal.",
+      "evidence": "and it's actually leaking from the door"
+    },
+    "4": {
+      "explain": "The second fault, and it comes at the end of the spin cycle: a loud banging that shakes the kitchen.",
+      "evidence": "there's a loud banging"
+    },
+    "5": {
+      "explain": "Confirmed twice — flat six, number fourteen, and the street is the one directly opposite the school gates.",
+      "evidence": "It's flat six, number fourteen, Bustan Street"
+    },
+    "6": {
+      "explain": "Monday is agreed and then withdrawn: the rota shows the engineer is not in her district that day. He covers it on Wednesdays.",
+      "evidence": "He covers your district on Wednesdays"
+    },
+    "7": {
+      "explain": "No exact time is promised, but the window runs from nine, and the engineer will ring before setting off.",
+      "evidence": "but it will be between nine and eleven o'clock"
+    },
+    "8": {
+      "explain": "The call-out fee covers the first half hour of labour; anything beyond that is charged on top, and parts are separate.",
+      "evidence": "The call-out fee is fifty thousand som"
+    },
+    "9": {
+      "explain": "Two jobs before the visit: empty the machine, and shut off the water supply — the tap under the sink that feeds it.",
+      "evidence": "And turn off the tap under the sink"
+    },
+    "10": {
+      "explain": "The letters are given with clarifying words — W for window, R for river — followed by the numbers.",
+      "evidence": "It's W R five eight. W for window, R for river, then the numbers five and eight."
+    },
+    "11": {
+      "explain": "A. The sports club repairs were two years ago and are finished, and the athletes' training courses are a separate fund. This year's money buys hospital equipment.",
+      "evidence": "every som you raise will buy new equipment for the children's hospital"
+    },
+    "12": {
+      "explain": "B. The route is the same five kilometres and the prizes are unchanged. The change is that the age limit has gone — entrants aged seven and seventy-nine are already signed up.",
+      "evidence": "for the first time, there is no age limit"
+    },
+    "13": {
+      "explain": "B. The green T-shirts are volunteer uniform and not for sale; the caps sold out weeks ago. Everyone who crosses the line gets a medal.",
+      "evidence": "will be given a medal, so do finish"
+    },
+    "14": {
+      "explain": "C. Cars are unsafe because the car park is open to the public, and the bandstand — last year's store — is occupied by the brass band.",
+      "evidence": "leave your bag at the pavilion"
+    },
+    "15": {
+      "explain": "Immediately on the left as you come through the main gate at the bottom of the park, just past the cafe.",
+      "evidence": "the bag storage is immediately on your left, just past the cafe"
+    },
+    "16": {
+      "explain": "On the wide path along the south side of the lake — 'below the water' on the map — with line-up from half past eight.",
+      "evidence": "The start line is on the wide path that runs along the south side of the lake"
+    },
+    "17": {
+      "explain": "A change of plan: the north end of the lake was rejected because the path is too narrow. The station goes in the north-west corner, at the top of the slope.",
+      "evidence": "the drinks station will be in the north-west corner of the park"
+    },
+    "18": {
+      "explain": "Beside the fountain along the top of the park, and deliberately on the route itself so help is never far away.",
+      "evidence": "The first-aid tent is right beside the fountain"
+    },
+    "19": {
+      "explain": "The north-east corner was planned but has poor morning light, so the photographer stands beside the playground on the east side.",
+      "evidence": "you'll find the photo point beside the playground, on the east side"
+    },
+    "20": {
+      "explain": "In front of the main gate, but on the opposite side from the bag storage — a detail worth catching, since both are at the gate.",
+      "evidence": "on the opposite side from where you handed in your bag"
+    },
+    "21": {
+      "explain": "A. The lecture impressed Jasur but the idea predates it. Six weeks helping her brother with maths gave Laylo the thought.",
+      "evidence": "Last summer I spent six weeks helping my little brother with his maths"
+    },
+    "22": {
+      "explain": "C. Five-year-olds cannot read screen instructions unaided, and teachers neither choose apps nor have budgets. Eight to ten read confidently but still love games.",
+      "evidence": "Eight to ten. Let's fix that and stop changing our minds."
+    },
+    "23": {
+      "explain": "B. The public scoreboard is rejected because children at the bottom give up, and a star for every answer makes stars meaningless. Points unlock extra games.",
+      "evidence": "correct answers earn points, and points unlock the extra games"
+    },
+    "24": {
+      "explain": "A. The tutor's instruction was explicit and came before any code: draw every screen, every button, every menu, on paper first.",
+      "evidence": "draw every screen on paper - every button, every menu"
+    },
+    "25": {
+      "explain": "C. The deadline is fine and the tools are free for students. What worries him is that he has built websites but never anything for a phone.",
+      "evidence": "it's that I've never actually built anything for a phone"
+    },
+    "26": {
+      "explain": "B. Screenshots are optional and no cost list is wanted. The report must contain a testing plan — who tries it, what is measured, how the findings are used.",
+      "evidence": "there has to be a plan for testing the app"
+    },
+    "27": {
+      "explain": "B. The parents' page is called essential, because parents are the ones who download the app and want to see what has been practised.",
+      "evidence": "That one's essential"
+    },
+    "28": {
+      "explain": "C. Voice instructions go into version one because some eight-year-olds read slowly and hearing the task keeps the game moving. Reminders are dropped, two-player doubles the programming, and worksheets defeat the point of the app.",
+      "evidence": "Even at eight, some children read slowly"
+    },
+    "29": {
+      "explain": "A. Jasur will email his old primary school, where the head teacher still knows him, to arrange a visit and a maths lesson to watch.",
+      "evidence": "I could email my old primary school; the head teacher still knows me"
+    },
+    "30": {
+      "explain": "D. Laylo will write fifty sample questions at three levels of difficulty. The timetable waits until after the school visit, and the logo and name are postponed.",
+      "evidence": "And I'll write a set of sample questions - say fifty, at three levels of difficulty"
+    },
+    "31": {
+      "explain": "The earliest sheep had no fleece worth cutting: they were kept for two products only, and the second is the one the notes want.",
+      "evidence": "They were kept for two products only - their meat, and their milk"
+    },
+    "32": {
+      "explain": "Wool was first combed out by hand when sheep shed naturally. Iron shears — two blades joined by a spring — let one worker strip an animal in minutes.",
+      "evidence": "Iron shears - two blades joined by a spring"
+    },
+    "33": {
+      "explain": "The property plant fibres cannot match, and for anyone living outdoors in a cold climate it could mean life or death.",
+      "evidence": "a wool garment keeps the body warm even when it is wet"
+    },
+    "34": {
+      "explain": "A senior official in Parliament still sits on a great sack stuffed with wool — furniture designed to show where the nation's wealth came from.",
+      "evidence": "still sits on a great sack stuffed with wool"
+    },
+    "35": {
+      "explain": "From the fifteenth century the English stopped selling the raw material and wove it themselves. 'It was cloth, not fleece, that made England genuinely rich.'",
+      "evidence": "they would weave it at home and sell the finished cloth themselves"
+    },
+    "36": {
+      "explain": "The merino's wool was extraordinarily fine — fibres so thin and soft that the fabric clothed the kings of Europe.",
+      "evidence": "a breed whose wool was extraordinarily fine"
+    },
+    "37": {
+      "explain": "Spain guarded the monopoly ruthlessly: taking a merino out of the country was a capital crime, and the ban held for centuries.",
+      "evidence": "Taking a merino sheep out of the country was a crime punished by death"
+    },
+    "38": {
+      "explain": "The first merinos landed in 1797 and thrived on the dry grasslands as nowhere else — the country is still the largest producer of fine wool.",
+      "evidence": "the first merinos were landed in Australia"
+    },
+    "39": {
+      "explain": "From the 1930s cheap artificial fibres took wool's markets one at a time — stockings, then suits, then carpets — and nylon was the first great success.",
+      "evidence": "the first great success was nylon"
+    },
+    "40": {
+      "explain": "The new market turns on the old property: builders pack sheep's wool inside walls, so what once kept the shepherd warm now warms the house.",
+      "evidence": "Builders now pack sheep's wool inside the walls of new houses as insulation"
+    }
+  },
+  "mock11-reading": {
+    "1": {
+      "explain": "Eighty tons of ice cut from a pond outside Boston and shipped to a Caribbean island — the venture the newspapers thought was a joke.",
+      "evidence": "bound for the Caribbean island of Martinique"
+    },
+    "2": {
+      "explain": "Straw and blankets were tried first. Sawdust won because it insulated best and, as a sawmill waste product, cost next to nothing.",
+      "evidence": "that sawdust, packed tightly around and between the blocks, was the most effective insulation of all"
+    },
+    "3": {
+      "explain": "Wyeth's 1825 device was horse-drawn: an iron blade scored the frozen surface into a grid, and workers split the sheet along the grooves.",
+      "evidence": "Wyeth introduced a horse-drawn plough whose iron blade scored the frozen surface into a neat grid"
+    },
+    "4": {
+      "explain": "Uniform blocks could be stacked like bricks, and a solid mass holds its cold far better than a loose pile.",
+      "evidence": "and tight stacking greatly reduced melting on the journey"
+    },
+    "5": {
+      "explain": "The Tuscany carried 180 tons across the equator twice on a four-month voyage; about half survived, and the arrival caused a sensation.",
+      "evidence": "carried 180 tons of ice from Boston to Calcutta"
+    },
+    "6": {
+      "explain": "The icebox was an insulated wooden cabinet lined with metal, with a compartment at the top for the block of ice.",
+      "evidence": "an insulated wooden cabinet lined with metal"
+    },
+    "7": {
+      "explain": "TRUE: the newspapers were openly scornful, one assuring readers that a ship really had sailed loaded with frozen water.",
+      "evidence": "The local newspapers were openly scornful"
+    },
+    "8": {
+      "explain": "FALSE: the plough was horse-drawn. Steam is never mentioned in connection with the harvest.",
+      "evidence": "Wyeth introduced a horse-drawn plough"
+    },
+    "9": {
+      "explain": "NOT GIVEN: Walden Pond appears because Thoreau watched the harvest there, but no claim is made about the quality of its ice.",
+      "evidence": "among them Walden Pond, where the writer Henry Thoreau"
+    },
+    "10": {
+      "explain": "TRUE: for decades after 1833 the India run was the most profitable branch of the whole business.",
+      "evidence": "the India run remained the most profitable branch of the entire business"
+    },
+    "11": {
+      "explain": "FALSE: by the 1850s the icebox was a fixture of ordinary American kitchens and the iceman as familiar as the postman.",
+      "evidence": "had become a fixture of ordinary American kitchens"
+    },
+    "12": {
+      "explain": "TRUE: many customers regarded factory ice with suspicion, insisting pond ice was purer and slower to melt.",
+      "evidence": "insisting that natural pond ice was purer and slower to melt"
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage says the household refrigerator ended the trade in the 1920s and 1930s, but names no company and no closing date.",
+      "evidence": "the arrival of the household electric refrigerator in the 1920s and 1930s ended it altogether"
+    },
+    "14": {
+      "explain": "D: Edison's nickel-iron battery and Ford's 1914 announcement of a cheap family electric car — prototypes built, then the project faded.",
+      "evidence": "his friend Henry Ford announced that the two of them would produce a cheap electric car"
+    },
+    "15": {
+      "explain": "B: starts at a switch, no gear changing, no smoke, so quiet that bells were fitted — and short range hardly mattered for town driving.",
+      "evidence": "The electric car's appeal to city drivers was easy to state"
+    },
+    "16": {
+      "explain": "E: milk floats, forklift trucks, golf carts and airport vehicles — short fixed routes and places where exhaust fumes are intolerable.",
+      "evidence": "In Britain, electric milk floats delivered bottles door to door"
+    },
+    "17": {
+      "explain": "C: Kettering's 1912 electric starter removed the dangerous crank — and with it the electric car's most persuasive selling point.",
+      "evidence": "the engineer Charles Kettering perfected an electric starter for petrol engines"
+    },
+    "18": {
+      "explain": "A: of roughly eight thousand cars registered in the United States, about a third ran on batteries, and more in some eastern cities.",
+      "evidence": "around a third ran on batteries"
+    },
+    "19": {
+      "explain": "Once Ford's moving assembly line was running, the Model T's price fell year after year until petrol cost a fraction of electric.",
+      "evidence": "once his moving assembly line was running its price fell year after year"
+    },
+    "20": {
+      "explain": "The hand crank was 'a brutal ritual' that broke arms; the 1912 starter abolished it.",
+      "evidence": "while a petrol engine had to be woken with a hand crank"
+    },
+    "21": {
+      "explain": "The electric was tied to the city where it slept, while a petrol car could cross the country past filling stations on every main road.",
+      "evidence": "The electric, tied by its limited range to the city where it slept"
+    },
+    "22": {
+      "explain": "Outside the big cities electricity was a luxury: most rural American homes had no supply, so recharging was impossible even in principle.",
+      "evidence": "most rural American homes had no supply at all"
+    },
+    "23": {
+      "explain": "New Texas oilfields kept petrol cheap at exactly the moment electricity remained scarce outside cities.",
+      "evidence": "New oilfields in Texas kept petrol cheap"
+    },
+    "24": {
+      "explain": "C, Osei. Selling the electric as a genteel carriage for wealthy ladies told everyone else the car was not for them — and that image outlived the vehicles.",
+      "evidence": "the makers told everyone else, in effect, that this car was not for them"
+    },
+    "25": {
+      "explain": "A, Webb. His formulation is exact: it did not lose a technical argument, it lost a commercial race, because petrol got a twenty-year head start on infrastructure.",
+      "evidence": "The first electric car did not lose a technical argument; it lost a commercial race"
+    },
+    "26": {
+      "explain": "B, Halvorsen. Battery chemistry improved far more slowly than the pioneers assumed, and the 1914 batteries broke the carmakers' promises.",
+      "evidence": "Battery chemistry improved far more slowly than the pioneers assumed it would"
+    },
+    "27": {
+      "explain": "B: boredom seemed too trivial to study, and a research community formed around it only in the last two decades.",
+      "evidence": "science ignored it for the better part of a century"
+    },
+    "28": {
+      "explain": "D: the two-part definition — wanting but failing to engage attention in something that feels meaningful. Having nothing to do is explicitly ruled out.",
+      "evidence": "the uncomfortable state of wanting, but failing, to engage attention in an activity that feels meaningful"
+    },
+    "29": {
+      "explain": "A: participants who had said they would pay to avoid a shock chose to shock themselves rather than sit alone with their thoughts.",
+      "evidence": "people will accept physical pain in exchange for something, anything, to do"
+    },
+    "30": {
+      "explain": "C: boredom is information — it tells us the present activity has lost its grip, and what we do about it is our business, not the signal's.",
+      "evidence": "boredom is information"
+    },
+    "31": {
+      "explain": "YES: it was treated as a non-feeling, 'the psychological equivalent of an empty room', and ignored for most of a century.",
+      "evidence": "It seemed too trivial to study, a non-feeling"
+    },
+    "32": {
+      "explain": "NO: a life with boredom surgically removed would not be better, 'merely an unexamined one', because nothing would ever prompt a change of course.",
+      "evidence": "would not be a better life, merely an unexamined one"
+    },
+    "33": {
+      "explain": "NOT GIVEN: the passage compares prisoners, controllers, students and commuters, and discusses boredom proneness — but never children against adults.",
+      "evidence": "Psychologists measure a trait they call boredom proneness"
+    },
+    "34": {
+      "explain": "YES: the analogy is drawn directly — pain stops the body before an injury worsens, boredom stops the mind wasting attention.",
+      "evidence": "like pain, it is unpleasant by design, because its job is to interrupt us"
+    },
+    "35": {
+      "explain": "NO: the writer calls the evidence thin — small studies, modest effects, hard to reproduce and open to other explanations.",
+      "evidence": "Here the honest answer is that the evidence is thin"
+    },
+    "36": {
+      "explain": "B, attention. The definition turns on failing to engage attention, not on having nothing to do.",
+      "evidence": "wanting, but failing, to engage attention"
+    },
+    "37": {
+      "explain": "D, meaning. The second half of the definition: the activity must feel meaningful, or attention will not hold however busy you are.",
+      "evidence": "in an activity that feels meaningful"
+    },
+    "38": {
+      "explain": "E, risks. Boredom proneness correlates with gambling, dangerous driving, problem drinking and dropping out — though the passage warns against reading cause into it.",
+      "evidence": "compulsive gambling, dangerous driving, problem drinking, dropping out of education"
+    },
+    "39": {
+      "explain": "C, escape. Accepting a shock rather than sitting with one's thoughts shows the force with which an unoccupied mind seeks a way out.",
+      "evidence": "it demonstrates the sheer motivational force of an unoccupied mind"
+    },
+    "40": {
+      "explain": "A, signal. The writer's closing position: boredom reports that the current activity has stopped being worth the energy.",
+      "evidence": "It tells us that the present activity has lost its grip"
     }
   }
 }
