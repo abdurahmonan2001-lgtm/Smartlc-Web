@@ -490,5 +490,453 @@
         "seen as enemies"
       ]
     }
+  },
+  "mock2-listening": {
+    "1": {
+      "explain": "The clerk asks for the spelling rather than guessing, and the caller gives it letter by letter: Y-U-S-U-P-O-V-A.",
+      "evidence": "It's Y, U, S, U, P, O, V, A. Yusupova."
+    },
+    "2": {
+      "explain": "A birthday is suggested and rejected — 'Everyone assumes that!' The occasion is thirty years of marriage, an anniversary.",
+      "evidence": "No, actually it's an anniversary celebration"
+    },
+    "3": {
+      "explain": "The seventh is her first choice and it is already taken by a wedding reception. The date she books is the following Saturday.",
+      "evidence": "We do have the following Saturday free, though. That's the fourteenth of June."
+    },
+    "4": {
+      "explain": "Fifty was the first thought, and it is corrected upwards in the same breath — people keep saying yes.",
+      "evidence": "so let's put down sixty to be safe",
+      "vocab": [
+        "to be safe",
+        "allowing extra"
+      ]
+    },
+    "5": {
+      "explain": "Two rooms would fit sixty guests. The Main Hall is rejected as too big — the speeches would echo — and the room that opens onto the lawn is recommended.",
+      "evidence": "I'd suggest the Garden Room - it holds up to eighty"
+    },
+    "6": {
+      "explain": "Thirty-five thousand is the weekday rate and is already printed in the table. Her party is on a Saturday, so the weekend rate applies.",
+      "evidence": "but for a Saturday you'll be on the weekend rate, which is forty thousand som per hour"
+    },
+    "7": {
+      "explain": "The deposit holds the date and is returned afterwards if the room is left in good condition.",
+      "evidence": "We ask for a deposit of two hundred thousand som to hold the date",
+      "vocab": [
+        "fully refundable",
+        "returned after the event"
+      ]
+    },
+    "8": {
+      "explain": "Parking is free but is listed separately in the table; the thing included in the price is use of the kitchen, with its ovens and fridge space.",
+      "evidence": "use of the kitchen is included"
+    },
+    "9": {
+      "explain": "The hall used to have a sound system and gave up on it. Families now bring their own speakers, and there are sockets along the wall.",
+      "evidence": "Most families just bring their own speakers"
+    },
+    "10": {
+      "explain": "Posted booking forms are mentioned only as the old way — 'everything is electronic now'. Confirmation comes by email.",
+      "evidence": "I'll send the confirmation by email today",
+      "vocab": [
+        "everything is electronic now",
+        "no longer posted"
+      ]
+    },
+    "11": {
+      "explain": "C. The manager names both wrong answers first as things people assume, then gives the real reason: an abandoned railway yard that neighbours wanted back in use. The animals arrived later, by accident.",
+      "evidence": "a group of neighbours decided to bring the empty land back into use",
+      "vocab": [
+        "bring the empty land back into use",
+        "bring an empty site back into use"
+      ]
+    },
+    "12": {
+      "explain": "B. Entry is free every day, so that is not what makes today special, and feeding the animals is staff-only. The chef from the Riverside Hotel is here just for today.",
+      "evidence": "a chef from the Riverside Hotel is here giving cooking demonstrations"
+    },
+    "13": {
+      "explain": "A. The street is strictly no parking and the supermarket has asked not to be used. The school opposite has opened its playground.",
+      "evidence": "The school opposite has very kindly opened its playground for farm visitors"
+    },
+    "14": {
+      "explain": "C. Donations are welcome and the volunteer list exists — but it is full. The manager says plainly what helps most, and adds that every som goes back into the animals.",
+      "evidence": "the thing that helps us most is very simple: buy something from the farm shop"
+    },
+    "15": {
+      "explain": "F. The orchard trees were planted the first spring, before there was an animal or even a fence.",
+      "evidence": "it's the oldest part of the farm, and still my favourite corner"
+    },
+    "16": {
+      "explain": "G. Everything grown in the greenhouse goes to the kitchen, so what visitors eat in the cafe grew twenty metres away.",
+      "evidence": "goes straight to the kitchen, so whatever you eat in the cafe today started life about twenty metres away"
+    },
+    "17": {
+      "explain": "C. The farm staff do not touch the vegetable beds at all — children from three local schools plant, dig and water them.",
+      "evidence": "they're looked after entirely by children from three local schools"
+    },
+    "18": {
+      "explain": "A. A fox got in last autumn, the old structure was pulled down, and the new one is finished — hence 'gleaming'.",
+      "evidence": "it has just been rebuilt, stronger, warmer"
+    },
+    "19": {
+      "explain": "D. The safety fence is being replaced this week, so nobody can go near the water today. Note it is closed today only, not permanently.",
+      "evidence": "so it's closed to visitors - the ducks, I promise, are perfectly fine"
+    },
+    "20": {
+      "explain": "E. The play area is new this year, and the manager thanks the family bakery on Mill Road, whose donation paid for all of it. 'Brand new this year' is a trap for 'has just been rebuilt' — rebuilt belongs to the chicken house.",
+      "evidence": "whose generous donation paid for every bit of it"
+    },
+    "21": {
+      "explain": "B. The book is offered by Karim and rejected. The tutor approved the topic but did not suggest it. Her reason is her own exam after four hours' sleep.",
+      "evidence": "Honestly, it was my own results last term",
+      "vocab": [
+        "did far worse than anyone expected",
+        "her results surprised her"
+      ]
+    },
+    "22": {
+      "explain": "A. Pictures were dropped at the planning stage as too easy, and the scientific text was rejected for testing understanding rather than memory.",
+      "evidence": "In the end everyone memorised a list of forty unrelated words"
+    },
+    "23": {
+      "explain": "B. Karim explicitly clears himself of the other two: the instructions were word for word identical and he recorded every response. What differed was the time of day.",
+      "evidence": "I tested the well-rested group in the morning, but the sleep-deprived group in the late afternoon"
+    },
+    "24": {
+      "explain": "A. Twelve participants, and both students call it too small. Age range is a change for next time, not a criticism of this sample, and nobody refused to cooperate.",
+      "evidence": "Twelve is tiny, I completely agree. Too small to conclude anything."
+    },
+    "25": {
+      "explain": "A. The sleep-hours question was read differently by different people — some counted naps, one counted lying awake. Length was fine and anonymity is dismissed as a non-issue.",
+      "evidence": "the question about hours of sleep confused people"
+    },
+    "26": {
+      "explain": "C. Both distractors are named and denied — the references were fine, and she did not ask them to cut the method section. Her point was that pages of numbers are unreadable.",
+      "evidence": "she wants the results presented visually, charts and graphs",
+      "vocab": [
+        "presented visually",
+        "charts and graphs"
+      ]
+    },
+    "27": {
+      "explain": "B, the timing. Nilufar lists the two she counts as serious, and the testing times is one — the same fault Karim owned up to earlier.",
+      "evidence": "The two real issues, for me, are the testing times and the number of people"
+    },
+    "28": {
+      "explain": "D, the sample size. The other three are each raised and dismissed: the noise was one slammed door, the word list matched published averages, and the sessions were under twenty minutes.",
+      "evidence": "Twelve people, tested at different times of day - those are the two we flag as serious"
+    },
+    "29": {
+      "explain": "A. Nine in the morning for both groups, no exceptions — the fix for the fault they just admitted.",
+      "evidence": "First, everyone gets tested at the same hour"
+    },
+    "30": {
+      "explain": "C. A wider age range, not just classmates. The quieter room is rejected ('the room was fine'), the reward is unaffordable, and the questionnaire is reworded but not shortened.",
+      "evidence": "And I think we should widen the sample - not just our classmates this time. Different ages."
+    },
+    "31": {
+      "explain": "The lecturer defines latex before anything else: the milky liquid a tropical tree bleeds when the bark is cut.",
+      "evidence": "Natural rubber begins as latex - the milky sap of a tropical tree"
+    },
+    "32": {
+      "explain": "In Central America the material had a sacred use — shaped into balls for ritual games played in great stone courts.",
+      "evidence": "it was shaped into balls for ritual games played in great stone courts"
+    },
+    "33": {
+      "explain": "The English name records a small domestic discovery: the material could rub out pencil marks, so it became 'rubber'.",
+      "evidence": "the stuff could rub out pencil marks"
+    },
+    "34": {
+      "explain": "Two opposite failures are described. Hot weather made the goods soft and sticky; winter made them stiff and cracked.",
+      "evidence": "In hot weather the products turned soft and sticky"
+    },
+    "35": {
+      "explain": "Goodyear's 1839 accident was heating rubber with sulphur; the process was later named vulcanisation, after the Roman god of fire.",
+      "evidence": "He heated rubber together with sulphur"
+    },
+    "36": {
+      "explain": "The lecturer flags this as the detail that surprises students: the first great market was not cars, which barely existed, but bicycles with air-filled wheels.",
+      "evidence": "but the makers of bicycles, whose new air-filled wheels transformed the comfort of riding"
+    },
+    "37": {
+      "explain": "Plantations grew wherever the climate suited the tree, and one country came to dominate world production for much of the twentieth century.",
+      "evidence": "above all in Malaysia, which came to dominate world production"
+    },
+    "38": {
+      "explain": "Cut off from Asian plantations in the 1940s, industrial nations invented a petroleum-based substitute — and it never went away.",
+      "evidence": "inventing synthetic rubber, made from petroleum",
+      "vocab": [
+        "made from petroleum",
+        "man-made"
+      ]
+    },
+    "39": {
+      "explain": "Natural rubber survives because factory versions cannot match its strength and elasticity, and the most demanding use of all is named directly.",
+      "evidence": "above all aircraft tyres, which must survive extraordinary heat and force on every single landing"
+    },
+    "40": {
+      "explain": "The risk is genetic sameness — most rubber trees descend from one shipment of seeds — so researchers are breeding an unlikely alternative whose roots yield usable latex.",
+      "evidence": "the dandelion, the same yellow flower you pull out of the lawn"
+    }
+  },
+  "mock2-reading": {
+    "1": {
+      "explain": "The old system reversed what we expect: the person receiving the letter paid, which is why they could inspect it at the door and refuse it.",
+      "evidence": "postage was normally paid not by the sender but by the recipient",
+      "vocab": [
+        "the recipient",
+        "the person receiving the letter"
+      ]
+    },
+    "2": {
+      "explain": "Two things set the price, and the question gives you the first one. The second is how far the letter had to go.",
+      "evidence": "the cost depended on the number of sheets of paper and on the distance the letter had to travel"
+    },
+    "3": {
+      "explain": "Hill's argument was that distance barely mattered; the real cost was the clerical work of calculating, recording and collecting.",
+      "evidence": "The expensive part was the clerical labour",
+      "vocab": [
+        "the expensive part",
+        "the greatest expense"
+      ]
+    },
+    "4": {
+      "explain": "The uniform penny rate was not unlimited — it applied to a letter of a given weight, sent anywhere in the country.",
+      "evidence": "for any letter of a given weight, sent anywhere in the country"
+    },
+    "5": {
+      "explain": "The first sheets had no perforations, so stamps were cut apart by hand — slow, and it damaged many of them.",
+      "evidence": "had to cut them apart with scissors",
+      "vocab": [
+        "cut them apart",
+        "separated from the sheet"
+      ]
+    },
+    "6": {
+      "explain": "Archer's 1854 machine punched rows of tiny holes; the passage names them, and they are what still lets a stamp tear cleanly.",
+      "evidence": "it punched rows of tiny holes between the stamps, the perforations",
+      "vocab": [
+        "rows of tiny holes",
+        "the small holes"
+      ]
+    },
+    "7": {
+      "explain": "TRUE: the Penny Black carried a profile of Queen Victoria. A profile is a portrait, and a queen is a monarch.",
+      "evidence": "carried a profile of the young Queen Victoria against a dark background",
+      "vocab": [
+        "a profile of the young Queen Victoria",
+        "a portrait of a monarch"
+      ]
+    },
+    "8": {
+      "explain": "FALSE: the passage says the opposite in its first line about him — he was not a postal official but a schoolmaster and inventor.",
+      "evidence": "The man who untangled this system was not a postal official at all"
+    },
+    "9": {
+      "explain": "TRUE: 'put an end to' is as direct as the passage gets. The refused-letter game is the trick described in paragraph one.",
+      "evidence": "Prepayment put an end to the refused-letter game",
+      "vocab": [
+        "put an end to",
+        "ended the practice of"
+      ]
+    },
+    "10": {
+      "explain": "NOT GIVEN: the passage describes what the design showed, but never says how it was chosen. No competition is mentioned anywhere.",
+      "evidence": "The Penny Black, as it became known, carried a profile of the young Queen Victoria"
+    },
+    "11": {
+      "explain": "FALSE: the two dates are fourteen years apart — the Penny Black appeared in May 1840, and Archer's perforating machine was adopted in 1854.",
+      "evidence": "The solution came in 1854, when a machine designed by the engineer Henry Archer was adopted"
+    },
+    "12": {
+      "explain": "TRUE: Brazil issued stamps in 1843 and Swiss cantons in the same period — three years after 1840 is 'within a few years'.",
+      "evidence": "Brazil issued its famous",
+      "vocab": [
+        "in the same period",
+        "within a few years"
+      ]
+    },
+    "13": {
+      "explain": "FALSE: the writer says the stamp outlived the letter-writing habit. Collectors still meet, catalogues are still printed, and old stamps sell for more than ever.",
+      "evidence": "Yet the stamp has outlived the habit that created it",
+      "vocab": [
+        "has outlived",
+        "did not end with"
+      ]
+    },
+    "14": {
+      "explain": "C: the galaxy project. Okoye's point is that for spotting a faint spiral arm the human eye still beats the algorithm — volunteers outperforming software.",
+      "evidence": "the human eye still beats the algorithm",
+      "vocab": [
+        "beats the algorithm",
+        "better than software"
+      ]
+    },
+    "15": {
+      "explain": "B: lighthouse keepers, Victorian gardeners and amateur weather observers are all nineteenth-century, and all unpaid.",
+      "evidence": "Nineteenth-century lighthouse keepers logged bird migrations"
+    },
+    "16": {
+      "explain": "D: the paragraph states the doubt honestly — an untrained observer can misidentify a species — and then answers it with design: training, and checks built into the system.",
+      "evidence": "Scepticism about amateur data has always shadowed the field",
+      "vocab": [
+        "scepticism",
+        "doubts about reliability"
+      ]
+    },
+    "17": {
+      "explain": "E: the paragraph asks why people give up their evenings, and answers with belonging and purpose rather than money or curiosity.",
+      "evidence": "the strongest motives are belonging and purpose"
+    },
+    "18": {
+      "explain": "The camera, clock and satellite position in the summary come straight from the passage's description of what a smartphone puts in every pocket.",
+      "evidence": "The spread of smartphones has turned millions of pockets into portable laboratories",
+      "vocab": [
+        "portable laboratories",
+        "an instrument in your pocket"
+      ]
+    },
+    "19": {
+      "explain": "Marsh names three safeguards; the summary needs the second, short training.",
+      "evidence": "With clear instructions, short training and built-in checks"
+    },
+    "20": {
+      "explain": "The third safeguard, and the summary keeps the passage's own word — checks built into the system, not added afterwards.",
+      "evidence": "built-in checks",
+      "vocab": [
+        "built-in checks",
+        "safeguards inside the system"
+      ]
+    },
+    "21": {
+      "explain": "The example Marsh gives of a built-in check is the same photograph being judged by many people, so that one person's error does not survive.",
+      "evidence": "the same photograph judged by many people"
+    },
+    "22": {
+      "explain": "Herrera's evidence for the shift in power is that volunteer datasets are now cited in court cases and written into official policy.",
+      "evidence": "written into official policy"
+    },
+    "23": {
+      "explain": "D, Herrera. He advises city governments, and his point is precisely that volunteer data now appears in court cases and policy — 'a transfer of power, not just of information'.",
+      "evidence": "Today those datasets are cited in court cases and written into official policy",
+      "vocab": [
+        "cited in court cases",
+        "influence legal decisions"
+      ]
+    },
+    "24": {
+      "explain": "A, Marsh. Her closing line is the giveaway: accuracy belongs to the system, not the person — design rather than distrust.",
+      "evidence": "Accuracy is a property of the system, not of the person",
+      "vocab": [
+        "a property of the system",
+        "comes from well-designed systems"
+      ]
+    },
+    "25": {
+      "explain": "B, Okoye. He says some judgements simply have not been automated, and the human eye still wins on blurry images.",
+      "evidence": "some judgements simply have not been automated",
+      "vocab": [
+        "have not been automated",
+        "still beyond computers"
+      ]
+    },
+    "26": {
+      "explain": "C, Nair. Her formulation is memorable and exact: the science recruits them, the other people keep them.",
+      "evidence": "The science recruits them; the other people keep them",
+      "vocab": [
+        "People stay for the community",
+        "social connection keeps them involved"
+      ]
+    },
+    "27": {
+      "explain": "B: the passage sets the two results against each other — better theatre, worse commerce. The big display drew a bigger crowd, but the small one sold about ten times better.",
+      "evidence": "The larger display was better theatre: it drew a substantially bigger crowd. But it was worse commerce",
+      "vocab": [
+        "better theatre, worse commerce",
+        "attracted people but discouraged buying"
+      ]
+    },
+    "28": {
+      "explain": "D: the passage grants that maximisers make objectively better choices, then says they enjoy them less — 'even a good result gives less pleasure when your standard is a perfect one'. That makes A wrong.",
+      "evidence": "less happy with the outcome, more prone to regret"
+    },
+    "29": {
+      "explain": "A: pooling fifty experiments gave an average effect close to zero. The passage is careful about what that means — not disproved, but demoted from a law to something conditional.",
+      "evidence": "the effect of adding options was close to zero",
+      "vocab": [
+        "demoted",
+        "weaker and less general"
+      ]
+    },
+    "30": {
+      "explain": "C: the final paragraph rejects rationing options in favour of organising them — sorting, making differences visible, supplying defaults. 'An interface problem' is the writer's summary of their own view.",
+      "evidence": "do not need to ration our options so much as organise them",
+      "vocab": [
+        "ration",
+        "reduce the number of"
+      ]
+    },
+    "31": {
+      "explain": "C: the twenty-four-jam table pulled the crowd, but only a tiny fraction of them bought, against roughly ten times that rate at the six-jam table.",
+      "evidence": "only a tiny fraction went on to buy a jar"
+    },
+    "32": {
+      "explain": "E: a maximiser cannot stop until every alternative has been examined, because the goal is the best possible option.",
+      "evidence": "cannot stop searching until every alternative has been examined"
+    },
+    "33": {
+      "explain": "A: satisficers look for something good enough, take it and move on — the direct contrast with the maximiser in the same sentence.",
+      "evidence": "satisficers look until they find something good enough, choose it, and move on",
+      "vocab": [
+        "good enough",
+        "seems good enough"
+      ]
+    },
+    "34": {
+      "explain": "G: averaged across every study, adding options had an effect close to zero — sometimes harmful, sometimes helpful, often neither.",
+      "evidence": "averaged across every study, the effect of adding options was close to zero"
+    },
+    "35": {
+      "explain": "B: the writer does not reject cutting options outright, but limits when it helps — complex options that are hard to compare, and a chooser who knows little about the field.",
+      "evidence": "choice becomes burdensome when the options are complex and hard to compare, when the chooser knows little about the field",
+      "vocab": [
+        "knows little about the field",
+        "inexperienced"
+      ]
+    },
+    "36": {
+      "explain": "YES: the writer accepts this from the start — too many possibilities 'could quietly paralyse the will', and the later reframing narrows when it happens without denying that it does.",
+      "evidence": "too many possibilities could quietly paralyse the will",
+      "vocab": [
+        "paralyse the will",
+        "delay decisions"
+      ]
+    },
+    "37": {
+      "explain": "NO: the meta-analysis is introduced precisely to unsettle the jam study — 'science rarely leaves a tidy story alone', and the finding is called deflating.",
+      "evidence": "But science rarely leaves a tidy story alone"
+    },
+    "38": {
+      "explain": "NOT GIVEN: shops and websites appear only in the advice about organising options better. Nothing is said about retailers exploiting overload on purpose.",
+      "evidence": "It implies that shops, websites and governments do not need to ration our options"
+    },
+    "39": {
+      "explain": "YES: the wine example is exactly this point — the same wall of bottles is suffering for a novice and a playground for a collector.",
+      "evidence": "A wine novice facing three hundred unfamiliar bottles suffers; the same wall of labels is a playground to a collector",
+      "vocab": [
+        "a novice",
+        "someone who knows little"
+      ]
+    },
+    "40": {
+      "explain": "NO: the writer's conclusion moves the responsibility away from size. What overwhelms us is not number itself but comparison without support.",
+      "evidence": "what overwhelms us is not number itself but comparison without support",
+      "vocab": [
+        "not number itself",
+        "menu size is not the main factor"
+      ]
+    }
   }
 }
