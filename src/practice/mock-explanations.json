@@ -2610,5 +2610,329 @@
       "explain": "C, medicine. The writer treats the therapy claims sceptically: small, short studies, modest effects, and no substitute for exercise.",
       "evidence": "In recent years laughter has also been marketed as medicine"
     }
+  },
+  "mock8-listening": {
+    "1": {
+      "explain": "Spelled out on request: R-A-H-I-M-O-V-A. Note the H, not KH.",
+      "evidence": "R, A, H, I, M, O, V, A. Rahimova."
+    },
+    "2": {
+      "explain": "Swallow Cottage is offered and ruled out — it sleeps only four. Heron sleeps six, and the caller confirms the spelling by asking whether it is the bird.",
+      "evidence": "Swallow Cottage is charming, but it only sleeps four. Heron sleeps six"
+    },
+    "3": {
+      "explain": "The twelfth is her hoped-for date and it is already booked. The cottage is free from the following Friday.",
+      "evidence": "It's free from Friday the nineteenth, though"
+    },
+    "4": {
+      "explain": "One week, stated as a number of nights: Friday to Friday.",
+      "evidence": "Just the one week - seven nights, Friday to Friday"
+    },
+    "5": {
+      "explain": "Five hundred and eighty is the old website figure — prices rose in April. The August rate includes electricity.",
+      "evidence": "For August it's six hundred and forty pounds for the week"
+    },
+    "6": {
+      "explain": "The deposit holds the booking and is returned within a week of departure if nothing is damaged.",
+      "evidence": "We ask for a deposit of one hundred and fifty pounds to hold the booking"
+    },
+    "7": {
+      "explain": "Beds are made up and the kitchen is equipped. The one thing guests must supply is towels, which the agency stopped providing.",
+      "evidence": "The one thing guests must bring is their own towels"
+    },
+    "8": {
+      "explain": "One dog is permitted, with the single condition that it stays off the furniture.",
+      "evidence": "Not at all, one dog is allowed"
+    },
+    "9": {
+      "explain": "A correction: the shop used to shut on Sundays, but the new owners swapped the closing day.",
+      "evidence": "it opens on Sundays now and closes on Mondays instead"
+    },
+    "10": {
+      "explain": "The satnav's instruction to turn at the church is explicitly wrong. Carry on through the village and turn left just after the bridge.",
+      "evidence": "and turn left just after the bridge"
+    },
+    "11": {
+      "explain": "B. The bus depot is what most people guess, and the street market only occupied the open ground for a few years. The site was built over a century ago as a brick factory.",
+      "evidence": "this site was built over a century ago as a brick factory"
+    },
+    "12": {
+      "explain": "A. Bags and cameras may be kept, and the yellow lines matter only to forklift drivers in areas the tour will not enter. The vest is the rule for everyone.",
+      "evidence": "you must wear the high-visibility vest we're handing out now"
+    },
+    "13": {
+      "explain": "C. The fire was nearly ten years ago and the team has actually grown this year. The new sorting machine broke down three times in a fortnight.",
+      "evidence": "when our brand-new sorting machine broke down three times in a fortnight"
+    },
+    "14": {
+      "explain": "A. The centre already takes almost everything, and most people do sort correctly. The single most useful thing is washing containers — one dirty jar can spoil a whole bale.",
+      "evidence": "is to wash out your jars, cans and trays before they go in the bin"
+    },
+    "15": {
+      "explain": "H. Shipping glass overseas is the old practice. It is now crushed into a coarse sand for road surfaces — including the bypass the visitors drove in on.",
+      "evidence": "it's crushed here into a coarse sand, and that goes into road surfaces"
+    },
+    "16": {
+      "explain": "A. Paper and cardboard still leave the country, because no regional mill can handle the volumes.",
+      "evidence": "so it's pressed into bales and sent abroad for processing"
+    },
+    "17": {
+      "explain": "G. Bacteria in sealed tanks digest the food waste and give off gas, which is burnt for energy — enough for the site and several hundred homes.",
+      "evidence": "and we burn that gas to produce energy"
+    },
+    "18": {
+      "explain": "B. Garden waste 'stays even closer to home' — composted on site, in the long steaming rows.",
+      "evidence": "We turn it into compost right here on the site"
+    },
+    "19": {
+      "explain": "C. Sold to a metals firm ten minutes up the road. Storing for better prices is named and denied: 'We never store anything.'",
+      "evidence": "We sell them to a local business - a metals firm just ten minutes up the road"
+    },
+    "20": {
+      "explain": "F. Kettles, radios and laptops go to the repair workshop, where volunteers fix them; about half get a second life. Mattresses are the material not accepted.",
+      "evidence": "where a team of volunteers fixes them up so they can be used again"
+    },
+    "21": {
+      "explain": "C. Zarina actually tried to talk her out of it, and the bus takes forty minutes each way. Surgical work was the one gap in her experience.",
+      "evidence": "It was the one gap, and I wanted it filled"
+    },
+    "22": {
+      "explain": "A. Names came quickly and the shifts have not troubled her yet. The electronic record system defeated her — every ward uses it differently and nobody trained them.",
+      "evidence": "What really defeated me at first was the electronic record system"
+    },
+    "23": {
+      "explain": "B. Time management is 'coming along, not perfect yet' and emergencies are still being learned. What genuinely impresses the supervisor is how she talks with elderly patients.",
+      "evidence": "But what has genuinely impressed me is the way you talk with the elderly patients"
+    },
+    "24": {
+      "explain": "A. Madina asks 'Too much?' and the supervisor answers 'Far too much' — everything recorded at the same length, when selection is the skill.",
+      "evidence": "You record everything - what matters and what doesn't, all at the same length"
+    },
+    "25": {
+      "explain": "C. Maths is her strong point and the number of drugs is manageable. Being watched is the problem — 'the moment someone stands beside me with a checklist, my hands stop working'.",
+      "evidence": "It's being watched that gets me"
+    },
+    "26": {
+      "explain": "B. The length is fine and references are explicitly unwanted — it isn't an essay. Every entry should end with what she would do differently.",
+      "evidence": "every entry should finish with what you would do differently next time"
+    },
+    "27": {
+      "explain": "B, the weekly tutorials — a protected hour for the questions you cannot ask on the ward, and the supervisor agrees they work.",
+      "evidence": "having a protected hour to ask all the questions you can't ask on the ward"
+    },
+    "28": {
+      "explain": "D, shadowing Nurse Carter. Theatre was thrilling but she learned little standing at the back for three hours, meeting families was stressful, and two skills-lab sessions were cancelled.",
+      "evidence": "Watching an experienced nurse plan and run a whole shift taught me more than any lecture"
+    },
+    "29": {
+      "explain": "A, earlier training on the record system — 'not in week three when we've already made every possible mistake'. It goes at the top of the list.",
+      "evidence": "train students on the electronic records before the placement starts"
+    },
+    "30": {
+      "explain": "E, a written ward guide. A longer induction is rejected (you cannot absorb it in advance), smaller groups are impossible for want of supervisors, and night shifts should wait for the final year.",
+      "evidence": "A short written guide to the ward's routines"
+    },
+    "31": {
+      "explain": "In the Chinese legend an empress is sitting in her garden when a cocoon drops from a mulberry branch into her cup, and the softened casing unravels between her fingers.",
+      "evidence": "dropped from a mulberry branch into her cup of hot tea"
+    },
+    "32": {
+      "explain": "The detail in the legend is accurate: unwound carefully, one cocoon gives an unbroken length approaching a kilometre.",
+      "evidence": "a single cocoon yields an unbroken length of thread approaching one kilometre"
+    },
+    "33": {
+      "explain": "Having learned to raise the moths and weave the fibre, the Chinese told nobody — the method was guarded as closely as a military plan.",
+      "evidence": "The entire method was treated as a state secret"
+    },
+    "34": {
+      "explain": "Under the old laws, revealing the process to a foreigner or trying to take the moths abroad carried the ultimate penalty.",
+      "evidence": "could be punished by death"
+    },
+    "35": {
+      "explain": "The Silk Road was not one road but a web of routes through high mountain passes and wide deserts, travelled in stages.",
+      "evidence": "but a web of routes threading through high mountain passes and wide deserts"
+    },
+    "36": {
+      "explain": "Three things came east in exchange — glass, horses and, the lecturer stresses, above all silver.",
+      "evidence": "came glass, horses and, above all, silver"
+    },
+    "37": {
+      "explain": "Around 550, two monks who had spent years in the East smuggled silkworm eggs to Constantinople.",
+      "evidence": "they smuggled out silkworm eggs"
+    },
+    "38": {
+      "explain": "Tradition says the eggs travelled hidden inside the monks' hollow walking canes — and silk production really did begin at Constantinople about then.",
+      "evidence": "inside their hollow walking canes"
+    },
+    "39": {
+      "explain": "Artificial fibres, nylon above all, could imitate silk at a fraction of the price and took its markets one by one — stockings, parachutes, linings.",
+      "evidence": "above all nylon - which could imitate silk at a fraction of the price"
+    },
+    "40": {
+      "explain": "Silk is strong, fine and readily accepted by the body, so surgeons have long closed wounds with silk stitches.",
+      "evidence": "surgeons have long used silk stitches for closing wounds"
+    }
+  },
+  "mock8-reading": {
+    "1": {
+      "explain": "The camera obscura effect needs only a darkened room and a tiny hole: the scene outside appears, upside down, on the opposite wall.",
+      "evidence": "through a tiny hole in one wall"
+    },
+    "2": {
+      "explain": "Niépce coated a polished pewter plate with bitumen, a natural asphalt that hardens where light strikes it.",
+      "evidence": "He coated a polished plate of pewter with a thin layer of bitumen"
+    },
+    "3": {
+      "explain": "The exposure was the problem: about eight hours before the plate could be washed to leave a faint image of rooftops and a pear tree.",
+      "evidence": "An exposure of about eight hours was needed"
+    },
+    "4": {
+      "explain": "Daguerre found a barely visible image could be brought up by exposing the plate to the vapour of warmed mercury, cutting exposure from hours to minutes.",
+      "evidence": "by exposing the plate to the vapour of warmed mercury"
+    },
+    "5": {
+      "explain": "Exposures still took most of a minute, so studios used an iron clamp on a stand behind the chair — one reason early portraits so rarely smile.",
+      "evidence": "studios kept an iron clamp on a stand behind the chair"
+    },
+    "6": {
+      "explain": "Talbot's images had light and dark exchanged, and he saw the apparent fault was the key: a negative can print any number of positives.",
+      "evidence": "the paper original was a negative"
+    },
+    "7": {
+      "explain": "The 1888 Kodak came loaded with a roll of film long enough for a hundred pictures; the whole camera went back to the factory to be developed and reloaded.",
+      "evidence": "already loaded with a roll of film long enough for a hundred pictures"
+    },
+    "8": {
+      "explain": "TRUE: artists traced the projected scene through thin paper over the glass screen, centuries before anyone could fix the image.",
+      "evidence": "they could place a sheet of thin paper over its glass screen and trace the projected scene"
+    },
+    "9": {
+      "explain": "FALSE: the process was too slow to be practical, and when he died in 1833 his achievement was known to almost nobody.",
+      "evidence": "when Niépce died in 1833 his achievement was known to almost nobody"
+    },
+    "10": {
+      "explain": "NOT GIVEN: studios opened across Europe and America and portraiture is called fashionable, but no prices are compared.",
+      "evidence": "daguerreotype studios had opened in cities across Europe and America"
+    },
+    "11": {
+      "explain": "TRUE: the process gave a single image on metal, and a second copy meant photographing the scene again.",
+      "evidence": "the only way to obtain a second copy was to photograph the scene again"
+    },
+    "12": {
+      "explain": "FALSE: the comparison runs the other way — Talbot's paper images were softer and less detailed than the daguerreotype's polished mirror.",
+      "evidence": "The images were softer and less detailed than the daguerreotype's polished mirror"
+    },
+    "13": {
+      "explain": "TRUE: the Kodak needed no knowledge of lenses or chemicals — the whole camera went back to the factory.",
+      "evidence": "No knowledge of lenses or chemicals was required"
+    },
+    "14": {
+      "explain": "F: France was first to require large supermarkets by law to donate unsold edible food rather than destroy it.",
+      "evidence": "France was first to require large supermarkets, by law, to donate unsold edible food"
+    },
+    "15": {
+      "explain": "B: the paragraph draws the contrast — losses near the farm in lower-income countries, losses in shops and homes in wealthy ones.",
+      "evidence": "In lower-income countries, most losses occur near the farm"
+    },
+    "16": {
+      "explain": "E: apps that link bakeries and cafes with customers collecting at closing time, and others that let neighbours give away surplus.",
+      "evidence": "Smartphone apps connect bakeries, cafés and grocers with nearby customers"
+    },
+    "17": {
+      "explain": "C: one large British grocer removed 'best before' dates from hundreds of fresh products, trusting shoppers' eyes over a printed date.",
+      "evidence": "removed \"best before\" dates from hundreds of fresh products"
+    },
+    "18": {
+      "explain": "In rich countries the biggest single share of waste happens at home — which is why the paragraph is about kitchen studies rather than farms.",
+      "evidence": "in rich countries the largest single share of waste occurs in the home"
+    },
+    "19": {
+      "explain": "Calder found families misread date labels, throwing away food that is merely past 'best before' rather than actually unsafe.",
+      "evidence": "they misread date labels"
+    },
+    "20": {
+      "explain": "The second ordinary cause: shopping without first checking what is already at home.",
+      "evidence": "they shop without checking the fridge"
+    },
+    "21": {
+      "explain": "Her list of unglamorous remedies begins with writing a shopping list — the four together cut a family's waste by a third.",
+      "evidence": "Writing a shopping list, checking the fridge first"
+    },
+    "22": {
+      "explain": "Serving smaller portions is the third of her routines, paired with freezing what is left.",
+      "evidence": "serving smaller portions and freezing what is left"
+    },
+    "23": {
+      "explain": "A, Keller. Her point is that measurement comes before the clever tools: weigh it, and the number gets an owner and starts to fall.",
+      "evidence": "You cannot manage what you have not measured"
+    },
+    "24": {
+      "explain": "C, Calder. 'Tiny habits, repeated daily, beat any campaign poster' — the routines cut waste by a third in her studies.",
+      "evidence": "Tiny habits, repeated daily, beat any campaign poster"
+    },
+    "25": {
+      "explain": "B, Ansah. Every trial tells the same story: odd-looking produce at a fair price sells. The perfect-vegetable standard was the industry's invention.",
+      "evidence": "Offer people slightly odd-looking produce at a fair price and they buy it"
+    },
+    "26": {
+      "explain": "D, Duarte. A neighbourhood kitchen cooking rescued food becomes a place where people meet, volunteer and learn.",
+      "evidence": "Surplus food, handled with dignity, builds a community as well as feeding it"
+    },
+    "27": {
+      "explain": "B: three generations, three shrinking territories — kilometres of woods, then the park at the end of the street, then the garden within sight of an adult.",
+      "evidence": "the territory a child may explore alone has contracted dramatically within living memory"
+    },
+    "28": {
+      "explain": "C: the writer warns the term is easily misread. Its signature is a thrill of uncertainty the child controls — edging to a limit and retreating.",
+      "evidence": "Its signature is a thrill of uncertainty that the child controls"
+    },
+    "29": {
+      "explain": "A: equipment designed to remove challenge also removes interest, so children ignore it or invent genuinely dangerous uses. Injury statistics show no clear improvement, so B is wrong.",
+      "evidence": "equipment designed to eliminate challenge also eliminates interest"
+    },
+    "30": {
+      "explain": "D: the closing paragraph asks not for closer supervision or lessons but for redesign — play streets, graded challenge, longer breaktimes.",
+      "evidence": "but to rebuild the ordinary places and relaxed expectations within which children teach themselves"
+    },
+    "31": {
+      "explain": "D: children given the freedom become measurably better at judging what they can manage — 'they fall, but learn how to fall'.",
+      "evidence": "become measurably better at judging what they can and cannot manage"
+    },
+    "32": {
+      "explain": "B: in some studies the ground a child may cover alone has shrunk to a tenth of what it was two generations ago.",
+      "evidence": "in some studies to a tenth of what it was two generations ago"
+    },
+    "33": {
+      "explain": "E: fear of accidents and the lawsuits after them led authorities to strip out tall slides, high frames and fast roundabouts.",
+      "evidence": "many local authorities stripped out tall slides, high climbing frames and fast roundabouts"
+    },
+    "34": {
+      "explain": "A: children stay far longer at adventure playgrounds than at conventional ones, play more cooperatively, and are hurt no more often.",
+      "evidence": "children stay far longer at adventure playgrounds than at conventional ones"
+    },
+    "35": {
+      "explain": "F: in a football session an adult sets the goal, rules and schedule, so the developmental work — negotiating, quarrelling, inventing — never happens.",
+      "evidence": "But organised activity, whatever its virtues, is not a substitute for free play"
+    },
+    "36": {
+      "explain": "YES: the writer answers the question 'Does it matter?' with research linking risky play to better judgement, greater confidence and lower anxiety.",
+      "evidence": "associate early risky play with greater confidence and lower anxiety later in childhood"
+    },
+    "37": {
+      "explain": "NO: stranger abduction is among the rarest crimes and no more common than decades ago. What changed is visibility, not danger.",
+      "evidence": "what has changed is not the danger but its visibility"
+    },
+    "38": {
+      "explain": "NOT GIVEN: the passage compares generations, settings and types of play, but never boys with girls.",
+      "evidence": "the freedom to move around a neighbourhood without an adult"
+    },
+    "39": {
+      "explain": "YES: where streets have been closed to traffic children pour outdoors within minutes, and the writer says such schemes deserve to spread.",
+      "evidence": "and such \"play street\" schemes deserve to spread"
+    },
+    "40": {
+      "explain": "NO: 'What is not needed is yet more instruction' — given time, space and other children, they need no lessons.",
+      "evidence": "the young of our species need no lessons in how to play"
+    }
   }
 }
