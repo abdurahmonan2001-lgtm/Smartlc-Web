@@ -938,5 +938,361 @@
         "menu size is not the main factor"
       ]
     }
+  },
+  "mock3-listening": {
+    "1": {
+      "explain": "The caller offers the spelling himself: R-A-K-H-I-M-O-V. Note the KH — a common place to lose the mark.",
+      "evidence": "Shall I spell the surname? R, A, K, H, I, M, O, V. Rakhimov."
+    },
+    "2": {
+      "explain": "Three kinds are offered and the clerk proposes standard. He corrects her: he studies at Halton College, so the student membership applies.",
+      "evidence": "Actually, I'm studying at Halton College, so student, please"
+    },
+    "3": {
+      "explain": "Two hundred thousand is the standard rate and is already printed in the table. His rate is the student one.",
+      "evidence": "but on the student membership you pay one hundred and sixty thousand"
+    },
+    "4": {
+      "explain": "The first is proposed and refused — the centre is closed that day for staff training — so they settle on the day after.",
+      "evidence": "Could we make it the day after, the second?"
+    },
+    "5": {
+      "explain": "Ten at night is the weekday closing time, already given in the table. Weekends are shorter.",
+      "evidence": "Weekends are a little shorter - we close at eight in the evening"
+    },
+    "6": {
+      "explain": "A correction: Zumba was the second free class until the instructor moved abroad, and boxing replaced it.",
+      "evidence": "so it's boxing now, on Saturday mornings"
+    },
+    "7": {
+      "explain": "The pool is included; the sauna is the exception, with a charge for each visit.",
+      "evidence": "The one thing that isn't covered is the sauna"
+    },
+    "8": {
+      "explain": "Two documents are mentioned, but the college card is for the discount. The one needed to make up the membership card is the passport.",
+      "evidence": "please bring your passport - we need it to make up your membership card"
+    },
+    "9": {
+      "explain": "Every new member is given a sports bag with the centre's logo at their first visit.",
+      "evidence": "every new member receives a sports bag with the centre's logo on it"
+    },
+    "10": {
+      "explain": "A week is the normal wait; September is quiet, so it is currently shorter. Cards are collected, not posted.",
+      "evidence": "but September is a quiet month, so at the moment it's five days"
+    },
+    "11": {
+      "explain": "A. Visitors and health are both named as things people assume, and both are set aside — 'neither is the reason the council is paying for this'. Traffic has grown by a third in ten years.",
+      "evidence": "the scheme's real purpose is to cut that traffic"
+    },
+    "12": {
+      "explain": "B. Telephoning the council gets you turned away, and the card readers at stations only unlock bikes for existing members. Registration is through the app.",
+      "evidence": "To register, you download the CityRide application onto your phone"
+    },
+    "13": {
+      "explain": "C. Helmets are not compulsory for adults and cannot be rented at stations — but anyone registering in the first year is sent one free.",
+      "evidence": "everyone who registers during the scheme's first year will be sent a helmet completely free of charge"
+    },
+    "14": {
+      "explain": "A. The stadium is rejected because it is busy only on match days, the airport because twelve kilometres is too far. The university is the confirmed extension.",
+      "evidence": "What we will do, next year, is extend the scheme to the university"
+    },
+    "15": {
+      "explain": "Coming over the bridge into the centre, on the right: the open space directly in front of the Town Hall. It is the largest station, with fifty bikes.",
+      "evidence": "will be on your right, in the open space directly in front of the Town Hall"
+    },
+    "16": {
+      "explain": "At the far end of Station Road, at the bottom of the map, beside the Railway Station — and specifically to the left of the entrance as you face it.",
+      "evidence": "just to the left of the station entrance as you face it"
+    },
+    "17": {
+      "explain": "On High Street, on the south side, directly opposite the Museum.",
+      "evidence": "it's on the south side of the street, directly opposite the Museum"
+    },
+    "18": {
+      "explain": "Also on High Street but the opposite side — north — at the point where the park path meets the street.",
+      "evidence": "on the north side of High Street, right at the entrance to the Park"
+    },
+    "19": {
+      "explain": "The one with a roof stands in the middle of Market Square, among the stalls.",
+      "evidence": "That covered station stands in the middle of Market Square, between the stalls"
+    },
+    "20": {
+      "explain": "The station that does not exist yet: on the riverbank west of the bridge, beside the walking path.",
+      "evidence": "It will stand on the riverbank to the west of the bridge, right beside the walking path"
+    },
+    "21": {
+      "explain": "B. Aisha concedes that Merrick Sands has more species and is easier to reach, then outweighs both: nine autumns of departmental records at Culver Point to compare against.",
+      "evidence": "students from our department have been recording at Culver Point every autumn for nine years"
+    },
+    "22": {
+      "explain": "A. The field centre has space all month and the tutor is there all term. The reason is the tides — that week has the lowest of the season.",
+      "evidence": "That week has the lowest tides of the whole season"
+    },
+    "23": {
+      "explain": "C. Weather is dismissed ('a bit of rain never stopped fieldwork') and the hostel is cheap. The real worry is carrying quadrats, buckets and the balance down a forty-minute cliff path.",
+      "evidence": "What genuinely worries me is the equipment"
+    },
+    "24": {
+      "explain": "B. The printed guide is twenty years out of date and posting photographs to an expert would miss the deadline. The museum app stores its data on the phone, so the lack of signal does not matter.",
+      "evidence": "the city museum produces an identification app"
+    },
+    "25": {
+      "explain": "A. The cliff edge warning is real but secondary — Aisha says the form is the thing she absolutely insists on, and will not sign off the trip without it.",
+      "evidence": "she simply won't sign off the trip until the complete form has been submitted"
+    },
+    "26": {
+      "explain": "C. The national survey only accepts records checked by a professional, and the blog is just for photos. The comparison with previous years is 'the whole point of the project'.",
+      "evidence": "for our numbers to be set against the records from previous years at Culver Point"
+    },
+    "27": {
+      "explain": "A, the tide-safety video. The minibus was booked by the tutor and the warden is her call, so B and C are crossed off as not theirs.",
+      "evidence": "the department won't let anyone onto the shore who hasn't watched it"
+    },
+    "28": {
+      "explain": "D, printing the recording sheets — fifty copies, because they get soaked or blow away. The waterproof notebooks are rejected on price.",
+      "evidence": "And we should print the recording sheets ourselves"
+    },
+    "29": {
+      "explain": "B, the species count. Aisha states the two measurements for every quadrat with no exceptions, and this is the first.",
+      "evidence": "We count the number of different species - everything we can see"
+    },
+    "30": {
+      "explain": "D, seaweed cover. Water temperature is taken once for the whole site, the largest shellfish is dropped as uninformative, and most quadrats have no rock pool to measure.",
+      "evidence": "we estimate the percentage of seaweed cover"
+    },
+    "31": {
+      "explain": "Obsidian breaks with an edge sharper than any metal, so prehistoric peoples shaped it into blades and traded them hundreds of kilometres.",
+      "evidence": "They shaped it into knives, and traded those blades across enormous distances"
+    },
+    "32": {
+      "explain": "The recipe has never changed in essence: sand melted with plant ash, at temperatures ordinary fires could barely reach.",
+      "evidence": "they melted sand together with the ashes of certain plants"
+    },
+    "33": {
+      "explain": "The oldest glass objects found are small beads, worn as jewellery and buried with their owners — glass then being as valuable as precious stones.",
+      "evidence": "The oldest objects we have found are small beads, worn as jewellery"
+    },
+    "34": {
+      "explain": "The glassblower gathers molten glass on a hollow iron pipe and blows down it, inflating the glass like a soap bubble.",
+      "evidence": "on the end of a hollow iron pipe and blows down it"
+    },
+    "35": {
+      "explain": "The Romans were the first to glaze windows — small cloudy panes, but a revolution in how buildings could be lit.",
+      "evidence": "The Romans were also the first people to fit glass into windows"
+    },
+    "36": {
+      "explain": "The official reason for moving every furnace to Murano in 1291 was fire risk in a city built largely of wood. Keeping the trade secrets in one place was the second, unstated advantage.",
+      "evidence": "The official reason was the danger of fires"
+    },
+    "37": {
+      "explain": "Murano's two famous products are named together: goblets of astonishing thinness, and flat mirrors that no other city could make for over a century.",
+      "evidence": "and flat mirrors - which for more than a century no other city in the world knew how to make"
+    },
+    "38": {
+      "explain": "In the float process the glass floats on liquid tin, so it spreads perfectly flat on both sides with no grinding or polishing.",
+      "evidence": "Molten glass is poured onto a bath of liquid tin"
+    },
+    "39": {
+      "explain": "Optical fibres are glass threads finer than a hair, carrying most of the world's information beneath the oceans as tiny flashes of light.",
+      "evidence": "as tiny flashes of light"
+    },
+    "40": {
+      "explain": "The property nothing else manufactured can match: glass can be melted and reformed again and again with no loss of quality.",
+      "evidence": "it can be recycled endlessly, melted down and reformed again and again, with no loss of quality"
+    }
+  },
+  "mock3-reading": {
+    "1": {
+      "explain": "The first canals were irrigation, not transport: channels cut from the Tigris and Euphrates to water the fields. Transport came later, 'almost as an afterthought'.",
+      "evidence": "farmers cut channels from the Tigris and the Euphrates to carry river water to their crops"
+    },
+    "2": {
+      "explain": "The Grand Canal was for supply rather than irrigation — moving the surplus food of the fertile south north to the capital and the frontier armies.",
+      "evidence": "the canal existed above all to carry grain northwards",
+      "vocab": [
+        "above all",
+        "the main task"
+      ]
+    },
+    "3": {
+      "explain": "The pound lock's idea is two gates instead of one, with the boat held between them while the level is changed.",
+      "evidence": "with the boat waiting in a sealed chamber between them"
+    },
+    "4": {
+      "explain": "The Bridgewater Canal brought coal from Worsley into Manchester, and within a year the price of that coal in the city had halved.",
+      "evidence": "Within a year the price of coal in the city had halved",
+      "vocab": [
+        "had halved",
+        "cost half as much"
+      ]
+    },
+    "5": {
+      "explain": "Boats were horse-drawn, the animal walking the towpath at the water's edge.",
+      "evidence": "The boats themselves were pulled by horses, which plodded along a towpath"
+    },
+    "6": {
+      "explain": "Most tunnels had no towpath, so the horse went over the hill and the boatmen 'legged' the boat through — lying on planks and pushing the walls.",
+      "evidence": "pushed against the tunnel walls with their legs"
+    },
+    "7": {
+      "explain": "TRUE: the canal linked the Yellow River and the Yangtze, named in the passage as two of the country's great rivers.",
+      "evidence": "linked two of the country's great rivers, the Yellow River and the Yangtze"
+    },
+    "8": {
+      "explain": "FALSE: the pound lock was Chinese, from the tenth century. Europe adopted it centuries later, and Leonardo only added the mitre gate afterwards.",
+      "evidence": "appeared in China in the tenth century, the invention of a Chinese engineer"
+    },
+    "9": {
+      "explain": "TRUE: the mitre gate — doors meeting at an angle pointed upstream so the water pressure seals them — 'remains in service today'.",
+      "evidence": "Leonardo da Vinci added a refinement that remains in service today",
+      "vocab": [
+        "remains in service",
+        "is still used"
+      ]
+    },
+    "10": {
+      "explain": "NOT GIVEN: the navvies are named as the gangs who dug the network by hand, but nothing at all is said about their pay.",
+      "evidence": "by travelling gangs of labourers known as navvies"
+    },
+    "11": {
+      "explain": "FALSE: the railways killed the canals precisely because they were faster — days by barge became hours by train — as well as cheaper and unaffected by frost.",
+      "evidence": "the new trains were faster, cheaper and untroubled by frost"
+    },
+    "12": {
+      "explain": "TRUE: the restoration was done by volunteers, described as unpaid and working weekends with borrowed tools.",
+      "evidence": "volunteers, unpaid and working at weekends with borrowed tools",
+      "vocab": [
+        "unpaid volunteers",
+        "people not paid for the work"
+      ]
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage says nearly all boats today are for leisure, but never says who the boaters are. Retired people are not mentioned.",
+      "evidence": "nearly all of them for leisure"
+    },
+    "14": {
+      "explain": "B: cities are described as typically a few degrees warmer than the countryside around them, because brick and asphalt hold the day's heat.",
+      "evidence": "Cities are also warmer — typically a few degrees warmer than the surrounding countryside"
+    },
+    "15": {
+      "explain": "A: the opening paragraph lists where hives now appear, and the national opera house is the famous building among them.",
+      "evidence": "on the roof of the national opera house in one European capital"
+    },
+    "16": {
+      "explain": "E: the campaigners' slogan is 'plant more, keep less' — nectar-rich trees and wildflower verges instead of another rooftop apiary.",
+      "evidence": "should be sowing nectar-rich trees and wildflower verges rather than adding another rooftop apiary"
+    },
+    "17": {
+      "explain": "C: Halvorsen's measurements of lead and other metals come out far below safety limits, and she calls the pollution fear misplaced.",
+      "evidence": "are almost always far below the safety limits"
+    },
+    "18": {
+      "explain": "The contrast is with farmland, which flowers spectacularly for a fortnight and then stops. The city patchwork supplies variety from early spring to late autumn.",
+      "evidence": "they provide an extraordinary variety of flowers from early spring until late autumn"
+    },
+    "19": {
+      "explain": "The summary keeps the passage's comparison: a few degrees above the surrounding countryside, which lengthens the foraging season at both ends.",
+      "evidence": "typically a few degrees warmer than the surrounding countryside"
+    },
+    "20": {
+      "explain": "What Halvorsen measures is lead and other metals, and the levels sit far below the safety limits — traces, not contamination.",
+      "evidence": "the levels of lead and other metals we measure are almost always far below the safety limits"
+    },
+    "21": {
+      "explain": "Her team's phrase is 'living sensors': one colony samples millions of flowers across several square kilometres, so its honey reports on the district.",
+      "evidence": "Her team has come to treat hives as living sensors",
+      "vocab": [
+        "living sensors",
+        "instruments that read the environment"
+      ]
+    },
+    "22": {
+      "explain": "Adeyemi's worry is competition: managed honeybees are livestock, and they take nectar from the wild pollinators that have nowhere else to go.",
+      "evidence": "it competes directly with the wild pollinators"
+    },
+    "23": {
+      "explain": "D, Voss. His image is the hive as a window — students arrive wanting honey and leave caring about street trees, noticing what is in flower on the way to work.",
+      "evidence": "once you look after bees, you never see a city the same way again"
+    },
+    "24": {
+      "explain": "A, Halvorsen. Pollen grains and trace compounds in the honey show which trees line the streets and which weeds fill the empty plots.",
+      "evidence": "Reading its honey tells you more about a neighbourhood's environment than any instrument we could afford to install"
+    },
+    "25": {
+      "explain": "B, Adeyemi. Hive numbers have doubled and doubled again in some districts, and there is not enough nectar to go round.",
+      "evidence": "there is simply not enough nectar to go round"
+    },
+    "26": {
+      "explain": "C, Reyes. Her department's register requires a new apiary to show there is enough forage nearby before approval — 'how we stop enthusiasm from loving the bees to death'.",
+      "evidence": "a new apiary must show there is enough forage nearby before it is approved",
+      "vocab": [
+        "enough forage nearby",
+        "enough food exists"
+      ]
+    },
+    "27": {
+      "explain": "B: the relationship has reversed. Silence used to be the ordinary background of work and travel; recorded music is now the default and silence the exception.",
+      "evidence": "silence has become the exception rather than the rule",
+      "vocab": [
+        "the exception rather than the rule",
+        "unusual rather than normal"
+      ]
+    },
+    "28": {
+      "explain": "C: the follow-up work found the boost was real but tiny and brief, and had nothing to do with Mozart — a story read aloud or a liked pop song did the same.",
+      "evidence": "an enjoyable story read aloud, or a pop song the listener happened to like, produced the same short-lived improvement"
+    },
+    "29": {
+      "explain": "A: the damage is worst when the background sound contains language, because song words and page words use the same machinery. D is the opposite — repetitive tasks are where music helps.",
+      "evidence": "reading comprehension suffers particularly when the music includes lyrics"
+    },
+    "30": {
+      "explain": "D: the closing paragraph refuses a verdict and recommends matching — fit the soundtrack to the task, the person and the moment. A is explicitly rejected as foolish.",
+      "evidence": "fit the soundtrack to the task, the person and the moment"
+    },
+    "31": {
+      "explain": "D: for simple repetitive work the arousal-plus-mood combination genuinely helps, because the task leaves attention to spare.",
+      "evidence": "people fold laundry, enter data and run on treadmills measurably better with music than without"
+    },
+    "32": {
+      "explain": "F: lyrics are the specific problem for reading, because the words of the song compete with the words on the page.",
+      "evidence": "reading comprehension suffers particularly when the music includes lyrics"
+    },
+    "33": {
+      "explain": "A: introverts run closer to their optimal level of stimulation, so background music pushes them past it more easily than it does outgoing people.",
+      "evidence": "tend to be more affected by background music than outgoing people"
+    },
+    "34": {
+      "explain": "E: chosen music is predictable, carries no social irritation and can be switched off — which is why headphones are tolerable where a colleague's radio is not.",
+      "evidence": "Music we have chosen ourselves is processed differently from music imposed on us"
+    },
+    "35": {
+      "explain": "G: slow tempo makes customers walk more slowly, linger at tables and spend more. Louder music is what shortens visits, so C belongs to volume, not tempo.",
+      "evidence": "customers walk more slowly through the aisles, linger at tables, and — the finding that pays for all this research — spend more"
+    },
+    "36": {
+      "explain": "YES: the writer says the media seized on a small study, and lists the exaggerations — newspapers claiming classical music made children cleverer, CDs sold to anxious parents.",
+      "evidence": "newspapers announced that classical music made children more intelligent",
+      "vocab": [
+        "the media seized on it",
+        "the media exaggerated it"
+      ]
+    },
+    "37": {
+      "explain": "NO: the writer calls a total ban as foolish as piping music everywhere. The recommendation is matching, not prohibition.",
+      "evidence": "It would be as foolish to ban music from every workplace as to pipe it into every corner"
+    },
+    "38": {
+      "explain": "NOT GIVEN: the passage discusses personality and control as the things that vary between listeners. Musical training is never mentioned.",
+      "evidence": "introverts, whose nervous systems appear to run closer to their optimal level of stimulation"
+    },
+    "39": {
+      "explain": "YES: the writer is explicit — it is persuasion, and entirely deliberate, even if the customers simply drift with the current.",
+      "evidence": "but it is persuasion nonetheless, and it is entirely deliberate"
+    },
+    "40": {
+      "explain": "NO: quiet is best only for complex verbal work. For dull and mechanical tasks the passage says music measurably helps.",
+      "evidence": "For complex verbal work, the dull conclusion of the literature is that quiet remains the best soundtrack"
+    }
   }
 }
