@@ -574,6 +574,12 @@ function MockRun({ book, tests, user, onQuit, onFinished }) {
 
 /* One card per paper, because a mock's outcome is three numbers, not one. */
 function MockResultView({ outcome, onBack }) {
+  const [showFb, setShowFb] = useState(false);
+  // The writing paper of the sitting is marked too. This screen used to say
+  // only "sent to your teacher for marking", so a student who sat a whole mock
+  // never saw the band that had just been worked out for them — the single
+  // paper screen showed it, this one did not.
+  const marked = outcome.marked?.band != null ? outcome.marked : null;
   return (
     <div className="pr-result">
       <div className="pr-result__card">
@@ -583,11 +589,18 @@ function MockResultView({ outcome, onBack }) {
           <div className="pr-mockline" key={r.test_id}>
             <span className="pr-mockline__mod">{r.module}</span>
             <span className="pr-mockline__time">{fmtTime(r.duration_seconds)}</span>
-            {r.raw_score == null
-              ? <span>sent to your teacher for marking</span>
-              : <span><strong>{r.raw_score}</strong> / {r.total}{r.band ? ` · Band ${r.band.toFixed(1)}` : ""}</span>}
+            {r.raw_score != null
+              ? <span><strong>{r.raw_score}</strong> / {r.total}{r.band ? ` · Band ${r.band.toFixed(1)}` : ""}</span>
+              : r.module === "writing" && marked
+                ? <span><strong>Band {Number(marked.band).toFixed(1)}</strong></span>
+                : <span>not marked</span>}
           </div>
         ))}
+        {marked && (
+          <button className="pr-link" onClick={() => setShowFb(true)}>
+            See my writing and feedback
+          </button>
+        )}
         {!outcome.saved && (
           <p className="pr-result__warn">
             Saved on this device — it will sync to the centre when the connection returns.
@@ -596,6 +609,9 @@ function MockResultView({ outcome, onBack }) {
         )}
         <button className="btn btn--primary" onClick={onBack}>Back to the library</button>
       </div>
+      {showFb && marked && (
+        <WritingFeedback band={marked.band} feedback={marked.feedback} onClose={() => setShowFb(false)} />
+      )}
     </div>
   );
 }
