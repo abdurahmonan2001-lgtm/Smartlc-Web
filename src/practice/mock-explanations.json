@@ -1630,5 +1630,333 @@
       "explain": "B, children. The passage's final test of a living language is a child hearing it from a parent and answering back.",
       "evidence": "A language lives when a child hears it from a parent and answers back"
     }
+  },
+  "mock5-listening": {
+    "1": {
+      "explain": "Spelled out as C-A-R-D-W-E-L-L, and then distinguished from Carlton Road, the long road with the cafes. Cardwell Street is the small one near the river.",
+      "evidence": "It's number seven, Cardwell Street. That's C, A, R, D, W, E, L, L."
+    },
+    "2": {
+      "explain": "A correction, and the agent names it as one: the advert said fourth and that was a typing error.",
+      "evidence": "the advert said fourth, and that was our typing error. It's the third."
+    },
+    "3": {
+      "explain": "The small room off the hallway is too small to count as a second bedroom; the current tenant uses it as a study for working at home.",
+      "evidence": "The current tenant uses it as a study, for working at home"
+    },
+    "4": {
+      "explain": "Six million was the asking price when it went on the market. The owner has just reduced it.",
+      "evidence": "but the owner has just reduced it. It's five million now."
+    },
+    "5": {
+      "explain": "Ten million is the cash amount, but the note asks for the number of months' rent — two — and it is returned at the end if there is no damage.",
+      "evidence": "It's the equivalent of two months' rent, so ten million"
+    },
+    "6": {
+      "explain": "Heating and water are in the rent; electricity is the exception, with the tenant setting up their own account.",
+      "evidence": "That's paid by the tenant"
+    },
+    "7": {
+      "explain": "Friday is offered and withdrawn — the agency closes early and the agent will not have the keys.",
+      "evidence": "we close early on Fridays, he won't have the keys. Wednesday, then."
+    },
+    "8": {
+      "explain": "Not the front door: the lobby needs a code and the agent would never see you. The meeting point is outside the pharmacy next door.",
+      "evidence": "There's a pharmacy right next door. Wait outside that and he'll find you."
+    },
+    "9": {
+      "explain": "A driving licence is explicitly refused — the owner insists on a copy of the passport for the tenancy form.",
+      "evidence": "a copy of your passport, if you would"
+    },
+    "10": {
+      "explain": "Email is offered and rejected, because the agency's emails end up in junk folders. Directions go by text to the number she is calling from.",
+      "evidence": "I'll send them by text instead"
+    },
+    "11": {
+      "explain": "B. Falling visitor numbers is called 'the most popular' theory and denied — the last full year was among the busiest. The larger site came to nothing years ago. A survey found the roof and upper floors unsafe.",
+      "evidence": "found that parts of this building were no longer safe to stand in"
+    },
+    "12": {
+      "explain": "C. A handful of pieces went on loan and one or two very large items stayed boarded up, but the collection as a whole — forty thousand objects — went to storage outside the town.",
+      "evidence": "was packed up and taken to a storage building outside the town"
+    },
+    "13": {
+      "explain": "A. Machines were considered and rejected in favour of a real person, and tours run at weekends only. The cloakroom is the new free service — 'it always felt wrong' to charge.",
+      "evidence": "leaving your coat and your bag there costs you nothing"
+    },
+    "14": {
+      "explain": "C. Longer hours and the lift are both admitted but downplayed — the lift still does not reach the top gallery. What the director is proudest of is free Sunday admission.",
+      "evidence": "every Sunday, admission to this museum is completely free, for everybody"
+    },
+    "15": {
+      "explain": "G. Nothing new has come out of store — what changed is the location. It was on the second floor at the end of a corridor and is now on the ground floor.",
+      "evidence": "It used to be up on the second floor, at the end of a long corridor"
+    },
+    "16": {
+      "explain": "H. Size is denied outright ('exactly the same size as it always was'). The change is light: strong lighting removed, because faded textiles cannot be repaired.",
+      "evidence": "kept the whole room considerably darker than before"
+    },
+    "17": {
+      "explain": "D. The architects wanted white walls and spotlights and lost the argument. The red silk, gold cornices and painted ceiling stay as they were in 1890.",
+      "evidence": "all of it stays exactly as it was in eighteen ninety"
+    },
+    "18": {
+      "explain": "A. It has absorbed the old library next door. Note the trap: a separate entrance was asked about and refused — 'It doesn't'.",
+      "evidence": "so it is now twice the size it was"
+    },
+    "19": {
+      "explain": "E. Not many small donations and not the city — the whole cost came from one woman, a student there fifty years ago, who asked to stay anonymous.",
+      "evidence": "Every som of the cost was given by one woman"
+    },
+    "20": {
+      "explain": "B. The floor surface failed its safety test in June, so the terrace stays shut until October.",
+      "evidence": "it will not be open to the public until October"
+    },
+    "21": {
+      "explain": "A. The lecture came weeks afterwards and the laboratory job is what 'everybody assumes'. The real trigger was a newspaper claim that nobody had measured.",
+      "evidence": "It was that piece in the local paper in September"
+    },
+    "22": {
+      "explain": "B. Late delivery is denied — they arrived two days early — and nothing was broken. Three strips in one sample gave three wildly different nitrate readings.",
+      "evidence": "and got three different readings for nitrate"
+    },
+    "23": {
+      "explain": "A. Madina expected to be told to cut the sites and the tutor said six was fine; the time of day did not bother her either. Her one instruction was repetition.",
+      "evidence": "Every single test, at every site, has to be done three times over"
+    },
+    "24": {
+      "explain": "B. The writing is not feared and the presentation is only ten minutes. What frightens both of them is making sense of the numbers, with no statistics training.",
+      "evidence": "Working out what the results actually mean will be far and away the hardest part"
+    },
+    "25": {
+      "explain": "F. Bacteria were low and the weather made no difference. What stood out was zinc plus a trace of copper — present at every visit, though not at dangerous levels.",
+      "evidence": "The one thing that stood out was zinc, and a trace of copper as well"
+    },
+    "26": {
+      "explain": "A. No metals at all at the lake, but the bacterial count was higher than anywhere else they tested, by a long way.",
+      "evidence": "Higher than anywhere else we tested, by a very long way"
+    },
+    "27": {
+      "explain": "C. They expected the worst and every reading came back low — 'the pleasant surprise of the entire project'. The fence made access awkward but they managed safely, so H is wrong.",
+      "evidence": "That stream is in far better condition than either of us predicted"
+    },
+    "28": {
+      "explain": "B. The phosphate readings make no sense and a sample bottle was dropped, so the whole set has to be repeated next Tuesday before anything can be reported.",
+      "evidence": "So we go back next Tuesday and do the whole set again properly"
+    },
+    "29": {
+      "explain": "G. 'Beautifully dull' — every reading, every week, comfortably inside the official limits.",
+      "evidence": "It passed every standard there is"
+    },
+    "30": {
+      "explain": "D. High nitrates that climbed sharply in April, right after the farmers spread fertiliser, with fields on three sides of the well.",
+      "evidence": "right after the farmers spread fertiliser"
+    },
+    "31": {
+      "explain": "The water clock lets water escape at a steady rate through a small hole in the bottom, with marks inside showing elapsed time.",
+      "evidence": "through a small hole in the bottom"
+    },
+    "32": {
+      "explain": "In the Athenian courts the clock stood beside the speaker, and when the water ran out he had to sit down.",
+      "evidence": "It was there to limit the length of speeches"
+    },
+    "33": {
+      "explain": "Not kings and not merchants: monks needed waking at fixed hours through the night, which made the first clocks a monastic problem.",
+      "evidence": "The first mechanical clocks were built in monasteries"
+    },
+    "34": {
+      "explain": "These machines had no face and no hands — nobody looked at them. Their whole job was to strike, so the hour was heard rather than read.",
+      "evidence": "so the community learned the hour from a bell"
+    },
+    "35": {
+      "explain": "Galileo is said to have watched a lamp swinging on its chain in the cathedral at Pisa and timed the swings against his pulse: wide or narrow, the time was the same.",
+      "evidence": "is said to have watched a lamp swinging on its long chain"
+    },
+    "36": {
+      "explain": "A pendulum cannot swing evenly on a ship — the roll, the pitch, the endless rise and fall — which is why the clock failed exactly where it was worth most.",
+      "evidence": "because of the constant motion of the vessel"
+    },
+    "37": {
+      "explain": "Harrison's chronometer was driven by springs instead of a pendulum, and after eighty-one days at sea on that voyage it was wrong by only seconds.",
+      "evidence": "His famous test came on a voyage to Jamaica"
+    },
+    "38": {
+      "explain": "Railways needed one time because a timetable is meaningless otherwise, and the signal reached every town at the same instant along the wires beside the tracks.",
+      "evidence": "the time signal travelled out along the telegraph"
+    },
+    "39": {
+      "explain": "A quartz clock counts the vibrations of a tiny crystal, which shakes tens of thousands of times a second when current passes through it.",
+      "evidence": "A quartz clock contains a tiny crystal"
+    },
+    "40": {
+      "explain": "Phone positioning works by timing radio signals from satellites, each carrying several atomic clocks — a millionth of a second of error moves you three hundred metres.",
+      "evidence": "each of those satellites carries several atomic clocks on board"
+    }
+  },
+  "mock5-reading": {
+    "1": {
+      "explain": "The running machine had no pedals at all — the rider pushed against the ground and glided between strides.",
+      "evidence": "the rider simply pushed against the ground with his feet"
+    },
+    "2": {
+      "explain": "The nickname comes from the ride: a rigid frame and solid iron tyres on cobbles shook the rider thoroughly.",
+      "evidence": "shook its rider so thoroughly that everyone simply called it the boneshaker"
+    },
+    "3": {
+      "explain": "With pedals fixed to the wheel, one turn of the pedals was one turn of the wheel, so a bigger circle was the only way to cover more ground per turn.",
+      "evidence": "a larger circle covered a greater distance with every turn of the pedals"
+    },
+    "4": {
+      "explain": "Starley's Rover drove the rear wheel through a chain, and the passage calls the chain the decisive detail.",
+      "evidence": "and drove the rear wheel through a chain"
+    },
+    "5": {
+      "explain": "Dunlop wrapped the wheels in rubber tubes filled with air — the pneumatic tyre, which absorbed the shock of rough roads.",
+      "evidence": "wrapped the wheels of his son's tricycle in rubber tubes filled with air"
+    },
+    "6": {
+      "explain": "The 1890s craze followed a change in how bicycles were made: factories instead of individual craftsmen, so output rose and prices fell.",
+      "evidence": "Bicycles began to be produced in factories rather than by individual craftsmen"
+    },
+    "7": {
+      "explain": "TRUE: the passage says the craze was brief, and within a few years the machines were forgotten in coach houses.",
+      "evidence": "but the craze was brief",
+      "vocab": [
+        "the craze was brief",
+        "fashionable for only a short time"
+      ]
+    },
+    "8": {
+      "explain": "FALSE: the credit is disputed between Michaux, his son Ernest and Lallement — the passage says it is 'still argued over'.",
+      "evidence": "Exactly whose idea this was is still argued over"
+    },
+    "9": {
+      "explain": "NOT GIVEN: the ordinary is described as fast, dangerous and demanding, and its riders as a small club of athletic young men, but racing is never mentioned.",
+      "evidence": "Riding an ordinary demanded strength, nerve and long legs"
+    },
+    "10": {
+      "explain": "TRUE: gearing let the wheel turn faster than the pedals, so speed no longer required a big wheel — and the giant wheel disappeared.",
+      "evidence": "so speed no longer required size"
+    },
+    "11": {
+      "explain": "FALSE: he made it for his son's tricycle, not his own bicycle. Dunlop was a veterinary surgeon, not a cyclist chasing speed.",
+      "evidence": "wrapped the wheels of his son's tricycle in rubber tubes filled with air"
+    },
+    "12": {
+      "explain": "TRUE: long heavy skirts caught in chains and spokes, and cycling helped make simpler, more practical clothing acceptable in public.",
+      "evidence": "cycling did much to make simpler, more practical clothing acceptable in public"
+    },
+    "13": {
+      "explain": "NOT GIVEN: Britain and France both appear in the story, but the passage never compares sales between countries.",
+      "evidence": "in the Coventry workshop of John Kemp Starley"
+    },
+    "14": {
+      "explain": "D, 'Why reefs matter and why they are in danger'. The paragraph gives the value of reefs — species, coastal protection, livelihoods — and then the threat of bleaching.",
+      "evidence": "yet they shelter roughly a quarter of all known marine species"
+    },
+    "15": {
+      "explain": "B, 'Borrowing a technique from the garden'. The paragraph opens by saying the method takes its logic from the garden, and Diallo calls the work gardening.",
+      "evidence": "The oldest and most widespread answer borrows its logic from the garden"
+    },
+    "16": {
+      "explain": "G, 'A faster way to grow the slowest corals'. The boulder corals add millimetres a year; microfragmentation compresses a century of growth into a decade or two.",
+      "evidence": "The reef's marathon runners posed a harder problem"
+    },
+    "17": {
+      "explain": "H, 'Collecting the results of a yearly event'. Teams motor out to the annual mass spawning and skim off a share of the floating spawn.",
+      "evidence": "an entire reef takes part in a mass spawning"
+    },
+    "18": {
+      "explain": "E, 'Questioning whether restoration can keep up'. Bauer's arithmetic — hundreds of hectares restored against tens of thousands of square kilometres degraded — is the paragraph's spine.",
+      "evidence": "Not everyone is persuaded"
+    },
+    "19": {
+      "explain": "C, 'Measuring more than the corals themselves'. Otieno rejects counting corals and measures sound, and adds a test that is not biological at all — community involvement.",
+      "evidence": "Counting surviving corals is the easy measure, and the wrong one"
+    },
+    "20": {
+      "explain": "The garden logic: corals regrow from a cutting, so teams take small fragments from healthy colonies.",
+      "evidence": "Restoration teams therefore collect small fragments from healthy colonies"
+    },
+    "21": {
+      "explain": "The fragments hang in underwater nurseries — rope frames or plastic 'trees' — where they are safe from predators and grow several times faster.",
+      "evidence": "suspend them in underwater nurseries"
+    },
+    "22": {
+      "explain": "Microfragments are raised on small ceramic tiles before being fixed to the reef in close groups.",
+      "evidence": "The fragments are raised on small ceramic tiles"
+    },
+    "23": {
+      "explain": "Because every piece carries identical tissue, neighbours knit together rather than compete, and eventually become one colony.",
+      "evidence": "eventually fusing into a single colony"
+    },
+    "24": {
+      "explain": "B: Bauer's cost figure — commonly hundreds of thousands of dollars a hectare — against a problem measured in tens of thousands of square kilometres.",
+      "evidence": "commonly hundreds of thousands of dollars for each hectare treated"
+    },
+    "25": {
+      "explain": "D: her sharper objection. Planted corals are no more heat-tolerant than their parents, so one severe heatwave can erase a decade of work.",
+      "evidence": "so a single severe heatwave can erase a decade of careful work"
+    },
+    "26": {
+      "explain": "The mass spawning, cued by the full moon and water temperature, sends up a drifting pink cloud of eggs and sperm that teams skim for rearing.",
+      "evidence": "an entire reef takes part in a mass spawning, releasing eggs and sperm"
+    },
+    "27": {
+      "explain": "C: the paragraph ends on the disbelief — a brain of a few grams holding thousands of locations for half a year — and lists the simpler explanations psychologists preferred.",
+      "evidence": "A brain weighing a few grams, holding thousands of locations for half a year?"
+    },
+    "28": {
+      "explain": "A: when every landmark was shifted the same distance, the birds dug at a spot shifted by the same amount — they hold the seed's position relative to its surroundings.",
+      "evidence": "not \"where the seed is\", but \"where the seed sits in relation to everything around it\""
+    },
+    "29": {
+      "explain": "D: if the seeds have been removed there is nothing left in the ground to smell, yet the birds still dig in the right place. The guide must be internal.",
+      "evidence": "which means there is nothing in the ground left to detect; whatever guides the bird is inside its head"
+    },
+    "30": {
+      "explain": "B: the hippocampus grows in autumn as caching begins and shrinks once the stores are gone. Brain tissue is expensive, so the brain pays for memory only when memory pays.",
+      "evidence": "the brain invests in memory when, and only when, memory pays"
+    },
+    "31": {
+      "explain": "C: preference alone would always send them to the worms. After a few hours they took worms; after several days — long enough for worms to rot — they switched to peanuts.",
+      "evidence": "they abandoned the worm sites and dug up the peanuts instead"
+    },
+    "32": {
+      "explain": "YES: the writer says random search 'fails the arithmetic', and the closing lines state that nobody now argues the birds do not remember.",
+      "evidence": "nobody now argues that the birds do not remember, only about how, and how specially"
+    },
+    "33": {
+      "explain": "NO: the writer builds the whole case on laboratory work. The concern that 'an aviary floor is not a mountainside' is reported as the critics' point, not adopted as a dismissal.",
+      "evidence": "laboratory tasks may miss what matters in the wild, for an aviary floor is not a mountainside"
+    },
+    "34": {
+      "explain": "NOT GIVEN: the writer says the birds rival primates at spatial memory. 'Rival' is not 'superior to', and no ranking is claimed.",
+      "evidence": "perform feats of spatial memory that rival those of primates"
+    },
+    "35": {
+      "explain": "YES: the jays remembered what, where and how long ago — the writer names this episodic-like memory, previously reserved for humans.",
+      "evidence": "a bundle of information, sometimes called episodic-like memory"
+    },
+    "36": {
+      "explain": "NO: the final sentence says the opposite — memory evolved many times, wherever remembering paid its way.",
+      "evidence": "memory did not evolve once, in us, but many times"
+    },
+    "37": {
+      "explain": "B: the birds dug at a spot displaced by exactly the distance the landmarks had been moved.",
+      "evidence": "Returning birds dug not at the true location of the seeds but at a spot displaced by exactly the distance the landmarks had moved"
+    },
+    "38": {
+      "explain": "D: relative to the rest of the brain, it is consistently larger in food-storing birds than in close relatives that store little or nothing.",
+      "evidence": "is consistently larger in food-storing birds, relative to the rest of the brain, than in closely related species that store little or nothing"
+    },
+    "39": {
+      "explain": "E: a jay that has robbed others behaves like a bird expecting to be robbed — if watched, it returns alone and moves the food.",
+      "evidence": "it will return later, alone, and move that food to fresh sites"
+    },
+    "40": {
+      "explain": "A: the critics' first complaint is inconsistency — measured differences are often modest and vary between studies.",
+      "evidence": "are often modest and vary from one study to the next"
+    }
   }
 }
