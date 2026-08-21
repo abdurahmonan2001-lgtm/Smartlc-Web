@@ -1,0 +1,58 @@
+[
+  {
+    "id": "AC-T1-a",
+    "task": 1,
+    "official": 6,
+    "ours": 6,
+    "diff": 0,
+    "criteria": {
+      "task": 6,
+      "coherence": 6,
+      "lexical": 6,
+      "grammar": 6
+    },
+    "secs": 64
+  },
+  {
+    "id": "AC-T1-b",
+    "task": 1,
+    "official": 4,
+    "ours": 4.5,
+    "diff": 0.5,
+    "criteria": {
+      "task": 5,
+      "coherence": 5,
+      "lexical": 4,
+      "grammar": 4
+    },
+    "secs": 63
+  },
+  {
+    "id": "AC-T2-a",
+    "task": 2,
+    "official": 5.5,
+    "ours": 5,
+    "diff": -0.5,
+    "criteria": {
+      "task": 5,
+      "coherence": 5,
+      "lexical": 5,
+      "grammar": 5
+    },
+    "secs": 73
+  },
+  {
+    "id": "AC-T2-b",
+    "task": 2,
+    "official": 7.5,
+    "ours": 5.5,
+    "diff": -2,
+    "criteria": {
+      "task": 6,
+      "coherence": 6,
+      "lexical": 5,
+      "grammar": 5
+    },
+    "secs": 70
+  }
+]

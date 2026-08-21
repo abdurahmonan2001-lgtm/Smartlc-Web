@@ -77,8 +77,8 @@ HOW TO USE THE DESCRIPTORS
 Work through one criterion at a time, and for each one do this in order:
 1. Say what the script actually ACHIEVES on that criterion — the features that are present and working. Quote the candidate.
 2. Say what LIMITS it — the features that hold it back. Quote the candidate.
-3. Name the band whose descriptor fits, and quote the phrase from that descriptor which the script matches.
-4. Only then give the number.
+3. Name the band whose descriptor fits, and quote the phrase from that descriptor which the script matches. Begin it with the band, like "band 6: ...".
+4. Only then give the number, and it MUST be the band you just named. Quoting the band 5 descriptor and then awarding 4 is a contradiction, not caution — if the script matches band 5, the number is 5.
 
 Read the band above and the band below before settling: the right band is the one the script matches best, not the one it fails least. Bolded text in the descriptors marks negative features that cap a rating.
 
@@ -153,7 +153,21 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
   // for it. The flat top-level form is still accepted so a reply that comes
   // back in the older shape is marked rather than thrown away.
   const a = parsed.analysis || {}
-  const scoreOf = (k) => band(a?.[k]?.band ?? parsed[k])
+  // The descriptor quote names a band ("band 6: ..."). Twice in a calibration
+  // run the grader quoted one band and then awarded the one below it — both
+  // times on Task Achievement, both times downward. The number has to follow
+  // the evidence, so where the two disagree the quoted descriptor wins: it is
+  // the half a reader can check against the published descriptors.
+  const overrides = []
+  const scoreOf = (k) => {
+    const given = band(a?.[k]?.band ?? parsed[k])
+    const named = band((String(a?.[k]?.descriptor || '').match(/band\s*([0-9](?:\.[05])?)/i) || [])[1])
+    if (given != null && named != null && named !== given) {
+      overrides.push(`${k}: quoted band ${named}, awarded ${given} — took ${named}`)
+      return named
+    }
+    return given
+  }
   const four = { task: scoreOf('task'), coherence: scoreOf('coherence'), lexical: scoreOf('lexical'), grammar: scoreOf('grammar') }
   if (Object.values(four).some((v) => v == null)) throw new Error('grader returned a band outside 0-9')
 
@@ -200,6 +214,9 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
       }
       return acc
     }, {}),
+    // Empty in the normal case. Non-empty means the grader contradicted
+    // itself and the code corrected it, which is worth being able to see.
+    overrides,
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
     vocabulary_feedback: String(parsed.vocabulary_feedback || '').slice(0, 1500),
     coherence_feedback: String(parsed.coherence_feedback || '').slice(0, 1500),

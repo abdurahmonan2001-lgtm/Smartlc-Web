@@ -57,8 +57,13 @@ if (!key) {
 // when one of them turns out to be the dead one — which has happened here.
 console.log(`key ...${key.slice(-4)}, ${key.length} chars\n`)
 
-const only = process.argv.filter((a) => !a.startsWith('--'))
+// slice(2) drops the node binary and this script's own path. Without it the
+// id filter matched nothing and the run graded zero scripts while reporting
+// no failures — the quietest possible way to do nothing.
+const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))
 const scripts = SET.filter((s) => !only.length || only.includes(s.id))
+if (!scripts.length) { console.error('No scripts matched:', only.join(', ')); process.exit(2) }
+console.log(`grading ${scripts.length} examiner-marked script(s)\n`)
 
 const fmt = (n) => (n > 0 ? '+' : '') + n.toFixed(1)
 const rows = []
