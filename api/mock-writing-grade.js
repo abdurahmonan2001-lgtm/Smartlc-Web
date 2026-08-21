@@ -117,6 +117,18 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
+      // Two consecutive runs of identical code over the same four
+      // examiner-marked scripts disagreed with themselves by half a band on
+      // average, and by a full band on one script — which had been read as
+      // evidence for and against changes that were doing nothing.
+      //
+      // The call had never set a temperature, so every paper was being marked
+      // at the API default of 1.0. A student's band should not depend on which
+      // sample came back, so marking is now as close to deterministic as the
+      // model allows. This is a reliability setting, not a quality one: it
+      // does not make the band more accurate, only the same essay score the
+      // same twice.
+      temperature: 0,
       // 2000 was enough against a short paraphrased rubric; against the full
       // descriptors the reply grew and was being truncated mid-JSON, which
       // surfaced only as a parse error. The per-criterion analysis added

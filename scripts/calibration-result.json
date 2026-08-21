@@ -3,13 +3,13 @@
     "id": "AC-T1-a",
     "task": 1,
     "official": 6,
-    "ours": 6,
-    "diff": 0,
+    "ours": 5.5,
+    "diff": -0.5,
     "criteria": {
       "task": 6,
       "coherence": 6,
-      "lexical": 6,
-      "grammar": 6
+      "lexical": 5,
+      "grammar": 5
     },
     "secs": 64
   },
@@ -17,41 +17,41 @@
     "id": "AC-T1-b",
     "task": 1,
     "official": 4,
-    "ours": 4.5,
-    "diff": 0.5,
+    "ours": 4,
+    "diff": 0,
     "criteria": {
       "task": 5,
-      "coherence": 5,
+      "coherence": 4,
       "lexical": 4,
       "grammar": 4
     },
-    "secs": 63
+    "secs": 168
   },
   {
     "id": "AC-T2-a",
     "task": 2,
     "official": 5.5,
-    "ours": 5,
-    "diff": -0.5,
+    "ours": 4,
+    "diff": -1.5,
     "criteria": {
-      "task": 5,
-      "coherence": 5,
-      "lexical": 5,
-      "grammar": 5
+      "task": 4,
+      "coherence": 4,
+      "lexical": 4,
+      "grammar": 4
     },
-    "secs": 73
+    "secs": 59
   },
   {
     "id": "AC-T2-b",
     "task": 2,
     "official": 7.5,
-    "ours": 5.5,
-    "diff": -2,
+    "ours": 6,
+    "diff": -1.5,
     "criteria": {
       "task": 6,
       "coherence": 6,
-      "lexical": 5,
-      "grammar": 5
+      "lexical": 6,
+      "grammar": 6
     },
     "secs": 70
   }
