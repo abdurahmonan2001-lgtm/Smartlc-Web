@@ -1294,5 +1294,341 @@
       "explain": "NO: quiet is best only for complex verbal work. For dull and mechanical tasks the passage says music measurably helps.",
       "evidence": "For complex verbal work, the dull conclusion of the literature is that quiet remains the best soundtrack"
     }
+  },
+  "mock4-listening": {
+    "1": {
+      "explain": "The clerk asks for the spelling and gets it letter by letter: N-U-R-M-A-T-O-V-A.",
+      "evidence": "N, U, R, M, A, T, O, V, A. Nurmatova."
+    },
+    "2": {
+      "explain": "The number is given in three groups and then read back by the clerk, which is your chance to check it: 0745 632 118.",
+      "evidence": "It's oh seven four five, six three two, one one eight."
+    },
+    "3": {
+      "explain": "The caller names the confusable pair herself — thirty-five and fifty-three — and then settles it: the fifty-three goes towards the centre, the thirty-five the other way.",
+      "evidence": "but it was definitely the fifty-three - the one that goes towards the city centre"
+    },
+    "4": {
+      "explain": "A correction. The clerk offers Tuesday and the caller works it out aloud: yesterday was Wednesday, and on Tuesday she cycled.",
+      "evidence": "No, hold on - yesterday was Wednesday, wasn't it? Yes, Wednesday."
+    },
+    "5": {
+      "explain": "Black is named only to be denied. The bag is light grey canvas with a shoulder strap.",
+      "evidence": "Not black - grey. A light grey."
+    },
+    "6": {
+      "explain": "Two things were in the bag; the valuable one is the laptop. Her purse was in her coat pocket, not the bag.",
+      "evidence": "Unfortunately, yes - my laptop"
+    },
+    "7": {
+      "explain": "The identifying feature is a small keyring on the handle, shaped like a dolphin.",
+      "evidence": "There's a small keyring attached to the handle"
+    },
+    "8": {
+      "explain": "The central station office is mentioned only as the old arrangement — it closed last year. Everything now goes to the Milton Street depot.",
+      "evidence": "All items now go to our depot on Milton Street"
+    },
+    "9": {
+      "explain": "A passport or driving licence are given as examples; the general requirement is some form of identification, without which nothing is released.",
+      "evidence": "Some form of identification - a passport or a driving licence is ideal"
+    },
+    "10": {
+      "explain": "Five thousand was the old fee 'for years'; it rose in January, and the office takes cash only.",
+      "evidence": "it went up in January - it's ten thousand now"
+    },
+    "11": {
+      "explain": "A. The second stage is an online rumour and has been postponed; the site has not changed in nine years. What is new is a third day, which is why more volunteers were recruited.",
+      "evidence": "the festival will run for three days instead of two"
+    },
+    "12": {
+      "explain": "C. Posting shirts is the old system that kept losing them. Collection is from the volunteers' tent — explicitly not the main gate, where visitors get wristbands.",
+      "evidence": "you collect your T-shirt in person from the volunteers' tent"
+    },
+    "13": {
+      "explain": "B. Half price is named as the arrangement that 'has gone'. Each shift now carries a voucher for a free hot meal, and bringing your own is allowed but unnecessary.",
+      "evidence": "Every shift now comes with a voucher for a free hot meal at any stall on the site"
+    },
+    "14": {
+      "explain": "B. Both other options are ruled out in turn: the first-aid tent is kept clear for visitors and emergencies, and nobody sits by the office phone during the day.",
+      "evidence": "The right thing to do is simple: tell your team leader"
+    },
+    "15": {
+      "explain": "B. The gates open to vehicles at eight, so the team meets at seven, while the grass is still wet.",
+      "evidence": "which means the team meets at seven sharp, while the grass is still wet"
+    },
+    "16": {
+      "explain": "E. The desk is reserved for volunteers who speak more than one language — five different languages in one afternoon last year.",
+      "evidence": "We save this one for volunteers who speak more than one language"
+    },
+    "17": {
+      "explain": "C. Amplifiers, drum kits and cases of cable, moved between acts — 'real lifting, and some of it is genuinely heavy'.",
+      "evidence": "It's real lifting, and some of it is genuinely heavy"
+    },
+    "18": {
+      "explain": "G. The volunteers assist rather than run it: a qualified childcare professional is in charge at all times.",
+      "evidence": "it's led by a qualified childcare professional, who is in charge at all times"
+    },
+    "19": {
+      "explain": "A. Last year the team was understaffed and exhausted by Sunday, so the number of helpers has been doubled.",
+      "evidence": "So this year we've doubled the number of helpers on that team"
+    },
+    "20": {
+      "explain": "D. Campers arrive after five, once they have finished work, so nearly all the campsite jobs happen in the evening.",
+      "evidence": "nearly all the campsite jobs happen in the evening"
+    },
+    "21": {
+      "explain": "C. The station is ruled out because it is working and they could not measure inside; the museum because three groups have already chosen it. The market wins on interest.",
+      "evidence": "Honestly, it's the most interesting of the three anyway. The market it is."
+    },
+    "22": {
+      "explain": "B. One to fifty makes a model over a metre long that will not fit the display tables; at one to two hundred the ironwork vanishes into smudges.",
+      "evidence": "So, one to one hundred. Big enough for the detail, small enough for the table."
+    },
+    "23": {
+      "explain": "A. Zarina clears the other two explicitly — the light was perfect and she could get as close as she wanted. The front is under scaffolding for stonework repairs.",
+      "evidence": "The problem is the building itself - the entire front is covered in scaffolding"
+    },
+    "24": {
+      "explain": "C. Cardboard warps when painted and balsa is half a month's budget and slow to cut. The workshop gives foam board to second years free.",
+      "evidence": "They give foam board to second-year students free of charge"
+    },
+    "25": {
+      "explain": "A. The drawings look complete and nothing important is missing — the fault is that they paced the distances instead of measuring, so the south wall came out two metres longer than the north.",
+      "evidence": "but half the measurements are simply wrong"
+    },
+    "26": {
+      "explain": "B. An extension is refused ('we're more or less on schedule') and display spaces were allocated last week. The one request is the laser cutter, for the ironwork arches.",
+      "evidence": "We should ask for access to the laser cutter"
+    },
+    "27": {
+      "explain": "A, the fountain. It costs almost nothing to make and gives the model a sense of scale.",
+      "evidence": "And I'd add the fountain in the square outside"
+    },
+    "28": {
+      "explain": "D, the glass roof — 'the whole point of the building'. The clock tower is a separate building, the gates are too fiddly at 1:100, and nobody can see the interior stalls.",
+      "evidence": "The glass roof, obviously - it's the whole point of the building"
+    },
+    "29": {
+      "explain": "B, building the base: simple work, and everything else sits on top of it. Materials are already ordered and arrive Friday.",
+      "evidence": "The base, though - we should build that this week"
+    },
+    "30": {
+      "explain": "E, the project diary — three weeks behind, and the tutor checks it first every time. Photographs must wait for the scaffolding, and the drawings cannot be revised until the laser survey is done.",
+      "evidence": "I'll update the diary tonight - we're three weeks behind on entries"
+    },
+    "31": {
+      "explain": "The teeth never stop growing because the animal wears them down felling trees, and iron built into the enamel is what makes them orange.",
+      "evidence": "And they are hardened with iron, taken from the diet and built into the enamel"
+    },
+    "32": {
+      "explain": "Tens of thousands of hairs per square centimetre trap so much air that the coat keeps water out entirely — a beaver surfaces dry at the skin.",
+      "evidence": "the layers trap so much air that the coat is effectively waterproof"
+    },
+    "33": {
+      "explain": "Three materials in order: branches dragged into the current, stones to weigh them down, and mud packed into every gap with the front paws.",
+      "evidence": "and seals every gap with mud, packed firmly into place with its front paws"
+    },
+    "34": {
+      "explain": "The pond is the point, because the family's home stands in the middle of it — a rounded mound of sticks.",
+      "evidence": "a great rounded mound of sticks called a lodge"
+    },
+    "35": {
+      "explain": "The underwater entrances make the pond a moat: wolves, foxes and wandering dogs cannot reach the family inside.",
+      "evidence": "which means that predators - wolves, foxes, wandering dogs - simply cannot reach the family inside"
+    },
+    "36": {
+      "explain": "The dam is deliberately leaky and acts as a brake: rain is held back and released slowly, so villages below beaver country record smaller floods.",
+      "evidence": "so there is far less flooding downstream"
+    },
+    "37": {
+      "explain": "The pond works as a settling tank — soil and fertiliser washed off the land sink in the still water instead of travelling on, so what leaves is cleaner.",
+      "evidence": "in the still water of the pond that sediment sinks quietly to the bottom"
+    },
+    "38": {
+      "explain": "The order given is insects first, then fish, then birds — herons, ducks and kingfishers drawn to the new wetland.",
+      "evidence": "Insects arrive first, then fish, and then birds"
+    },
+    "39": {
+      "explain": "The lecturer explains the metaphor: like the keystone of an arch, remove the beaver and a whole structure of other lives comes down.",
+      "evidence": "biologists call the beaver a keystone species"
+    },
+    "40": {
+      "explain": "Dams flood whatever lies upstream. Where that is a road or valuable farmland, the old conflict flares up again.",
+      "evidence": "and where that is a road, or valuable farmland, the old conflict flares up again"
+    }
+  },
+  "mock4-reading": {
+    "1": {
+      "explain": "The fire at the top was not the whole story: several ancient accounts add a great polished mirror, probably bronze, that threw the glow out to sea.",
+      "evidence": "its light was strengthened by a great polished mirror, probably of bronze"
+    },
+    "2": {
+      "explain": "After Rome collapsed, coastal lights were kept by monks burning coal or candles in chapel towers — charity rather than a system.",
+      "evidence": "such coastal lights as existed were mostly maintained by monks"
+    },
+    "3": {
+      "explain": "Winstanley's 1698 tower was the first ever built on rocks in the open sea, eccentric, highly decorated, and mostly wooden — which is why the storm left nothing.",
+      "evidence": "made mostly of wood"
+    },
+    "4": {
+      "explain": "Smeaton's insight was a shape borrowed from a tree: broad at the base, curving inwards, so a breaking wave flows around it instead of hitting it flat.",
+      "evidence": "Smeaton modelled his tower on the trunk of an oak"
+    },
+    "5": {
+      "explain": "He cut granite blocks to interlock, taking the dovetail joint from woodworking so that every stone gripped its neighbours.",
+      "evidence": "borrowing from woodworking the idea of dovetail joints"
+    },
+    "6": {
+      "explain": "The Fresnel lens is built from concentric rings of glass that catch light which would otherwise escape and bend it into one intense horizontal beam.",
+      "evidence": "bent it into a single intense horizontal beam"
+    },
+    "7": {
+      "explain": "Rotating the lens turned the light into regular flashes, and giving each station its own rhythm let a captain identify the point of coast by counting the seconds.",
+      "evidence": "the light swept the horizon in regular flashes, and by giving every station its own rhythm"
+    },
+    "8": {
+      "explain": "TRUE: the Tower of Hercules, built in the second century, was restored and still guides ships — the oldest lighthouse anywhere that remains in service.",
+      "evidence": "still guiding ships today — the oldest lighthouse in the world that remains in service",
+      "vocab": [
+        "remains in service",
+        "still in operation"
+      ]
+    },
+    "9": {
+      "explain": "FALSE: he was inside the tower supervising repairs when the storm struck, having wished aloud to be there in the greatest storm that ever blew.",
+      "evidence": "he was in the tower, supervising repairs"
+    },
+    "10": {
+      "explain": "NOT GIVEN: the passage describes Smeaton's design in detail and says the tower lasted over a century, but never mentions how long the building took or what was planned.",
+      "evidence": "The reef finally received a tower worthy of it in 1759, from the engineer John Smeaton"
+    },
+    "11": {
+      "explain": "TRUE: the passage gives the figures — a lamp visible for five miles could now be seen for thirty.",
+      "evidence": "A lamp that had been visible for five miles could suddenly be seen for thirty"
+    },
+    "12": {
+      "explain": "FALSE: electric light replaced flame only gradually, and many stations were still burning oil well into the twentieth century.",
+      "evidence": "many stations were still burning oil well into the twentieth century"
+    },
+    "13": {
+      "explain": "NOT GIVEN: the passage says the last keepers locked the doors in the 1990s, but never says what became of them afterwards.",
+      "evidence": "during the 1990s the last keepers in most countries locked the doors behind them"
+    },
+    "14": {
+      "explain": "C: two thousand kilocalories stored against a marathon costing nearer three thousand — the arithmetic of the wall.",
+      "evidence": "stores roughly two thousand kilocalories of glycogen"
+    },
+    "15": {
+      "explain": "E: Soto's laboratory teams measured the carbon-plated shoes at about four per cent better running economy — more than a year of training gives most athletes.",
+      "evidence": "an improvement in running economy of about four per cent"
+    },
+    "16": {
+      "explain": "B: Keller's argument that engine size is much the same among elites and economy is what separates the podium from the pack.",
+      "evidence": "What separates the podium from the pack is economy: who wastes the least"
+    },
+    "17": {
+      "explain": "D: Lindqvist's warning about drinking far beyond thirst, which can dilute blood sodium — more runners harmed by too much water than too little.",
+      "evidence": "more runners are harmed by too much water than by too little"
+    },
+    "18": {
+      "explain": "F: decades of results show the fastest marathons happen on cool, still days around ten to twelve degrees.",
+      "evidence": "marathons are fastest on cool, still days at around ten to twelve degrees Celsius"
+    },
+    "19": {
+      "explain": "Glycogen is defined in the same sentence as the fuel made from carbohydrate, stored in muscles and liver.",
+      "evidence": "glycogen, the fuel made from carbohydrate, in its muscles and liver"
+    },
+    "20": {
+      "explain": "When glycogen runs low the body switches fuel, and the replacement demands more oxygen per stride — which is why the pace collapses.",
+      "evidence": "the body turns to burning fat, a fuel that demands more oxygen for every stride"
+    },
+    "21": {
+      "explain": "Ochieng's point is that the brakes are neurological, not muscular: the brain reads the fuel gauge and refuses to let the legs be emptied.",
+      "evidence": "The brain reads the fuel gauge and applies the brakes before real damage is done"
+    },
+    "22": {
+      "explain": "His unglamorous defence is an even pace from the first kilometre, however fresh the legs feel.",
+      "evidence": "an even pace from the first kilometre, however fresh the legs feel"
+    },
+    "23": {
+      "explain": "A: Lindqvist's advice is to drink when thirsty and no more. E inverts her other advice — she says to eat plenty of carbohydrate beforehand — and B is what elites do about engine size, not advice for ordinary runners.",
+      "evidence": "and on the day itself drink when thirsty, and no more"
+    },
+    "24": {
+      "explain": "C: the even pace, given twice — by Ochieng in paragraph C and again in the closing summary of 'almost comic modesty'.",
+      "evidence": "run an even pace, and drink when you are thirsty",
+      "vocab": [
+        "an even pace",
+        "keep your speed steady"
+      ]
+    },
+    "25": {
+      "explain": "B: the measured figure is about four per cent. A is wrong — a ban was demanded but the governing body set limits instead — and E is wrong because the muscle-damage claim rests on much weaker evidence.",
+      "evidence": "an improvement in running economy of about four per cent"
+    },
+    "26": {
+      "explain": "D: Soto led one of the laboratory teams and measured the effect on treadmill runners. C is contradicted in the same paragraph — the benefit varies noticeably between individuals.",
+      "evidence": "led one of the laboratory teams that measured the effect on treadmill runners"
+    },
+    "27": {
+      "explain": "B: a couple of dozen giant languages are spoken by half of humanity while thousands survive in single valleys or families. The writer also warns that the 'one every few weeks' claim deserves caution, so D is wrong.",
+      "evidence": "but the figure conceals an extraordinary imbalance",
+      "vocab": [
+        "an extraordinary imbalance",
+        "spread very unevenly"
+      ]
+    },
+    "28": {
+      "explain": "D: the writer explicitly corrects the popular image — languages are rarely lost because speakers die out, and prohibition is not the usual cause. It is a chain of private decisions about what to speak to children.",
+      "evidence": "Far more often, a language dies through a long chain of private decisions"
+    },
+    "29": {
+      "explain": "A: the writer says outright that the point is not exoticism but range — the human mind has more settings than any one language shows.",
+      "evidence": "but that the human mind has more settings than any single language reveals"
+    },
+    "30": {
+      "explain": "C: 'Technology cuts both ways here.' The phone pours dominant languages into every pocket and is also the cheapest recording studio ever made.",
+      "evidence": "Technology cuts both ways here"
+    },
+    "31": {
+      "explain": "YES: the writer questions how free the choice is when one language carries prestige and schooling and the other carries stigma — 'weighted long before any parent makes it'.",
+      "evidence": "Language shift is less like a preference and more like surrender to pressure"
+    },
+    "32": {
+      "explain": "NOT GIVEN: the passage contrasts documentation with revival as activities, but says nothing about government spending on either.",
+      "evidence": "Documentation, however, is not revival, and the distinction matters"
+    },
+    "33": {
+      "explain": "NO: the seed image makes the point precisely — an archived language is safe but not growing.",
+      "evidence": "An archived language is like a preserved seed: safe, but not growing"
+    },
+    "34": {
+      "explain": "YES: linguists supplied materials and schools helped, but the writer places the decisive act in kitchens rather than universities.",
+      "evidence": "but the decisive act took place in kitchens, not in universities"
+    },
+    "35": {
+      "explain": "NO: the writer calls this a false choice. Human beings are built for bilingualism, and keeping a grandmother's tongue costs nothing of a global one.",
+      "evidence": "a child who keeps a grandmother's tongue loses no part of a global one"
+    },
+    "36": {
+      "explain": "F, pressure. The summary compresses the second paragraph, where the writer rejects 'preference' in favour of surrender to social and economic pressure.",
+      "evidence": "Language shift is less like a preference and more like surrender to pressure"
+    },
+    "37": {
+      "explain": "E, experiment. Every language is called a natural experiment in what a human mind can do, and the diversity of the sample is the data.",
+      "evidence": "Every language is a natural experiment in what a human mind can do"
+    },
+    "38": {
+      "explain": "A, archives. The recordings are transcribed and archived, and the passage closes by urging that the archives be filled urgently.",
+      "evidence": "The archives should be filled, urgently, while the last speakers can still be recorded"
+    },
+    "39": {
+      "explain": "H, recordings. Field linguists now aim to capture living speech — stories, arguments, songs, jokes — not word lists.",
+      "evidence": "aiming to capture not word lists but living speech: stories, arguments, songs, jokes"
+    },
+    "40": {
+      "explain": "B, children. The passage's final test of a living language is a child hearing it from a parent and answering back.",
+      "evidence": "A language lives when a child hears it from a parent and answers back"
+    }
   }
 }
