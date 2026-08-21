@@ -3585,7 +3585,7 @@
   },
   "mock11-listening": {
     "1": {
-      "explain": "The caller offers the spelling herself: R-A-S-H-I-D-O-V-A.",
+      "explain": "The caller offers the spelling without being asked: R-A-S-H-I-D-O-V-A. Whenever a speaker spells a name aloud, the spelling is what the mark depends on.",
       "evidence": "It's R - A - S - H - I - D - O - V - A. Rashidova."
     },
     "2": {
@@ -3905,6 +3905,330 @@
     "40": {
       "explain": "A, signal. The writer's closing position: boredom reports that the current activity has stopped being worth the energy.",
       "evidence": "It tells us that the present activity has lost its grip"
+    }
+  },
+  "mock12-listening": {
+    "1": {
+      "explain": "Spelled out on request: R-A-K-H-I-M-O-V. The KH is where the mark is usually lost.",
+      "evidence": "R - A - K - H - I - M - O - V. Rakhimov."
+    },
+    "2": {
+      "explain": "The caller spells it and anchors it to a word: Willow like the tree, W-I-L-L-O-W.",
+      "evidence": "Willow, like the tree - W - I - L - L - O - W"
+    },
+    "3": {
+      "explain": "The second is his first choice and that whole week is fully booked. The company offers the Thursday after.",
+      "evidence": "I could offer you the Thursday after, the ninth of October"
+    },
+    "4": {
+      "explain": "Thirty is a friend's estimate and is judged too low because of the books. The company delivers more, and charges only for those opened.",
+      "evidence": "For a two-bedroom flat we deliver about forty-five"
+    },
+    "5": {
+      "explain": "An upright rather than a grand, but heavy enough that the standard crew will not attempt it down three flights.",
+      "evidence": "We have a piano"
+    },
+    "6": {
+      "explain": "Nine hundred and fifty thousand is the Saturday price and is already in the table. He keeps the Thursday, so the weekday price applies, fuel included.",
+      "evidence": "the price is eight hundred thousand som, and the fuel is included"
+    },
+    "7": {
+      "explain": "Boxes, furniture, mirrors and glassware are all covered when the team packs them. Plants are the single exclusion.",
+      "evidence": "The only thing we cannot insure is plants"
+    },
+    "8": {
+      "explain": "Boxes and protective blankets come free — the blankets go round the furniture and the piano. Only the tape is the customer's expense.",
+      "evidence": "we give you the boxes free, and protective blankets as well"
+    },
+    "9": {
+      "explain": "Eight o'clock is when the van leaves the depot, not when it arrives. Arrival is half an hour later, with a phone call thirty minutes before.",
+      "evidence": "so they'll be with you at half past eight in the morning"
+    },
+    "10": {
+      "explain": "The one thing asked of the customer: photos of the staircase, so the team can see the corners before bringing a piano down.",
+      "evidence": "Could you send us some photos of the staircase?"
+    },
+    "11": {
+      "explain": "B. The fish market existed but stood two streets away and was demolished; the ferries left from a wooden shed on the quay, not this hall. The brick building generated the harbour's electricity for sixty years.",
+      "evidence": "In fact this brick hall was a power station"
+    },
+    "12": {
+      "explain": "C. The touch pool has been there since opening day and the tunnel is designed but two years off. What is new this month is Friday opening until nine.",
+      "evidence": "we stay open on Friday evenings until nine o'clock"
+    },
+    "13": {
+      "explain": "B. Visitors may walk round in any order and may keep their bags. The single rule is switching off the flash, which frightens the fish and in some tanks harms them.",
+      "evidence": "please switch off the flash on your cameras and phones"
+    },
+    "14": {
+      "explain": "A. The gift shop helps and membership is good value, but the adoption scheme's steady year-round income pays for food and veterinary care.",
+      "evidence": "Adopting an animal is far and away the most useful thing you can do for us"
+    },
+    "15": {
+      "explain": "F. Paid for by a research grant and architecturally unremarkable — but chosen by more visitors than all the other areas together.",
+      "evidence": "the Coral Reef Hall comes top of the list"
+    },
+    "16": {
+      "explain": "G. The lighting is kept very low so the jellyfish show against a black background, and because strong light distresses them — not to save electricity.",
+      "evidence": "because we keep the lighting very low in there"
+    },
+    "17": {
+      "explain": "C. A batch of young seahorses hatched on Sunday, each no bigger than a fingernail, in the small tank on the left.",
+      "evidence": "A batch of young seahorses hatched on Sunday morning"
+    },
+    "18": {
+      "explain": "B. Between meals the otters sleep in a heap with nothing to see; at eleven or three they are 'quite wonderful', with a keeper commentating.",
+      "evidence": "but at feeding time they are quite wonderful"
+    },
+    "19": {
+      "explain": "E. The colony outgrew the pool, and work begins in the spring to double it — so next summer it will be twice the size.",
+      "evidence": "Work begins in the spring to double it"
+    },
+    "20": {
+      "explain": "A. Shut this morning only, because the vet is operating; the doors open at one o'clock.",
+      "evidence": "The vet is operating and the doors stay shut until one o'clock"
+    },
+    "21": {
+      "explain": "B. The lecture is offered and rejected, and tourism was not on the tutor's list at all. The trigger was a newspaper report showing visitor numbers had doubled.",
+      "evidence": "the figures showing visitor numbers had doubled in three years"
+    },
+    "22": {
+      "explain": "C. Twelve questions is 'about right' and nothing is intrusive — no income, no age. The fault is imprecision: 'Did you enjoy your visit?' can be answered a hundred ways.",
+      "evidence": "The trouble is that the questions don't mean anything precise"
+    },
+    "23": {
+      "explain": "A. Cutting them all is judged too severe, because the pilot's best finding — the missing signposts — came from an open question. Five is too many and they drive people off at the start.",
+      "evidence": "So we keep one open question, right at the very end"
+    },
+    "24": {
+      "explain": "B. Permission is fine — her cousin works there — and quiet corners exist. Her worry is that everyone at a station arrived by train, missing drivers, coach parties and flyers.",
+      "evidence": "We'd miss the ones who drive in, the coach parties, the people who fly"
+    },
+    "25": {
+      "explain": "A. Family know the city too well and would read the intended meaning into a bad question; hostel guests are the real subjects and should not be spent on a draft.",
+      "evidence": "Let's use our own group - twenty of them in Wednesday's seminar"
+    },
+    "26": {
+      "explain": "C. She was not worried about a timetable and there is nothing to spend money on. Her firm point was that the proposal must show actual questions, word for word.",
+      "evidence": "the proposal must include some of the actual questions, written out word for word"
+    },
+    "27": {
+      "explain": "B. Day-trippers from Chirchik and Angren — 'nobody counts them and they're a huge part of the numbers'. Business travellers will not stop and residents are not visitors at all.",
+      "evidence": "I'd far rather have the people who come for the day from the towns round about"
+    },
+    "28": {
+      "explain": "C. Backpackers stay longest, see the most, and will talk for half an hour. Tour groups are rejected because the guide answers for everybody.",
+      "evidence": "They stay longest, see the most, and will happily talk to you for half an hour"
+    },
+    "29": {
+      "explain": "A. Three hotels have agreed to email the link to guests after check-out — real visitors, answering at home when they have time.",
+      "evidence": "Three have agreed to send our link to guests after they check out"
+    },
+    "30": {
+      "explain": "C. The tourist office will keep a stack beside the map stand. The square is too hot and people there are in transit, the university website reaches the wrong audience, and the museums refused paper last year.",
+      "evidence": "But the tourist information office on Market Street is happy to take them"
+    },
+    "31": {
+      "explain": "The grain of sand is named as the story everyone was taught and called false — sand washes in and out and is ignored. A boring worm is what actually starts a pearl.",
+      "evidence": "What actually starts a natural pearl, in the great majority of cases, is a parasite"
+    },
+    "32": {
+      "explain": "The mollusc cannot expel the intruder, so it seals it in with the substance that lines its own shell — spelled out in the recording as N-A-C-R-E.",
+      "evidence": "That substance is nacre - N, A, C, R, E - the material we also call mother-of-pearl"
+    },
+    "33": {
+      "explain": "Light enters the upper layers and returns from different depths, so the rays interfere — producing a glow no painted bead has matched.",
+      "evidence": "The result is that deep, shifting glow we call the lustre"
+    },
+    "34": {
+      "explain": "Pearls were admired in Rome, but their real function was display: wearing them announced how rich your family was, and laws sometimes restricted who could.",
+      "evidence": "but above all they were worn as a display of wealth"
+    },
+    "35": {
+      "explain": "The idea was old; the method that worked was perfected around 1900 by Kokichi Mikimoto, the son of a noodle seller.",
+      "evidence": "the method that worked was perfected in Japan"
+    },
+    "36": {
+      "explain": "Two things go in: a small bead cut from freshwater shell, and a piece of tissue from another mollusc. Then nothing more is done.",
+      "evidence": "a small bead, usually cut and rounded from freshwater shell"
+    },
+    "37": {
+      "explain": "The animal goes back into the water in a net, and building enough nacre for a saleable pearl is slow.",
+      "evidence": "takes roughly two years to build up enough nacre"
+    },
+    "38": {
+      "explain": "The surfaces are identical nacre and no jeweller's eye can separate them. A laboratory X-ray shows the cultured pearl's solid bead against the natural one's layers all the way down.",
+      "evidence": "The answer is to look inside, and for that a laboratory takes an X-ray"
+    },
+    "39": {
+      "explain": "Molluscs filter the sea for food, so everything in it passes through them — pollution a fish would shrug off kills an oyster bed. Hence farms in remote bays.",
+      "evidence": "Above all they need exceptionally clean water"
+    },
+    "40": {
+      "explain": "Nacre is mostly chalk yet three thousand times tougher, purely because of how the layers are stacked. Engineers copy that architecture for windscreens, phone screens and aircraft windows.",
+      "evidence": "they are designing far tougher glass"
+    }
+  },
+  "mock12-reading": {
+    "1": {
+      "explain": "France was fighting across half of Europe, and the 1795 prize of twelve thousand francs covered preserving food for both services.",
+      "evidence": "a reliable way of preserving food for its navy and army"
+    },
+    "2": {
+      "explain": "The winner was neither scientist nor soldier: a Parisian maker of sweets and preserved fruits who understood food as a practical matter.",
+      "evidence": "Nicolas Appert was a Parisian confectioner"
+    },
+    "3": {
+      "explain": "Everything went into wide-necked glass jars, which is why the first factory is better called a bottlery than a cannery.",
+      "evidence": "was packed into wide-necked glass jars"
+    },
+    "4": {
+      "explain": "Three layers of sealing are listed — thick corks held down with wire and strengthened with wax — before the jars were boiled.",
+      "evidence": "The jars were then sealed with thick corks, held down with wire and strengthened with wax"
+    },
+    "5": {
+      "explain": "Half a century later Pasteur showed decay is caused by living organisms too small to see — the very things Appert's boiling water had been killing.",
+      "evidence": "the decay of food is caused by microbes"
+    },
+    "6": {
+      "explain": "Durand's vessel was iron under a thin coat of tin, which resisted rust and could not shatter in a wagon or a ship's hold.",
+      "evidence": "a canister of iron coated with a thin layer of tin"
+    },
+    "7": {
+      "explain": "There was no elegant way in: printed instructions told the customer to cut round the top with a hammer and chisel.",
+      "evidence": "advised the customer to cut around the top with a hammer and chisel"
+    },
+    "8": {
+      "explain": "FALSE: he thought excluding air was the essential step and admitted the real mechanism was a mystery to him.",
+      "evidence": "he freely admitted that the true mechanism was a mystery to him"
+    },
+    "9": {
+      "explain": "TRUE: the prize came with a condition — publish every detail instead of patenting, so any French manufacturer could copy it.",
+      "evidence": "he was required to publish every detail"
+    },
+    "10": {
+      "explain": "FALSE: Durand was 'a man for patents rather than production'. He sold his rights to Donkin and Hall, who built the factory.",
+      "evidence": "Durand was a man for patents rather than production"
+    },
+    "11": {
+      "explain": "TRUE: the Royal Navy was the first important customer, feeding canned food to sailors on blockade duty and then to polar crews.",
+      "evidence": "Their first important customer was the Royal Navy"
+    },
+    "12": {
+      "explain": "NOT GIVEN: the passage says the book appeared in 1810 and describes the process, but says nothing about translations.",
+      "evidence": "His book describing the process appeared that same year"
+    },
+    "13": {
+      "explain": "TRUE: early walls were so thick that a full can sometimes weighed more than the food inside it.",
+      "evidence": "a full can sometimes weighed more than the food inside it"
+    },
+    "14": {
+      "explain": "F: Voss's comparison — hundreds of dollars a tonne for direct air capture against a few dollars a tonne for blocking a ditch.",
+      "evidence": "Rewetting is the cheapest carbon technology we have, and it was invented by moss"
+    },
+    "15": {
+      "explain": "A: peat forms only where the ground stays permanently waterlogged, because standing water keeps the air out and stops full decay.",
+      "evidence": "Peat forms only where the ground stays permanently waterlogged"
+    },
+    "16": {
+      "explain": "E: Okafor's trial farms — sphagnum moss sold to nurseries, and bulrushes pressed into insulation boards.",
+      "evidence": "her neighbouring plots grow bulrushes"
+    },
+    "17": {
+      "explain": "C: roughly five per cent of all human carbon dioxide emissions, from under half of one per cent of the land.",
+      "evidence": "roughly five per cent of all the carbon dioxide released by human activity"
+    },
+    "18": {
+      "explain": "The defining condition. Waterlogging keeps the air out, so each year's dead growth is buried half-decayed under the next.",
+      "evidence": "Peat forms only where the ground stays permanently waterlogged"
+    },
+    "19": {
+      "explain": "Drainage lets oxygen in, and microbes finally complete the decay that water had postponed for thousands of years.",
+      "evidence": "oxygen enters the peat, and microbes at last finish the decay"
+    },
+    "20": {
+      "explain": "The second danger of dry peat: once alight it can smoulder underground for months, defeating attempts to put it out.",
+      "evidence": "Dry peat brings a second danger, because it burns"
+    },
+    "21": {
+      "explain": "The repair is 'disarmingly simple': block the old drainage ditches with thousands of small dams so rain raises the water level again.",
+      "evidence": "Restoration teams block the old drainage ditches with thousands of small dams"
+    },
+    "22": {
+      "explain": "Mair expected to be working for his grandchildren, and the sphagnum moss returned within three summers.",
+      "evidence": "Then the sphagnum moss was back within three summers"
+    },
+    "23": {
+      "explain": "D, Voss. The economist who prices direct air capture against ditch-blocking, and notes the birds, water storage and flood control come free.",
+      "evidence": "while blocking a ditch costs a few dollars per tonne of emissions prevented"
+    },
+    "24": {
+      "explain": "B, Mair. He told volunteers they were working for their grandchildren, then found the bog 'desperate to be wet again'.",
+      "evidence": "A damaged bog, it seems, is desperate to be wet again"
+    },
+    "25": {
+      "explain": "A, Lindqvist. Three per cent of the land holding twice the carbon of all the world's forests — 'a bog is a bank vault; a forest is a busy till'.",
+      "evidence": "but the largest carbon store on land is the one nobody visits"
+    },
+    "26": {
+      "explain": "C, Okafor. Paludiculture grows crops that thrive on wet peat, so drainage is unnecessary: 'The mistake was believing that a farm has to be dry.'",
+      "evidence": "The mistake was believing that a farm has to be dry"
+    },
+    "27": {
+      "explain": "C: in a scanner, creative work lights up large networks in both hemispheres, and no support is found for individuals being dominated by one side.",
+      "evidence": "activity spreads across large networks in both hemispheres"
+    },
+    "28": {
+      "explain": "A: the flash is real but sits on years of sketches and failed drafts, and incubation only helps a mind already saturated with the problem.",
+      "evidence": "the celebrated flash almost always sits on top of years of accumulated sketches"
+    },
+    "29": {
+      "explain": "D: the same people working separately, with ideas pooled afterwards, produce more ideas and more original ones than they do around a table.",
+      "evidence": "produce more ideas — and more original ones — than they do talking around a table"
+    },
+    "30": {
+      "explain": "B: the closing position is creativity as a form of expertise — effortful, trainable, and more widely available than the folklore admits.",
+      "evidence": "creativity as a form of expertise — effortful, trainable"
+    },
+    "31": {
+      "explain": "E: modern imaging shows the two hemispheres in tight cooperation, so the left-brain/right-brain split does not survive the scanner.",
+      "evidence": "Modern imaging tells a different story"
+    },
+    "32": {
+      "explain": "B: the anecdotes omit everything that came first, and were usually polished in the retelling — often by the discoverers themselves.",
+      "evidence": "What the stories omit is everything that came first"
+    },
+    "33": {
+      "explain": "D: fewer and less original ideas than the same people working alone, for mundane reasons — queueing to speak, self-censorship, and coasting.",
+      "evidence": "Study after study finds that the same number of people working separately"
+    },
+    "34": {
+      "explain": "C: training in specific habits produces measurable gains in schoolchildren and engineers alike, largest within particular domains.",
+      "evidence": "produce measurable gains in creative performance"
+    },
+    "35": {
+      "explain": "F: it rests almost entirely on a small gallery of memorable cases, while large studies find weak, inconsistent links at most.",
+      "evidence": "rests almost entirely on a small gallery of memorable cases"
+    },
+    "36": {
+      "explain": "NO: creative thinking is described as a conversation across the whole brain, with both hemispheres in tight cooperation.",
+      "evidence": "not the property of one half of the brain but a conversation across the whole of it"
+    },
+    "37": {
+      "explain": "YES: the insight is the last visible step of a long invisible climb, and the closing line calls inspiration 'preparation wearing a mask'.",
+      "evidence": "it is the last visible step of a long invisible climb"
+    },
+    "38": {
+      "explain": "NOT GIVEN: training is shown to work in schoolchildren and engineers, but the writer makes no recommendation about school timetables.",
+      "evidence": "in schoolchildren and engineers alike"
+    },
+    "39": {
+      "explain": "NO: groups are explicitly not useless — they are demonstrably better at combining, testing and improving existing ideas. 'Generate alone, refine together.'",
+      "evidence": "Groups are not useless — they are demonstrably better than individuals at combining, testing and improving ideas"
+    },
+    "40": {
+      "explain": "YES: the myths persist because they are simple and because they flatter or excuse us — the fixed gift 'lets the rest of us off the hook entirely'.",
+      "evidence": "partly because they are simple, and partly because they flatter or excuse us"
     }
   }
 }
