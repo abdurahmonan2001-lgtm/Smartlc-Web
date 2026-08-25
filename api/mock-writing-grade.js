@@ -110,13 +110,15 @@ Respond with ONLY this JSON, no prose around it, and with the keys in exactly th
  "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."],
  "corrections":[{"quote":"the government have to provides","kind":"grammar","fix":"the government has to provide","why":"'Government' takes a singular verb here, and after 'has to' the verb stays in its base form — so 'has to provide', never 'has to provides'."}]}`
 
-export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
+// Overridable so the calibration harness can measure one model against
+// another without editing this file, which is how two changes end up being
+// made at once and neither being attributable.
+export const DEFAULT_MODEL = 'claude-sonnet-4-6'
+
+export async function gradeTask({ key, taskNo, prompt, answer, wordTarget, model }) {
   const wc = words(answer)
-  const r = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-6',
+  const body = {
+      model: model || DEFAULT_MODEL,
       // Two consecutive runs of identical code over the same four
       // examiner-marked scripts disagreed with themselves by half a band on
       // average, and by a full band on one script — which had been read as
@@ -132,8 +134,9 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
       // 2000 was enough against a short paraphrased rubric; against the full
       // descriptors the reply grew and was being truncated mid-JSON, which
       // surfaced only as a parse error. The per-criterion analysis added
-      // another block again, so leave real headroom.
-      max_tokens: 6000,
+      // another block again, and a model that reasons before answering spends
+      // tokens before the JSON even starts, so leave generous headroom.
+      max_tokens: 16000,
       system: rubricFor(taskNo),
       messages: [{
         role: 'user',
@@ -144,15 +147,102 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
           + `\n\nTask prompt:\n${String(prompt || '').slice(0, 4000)}`
           + `\n\nCandidate's response:\n${String(answer || '').slice(0, MAX_ESSAY_CHARS)}`,
       }],
-    }),
-  })
-  if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 200)}`)
-  const data = await r.json()
-  // A truncated reply is not a malformed one — say which, or the next person
-  // debugging this reads "unexpected end of JSON" and goes looking at parsing.
-  if (data.stop_reason === 'max_tokens') throw new Error('grader reply hit max_tokens and was cut off')
-  const parsed = JSON.parse((data.content?.[0]?.text || '').replace(/```json|```/g, '').trim())
+  }
 
+  const post = (b) => fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    body: JSON.stringify(b),
+  })
+
+  const attempt = async (b) => {
+    let r = await post(b)
+    // Newer models reject `temperature` outright rather than ignoring it, so a
+    // model swap turns into four HTTP 400s and no marking at all. Drop the
+    // setting and retry rather than making the caller know which models accept
+    // it — the parameter is a reliability preference, not a requirement.
+    if (r.status === 400) {
+      const detail = await r.clone().text().catch(() => '')
+      if (/temperature/i.test(detail)) {
+        const { temperature, ...rest } = b
+        r = await post(rest)
+      }
+    }
+    if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 200)}`)
+    return r.json()
+  }
+
+  // One unescaped quote inside one quoted phrase invalidates the whole reply,
+  // and the student gets no band at all for a stray character in the middle of
+  // 14,000 of them. A second sample almost always lands clean, so a parse
+  // failure is retried once before it is allowed to lose the marking.
+  let data = await attempt(body)
+  let parsed = readReply(data)
+  if (parsed.error) {
+    data = await attempt(body)
+    const second = readReply(data)
+    if (second.error) { const err = new Error(`${second.error} (twice)`); err.raw = second.raw; throw err }
+    parsed = second
+  }
+  return finish(parsed.value, { taskNo, answer, wc })
+}
+
+// Pulled out so the retry above reads as one decision rather than a nest of
+// try/catch. Returns either {value} or {error}, never throws.
+// One official script reproducibly came back missing the final closing brace —
+// every string terminated, every bracket balanced, just one `}` short of the
+// end. Two fresh samples did the same, so retrying does not help and a
+// student's whole marking was being lost to a single absent character.
+//
+// This closes unclosed braces and nothing else. It refuses if a string is
+// still open or a bracket is unbalanced, because that means the reply is
+// genuinely truncated and appending punctuation would invent content rather
+// than repair a slip. Returns null when it will not touch the reply.
+function closeUnclosedBraces(s) {
+  let inStr = false, esc = false, braces = 0, brackets = 0
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i]
+    if (esc) { esc = false; continue }
+    if (c === '\\') { esc = true; continue }
+    if (c === '"') { inStr = !inStr; continue }
+    if (inStr) continue
+    if (c === '{') braces++
+    else if (c === '}') braces--
+    else if (c === '[') brackets++
+    else if (c === ']') brackets--
+  }
+  if (inStr || brackets !== 0 || braces <= 0 || braces > 3) return null
+  return s + '}'.repeat(braces)
+}
+
+function readReply(data) {
+  if (data.stop_reason === 'max_tokens') return { error: 'grader reply hit max_tokens and was cut off' }
+  const replyText = (Array.isArray(data.content) ? data.content : [])
+    .filter((b) => b?.type === 'text' && typeof b.text === 'string')
+    .map((b) => b.text).join('')
+  if (!replyText.trim()) {
+    return { error: `grader returned no text block (got: ${(data.content || []).map((b) => b?.type).join(', ') || 'nothing'})` }
+  }
+  const cleaned = replyText.replace(/```json|```/g, '').trim()
+  try {
+    return { value: JSON.parse(cleaned) }
+  } catch (e) {
+    const mended = closeUnclosedBraces(cleaned)
+    if (mended) {
+      try { return { value: JSON.parse(mended), repaired: true } } catch { /* fall through */ }
+    }
+    // Carry the raw reply on the error so a caller debugging this can look at
+    // the break point instead of guessing from the tail.
+    return {
+      raw: cleaned,
+      error: `grader reply did not parse (${e.message}); ${cleaned.length} chars, `
+        + `stop_reason=${data.stop_reason}, ends: ...${cleaned.slice(-160).replace(/[\n\r\t]+/g, ' ')}`,
+    }
+  }
+}
+
+function finish(parsed, { taskNo, answer, wc }) {
+  const data = { stop_reason: 'end_turn' }   // kept so the code below reads unchanged
   // Each criterion is a WHOLE band, as an examiner awards them. A model that
   // hedges with 5.5 is snapped to a whole band rather than being let through:
   // half bands on a criterion are not a finer measurement, they are a refusal

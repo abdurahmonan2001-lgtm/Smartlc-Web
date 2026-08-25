@@ -67,20 +67,42 @@ console.log(`grading ${scripts.length} examiner-marked script(s)\n`)
 
 const fmt = (n) => (n > 0 ? '+' : '') + n.toFixed(1)
 const rows = []
+const failed = []
 
 // One at a time. These are long calls, and a parallel burst against the
 // Anthropic API buys nothing here except a rate limit.
+// WRITING_MODEL swaps the model; REPEATS grades each script N times and takes
+// the median band. Repeats exist because a single reading of a script has been
+// measured to swing by a full band, which made two prompt changes look like
+// improvements when neither had been shown to do anything.
+const model = process.env.WRITING_MODEL || undefined
+const repeats = Math.max(1, Number(process.env.REPEATS) || 1)
+const median = (a) => [...a].sort((x, y) => x - y)[Math.floor(a.length / 2)]
+console.log(`model: ${model || 'default'} · ${repeats} run(s) per script\n`)
+
 for (const s of scripts) {
   const started = Date.now()
-  let g
+  const runs = []
   try {
-    g = await gradeTask({ key, taskNo: s.task, prompt: s.prompt, answer: s.response, wordTarget: s.task === 1 ? 150 : 250 })
+    for (let i = 0; i < repeats; i++) {
+      runs.push(await gradeTask({ key, taskNo: s.task, prompt: s.prompt, answer: s.response, wordTarget: s.task === 1 ? 150 : 250, model }))
+    }
   } catch (e) {
-    console.log(`${s.id.padEnd(9)} FAILED — ${String(e.message || e).slice(0, 120)}`)
+    console.log(`${s.id.padEnd(9)} FAILED — ${String(e.message || e).slice(0, 400)}`)
+    failed.push(s.id)
+    if (e.raw) { fs.writeFileSync(path.join(HERE, 'failed-reply.txt'), e.raw); console.log('             raw reply written to scripts/failed-reply.txt') }
     continue
   }
+  const bands = runs.map((r) => r.band)
+  // The median run is reported in full, so the criteria and the reasoning
+  // shown belong to the band actually being claimed.
+  const g = runs[bands.indexOf(median(bands))]
   const secs = Math.round((Date.now() - started) / 1000)
   const diff = g.band - s.officialBand
+  if (repeats > 1) {
+    const spread = Math.max(...bands) - Math.min(...bands)
+    console.log(`${s.id.padEnd(9)} runs [${bands.join(', ')}]  spread ${spread.toFixed(1)}  -> median ${g.band}`)
+  }
   rows.push({ id: s.id, task: s.task, official: s.officialBand, ours: g.band, diff, criteria: g.criteria, secs })
   console.log(
     `${s.id.padEnd(9)} Task ${s.task}  examiner ${String(s.officialBand).padStart(3)}  ours ${String(g.band).padStart(3)}`
@@ -110,10 +132,15 @@ console.log('within 1.0 of examiner:', d.filter((x) => Math.abs(x) <= 1).length 
 // Human examiners agree with each other within half a band most of the time.
 // That is the bar worth aiming at, and it is worth printing the verdict
 // rather than leaving four numbers to be interpreted charitably.
-const good = Math.abs(mean) <= 0.5 && d.filter((x) => Math.abs(x) <= 1).length === d.length
+// A script that failed to grade is not a script that passed. The first
+// Opus run reported 'usable' having quietly dropped the band 7.5 script —
+// the hardest case and the one carrying the whole bias — which is exactly
+// the kind of verdict that gets believed.
+const good = failed.length === 0 && Math.abs(mean) <= 0.5 && d.filter((x) => Math.abs(x) <= 1).length === d.length
+if (failed.length) console.log('\nFAILED TO GRADE:', failed.join(', '), '— excluded from every number above')
 console.log('\nverdict:', good
   ? 'usable — no systematic bias, every script within one band'
-  : 'NOT yet usable — see the mean difference above; do not rely on these bands for students')
+  : failed.length ? 'NOT usable — ' + failed.length + ' script(s) did not grade at all' : 'NOT yet usable — see the mean difference above; do not rely on these bands for students')
 
 // What the deliberate round-down costs, separated from any error in judging.
 // Smart LC floors each task band to the half rather than rounding, on purpose.
