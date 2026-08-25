@@ -157,13 +157,17 @@ function QuizMe({ items, username }) {
   );
 }
 
-export default function Notebook({ user, findTest, onBack }) {
-  const [rows, setRows] = useState(null);
+// rows/initialMode are optional and exist so this screen can be rendered
+// without a network — scripts/render-screens.mjs uses them to produce the
+// preview of what a student sees. In the app neither is passed.
+export default function Notebook({ user, findTest, onBack, rows: seededRows = null, initialMode = "mistakes" }) {
+  const [rows, setRows] = useState(seededRows);
   const { playing, toggle } = useCueAudio();
-  const [mode, setMode] = useState("mistakes");   // mistakes | quiz | vocab | writing
+  const [mode, setMode] = useState(initialMode);   // mistakes | quiz | vocab | writing
   const [fb, setFb] = useState(null);
 
   useEffect(() => {
+    if (seededRows) return;
     (async () => {
       const remote = (await fetchResults(user.username)) || [];
       const pending = (() => {
@@ -172,7 +176,7 @@ export default function Notebook({ user, findTest, onBack }) {
       setRows([...pending.filter((r) => r.student_username === user.username), ...remote]
         .filter((r) => r.module !== "attempt"));
     })();
-  }, [user.username]);
+  }, [user.username, seededRows]);
 
   const data = useMemo(() => {
     if (!rows) return null;

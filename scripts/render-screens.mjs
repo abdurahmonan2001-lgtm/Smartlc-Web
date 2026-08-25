@@ -16,6 +16,7 @@ globalThis.Audio = class { constructor() { this.currentTime = 0 } play() { retur
 
 const server = await createServer({ root: ROOT, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 const { MockResultView, ResultView, WritingFeedback } = await server.ssrLoadModule('/src/practice/PracticeApp.jsx')
+const Notebook = (await server.ssrLoadModule('/src/practice/Notebook.jsx')).default
 const { getTest } = await server.ssrLoadModule('/src/practice/content.js')
 const data = JSON.parse(fs.readFileSync(new URL('./screens-data.json', import.meta.url), 'utf8'))
 
@@ -42,6 +43,20 @@ const sheet = (t, wrong) => {
   const total = Object.keys(a).length
   return { test_id: t.id, raw_score: total - wrong.length, total, band: 7, duration_seconds: 3300, saved: true, answers: a }
 }
+
+// A student who has sat a whole mock and one practice paper — enough for the
+// notebook to have something in every tab.
+const user = { username: 'preview', full_name: 'Preview' }
+const notebookRows = [
+  { ...sheet(mockR, [1, 4, 14, 21, 27]), student_username: user.username, module: 'reading', taken_at: '2026-08-24T10:00:00Z' },
+  { ...sheet(mockL, [3, 11, 15, 31]), student_username: user.username, module: 'listening', taken_at: '2026-08-24T09:00:00Z' },
+  { ...sheet(test, [2, 9, 18]), student_username: user.username, module: 'reading', taken_at: '2026-08-20T10:00:00Z' },
+  {
+    student_username: user.username, test_id: 'mock1-writing', module: 'writing',
+    raw_score: null, total: null, band: null, answers: {}, taken_at: '2026-08-24T11:30:00Z',
+    ai_band: data.marked.band, ai_feedback: data.marked.feedback,
+  },
+]
 
 const h = React.createElement
 const frame = (n, title, note, node) => `
@@ -70,6 +85,12 @@ const body = [
   frame(5, 'A finished mock — listening',
     'The same division for listening: the recording script beside the questions, with the line each answer came from marked and numbered.',
     h(ResultView, { result: sheet(mockL, [3, 15, 31]), test: mockL, onBack() {} })),
+  frame(6, 'My mistakes',
+    'Every question this student has got wrong, from mocks and practice papers alike, each with the reason and the quoted line. The bars show which question types cost them marks. Mocks carry an "Exam" tag — they used to be excluded from here entirely.',
+    h(Notebook, { user, findTest: getTest, onBack() {}, rows: notebookRows, initialMode: 'mistakes' })),
+  frame(7, 'My mistakes — the writing tab',
+    'New. A writing paper has no score and no per-question answers, so it fell out of this notebook completely; the one paper a student most needs to reread was the only one they could not reach from here.',
+    h(Notebook, { user, findTest: getTest, onBack() {}, rows: notebookRows, initialMode: 'writing' })),
 ].join('\n')
 
 const css = fs.readFileSync(ROOT + '/src/index.css', 'utf8')
