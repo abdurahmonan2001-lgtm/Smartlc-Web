@@ -1,0 +1,48 @@
+{
+  "wrongAnswers": { "1": "paper", "7": "FALSE", "14": "B", "23": "D" },
+  "practiceResult": {
+    "test_id": "pset1-reading",
+    "raw_score": 36,
+    "total": 40,
+    "band": 7,
+    "duration_seconds": 3180,
+    "saved": true
+  },
+  "mockOutcome": {
+    "book": { "title": "Mock Test 1" },
+    "saved": true,
+    "results": [
+      { "test_id": "mock1-listening", "module": "listening", "duration_seconds": 1860, "raw_score": 31, "total": 40, "band": 7 },
+      { "test_id": "mock1-reading", "module": "reading", "duration_seconds": 3600, "raw_score": 26, "total": 40, "band": 6 },
+      { "test_id": "mock1-writing", "module": "writing", "duration_seconds": 3639, "raw_score": null, "total": null, "band": null }
+    ]
+  },
+  "marked": {
+    "band": 5.5,
+    "feedback": {
+      "indicative": true,
+      "tasks": [
+        {
+          "task": 1,
+          "words": 168,
+          "band": 5,
+          "criteria": { "task": 6, "coherence": 6, "lexical": 5, "grammar": 5 },
+          "essay": "The chart show the number of trips made by children to travel to and from school. In 1990 the walking was most popular way, but after 2010 it was decreased significantly. Car use is increased from 20% to 35% over the period.",
+          "corrections": [
+            { "quote": "The chart show", "kind": "grammar", "fix": "The chart shows", "why": "'Chart' is singular, so the verb takes -s: the chart shows." },
+            { "quote": "the walking was most popular way", "kind": "grammar", "fix": "walking was the most popular way", "why": "Don't put 'the' before a general activity like walking, but do put 'the' before a superlative: the most popular way." },
+            { "quote": "it was decreased significantly", "kind": "grammar", "fix": "it decreased significantly", "why": "'Decrease' already means the thing went down by itself, so it is not passive — no 'was'." },
+            { "quote": "Car use is increased from 20% to 35%", "kind": "grammar", "fix": "Car use increased from 20% to 35%", "why": "Describing a finished change in the past needs the past simple: increased." }
+          ],
+          "summary": "The main trend is identified and the figures are accurate, but the report describes each line in turn instead of grouping what moves together, and there is no overview sentence.",
+          "grammar_feedback": "Tense control slips whenever a change is described: 'was decreased', 'is increased'. Both verbs are already active in meaning, so the passive is wrong. Articles are the other pattern to watch — 'the walking' should be 'walking'.",
+          "vocabulary_feedback": "Range is adequate but repetitive: 'increase' appears five times where 'rose', 'climbed' or 'grew' would vary it. 'A lot of people' is too informal for a report; 'a substantial proportion' fits.",
+          "coherence_feedback": "Paragraphs exist, but the second mixes three unrelated comparisons. Linking is limited to 'and' and 'also' — use 'whereas' and 'by contrast' when setting two groups against each other.",
+          "task_feedback": "All four transport modes are covered and the data is accurate, but no overview of the overall pattern is given, which caps this criterion at 6.",
+          "strengths": ["Accurate use of the figures from the chart", "Clear introduction that paraphrases the prompt"],
+          "improve": ["Add a one-sentence overview straight after the introduction", "Group the modes that move together rather than listing each one"]
+        }
+      ]
+    }
+  }
+}

@@ -7,13 +7,18 @@
 // Mocks were once sealed here, so an exam could be re-used across
 // intakes. That was overruled: a student who sits a mock should be able
 // to study from it like any other paper. Mock papers are still marked
-// "Exam" in the list so a student knows which is which, and the seal
-// remains on the history screen, where a mock cannot be re-opened.
+// "Exam" in the list so a student knows which is which.
+//
+// Writing papers used to fall out of this notebook entirely, because they
+// carry no raw score and no per-question answers — so the one paper a
+// student most needs to reread was the one place they could not reach.
+// They now have a tab of their own.
 import { useEffect, useMemo, useState } from "react";
 import { fetchResults, saveReview } from "./api.js";
 import AUDIO_CUES from "./audio-cues.json";
 import { buildReview, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
 import { parentListeningId } from "./upper.js";
+import { WritingFeedback } from "./WritingFeedback.jsx";
 
 const PENDING_KEY = "slc_practice_pending";
 const QUIZABLE = new Set(["mcq", "select", "tfng", "ynng", "gap"]);
@@ -155,7 +160,8 @@ function QuizMe({ items, username }) {
 export default function Notebook({ user, findTest, onBack }) {
   const [rows, setRows] = useState(null);
   const { playing, toggle } = useCueAudio();
-  const [mode, setMode] = useState("mistakes");   // mistakes | quiz | vocab
+  const [mode, setMode] = useState("mistakes");   // mistakes | quiz | vocab | writing
+  const [fb, setFb] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -172,12 +178,21 @@ export default function Notebook({ user, findTest, onBack }) {
     if (!rows) return null;
     const seen = new Set();
     const papers = [];   // {testId,title,module,isMock,items}
+    const written = [];  // marked writing papers
     const allReviews = [];
     for (const r of rows) {
-      if (r.raw_score == null || !r.answers) continue;
       if (seen.has(r.test_id)) continue;   // one attempt per paper; guard anyway
       const t = findTest(r.test_id);
       if (!t) continue;
+      // A writing paper has no raw score and no per-question answers, so it
+      // fell out of this notebook entirely — a student working through their
+      // mistakes could not reach the essay that had been marked for them.
+      if (r.ai_feedback?.tasks?.length) {
+        seen.add(r.test_id);
+        written.push({ testId: r.test_id, title: t.title, band: r.ai_band, feedback: r.ai_feedback });
+        continue;
+      }
+      if (r.raw_score == null || !r.answers) continue;
       seen.add(r.test_id);
       const items = buildReview(t, r.answers);
       allReviews.push(items);
@@ -188,6 +203,7 @@ export default function Notebook({ user, findTest, onBack }) {
     return {
       stats: typeStats(allReviews),
       papers,
+      written,
       mistakes,
       quizItems: mistakes.filter((m) => QUIZABLE.has(m.type)),
       vocabReview: mistakes,
@@ -201,7 +217,7 @@ export default function Notebook({ user, findTest, onBack }) {
         <button className="pr-link" onClick={onBack}>← Library</button>
       </header>
 
-      {!rows || !data ? <p className="pr-empty">Loading…</p> : data.mistakes.length === 0 ? (
+      {!rows || !data ? <p className="pr-empty">Loading…</p> : (data.mistakes.length === 0 && !data.written.length) ? (
         <p className="pr-empty">
           Nothing here yet — finish a practice paper or a mock and any mistakes will be
           collected into this notebook to study from.
@@ -213,7 +229,8 @@ export default function Notebook({ user, findTest, onBack }) {
           <div className="pr-tabs" style={{ marginTop: 16 }}>
             {[["mistakes", "My mistakes", `${data.mistakes.length} collected`],
               ["quiz", "Quiz me", `${data.quizItems.length} re-askable`],
-              ["vocab", "Vocabulary", "paraphrase pairs"]].map(([id, label, hint]) => (
+              ["vocab", "Vocabulary", "paraphrase pairs"],
+              ["writing", "My writing", `${data.written.length} marked`]].map(([id, label, hint]) => (
               <button key={id} className={`pr-tab ${mode === id ? "is-active" : ""}`} onClick={() => setMode(id)}>
                 <strong>{label}</strong><span>{hint}</span>
               </button>
@@ -222,6 +239,15 @@ export default function Notebook({ user, findTest, onBack }) {
 
           {mode === "quiz" && <QuizMe key={data.quizItems.length} items={data.quizItems} username={user.username} />}
           {mode === "vocab" && <VocabMatch review={data.vocabReview} cap={10} />}
+          {mode === "writing" && (data.written.length ? data.written.map((w) => (
+            <div className="pr-review" key={w.testId}>
+              <div className="pr-review__bar">
+                <strong>{w.title}</strong>
+                <span className="pr-quiz__count">{w.band != null ? `Band ${Number(w.band).toFixed(1)}` : "marked"}</span>
+              </div>
+              <button className="pr-link" onClick={() => setFb(w)}>Open my essay and the corrections</button>
+            </div>
+          )) : <p className="pr-empty">No marked writing yet.</p>)}
           {mode === "mistakes" && data.papers.map((p) => {
             const wrong = p.items.filter((it) => !it.ok);
             if (!wrong.length) return null;
@@ -255,6 +281,9 @@ export default function Notebook({ user, findTest, onBack }) {
             );
           })}
         </>
+      )}
+      {fb && (
+        <WritingFeedback band={fb.band} feedback={fb.feedback} onClose={() => setFb(null)} />
       )}
     </div>
   );
