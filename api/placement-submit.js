@@ -11,6 +11,7 @@
 import { GRAMMAR, READING, WRITING_PROMPT, determineLevel } from './_bank.js'
 import { verifySession, seededShuffle, clientIp, rateLimited, countRecent, recordHit, env } from './_session.js'
 import { telegramSend, placementMessage } from './_notify.js'
+import { sheetAppend, tashkentNow } from './_sheet.js'
 import crypto from 'node:crypto'
 
 // A whole family sharing one connection, or a queue of candidates on the
@@ -225,6 +226,52 @@ export default async function handler(req, res) {
   }
 
   recordHit(`done:${ip}`)   // charge the quota only for a test that actually completed
+
+  // Surface the candidate in the sales CRM. A finished placement test is the
+  // warmest website lead there is, and until this call existed such people
+  // lived only in placement_results — visible to the admin's Tests screen but
+  // invisible to sales operators. crm_lead_create dedupes by phone, so a lead
+  // who originally arrived from an ad simply gains a note and a touch instead
+  // of becoming a duplicate. Non-fatal on purpose: the result is already
+  // saved, and the office Telegram ping below still fires either way.
+  try {
+    const crm = await rest('rpc/crm_lead_create', {
+      method: 'POST',
+      body: JSON.stringify({
+        p_agent: null,                       // Inbox triage / round-robin
+        p_phone: phone,
+        p_contact_name: fullName,
+        p_student_age: ageValue || null,
+        p_source: 'website',
+        p_course: level || null,
+        p_note: [
+          'Completed the website placement test.',
+          `Level: ${level}`,
+          `Grammar ${grammarScore}/${GRAMMAR.length} · Reading ${readingScore}/${READING.length}` +
+            (wr.score != null ? ` · Writing ${wr.score}/10` : ''),
+        ].join('\n'),
+        p_intake_channel: 'website_placement_test',
+      }),
+    })
+    if (!crm.ok) console.error('placement → CRM lead failed', crm.status, await crm.text().catch(() => ''))
+  } catch (e) {
+    console.error('placement → CRM lead threw', e)
+  }
+
+  // Mirror to the office Google Sheet — a completed placement test is a lead
+  // the office wants to see at a glance next to the form/website ones.
+  await sheetAppend([
+    tashkentNow(),
+    fullName,
+    phone,
+    '',
+    `Placement: ${level}`,
+    '',
+    'Placement test',
+    '',
+    'CRMda ✓',
+    '',
+  ])
 
   // Tell the office straight away. The Daily Tasks card only recounts hourly,
   // so without this a fresh candidate can go unnoticed for an hour. Awaited so
