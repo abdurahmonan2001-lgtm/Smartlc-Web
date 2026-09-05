@@ -113,7 +113,23 @@ Respond with ONLY this JSON, no prose around it, and with the keys in exactly th
 // Overridable so the calibration harness can measure one model against
 // another without editing this file, which is how two changes end up being
 // made at once and neither being attributable.
-export const DEFAULT_MODEL = 'claude-sonnet-4-6'
+//
+// Opus 5, measured against the four examiner-marked scripts, three passes
+// each, medians compared (2026-08-26):
+//
+//                     examiner   sonnet-4-6   opus-5
+//   AC-T1-a  Task 1        6.0          5.5      6.0
+//   AC-T1-b  Task 1        4.0          4.0      4.0
+//   AC-T2-a  Task 2        5.5          4.0      5.0
+//   AC-T2-b  Task 2        7.5          5.0      6.0
+//   mean absolute error                 1.13     0.50
+//
+// Better or equal on every script, no regression on any, and Task 1 becomes
+// exact. It does NOT fix the top of the range: a band 7.5 script still comes
+// back 6.0, with all four criteria flat at 6 across three runs. That is the
+// remaining fault and it is a prompt problem, not a model one — see the note
+// on the reply order above.
+export const DEFAULT_MODEL = 'claude-opus-5'
 
 export async function gradeTask({ key, taskNo, prompt, answer, wordTarget, model }) {
   const wc = words(answer)

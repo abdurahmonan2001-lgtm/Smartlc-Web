@@ -129,6 +129,33 @@ console.log('mean absolute error   :', abs.toFixed(2), 'bands')
 console.log('within 0.5 of examiner:', d.filter((x) => Math.abs(x) <= 0.5).length + '/' + d.length)
 console.log('within 1.0 of examiner:', d.filter((x) => Math.abs(x) <= 1).length + '/' + d.length)
 
+// Split by task, because the two are different jobs marked against different
+// descriptors and they have not been failing in the same way: the whole of the
+// bias measured so far sits in Task 2, and averaging the two together hides
+// that behind a middling overall number.
+for (const t of [1, 2]) {
+  const mine = rows.filter((r) => r.task === t)
+  if (!mine.length) continue
+  const dt = mine.map((r) => r.diff)
+  const m = dt.reduce((a, b) => a + b, 0) / dt.length
+  console.log(`  task ${t} (${dt.length}) : mean ${fmt(m).padStart(5)}  worst ${fmt(dt.reduce((a, b) => (Math.abs(b) > Math.abs(a) ? b : a), 0))}`)
+}
+
+// Whether it discriminates between the four criteria at all. A grader that
+// gives one script 6/6/6/6 and the next 5/5/5/5 is forming a single overall
+// impression and copying it into four boxes, which is what costs it the
+// strong scripts — a band 8 needs 8s somewhere, and a flat marker never
+// awards one. Spread is the gap between the highest and lowest criterion.
+const spreads = rows.map((r) => { const v = Object.values(r.criteria); return Math.max(...v) - Math.min(...v) })
+const flat = spreads.filter((s) => s === 0).length
+const allCriteria = rows.flatMap((r) => Object.values(r.criteria))
+console.log(
+  `\ncriterion spread      : ${(spreads.reduce((a, b) => a + b, 0) / spreads.length).toFixed(2)} bands average`
+  + `, ${flat}/${rows.length} script(s) marked completely flat`,
+)
+console.log(`criteria awarded      : ${Math.min(...allCriteria)} to ${Math.max(...allCriteria)}`
+  + (Math.max(...allCriteria) < 8 ? '  — never awarded an 8, so band 8+ is unreachable on these scripts' : ''))
+
 // Human examiners agree with each other within half a band most of the time.
 // That is the bar worth aiming at, and it is worth printing the verdict
 // rather than leaving four numbers to be interpreted charitably.
