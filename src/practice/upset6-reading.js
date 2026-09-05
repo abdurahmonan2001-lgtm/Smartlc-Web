@@ -148,7 +148,7 @@ Whatever its mechanism, commerce discovered the effect long before the journals 
           evidence: "losses weigh more heavily on us than gains", vocab: ["parting with", "giving something up"] },
         { n: 37, type: "gap", group: "wl", answer: "E", explain: "Goods held purely for exchange, like banknotes, show no endowment effect; 'exchange' fits both the grammar and the passage's example of money.", evidence: "Goods held purely for exchange behave the same way" },
         { n: 38, type: "gap", group: "wl", answer: "B", explain: "The passage says the effect has been observed in young children and even in apes, so 'apes' completes the summary's claim about ancient origins.", evidence: "observed in young children and even in apes" },
-        { n: 39, type: "gap", group: "wl", answer: "C", explain: "The free trial is the writer's first example of commerce exploiting the effect: temporary ownership makes returning the product feel like a loss.", evidence: "The free trial, the no-questions-asked returns policy", vocab: ["no-questions-asked returns", "easy returns"] },
+        { n: 39, type: "gap", group: "wl", answer: "C", explain: "The free trial is the writer's first example of commerce exploiting the effect: temporary ownership makes returning the product feel like a loss.", evidence: "Free trials, no-questions-asked returns policies", vocab: ["no-questions-asked returns", "easy returns"] },
         { n: 40, type: "gap", group: "wl", answer: "F", explain: "The sceptics claim the laboratory evidence reflects confusion rather than valuation — participants misunderstand the trading rules of the task.", evidence: "participants misunderstand the trading rules" },
       ],
     },

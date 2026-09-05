@@ -51,15 +51,38 @@ const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length
 //   7,7,7,6 → 6.75 → 6.5      one weak criterion always costs at least a half
 const floorHalf = (n) => Math.floor(n * 2) / 2
 
+// The ORDER of this reply is load-bearing, not cosmetic.
+//
+// The first version asked for the four band numbers as the opening tokens
+// of the JSON, with the analysis and the error list after them. A grader
+// that emits "task":5 before it has written a word of analysis is not
+// applying the descriptors; it is forming an impression and then
+// rationalising it, and against the official examiner-marked scripts that
+// impression came out roughly two bands low.
+//
+// So the reply now runs: evidence for each criterion, THEN the band for that
+// criterion, and the mistake list LAST. Because the model writes in order,
+// the bands cannot be coloured by a hunt for twelve errors that has not
+// happened yet — and the band must be preceded by the descriptor wording it
+// claims to match, which is much harder to do carelessly.
 const rubricFor = (taskNo) => `You are an experienced IELTS examiner. Mark the candidate's response against the official IELTS Writing band descriptors, which are reproduced in full below. They are the standard: judge against their wording, not against your impression of the script.
 
 OFFICIAL IELTS WRITING TASK ${taskNo} BAND DESCRIPTORS (public version, updated May 2023)
 ${taskNo === 1 ? TASK1_DESCRIPTORS : TASK2_DESCRIPTORS}
 
-HOW TO USE THEM
-Work criterion by criterion. For each one, find the band whose descriptor the script actually matches — read the band above and the band below to confirm the fit before settling. Bolded text in the descriptors marks negative features that cap a rating.
+WHAT YOU ARE MARKING
+This is an exam answer, produced in about ${taskNo === 1 ? 'twenty' : 'forty'} minutes under timed conditions, with no dictionary, no spellchecker and no chance to redraft. The descriptors are written for exactly that: they already expect the slips, the repetition and the unevenness that timed writing produces. Judge it as a piece of exam work, not as something that has been edited.
 
-Be honest and accurate. Do NOT inflate the band to be kind — an inflated band misleads the student about what they need to fix, which is worse than a disappointing number. Equally, do not mark down out of caution: a script that meets the band 7 descriptors is a 7, and calling it a 6 to seem rigorous is just as wrong.
+HOW TO USE THE DESCRIPTORS
+Work through one criterion at a time, and for each one do this in order:
+1. Say what the script actually ACHIEVES on that criterion — the features that are present and working. Quote the candidate.
+2. Say what LIMITS it — the features that hold it back. Quote the candidate.
+3. Name the band whose descriptor fits, and quote the phrase from that descriptor which the script matches. Begin it with the band, like "band 6: ...".
+4. Only then give the number, and it MUST be the band you just named. Quoting the band 5 descriptor and then awarding 4 is a contradiction, not caution — if the script matches band 5, the number is 5.
+
+Read the band above and the band below before settling: the right band is the one the script matches best, not the one it fails least. Bolded text in the descriptors marks negative features that cap a rating.
+
+Be honest and accurate in BOTH directions. Do not inflate to be kind — an inflated band misleads the student about what to fix. But do not mark down out of caution either, and this is the commoner error: a script that meets the band 7 descriptors is a 7, and calling it a 6 to seem rigorous is just as wrong as calling a 5 a 6. Errors are not by themselves evidence of a low band; every criterion above band 6 explicitly tolerates errors, so what matters is whether they match the frequency and the effect the descriptor names.
 
 Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria. Never a half band. This is how IELTS examiners assess the criteria: each one gets a whole band, and only the averaged result is reported in halves. Choose the single descriptor that best fits; do not split the difference between two.
 - task: ${taskNo === 1 ? 'Task Achievement' : 'Task Response'}
@@ -67,9 +90,9 @@ Award a WHOLE band — an integer from 0 to 9 — for each of the four criteria.
 - lexical: Lexical Resource
 - grammar: Grammatical Range and Accuracy
 
-For each of grammar, vocabulary and coherence write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
+For each of grammar, vocabulary and coherence also write specific, detailed feedback that QUOTES the candidate's own words. Name the actual error and give the correction. Vague advice such as "improve your grammar" is useless — say which structures fail and how to fix them.
 
-Then list the individual mistakes in "corrections". This is the most important part of your reply: it is shown to the student marked onto their own essay, so they can see exactly what is wrong and why.
+LAST, and only after the bands are settled, list the individual mistakes in "corrections". This list is shown to the student marked onto their own essay, so they can see exactly what is wrong and why. It records what you found; it does not decide the band, which you have already given.
 - "quote" MUST be copied EXACTLY, character for character, from the candidate's response. Do not paraphrase it, do not correct its spelling, do not add or remove punctuation. If you cannot copy it exactly, leave the mistake out.
 - Keep each quote short — the words that are actually wrong, not the whole sentence.
 - "kind" is one of: grammar, vocabulary, spelling, punctuation, coherence.
@@ -77,23 +100,59 @@ Then list the individual mistakes in "corrections". This is the most important p
 - "why" explains the rule in one or two plain sentences, so the student learns the pattern rather than memorising one correction. Write it for a learner, not for a linguist.
 Give every mistake worth learning from, up to 12. Order them as they appear in the response.
 
-Respond with ONLY this JSON, no prose around it:
-{"task":6,"coherence":6,"lexical":5,"grammar":5,
+Respond with ONLY this JSON, no prose around it, and with the keys in exactly this order:
+{"analysis":{
+   "task":{"achieves":"...","limits":"...","descriptor":"band 6: addresses all parts of the task though some parts more fully covered than others","band":6},
+   "coherence":{"achieves":"...","limits":"...","descriptor":"...","band":6},
+   "lexical":{"achieves":"...","limits":"...","descriptor":"...","band":5},
+   "grammar":{"achieves":"...","limits":"...","descriptor":"...","band":5}},
  "grammar_feedback":"...","vocabulary_feedback":"...","coherence_feedback":"...",
  "task_feedback":"...","summary":"...","strengths":["..."],"improve":["..."],
  "corrections":[{"quote":"the government have to provides","kind":"grammar","fix":"the government has to provide","why":"'Government' takes a singular verb here, and after 'has to' the verb stays in its base form — so 'has to provide', never 'has to provides'."}]}`
 
-export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
+// Overridable so the calibration harness can measure one model against
+// another without editing this file, which is how two changes end up being
+// made at once and neither being attributable.
+//
+// Opus 5, measured against the four examiner-marked scripts, three passes
+// each, medians compared (2026-08-26):
+//
+//                     examiner   sonnet-4-6   opus-5
+//   AC-T1-a  Task 1        6.0          5.5      6.0
+//   AC-T1-b  Task 1        4.0          4.0      4.0
+//   AC-T2-a  Task 2        5.5          4.0      5.0
+//   AC-T2-b  Task 2        7.5          5.0      6.0
+//   mean absolute error                 1.13     0.50
+//
+// Better or equal on every script, no regression on any, and Task 1 becomes
+// exact. It does NOT fix the top of the range: a band 7.5 script still comes
+// back 6.0, with all four criteria flat at 6 across three runs. That is the
+// remaining fault and it is a prompt problem, not a model one — see the note
+// on the reply order above.
+export const DEFAULT_MODEL = 'claude-opus-5'
+
+export async function gradeTask({ key, taskNo, prompt, answer, wordTarget, model }) {
   const wc = words(answer)
-  const r = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-6',
+  const body = {
+      model: model || DEFAULT_MODEL,
+      // Two consecutive runs of identical code over the same four
+      // examiner-marked scripts disagreed with themselves by half a band on
+      // average, and by a full band on one script — which had been read as
+      // evidence for and against changes that were doing nothing.
+      //
+      // The call had never set a temperature, so every paper was being marked
+      // at the API default of 1.0. A student's band should not depend on which
+      // sample came back, so marking is now as close to deterministic as the
+      // model allows. This is a reliability setting, not a quality one: it
+      // does not make the band more accurate, only the same essay score the
+      // same twice.
+      temperature: 0,
       // 2000 was enough against a short paraphrased rubric; against the full
       // descriptors the reply grew and was being truncated mid-JSON, which
-      // surfaced only as a parse error. Leave real headroom.
-      max_tokens: 4000,
+      // surfaced only as a parse error. The per-criterion analysis added
+      // another block again, and a model that reasons before answering spends
+      // tokens before the JSON even starts, so leave generous headroom.
+      max_tokens: 16000,
       system: rubricFor(taskNo),
       messages: [{
         role: 'user',
@@ -104,15 +163,102 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
           + `\n\nTask prompt:\n${String(prompt || '').slice(0, 4000)}`
           + `\n\nCandidate's response:\n${String(answer || '').slice(0, MAX_ESSAY_CHARS)}`,
       }],
-    }),
-  })
-  if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 200)}`)
-  const data = await r.json()
-  // A truncated reply is not a malformed one — say which, or the next person
-  // debugging this reads "unexpected end of JSON" and goes looking at parsing.
-  if (data.stop_reason === 'max_tokens') throw new Error('grader reply hit max_tokens and was cut off')
-  const parsed = JSON.parse((data.content?.[0]?.text || '').replace(/```json|```/g, '').trim())
+  }
 
+  const post = (b) => fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    body: JSON.stringify(b),
+  })
+
+  const attempt = async (b) => {
+    let r = await post(b)
+    // Newer models reject `temperature` outright rather than ignoring it, so a
+    // model swap turns into four HTTP 400s and no marking at all. Drop the
+    // setting and retry rather than making the caller know which models accept
+    // it — the parameter is a reliability preference, not a requirement.
+    if (r.status === 400) {
+      const detail = await r.clone().text().catch(() => '')
+      if (/temperature/i.test(detail)) {
+        const { temperature, ...rest } = b
+        r = await post(rest)
+      }
+    }
+    if (!r.ok) throw new Error(`HTTP ${r.status} — ${(await r.text().catch(() => '')).slice(0, 200)}`)
+    return r.json()
+  }
+
+  // One unescaped quote inside one quoted phrase invalidates the whole reply,
+  // and the student gets no band at all for a stray character in the middle of
+  // 14,000 of them. A second sample almost always lands clean, so a parse
+  // failure is retried once before it is allowed to lose the marking.
+  let data = await attempt(body)
+  let parsed = readReply(data)
+  if (parsed.error) {
+    data = await attempt(body)
+    const second = readReply(data)
+    if (second.error) { const err = new Error(`${second.error} (twice)`); err.raw = second.raw; throw err }
+    parsed = second
+  }
+  return finish(parsed.value, { taskNo, answer, wc })
+}
+
+// Pulled out so the retry above reads as one decision rather than a nest of
+// try/catch. Returns either {value} or {error}, never throws.
+// One official script reproducibly came back missing the final closing brace —
+// every string terminated, every bracket balanced, just one `}` short of the
+// end. Two fresh samples did the same, so retrying does not help and a
+// student's whole marking was being lost to a single absent character.
+//
+// This closes unclosed braces and nothing else. It refuses if a string is
+// still open or a bracket is unbalanced, because that means the reply is
+// genuinely truncated and appending punctuation would invent content rather
+// than repair a slip. Returns null when it will not touch the reply.
+function closeUnclosedBraces(s) {
+  let inStr = false, esc = false, braces = 0, brackets = 0
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i]
+    if (esc) { esc = false; continue }
+    if (c === '\\') { esc = true; continue }
+    if (c === '"') { inStr = !inStr; continue }
+    if (inStr) continue
+    if (c === '{') braces++
+    else if (c === '}') braces--
+    else if (c === '[') brackets++
+    else if (c === ']') brackets--
+  }
+  if (inStr || brackets !== 0 || braces <= 0 || braces > 3) return null
+  return s + '}'.repeat(braces)
+}
+
+function readReply(data) {
+  if (data.stop_reason === 'max_tokens') return { error: 'grader reply hit max_tokens and was cut off' }
+  const replyText = (Array.isArray(data.content) ? data.content : [])
+    .filter((b) => b?.type === 'text' && typeof b.text === 'string')
+    .map((b) => b.text).join('')
+  if (!replyText.trim()) {
+    return { error: `grader returned no text block (got: ${(data.content || []).map((b) => b?.type).join(', ') || 'nothing'})` }
+  }
+  const cleaned = replyText.replace(/```json|```/g, '').trim()
+  try {
+    return { value: JSON.parse(cleaned) }
+  } catch (e) {
+    const mended = closeUnclosedBraces(cleaned)
+    if (mended) {
+      try { return { value: JSON.parse(mended), repaired: true } } catch { /* fall through */ }
+    }
+    // Carry the raw reply on the error so a caller debugging this can look at
+    // the break point instead of guessing from the tail.
+    return {
+      raw: cleaned,
+      error: `grader reply did not parse (${e.message}); ${cleaned.length} chars, `
+        + `stop_reason=${data.stop_reason}, ends: ...${cleaned.slice(-160).replace(/[\n\r\t]+/g, ' ')}`,
+    }
+  }
+}
+
+function finish(parsed, { taskNo, answer, wc }) {
+  const data = { stop_reason: 'end_turn' }   // kept so the code below reads unchanged
   // Each criterion is a WHOLE band, as an examiner awards them. A model that
   // hedges with 5.5 is snapped to a whole band rather than being let through:
   // half bands on a criterion are not a finer measurement, they are a refusal
@@ -121,7 +267,26 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     const n = Number(v)
     return Number.isFinite(n) && n >= 0 && n <= 9 ? Math.round(n) : null
   }
-  const four = { task: band(parsed.task), coherence: band(parsed.coherence), lexical: band(parsed.lexical), grammar: band(parsed.grammar) }
+  // The band now sits inside the per-criterion analysis, after the evidence
+  // for it. The flat top-level form is still accepted so a reply that comes
+  // back in the older shape is marked rather than thrown away.
+  const a = parsed.analysis || {}
+  // The descriptor quote names a band ("band 6: ..."). Twice in a calibration
+  // run the grader quoted one band and then awarded the one below it — both
+  // times on Task Achievement, both times downward. The number has to follow
+  // the evidence, so where the two disagree the quoted descriptor wins: it is
+  // the half a reader can check against the published descriptors.
+  const overrides = []
+  const scoreOf = (k) => {
+    const given = band(a?.[k]?.band ?? parsed[k])
+    const named = band((String(a?.[k]?.descriptor || '').match(/band\s*([0-9](?:\.[05])?)/i) || [])[1])
+    if (given != null && named != null && named !== given) {
+      overrides.push(`${k}: quoted band ${named}, awarded ${given} — took ${named}`)
+      return named
+    }
+    return given
+  }
+  const four = { task: scoreOf('task'), coherence: scoreOf('coherence'), lexical: scoreOf('lexical'), grammar: scoreOf('grammar') }
   if (Object.values(four).some((v) => v == null)) throw new Error('grader returned a band outside 0-9')
 
   // Floored to the half, not rounded: a 7 here still means every criterion
@@ -155,6 +320,21 @@ export async function gradeTask({ key, taskNo, prompt, answer, wordTarget }) {
     // teacher's need to show the corrections ON the writing, and keeping them
     // together means neither has to re-fetch the answers and re-pair them.
     task: taskNo, words: wc, band: overall, criteria: four, corrections, essay: text,
+    // Why each criterion got its band, in the examiner's own terms. This is
+    // what a teacher needs to see to judge whether the marking is fair, and
+    // it is what makes a disputed band arguable rather than opaque.
+    reasons: ['task', 'coherence', 'lexical', 'grammar'].reduce((acc, k) => {
+      const r = a?.[k]
+      if (r) acc[k] = {
+        achieves: String(r.achieves || '').slice(0, 600),
+        limits: String(r.limits || '').slice(0, 600),
+        descriptor: String(r.descriptor || '').slice(0, 300),
+      }
+      return acc
+    }, {}),
+    // Empty in the normal case. Non-empty means the grader contradicted
+    // itself and the code corrected it, which is worth being able to see.
+    overrides,
     grammar_feedback: String(parsed.grammar_feedback || '').slice(0, 1500),
     vocabulary_feedback: String(parsed.vocabulary_feedback || '').slice(0, 1500),
     coherence_feedback: String(parsed.coherence_feedback || '').slice(0, 1500),

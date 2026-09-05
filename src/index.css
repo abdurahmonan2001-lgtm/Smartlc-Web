@@ -1811,6 +1811,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-login__err { color: #c0392b; font-size: 13px; }
 
 .pr-lib { max-width: 1080px; margin: 0 auto; padding: 22px 20px 80px; }
+/* An open paper: the passage and the answers each get half the screen
+   rather than half of 1080px. Capped so the lines do not run so long on a
+   large monitor that the eye loses its place returning to the left. */
+/* An open paper is a screen, not a page: the two columns take whatever is
+   left once the header, the part switcher and the strip of every question
+   have had theirs, and each scrolls inside itself. Measured by the flexbox
+   rather than subtracted as a fixed number, so it stays right whatever the
+   window height and however tall the title above it wraps. */
+.pr-lib--wide { max-width: 1600px; display: flex; flex-direction: column; height: 100dvh; padding-bottom: 14px; }
+.pr-lib--wide .pr-back { align-self: flex-start; }
+.pr-lib--wide .pr-split { flex: 1 1 auto; min-height: 260px; }
+.pr-lib--wide .pr-split > * { height: 100%; max-height: none; overflow-y: auto; }
 .pr-lib__top {
   display: flex; align-items: center; justify-content: space-between; gap: 14px;
   padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 26px;
@@ -1838,6 +1850,23 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-book__title { font-weight: 800; font-size: 13.5px; }
 .pr-book__count { font-size: 12px; color: var(--ink-3); font-weight: 600; }
 /* Mock / Practice section switch */
+/* The notebook's two halves, as the page title itself. Sits inside the
+   header's logo line, so the switch reads as "My mistakes / Analytics"
+   rather than as a pair of cards taking a band off the top of every paper. */
+/* The site nav hides its wordmark on phones (`.nav__logo span`), and this
+   switch lives in that same logo line — so it has to say, at a specificity
+   that rule cannot reach, that it is not a wordmark. Without this the
+   notebook loses both its title and its only way into Analytics on a phone. */
+.pr-lib__top .nav__logo .pr-nbtabs { display: flex; align-items: baseline; gap: 4px; }
+.pr-nbtab {
+  font: inherit; font-weight: 800; letter-spacing: -.2px;
+  background: none; border: 0; padding: 2px 8px; border-radius: 8px;
+  color: var(--ink-3); cursor: pointer; transition: color .15s ease, background .15s ease;
+}
+.pr-nbtab:hover { color: var(--ink); background: #f1f5f9; }
+.pr-nbtab.is-active { color: var(--green); }
+.pr-nbtabs .pr-nbtab + .pr-nbtab { border-left: 1px solid var(--line); border-radius: 0 8px 8px 0; }
+
 .pr-tabs { display: flex; gap: 10px; margin-bottom: 22px; }
 .pr-tab {
   flex: 1; max-width: 280px; text-align: left; padding: 12px 16px;
@@ -1887,7 +1916,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .pr-review__perfect { font-size: 13.5px; color: var(--green); background: #f2fbf8; border: 1px solid #d6f2e8; border-radius: 10px; padding: 10px 14px; }
 .pr-review__sec { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin: 14px 0 8px; }
-.pr-review__row { display: flex; gap: 10px; padding: 8px 12px; border: 1px solid #eef1f0; border-radius: 10px; margin-bottom: 7px; }
+/* Now that the whole paper is listed rather than the mistakes alone, a right
+   answer has to read as one at a glance — the same green and red as the
+   numbered boxes underneath. Kept faint: forty tinted rows should look like a
+   marked script, not a warning. */
+.pr-review__row { display: flex; gap: 10px; padding: 8px 12px; border: 1px solid #eef1f0; border-radius: 10px; margin-bottom: 7px; background: #f6fbf9; border-color: #dcefe8; }
 .pr-review__row.is-wrong { background: #fef6f6; border-color: #fbd5d5; }
 .pr-review__mark { flex-shrink: 0; font-weight: 800; font-size: 13px; color: var(--green); margin-top: 2px; }
 .pr-review__row.is-wrong .pr-review__mark { color: #dc2626; }
@@ -1895,6 +1928,75 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-review__ans { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 5px; font-size: 12.5px; line-height: 1.6; }
 .pr-review__ans .is-yours { color: #b91c1c; }
 .pr-review__ans .is-key { color: var(--green); }
+
+/* Source beside questions, the way the reading paper itself is laid out.
+   The source column scrolls on its own so the questions stay in view while
+   a student reads back through the passage. */
+.pr-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.pr-split > * { min-width: 0; }
+/* The answer list is capped at 640px and centred when it stands on its own
+   below a result. As one half of the split it is a column, so it fills its
+   track and starts level with the passage beside it — and scrolls inside
+   itself, like the passage, so reading down the questions does not carry the
+   header and the question strip off the top and bottom of the screen. */
+.pr-split > .pr-review { max-width: none; margin: 0; max-height: 78vh; overflow-y: auto; }
+
+/* One task's marks in Analytics: the four criteria and what the marker said. */
+.pr-an__task { padding: 10px 0 2px; border-top: 1px dashed var(--line); }
+.pr-an__task:first-of-type { border-top: 0; }
+.pr-an__taskhead { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+.pr-an__taskhead strong { font-size: 14px; font-weight: 800; }
+.pr-an__taskhead span { font-size: 12px; font-weight: 600; color: var(--ink-3); }
+.pr-an__h4 { font-size: 12px; font-weight: 800; color: var(--ink-2); margin: 12px 0 4px; }
+.pr-an__list { margin: 0 0 4px; padding-left: 18px; font-size: 13.5px; line-height: 1.6; color: var(--ink-2); }
+.pr-an__list li { margin-bottom: 4px; }
+
+/* The paper's name and the way back out of it, in the header line. */
+.pr-lib__crumb { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+.pr-lib__paper { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800; color: var(--ink); }
+
+/* The part the student is looking at, in the strip of every question. */
+.pr-boxes__part.is-current .pr-boxes__label { color: var(--green); }
+.pr-source {
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  padding: 16px 18px; max-height: 78vh; overflow-y: auto;
+}
+.pr-source__head { margin-bottom: 12px; }
+.pr-source__head strong { display: block; font-size: 14.5px; }
+.pr-source__head span { font-size: 12.5px; color: #64748b; }
+.pr-source__sec { margin-bottom: 18px; }
+.pr-source__para { font-size: 14px; line-height: 1.75; color: var(--ink); margin: 0 0 12px; }
+
+/* The span a question's answer comes from, carrying that question's number. */
+.pr-ev {
+  background: #fff5cc; box-shadow: inset 0 -2px 0 #f5cf5e;
+  border-radius: 3px; padding: 1px 0; color: inherit;
+}
+.pr-ev sup {
+  font-size: 10px; font-weight: 800; color: #92620a;
+  background: #fde9a9; border-radius: 999px; padding: 1px 5px; margin-left: 3px;
+  vertical-align: super; white-space: nowrap;
+}
+.pr-transcript__line .pr-ev { box-shadow: inset 0 -2px 0 #f5cf5e; }
+
+@media (max-width: 900px) {
+  /* Stacked on a phone: source first, then the questions about it. */
+  .pr-split { grid-template-columns: minmax(0, 1fr); }
+  .pr-source { max-height: 52vh; }
+  /* Stacked, the two panels are one above the other, so a screen-height
+     split would put the questions below the fold with no way to see both.
+     The phone goes back to a page that scrolls, each panel capped so
+     neither runs away with the whole screen. */
+  .pr-lib--wide { display: block; height: auto; padding-bottom: 80px; }
+  .pr-lib--wide .pr-split { min-height: 0; }
+  .pr-lib--wide .pr-split > * { height: auto; }
+  .pr-lib--wide .pr-source { max-height: 52vh; }
+  .pr-split > .pr-review { max-height: 62vh; }
+  /* The header carries the paper's name, the way back and the Library link;
+     on a phone that is more than one line's worth. */
+  .pr-lib__top { flex-wrap: wrap; }
+  .pr-lib__paper { font-size: 13.5px; width: 100%; }
+}
 
 .pr-result__actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
 
@@ -1919,8 +2021,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .pr-transcript__toggle span { font-size: 13px; font-weight: 700; color: var(--green); }
 .pr-transcript__line { display: flex; gap: 10px; font-size: 13.5px; line-height: 1.65; margin-bottom: 8px; color: var(--ink-2); }
-.pr-transcript__line span { flex-shrink: 0; width: 84px; font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 3px; }
-.pr-transcript__line.is-A span { color: var(--green); }
+/* The speaker label only. This was once written as `.pr-transcript__line span`,
+   which also caught the spans the highlighter emits around the words — so the
+   recording script rendered as narrow grey uppercase columns instead of text. */
+.pr-transcript__who { flex-shrink: 0; width: 84px; font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 3px; }
+.pr-transcript__said { flex: 1; min-width: 0; }
+.pr-transcript__line.is-A .pr-transcript__who { color: var(--green); }
 
 /* A third of an Upper-Inter paper, shown under its full paper */
 .pr-result__indic {
@@ -2335,6 +2441,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .nav__cta-full { display: none; }
   .nav__cta-short { display: inline; }
   .nav__logo span { display: none; }
+  .pr-lib__top .nav__logo .pr-nbtab { font-size: 15px; padding: 2px 5px; }
   /* Bottom padding stays 0 here too, or it reopens the dark gap between the
      foot of the photograph and the top of the white panel. */
   .hero { padding: 96px 0 0; }
@@ -2425,3 +2532,140 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-lesson.is-locked { opacity: .5; cursor: not-allowed; }
 .pr-lesson.is-locked .pr-lesson__n { background: #d1d5db; color: #6b7280; }
 .pr-lesson.is-done .pr-lesson__n { background: #047857; }
+
+/* ─── My mistakes: the shelf of papers already sat ───
+   A student picks the paper first and the question second, because that is
+   how anyone goes back over a test. The icon carries the skill, so the
+   listening one is findable without reading a word. */
+.pr-pick__h {
+  font-size: 15px; font-weight: 800; color: var(--ink);
+  margin: 26px 0 12px; display: flex; align-items: center; gap: 8px;
+}
+.pr-pick__h:first-child { margin-top: 6px; }
+.pr-papers {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px;
+}
+.pr-paper {
+  position: relative; display: grid; justify-items: center; gap: 6px;
+  padding: 20px 14px 16px; text-align: center; cursor: pointer;
+  background: var(--card); border: 1.5px solid var(--border); border-radius: 16px;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.pr-paper:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--green); }
+.pr-paper__icon {
+  width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center;
+  font-size: 26px; background: #f1f5f9; margin-bottom: 2px;
+}
+.pr-paper.is-listening .pr-paper__icon { background: #e0f2fe; }
+.pr-paper.is-reading   .pr-paper__icon { background: #ede9fe; }
+.pr-paper.is-writing   .pr-paper__icon { background: #fef3c7; }
+.pr-paper.is-tool      .pr-paper__icon { background: #dcfce7; }
+.pr-paper__icon--cover {
+  background: linear-gradient(160deg, var(--racing), #0a5a4c); color: #fff;
+  font-weight: 900; font-size: 19px; letter-spacing: .02em;
+}
+.pr-paper.is-mock .pr-paper__icon--cover { background: linear-gradient(160deg, var(--racing), #0a5a4c); }
+.pr-paper__title { font-weight: 800; font-size: 13.5px; line-height: 1.35; }
+.pr-paper__meta { font-size: 12px; color: var(--ink-3); font-weight: 700; }
+.pr-paper__work { font-size: 11.5px; color: var(--green-dark); font-weight: 700; }
+.pr-paper__tag { position: absolute; top: 10px; right: 10px; }
+.pr-back { display: inline-block; margin-bottom: 4px; }
+
+/* ─── The question strip ───
+   The same row of numbered squares the paper was answered on, in the same
+   place at the foot of the screen — except green and red here mean right and
+   wrong rather than answered and skipped. Tapping one jumps to the question
+   and to the line of the passage that answers it. */
+.pr-boxes {
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  padding: 14px 16px; margin-top: 16px;
+}
+.pr-boxes__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.pr-boxes__head strong { font-size: 14.5px; }
+.pr-boxes__legend { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--ink-3); font-weight: 600; }
+.pr-boxes__legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; margin-left: 8px; }
+.pr-boxes__legend i:first-child { margin-left: 0; }
+.pr-boxes__legend i.is-right { background: var(--green); }
+.pr-boxes__legend i.is-wrong { background: #dc2626; }
+.pr-boxes__legend i.is-blank { background: #fff; border: 1.5px solid #cbd5e1; }
+.pr-boxes__parts { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.pr-boxes__part { display: flex; align-items: center; gap: 8px; }
+.pr-boxes__label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+.pr-boxes__squares { display: flex; flex-wrap: wrap; gap: 4px; }
+.pr-sq {
+  min-width: 26px; height: 26px; padding: 2px 4px; cursor: pointer;
+  border: 2px solid #e2e8f0; border-radius: 5px; background: #fff;
+  color: #475569; font-size: 12.5px; font-weight: 700; line-height: 1;
+}
+.pr-sq.is-right { background: var(--green); border-color: var(--green); color: #fff; }
+.pr-sq.is-wrong { background: #dc2626; border-color: #dc2626; color: #fff; }
+.pr-sq.is-blank { background: #fff; border-color: #cbd5e1; color: #94a3b8; }
+.pr-sq.is-focus { outline: 3px solid #418fc6; outline-offset: 1px; }
+.pr-review__row.is-focus { box-shadow: 0 0 0 2px #418fc6; }
+
+/* ─── Analytics ─── */
+.pr-an__tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 10px; }
+.pr-an__tile {
+  background: #f8fafc; border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 10px; text-align: center;
+}
+.pr-an__tile strong { display: block; font-size: 20px; font-weight: 800; color: var(--ink); line-height: 1.15; }
+.pr-an__tile span { font-size: 11.5px; color: var(--ink-3); font-weight: 600; }
+.pr-an__group { margin-top: 14px; }
+.pr-an__skill {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.4fr; gap: 8px; align-items: center;
+  padding: 9px 4px; border-bottom: 1px solid #f1f5f9; font-size: 12.5px; color: var(--ink-2); font-weight: 600;
+}
+.pr-an__skillname { font-weight: 800; color: var(--ink); text-transform: capitalize; }
+.pr-an__row {
+  display: grid; grid-template-columns: 24px 2fr 0.7fr 0.9fr 1fr 0.6fr; gap: 8px; align-items: center;
+  padding: 8px 4px; border-bottom: 1px solid #f1f5f9; font-size: 12.5px; color: var(--ink-3); font-weight: 600;
+}
+.pr-an__rowtitle { font-weight: 700; color: var(--ink); }
+.pr-an__rowicon { font-size: 15px; }
+.pr-an__trend { display: flex; align-items: flex-end; gap: 10px; height: 150px; padding: 6px 2px 0; overflow-x: auto; }
+.pr-an__point { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; height: 100%; min-width: 34px; }
+.pr-an__col { width: 26px; border-radius: 5px 5px 0 0; background: linear-gradient(180deg, var(--green), #0a5a4c); min-height: 4px; }
+.pr-an__band { font-size: 11.5px; font-weight: 800; color: var(--ink); }
+.pr-an__when { font-size: 12px; }
+.pr-an__foot { font-size: 11.5px; color: var(--ink-3); margin: 8px 0 0; }
+
+/* The writing paper as a page of its own rather than a dialog over one. */
+/* As a page rather than a dialog: no overlay, no panel, and — since it is a
+   flex child of the screen-height paper layout — free to grow into whatever
+   height is left, with the two columns scrolling inside it. */
+.pr-fb--page {
+  position: static; background: none; padding: 0; backdrop-filter: none;
+  display: flex; flex-direction: column; min-height: 0; flex: 1 1 auto;
+}
+.pr-fb--page .pr-fb__panel { max-height: none; box-shadow: none; width: auto; }
+.pr-fb--page .pr-fb__essay { margin-top: 0; }
+.pr-fb--page h4 { font-size: 13px; margin: 16px 0 6px; color: var(--ink-2); }
+
+/* Task 1 / Task 2, in the strip along the foot where a reading paper keeps
+   its numbered boxes. */
+.pr-tasks { display: flex; flex-wrap: wrap; gap: 8px; }
+.pr-tsk {
+  flex: 0 1 220px; text-align: left; padding: 8px 14px; cursor: pointer;
+  background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
+  transition: border-color .15s ease, background .15s ease;
+}
+.pr-tsk:hover { border-color: var(--green); }
+.pr-tsk strong { display: block; font-size: 13.5px; font-weight: 800; color: var(--ink); }
+.pr-tsk span { font-size: 11.5px; font-weight: 600; color: var(--ink-3); }
+.pr-tsk.is-active { border-color: var(--green); background: #f6fbf9; }
+.pr-tsk.is-active strong { color: var(--green); }
+.pr-fb__prompt {
+  background: #f8fafc; border: 1px solid var(--line); border-left: 3px solid var(--green);
+  border-radius: 0 10px 10px 0; padding: 12px 14px; font-size: 13.5px; line-height: 1.65; color: var(--ink);
+}
+.pr-fb__prompt p { margin: 0 0 8px; }
+.pr-fb__prompt p:last-child { margin-bottom: 0; }
+.pr-fb__rubric { font-style: italic; color: var(--ink-3); font-size: 12.5px; }
+.pr-fb__img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .pr-an__row { grid-template-columns: 20px 1.6fr 0.8fr 1fr; }
+  .pr-an__row span:nth-child(5), .pr-an__row span:nth-child(6) { display: none; }
+  .pr-an__skill { grid-template-columns: 1fr 1fr; }
+}

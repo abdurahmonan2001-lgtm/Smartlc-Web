@@ -4,6 +4,37 @@ import { CONTACT } from "../data/site.js";
 import { PhoneIcon, TelegramIcon } from "./Icons.jsx";
 import { AdvCarousel } from "./Sections.jsx";
 
+// ── Ad attribution capture ──────────────────────────────────────────────────
+// Runs once at first page load (module scope, so it fires on the landing page,
+// not just when the visitor reaches the form). Click ids and UTM tags live in
+// the LANDING url — by the time someone navigates to /register they're gone —
+// so they are stashed in sessionStorage and attached to the lead on submit.
+// This is what lets the CRM price a website lead back to the exact ad.
+const ATTR_KEY = "slc_attr";
+try {
+  const q = new URLSearchParams(window.location.search);
+  const found = {};
+  // ad_id/adset_id/campaign_id arrive via Meta's dynamic URL parameters
+  // ({{ad.id}} etc. in the ad's tracking template) — they let the CRM price
+  // a website lead back to the exact ad, same as an instant-form lead.
+  for (const k of ["fbclid", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ad_id", "adset_id", "campaign_id"]) {
+    if (q.get(k)) found[k] = q.get(k);
+  }
+  const prev = JSON.parse(sessionStorage.getItem(ATTR_KEY) || "{}");
+  sessionStorage.setItem(ATTR_KEY, JSON.stringify({
+    // First touch wins: a re-visit without tags must not erase the ad that
+    // actually brought them.
+    ...found, ...prev,
+    landing_page: prev.landing_page || window.location.href,
+    referrer: prev.referrer || document.referrer || "",
+  }));
+} catch { /* storage blocked — the lead still saves, just unattributed */ }
+
+const storedAttr = () => {
+  try { return JSON.parse(sessionStorage.getItem(ATTR_KEY) || "{}"); }
+  catch { return {}; }
+};
+
 /** Formats a 9-digit Uzbek local number as "(XX) XXX-XX-XX" while typing. */
 function formatLocal(digits) {
   const d = digits.slice(0, 9);
@@ -41,6 +72,7 @@ export default function RegisterPage() {
     e.preventDefault();
     if (!valid || state === "sending") return;
     setState("sending");
+    const attr = storedAttr();
     const lead = {
       name: name.trim(),
       age: ageNum,
@@ -48,6 +80,20 @@ export default function RegisterPage() {
       lang,
       page: "register",
       ts: new Date().toISOString(),
+      // Ad attribution — lets the CRM credit this lead to the exact ad.
+      fbclid: attr.fbclid || null,
+      ad_id: attr.ad_id || null,
+      adset_id: attr.adset_id || null,
+      campaign_id: attr.campaign_id || null,
+      utm: {
+        source: attr.utm_source || null,
+        medium: attr.utm_medium || null,
+        campaign: attr.utm_campaign || null,
+        content: attr.utm_content || null,
+        term: attr.utm_term || null,
+      },
+      landing_page: attr.landing_page || null,
+      referrer: attr.referrer || null,
     };
     try {
       // Lead collection endpoint — wired up at deploy time (Vercel function).
@@ -57,6 +103,10 @@ export default function RegisterPage() {
         body: JSON.stringify(lead),
       });
       if (!res.ok) throw new Error(`status ${res.status}`);
+      // Tell the Meta Pixel a lead happened — this is the optimization event
+      // for website-destination ad sets. Guarded: a blocked pixel must never
+      // break the visitor's confirmation.
+      try { window.fbq && window.fbq("track", "Lead"); } catch { /* ignore */ }
       setState("done");
     } catch {
       setState("error");
