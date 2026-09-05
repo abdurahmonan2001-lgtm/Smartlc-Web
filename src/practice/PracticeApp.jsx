@@ -3,11 +3,10 @@ import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
-import AUDIO_CUES from "./audio-cues.json";
-import { norm, isMockResult, fmtTime, buildReview, VocabMatch } from "./review.jsx";
-import Notebook, { useCueAudio, hasCue } from "./Notebook.jsx";
+import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
+import Notebook from "./Notebook.jsx";
+import { PaperReview } from "./PaperReview.jsx";
 import { parentListeningId, chunkParts } from "./upper.js";
-import { markEvidence } from "./evidence.js";
 import InsperaPlayer from "./InsperaPlayer.jsx";
 import { WritingFeedback } from "./WritingFeedback.jsx";
 
@@ -16,25 +15,7 @@ export { WritingFeedback };   // callers still import it from here
 const SESSION_KEY = "slc_practice_user";
 const PENDING_KEY = "slc_practice_pending";
 
-// raw→band conversion (used only for full 40-question tests)
-const BAND_TABLES = {
-  reading: [
-    [39, 9], [37, 8.5], [35, 8], [33, 7.5], [30, 7], [27, 6.5], [23, 6],
-    [19, 5.5], [15, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3],
-  ],
-  listening: [
-    [39, 9], [37, 8.5], [35, 8], [32, 7.5], [30, 7], [26, 6.5], [23, 6],
-    [18, 5.5], [16, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3],
-  ],
-};
-const bandFor = (raw, total, module) => {
-  const table = BAND_TABLES[module];
-  if (total !== 40 || !table) return null;
-  for (const [min, band] of table) if (raw >= min) return band;
-  return 2.5;
-};
-
-// norm/buildReview/etc. live in review.jsx, shared with the notebook.
+// norm/buildReview/bandFor/etc. live in review.jsx, shared with the notebook.
 
 /* ─── Login ─── */
 function Login({ onLogin }) {
@@ -594,9 +575,9 @@ export function MockResultView({ outcome, onBack }) {
             <span className="pr-mockline__mod">{r.module}</span>
             <span className="pr-mockline__time">{fmtTime(r.duration_seconds)}</span>
             {r.raw_score != null
-              ? <span><strong>{r.raw_score}</strong> / {r.total}{r.band ? ` · Band ${r.band.toFixed(1)}` : ""}</span>
+              ? <span><strong>{r.raw_score}</strong> / {r.total}{r.band ? ` · Band ${fmtBand(r.band)}` : ""}</span>
               : r.module === "writing" && marked
-                ? <span><strong>Band {Number(marked.band).toFixed(1)}</strong></span>
+                ? <span><strong>Band {fmtBand(marked.band)}</strong></span>
                 : <span>not marked</span>}
           </div>
         ))}
@@ -621,125 +602,15 @@ export function MockResultView({ outcome, onBack }) {
 }
 
 /* ─── Answer review ───
- * Rebuilt from the test content + the stored answers with the SAME
- * matching rules as scoreTest, so what the review marks right is
- * exactly what scoring counted. Practice papers only: a mock's key is
- * never shown, because a completed mock's answers shared with a
- * classmate who has not sat it yet would unseal the exam.
- */
-
-function AnswerReviewList({ review, testId = null, module = null, onListen = null, playing = null }) {
-  const [onlyWrong, setOnlyWrong] = useState(true);
-  const wrong = review.filter((r) => !r.ok);
-  const shown = onlyWrong ? wrong : review;
-  const sections = [...new Set(shown.map((r) => r.section))];
-  if (!review.length) return null;
-  return (
-    <div className="pr-review">
-      <div className="pr-review__bar">
-        <strong>Your answers · {wrong.length} to work on</strong>
-        {wrong.length > 0 && (
-          <label>
-            <input type="checkbox" checked={onlyWrong} onChange={() => setOnlyWrong(!onlyWrong)} />
-            <span>mistakes only</span>
-          </label>
-        )}
-      </div>
-      {wrong.length === 0 && <p className="pr-review__perfect">Every question correct. Excellent work.</p>}
-      {sections.map((sec) => (
-        <div key={sec}>
-          <div className="pr-review__sec">{sec}</div>
-          {shown.filter((r) => r.section === sec).map((r) => (
-            <div key={r.n} className={`pr-review__row ${r.ok ? "" : "is-wrong"}`}>
-              <span className="pr-review__mark">{r.ok ? "✓" : "✕"}</span>
-              <div className="pr-review__body">
-                <div className="pr-review__q">{r.n}. {r.prompt}</div>
-                {!r.ok && (
-                  <>
-                    <div className="pr-review__ans">
-                      <span className="is-yours">Your answer: <strong>{r.your || "not answered"}</strong></span>
-                      <span className="is-key">Correct: <strong>{r.correct}</strong></span>
-                    </div>
-                    {r.explain && <div className="pr-review__why"><strong>Why:</strong> {r.explain}</div>}
-                    {r.evidence && <div className="pr-review__ev">“{r.evidence}”</div>}
-                    {module === "listening" && onListen && hasCue(testId, r.n) && (
-                      <button type="button" className="pr-listen" onClick={() => onListen(testId, r)}>
-                        {playing === `${testId}:${r.n}` ? "◼ Stop" : "▶ Listen from here"}
-                      </button>
-                    )}
-                  </>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/* ─── The passage, or the recording script, with the answers marked on it ───
+ * The review itself lives in PaperReview.jsx: the source beside the
+ * questions, the answers marked on it, and the strip of numbered boxes
+ * underneath. The notebook shows the same screen, so a paper reads the
+ * same whether it was just handed in or opened again a month later.
  *
- * A student working through mistakes needs to see WHERE the answer was, not
- * just be told what it was. Every question carries the line it came from, and
- * all 4,800 of those were checked against their own source text
- * (scripts/check-evidence.mjs), so every one of these marks lands somewhere.
- *
- * The number on a mark is the question it answers. Two questions answered by
- * the same sentence produce one mark carrying both numbers rather than a
- * nested pair.
+ * Mock papers used to be sealed here so an exam could be re-used across
+ * intakes. Overruled: a student who has sat a paper should be able to
+ * study from it.
  */
-function MarkedText({ text, items, idPrefix }) {
-  const parts = markEvidence(text, items);
-  return parts.map((p, i) => (p.ns.length ? (
-    <mark className="pr-ev" key={i} id={`${idPrefix}-${p.ns[0]}`}>
-      {p.text}
-      <sup>{p.ns.join(", ")}</sup>
-    </mark>
-  ) : <span key={i}>{p.text}</span>));
-}
-
-/** Reading passages or the listening script, section by section, marked up. */
-function SourcePanel({ test, review, testId }) {
-  const isListening = test.module === "listening";
-  const all = isListening ? TRANSCRIPTS[parentListeningId(testId)] : null;
-  const partNums = isListening ? chunkParts(testId) : null;
-  if (isListening && !all) return null;
-
-  const forSection = (secTitle) =>
-    review.filter((r) => r.section === secTitle && r.evidence).map((r) => ({ n: r.n, evidence: r.evidence }));
-
-  return (
-    <div className="pr-source">
-      <div className="pr-source__head">
-        <strong>{isListening ? "What was said" : "The passages"}</strong>
-        <span>Highlighted where each answer comes from, numbered by question.</span>
-      </div>
-      {test.sections.map((sec, i) => {
-        const items = forSection(sec.title);
-        // A chunk paper carries only some of the parent's parts.
-        const lines = isListening ? all[(partNums ? partNums[i] : i + 1) - 1] : null;
-        return (
-          <section className="pr-source__sec" key={sec.title || i}>
-            <div className="pr-review__sec">{sec.title}{sec.passageTitle ? ` — ${sec.passageTitle}` : ""}</div>
-            {isListening
-              ? (lines || []).map((l, j) => (
-                <p key={j} className={`pr-transcript__line is-${l.s}`}>
-                  <span>{l.s === "A" ? "Speaker A" : "Speaker B"}</span>
-                  <MarkedText text={l.t} items={items} idPrefix={`ev-${i}`} />
-                </p>
-              ))
-              : String(sec.passage || "").split(/\n\n+/).map((para, j) => (
-                <p className="pr-source__para" key={j}>
-                  <MarkedText text={para} items={items} idPrefix={`ev-${i}`} />
-                </p>
-              ))}
-          </section>
-        );
-      })}
-    </div>
-  );
-}
 
 /* ─── Transcript: what the speakers said, revealed only after the paper
  * is finished. Kept for papers whose review does not show the source
@@ -763,7 +634,8 @@ function TranscriptPanel({ testId }) {
           <div className="pr-review__sec">Part {n}</div>
           {lines.map((l, j) => (
             <p key={j} className={`pr-transcript__line is-${l.s}`}>
-              <span>{l.s === "A" ? "Speaker A" : "Speaker B"}</span>{l.t}
+              <span className="pr-transcript__who">{l.s === "A" ? "Speaker A" : "Speaker B"}</span>
+              <span className="pr-transcript__said">{l.t}</span>
             </p>
           ))}
         </div>
@@ -780,12 +652,8 @@ export function ResultView({ result, test, onBack }) {
   // for an hour sees it here rather than having to go looking for it.
   const marked = result.marked?.band != null ? result.marked : null;
   const pct = isWriting ? null : Math.round((result.raw_score / result.total) * 100);
-  // Mock papers used to be sealed here so an exam could be re-used across
-  // intakes. Overruled: a student who has sat a paper should be able to study
-  // from it, with the passage or the recording script in front of them.
-  const review = test && !isWriting ? buildReview(test, result.answers) : null;
+  const reviewable = !!test && !isWriting && !!result.answers;
   const time = fmtTime(result.duration_seconds);
-  const { playing, toggle } = useCueAudio();
   return (
     <div className="pr-result">
       <div className="pr-result__card">
@@ -795,7 +663,7 @@ export function ResultView({ result, test, onBack }) {
           marked ? (
             <>
               <div className="pr-result__score">
-                <strong>{Number(marked.band).toFixed(1)}</strong>
+                <strong>{fmtBand(marked.band)}</strong>
                 <span className="pr-result__indic">your band</span>
               </div>
               <p>
@@ -815,7 +683,7 @@ export function ResultView({ result, test, onBack }) {
               <strong>{result.raw_score}</strong> / {result.total}
             </div>
             <p>
-              {pct}% correct{result.band ? ` · Band ${result.band.toFixed(1)}` : ""}
+              {pct}% correct{result.band ? ` · Band ${fmtBand(result.band)}` : ""}
               {time ? ` · ${time} spent` : ""}
             </p>
           </>
@@ -826,16 +694,9 @@ export function ResultView({ result, test, onBack }) {
         </div>
       </div>
       {/* The source on one side, the questions on the other — the same
-          division the reading paper itself uses, so a student marking their
-          mistakes reads the passage the way they read it in the exam. */}
-      {review && (
-        <div className="pr-split">
-          <SourcePanel test={test} review={review} testId={result.test_id} />
-          <AnswerReviewList review={review} testId={result.test_id} module={test.module}
-            onListen={toggle} playing={playing} />
-        </div>
-      )}
-      {review && <VocabMatch review={review} />}
+          division the paper itself uses, so a student marking their mistakes
+          reads it the way they read it in the exam. */}
+      {reviewable && <PaperReview test={test} result={result} />}
       {showFb && marked && (
         <WritingFeedback band={marked.band} feedback={marked.feedback} onClose={() => setShowFb(false)} />
       )}
@@ -884,9 +745,9 @@ function History({ user, onBack, onReview }) {
                     {r.raw_score != null
                       ? ` · ${r.raw_score}/${r.total}`
                       : r.ai_band != null
-                        ? ` · Band ${Number(r.ai_band).toFixed(1)}`
+                        ? ` · Band ${fmtBand(r.ai_band)}`
                         : " · awaiting teacher review"}
-                    {r.band ? ` · Band ${Number(r.band).toFixed(1)}` : ""}
+                    {r.band ? ` · Band ${fmtBand(r.band)}` : ""}
                     {fmtTime(r.duration_seconds) ? ` · ${fmtTime(r.duration_seconds)}` : ""}
                     {r.pending ? " · not synced" : ""}
                   </span>

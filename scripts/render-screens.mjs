@@ -18,6 +18,7 @@ const server = await createServer({ root: ROOT, server: { middlewareMode: true }
 const { MockResultView, ResultView, WritingFeedback } = await server.ssrLoadModule('/src/practice/PracticeApp.jsx')
 const Notebook = (await server.ssrLoadModule('/src/practice/Notebook.jsx')).default
 const { getTest } = await server.ssrLoadModule('/src/practice/content.js')
+const { bandFor } = await server.ssrLoadModule('/src/practice/review.jsx')
 const data = JSON.parse(fs.readFileSync(new URL('./screens-data.json', import.meta.url), 'utf8'))
 
 // A real practice paper, so the review shows genuine questions and genuine
@@ -41,11 +42,17 @@ const sheet = (t, wrong) => {
   }
   for (const n of wrong) a[n] = 'WRONG'
   const total = Object.keys(a).length
-  return { test_id: t.id, raw_score: total - wrong.length, total, band: 7, duration_seconds: 3300, saved: true, answers: a }
+  const raw = total - wrong.length
+  // Converted with the app's own table rather than written by hand, or these
+  // screens can show a band the same score would never earn in the app.
+  return {
+    test_id: t.id, raw_score: raw, total, band: bandFor(raw, total, t.module),
+    duration_seconds: 3300, saved: true, answers: a,
+  }
 }
 
 // A student who has sat a whole mock and one practice paper — enough for the
-// notebook to have something in every tab.
+// notebook to have something on every shelf.
 const user = { username: 'preview', full_name: 'Preview' }
 const notebookRows = [
   { ...sheet(mockR, [1, 4, 14, 21, 27]), student_username: user.username, module: 'reading', taken_at: '2026-08-24T10:00:00Z' },
@@ -57,6 +64,7 @@ const notebookRows = [
     ai_band: data.marked.band, ai_feedback: data.marked.feedback,
   },
 ]
+const notebook = (props) => h(Notebook, { user, findTest: getTest, onBack() {}, rows: notebookRows, ...props })
 
 const h = React.createElement
 const frame = (n, title, note, node) => `
@@ -85,12 +93,18 @@ const body = [
   frame(5, 'A finished mock — listening',
     'The same division for listening: the recording script beside the questions, with the line each answer came from marked and numbered.',
     h(ResultView, { result: sheet(mockL, [3, 15, 31]), test: mockL, onBack() {} })),
-  frame(6, 'My mistakes',
-    'Every question this student has got wrong, from mocks and practice papers alike, each with the reason and the quoted line. The bars show which question types cost them marks. Mocks carry an "Exam" tag — they used to be excluded from here entirely.',
-    h(Notebook, { user, findTest: getTest, onBack() {}, rows: notebookRows, initialMode: 'mistakes' })),
-  frame(7, 'My mistakes — the writing tab',
-    'New. A writing paper has no score and no per-question answers, so it fell out of this notebook completely; the one paper a student most needs to reread was the only one they could not reach from here.',
-    h(Notebook, { user, findTest: getTest, onBack() {}, rows: notebookRows, initialMode: 'writing' })),
+  frame(6, 'My mistakes — the shelf',
+    'Opening the notebook now shows the papers themselves rather than a heap of loose questions. One tile per paper, the icon carrying the skill; a mock is one tile that opens to its three papers, because “my mistakes on Mock 1” is not one paper but three.',
+    notebook({ initialMode: 'mistakes' })),
+  frame(7, 'Analytics',
+    'The second half of the notebook: everything sat, the average band by skill, every paper’s band in the order they were taken, and which question types keep taking the marks.',
+    notebook({ initialMode: 'analytics' })),
+  frame(8, 'One paper, opened from the notebook',
+    'The same screen as straight after the test — how the paper went, the questions beside the passage, and every question as a numbered box underneath. Tapping a box jumps to that question and to the line of the passage that answers it.',
+    notebook({ initialMode: 'mistakes', initialPick: { kind: 'paper', testId: 'pset1-reading' } })),
+  frame(9, 'The writing paper, opened from the notebook',
+    'A writing paper has no score and no per-question answers, so it once fell out of this notebook completely. It is a paper on the shelf like any other now: the task that was set, the essay as it was written, and every mistake marked on it.',
+    notebook({ initialMode: 'mistakes', initialPick: { kind: 'paper', testId: 'mock1-writing' } })),
 ].join('\n')
 
 const css = fs.readFileSync(ROOT + '/src/index.css', 'utf8')

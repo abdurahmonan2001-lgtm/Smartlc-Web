@@ -11,6 +11,43 @@ export const norm = (s) =>
 
 export const isMockResult = (testId) => /^mock\d+-/.test(String(testId));
 
+/* ─── Raw score → band ───
+ * The official IELTS conversion, listening and reading, for a full 40-question
+ * paper. A short paper (a chunked Pre-IELTS set, a single part) gets no band at
+ * all rather than a made-up one: the table only means anything over 40.
+ *
+ * Shared rather than kept in PracticeApp because anything that displays a band
+ * has to agree with the thing that awarded it — including the preview harness,
+ * which used to carry hand-written bands and drifted four whole bands away
+ * from the scores beside them. */
+const BAND_TABLES = {
+  reading: [
+    [39, 9], [37, 8.5], [35, 8], [33, 7.5], [30, 7], [27, 6.5], [23, 6],
+    [19, 5.5], [15, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3],
+  ],
+  listening: [
+    [39, 9], [37, 8.5], [35, 8], [32, 7.5], [30, 7], [26, 6.5], [23, 6],
+    [18, 5.5], [16, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3],
+  ],
+};
+export const bandFor = (raw, total, module) => {
+  const table = BAND_TABLES[module];
+  if (total !== 40 || !table) return null;
+  for (const [min, band] of table) if (raw >= min) return band;
+  return 2.5;
+};
+
+/** A band is a whole mark or a half — 6.6 is not a band anyone can be given.
+ *  Averaging several papers produces such numbers, so the result is rounded
+ *  the way IELTS rounds an overall band: to the nearest half, with .25 and
+ *  .75 going up. (The writing grader floors instead, deliberately: an
+ *  automated mark should not round itself upwards. A listening or reading
+ *  band comes off a fixed table and needs no such caution.) */
+export const halfBand = (n) => (n == null ? null : Math.round(Number(n) * 2) / 2);
+
+/** A band as it is written down: "6.5", "7.0". */
+export const fmtBand = (n) => (n == null ? null : halfBand(n).toFixed(1));
+
 export const fmtTime = (secs) => {
   if (!secs && secs !== 0) return null;
   const m = Math.floor(secs / 60), s = secs % 60;
