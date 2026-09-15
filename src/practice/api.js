@@ -75,7 +75,14 @@ export async function fetchStudentContext(student) {
   const cls = `teacher_username=eq.${encodeURIComponent(teacher_username)}`
     + `&day=eq.${encodeURIComponent(day)}&class_time=eq.${encodeURIComponent(class_time)}`;
 
-  const gRes = await fetch(`${URL_BASE}/rest/v1/groups?${cls}&select=level&limit=1`, { headers });
+  // graduated_at must be null. A graduated group KEEPS its timetable slot
+  // (the CRM frees the slot but keeps the history), so when a new group starts
+  // in that slot the triple matches two rows and `limit=1` — which has no
+  // ORDER BY — would pick either one. Reading the old group's level here is
+  // not a cosmetic bug: a graduated Upper-Intermediate group sitting in the
+  // slot of a new Beginner class would unlock Pre-IELTS papers for beginners.
+  const gRes = await fetch(
+    `${URL_BASE}/rest/v1/groups?${cls}&graduated_at=is.null&select=level&limit=1`, { headers });
   if (!gRes.ok) throw new Error(`group lookup failed: ${gRes.status}`);
   const level = (await gRes.json())[0]?.level ?? null;
 
