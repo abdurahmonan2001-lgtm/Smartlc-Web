@@ -81,7 +81,13 @@ export default async function handler(req, res) {
 
     // Fire-and-forget: a Telegram hiccup must never cost the visitor their
     // confirmation screen.
-    telegramSend([
+    // AWAITED, deliberately. This was fire-and-forget, which on Vercel means
+    // the runtime can freeze the function the moment the response is sent and
+    // kill the request mid-flight — so registration alerts arrived or not
+    // depending on timing, while placement-test alerts (which do await) were
+    // always reliable. A failure is still swallowed below; only the dropped
+    // notifications are fixed here.
+    await telegramSend([
       '🟢 <b>New website registration</b>',
       '',
       `<b>${esc(name)}</b>${age ? `, ${age}` : ''}`,
