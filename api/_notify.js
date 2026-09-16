@@ -24,10 +24,48 @@ const esc = s => String(s ?? '')
   .replace(/</g, '&lt;')
   .replace(/>/g, '&gt;')
 
+// Single source of truth for bot credentials: `ig_agent_config` in Supabase,
+// which the Instagram agent and the admin app already read. This project used
+// to carry its own TELEGRAM_* env vars, which is how website alerts ended up
+// pointing somewhere other than the staff group while placement-test alerts
+// appeared to work — two copies of the same setting, drifting apart unseen.
+// Env vars remain a fallback for local runs.
+let cfgCache = null
+let cfgAt = 0
+
+async function botConfig() {
+  if (cfgCache && Date.now() - cfgAt < 5 * 60 * 1000) return cfgCache
+  const out = {}
+  try {
+    const url = (env('SUPABASE_URL') || env('VITE_SUPABASE_URL')).replace(/\/+$/, '')
+    const key = env('SUPABASE_SERVICE_ROLE_KEY')
+    if (url && key) {
+      const r = await fetch(
+        `${url}/rest/v1/ig_agent_config?key=in.(telegram_bot_token,telegram_chat_id)&select=key,value`,
+        { headers: { apikey: key, Authorization: `Bearer ${key}` } }
+      )
+      if (r.ok) for (const row of await r.json()) out[row.key] = row.value
+    }
+  } catch (e) {
+    console.error('telegram config read failed, falling back to env:', e.message)
+  }
+  cfgCache = {
+    token: out.telegram_bot_token || env('TELEGRAM_BOT_TOKEN'),
+    chats: String(out.telegram_chat_id || env('TELEGRAM_CHAT_ID') || '')
+      .split(',').map(s => s.trim()).filter(Boolean),
+  }
+  cfgAt = Date.now()
+  return cfgCache
+}
+
 export async function telegramSend(html) {
-  const token = env('TELEGRAM_BOT_TOKEN')
-  const chats = env('TELEGRAM_CHAT_ID').split(',').map(s => s.trim()).filter(Boolean)
-  if (!token || !chats.length) return { ok: false, reason: 'not configured' }
+  const { token, chats } = await botConfig()
+  if (!token || !chats.length) {
+    // Used to return silently, which is exactly how missing alerts went
+    // unnoticed: no message, no error, nothing in the logs.
+    console.error('telegram NOT CONFIGURED — no bot token or chat id found in ig_agent_config or env')
+    return { ok: false, reason: 'not configured' }
+  }
 
   const results = await Promise.all(chats.map(async chat_id => {
     try {
