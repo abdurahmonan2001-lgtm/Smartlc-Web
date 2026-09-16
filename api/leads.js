@@ -87,13 +87,23 @@ export default async function handler(req, res) {
     // depending on timing, while placement-test alerts (which do await) were
     // always reliable. A failure is still swallowed below; only the dropped
     // notifications are fixed here.
+    // Which ad produced this registration. Meta's url_tags put the ad's own
+    // name in utm_content ({{ad.name}}), so paid traffic identifies itself
+    // without a lookup; ad_id is the fallback if only the id survived the
+    // journey, and anything else genuinely arrived without an ad.
+    const adLabel = utm.content
+      || (meta.ad_id ? `ID ${meta.ad_id}` : null)
+      || (meta.fbclid ? 'Instagram (nomsiz)' : null)
+
     await telegramSend([
-      '🟢 <b>New website registration</b>',
+      '🟢 <b>Yangi lead — Website</b>',
       '',
-      `<b>${esc(name)}</b>${age ? `, ${age}` : ''}`,
-      `📞 +998 ${digits.replace(/^998/, '')}`,
+      `<b>${esc(name)}</b>${age ? `, ${age} yosh` : ''}`,
+      `+998 ${digits.replace(/^998/, '')}`,
       '',
-      '<i>Open the Admin app → Sales CRM → Inbox to take it.</i>',
+      adLabel ? `Reklama: <code>${esc(adLabel)}</code>` : 'Reklama: <i>organik (reklamasiz)</i>',
+      '',
+      '<i>Admin app → Sales CRM → Inbox da oling.</i>',
     ].join('\n')).catch(() => {})
 
     // Mirror to the office Google Sheet (awaited — serverless freezes after
