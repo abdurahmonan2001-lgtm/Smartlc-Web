@@ -1,4 +1,7 @@
 import { createContext, useContext, useState } from "react";
+import { priceText } from "./price";
+
+const PRICE = priceText(); // 700 000 → 800 000 from 1 Nov 2026
 
 export const LANGS = [
   { code: "en", label: "EN" },
@@ -180,7 +183,7 @@ const dict = {
     },
     pricing: {
       title: "One Reasonable Price",
-      sub: "700 000 so'm a month — whether you're learning General English or preparing for IELTS. Everything included, no hidden extras.",
+      sub: `${PRICE} so'm a month — whether you're learning General English or preparing for IELTS. Everything included, no hidden extras.`,
       perMonth: "per month",
       popular: "Most popular",
       cta: "Register now",
@@ -459,7 +462,7 @@ const dict = {
     },
     pricing: {
       title: "Bitta maqbul narx",
-      sub: "Oyiga 700 000 so'm — umumiy ingliz tili ham, IELTS tayyorgarligi ham. Hammasi narx ichida, yashirin to'lovlar yo'q.",
+      sub: `Oyiga ${PRICE} so'm — umumiy ingliz tili ham, IELTS tayyorgarligi ham. Hammasi narx ichida, yashirin to'lovlar yo'q.`,
       perMonth: "oyiga",
       popular: "Eng ommabop",
       cta: "Ro'yxatdan o'tish",
@@ -738,7 +741,7 @@ const dict = {
     },
     pricing: {
       title: "Одна разумная цена",
-      sub: "700 000 сумов в месяц — и общий английский, и подготовка к IELTS. Всё включено, без скрытых доплат.",
+      sub: `${PRICE} сумов в месяц — и общий английский, и подготовка к IELTS. Всё включено, без скрытых доплат.`,
       perMonth: "в месяц",
       popular: "Самый популярный",
       cta: "Записаться",

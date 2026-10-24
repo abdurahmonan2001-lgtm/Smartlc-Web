@@ -1,3 +1,4 @@
+import { priceText } from "../price";
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "../i18n.jsx";
 import results from "../data/results.json";
@@ -743,7 +744,7 @@ export function LevelCheck() {
   );
 }
 
-const PRICE = "700 000";
+const PRICE = priceText(); // 700 000 → 800 000 from 1 Nov 2026 (src/price.js)
 
 export function Pricing() {
   const { t } = useLang();
