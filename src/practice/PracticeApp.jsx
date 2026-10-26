@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
-import { loginStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
+import { loginStudent, handoffStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
@@ -815,10 +815,37 @@ const LEAVE_WARNING = {
 };
 
 /* ─── Root ─── */
+/* A student who opens a paper from the Student App arrives with a pass after
+ * '#' in the address (#handoff=...). It is read once, when this module loads,
+ * and taken out of the address straight away, so it is not left in the
+ * history or passed on with a copied link. See handoffStudent() in api.js. */
+const takeHandoff = () => {
+  if (typeof window === "undefined") return null;
+  const m = /(?:^#|&)handoff=([^&]+)/.exec(window.location.hash || "");
+  if (!m) return null;
+  try { window.history.replaceState(null, "", window.location.pathname + window.location.search); } catch { /* keep going */ }
+  try { return decodeURIComponent(m[1]); } catch { return null; }
+};
+const HANDOFF_PASS = takeHandoff();
+
 export default function PracticeApp() {
   const [user, setUser] = useState(() => {
     try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; } catch { return null; }
   });
+  // Sent from the app: sign in as the student it names -- replacing whoever
+  // last used this browser -- before anything is shown. A pass that does not
+  // check out falls through to the usual sign-in.
+  const [arriving, setArriving] = useState(() => !!HANDOFF_PASS);
+  useEffect(() => {
+    if (!HANDOFF_PASS) return undefined;
+    let alive = true;
+    handoffStudent(HANDOFF_PASS).then((s) => {
+      if (!alive) return;
+      if (s) login(s);
+      setArriving(false);
+    });
+    return () => { alive = false; };
+  }, []);   // eslint-disable-line react-hooks/exhaustive-deps
   // library | book | player | mock | result | mockresult | history | notebook
   const [view, setView] = useState(() => viewOfPath(window.location.pathname));
   const [section, setSection] = useState("mock");   // which library tab
@@ -944,6 +971,17 @@ export default function PracticeApp() {
   const login = (u) => { localStorage.setItem(SESSION_KEY, JSON.stringify(u)); setUser(u); };
   const logout = () => { localStorage.removeItem(SESSION_KEY); setUser(null); setView({ name: "library" }); };
 
+  if (arriving) {
+    return (
+      <div className="pr-login">
+        <div className="pr-login__card">
+          <img src="/brand/icon-96.png" alt="" width="52" height="52" />
+          <h1>Practice Platform</h1>
+          <p>Signing you in from the Student App…</p>
+        </div>
+      </div>
+    );
+  }
   if (!user) return <Login onLogin={login} />;
 
   if (view.name === "lesson") {

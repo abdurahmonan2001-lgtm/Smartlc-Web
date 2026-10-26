@@ -64,6 +64,36 @@ export async function loginStudent(username, password) {
   };
 }
 
+/** Signs in a student sent here from the Student App, with the pass the app
+ *  put after '#' in the address (its api/practice-handoff.js). The pass is a
+ *  token signed with the database's own secret, so it is sent AS the bearer
+ *  token: a forged or expired one is refused before practice_handoff()
+ *  (migration 044 in the Student App) runs, and a real one gets back the
+ *  student it names -- the same profile loginStudent() returns. Anything
+ *  else returns null and the student signs in by hand, as before. */
+export async function handoffStudent(token) {
+  if (typeof token !== "string" || !/^[\w-]+\.[\w-]+\.[\w-]+$/.test(token)) return null;
+  try {
+    const res = await fetch(`${URL_BASE}/rest/v1/rpc/practice_handoff`, {
+      method: "POST",
+      headers: { apikey: KEY, Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: "{}",
+    });
+    if (!res.ok) return null;
+    const s = await res.json();
+    if (!s || !s.username || (s.status && s.status !== "active")) return null;
+    return {
+      username: s.username,
+      full_name: s.full_name,
+      teacher_username: s.teacher_username,
+      day: s.day,
+      class_time: s.class_time,
+    };
+  } catch {
+    return null;
+  }
+}
+
 /** The group's level and the lesson it has reached — the two facts that
  *  decide what this student is allowed to open. Mirrors the Student App's
  *  fetchLevel: today's lesson if the class has one, else the most recent
