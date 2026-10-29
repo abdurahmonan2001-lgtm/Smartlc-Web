@@ -1,5 +1,42 @@
 [
   {
+    "id": "bekzod",
+    "name": "Bekzod Qudratov",
+    "photo": "/stories/bekzod/1.webp",
+    "gallery": [
+      {
+        "src": "/stories/bekzod/1.webp",
+        "thumb": "/stories/bekzod/thumb/1.webp",
+        "caption": "Hierapolis, Türkiye"
+      },
+      {
+        "src": "/stories/bekzod/2.webp",
+        "thumb": "/stories/bekzod/thumb/2.webp",
+        "caption": "At work"
+      }
+    ],
+    "chips": [
+      "IELTS 5.5",
+      "🏡 Provides for the family",
+      "💪 Effort over scores"
+    ],
+    "title": {
+      "en": "I never got a high IELTS score — and still reached everything I aimed for",
+      "uz": "IELTSdan yuqori ball olmadim — baribir ko'zlagan narsalarimga erishdim",
+      "ru": "Я не получил высокий балл IELTS — и всё равно добился всего, к чему шёл"
+    },
+    "story": {
+      "en": "With what I learned from Abdurahmon ustoz I have reached a great many things — I have been able to build the life I wanted for myself and for my family. Thanks be to God.\n\nI did not get a high IELTS score. Mine was 5.5. But I learned that it all comes down to the person: without effort, and without your family's blessing behind you, you reach nothing at all.\n\nSo whatever your circumstances, learn English — you can rise to high things from wherever you are standing. That is what I tell everybody.",
+      "uz": "Abdurahmon ustozdan olgan bilimlarim orqali juda ko'p natijalarga erishib kelyapman — o'zimga va oilamga o'zim xohlagan sharoitni qilib kelyapman. Xudoga shukur.\n\nIELTSdan yuqori ball olmagan bo'lsam ham (5.5), hammasi odamning o'ziga bog'liq ekan: harakat qilmasa, uydagilardan duo olmasa, hech narsaga erishib bo'lmas ekan.\n\nShuning uchun qanday sharoitda bo'lishingizdan qat'i nazar ingliz tilini o'rganing — turgan joyingizdan ham yuqori yutuqlarga chiqa olar ekansiz. Buni hammaga maslahat beraman.",
+      "ru": "Благодаря знаниям, полученным у Абдурахмона устоза, я добился очень многого — смог создать те условия, которые хотел для себя и для своей семьи. Слава Богу.\n\nВысокий балл по IELTS я не получил — у меня 5.5. Но я понял, что всё зависит от самого человека: без усилий и без благословения родных не добьёшься ничего.\n\nПоэтому, в каких бы обстоятельствах вы ни были, учите английский — подняться высоко можно с любого места. Это я советую всем."
+    },
+    "quote": {
+      "en": "Abdurahmon aka — best of the best Ustoz.",
+      "uz": "Abdurahmon aka — best of the best Ustoz.",
+      "ru": "Абдурахмон ака — best of the best Ustoz."
+    }
+  },
+  {
     "id": "azizbek",
     "name": "Azizbek",
     "photo": "/stories/azizbek.webp",
@@ -382,6 +419,58 @@
       "en": "I studied with him for only four months — but in that time I improved in all four skills.",
       "uz": "U kishi bilan atigi to'rt oy shug'ullandim, lekin shu vaqtda to'rtala ko'nikmam ham o'sdi.",
       "ru": "Я занимался у него всего четыре месяца — но за это время вырос по всем четырём навыкам."
+    }
+  },
+  {
+    "id": "dilsevar",
+    "name": "Dilsevar",
+    "photo": null,
+    "draft": true,
+    "chips": [
+      "🎓 University place",
+      "✈️ Travel",
+      "📚 Researches in English"
+    ],
+    "title": {
+      "en": "A professor months from retirement taught me why English is worth it",
+      "uz": "Pensiyaga oz qolgan domla menga ingliz tili nega kerakligini o'rgatdi",
+      "ru": "Преподаватель за месяцы до пенсии объяснил мне, зачем нужен английский"
+    },
+    "story": {
+      "en": "Learning English was one of the best decisions of my life. It is the reason I won my university place, and later, when I travelled, it helped me enormously — I could talk to all kinds of people easily and understand whatever I needed to.\n\nIn my first year we were taught by a professor of about sixty. Every time I saw him in his free time, he was sitting and studying English. One day I asked: \"Professor, you retire soon — what do you need English for?\" He said: \"I love my subject very much. But there isn't enough material in it in Uzbek. In English there is a great deal that is good and useful. That is why I am learning English.\"\n\nFrom that day on, I have looked for information only in English.",
+      "uz": "Ingliz tilini o'rganish hayotimdagi eng to'g'ri qarorlardan biri bo'ldi. Aynan shu til sababli o'qishga kirish imkoniyatiga ega bo'ldim. Keyinchalik sayohatga borganimda ham ingliz tili menga juda katta yordam berdi — turli insonlar bilan bemalol muloqot qildim, kerakli ma'lumotlarni oson tushundim.\n\n1-kursligimda bizga 60 yoshlar atrofidagi bir domla dars berardilar. Har safar qarasam, bo'sh vaqtlarida ingliz tilini o'rganib o'tirgan bo'lardilar. Bir kuni: \"Domla, yaqinda pensiyaga chiqasiz, sizga ingliz tili nega kerak?\" deb so'radim. Shunda domla: \"Men o'z fanimni juda yaxshi ko'raman. Lekin bu sohada o'zbek tilida yetarli ma'lumot yo'q. Ingliz tilida esa juda ko'p sifatli va foydali manbalar bor. Shuning uchun ingliz tilini o'rganyapman\", dedilar.\n\nO'sha kundan boshlab men ham ma'lumotlarni faqat ingliz tilida qidiradigan bo'ldim.",
+      "ru": "Изучение английского стало одним из лучших решений в моей жизни. Именно благодаря этому языку у меня появилась возможность поступить. Позже, в поездках, английский тоже очень помогал — я свободно общалась с самыми разными людьми и легко понимала всё, что было нужно.\n\nНа первом курсе у нас преподавал профессор лет шестидесяти. Каждый раз, когда я его видела, в свободное время он сидел и учил английский. Однажды я спросила: «Профессор, вы скоро на пенсию — зачем вам английский?» Он ответил: «Я очень люблю свой предмет. Но на узбекском по нему недостаточно материалов. А на английском есть много качественного и полезного. Поэтому я и учу английский».\n\nС того дня я ищу информацию только на английском."
+    },
+    "quote": {
+      "en": "\"I love my subject. But there isn't enough material in Uzbek — in English there is a great deal. That is why I am learning it.\"",
+      "uz": "\"Men o'z fanimni juda yaxshi ko'raman. Lekin o'zbek tilida yetarli ma'lumot yo'q — ingliz tilida esa juda ko'p. Shuning uchun o'rganyapman.\"",
+      "ru": "«Я очень люблю свой предмет. Но на узбекском материалов недостаточно — а на английском их много. Поэтому и учу»."
+    }
+  },
+  {
+    "id": "unnamed-teacher",
+    "name": "TODO — author not confirmed",
+    "photo": null,
+    "draft": true,
+    "chips": [
+      "🎓 University",
+      "IELTS preparation",
+      "🧑‍🏫 Now teaches English"
+    ],
+    "title": {
+      "en": "English didn't change how I speak — it changed what I could imagine",
+      "uz": "Ingliz tili gapirishimni emas — nimani tasavvur qila olishimni o'zgartirdi",
+      "ru": "Английский изменил не то, как я говорю, — а то, что я мог представить"
+    },
+    "story": {
+      "en": "At first English was simply a subject I wanted to improve. Over time I realised I was not just learning a language — I was opening the door to a completely new world. It became an essential part of my university education and made me feel at ease in international rooms.\n\nThe biggest change was confidence. There was a time when speaking English with other people felt intimidating; the more I practised, the more natural it became. Preparing for IELTS taught me something beyond vocabulary and grammar — discipline, patience, and that improvement does not happen overnight. There were moments when progress felt slow. Sometimes you simply have to keep going.\n\nLater English stopped being something I studied and became something I could share. I started teaching, and helping other students towards their own goals has been the most meaningful part of the journey: the language that once opened doors for me now helps me open them for other people.",
+      "uz": "Boshida ingliz tili men yaxshilamoqchi bo'lgan oddiy bir fan edi. Vaqt o'tib angladim: men shunchaki til o'rganayotganim yo'q — butunlay yangi dunyoga eshik ochayotgan ekanman. U universitetdagi ta'limimning ajralmas qismiga aylandi va xalqaro muhitda o'zimni erkin his qilishga yordam berdi.\n\nEng katta o'zgarish — ishonch. Bir vaqtlar boshqalar bilan ingliz tilida gapirish qo'rqinchli tuyulardi; qancha ko'p mashq qilsam, shuncha tabiiy bo'lib bordi. IELTSga tayyorgarlik menga so'z va grammatikadan ko'ra ko'proq narsani o'rgatdi: intizom, sabr va o'sish bir kechada bo'lmasligini. Sekin ketayotgandek tuyulgan paytlar ham bo'ldi. Ba'zan shunchaki davom etaverish kerak.\n\nKeyinchalik ingliz tili men o'rganadigan narsa bo'lishdan to'xtab, men ulasha oladigan narsaga aylandi. Dars bera boshladim va bu — yo'limning eng ma'noli qismi: bir vaqtlar menga eshik ochgan til endi boshqalarga eshik ochishimga yordam beryapti.",
+      "ru": "Сначала английский был просто предметом, который я хотел подтянуть. Со временем я понял, что учу не язык — я открываю дверь в совершенно новый мир. Он стал неотъемлемой частью моего университетского образования и помог чувствовать себя уверенно в международной среде.\n\nСамым большим изменением стала уверенность. Было время, когда говорить по-английски с другими было страшно; чем больше я практиковался, тем естественнее это становилось. Подготовка к IELTS научила меня большему, чем слова и грамматика: дисциплине, терпению и тому, что прогресс не приходит за одну ночь. Бывали моменты, когда казалось, что движение слишком медленное. Иногда нужно просто продолжать.\n\nПозже английский перестал быть тем, что я изучаю, и стал тем, чем я могу делиться. Я начал преподавать — и это самая значимая часть пути: язык, который когда-то открыл двери мне, теперь помогает открывать их другим."
+    },
+    "quote": {
+      "en": "Do not learn English only because you need an IELTS certificate. Learn it because there is an entire world waiting for you beyond your current limits.",
+      "uz": "Ingliz tilini faqat IELTS sertifikati kerak bo'lgani uchun o'rganmang. Uni o'rganing, chunki hozirgi chegaralaringiz ortida sizni butun bir dunyo kutyapti.",
+      "ru": "Не учите английский только ради сертификата IELTS. Учите его потому, что за вашими нынешними границами вас ждёт целый мир."
     }
   }
 ]
