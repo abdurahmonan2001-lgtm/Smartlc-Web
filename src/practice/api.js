@@ -96,8 +96,12 @@ export async function handoffStudent(token) {
 
 /** The group's level and the lesson it has reached — the two facts that
  *  decide what this student is allowed to open. Mirrors the Student App's
- *  fetchLevel: today's lesson if the class has one, else the most recent
- *  one on or before today. Throws so the caller can tell "not allowed"
+ *  Homework tab: today's lesson counts only once its class has started;
+ *  before that, the class is still on the previous lesson. The lesson row
+ *  exists from the morning, and opening its papers then had students sit
+ *  the NEXT lesson's homework before class, while the mentor's check-in and
+ *  the parents' SMS (which look at the previous lesson) said "not done".
+ *  Times are Tashkent's. Throws so the caller can tell "not allowed"
  *  apart from "could not check", which must not silently unlock anything. */
 export async function fetchStudentContext(student) {
   const { teacher_username, day, class_time } = student || {};
@@ -116,13 +120,17 @@ export async function fetchStudentContext(student) {
   if (!gRes.ok) throw new Error(`group lookup failed: ${gRes.status}`);
   const level = (await gRes.json())[0]?.level ?? null;
 
-  const d = new Date();
-  const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  // Tashkent is UTC+5 all year.
+  const now = new Date(Date.now() + 5 * 3600e3).toISOString();
+  const today = now.slice(0, 10), clock = now.slice(11, 16);
   const lRes = await fetch(
     `${URL_BASE}/rest/v1/lessons?${cls}&lesson_date=lte.${today}`
-    + "&select=lesson_number&order=lesson_date.desc&limit=1", { headers });
+    + "&select=lesson_number,lesson_date,class_time&order=lesson_date.desc&limit=2", { headers });
   if (!lRes.ok) throw new Error(`lesson lookup failed: ${lRes.status}`);
-  const lessonNum = (await lRes.json())[0]?.lesson_number ?? 1;
+  const rows = await lRes.json();
+  const startsAt = (rows[0]?.class_time || class_time || "").slice(0, 5).padStart(5, "0");
+  const notYet = rows[0]?.lesson_date === today && /^\d\d:\d\d$/.test(startsAt) && clock < startsAt;
+  const lessonNum = (notYet ? rows[1] : rows[0])?.lesson_number ?? 1;
 
   return { level, lessonNum };
 }
