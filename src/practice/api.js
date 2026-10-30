@@ -12,11 +12,55 @@ const env = (v) => String(v ?? "").replace(/[^\x21-\x7e]/g, "");
 const URL_BASE = env(import.meta.env.VITE_SUPABASE_URL);
 const KEY = env(import.meta.env.VITE_SUPABASE_ANON_KEY);
 
-const headers = {
+// Only the sign-in calls go out on the anon key alone.
+const anonHeaders = {
   apikey: KEY,
   Authorization: `Bearer ${KEY}`,
   "Content-Type": "application/json",
 };
+
+/* The student's token (security review, 30 Oct 2026). The database is being
+ * closed to the public anon key, so every read and save here carries the
+ * same 7-day student token the Student App uses, minted by the Student App's
+ * /api/token -- from the password at sign-in, or from the pass a student
+ * arrives with. This site has no signing secret of its own. A session whose
+ * token has run out is a signed-out session (PracticeApp checks hasSession()
+ * on load): nothing renews it, because the password is never kept here. */
+const STUDENT_API = env(import.meta.env.VITE_STUDENT_API) || "https://student-app-smartlc.vercel.app";
+const TOKEN_KEY = "slc_practice_jwt";
+
+function sessionToken() {
+  try {
+    const t = localStorage.getItem(TOKEN_KEY);
+    if (!t) return null;
+    const b = t.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
+    const { exp } = JSON.parse(atob(b));
+    // Less than a minute left counts as gone: it would die in flight.
+    if (typeof exp === "number" && exp * 1000 - Date.now() > 60_000) return t;
+  } catch { /* unreadable: unusable */ }
+  try { localStorage.removeItem(TOKEN_KEY); } catch { /* private mode */ }
+  return null;
+}
+export const hasSession = () => !!sessionToken();
+export const endSession = () => { try { localStorage.removeItem(TOKEN_KEY); } catch { /* private mode */ } };
+
+const authHeaders = () => ({ ...anonHeaders, Authorization: `Bearer ${sessionToken() || KEY}` });
+
+async function fetchToken(body) {
+  try {
+    const res = await fetch(`${STUDENT_API}/api/token`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok || !j.token) return false;
+    localStorage.setItem(TOKEN_KEY, j.token);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 /** Signs a student in through student_login(), which compares a bcrypt hash
  *  held in a table the public key cannot read and returns the student row
@@ -37,7 +81,7 @@ const headers = {
 export async function loginStudent(username, password) {
   const rpc = await fetch(`${URL_BASE}/rest/v1/rpc/student_login`, {
     method: "POST",
-    headers,
+    headers: anonHeaders,
     body: JSON.stringify({ p_username: username, p_password: password }),
   });
 
@@ -48,13 +92,15 @@ export async function loginStudent(username, password) {
     const q = `${URL_BASE}/rest/v1/students?username=eq.${encodeURIComponent(username)}`
       + `&password=eq.${encodeURIComponent(password)}`
       + "&select=username,full_name,status,teacher_username,day,class_time";
-    const res = await fetch(q, { headers });
+    const res = await fetch(q, { headers: anonHeaders });
     if (!res.ok) throw new Error(`login failed: ${res.status}`);
     s = (await res.json())[0] ?? null;
   }
 
   if (!s) return null;
   if (s.status && s.status !== "active") return null;
+  // Without a token nothing below would load, so it is part of signing in.
+  if (!(await fetchToken({ username, password }))) throw new Error("no student token from /api/token");
   return {
     username: s.username,
     full_name: s.full_name,
@@ -82,6 +128,8 @@ export async function handoffStudent(token) {
     if (!res.ok) return null;
     const s = await res.json();
     if (!s || !s.username || (s.status && s.status !== "active")) return null;
+    // The pass lives ten minutes; swap it for a session token.
+    if (!(await fetchToken({ handoff: token }))) return null;
     return {
       username: s.username,
       full_name: s.full_name,
@@ -116,7 +164,7 @@ export async function fetchStudentContext(student) {
   // not a cosmetic bug: a graduated Upper-Intermediate group sitting in the
   // slot of a new Beginner class would unlock Pre-IELTS papers for beginners.
   const gRes = await fetch(
-    `${URL_BASE}/rest/v1/groups?${cls}&graduated_at=is.null&select=level&limit=1`, { headers });
+    `${URL_BASE}/rest/v1/groups?${cls}&graduated_at=is.null&select=level&limit=1`, { headers: authHeaders() });
   if (!gRes.ok) throw new Error(`group lookup failed: ${gRes.status}`);
   const level = (await gRes.json())[0]?.level ?? null;
 
@@ -125,7 +173,7 @@ export async function fetchStudentContext(student) {
   const today = now.slice(0, 10), clock = now.slice(11, 16);
   const lRes = await fetch(
     `${URL_BASE}/rest/v1/lessons?${cls}&lesson_date=lte.${today}`
-    + "&select=lesson_number,lesson_date,class_time&order=lesson_date.desc&limit=2", { headers });
+    + "&select=lesson_number,lesson_date,class_time&order=lesson_date.desc&limit=2", { headers: authHeaders() });
   if (!lRes.ok) throw new Error(`lesson lookup failed: ${lRes.status}`);
   const rows = await lRes.json();
   const startsAt = (rows[0]?.class_time || class_time || "").slice(0, 5).padStart(5, "0");
@@ -139,7 +187,7 @@ export async function fetchStudentContext(student) {
 export async function saveResult(result) {
   const res = await fetch(`${URL_BASE}/rest/v1/practice_results`, {
     method: "POST",
-    headers: { ...headers, Prefer: "return=minimal" },
+    headers: { ...authHeaders(), Prefer: "return=minimal" },
     body: JSON.stringify(result),
   });
   return res.ok;
@@ -152,7 +200,7 @@ export async function saveReview(review) {
   try {
     const res = await fetch(`${URL_BASE}/rest/v1/practice_reviews`, {
       method: "POST",
-      headers: { ...headers, Prefer: "return=minimal" },
+      headers: { ...authHeaders(), Prefer: "return=minimal" },
       body: JSON.stringify(review),
     });
     if (!res.ok) console.warn("[practice] review not saved:", res.status);
@@ -168,7 +216,7 @@ export async function saveReview(review) {
 export async function fetchRemoteTests() {
   try {
     const q = `${URL_BASE}/rest/v1/practice_tests?status=eq.active&select=id,title,book_title,module,duration_min,sections&order=title.asc`;
-    const res = await fetch(q, { headers });
+    const res = await fetch(q, { headers: authHeaders() });
     if (!res.ok) return [];
     const rows = await res.json();
     return rows.map((r) => ({
@@ -211,7 +259,7 @@ export async function gradeMockWriting(username, testId, tasks) {
 
 export async function fetchResults(username) {
   const q = `${URL_BASE}/rest/v1/practice_results?student_username=eq.${encodeURIComponent(username)}&order=taken_at.desc&limit=50`;
-  const res = await fetch(q, { headers });
+  const res = await fetch(q, { headers: authHeaders() });
   if (!res.ok) return null;
   return res.json();
 }
