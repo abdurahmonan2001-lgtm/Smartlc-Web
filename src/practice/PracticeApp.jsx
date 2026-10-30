@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
-import { loginStudent, handoffStudent, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
+import { loginStudent, handoffStudent, hasSession, endSession, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
@@ -829,8 +829,13 @@ const takeHandoff = () => {
 const HANDOFF_PASS = takeHandoff();
 
 export default function PracticeApp() {
+  // A saved student without a live token is signed out: the database answers
+  // only to the token (api.js), so the session would show nothing.
   const [user, setUser] = useState(() => {
-    try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; } catch { return null; }
+    try {
+      if (!hasSession()) { localStorage.removeItem(SESSION_KEY); return null; }
+      return JSON.parse(localStorage.getItem(SESSION_KEY)) || null;
+    } catch { return null; }
   });
   // Sent from the app: sign in as the student it names -- replacing whoever
   // last used this browser -- before anything is shown. A pass that does not
@@ -857,8 +862,8 @@ export default function PracticeApp() {
   const [completedMocks, setCompletedMocks] = useState(() => new Set());
   const [takenPractice, setTakenPractice] = useState(() => new Set());
 
-  const loadRemote = () => { fetchRemoteTests().then(setRemote); };
-  useEffect(loadRemote, []);
+  // Uploaded papers are read with the student's token, so after sign-in.
+  useEffect(() => { if (user) fetchRemoteTests().then(setRemote); }, [user?.username]);   // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!user) return;
@@ -969,7 +974,7 @@ export default function PracticeApp() {
   }, [view]);   // eslint-disable-line react-hooks/exhaustive-deps
 
   const login = (u) => { localStorage.setItem(SESSION_KEY, JSON.stringify(u)); setUser(u); };
-  const logout = () => { localStorage.removeItem(SESSION_KEY); setUser(null); setView({ name: "library" }); };
+  const logout = () => { localStorage.removeItem(SESSION_KEY); endSession(); setUser(null); setView({ name: "library" }); };
 
   if (arriving) {
     return (
