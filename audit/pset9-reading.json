@@ -1,0 +1,28 @@
+{
+  "id": "pset9-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built Academic Reading paper: three original passages of 888, 935 and 941 words (pencil history, repair cafes, the cost of interruptions), with difficulty rising from a factual history to an argued psychology text. Keys were sound; the main faults were two pairs of Yes/No/Not Given questions printed out of passage order, plus several broken or weak paraphrase pairs. All of these are now fixed.",
+  "strengths": [
+    "Passage lengths and register match Cambridge Academic texts; passage 3 has C1 argument structure (concession, rebuttal, 'Nor will any single fix...').",
+    "Good mix of question types: note completion, T/F/NG, matching information, summary completion, matching people, MCQ, Y/N/NG and sentence endings.",
+    "NOT GIVEN items (Q9, Q13, Q33) are genuinely unaddressed rather than contradicted; FALSE items (Q7, Q11) are clearly contradicted.",
+    "MCQ distractors reuse the passage's own words (Q27 A/C, Q29 D), which is the real IELTS trap.",
+    "Matching people has one unused name (Nkemdirim), as the real test does."
+  ],
+  "issues": [
+    { "q": 31, "severity": "medium", "problem": "Y/N/NG Q31 and Q32 were out of passage order: Q32's evidence ('running on reduced capacity') comes before Q31's ('Self-assessment in this area is poor').", "fixed": true, "change": "Swapped the two statements (with their keys, explain, evidence, vocab) so Q31 = 'Concentration returns to its full level...' (NO) and Q32 = 'People generally underestimate...' (YES)." },
+    { "q": 34, "severity": "medium", "problem": "Y/N/NG Q34 and Q35 were out of passage order: 'prevents a week of work in the wrong direction' comes before 'Nor will any single fix do the job' in the last paragraph.", "fixed": true, "change": "Swapped them: Q34 = 'Certain interruptions prevent more serious mistakes' (YES), Q35 = 'Switching off notifications is enough on its own...' (NO). Y/N/NG keys now run NO, YES, NG, YES, NO." },
+    { "q": 35, "severity": "low", "problem": "Paraphrase pair 'no single fix will do the job' is not in the passage (the text says 'Nor will any single fix do the job').", "fixed": true, "change": "Pair is now ['Nor will any single fix do the job', 'is enough on its own']." },
+    { "q": 27, "severity": "low", "problem": "Paraphrase pair text side 'the seconds are trivial' not in the passage.", "fixed": true, "change": "Pair is now ['The seconds spent on the interruption', 'the time the interruption itself occupies']." },
+    { "q": 30, "severity": "low", "problem": "Paraphrase pair text side 'engineered to defeat it' not in the passage.", "fixed": true, "change": "Pair is now ['engineered, quite deliberately, to defeat it', 'built to overcome them']." },
+    { "q": 25, "severity": "low", "problem": "Paraphrase pair question side 'changes the behaviour of designers' was not in the question.", "fixed": true, "change": "Pair is now ['manufacturers respond by redesigning the products', 'changes the behaviour of both buyers and designers']." },
+    { "q": 26, "severity": "low", "problem": "Explain said the sessions produce 'confidence and skill'; the passage says 'competence is handed round rather than bought'.", "fixed": true, "change": "Explain now quotes the passage's wording." },
+    { "q": 16, "severity": "low", "problem": "Pair 'oblige makers' / 'manufacturers are obliged' was the same word, not a paraphrase.", "fixed": true, "change": "Pair is now ['European rules', 'new laws']." },
+    { "q": 28, "severity": "low", "problem": "Pair 'a higher tempo' / 'completed sooner' did not quite match (tempo is speed of work, not finishing sooner).", "fixed": true, "change": "Pair is now ['They kept the deadline by spending themselves', 'completed sooner but at a cost to the worker']." },
+    { "q": 40, "severity": "low", "problem": "Pair 'built again from nothing' / 'rebuilt from nothing' taught little; the real paraphrase is in the verb.", "fixed": true, "change": "Pair is now ['collapses the number of occasions', 'reduces the number of times']." },
+    { "q": 28, "severity": "low", "problem": "Option C ('judged less accurate') is partly supported by the later sentence on mistakes in laboratory tasks. D is clearly the better answer because the stem names the studies that compared interrupted with uninterrupted work, but a strong student may hesitate.", "fixed": false, "change": "Suggest changing C to 'C left unfinished more often than uninterrupted tasks' if the owner wants it watertight." },
+    { "q": 5, "severity": "low", "problem": "No paraphrase pair: the gap sentence reuses the passage's words ('cut from', 'cedar', 'United States').", "fixed": false, "change": "Left vocab off. Q13 and Q33 (NOT GIVEN items with no matching text) also have no pair." }
+  ],
+  "paraphrasePairs": { "before": 35, "after": 37 }
+}

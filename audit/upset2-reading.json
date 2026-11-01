@@ -1,0 +1,20 @@
+{
+  "id": "upset2-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good passages of IELTS length (839 / 873 / 859 words) on skyscrapers, insect farming and why we forget names. The question types are well chosen and difficulty rises properly. Two problems were fixed: two True/False/Not Given items were out of passage order, and two gaps in the word-box summary each had two correct words. The texts are clear and well signposted, which makes the paper a little easier than real IELTS, as it should be for B2 students.",
+  "strengths": [
+    "Academic magazine register and a clear rise in difficulty; passage 3 has C1 vocabulary (arbitrary, asymmetry, elaboration, counter-intuitive).",
+    "Varied IELTS question types: sentence completion, TRUE/FALSE/NOT GIVEN, matching information, summary completion, matching people with one extra name, MCQ, YES/NO/NOT GIVEN and summary completion from a word box.",
+    "FALSE/NO items are clearly contradicted (e.g. 'set no limit on height') and NOT GIVEN items are genuinely unaddressed.",
+    "MCQ distractors use passage details (the photograph, older people) that do not answer the question."
+  ],
+  "issues": [
+    { "q": 11, "severity": "medium", "problem": "Q11 (Empire State Building, end of paragraph 6) came before Q12 (the 1916 law, start of paragraph 6), so the TFNG items were not in passage order.", "fixed": true, "change": "Swapped the two statements: Q11 is now the 1916 law (FALSE) and Q12 the Empire State Building (TRUE). Answer pattern T F NG F T F." },
+    { "q": 37, "severity": "high", "problem": "'carry almost no {{37}}' could be completed with 'meaning' (key) or 'connections'. Both are supported by the passage ('by convention rather than by meaning'; 'Ordinary words are held in place by their many links').", "fixed": true, "change": "Summary line now reads 'arbitrary {{36}}, attached to their owners by custom rather than by {{37}}', which only 'meaning' fits." },
+    { "q": 40, "severity": "high", "problem": "'giving a name new {{40}}' fitted both 'connections' (key) and 'meaning'. Question 35 itself says such techniques 'give a name meaning'.", "fixed": true, "change": "Summary line now reads 'turning a name into a picture that gives it {{40}} with other knowledge', which only 'connections' fits grammatically." },
+    { "q": 6, "severity": "low", "problem": "Paraphrase pair used 'streets', but the prompt says 'street level'.", "fixed": true, "change": "Pair is now ['the pavements below', 'street level']." },
+    { "q": 1, "severity": "low", "problem": "Several passage 1 gaps repeat passage wording around the answer ('diagonal bracing', 'great fire'), so Questions 1–7 are easier than real IELTS sentence completion.", "fixed": false, "change": "For extra challenge, paraphrase the prompts, e.g. Q5 'Cross-pieces were fitted between columns so tall frames would resist the ______'." }
+  ],
+  "paraphrasePairs": { "before": 14, "after": 37 }
+}

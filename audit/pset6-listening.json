@@ -1,0 +1,21 @@
+{
+  "id": "pset6-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "One of the stronger listening papers: realistic settings, long scripts (Part 3 is 928 words), and real traps everywhere. No answer keys were wrong. Many of the existing paraphrase pairs were broken (phrases not in the script, or question words the student never sees) and have been corrected or removed.",
+  "strengths": [
+    "Part 1 has a correction or distractor on almost every gap (25/27 Wells Road, van driver/chef, licence/passport, Wednesday/Thursday, 8.30/8.45, prescriptions/list, letters/text).",
+    "Part 2 MCQs each name two plausible wrong answers and dismiss them as 'expected' or 'a hope', so students must listen for the speaker's real emphasis.",
+    "Part 3 is a long, natural academic discussion; MCQs and multi-select items require tracking several rejected options (geese, herons, swifts; telescope, sheets, third observer).",
+    "Part 4 notes are well paraphrased and in order; answers are single concrete nouns."
+  ],
+  "issues": [
+    { "q": 14, "severity": "medium", "problem": "Pair text side 'every single space taken' not in the script ('every single space already taken').", "fixed": true, "change": "Pair now ['every single space already taken', 'the lack of space at the stands']." },
+    { "q": 16, "severity": "medium", "problem": "Pair text side 'holds half that number' not in the script ('holds even half that number').", "fixed": true, "change": "Pair now ['We keep forty bikes there', 'has more bikes than any other stand']." },
+    { "q": 29, "severity": "medium", "problem": "Pair text side 'apply in writing' not in the script ('apply to the reserve in writing').", "fixed": true, "change": "Pair now ['apply to the reserve in writing', 'apply for a permit']." },
+    { "q": 21, "severity": "medium", "problem": "Pair question side 'a tutor's comment' is not in the options ('a comment made by their tutor'); Q25 'threat to accuracy' likewise not in the prompt.", "fixed": true, "change": "Q21 now ['She said in the very first tutorial', 'a comment made by their tutor']; Q25 now ['Counting the same birds twice', 'recording the same birds more than once']." },
+    { "q": 7, "severity": "low", "problem": "Pairs on Q7 ('8.45') and Q10 ('sent by text') used the answer, which the student never sees; Q28 pair ('separate them by call' / 'write up') was not a paraphrase; Q3 used the distractor 'used to drive' for 'Occupation'.", "fixed": true, "change": "Removed the Q7, Q10 and Q28 pairs; Q3 now ['what you do for a living', 'Occupation']; also tightened Q12, Q18, Q19, Q23, Q24, Q26 and Q37." },
+    { "q": 39, "severity": "low", "problem": "Part 4 notes 31, 34, 36 and 39 repeat the lecture word for word ('a piece of green ... thrown on a fire', 'each shell is lit by an electric').", "fixed": false, "change": "Reword in a future edit, e.g. 39 'every shell is ignited electrically, using a ______'." }
+  ],
+  "paraphrasePairs": { "before": 29, "after": 28 }
+}

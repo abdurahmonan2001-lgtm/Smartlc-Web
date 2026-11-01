@@ -56,7 +56,7 @@ B — The electric car's appeal to city drivers was easy to state. It started at
 
 C — What destroyed this promising machine was less a single failure than a squeeze from several directions at once. In 1908 Henry Ford launched the Model T, and once his moving assembly line was running its price fell year after year, until a petrol car cost a fraction of the price of an electric one. New oilfields in Texas kept petrol cheap, while electricity remained, outside the big cities, a luxury: most rural American homes had no supply at all, so a touring driver could not have recharged even if he had wanted to. Then, in 1912, the engineer Charles Kettering perfected an electric starter for petrol engines, and the dangerous crank disappeared — taking with it the electric car's most persuasive selling point. Petrol cars could now be started by a woman in gloves, and driven from New York to California past a filling station on every main road. The electric, tied by its limited range to the city where it slept, had no answer.
 
-D — There was one serious attempt to save it. Thomas Edison spent the better part of a decade perfecting a nickel-iron battery, lighter-lived than lead and almost indestructible, and in 1914 his friend Henry Ford announced that the two of them would produce a cheap electric car for the ordinary family. Prototypes were built; a factory was discussed; and then the project simply faded away, defeated by cost, by technical troubles with the batteries, and by the Model T's unanswerable price. Ingrid Halvorsen, a historian of battery technology, sees the episode as an early lesson in a recurring problem: "Battery chemistry improved far more slowly than the pioneers assumed it would. The batteries of 1914 broke the promises the carmakers had made for them — and that pattern repeated for most of a century."
+D — There was one serious attempt to save it. Thomas Edison spent the better part of a decade perfecting a nickel-iron battery, lighter and longer-lived than lead and almost indestructible, and in 1914 his friend Henry Ford announced that the two of them would produce a cheap electric car for the ordinary family. Prototypes were built; a factory was discussed; and then the project simply faded away, defeated by cost, by technical troubles with the batteries, and by the Model T's unanswerable price. Ingrid Halvorsen, a historian of battery technology, sees the episode as an early lesson in a recurring problem: "Battery chemistry improved far more slowly than the pioneers assumed it would. The batteries of 1914 broke the promises the carmakers had made for them — and that pattern repeated for most of a century."
 
 E — The electric vehicle did not vanish so much as retreat into work that suited it. In Britain, electric milk floats delivered bottles door to door until the end of the century, ideal for a short fixed route with constant stopping. Forklift trucks went electric because exhaust fumes are intolerable inside a warehouse; golf carts and airport vehicles followed for similar reasons. Daniel Osei, curator of a motor museum, argues that the car's image was damaged as much by its marketing as by its batteries: "By selling the electric as a genteel carriage for wealthy ladies, the makers told everyone else, in effect, that this car was not for them. The vehicles disappeared, but that image took far longer to die."
 
@@ -74,17 +74,17 @@ F — A century later, the electric car has returned, and historians of technolo
             title: "Summary — Why the electric car lost",
             lines: [
               "After 1908, Ford's moving {{19}} line cut the price of the Model T year after year.",
-              "In 1912 the electric starter appeared, so petrol cars no longer needed a dangerous hand {{20}}.",
-              "Because of its limited {{21}}, the electric car could not leave the city,",
-              "and most homes in the countryside were not yet connected to {{22}}.",
-              "Meanwhile, newly discovered oilfields kept the price of {{23}} low.",
+              "Meanwhile, newly discovered oilfields kept the price of {{20}} low,",
+              "and most homes in the countryside were not yet connected to {{21}}.",
+              "In 1912 the electric starter appeared, so petrol cars no longer needed a dangerous hand {{22}}.",
+              "Because of its limited {{23}}, the electric car could not leave the city.",
             ],
           },
           answer: "assembly" },
-        { n: 20, type: "gap", group: "sum2", answer: "crank" },
-        { n: 21, type: "gap", group: "sum2", answer: "range" },
-        { n: 22, type: "gap", group: "sum2", answer: "electricity" },
-        { n: 23, type: "gap", group: "sum2", answer: "petrol" },
+        { n: 20, type: "gap", group: "sum2", answer: "petrol" },
+        { n: 21, type: "gap", group: "sum2", answer: "electricity" },
+        { n: 22, type: "gap", group: "sum2", answer: "crank" },
+        { n: 23, type: "gap", group: "sum2", answer: "range" },
         { n: 24, type: "match", group: "people", boxTitle: "List of People",
           box: ["Marcus Webb", "Ingrid Halvorsen", "Daniel Osei", "Renata Costa"],
           rubric: "Match each statement with the correct person, A–D.",
@@ -116,9 +116,9 @@ What of the popular claim — beloved of newspaper columnists — that boredom i
         { n: 29, type: "mcq", prompt: "The writer describes the electric-shock experiment in order to show that", options: ["A people will accept pain rather than remain unoccupied", "B most people secretly enjoy mild pain", "C the participants misunderstood their instructions", "D boredom cannot be produced in a laboratory"], answer: "A" },
         { n: 30, type: "mcq", prompt: "Which of the following best summarises the writer's conclusion?", options: ["A Boredom should be treated as a psychological disorder", "B Technology has finally solved the problem of boredom", "C Boredom is a message that deserves attention", "D Creative people rarely experience boredom"], answer: "C" },
         { n: 31, type: "ynng", prompt: "For a long time, scientists did not regard boredom as worth studying.", answer: "YES" },
-        { n: 32, type: "ynng", prompt: "Removing boredom from life completely would make people better off.", answer: "NO" },
-        { n: 33, type: "ynng", prompt: "Children experience boredom more intensely than adults.", answer: "NOT GIVEN" },
-        { n: 34, type: "ynng", prompt: "Boredom, like pain, can serve a protective purpose.", answer: "YES" },
+        { n: 32, type: "ynng", prompt: "Children experience boredom more intensely than adults.", answer: "NOT GIVEN" },
+        { n: 33, type: "ynng", prompt: "Boredom, like pain, can serve a protective purpose.", answer: "YES" },
+        { n: 34, type: "ynng", prompt: "Removing boredom from life completely would make people better off.", answer: "NO" },
         { n: 35, type: "ynng", prompt: "Research has clearly established that boredom makes people more creative.", answer: "NO" },
         { n: 36, type: "gap", group: "wl",
           box: ["signal", "attention", "escape", "meaning", "risks", "habit", "comfort", "evidence", "memory"],

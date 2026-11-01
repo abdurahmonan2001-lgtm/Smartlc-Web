@@ -22,7 +22,7 @@ export const MOCK1_WRITING = {
       title: "Writing Task 2",
       passageTitle: "Writing Task 2",
       instructions: "You should spend about 40 minutes on this task. Write at least 250 words.",
-      passage: "Many employees can now do their work from home using modern technology. However, this change may only benefit workers, not the employers.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
+      passage: "Many employees can now do their work from home using modern technology. However, this change may only benefit workers, not employers.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
       questions: [
         { n: 2, type: "essay", prompt: "Write your essay below.", minWords: 250 },
       ],

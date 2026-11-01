@@ -1,0 +1,53 @@
+{
+  "id": "mock1-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Parts 1 to 3 are good IELTS copies with real distractors and corrections, and every key checks out against the script. Part 4 is the right length but its notes repeat the lecture almost word for word, so the last ten questions are easier than in the real test.",
+  "strengths": [
+    "Part 1 tests real traps: Thursday changed to Friday, six o'clock for another group, an eight-week course elsewhere, the advanced price said first, cash refused.",
+    "Part 2 multi-select items deny rumours (Sunday opening, new cafe menu) and include a one-day change to the tour time, which is a good near-miss for \"changes this year\".",
+    "Part 3 matching uses offers that are refused and passed on (Aziz offers the questions, Malika takes them; Malika offers the charts, Aziz declines), which is how the real test works.",
+    "Script lengths (645, 734, 753, 848 words) suit the real timing, and all gap answers are single words heard clearly."
+  ],
+  "issues": [
+    {
+      "q": 34,
+      "severity": "medium",
+      "problem": "Part 4 notes copy the lecture almost exactly: \"kept in a locked box\", \"in small silk bags\", \"largest producer ... followed by India and Kenya\", \"come from the same plant\", \"caused by oxidation of the leaves\". Students can match by sound alone; the real Part 4 compresses and rewords.",
+      "fixed": false,
+      "change": "Reword the notes lines (the audio does not change), e.g. Q34 \"valuable tea stored under lock and key in a {{34}}\", Q38 \"top producing country today: {{38}}\", Q39 \"green and black tea: no botanical difference, same {{39}}\", Q40 \"colour difference results from {{40}} after picking\"."
+    },
+    {
+      "q": 9,
+      "severity": "low",
+      "problem": "Q9 and Q10 notes repeat the script word for word (\"can be rented at the front desk for a small fee\", \"one small {{10}} for the membership form\").",
+      "fixed": false,
+      "change": "Reword, e.g. \"{{9}} available at reception for a small charge\", \"a passport-sized {{10}} needed for the membership form\"."
+    },
+    {
+      "q": 18,
+      "severity": "low",
+      "problem": "Plan labelling: \"the small room tucked in right beside it, on its far side\" is H, to the right of the stairs, but D is also beside the stairs on the other side, and \"far side\" more naturally means behind the stairs. A careful student could hesitate between H and D.",
+      "fixed": false,
+      "change": "Redraw the plan so H sits on the side of the stairs away from the entrance (behind them), or move D away from the stairs."
+    },
+    {
+      "q": 26,
+      "severity": "low",
+      "problem": "Q26 \"producing the posters\" is heard word for word (\"I'll take care of producing the posters\").",
+      "fixed": false,
+      "change": "Reword the item, e.g. \"making the advertising posters\"."
+    },
+    {
+      "q": 36,
+      "severity": "low",
+      "problem": "\"invented in America by {{36}}\" invites a person's name; the key \"accident\" works only as \"by accident\". It is a fair trap but students may challenge it.",
+      "fixed": false,
+      "change": "No change needed; it is a fair grammar trap (\"by accident\"). Point it out when going over the paper."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 13,
+    "after": 27
+  }
+}

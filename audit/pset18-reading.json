@@ -1,0 +1,18 @@
+{
+  "id": "pset18-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong, full-length paper (909, 954 and 987 words) on the sewing machine, drinking fountains and overconfidence. Passage 3 is the hardest, as it should be. All the keys are correct. One summary gap left a clumsy phrase ('deeper than the frost'), and the wording has been fixed. As in the other sets, passage 2 tests some facts twice.",
+  "strengths": [
+    "Passage 3 is a real C1 argument: three types of overconfidence are told apart, then the hard-easy effect, calibration, the incentives behind the bias, and its remedies.",
+    "The NOT GIVEN items are true gaps (Q10, Hunt selling rights; Q13, whose idea the pool was; Q34, age), and the FALSE items are direct contradictions.",
+    "The MCQ distractors use ideas that are never in the passage (training, teams, penalties) or echo nearby words (Q30 D).",
+    "Sentence endings C and F are good distractors that overstate the passage ('proves that experience has no effect')."
+  ],
+  "issues": [
+    { "q": 21, "severity": "medium", "problem": "The summary read 'the pipes are laid deeper than the ___', with the answer 'frost'. The passage says 'below the frost line', so the completed sentence ('deeper than the frost') did not make sense, and students might try to write 'frost line', which is two words.", "fixed": true, "change": "The summary now reads 'laid deeper than the {{21}} line', so 'frost' fits and stays within ONE WORD ONLY. The explanation was updated." },
+    { "q": 24, "severity": "medium", "problem": "Passage 2 tests the same facts twice: Q16 and Q23 (Duarte's costs, D), Q18 and Q25 (Kovacs, F), and Q22 and Q24 (Coker's heatwave point, E). Paragraph G (Haddad) is tested by nothing at all.", "fixed": false, "change": "Suggestion: change one matching-information item to G, e.g. 'a proposal to transfer responsibility for fountains to a different organisation', and change Q24 to Wexler's or Haddad's view." },
+    { "q": 27, "severity": "low", "problem": "Paraphrase pairs: the question sides for Q27 and Q35 were not exact copies of the option or statement.", "fixed": true, "change": "Q27 is now ['surer of ourselves than the evidence permits', 'stated certainty runs well ahead of what accuracy would justify'] and Q35 ['Knowing about a bias', 'Learning about the bias']. Q19 and Q25 got better pairs, and new pairs were added for Q1, Q7 and Q11." }
+  ],
+  "paraphrasePairs": { "before": 34, "after": 37 }
+}

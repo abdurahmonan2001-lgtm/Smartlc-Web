@@ -1,0 +1,21 @@
+{
+  "id": "pset7-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong IELTS Academic paper: long passages (915-947 words) in a good popular-science style, with Passage 3 on the bystander effect at full C1 level and questions that paraphrase rather than copy. Two question groups were slightly out of passage order and have been reordered; all answer keys were correct.",
+  "strengths": [
+    "Completion items in Passage 1 paraphrase the passage (called / known as; mixed / combining; strengthened / reinforced), which is uncommon in this set and closer to the real test.",
+    "Passage 2 has seven lettered paragraphs, a summary that follows the text in order, and a five-name people match with one unused name.",
+    "Passage 3 MCQs have strong distractors: Q27 D overstates the error, Q28 B describes the confederates, Q29 D describes a different mechanism.",
+    "T/F/NG and Y/N/NG keys are clean, with classic NOT GIVEN traps ('the first structure in Britain', 'more common near the coast')."
+  ],
+  "issues": [
+    { "q": 33, "severity": "high", "problem": "Y/N/NG out of passage order: Q33 (first-aid training, paragraph 6) came before Q34 (situations not souls, paragraph 5).", "fixed": true, "change": "Swapped: Q33 = circumstances rather than character (YES), Q34 = first-aid training compulsory (NOT GIVEN)." },
+    { "q": 39, "severity": "medium", "problem": "Sentence endings out of order: Q39 (naming one person, paragraph 6) came before Q40 (the idea about city life, paragraph 5).", "fixed": true, "change": "Swapped: Q39 = 'The idea that city life makes people indifferent' (D), Q40 = 'Naming one particular person in a crowd' (F)." },
+    { "q": 19, "severity": "medium", "problem": "Pair's question side 'evaporates' is the answer, which the student does not see in the summary.", "fixed": true, "change": "Pair now ['travel at a different hour', 'change their hour']." },
+    { "q": 35, "severity": "medium", "problem": "Pair's question side 'others join' is not in the statement.", "fixed": true, "change": "Pair now ['once one person moves', 'When one person has intervened']." },
+    { "q": 8, "severity": "low", "problem": "Pair ['getting stronger', 'weakened'] paired opposites, not a paraphrase.", "fixed": true, "change": "Pair now ['destroying these blocks', 'weakened Roman harbour concrete']; Q40 (now Q39) pair also lengthened to exact phrases." },
+    { "q": 0, "severity": "low", "problem": "Passage 1, paragraph 1: 'grows a mass of interlocking crystals through the whole mass' repeats 'mass' awkwardly (style, not a typo, so not changed).", "fixed": false, "change": "Suggest 'grows a network of interlocking crystals through the whole mass'." }
+  ],
+  "paraphrasePairs": { "before": 35, "after": 38 }
+}

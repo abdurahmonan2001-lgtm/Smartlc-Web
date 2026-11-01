@@ -90,7 +90,7 @@ E — Perhaps the most durable argument for growing food in cities is not effici
           answer: "A" },
         { n: 24, type: "multiselect", group: "adv", answer: "C" },
         { n: 25, type: "match", group: "crops", boxTitle: "Crops",
-          box: ["leafy greens and herbs", "staple crops such as wheat and rice", "strawberries"],
+          box: ["leafy greens, herbs and strawberries", "staple crops such as wheat and rice", "vegetables imported from abroad"],
           rubric: "Match each statement with the correct crop group, A–C. NB You may use any letter more than once.",
           prompt: "unlikely to be grown indoors economically in the near future", answer: "B" },
         { n: 26, type: "match", group: "crops", prompt: "sold at high prices to restaurants and supermarkets nearby", answer: "A" },

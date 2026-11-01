@@ -1,0 +1,73 @@
+{
+  "id": "mock2-reading",
+  "verdict": "clearly below IELTS",
+  "estimatedBandToScore30of40": "6.0",
+  "summary": "The passages are well written and the keys are right, but at 574, 572 and 618 words (about 1,760 in total) they are a third shorter than a real paper. On top of that, many facts are tested twice by different question types, so students who find one answer often get a second one free.",
+  "strengths": [
+    "Good IELTS-style topics (the postage stamp, citizen science, choice overload) with clear rising difficulty; passage 3 has C1 argument language (\"deflating\", \"demoted\", \"burdensome\").",
+    "Y/N/NG items are well judged: Q38 is genuinely not addressed, Q37 and Q40 are clearly contradicted.",
+    "Completion answers are single words copied from the passage, and the MCQ distractors in passage 3 are plausible (Q28 A, Q30 A)."
+  ],
+  "issues": [
+    {
+      "q": 1,
+      "severity": "high",
+      "problem": "Passage 1 is 574 words; a real passage 1 is about 750-900.",
+      "fixed": false,
+      "change": "Add 2 paragraphs: the opposition from Post Office officials and the public campaign that pushed Hill's plan through Parliament, and the change from the Penny Black to the Penny Red (red ink made the cancellation mark visible and stopped re-use). Add 2 T/F/NG items from the new text."
+    },
+    {
+      "q": 14,
+      "severity": "high",
+      "problem": "Passage 2 is 572 words, and the four people in Q23-26 are matched to four statements, so the last match is automatic.",
+      "fixed": false,
+      "change": "Expand to about 850 words with a paragraph on the ethics of unpaid labour and data ownership, and one on a project that failed. Add a fifth person who is quoted but not tested, as a distractor."
+    },
+    {
+      "q": 27,
+      "severity": "high",
+      "problem": "Passage 3 is 618 words; the hardest passage should be 850-950.",
+      "fixed": false,
+      "change": "Add a paragraph on defaults (e.g. organ-donation opt-out rates) and one on cultural differences in how people experience choice; use them for 1-2 harder MCQs."
+    },
+    {
+      "q": 14,
+      "severity": "medium",
+      "problem": "Passage 2 tests each expert twice: Okoye in Q14 and Q25, Marsh in Q16 and Q24, Nair in Q17 and Q26, Herrera in Q22 and Q23.",
+      "fixed": false,
+      "change": "Replace one item of each pair with information from elsewhere, e.g. matching-information items about the Christmas Bird Count (A) and water-quality tests (F)."
+    },
+    {
+      "q": 31,
+      "severity": "medium",
+      "problem": "Passage 3 repeats facts across types: the jam result (Q27 and Q31), maximisers and satisficers (Q28 and Q32-33), the meta-analysis (Q29 and Q34), the writer's conclusion (Q30 and Q35).",
+      "fixed": false,
+      "change": "Rewrite Q31-35 endings to test other details (the cereal-shelf image, \"honest defaults\", the wine collector) so each fact is tested once."
+    },
+    {
+      "q": 7,
+      "severity": "low",
+      "problem": "T/F/NG order: Q8 (Hill was not a postal official, paragraph 2) comes after Q7 (the Penny Black portrait, paragraph 3).",
+      "fixed": false,
+      "change": "Swap the prompts of Q7 and Q8 (keys become Q7 FALSE, Q8 TRUE). Not changed because it would change keys of past attempts."
+    },
+    {
+      "q": 12,
+      "severity": "low",
+      "problem": "The evidence quote was cut off mid-phrase (\"Brazil issued its famous\").",
+      "fixed": true,
+      "change": "Evidence changed to \"stamps in 1843, several Swiss cantons produced their own in the same period\" in mock-vocab-A.json."
+    },
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "Some completion stems copy the passage closely (Q2 \"the number of sheets and the ______\", Q4 \"any letter of a given ______\", Q18 \"The spread of ______\").",
+      "fixed": false,
+      "change": "Paraphrase the stems, e.g. Q4 \"Hill proposed one price for all letters below a certain ______.\""
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 24,
+    "after": 39
+  }
+}

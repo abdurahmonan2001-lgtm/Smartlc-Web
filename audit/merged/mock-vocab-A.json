@@ -1,0 +1,2509 @@
+{
+  "mock1-listening": {
+    "2": {
+      "vocab": [
+        "which level would you like",
+        "level chosen"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "used to meet on Thursdays",
+        "no longer on Thursdays"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "The full course lasts",
+        "length of course"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "We can't accept cash at the desk any more",
+        "cash is not accepted at the desk"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "The centre provides everything",
+        "everything else is provided"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "Joining the library",
+        "membership"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "entry to all of those summer events",
+        "attending the summer events"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "you may borrow up to ten",
+        "a higher borrowing limit"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "a brand new story corner for children",
+        "a new storytelling space for young readers"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "all the daily papers and the magazines",
+        "Newspaper corner"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "leads out to the garden",
+        "Garden door"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "our presentation actually have to be",
+        "The presentation must last"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "Agreed, plastic it is",
+        "They decide to focus on"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "too few people will answer",
+        "not enough students will respond"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "The teacher wants the slides",
+        "The teacher has asked them to hand in the slides"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "design the survey questions",
+        "preparing the questions for the survey"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "interview her",
+        "talking to the biology teacher"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "I'll turn them into the charts",
+        "turning the results into charts"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "the conclusion, with our recommendations",
+        "the final section"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "practise the timing together",
+        "rehearsing"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "first drunk as a kind of",
+        "first used as a kind of"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "carrying them for weeks by horse",
+        "difficult to transport"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "Tea reached Europe",
+        "brought to Europe"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "sailing ships known as",
+        "sailing ships called"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "the tea bag was born",
+        "invented"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "began sending his customers small samples",
+        "sent customers samples"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "dominated by the region where the story began",
+        "largest producer"
+      ]
+    }
+  },
+  "mock1-reading": {
+    "1": {
+      "vocab": [
+        "a former truck driver",
+        "had worked in the trucking industry"
+      ]
+    },
+    "2": {
+      "vocab": [
+        "a converted oil tanker",
+        "built specially for McLean"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "at the quayside",
+        "in port"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "pilfering",
+        "stealing cargo"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "not anyone's ideal",
+        "satisfied nobody completely"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "the greatest cost",
+        "the biggest expense"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "collapsed",
+        "fell"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "depended on something unglamorous: agreement",
+        "International agreement was needed"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "migrated",
+        "moved"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "before completion",
+        "before they are finished"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "a handful of",
+        "a small number of"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "in less than two decades",
+        "grew quickly"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "the same footprint is used again",
+        "Saving land"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "The technology's weakness",
+        "The problem"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "a more turbulent world",
+        "uncertain times"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "consumption",
+        "use"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "running costs",
+        "what a farm spends to operate"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "unless the electricity comes from",
+        "only greener when the power is"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "nearby restaurants and supermarkets",
+        "nearby buyers"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "dozens of times more food",
+        "far higher yield"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "Water use falls even more sharply",
+        "much lower water consumption"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "hopelessly uneconomic indoors",
+        "unlikely to be grown indoors economically"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "premium prices",
+        "high prices"
+      ],
+      "explain": "A, the leafy greens, herbs and strawberries. Paragraph D names them as the crops that dominate commercially, and the same sentence says they are sold at premium prices to nearby restaurants and supermarkets."
+    },
+    "27": {
+      "vocab": [
+        "treating memory's losses as",
+        "regarded forgetting as"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "serve the present",
+        "present needs"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "is also work",
+        "requires no energy"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "do not describe the condition as a gift",
+        "are usually happy with it"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "A mind that retained everything with equal clarity",
+        "a mind that forgets nothing"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "was long assumed",
+        "was once understood"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "the inability to weaken fear memories",
+        "a failure to weaken fear memories"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "keeps the relevant findable",
+        "keeps useful memories easy to find"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "the brain contains dedicated mechanisms",
+        "dedicated brain machinery"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "identifiable",
+        "specific"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "all forgetting is benign",
+        "this healthy process"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "are better understood as",
+        "are best seen as"
+      ]
+    }
+  },
+  "mock2-listening": {
+    "2": {
+      "vocab": [
+        "what's the occasion",
+        "Type of event"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "We were hoping for",
+        "first choice of date"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "how many guests are you expecting",
+        "Number of guests"
+      ]
+    },
+    "7": {
+      "vocab": null
+    },
+    "8": {
+      "vocab": [
+        "Does the price include",
+        "Included in the price"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "That's the one thing we don't provide",
+        "Not provided"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "We used to post out booking forms",
+        "booking forms no longer posted"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "the real reason we exist",
+        "originally created in order to"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "today is a little special",
+        "What is different about today's open day"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "If you came by car",
+        "Visitors arriving by car"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "the thing that helps us most",
+        "the best way to support the farm"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "planted the very first spring",
+        "is the oldest part of the farm"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "goes straight to the kitchen",
+        "produces food used in the café"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "children from three local schools",
+        "local schoolchildren"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "off limits today",
+        "is closed to visitors today"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "the family bakery on Mill Road",
+        "a local business"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "did far worse than anyone expected, including me",
+        "her own exam results had surprised her"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "We had the two groups memorise",
+        "participants were asked to memorise"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "I have to own up to something",
+        "Karim admits"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "Twelve is tiny",
+        "too small"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "confused people",
+        "Some questions were misunderstood"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "charts and graphs",
+        "present the results visually"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "the testing times",
+        "the timing of the tests"
+      ],
+      "explain": "B, the timing. Karim names the two problems he counts as serious and Nilufar agrees; the testing times is one of them, the same fault Karim owned up to earlier."
+    },
+    "28": {
+      "vocab": [
+        "the number of people",
+        "the size of the sample"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "Nine in the morning, both groups, no exceptions",
+        "test everyone at the same hour"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "a wider age range",
+        "participants of different ages"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "Natural rubber begins as latex",
+        "natural rubber is made from latex"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "shaped into",
+        "used to make"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "the English name records",
+        "English name comes from"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "waterproof coats, boots",
+        "early coats and shoes"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "Demand now exploded",
+        "demand grew fast"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "Vast plantations grew up",
+        "huge plantations established"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "Cut off from the Asian plantations",
+        "wartime shortages"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "only the natural material will do",
+        "still require the natural material"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "an unlikely alternative crop",
+        "an alternative source"
+      ]
+    }
+  },
+  "mock2-reading": {
+    "1": {
+      "vocab": [
+        "postage was normally paid",
+        "the cost of a letter was normally paid"
+      ]
+    },
+    "2": {
+      "vocab": [
+        "the cost depended on",
+        "Postage was calculated from"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "the expensive part",
+        "the greatest expense"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "one low, uniform rate",
+        "a single rate"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "cut them apart",
+        "separated from the sheet"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "rows of tiny holes",
+        "the small holes"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "a profile of the young Queen Victoria",
+        "a portrait of a monarch"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "was not a postal official at all",
+        "was working for the postal service"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "put an end to",
+        "ended the practice of"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "The solution came in 1854",
+        "Perforated stamps were introduced"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "in the same period",
+        "within a few years"
+      ],
+      "evidence": "stamps in 1843, several Swiss cantons produced their own in the same period"
+    },
+    "13": {
+      "vocab": [
+        "has outlived",
+        "ended with"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "beats the algorithm",
+        "better than software"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "Nineteenth-century",
+        "from before the twentieth century"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "Scepticism about amateur data",
+        "doubts about the reliability of volunteer records"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "Why do people give up their evenings",
+        "why volunteers continue to take part"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "turned millions of pockets into portable laboratories",
+        "millions of people now carry an instrument"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "at almost no cost",
+        "cheaply"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "volunteer records match professional ones",
+        "protect data quality"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "the same photograph judged by many people",
+        "having many people judge the same"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "Today those datasets are cited",
+        "volunteer datasets are now cited"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "cited in court cases",
+        "influence legal and government decisions"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "Accuracy is a property of the system",
+        "Reliable results come from well-designed systems"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "have not been automated",
+        "still beyond computers"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "the other people keep them",
+        "Social connection keeps volunteers involved"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "The larger display was better theatre",
+        "A bigger display attracted people"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "less happy with the outcome",
+        "feel less pleasure"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "demoted",
+        "weaker and less general"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "so much as organise them",
+        "how choices are organised matters more"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "drew a substantially bigger crowd",
+        "drew a larger crowd"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "determined to find the best possible option",
+        "in search of the best possible one"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "look until they find something good enough",
+        "stop searching once an option seems good enough"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "pooled the results of fifty separate experiments",
+        "The pooled analysis of fifty studies"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "when the chooser knows little about the field",
+        "the chooser inexperienced"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "paralyse the will",
+        "delay decisions"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "science rarely leaves a tidy story alone",
+        "settled the question"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "shops, websites",
+        "online retailers"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "A wine novice",
+        "the chooser's expertise"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "the size of the menu",
+        "menu size"
+      ]
+    }
+  },
+  "mock3-listening": {
+    "2": {
+      "vocab": [
+        "three kinds of membership",
+        "Type of membership"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "how much will I be paying",
+        "Monthly fee"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "When could I actually start",
+        "Start date"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "Weekends are a little shorter",
+        "Closing time at weekends"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "completely free for members",
+        "Free classes"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "The one thing that isn't covered",
+        "Not included"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "bring when I first come in",
+        "Bring to first visit"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "every new member receives",
+        "Free gift for new members"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "how long does the membership card take",
+        "Membership card ready in"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "cut that traffic",
+        "reduce the traffic"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "download the CityRide application",
+        "use an application"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "during the scheme's first year",
+        "this year"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "One station will have a roof over it",
+        "Covered docking station"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "it won't open until next spring",
+        "opening next spring"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "students from our department have been recording",
+        "earlier students gathered data"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "It really has to be",
+        "must take place"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "What genuinely worries me",
+        "mainly worried about"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "an identification app",
+        "an application on their phones"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "the complete form has been submitted",
+        "submit a full risk assessment form"
+      ],
+      "explain": "A. The cliff edge warning is real but secondary. Daniel says the form is the thing Dr Novak absolutely insists on, and she will not sign off the trip without it."
+    },
+    "26": {
+      "vocab": [
+        "set against the records from previous years",
+        "compared with records from previous years"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "the tide-safety video",
+        "watch a video about tide safety"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "Fifty copies at least",
+        "print copies of the recording sheets"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "Species count",
+        "the number of different species"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "in every single quadrat, no exceptions",
+        "in every quadrat"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "the ashes of certain plants",
+        "plant ash"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "The oldest objects we have found",
+        "earliest products"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "molten glass",
+        "hot glass"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "every glass furnace was moved out of the city",
+        "all furnaces moved to the island of Murano"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "carry most of the world's information",
+        "carrying information"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "melted down and reformed again and again",
+        "recycled endlessly"
+      ]
+    }
+  },
+  "mock3-reading": {
+    "1": {
+      "vocab": [
+        "carry river water",
+        "bring water"
+      ]
+    },
+    "2": {
+      "vocab": [
+        "above all",
+        "The main task"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "gently raised or lowered",
+        "rises or falls"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "had halved",
+        "cost half as much"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "plodded along a towpath",
+        "walking on the towpath"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "pushed against the tunnel walls",
+        "pushing on the walls"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "linked two of the country's great rivers",
+        "connected two major Chinese rivers"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "the invention of a Chinese engineer",
+        "invented by a European engineer"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "remains in service",
+        "is still used"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "the new trains were faster",
+        "Trains proved slower"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "volunteers, unpaid",
+        "people who were not paid for the work"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "nearly all of them for leisure",
+        "Canal holidays"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "Cities are also warmer",
+        "a comparison between temperatures in cities"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "the national opera house",
+        "a well-known building"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "plant more, keep less",
+        "planting is more helpful to bees than new hives"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "far below the safety limits",
+        "safe to eat"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "from early spring until late autumn",
+        "for most of the year"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "the surrounding countryside",
+        "the land around them"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "far below the safety limits",
+        "only tiny traces"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "tells you more about a neighbourhood's environment",
+        "reveal the state of a district's environment"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "there is simply not enough nectar to go round",
+        "without enough food"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "you never see a city the same way again",
+        "permanently changes how people see their city"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "Reading its honey tells you more",
+        "Honey can provide detailed information"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "the number of hives has doubled",
+        "more bees than the food supply can support"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "enough forage nearby",
+        "enough food exists"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "the exception rather than the rule",
+        "unusual rather than normal"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "produced the same short-lived improvement",
+        "a similar brief boost"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "The damage is worst",
+        "causes most difficulty"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "fit the soundtrack to the task",
+        "Whether music helps depends on the job"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "simple, repetitive activities",
+        "simple, repetitive tasks"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "contains language",
+        "includes lyrics"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "Music we have chosen ourselves",
+        "Music that a person has selected for themselves"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "linger at tables",
+        "spend more time"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "inflated into something far grander",
+        "exaggerated the findings"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "quiet remains the best soundtrack",
+        "Silence is the best condition"
+      ],
+      "explain": "NO: quiet is best only for complex verbal work. For dull and mechanical tasks the passage says music measurably helps.",
+      "evidence": "For complex verbal work, the dull conclusion of the literature is that quiet remains the best soundtrack"
+    },
+    "39": {
+      "vocab": [
+        "persuasion nonetheless",
+        "to influence how customers behave"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "ban music from every workplace",
+        "prohibit music in every workplace"
+      ],
+      "explain": "NO: the writer calls a total ban as foolish as piping music everywhere. The recommendation is matching, not prohibition.",
+      "evidence": "It would be as foolish to ban music from every workplace as to pipe it into every corner"
+    }
+  },
+  "mock4-listening": {
+    "2": {
+      "vocab": [
+        "a phone number we can reach you on",
+        "Contact phone"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "which bus were you on",
+        "Bus route"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "what was inside the bag",
+        "Contents"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "anything that would help us identify the bag",
+        "Special feature"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "you'll need to collect it in person",
+        "Collection point"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "Do I need to bring anything with me",
+        "Must bring"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "is there a charge",
+        "Handling fee"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "three days instead of two",
+        "an extra day"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "you collect your T-shirt in person",
+        "Volunteers will receive their T-shirts"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "Every shift now comes with",
+        "Every shift includes"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "your day begins before everyone else's",
+        "involves an early morning start"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "volunteers who speak more than one language",
+        "needs people with language skills"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "It's real lifting",
+        "requires some heavy lifting"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "led by a qualified childcare professional",
+        "is supervised by a professional"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "we've doubled the number of helpers",
+        "has been given extra helpers"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "nearly all the campsite jobs happen",
+        "is mostly done"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "which building are we actually modelling",
+        "Which building have the students decided to model"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "Every photo looks like a birdcage",
+        "unusable"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "half the measurements are simply wrong",
+        "the measurements are inaccurate"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "is there anything we should actually ask her for",
+        "What will they ask their tutor for"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "what actually goes into the model",
+        "will the students include in the model"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "the base gets built",
+        "construct the base"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "their striking orange colour",
+        "turns them orange"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "Beaver fur is astonishingly dense",
+        "fur is so dense"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "drags branches into the current",
+        "block a stream with branches"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "in the middle of it",
+        "surrounds the family home"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "hidden below the surface",
+        "under water"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "held back and released slowly",
+        "slow the water down"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "washes soil and fertiliser off the surrounding land",
+        "carried off the land"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "fills with life at astonishing speed",
+        "soon fill with"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "a whole structure of other lives",
+        "many others depend on it"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "their dams flood whatever happens to lie upstream",
+        "where dams flood roads"
+      ]
+    }
+  },
+  "mock4-reading": {
+    "1": {
+      "vocab": [
+        "was strengthened by",
+        "was made stronger by"
+      ]
+    },
+    "2": {
+      "vocab": [
+        "were mostly maintained by",
+        "were usually kept burning by"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "made mostly of",
+        "largely built of"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "modelled his tower on",
+        "based the shape of his tower on"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "borrowing from woodworking the idea of",
+        "took the idea of"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "a single intense",
+        "one powerful"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "by giving every station its own rhythm",
+        "its individual pattern of"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "remains in service",
+        "still in operation"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "he was in the tower",
+        "Winstanley was on land"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "could suddenly be seen for thirty",
+        "increased the distance"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "Electric light replaced flame only gradually",
+        "had changed to electric light"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "the last keepers",
+        "former lighthouse keepers"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "a marathon costs closer to three thousand",
+        "the energy a marathon requires"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "Shoes built around a stiff carbon-fibre plate",
+        "a piece of equipment"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "What separates the podium from the pack",
+        "separates the best runners from the rest"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "drinking far beyond thirst",
+        "consuming too much of something"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "cool, still days",
+        "the weather conditions"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "stores roughly",
+        "hold about"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "the body turns to burning",
+        "the body switches to burning"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "the crash is partly protective",
+        "the collapse is partly protective"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "The most effective defence",
+        "the best defence"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "drink when thirsty, and no more",
+        "drink only when you feel thirsty"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "an even pace",
+        "keep your speed steady"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "the laboratory teams that measured the effect",
+        "Their effect was measured in laboratory tests"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "an extraordinary imbalance",
+        "spread very unevenly"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "their children will have the dominant language",
+        "stop passing it on to their children"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "the human mind has more settings",
+        "reveal the mind's range"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "Technology cuts both ways here",
+        "both accelerates language loss and assists recording"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "how free such choices really are",
+        "seldom a completely free one"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "safe, but not growing",
+        "sufficient to keep it alive"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "the decisive act took place in kitchens",
+        "depend chiefly on the communities themselves"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "loses no part of a global one",
+        "must give up a small language"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "rarely lost because their speakers die out",
+        "rarely die suddenly"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "the deepest argument is scientific",
+        "The loss matters to science"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "Hence the race to document",
+        "Field linguists therefore hurry"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "stories, arguments, songs, jokes",
+        "living, everyday speech"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "A language lives when",
+        "a language is only truly alive while"
+      ]
+    }
+  },
+  "mock5-listening": {
+    "2": {
+      "vocab": [
+        "there is a lift in the building",
+        "the building has a lift"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "the owner has just reduced it",
+        "just reduced by the owner"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "the equivalent of",
+        "equal to"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "Could I come and see the flat",
+        "Viewing arrangements"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "Wait outside that and he'll find you",
+        "meet the agent outside the"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "were no longer safe to stand in",
+        "had become unsafe"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "the collection as a whole",
+        "most of the collection"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "costs you nothing",
+        "free of charge"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "the thing I am proudest of",
+        "the most important change"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "What has changed is where it is",
+        "has moved to a different floor"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "taken out the strong lighting",
+        "is kept darker than before"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "stays exactly as it was in eighteen ninety",
+        "keeps its original decoration"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "twice the size it was",
+        "twice its previous size"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "was given by one woman",
+        "was paid for by a single donor"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "until October",
+        "until later in the year"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "that piece in the local paper",
+        "a newspaper report"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "got three different readings",
+        "gave inconsistent readings"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "has to be done three times over",
+        "repeat every test three times"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "far and away the hardest part",
+        "the most difficult part"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "Small quantities of metal",
+        "contained small amounts of metal"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "Higher than anywhere else we tested",
+        "had the highest level of bacteria"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "far better condition than either of us predicted",
+        "was cleaner than the students expected"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "the fountain has to be redone",
+        "will have to be tested again"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "comfortably inside the official limits",
+        "passed every official standard"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "pollution from agriculture",
+        "pollution from farming"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "allow the water to escape",
+        "water escaping"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "In the law courts of Athens",
+        "used in Athenian courts"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "It appears in Europe",
+        "built in Europe"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "learned the hour from",
+        "the hour was announced by"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "a pendulum cannot swing evenly on a ship",
+        "useless on ships"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "His famous test came on",
+        "proved itself on"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "imposed a single standard time",
+        "spread one standard time"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "The positioning system in your phone works by",
+        "exact positioning depends on"
+      ]
+    }
+  },
+  "mock5-reading": {
+    "1": {
+      "vocab": [
+        "gliding forward between strides",
+        "moved the running machine along"
+      ]
+    },
+    "2": {
+      "vocab": [
+        "everyone simply called it",
+        "was nicknamed"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "a larger circle",
+        "Enlarging the front wheel"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "drove the rear wheel through",
+        "power was carried to the rear wheel by"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "The pneumatic tyre",
+        "Dunlop's tyre"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "Bicycles began to be produced in",
+        "bicycles started to be made in"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "the craze was brief",
+        "fashionable for only a short time"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "is still argued over",
+        "Historians are certain"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "speed no longer required size",
+        "to be fast without large wheels"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "his son's tricycle",
+        "his own bicycle"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "more practical clothing",
+        "the way some women dressed"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "They are also in serious trouble",
+        "why they are in danger"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "borrows its logic from the garden",
+        "Borrowing a technique from the garden"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "The reef's marathon runners",
+        "the slowest corals"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "On a few nights each year",
+        "a yearly event"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "puts the gap beyond closing",
+        "Questioning whether restoration can keep up"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "Her team listens to reefs instead",
+        "Measuring more than the corals themselves"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "Restoration teams therefore collect",
+        "divers collect"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "suspend them in",
+        "hang them in"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "fragments of just a few polyps",
+        "tiny pieces"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "fixed to the reef in close groups",
+        "placed close together on the reef"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "hundreds of thousands of dollars",
+        "a very large amount"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "can erase a decade of careful work",
+        "may be killed by the next severe heatwave"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "the numbers are so vast",
+        "enormous numbers"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "many psychologists simply declined to believe",
+        "appears too demanding for their brains"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "in relation to everything around it",
+        "in relation to nearby objects"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "there is nothing in the ground left to detect",
+        "were not being guided by smell"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "when, and only when, memory pays",
+        "when it is most needed"
+      ]
+    },
+    "31": {
+      "vocab": [
+        "When the delay stretched to several days",
+        "how much time had passed since caching"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "Random search fails the arithmetic",
+        "by memory rather than chance"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "episodic-like memory",
+        "memory for events"
+      ],
+      "explain": "YES: the jays remembered what, where and how long ago — the writer names this episodic-like memory, previously reserved for humans.",
+      "evidence": "a bundle of information, sometimes called episodic-like memory"
+    },
+    "34": {
+      "vocab": [
+        "laboratory tasks may miss what matters",
+        "laboratory studies of caching prove nothing"
+      ],
+      "explain": "NO: the writer builds the whole case on laboratory work. The concern that 'an aviary floor is not a mountainside' is reported as the critics' point, not adopted as a dismissal.",
+      "evidence": "laboratory tasks may miss what matters in the wild, for an aviary floor is not a mountainside"
+    },
+    "35": {
+      "vocab": [
+        "rival those of primates",
+        "superior to that of any mammal"
+      ],
+      "explain": "NOT GIVEN: the writer says the birds rival primates at spatial memory. 'Rival' is not 'superior to', and no ranking is claimed.",
+      "evidence": "perform feats of spatial memory that rival those of primates"
+    },
+    "36": {
+      "vocab": [
+        "did not evolve once, in us, but many times",
+        "arose only once in evolution"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "a spot displaced by exactly the distance",
+        "a spot shifted by the same distance"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "store little or nothing",
+        "do not hide food"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "has itself pilfered other birds' caches",
+        "its own history of stealing"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "vary from one study",
+        "differ from one study"
+      ]
+    }
+  },
+  "mock6-listening": {
+    "2": {
+      "vocab": [
+        "what date is the journey",
+        "Date of journey"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "send the car",
+        "Pick-up time"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "where should the driver collect you from",
+        "Pick-up address"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "nothing extra to pay for the cases",
+        "luggage included"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "there's no charge for that at all",
+        "provided free of charge"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "You pay the driver directly",
+        "Payment"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "He'll stand beside",
+        "driver will wait beside"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "the reminder itself",
+        "Confirmation"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "taking them out and building new ones",
+        "replace the changing rooms"
+      ]
+    },
+    "12": {
+      "vocab": [
+        "for the whole of the first month",
+        "during the opening month"
+      ]
+    },
+    "13": {
+      "vocab": [
+        "Monday to Friday",
+        "on weekdays"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "all class bookings move to",
+        "how should visitors book a place in a class"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "when the pool is practically empty",
+        "at quiet times"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "taken out and replaced",
+        "completely new equipment"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "built for people who have never climbed before",
+        "is designed for beginners"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "It's now on the ground floor",
+        "has moved to a new location"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "you can't use at the moment",
+        "is temporarily closed"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "we're aiming for November",
+        "will open later in the year"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "the request came from him",
+        "the café manager asked for help"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "people scan it with their phone",
+        "reached by scanning a code"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "pushing people towards the reply you want",
+        "suggest a particular answer"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "If somebody buys something in that cafe",
+        "anyone who uses the café"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "a single crowd",
+        "only one type of customer"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "Test it small, first",
+        "try it out on a small group"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "How long people wait",
+        "the length of the queues"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "sit down with Bekzod",
+        "meet the café manager"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "Take a lunch hour",
+        "spend a lunchtime"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "circulated as",
+        "used as"
+      ]
+    },
+    "34": {
+      "vocab": [
+        "far too bitter for European mouths",
+        "to suit their taste"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "force out its fat",
+        "separated cocoa"
+      ]
+    },
+    "38": {
+      "vocab": [
+        "milk that had been dried into a powder",
+        "using dried"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "stirred, and stirred again",
+        "hours of stirring"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "Something like seventy per cent of the world's beans",
+        "most cacao"
+      ]
+    }
+  },
+  "mock6-reading": {
+    "2": {
+      "vocab": [
+        "the entire body of the mill",
+        "the whole body of the mill"
+      ]
+    },
+    "3": {
+      "vocab": [
+        "taking cloth in when a gale threatened",
+        "adjusting the amount of"
+      ]
+    },
+    "4": {
+      "vocab": [
+        "rotated",
+        "turned"
+      ]
+    },
+    "5": {
+      "vocab": [
+        "the mill could steer itself",
+        "a mill to turn itself"
+      ]
+    },
+    "6": {
+      "vocab": [
+        "much of the land lies below the level of the sea",
+        "low-lying fields"
+      ]
+    },
+    "7": {
+      "vocab": [
+        "the mills fell idle by the thousand",
+        "Windmills lost their importance"
+      ]
+    },
+    "8": {
+      "vocab": [
+        "for which reliable evidence survives",
+        "well-documented"
+      ]
+    },
+    "9": {
+      "vocab": [
+        "still photographing working examples",
+        "still operating"
+      ]
+    },
+    "10": {
+      "vocab": [
+        "was no copy",
+        "used the same design"
+      ]
+    },
+    "11": {
+      "vocab": [
+        "with nobody watching",
+        "removed the need for mills to be turned by hand"
+      ],
+      "explain": "TRUE: after the fantail the mill could steer itself day and night, with nobody watching — which is exactly what the miller used to do by hand.",
+      "evidence": "From that moment the mill could steer itself, day and night, with nobody watching"
+    },
+    "12": {
+      "explain": "NOT GIVEN: millwrights are described as travelling craftsmen carrying practical mechanics in their heads, but their earnings are never mentioned.",
+      "evidence": "the millwright — the travelling craftsman who built and repaired them"
+    },
+    "13": {
+      "vocab": [
+        "hundreds have been restored",
+        "historic windmills survive"
+      ]
+    },
+    "14": {
+      "vocab": [
+        "promises a million new trees",
+        "promising large planting programmes"
+      ]
+    },
+    "15": {
+      "vocab": [
+        "many thousands of residents",
+        "very large numbers of people"
+      ]
+    },
+    "16": {
+      "vocab": [
+        "as many as half of the new trees have died",
+        "the proportion of newly planted trees that die"
+      ]
+    },
+    "17": {
+      "vocab": [
+        "several times the tree cover of poorer ones",
+        "tree cover differs between rich and poor districts"
+      ]
+    },
+    "18": {
+      "vocab": [
+        "evaporating sweat cools skin",
+        "sweating cools the body"
+      ]
+    },
+    "19": {
+      "vocab": [
+        "bare streets",
+        "unshaded streets"
+      ]
+    },
+    "20": {
+      "vocab": [
+        "people living on tree-lined streets",
+        "Residents of tree-lined streets"
+      ]
+    },
+    "21": {
+      "vocab": [
+        "holding back part of every downpour",
+        "hold back rainwater during storms"
+      ]
+    },
+    "22": {
+      "vocab": [
+        "no tree should go into the ground without a funded plan",
+        "every tree needs a funded plan"
+      ]
+    },
+    "23": {
+      "vocab": [
+        "pay for planting ceremonies and nothing afterwards",
+        "Money spent on planting"
+      ]
+    },
+    "24": {
+      "vocab": [
+        "works like a quiet outdoor air conditioner",
+        "like an appliance"
+      ]
+    },
+    "25": {
+      "vocab": [
+        "returns several times its planting and maintenance cost",
+        "worth several times what they cost"
+      ]
+    },
+    "26": {
+      "vocab": [
+        "Wealth explains part of the pattern",
+        "not fully explained by residents' wealth"
+      ]
+    },
+    "27": {
+      "vocab": [
+        "did something quite different",
+        "navigate differently"
+      ]
+    },
+    "28": {
+      "vocab": [
+        "corrected for the time of day",
+        "makes allowance for the time of day"
+      ]
+    },
+    "29": {
+      "vocab": [
+        "Nor need the two be rivals",
+        "They may both operate in a single animal"
+      ]
+    },
+    "30": {
+      "vocab": [
+        "carrying overlapping instruments",
+        "several overlapping systems"
+      ]
+    },
+    "32": {
+      "vocab": [
+        "raised in a planetarium",
+        "raised under an artificial sky"
+      ]
+    },
+    "33": {
+      "vocab": [
+        "returning from years in the open sea",
+        "arriving from the open sea"
+      ]
+    },
+    "35": {
+      "vocab": [
+        "struggled to find their way back",
+        "found it hard to return home"
+      ]
+    },
+    "36": {
+      "vocab": [
+        "an inborn instruction",
+        "present in birds before their first journey"
+      ]
+    },
+    "37": {
+      "vocab": [
+        "decisive for neither",
+        "has been proved correct"
+      ]
+    },
+    "39": {
+      "vocab": [
+        "now looks misconceived",
+        "a mistaken approach"
+      ]
+    },
+    "40": {
+      "vocab": [
+        "Much remains genuinely unknown",
+        "Scientists now fully understand"
+      ]
+    }
+  }
+}

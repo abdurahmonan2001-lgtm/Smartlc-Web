@@ -1,0 +1,32 @@
+{
+  "id": "mock10-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A good, realistic paper. Parts 1-3 have the self-corrections and rejected options of the real test, and all keys are correct. One distractor in the Part 2 box was true of every walk, which could confuse students, and has been replaced. Part 4 is slightly easy because its notes follow the lecture almost word for word.",
+  "strengths": [
+    "Part 1 corrections are natural and frequent (Sunday -> Saturday, 10 -> 11 o'clock, 25 -> 28 thousand, 17th -> 24th March, CV vs reference).",
+    "Part 2 MCQs each name all three options and rule two out (single meeting point, evening walks; library, website; footpaths, map).",
+    "Part 3 is a lively two-student discussion in which every rejected option is raised and argued away.",
+    "Part 4 is a clear, well-organised academic lecture of good length (about 700 words)."
+  ],
+  "issues": [
+    {
+      "q": 15,
+      "severity": "medium",
+      "problem": "Box option B 'must be booked in advance' was true of every walk (the organiser says to book any walk at the tourist office), so a student could defensibly pick it for any of Q15-20.",
+      "fixed": true,
+      "change": "Replaced option B with 'offers reduced prices for children', which is not true of any walk. No answer key uses B, so no key changed."
+    },
+    {
+      "q": 31,
+      "severity": "low",
+      "problem": "Part 4 notes repeat the lecture's wording almost exactly (e.g. 'instruments called ___', 'known as ___', 'has become ___'), so Part 4 is easier than a typical real Part 4 and offers little paraphrase.",
+      "fixed": false,
+      "change": "Reword the notes (not the script), e.g. Q31 'recorded by ___ placed on the slopes', Q37 'a drop in gas output can signal a ___ vent', Q40 'data analysed together at an ___'."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 33
+  }
+}

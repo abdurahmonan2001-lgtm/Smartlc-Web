@@ -1,0 +1,45 @@
+{
+  "id": "mock3-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Parts 1 to 3 are at IELTS level with good distractors and all keys are correct. One plan direction contradicted the recording and is fixed on the map. Part 4 is short (618 words), has no distractors and its notes copy the lecture almost word for word, so it is easier than the real Part 4.",
+  "strengths": [
+    "Part 1: standard rate printed vs student rate tested, 1st refused for the 2nd, Zumba replaced by boxing, pool included but sauna charged, week normally vs five days now.",
+    "Part 2 MCQs name and reject both wrong options (visitors and health, council offices and docking stations, stadium and airport).",
+    "Part 3 is a well-built discussion: each MCQ answer comes after two clearly dismissed options, and the multi-selects need the speakers' reasons (tutor booked the minibus, notebooks too expensive)."
+  ],
+  "issues": [
+    {
+      "q": 16,
+      "severity": "medium",
+      "problem": "Plan labelling: the script places the repair workshop \"just to the left of the station entrance as you face it\". You face the station walking south down Station Road, so its left is the east (right-hand) side of the map, but letter C was drawn on the west side.",
+      "fixed": true,
+      "change": "Moved C to the east side of the Railway Station in public/practice-img/mock3-cycle-map.svg (circle and letter at x=418). The key stays C and no other letter is near the station."
+    },
+    {
+      "q": 25,
+      "severity": "low",
+      "problem": "The explanation said Aisha reports what Dr Novak insists on; in the script it is Daniel.",
+      "fixed": true,
+      "change": "Explanation corrected in mock-vocab-A.json."
+    },
+    {
+      "q": 31,
+      "severity": "medium",
+      "problem": "Part 4 is 618 words, has no distractors, and the notes repeat the script (Q31 \"shaped it into sharp {{31}}\", Q35 \"first to fit glass into {{35}}\", Q37 \"most famous products\", Q38 \"poured onto a bath of liquid {{38}}\", Q39 \"flashes of {{39}}\").",
+      "fixed": false,
+      "change": "Reword the notes now (no re-recording needed), e.g. Q35 \"Romans pioneered glass in {{35}}\", Q38 \"float process uses a bath of molten {{38}}\". At the next recording, add 200-250 words with a distractor or two (e.g. \"people assume Venice invented glassblowing, but ...\")."
+    },
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "Part 1 script is 530 words, at the short end for a full Part 1.",
+      "fixed": false,
+      "change": "Fine as is; if re-recorded, add one more exchange (e.g. a parking question) to reach about 600 words."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 30
+  }
+}

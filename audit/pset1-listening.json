@@ -1,0 +1,21 @@
+{
+  "id": "pset1-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A sound IELTS-format listening test: four parts of the right type and length, and every part has real traps (corrections, options mentioned and then rejected). Parts 1 and 4 are a little easier than the real test because the form and notes repeat the speakers' words almost exactly, so the paper is a fair 6.5-7 practice rather than a hard one.",
+  "strengths": [
+    "Part 1 has proper IELTS traps: a misheard date corrected (12th/21st), a price corrected (100 to 80 thousand), a time withdrawn (11.15 to 10.30), a day withdrawn (Monday), and telephone rejected for email.",
+    "Part 2 and Part 3 MCQs each mention and reject the two wrong options before the right one, as in the real test.",
+    "Part 3 multi-select items test listening for what is NOT borrowed or NOT needed (tripod, tape, sample bags; tide table, coastguard, printing), which is genuine IELTS style.",
+    "Part 4 is a coherent academic lecture of about 775 words; the notes follow the order of the talk and every answer is one word, spelled as heard.",
+    "Answers appear in question order in every part."
+  ],
+  "issues": [
+    { "q": 33, "severity": "medium", "problem": "Paraphrase pair broken: 'replaced with' does not occur in the script (the lecturer says 'replaced animal fat with olive oil').", "fixed": true, "change": "Pair now ['replaced animal fat with olive oil', 'used olive oil in place of animal']." },
+    { "q": 16, "severity": "low", "problem": "Box option A 'will run more often' repeats the lecturer's exact words 'it will simply run more often', so the item needs no paraphrase recognition.", "fixed": false, "change": "Suggest rewording option A to 'will have a more frequent service'." },
+    { "q": 17, "severity": "low", "problem": "Box option F 'will be extended to a new terminus' copies 'extended' and 'terminus' from the script.", "fixed": false, "change": "Suggest 'will go further than it does now' so students must link it to 'extended past the retail park'." },
+    { "q": 1, "severity": "low", "problem": "Part 1 (572 words) is at the short end, and most form rows (address, occupation, appointment, medication, reminder) repeat the speakers' wording, so Questions 1-4 and 6-9 carry no paraphrase.", "fixed": false, "change": "Acceptable for Part 1. For a harder version, reword some rows (e.g. 'Job' instead of 'Occupation', 'Medicines to list' instead of 'a list of any ... she takes regularly')." },
+    { "q": 31, "severity": "low", "problem": "Several Part 4 note lines are near-copies of the lecture sentences (31, 32, 37, 38, 39), which makes Part 4 a little easier than a real Part 4.", "fixed": false, "change": "In future sets, paraphrase more of the note stems (e.g. 'soap was one of the earliest branded goods' for 38)." }
+  ],
+  "paraphrasePairs": { "before": 13, "after": 32 }
+}

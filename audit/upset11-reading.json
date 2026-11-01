@@ -1,0 +1,23 @@
+{
+  "id": "upset11-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three well-written passages of real IELTS length (843, 858 and 859 words) whose difficulty rises properly, from a clear history of eyeglasses to a demanding C1 argument about the planning fallacy. The question types and traps are genuine IELTS; the first two passages are a little kinder than the real test, which is right for B2 students. I fixed a question-order error, one question with two possible answers, and one sentence ending that fitted two stems; pair coverage went from 29 to 38 of 40.",
+  "strengths": [
+    "Passage lengths 843/858/859 words; academic magazine register; passage 3 has genuinely C1 vocabulary and argument (inside/outside view, reference-class forecasting).",
+    "Good IELTS type mix: sentence completion, TFNG, matching information, summary completion, people matching with an extra name, MCQ, YNNG, sentence endings.",
+    "NOT GIVEN items are genuinely unaddressed (guild punishments, contact-lens usage, professions compared), and FALSE/NO items are clearly contradicted.",
+    "MCQ distractors echo passage wording (e.g. 'scaled-down', 'possess no information') while the keys paraphrase."
+  ],
+  "issues": [
+    { "q": 12, "severity": "medium", "problem": "TFNG order broken: Q12's evidence ('still lack the simple spectacles') comes after Q13's ('Contact lenses ... compete for the same eyes') in the last paragraph.", "fixed": true, "change": "Swapped the two statements: Q12 is now the contact-lens NOT GIVEN, Q13 the 'still do not have the glasses' TRUE. Pattern T F NG T F NG T, no runs of three." },
+    { "q": 19, "severity": "medium", "problem": "'buildings use less ______ for air conditioning' accepts 'energy' just as well as 'electricity' (paragraph A: 'drives up energy use').", "fixed": true, "change": "Answer is now ['electricity', 'energy']; explain mentions both." },
+    { "q": 37, "severity": "medium", "problem": "Ending A ('treats a new project as one case within a class of similar ones') describes reference-class forecasting (Q38) even more literally than the outside view, so a student could defensibly put A for Q38.", "fixed": true, "change": "Ending A rewritten to 'relies on information that nearly everyone has but hardly anyone uses.' (only the outside view); Q37 explain/evidence updated." },
+    { "q": 21, "severity": "low", "problem": "Pair sides were reversed.", "fixed": true, "change": "Now ['a coating of', 'a layer of'], the paraphrase the explanation teaches." },
+    { "q": 39, "severity": "low", "problem": "Pair text side 'file away as an exception' not in the passage.", "fixed": true, "change": "Now ['file each one away as an exception', 'every overrun seems exceptional']." },
+    { "q": 32, "severity": "low", "problem": "Pair question side 'does not cure' is not in the statement; the same was true of Q19 ('use less electricity'), Q34 ('breaking into parts') and Q24/Q25/Q29/Q31 were weak.", "fixed": true, "change": "All replaced with phrases copied from both sides (e.g. Q32 ['learning from past overruns', 'repeated experience of overruns'], Q34 ['unpack a project into its parts', 'Breaking a project into smaller parts'])." },
+    { "q": 7, "severity": "low", "problem": "'had nothing to fix them to the wearer's head' - pinching them onto the nose could be argued as a way of fixing; TRUE is still the best answer (no arms).", "fixed": false, "change": "Optional rewording: 'The earliest spectacles had no side pieces to hold them in place.'" },
+    { "q": 14, "severity": "low", "problem": "Matching information Q14-18 uses five different paragraphs out of six, one each, so the 'NB any letter more than once' rubric never applies and elimination makes it easier.", "fixed": false, "change": "In a future set, let one paragraph answer two items." }
+  ],
+  "paraphrasePairs": { "before": 29, "after": 38 }
+}

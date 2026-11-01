@@ -1,0 +1,23 @@
+{
+  "id": "upset8-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built Pre-IELTS listening paper. All four parts follow the real IELTS format, the scripts are full length (about 630 / 730 / 870 / 820 words), and Parts 1-3 have genuine distractors such as self-corrections and options that are mentioned and then rejected. It is gentler than the real test mainly because the Part 1 form gives away some traps in brackets and the Part 4 notes repeat the lecturer's words almost exactly. That is about right for B2 students.",
+  "strengths": [
+    "Part 1 has good IELTS traps: a spelled surname, a corrected date (22nd to 24th), a corrected length of stay (16 to 17 days), gate price vs online price, valet vs wash, junction 9 vs 8, email vs text.",
+    "Part 2 MCQs each reject two options that really are mentioned in the script (brother-in-law and documentary; first aid and indoor work; climbers and floods; government and local firms).",
+    "The Part 2 matching box has two believable extra options ('a gift from another rescue team', 'not used in winter'), and each comment fits only one item.",
+    "Part 3 is a natural discussion that reports the tutor's advice, with two multi-select sets where three of the five ideas are discussed and rejected.",
+    "All answers appear in question order and all keys are correct."
+  ],
+  "issues": [
+    { "q": 11, "severity": "medium", "problem": "The speaker is Carol (a woman), but option A said 'being rescued by it himself' and the explanation said 'made him join'. The prompt 'first became involved with the team' was also arguable, because she had already been going to the team's open days before her accident.", "fixed": true, "change": "Prompt now reads 'The speaker decided to join the team after'; option A reads 'being rescued by it herself'; explanation changed to 'her'/'herself'. Key A unchanged." },
+    { "q": 12, "severity": "low", "problem": "The paraphrase pair used 'longer than expected', which is not in the option ('It takes longer than most people expect').", "fixed": true, "change": "Pair is now ['that surprises almost everybody', 'longer than most people expect']." },
+    { "q": 26, "severity": "low", "problem": "The paraphrase pair used 'examine in detail', which is not continuous text in the option ('examine one finding in detail').", "fixed": true, "change": "Pair is now ['the single most interesting trend', 'one finding']." },
+    { "q": 13, "severity": "low", "problem": "Several existing pairs were single words or weak (Q13 'the great majority'/'most', Q15 'refitted'/'updated', Q17).", "fixed": true, "change": "Replaced with fuller phrases copied from the script and the question, e.g. ['the great majority of our call-outs', 'Most of the team's call-outs']." },
+    { "q": 5, "severity": "medium", "problem": "The Part 1 form gives away its own distractors in brackets: 'the East car park is full that week', '(not junction 9 — roadworks)', 'nothing sent by post', and the Q7 price '(25 pounds)' identifies the wash. In the real test the student must hear the correction.", "fixed": false, "change": "Suggest removing those hints from the table rows, e.g. 'Car park: the {{5}} car park', 'Directions: leave the motorway at junction {{9}}', 'Confirmation: booking reference sent by {{10}}', 'Extra service: a {{7}} for the car'. The audio does not need to change." },
+    { "q": 31, "severity": "medium", "problem": "The Part 4 notes copy the lecture almost word for word ('drills powered by compressed {{37}}', 'the first tunnel built under a major {{35}}', 'pushing with their {{34}} against the walls'), and there are no distractors, so Part 4 is mostly word-spotting. Q34, Q35 and Q40 have no real paraphrase to pair.", "fixed": false, "change": "Suggest rewording some note lines so they paraphrase the lecture, e.g. Q35 'the first tunnel to go beneath a large {{35}}', Q37 'drills driven by compressed {{37}}', Q40 'idea being tested: moving {{40}} between cities in small driverless wagons'." },
+    { "q": 15, "severity": "low", "problem": "Question type mix: there is no map/plan labelling in Part 2 (MCQ and matching only). Acceptable, but students do not practise a map in this set.", "fixed": false, "change": "Consider a plan-labelling task (for example the base tour) in a future set." }
+  ],
+  "paraphrasePairs": { "before": 12, "after": 34 }
+}

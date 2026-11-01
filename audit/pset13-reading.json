@@ -1,0 +1,74 @@
+{
+  "id": "pset13-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three good-length passages (909, 956 and 991 words) with difficulty rising properly, from a clear history of locks to a C1-level argumentative psychology text. The keys were sound; I removed one ambiguous gap (Q5), put the Yes/No/Not Given questions back into passage order and tightened one sentence ending. The main weakness is that Passage 2 tests several facts twice across its three question sets.",
+  "strengths": [
+    "Passage 3 is genuinely C1: argumentative and hedged, with the writer's view to be inferred (Q29, Q34).",
+    "T/F/NG and Y/N/NG are clean: FALSE/NO items are contradicted, NOT GIVEN items are genuinely unaddressed.",
+    "A good mix of IELTS types: sentence completion, TFNG, matching information, summary completion, matching people, MCQ, YNNG, sentence endings.",
+    "MCQ distractors are plausible and each is tied to something in the text."
+  ],
+  "issues": [
+    {
+      "q": 5,
+      "severity": "medium",
+      "problem": "Two defensible answers: 'the authorities offered a locksmith his freedom' also fits, since the convict was 'a locksmith by trade'.",
+      "fixed": true,
+      "change": "Prompt now reads 'offered a ______ with locksmithing skills his freedom and a sum of money', so only 'convict' fits; explain updated."
+    },
+    {
+      "q": "33-35",
+      "severity": "medium",
+      "problem": "Y/N/NG not in passage order: Q33 (older people, paragraph 7) came before Q34 (paragraph 6) and Q35 (paragraph 5).",
+      "fixed": true,
+      "change": "Swapped the content of Q33 and Q35: Q33 is now 'difficult aims' (NO), Q35 'Older people' (NOT GIVEN). Pattern Y N N Y NG. Any results saved before this change hold Q33/Q35 in the old order."
+    },
+    {
+      "q": 39,
+      "severity": "low",
+      "problem": "Ending G 'can give a misleading impression of what the emotion actually does' could also be argued for Q40 (confusion with collective nostalgia gives nostalgia its bad reputation).",
+      "fixed": true,
+      "change": "Ending G reworded to 'says more about a person's situation than about what the emotion does', which fits Q39 only; explain and pair updated."
+    },
+    {
+      "q": "14, 15, 18, 20, 24, 28, 30, 31, 38",
+      "severity": "low",
+      "problem": "Weak or broken paraphrase pairs: one side contained in the other (e.g. 'journeys' / 'urban journeys'), or the two sides meaning different things (e.g. 'wait longest' / 'the order in which facilities are provided').",
+      "fixed": true,
+      "change": "Replaced with real paraphrases, e.g. 'the order in which cycle lanes get built' / 'the order in which facilities are provided', 'merchants' / 'Traders', 'bring to mind an event from their own past' / 'recalling a nostalgic event', 'has come through something' / 'have survived hardship'."
+    },
+    {
+      "q": 10,
+      "severity": "low",
+      "problem": "No pair.",
+      "fixed": true,
+      "change": "Added ['the double-acting lever tumbler', \"Barron's lever lock\"], the paraphrase that locates this NOT GIVEN item."
+    },
+    {
+      "q": "14-26",
+      "severity": "medium",
+      "problem": "Passage 2 tests the same facts twice: Q14/Q20 (Ferreira, network), Q16/Q24 (shopkeepers' belief), Q17/Q21 (junctions), Q18/Q25 (Tanaka, building order), Q22/Q26 (Duarte, theft). A student who finds one gets the other almost free, which weakens discrimination.",
+      "fixed": false,
+      "change": "Suggest re-targeting one of each pair to unused details: the 1973 oil shock or Stop de Kindermoord (A), the 'interested but concerned' sixty per cent (B), Halvorsen's twenty-to-one health ratio (D), the Utrecht garage (E), one car space holding ten bicycles (F), e-bikes and cargo bikes missing from plans (G)."
+    },
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "Q2 is pure scanning: the prompt copies the passage sentence almost word for word. Q1-6 are on the easy side overall, acceptable for Passage 1.",
+      "fixed": false,
+      "change": "Suggest paraphrasing the prompt, e.g. 'Some Roman keys became so tiny that they could be worn like a piece of ______.' Left without a pair (nothing to pair)."
+    },
+    {
+      "q": 35,
+      "severity": "low",
+      "problem": "NOT GIVEN item has no genuine paraphrase to pair.",
+      "fixed": false,
+      "change": "Left without a pair."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 37,
+    "after": 38
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "pset2-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three well-written passages of about 820 words in true IELTS style, rising from a history text to a psychology argument, with a good mix of question types. Three groups of questions were out of passage order (which real IELTS never does), and I have put them in order. Passage 1 is on the easy side because some questions copy the passage word for word.",
+  "strengths": [
+    "Passage lengths (826, 816, 826 words) and register are right; Passage 3 ('The scent of the past') has C1 vocabulary and a real argument with sceptical counter-evidence.",
+    "Good question mix: sentence completion, T/F/NG, matching information, summary completion, matching people with an extra name, MCQ, Y/N/NG, and a summary with a word list.",
+    "MCQ distractors are well built: Q29 A and B are explicitly ruled out ('not produced any faster', 'no richer in checkable detail'), and C reverses the passage (people are more confident, not less).",
+    "NOT GIVEN items are genuinely unaddressed (road-building time, bridges in use today, Proust being first)."
+  ],
+  "issues": [
+    { "q": 5, "severity": "high", "problem": "Sentence completion Q5 (milestones) and Q6 (soldiers) were out of passage order: the passage mentions soldiers first.", "fixed": true, "change": "Swapped the two items so Q5 = soldiers, Q6 = milestones; numbering and type kept." },
+    { "q": 19, "severity": "high", "problem": "Summary gaps 19 (noise) and 20 (direction) were out of passage order: paragraph C gives 'any direction' before the noise point. The summary also credited the noise to the horizontal-axis machine's 'fast-moving blade tips', which the passage only implies.", "fixed": true, "change": "Rewrote the two summary lines: 19 = 'accepts wind from any ____ without turning' (direction), 20 = 'its slower blade tips also make far less of the aerodynamic ____' (noise). Explanations and evidence moved with them." },
+    { "q": 31, "severity": "high", "problem": "Y/N/NG Q31 (anatomy, paragraph 2) came before Q32 (Proust, paragraph 1): out of passage order.", "fixed": true, "change": "Swapped: Q31 = Proust first to notice (NOT GIVEN), Q32 = direct connection physically real (YES)." },
+    { "q": 29, "severity": "medium", "problem": "Pair's question side 'earlier in life' is not in option D ('date from earlier in a person's life').", "fixed": true, "change": "Pair now ['cluster in the first decade of life', 'date from earlier in a person's life']." },
+    { "q": 38, "severity": "medium", "problem": "Pair's question side 'early childhood' is not visible to the student (the summary reads 'early {{38}}'; childhood is the answer).", "fixed": true, "change": "Pair now ['most densely before the age of ten', 'most often into early']." },
+    { "q": 2, "severity": "low", "problem": "Q1, Q2 and Q7 copy the passage almost word for word ('marked out on the ground with wooden', 'relay stations'); the explanation for Q2 even says so. Passage 1 completion is easier than IELTS.", "fixed": false, "change": "Suggest e.g. Q2 'Wooden ______ showed workers where the road would go.'" },
+    { "q": 22, "severity": "low", "problem": "Summary gap 22 repeats 'a few per cent of a household's annual' exactly.", "fixed": false, "change": "Suggest 'covers only a tiny share of what a home uses in a year: its annual ______'." }
+  ],
+  "paraphrasePairs": { "before": 20, "after": 34 }
+}

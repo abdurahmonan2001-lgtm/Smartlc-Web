@@ -1,0 +1,22 @@
+{
+  "id": "pset1-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A genuine IELTS Academic reading paper: three passages of 820-880 words in a good magazine/textbook style, difficulty rising from a history narrative to an argued science article, and a full mix of question types. The main fault was that the Yes/No/Not Given questions were out of passage order; that is now fixed, along with one summary gap that had two defensible answers.",
+  "strengths": [
+    "Passage lengths (840, 821, 878 words) and register match Cambridge IELTS; Passage 3 has C1 vocabulary and argument (dual-systems model, its critics, trade-off conclusion).",
+    "Good type mix: note completion, T/F/NG, matching information, summary completion, matching people with one extra name, MCQ, Y/N/NG and sentence endings.",
+    "NOT GIVEN items are genuinely unaddressed (Samarkand secrecy, today's paper, teenagers of earlier generations), and FALSE/NO items are clearly contradicted.",
+    "MCQ distractors echo the passage's wording while the key paraphrases it (e.g. Q27 B, Q30 C), which is exactly how IELTS builds traps."
+  ],
+  "issues": [
+    { "q": 32, "severity": "high", "problem": "Y/N/NG Questions 31-35 were not in passage order: Q35 (school start times) is in paragraph 4 but came after Q32-34 (paragraphs 5-6).", "fixed": true, "change": "Reordered the statements, keeping numbers and type: Q32 school start times (NO), Q33 dual-systems model beyond criticism (NO), Q34 teenagers of earlier generations (NOT GIVEN), Q35 adaptability benefits and dangers (YES). Keys now Y, N, N, NG, Y in passage order." },
+    { "q": 22, "severity": "medium", "problem": "'the technology's limited ____' accepts 'scale' as well as 'capacity' ('they dispute the arithmetic of scale'); 'capacity' only appears inside 'high-capacity'.", "fixed": true, "change": "Added 'scale' as an accepted answer and rewrote the explanation." },
+    { "q": 25, "severity": "medium", "problem": "Paraphrase pair's question side 'rarer than imagined' is not in the question ('rarer than people imagine').", "fixed": true, "change": "Pair now ['loom larger in imagination than in the record', 'rarer than people imagine']." },
+    { "q": 39, "severity": "medium", "problem": "Paraphrase pair's question side 'waking early is difficult' is not in ending C.", "fixed": true, "change": "Pair now ['dragged from deep sleep by a school bell', 'makes waking early genuinely difficult']." },
+    { "q": 22, "severity": "low", "problem": "Old pair ['arithmetic of scale', 'limited capacity'] used the answer word, which the student never sees in the summary.", "fixed": true, "change": "Pair now ['critics do not dispute any of that', 'Critics accept these advantages']." },
+    { "q": 0, "severity": "low", "problem": "Passage 3 typo: 'it fitted on a single word: hormones'.", "fixed": true, "change": "Changed to 'it fitted into a single word'." },
+    { "q": 1, "severity": "low", "problem": "Q1 and Q5 copy the passage wording almost exactly ('discarded fishing nets', 'almost entirely from rags'), so Passage 1 note completion is easy.", "fixed": false, "change": "Suggest e.g. Q1 'Cai Lun also used old ______ that fishermen had thrown away'." }
+  ],
+  "paraphrasePairs": { "before": 24, "after": 38 }
+}

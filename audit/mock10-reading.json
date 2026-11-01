@@ -1,0 +1,19 @@
+{
+  "id": "mock10-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three good passages (the elevator, city noise, deliberate practice) at real IELTS length, with passage 3 the most demanding. All keys were correct, but two pairs of questions in passage 1 were out of passage order (one pair of completion gaps and one pair of TRUE/FALSE/NOT GIVEN statements); both pairs have been swapped so the questions follow the text.",
+  "strengths": [
+    "Passage 2 combines matching information, summary completion and matching people, with five experts each holding a distinct view.",
+    "Passage 3 is a real academic argument (claim, counter-claim, synthesis) well suited to Y/N/NG and sentence endings.",
+    "NOT GIVEN items (Q10, Q38) are genuinely unaddressed; FALSE/NO items are clearly contradicted.",
+    "Sentence endings (Q31-35) have two good unused distractors."
+  ],
+  "issues": [
+    { "q": 2, "severity": "medium", "problem": "Completion Q2 (the axe, paragraph 4) came before Q3 (the spring, paragraph 3), so the gaps did not follow passage order.", "fixed": true, "change": "Swapped: Q2 is now the spring question (answer 'spring'), Q3 the axe question (answer 'axe'). Explain/evidence swapped in the overlay." },
+    { "q": 11, "severity": "medium", "problem": "T/F/NG Q11 (electric elevators faster) came before Q12 (tall buildings slow to appear), but the passage gives them in the opposite order.", "fixed": true, "change": "Swapped: Q11 is now 'Very tall buildings appeared as soon as...' (FALSE), Q12 'Electric elevators operated at higher speeds...' (TRUE). Explain/evidence swapped in the overlay. Results saved earlier for Q2/3 and Q11/12 were marked against the old order." },
+    { "q": 32, "severity": "low", "problem": "Ending A ('was an average across a group, not a target for individuals') almost copies the passage ('an average across a group, not a threshold for individuals').", "fixed": false, "change": "Suggest 'described a typical figure for a group rather than a goal for each person.'" },
+    { "q": 13, "severity": "low", "problem": "Q13 is a T/F/NG statement phrased as 'The writer believes...', which is Y/N/NG wording.", "fixed": false, "change": "Suggest 'The elevator changed which floors of a building people wanted to occupy.' (TRUE)." }
+  ],
+  "paraphrasePairs": { "before": 0, "after": 36 }
+}

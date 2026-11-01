@@ -1,0 +1,46 @@
+{
+  "id": "mock2-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong paper: everyday booking call, a social-setting talk with a well-built matching box, a two-student discussion full of rejected options, and an 826-word lecture. All keys are correct; one explanation named the wrong speaker and is fixed.",
+  "strengths": [
+    "Part 1 has textbook distractors: birthday rejected for anniversary, the 7th taken so the 14th, fifty corrected to sixty, the weekday rate printed and the weekend rate tested.",
+    "Part 2 MCQs name both wrong options first as things people assume (Q11, Q13, Q14), and the matching box includes a deliberate trap (\"brand new\" play area vs \"just been rebuilt\" chicken house).",
+    "Part 3 multi-selects require listening to which problems are dismissed (noise, word list, session length) and which changes are refused (quieter room, reward, shorter questionnaire).",
+    "Part 4 gives a full lecture with dates, a misleading \"first market\" (cars vs bicycles) and paraphrased note headings."
+  ],
+  "issues": [
+    {
+      "q": 27,
+      "severity": "low",
+      "problem": "The explanation said Nilufar lists the two serious problems; in the script Karim names them and Nilufar agrees.",
+      "fixed": true,
+      "change": "Explanation corrected in mock-vocab-A.json."
+    },
+    {
+      "q": 7,
+      "severity": "low",
+      "problem": "The old paraphrase pair used \"returned after the event\", which is not in the table the student reads; Q7 has no real paraphrase (the table says \"Deposit (refundable)\").",
+      "fixed": true,
+      "change": "Pair removed (vocab set to null)."
+    },
+    {
+      "q": 18,
+      "severity": "low",
+      "problem": "Q18 option \"has just been rebuilt\" is heard word for word (\"it has just been rebuilt\").",
+      "fixed": false,
+      "change": "Reword the option, e.g. \"has been replaced after an attack\"."
+    },
+    {
+      "q": 35,
+      "severity": "low",
+      "problem": "A few Part 4 notes echo the lecture exactly (\"heated rubber together with {{35}}\", \"the milky {{31}} of a tropical tree\").",
+      "fixed": false,
+      "change": "Reword, e.g. \"1839: Goodyear combined rubber and {{35}} under heat\"."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 7,
+    "after": 34
+  }
+}

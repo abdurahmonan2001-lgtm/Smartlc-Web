@@ -1,0 +1,19 @@
+{
+  "id": "pset4-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A realistic IELTS listening test with proper traps in every part (a date changed because the flight lands late, two car prices, a closed branch, rejected sites and timings). Part 4's notes stay quite close to the lecturer's words, so it is slightly easier than a real Part 4. Answer keys were correct; I only widened three keys to accept numbers written as words.",
+  "strengths": [
+    "Part 1 tests real listening: 11th/12th July, automatic 550 vs manual 450, airport not city centre, text replaced by email.",
+    "Part 2 (708 words) rejects both wrong options in every MCQ and has a well-built map-style matching box with two unused distractors.",
+    "Part 3 multi-select items require tracking 'in' and 'out' decisions across a long exchange, with three explicit traps in Q29-30.",
+    "Part 4 is a coherent 800-word lecture; notes follow the talk's order and gaps are single, correctly spelled words."
+  ],
+  "issues": [
+    { "q": 4, "severity": "low", "problem": "Key accepted only '450' while other numeric gaps in the set accept the number in words.", "fixed": true, "change": "Key now ['450', 'four hundred and fifty']; Q6 now ['500', 'five hundred']; Q3 also accepts 'twelfth'." },
+    { "q": 15, "severity": "low", "problem": "Box option C 'is the only area where cooking is permitted' copies the speaker's sentence ('the only part of the market where cooking is permitted').", "fixed": false, "change": "Suggest 'is where all hot food must be prepared'." },
+    { "q": 37, "severity": "low", "problem": "Part 4 notes 33-39 keep the lecture's collocations (motor show in, a drop of, car dealer, open-air museum), so most gaps are found by matching words rather than meaning.", "fixed": false, "change": "Reword some stems, e.g. 39 'Las Vegas now displays hundreds of saved signs outdoors in a ______'." },
+    { "q": 1, "severity": "low", "problem": "Part 1 rows mostly repeat the script (deposit, daily rate, confirmation), so paraphrase coverage in Part 1 is low (4 of 10).", "fixed": false, "change": "Normal for Part 1; no change needed." }
+  ],
+  "paraphrasePairs": { "before": 21, "after": 31 }
+}

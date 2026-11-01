@@ -1,0 +1,19 @@
+{
+  "id": "mock9-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three long, well-written academic passages (maps, seaweed farming, left-handedness) at real IELTS length and difficulty, with passage 3 the hardest. The YES/NO/NOT GIVEN set in passage 3 was out of passage order and one of its statements could be argued both ways; it has been reordered and that statement replaced. One sentence ending overstated the passage and was reworded.",
+  "strengths": [
+    "All three passages are 889-907 words, with C1 vocabulary and argument in passages 2 and 3.",
+    "Passage 3 is a fine argument text: myths are raised and dismantled, which suits Y/N/NG and sentence-ending matching.",
+    "Multiple-choice pairs (Q23-26) have well-built distractors, including one contradicted by the passage (permanent carbon removal).",
+    "Completion answers are single words copied from the passage, in passage order."
+  ],
+  "issues": [
+    { "q": 32, "severity": "medium", "problem": "Q31-35 were not in passage order (the forcing-children statement, from the last part of the passage, came second; the sport statements came after it).", "fixed": true, "change": "Reordered: Q31 creativity (YES), Q32 sports pay (NOT GIVEN), Q33 new sports statement (NO), Q34 everyday objects (YES), Q35 forcing children to switch hands (NO). Explain/evidence moved to match in the overlay. Results saved earlier for Q32-35 were marked against the old order." },
+    { "q": 35, "severity": "medium", "problem": "The old statement 'The proportion of left-handers in the population is likely to rise substantially' (keyed NO) was a prediction the writer never makes. The passage only says the sporting advantage would shrink if left-handers became numerous, so NOT GIVEN was also defensible.", "fixed": true, "change": "Replaced with a clearly contradicted statement in the right position: Q33 'Left-handers are over-represented in sports where competitors perform alone, such as swimming.' (NO)." },
+    { "q": 38, "severity": "low", "problem": "Ending F said the advantage 'would disappear if the minority ever became a majority'; the passage says it 'would shrink if left-handers ever became numerous'. That is an overstatement, so the correct answer was not quite true.", "fixed": true, "change": "Ending F reworded to 'would weaken if left-handers became far more common.'" },
+    { "q": 25, "severity": "low", "problem": "Option D 'a shortage of species suitable for cultivation' sits close to paragraph E (Asparagopsis is hard to cultivate in bulk) and paragraph F (few strains). It is not the key, but a strong student may hesitate.", "fixed": false, "change": "Optional: reword D to something clearly unsupported, e.g. 'a lack of suitable coastal sites'." }
+  ],
+  "paraphrasePairs": { "before": 0, "after": 37 }
+}

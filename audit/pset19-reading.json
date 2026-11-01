@@ -1,0 +1,20 @@
+{
+  "id": "pset19-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong, full-length paper (915, 953 and 978 words) on the chimney, empty high-street shops and the psychology of awe. Passage 3 is properly hard. All the keys are correct. Two explanations misreported the passage, and one matching item depended on a date the passage never gives. All three were fixed. The passage 2 question set again tests the same facts twice.",
+  "strengths": [
+    "Passage 3 has a clear academic argument with a section on methodological caution (replication, sample size), which is typical of a real passage 3.",
+    "The Y/N/NG items are clean, and Q33 (country versus city dwellers) is a good NOT GIVEN that tempts students to bring in their own assumptions.",
+    "The MCQ distractors echo vocabulary from other parts of the text (Q27 C and D; Q29 D confuses one study with the whole field).",
+    "The summary answers (footfall, loop, daylight, entrance) are single words from the passage, in passage order."
+  ],
+  "issues": [
+    { "q": 17, "severity": "medium", "problem": "'a claim that towns already had too much shop space before internet shopping arrived' (answer B). Paragraph B never links the oversupply to the arrival of online shopping. It says towns kept adding floorspace 'long after that logic had gone' and gives figures for the twenty years to 2008. Matching the item depended on outside knowledge of when online shopping began.", "fixed": true, "change": "The prompt is now 'a claim that towns kept adding shop space after the original need for it had gone'. The explanation and pair were updated." },
+    { "q": 7, "severity": "low", "problem": "The explanation said the smoke 'kept the thatch dry', which the passage does not say.", "fixed": true, "change": "The explanation now quotes the two benefits the passage does give: curing meat and discouraging insects in the thatch." },
+    { "q": 11, "severity": "low", "problem": "The evidence line ('narrow the throat sharply') was about the throat, not the opening the statement is about.", "fixed": true, "change": "The evidence is now 'most fireplaces had an opening far too wide'." },
+    { "q": 26, "severity": "medium", "problem": "Passage 2 tests the same facts twice: Q14 and Q26 (Lindqvist, C), Q18 and Q25 (Pryce, D), Q15 and Q23 (Adeyemi, E), and Q17 and Q24 (Vasquez, B).", "fixed": false, "change": "Suggestion: change the people-matching statements to points not tested elsewhere, e.g. Lindqvist's claim that clustered closures do more harm than scattered ones, or Chen's point that the shared rear access blocks the upper floors." },
+    { "q": 13, "severity": "low", "problem": "Paraphrase pairs: the question sides for Q13, Q19 and Q31 were not exact copies of the paper, and the Q20 pair ('it can run on for years' / 'self-feeding') was not a paraphrase.", "fixed": true, "change": "All rewritten, e.g. Q13 ['passed and ignored', 'worked immediately'], Q20 ['Lindqvist calls the result', 'Lindqvist gives this self-feeding process the name']. New pairs were added for Q1, Q4 and Q5." }
+  ],
+  "paraphrasePairs": { "before": 34, "after": 37 }
+}

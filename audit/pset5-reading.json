@@ -1,0 +1,20 @@
+{
+  "id": "pset5-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good IELTS-style passages (849-891 words) on weather forecasting, urban wetlands and habits, getting harder from 1 to 3, with a full range of question types and mostly well-paraphrased questions. Two groups were out of passage order (a summary in Passage 2 and the Yes/No/Not Given set in Passage 3); both are now reordered. All answer keys were correct.",
+  "strengths": [
+    "Passage 1 completion items paraphrase rather than copy (felt/sense, vast/enormous, transmitting photographs/sent back pictures), and TFNG traps are well judged (Q9 'fishing' appears in the text but says nothing about funding).",
+    "Passage 2 has seven lettered paragraphs, a five-name people match with one unused name, and information-matching items that require paraphrase (organisms/bacteria; destroyed/drained, filled and buried).",
+    "Passage 3 is an argued text at C1 level; sentence endings include distractors that reverse the passage (C, F).",
+    "Key quality is high: every FALSE/NO is directly contradicted and every NOT GIVEN is genuinely absent."
+  ],
+  "issues": [
+    { "q": 22, "severity": "high", "problem": "Summary 19-22 out of passage order: gap 22 (channels) comes from paragraph C, before gaps 20-21 (sediment, bacteria) from paragraph D.", "fixed": true, "change": "Moved the cost sentence up: line 2 now reads 'Holding the same water in tanks and concrete {{20}} instead would cost the city far more.' Keys now 19 sponge, 20 channels, 21 sediment, 22 bacteria, with explanations and evidence moved." },
+    { "q": 32, "severity": "high", "problem": "Y/N/NG 31-35 out of order: Q33 (children, linked to paragraph 3) came after Q32 (paragraph 5), and Q34 (environment, paragraph 6) came before Q35 (relapse, paragraph 5).", "fixed": true, "change": "Reordered: Q32 children (NOT GIVEN), Q33 habit completely removed (NO), Q34 relapse shows weak character (NO), Q35 environment better than determination (YES)." },
+    { "q": 8, "severity": "low", "problem": "Pair ['notice', 'recognise'] did not copy the question exactly (it says 'recognised').", "fixed": true, "change": "Pair now ['the instrument's practical value', 'The barometer's usefulness']." },
+    { "q": 22, "severity": "low", "problem": "The bacteria gap repeats the passage word for word ('on their stems and roots break down oils and other pollutants'); the explanation admits this.", "fixed": false, "change": "Suggest 'and tiny ______ living on the plants destroy oily waste'." },
+    { "q": 1, "severity": "low", "problem": "Q1 and Q4 copy the passage ('filled a glass tube with', 'in a London newspaper').", "fixed": false, "change": "Acceptable for Passage 1; could be reworded to raise difficulty." }
+  ],
+  "paraphrasePairs": { "before": 31, "after": 37 }
+}

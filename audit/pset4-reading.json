@@ -1,0 +1,19 @@
+{
+  "id": "pset4-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-made IELTS Academic paper: three passages of 854-878 words, a clear rise from a history of dictionaries to an argued psychology article, and every question in passage order. One summary gap had two defensible answers and now accepts both. Passage 1 is a little easy because several completion items copy the passage.",
+  "strengths": [
+    "Passage 3 ('Does colour change how we think?') is a real C1 argumentative text with replication, counter-examples and a hedged conclusion.",
+    "T/F/NG and Y/N/NG keys are clean: FALSE items are directly contradicted (alphabetical order; 'all' of Webster's spellings) and NOT GIVEN items are genuinely absent (sales of Johnson's dictionary, the end of print, blue as most pleasant).",
+    "Passage 2 matching people uses five names for four statements, and the summary follows paragraph C exactly in order.",
+    "Word-list summary (Q36-40) requires understanding, not word matching: 'samples', 'replication', 'context', 'learning' and 'caution' must be inferred from paraphrase."
+  ],
+  "issues": [
+    { "q": 18, "severity": "medium", "problem": "'it carries the ____ that has settled on the roof' can be answered with 'soot' as well as 'dust' (both in 'the dust, soot and bird droppings the roof has collected'). The explanation claimed only 'dust' fits.", "fixed": true, "change": "Answer now ['dust', 'soot']; explanation rewritten." },
+    { "q": 37, "severity": "low", "problem": "Old pair ['repeating experiments', 'replication'] pointed at the box word, which also appears verbatim in the passage ('survived replication').", "fixed": true, "change": "Pair now ['when other researchers repeated the work', 'later attempts at']; Q38 pair likewise replaced (['colour refuses to mean one thing', 'a single colour can send opposite messages'])." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 completion items 1, 3, 4 and 7 keep the passage's exact collocations (clay tablets, six assistants, volunteer readers, a new edition), so they are easier than IELTS.", "fixed": false, "change": "Suggest more distant stems, e.g. Q3 'Johnson had a team of six ______ to copy out passages.'" },
+    { "q": 40, "severity": "low", "problem": "The writer never explicitly advises 'caution'; the answer is an inference from paragraphs 1 and 6. Defensible, but it is the hardest item and sits out of passage order (its evidence is in paragraph 1).", "fixed": false, "change": "Acceptable; optionally reword the line to 'The writer believes confident commercial claims deserve ______' and cite the final paragraph." }
+  ],
+  "paraphrasePairs": { "before": 28, "after": 38 }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "upset5-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three clearly written passages on street markets, buried city rivers and the myth of multitasking, with a full IELTS question mix and correct keys. The passages are at the short end of IELTS length (803 / 798 / 783 words) and very clearly signposted, so the paper is a little easier than the real test. One YES/NO/NOT GIVEN statement claimed more than the passage says, and it has been tightened.",
+  "strengths": [
+    "Full range of IELTS question types: sentence completion, TFNG, matching information, summary completion, matching people with a spare name, MCQ, YNNG and sentence endings.",
+    "NOT GIVEN items are carefully built (same punishment in every town; farmers' market prices; employers banning phones).",
+    "MCQ distractors use the passage's own vocabulary (the computer processor, reversed findings), as in the real test.",
+    "Passage 3 offers real argument and C1 vocabulary (attention residue, impairment, consensus)."
+  ],
+  "issues": [
+    { "q": 31, "severity": "medium", "problem": "'Constant switching between tasks wastes more time than people realise' went beyond the passage. The text says the lost time adds up, but not that people underestimate it, so NOT GIVEN was arguable.", "fixed": true, "change": "Statement now reads 'Even a brief interruption costs more time than it appears to.' (YES: 'Checking a message for one second is never a one-second transaction'). Explanation and evidence updated." },
+    { "q": 8, "severity": "low", "problem": "Pair used 'not allowed', which is not in the question.", "fixed": true, "change": "Pair is now ['local families', 'ordinary families']." },
+    { "q": 24, "severity": "low", "problem": "Pair used 'storms growing worse', which is not the question's wording.", "fixed": true, "change": "Pair is now ['the storms of a changed climate', 'storms that are growing worse']." },
+    { "q": 33, "severity": "low", "problem": "Q29 (MCQ) and Q33 (YNNG) test the same hands-free sentence, so one answer gives away the other.", "fixed": false, "change": "Suggest replacing Q33 with a statement on walking and arguing at the same time (paragraph 4), e.g. 'Adults find it difficult to walk and hold an argument at the same time.' (NO)." },
+    { "q": 14, "severity": "low", "problem": "All three passages are under 810 words, at the short end of IELTS length, and passage 2 is no harder than passage 1.", "fixed": false, "change": "If revised, add 80–120 words to passages 2 and 3 (for example a counter-argument paragraph) and use denser academic sentences in passage 3." }
+  ],
+  "paraphrasePairs": { "before": 19, "after": 34 }
+}

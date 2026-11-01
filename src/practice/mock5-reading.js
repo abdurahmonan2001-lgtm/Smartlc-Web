@@ -125,9 +125,9 @@ How should all this be interpreted? For one school, the food-storers are a textb
         { n: 30, type: "mcq", prompt: "The writer mentions the seasonal change in the chickadee hippocampus to show that", options: ["A all birds' brains grow larger in autumn", "B the brain devotes resources to memory when it is most needed", "C chickadees are the most intelligent of the food-storers", "D memory inevitably declines as birds age"], answer: "B" },
         { n: 31, type: "mcq", prompt: "In the experiments with worms and peanuts, the jays' choices depended on", options: ["A which food they preferred to eat", "B which food had been buried closest to them", "C how much time had passed since caching", "D whether other birds were watching them"], answer: "C" },
         { n: 32, type: "ynng", prompt: "The writer accepts that food-storing birds find their caches by memory rather than chance.", answer: "YES" },
-        { n: 33, type: "ynng", prompt: "The writer believes laboratory studies of caching prove nothing.", answer: "NO" },
-        { n: 34, type: "ynng", prompt: "The writer considers the nutcracker's memory superior to that of any mammal.", answer: "NOT GIVEN" },
-        { n: 35, type: "ynng", prompt: "The writer regards the scrub-jay findings as evidence of memory for events.", answer: "YES" },
+        { n: 33, type: "ynng", prompt: "The writer regards the scrub-jay findings as evidence of memory for events.", answer: "YES" },
+        { n: 34, type: "ynng", prompt: "The writer believes laboratory studies of caching prove nothing.", answer: "NO" },
+        { n: 35, type: "ynng", prompt: "The writer considers the nutcracker's memory superior to that of any mammal.", answer: "NOT GIVEN" },
         { n: 36, type: "ynng", prompt: "The writer concludes that complex memory arose only once in evolution.", answer: "NO" },
         { n: 37, type: "match", group: "ends", boxTitle: "Sentence endings",
           box: [

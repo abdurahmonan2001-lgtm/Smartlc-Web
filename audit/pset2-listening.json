@@ -1,0 +1,19 @@
+{
+  "id": "pset2-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Correct IELTS format with good traps in Parts 1-3 (corrected dates, rejected options, a full Saturday group). Part 4 is the weak point: almost every note repeats the lecturer's sentence word for word, so it tests catching a word rather than following a lecture. No wrong answer keys were found.",
+  "strengths": [
+    "Part 1 has a real trap for nearly every gap: age 7/6, Saturday full, 4.00/4.15, 15th/22nd March corrected, goggles optional, main door closed, post replaced by email.",
+    "Part 2 MCQs are built the IELTS way: the speaker herself rules out the two wrong options before giving the right one; the matching box has two unused distractors (evenings only; closed for repairs - echoed by the broken lift).",
+    "Part 3 is a natural two-speaker academic discussion with paraphrased keys (underestimate / report less; non-students / people who aren't students).",
+    "Script lengths (631, 727, 790, 779 words) suit the real timing; answers come in question order."
+  ],
+  "issues": [
+    { "q": 34, "severity": "medium", "problem": "Part 4 notes are near-verbatim copies of the lecture (34 'kept secret by cooks at royal courts', 35 'mixing ice with', 36 'patented a hand-turned', 37 'stored in buildings insulated with', 38 'made the cone popular'), so Questions 33-38 need no paraphrase recognition; the explanations themselves say the phrase is 'heard almost word for word'.", "fixed": false, "change": "Script cannot change (audio recorded), so reword the note stems instead, e.g. 34 'royal cooks refused to share their recipes: they kept them ______', 37 'packed in ______ to stop it melting', 38 'the St Louis fair turned the ______ into a success'." },
+    { "q": 11, "severity": "low", "problem": "Option B 'It will open on Sunday afternoons' repeats the speaker's exact words.", "fixed": false, "change": "Suggest 'It will open at weekends for the first time'." },
+    { "q": 16, "severity": "low", "problem": "Box option A 'has moved to the ground floor' copies 'moved down to the ground floor'.", "fixed": false, "change": "Suggest 'is now easier to find' or 'has changed floors'." },
+    { "q": 1, "severity": "low", "problem": "Several Part 1 rows (age, class time, medical form, entrance) carry no paraphrase, which is normal for Part 1 but keeps pair coverage below 80% for this paper.", "fixed": false, "change": "No change needed; pairs added where a real paraphrase exists." }
+  ],
+  "paraphrasePairs": { "before": 14, "after": 29 }
+}

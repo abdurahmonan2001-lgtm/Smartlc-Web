@@ -1,0 +1,45 @@
+{
+  "id": "mock3-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three full-length passages (870, 857, 851 words) with rising difficulty and a proper IELTS question mix; all keys are correct. Y/N/NG items were out of passage order and are fixed. Some sentence endings in passage 3 copy the passage word for word and are easy.",
+  "strengths": [
+    "Passage lengths and register match the real test; passage 3 (background music) has C1 argument and hedging.",
+    "NOT GIVEN items (Q10, Q13, Q38) are truly unaddressed; FALSE/NO items are clearly contradicted.",
+    "Matching people in passage 2 has a fifth person (Kenji Mori) who is quoted but never the answer, a real distractor."
+  ],
+  "issues": [
+    {
+      "q": 37,
+      "severity": "medium",
+      "problem": "Y/N/NG order was broken: Q37 (banning music, last paragraph) came before Q38 (paragraph 4), and Q40 (silence, paragraph 3) came last.",
+      "fixed": true,
+      "change": "Swapped the prompts of Q37 and Q40 in mock3-reading.js and their explanations/evidence in mock-vocab-A.json. Both keys are NO, so the answer key and past attempts are unchanged; Q36-40 now follow paragraphs 2, 3, 4, 5, 6."
+    },
+    {
+      "q": 33,
+      "severity": "medium",
+      "problem": "Sentence endings copy the passage: A \"tend to be more affected by background music than outgoing people\" and F \"suffers particularly when the music includes lyrics\" are exact quotes, and Q32 repeats the point already tested in Q29.",
+      "fixed": false,
+      "change": "Paraphrase the endings, e.g. A \"are more easily disturbed by music playing in the background than extroverts\", F \"is harmed most by songs with words\"; and make Q32 test another detail."
+    },
+    {
+      "q": 24,
+      "severity": "low",
+      "problem": "Passage 2 tests some points twice (Halvorsen: Q21 and Q24; Adeyemi: Q22 and Q25; Reyes: Q16 and Q26).",
+      "fixed": false,
+      "change": "Replace one of each pair, e.g. a matching item on Mori's disease warning so the distractor person is also a real option for one statement."
+    },
+    {
+      "q": 12,
+      "severity": "low",
+      "problem": "The old paraphrase pair quoted \"unpaid volunteers\", which is not in the passage.",
+      "fixed": true,
+      "change": "Pair replaced with [\"volunteers, unpaid\", \"people who were not paid for the work\"]."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 8,
+    "after": 37
+  }
+}

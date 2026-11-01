@@ -1,0 +1,23 @@
+{
+  "id": "upset2-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A sound Pre-IELTS listening paper in true IELTS format: a cake order, a talk on a heritage tram line, two students discussing a wind-tunnel test, and a lecture on the history of the calendar. All answer keys are correct, and every part has real distractors. One thing in the Part 1 script is wrong: the baker says Sunday the nineteenth is 'the day before' Monday the eighteenth. That cannot be fixed without re-recording the audio.",
+  "strengths": [
+    "Good IELTS-style distractors throughout: the 18th refused as a holiday, pink corrected to purple, 450 vs 380 thousand, 9.00 vs 9.30; in Part 2 the flood and low use are raised and rejected as reasons for closure.",
+    "The Part 2 matching box has two strong distractors (the riverside section 'closed last winter', the Park Gates ironwork that could not be reused).",
+    "In Part 3 every wrong MCQ option is mentioned and then rejected, and the multi-select items have three distractors each, as in the real test.",
+    "Part 4 covers every main stage of the lecture in note form, with single-word answers in script order."
+  ],
+  "issues": [
+    { "q": 2, "severity": "medium", "problem": "Script logic error (Part 1, line 8): the party is on 'Monday the eighteenth', and the baker suggests 'the day before? That's Sunday the nineteenth'. The day before Monday 18th is Sunday 17th. Students write what they hear (19), so the key matches the audio, but careful students will be confused.", "fixed": false, "change": "Report only (script wording must not change). At the next re-recording, make the party Saturday the eighteenth with collection 'the day after, Sunday the nineteenth', or keep Monday the 18th and collect on Sunday the seventeenth (and change the key to 17)." },
+    { "q": 15, "severity": "low", "problem": "Explanation mentioned 'Sunday guided tours', but the script says the tours run at eleven and at two (no day is given).", "fixed": true, "change": "Explanation now says 'the guided tours at eleven and two'." },
+    { "q": 20, "severity": "low", "problem": "Explanation said the volunteers 'bake the scones'; the script says they bake the cakes.", "fixed": true, "change": "Changed to 'bake the cakes'." },
+    { "q": 36, "severity": "low", "problem": "Explanation invented a detail not in the lecture ('harvest festivals fell while the grain was still green') and said 'decades' where the script says 'generations'.", "fixed": true, "change": "Explanation now follows the script: after generations of tampering the calendar was three months ahead, so farmers went by the stars." },
+    { "q": 27, "severity": "low", "problem": "Paraphrase pair had its sides the wrong way round (['they go on', 'add']), and 'they go on' is not in the script.", "fixed": true, "change": "Pair is now ['handrails go on', 'add handrails']." },
+    { "q": 12, "severity": "low", "problem": "Paraphrase pair used 'funded', which is not in the question.", "fixed": true, "change": "Pair is now ['that award', 'a national heritage grant']." },
+    { "q": 29, "severity": "low", "problem": "Option A 'book another wind-tunnel session' is a task that is already done ('I've booked us an extra session'), while the question asks what they 'will do'. The key still holds, but the wording is loose.", "fixed": false, "change": "Suggest option A 'carry out another wind-tunnel test'." },
+    { "q": 16, "severity": "low", "problem": "Box options A ('a display of old photographs'), D ('the best views') and F ('the oldest structure on the line') repeat the manager's exact words, so Questions 16, 18 and 19 test word matching rather than paraphrase.", "fixed": false, "change": "Suggest rewording, e.g. A 'visitors can see pictures from the line's past', D 'passengers get the finest scenery', F 'it was built before anything else on the route'." }
+  ],
+  "paraphrasePairs": { "before": 15, "after": 29 }
+}

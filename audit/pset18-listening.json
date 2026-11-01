@@ -1,0 +1,18 @@
+{
+  "id": "pset18-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A good paper in the real format, with traps throughout: the 9th to the 16th, the Willow to the Orchard Studio, 400 to 320 thousand, twenty to twelve prints, a card to a text. Part 4 is a long, well-organised lecture of 896 words. All the keys are correct and in script order. One Part 3 option relied on a detail ('dark') that is never said, and it has been reworded.",
+  "strengths": [
+    "Every Part 1 gap except the name has a heard distractor or a correction.",
+    "In Parts 2 and 3, every MCQ rejects both wrong options on the recording (charity and competition; volunteers and liner; app and buying a meter).",
+    "The Part 3 multi-select items reject each distractor with a clear reason (meter can't measure colour, glare is a judgement, rooms can't be booked).",
+    "Part 4 tests proper nouns and subject vocabulary (Sirius, Alexandria, equinox, decree) at the right Part 4 level."
+  ],
+  "issues": [
+    { "q": 21, "severity": "medium", "problem": "The key, option A, read 'Kamola's own experience of revising in a dark room', but the recording never says the room was dark. It only says it was a basement room where she could not concentrate. A careful student might reject A for that reason.", "fixed": true, "change": "Option A now reads 'a room where Kamola used to revise'. The explanation and pair were updated (['where I revised all last winter', 'where Kamola used to revise'])." },
+    { "q": 31, "severity": "low", "problem": "Part 1 and most of the Part 4 notes copy the speaker's words around each gap ('whenever a ruler issued a ___', 'a Greek astronomer from ___'). This makes those gaps easier than real IELTS, and leaves little paraphrase to teach, so coverage stays at 28/40.", "fixed": false, "change": "Suggestion for future sets: paraphrase the note wording around the gaps (e.g. 'months were added by royal ___', 'Sosigenes came from the Greek city of ___')." },
+    { "q": 22, "severity": "low", "problem": "Paraphrase pairs: Q22 paired 'about offices' with its opposite, 'rooms used for study'. Q9 used the Saturday trap ('no reduction') as the text side. Q16 had the same words on both sides, Q15's text side was too long, and the Q28 pair was not a paraphrase.", "fixed": true, "change": "Q22 is now ['the rooms where students actually study', 'rooms used for study'], Q9 ['gets ten per cent off', 'Discount'], Q16 ['had not been recorded anywhere in this district', 'a species nobody expected'], and Q15 ['It should have taken eight weeks', 'took far longer to build than planned']. The Q28 pair was removed. New pairs were added for Q6, Q14, Q20, Q27, Q30 and Q32." }
+  ],
+  "paraphrasePairs": { "before": 23, "after": 28 }
+}

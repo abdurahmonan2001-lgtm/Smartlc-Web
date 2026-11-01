@@ -39,7 +39,7 @@ export const MOCK6_LISTENING = {
           },
           answer: "Rustamova" },
         { n: 2, type: "gap", group: "p1", answer: ["22", "22nd", "twenty-second"] },
-        { n: 3, type: "gap", group: "p1", answer: ["5.30", "five thirty", "half past five"] },
+        { n: 3, type: "gap", group: "p1", answer: ["5.30", "5:30", "five thirty"] },
         { n: 4, type: "gap", group: "p1", answer: "Maple" },
         { n: 5, type: "gap", group: "p1", answer: "minivan" },
         { n: 6, type: "gap", group: "p1", answer: ["180", "one hundred and eighty"] },

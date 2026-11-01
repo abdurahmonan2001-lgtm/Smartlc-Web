@@ -1,0 +1,23 @@
+{
+  "id": "upset5-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A solid Pre-IELTS listening paper: booking guitar lessons, a planetarium director on local radio, two students discussing bias in interviews, and a lecture on the history of chess. All answer keys are correct and in order, and Parts 1–3 have proper IELTS distractors. Parts 1 and 2 are a little short, and most Part 4 notes keep the lecturer's own words, so the paper is somewhat gentler than the real test.",
+  "strengths": [
+    "Part 1 traps work well: electric then acoustic, Tuesday then Wednesday, 7.30 withdrawn then 6.45, 700 corrected to 650, post replaced by text.",
+    "Part 2 MCQs reject both wrong options in the script (storm roof and seating; donor; price differences; telescope and tour volunteers).",
+    "Part 3 is a genuine academic discussion of research method (leading questions, interviewer effects, neutral venues, anonymity), with three rejected options in each multi-select item.",
+    "Answers are concrete single words or numbers within the word limits."
+  ],
+  "issues": [
+    { "q": 12, "severity": "low", "problem": "Pair text side 'bought on the website' was not in the script ('bought on the planetarium website').", "fixed": true, "change": "Pair is now ['on the planetarium website', 'online']." },
+    { "q": 22, "severity": "low", "problem": "Pair text side 'pushing towards the answer' was not in the script.", "fixed": true, "change": "Pair is now ['leading questions', 'questions that suggested the answer']." },
+    { "q": 26, "severity": "low", "problem": "Pair ['set beside', 'compare with'] was not in the script or the option as written.", "fixed": true, "change": "Pair is now ['set our findings beside', 'compare their results with']." },
+    { "q": 7, "severity": "low", "problem": "Q7 carried the pair for Q8 (['free of charge', 'included free']).", "fixed": true, "change": "Moved that pair to Q8 ('Included free'), and gave Q7 ['passed his old guitar on to me', 'student has his own guitar']." },
+    { "q": 23, "severity": "low", "problem": "The explanation quoted 'not the point', which is not in the script (Madina says 'That's the real cost, not the time').", "fixed": true, "change": "Explanation now says Madina rejects time as the real cost." },
+    { "q": 32, "severity": "low", "problem": "Part 4 notes mostly repeat the lecture's wording around the gaps ('the four parts of an {{32}}', 'won by a mathematics teacher from {{38}}', 'the chess {{39}}'), so Part 4 is easier than in the real test.", "fixed": false, "change": "In a future version, paraphrase the notes, e.g. 'named after the four divisions of a {{32}}', 'the winner, a maths teacher, came from {{38}}'." },
+    { "q": 40, "severity": "low", "problem": "Script wording problem (Part 4, last paragraph): the lecturer says 'you are reading this sentence in whole words', which does not make sense in a spoken lecture.", "fixed": false, "change": "Report only (audio is recorded). If re-recorded, say 'in the same way that you read a sentence in whole words'." },
+    { "q": 11, "severity": "low", "problem": "Parts 1 and 2 are short for IELTS timing (651 and 663 words).", "fixed": false, "change": "If re-recorded, add about 100–150 words to each part, with one more distractor." }
+  ],
+  "paraphrasePairs": { "before": 21, "after": 28 }
+}

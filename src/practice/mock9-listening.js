@@ -149,7 +149,7 @@ export const MOCK9_LISTENING = {
         { n: 34, type: "gap", group: "p4", answer: "hours" },
         { n: 35, type: "gap", group: "p4", answer: "Australia" },
         { n: 36, type: "gap", group: "p4", answer: "clicks" },
-        { n: 37, type: "gap", group: "p4", answer: "dialect" },
+        { n: 37, type: "gap", group: "p4", answer: ["dialect", "calls"] },
         { n: 38, type: "gap", group: "p4", answer: "frequencies" },
         { n: 39, type: "gap", group: "p4", answer: "tail" },
         { n: 40, type: "gap", group: "p4", answer: "hydrophones" },

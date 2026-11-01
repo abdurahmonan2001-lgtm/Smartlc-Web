@@ -64,7 +64,7 @@ export const MOCK10_LISTENING = {
         { n: 15, type: "match", group: "walks", boxTitle: "Comments",
           box: [
             "is suitable for wheelchair users",
-            "must be booked in advance",
+            "offers reduced prices for children",
             "includes a meal",
             "is led by a local historian",
             "finishes in a different place from its start",

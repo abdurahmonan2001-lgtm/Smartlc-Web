@@ -1,0 +1,21 @@
+{
+  "id": "upset4-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good IELTS-length passages (842 / 847 / 840 words) on refrigeration, dune restoration and the psychology of collecting, with a full range of question types. One real fault was fixed: in the passage 3 summary, the gaps were not in passage order (gap 38 came from paragraph 2, before gaps 36 and 37 from paragraph 3). All the other answer keys are correct. The writing is clear and well signposted, so the paper is a little gentler than real IELTS.",
+  "strengths": [
+    "Well-chosen academic topics in a magazine register; passage 3 reaches C1 (endowment effect, curates, trivialises).",
+    "Complete IELTS question mix: sentence completion, TFNG, matching information, summary completion, matching people with a spare name, MCQ, YNNG and a word-box summary.",
+    "MCQ distractors echo exact passage words while the keys paraphrase (e.g. Q27 'respects no boundaries of income' is a detail, not the point).",
+    "NO items are clearly contradicted (e.g. 'evidence ... surprisingly thin'), and NOT GIVEN items are genuinely unaddressed (why Perkins moved to London; collecting by age)."
+  ],
+  "issues": [
+    { "q": 36, "severity": "medium", "problem": "The word-box summary was not in passage order: gap 38 (pleasure, from Voss in paragraph 2) came after gaps 36–37 (boundaries, order, from paragraph 3).", "fixed": true, "change": "Reordered the summary so that the pleasure sentence comes first. The keys and their explanations moved with the sentences: Q36 = G pleasure, Q37 = A boundaries, Q38 = F order (Q39 D and Q40 I unchanged)." },
+    { "q": 24, "severity": "low", "problem": "Pair text side 'keeping healthy' was not in the passage.", "fixed": true, "change": "Pair is now ['keeping a dune system healthy', 'keep up']." },
+    { "q": 31, "severity": "low", "problem": "Pair text side 'price higher' was not in the passage (it reads 'price an object higher').", "fixed": true, "change": "Pair is now ['price an object higher', 'increases the value']." },
+    { "q": 3, "severity": "low", "problem": "Pairs for Q3, Q29, Q34 and Q40 used question wording that does not appear in the question.", "fixed": true, "change": "Corrected to wording the students actually see (e.g. Q34 ['Confusing the two', 'Treating collecting and hoarding as the same thing'], Q40 ['real', 'genuine'])." },
+    { "q": 16, "severity": "low", "problem": "Q16 (paragraph A cost comparison) and Q24 (Diallo) test the same sentence, so one answer gives away the other.", "fixed": false, "change": "Suggest replacing Q16 with another paragraph A detail, e.g. 'a comparison of dunes with a device that absorbs impact' (shock absorber)." },
+    { "q": 19, "severity": "low", "problem": "The summary for Q19–20 repeats passage wording ('cut wide {{19}} through the front line', 'carry {{20}} inland once again'), which makes these two gaps easy.", "fixed": false, "change": "Paraphrase the lines, e.g. 'teams open broad {{19}} in the seaward ridge so that the wind can move {{20}} further from the beach'." }
+  ],
+  "paraphrasePairs": { "before": 33, "after": 38 }
+}

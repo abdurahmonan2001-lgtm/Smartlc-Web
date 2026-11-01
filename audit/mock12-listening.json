@@ -1,0 +1,25 @@
+{
+  "id": "mock12-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "The strongest listening paper in this group: all four parts are full length (650-920 words), the distractors are exactly the real IELTS kind, and every answer key is correct and in order. Nothing needed fixing.",
+  "strengths": [
+    "Part 1 has a distractor for almost every gap (2nd -> 9th October, 30 -> 45 boxes, 950 Saturday price vs 800 weekday, 8.00 depot vs 8.30 arrival).",
+    "Part 2 MCQs and the matching task mention rejected details for most options (fish market, ferry terminal; touch pool, tunnel; research grant, plain architecture).",
+    "Part 3 is a long, natural discussion (about 920 words) in which every rejected option is argued away with a reason.",
+    "Part 4 is a real academic lecture with a myth-busting structure (sand vs parasite) and a spelled technical term (nacre)."
+  ],
+  "issues": [
+    {
+      "q": 28,
+      "severity": "low",
+      "problem": "Q28 'foreign backpackers' is said in the script with the same words as the option, so it carries no paraphrase; Q27's day-trippers does.",
+      "fixed": false,
+      "change": "None needed for the test; one plain match in a pair is normal."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 36
+  }
+}

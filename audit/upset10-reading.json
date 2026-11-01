@@ -1,0 +1,23 @@
+{
+  "id": "upset10-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three passages of the right length and register (history of newspapers, repair cafes, the psychology of nostalgia), and difficulty rises properly from passage 1 to 3. The keys are sound: every TRUE/FALSE/NOT GIVEN and YES/NO/NOT GIVEN can be defended. It is gentler than the real test because many gap-fill sentences repeat the passage's wording, so students can find answers by matching words.",
+  "strengths": [
+    "Passage lengths 893 / 869 / 861 words, in a journal/magazine register; Passage 3 has C1 vocabulary and argument (Hofer, Jensen, personal vs collective nostalgia).",
+    "Good IELTS mix of question types: note completion, T/F/NG, matching information, summary completion, matching people with one extra name, MCQ, Y/N/NG and a summary with a word list.",
+    "NOT GIVEN items (Q10, Q13, Q33) really are not addressed; FALSE items (Q9, Q12) are clearly contradicted.",
+    "MCQ distractors repeat the passage's words, while the right options paraphrase it (Q28, Q29).",
+    "Completion and T/F/NG answers follow passage order; all gap answers are one word copied from the text."
+  ],
+  "issues": [
+    { "q": 37, "severity": "low", "problem": "The evidence quoted 'gave a name to a mysterious illness', which does not show the word the gap needs.", "fixed": true, "change": "Evidence now 'classified it as a genuine and dangerous disease'." },
+    { "q": 23, "severity": "medium", "problem": "Pair's question side 'make mending impossible' is not in the statement ('make mending them impossible').", "fixed": true, "change": "Pair now ['many modern products resist repair at any price', 'make mending them impossible']." },
+    { "q": 35, "severity": "medium", "problem": "Pair ['mislead', 'not harmless'] used words that are not in the question.", "fixed": true, "change": "Pair now ['a promised return to a golden age', 'political appeals to a golden age']." },
+    { "q": 16, "severity": "low", "problem": "Pair ['mending', 'repairing'] was a single-word synonym that does not show where the answer is.", "fixed": true, "change": "Pair now ['higher than the price of a new one', 'cost more than replacing it']." },
+    { "q": 1, "severity": "medium", "problem": "Several Passage 1 gap sentences repeat the text's words (Q1 'whitened ___ in public places', Q3 'by ___', Q4 'tax on ___', Q6 'the electric ___'). Students can scan for the words instead of reading for meaning.", "fixed": false, "change": "Suggest paraphrasing the stems, e.g. Q4 'Critics claimed the duty taxed ___', Q1 'posted on painted ___ where the public could see them'." },
+    { "q": 38, "severity": "low", "problem": "In the summary with a word list, Q37 ('disease'), Q38 ('resource', with 'draws' repeated) and Q40 ('politics' after 'Political movements') are cued by the same words as the text. Only Q36 (mercenaries/soldiers) tests a paraphrase.", "fixed": false, "change": "Suggest rewording the summary lines and adding distractors that fit the grammar ('comfort' and 'threat' already work well as distractors)." },
+    { "q": 16, "severity": "low", "problem": "The statement repeats Bergström's own sentence, 'When repairing costs more than replacing'.", "fixed": false, "change": "Suggest 'a claim that fixing an item may be dearer than buying a new one'." }
+  ],
+  "paraphrasePairs": { "before": 18, "after": 37 }
+}

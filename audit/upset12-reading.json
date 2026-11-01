@@ -1,0 +1,22 @@
+{
+  "id": "upset12-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three well-written passages of real IELTS length (896, 893 and 839 words) whose difficulty rises properly from a history of the fork, to school gardens, to an argument about handwritten notes. Passage 3 is full IELTS difficulty, so the set is at the top of what B2 students should sit. One matching question had two correct answers and three Yes/No/Not Given items were out of passage order; both are now fixed.",
+  "strengths": [
+    "Passage lengths and register match the real test: magazine/textbook style for a general reader, with C1 vocabulary and sentence structure in Passages 2 and 3.",
+    "A good mix of question types: sentence completion, T/F/NG, matching information, summary completion, matching people with one extra name, MCQ, Y/N/NG and a summary with a word box.",
+    "NOT GIVEN items are genuinely unaddressed (Q12 Sheffield vs Birmingham; Q31 recording lectures, with 'recorded talks' as a fair trap).",
+    "MCQ distractors in Passage 3 echo the passage's words while the correct option paraphrases it (Q27, Q29, Q30).",
+    "Completion answers are single words copied from the passage, in passage order."
+  ],
+  "issues": [
+    { "q": 15, "severity": "high", "problem": "Two defensible answers. 'an argument that gardens should not be judged by their effect on eating' fits paragraph D ('Diet may in any case be the wrong thing to measure') as well as the keyed F.", "fixed": true, "change": "Prompt reworded to 'a claim that gardens give pupils an experience unavailable elsewhere in their lessons' (only F: 'something the rest of the school day cannot supply'); key F kept; explanation and evidence updated." },
+    { "q": 31, "severity": "medium", "problem": "Y/N/NG Q31-33 were out of passage order: Q33's text (recorded talks) is in paragraph 1, and Q32's evidence (2019 study) comes before Q31's (narrowed claim) in paragraph 3.", "fixed": true, "change": "Swapped the statements, keeping numbers and type: Q31 is now the recorded-lectures item (NOT GIVEN), Q32 'firmly confirmed' (NO), Q33 'writing by hand can sometimes help memory' (YES). Answer pattern is NG, NO, YES, YES, NO, with no runs of three." },
+    { "q": 14, "severity": "low", "problem": "Paragraph E ('almost every abandoned garden had lost that teacher') also gives a reason gardens are given up. 'In the past' points to B, but a weaker student may hesitate.", "fixed": false, "change": "Optional: 'the historical reasons why school gardens declined after the mid-twentieth century'." },
+    { "q": 40, "severity": "low", "problem": "'speed' in the word box is a weak rival to 'tool' ('the decisive factor is not the speed itself'), since handwriting's slowness is part of the argument.", "fixed": false, "change": "Acceptable as it stands ('tool ... itself' matches 'Neither implement'). Could replace 'speed' with an unrelated word, e.g. 'volume'." },
+    { "q": 1, "severity": "low", "problem": "Several Passage 1 completion prompts lift the passage's wording almost unchanged (Q1 'expected to bring their own', Q2 'condemned by the', Q4 'ground round'), which makes Passage 1 easier than the rest.", "fixed": false, "change": "Suggest paraphrasing the stems, e.g. Q1 'Diners at medieval feasts had to supply their own ______', Q2 'Churchmen known as the ______ criticised the princess'." },
+    { "q": 1, "severity": "low", "problem": "Broken paraphrase pairs: Q1 ['supplied the food', 'provided'], Q4 ['blade', 'knife'], Q6 ['within reach of', 'brought within reach'], Q22 ['money for replacing tools', 'budget'], Q39 'wider connections' and Q40 'the tool' did not appear in what the student reads. Q13 ['a rejected sample', 'discovery'], Q17, Q32 and Q34/35 pairs were not real paraphrases or had opposite meanings.", "fixed": true, "change": "All replaced with pairs copied from the passage and the question (e.g. Q13 ['on the problem of erosion inside gun barrels', 'investigating an unrelated problem'], Q25 ['written into the school timetable and the budget', 'part of its ordinary business'])." }
+  ],
+  "paraphrasePairs": { "before": 26, "after": 39 }
+}

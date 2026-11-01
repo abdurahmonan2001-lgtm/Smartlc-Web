@@ -1,0 +1,24 @@
+{
+  "id": "upset9-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built Pre-IELTS listening test in true IELTS format: a booking call, a guided tour, a two-student project discussion and a history lecture, each about 630-900 words. Parts 1 and 3 have proper IELTS traps (self-corrections, options mentioned and then rejected). Part 4 and the Part 2 matching are gentler than the real test because the notes and options use almost the same words as the speaker, which suits B2 students.",
+  "strengths": [
+    "Part 1 has real distractors in IELTS style: 200,000 corrected to 180,000 (Q5), 8.45 corrected to 8.15 (Q10), Saturday refused before Sunday (Q3), 2 metres standard before 3 (Q4).",
+    "Part 2 MCQs (Q11-14) each mention both wrong options and rule them out (flood, retiring miller; grant, companies; supermarket, bakery).",
+    "Part 3 is a strong academic discussion: every MCQ and both multi-select pairs reject two or three options before the right one, including a near-miss distractor (the box that went missing but was found).",
+    "Answers come in question order in every part, and script lengths suit the real timing.",
+    "The Part 4 lecture is coherent and interesting, with a sensible ONE WORD ONLY note structure that follows the talk."
+  ],
+  "issues": [
+    { "q": 17, "severity": "high", "problem": "Box option D 'cannot be seen working at present' was also true of the sack hoist ('you'll see it standing silent'), so Q17 had two defensible answers (D and the key H).", "fixed": true, "change": "Replaced unused option D with 'is closed to visitors in winter', which fits no part of the mill. Q17 key H unchanged." },
+    { "q": 15, "severity": "low", "problem": "Paraphrase pair broken: 'oak grown on the estate' is not in the script and 'timber from the estate' is not in the box.", "fixed": true, "change": "Pair now ['oak grown here on the estate', 'timber grown on the estate']." },
+    { "q": 35, "severity": "low", "problem": "Pair's question side 'served generously' does not appear in the notes.", "fixed": true, "change": "Pair now ['meat that had gone bad', 'bad meat']." },
+    { "q": 3, "severity": "low", "problem": "Pair's question side 'all taken' does not appear in the table (it says 'sold out', the same as the script).", "fixed": true, "change": "Removed the pair; no real paraphrase exists for this gap." },
+    { "q": 2, "severity": "low", "problem": "Explanation says the wording goes on 'the stall list'; the organiser says 'the fair programme'.", "fixed": true, "change": "Explain now says 'fair programme'." },
+    { "q": 31, "severity": "medium", "problem": "Part 4 notes repeat the lecturer's words almost exactly (Q31 'the dried bark of a tropical tree', Q36 'controlled the Mediterranean end of the route', Q38 'seized the ... islands where nutmeg grew', Q39 'carried away live seedlings'). Students can match words, not meaning, so Part 4 is easier than IELTS.", "fixed": false, "change": "For a harder version, rewrite note lines as paraphrases, e.g. Q31 'cinnamon comes from the ______ of a tree, not its seeds or fruit'; Q36 'merchants from ______ dominated the western end of the trade'. The script cannot change, so only the notes should." },
+    { "q": 16, "severity": "low", "problem": "Part 2 matching options for Q16, Q17, Q18 and Q20 use the guide's exact words ('came from another mill', 'will be repaired later this year', 'only original part still in place', 'used for school workshops'), so these are word-spotting rather than listening for meaning.", "fixed": false, "change": "Paraphrase the box, e.g. 'was rescued from a building elsewhere', 'is waiting for a replacement part', 'has survived unchanged since the mill was built', 'is now used for teaching children'." },
+    { "q": 14, "severity": "low", "problem": "Option A ('keep to the marked route indoors') is wrong only because of the single word 'indoors' (the guide says 'out in the yard'). This is fair but finer than the other Part 2 traps.", "fixed": false, "change": "Acceptable as is; could become 'keep to the marked route at all times' to make the distractor rest on the 'insist' contrast rather than one word." }
+  ],
+  "paraphrasePairs": { "before": 14, "after": 33 }
+}

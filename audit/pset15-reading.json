@@ -1,0 +1,20 @@
+{
+  "id": "pset15-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built paper. The three passages (nails, timber towers, curiosity) are full length (906, 958 and 989 words), and they get harder in the right order: passage 3 is a properly argued psychology essay at C1 level. All answer keys check out. The only design weakness is in passage 2, where three ideas are each tested twice.",
+  "strengths": [
+    "Passage lengths and register match Cambridge Academic; passage 3 has the abstract, argued style of a real passage 3.",
+    "The T/F/NG and Y/N/NG items are clean: each FALSE/NO is directly contradicted, and each NOT GIVEN is truly not addressed (Q9 'paid by the thousand' is about how they were paid, not how much; Q32).",
+    "The MCQ distractors in passage 3 are good: they reuse the wording of ideas the writer rejects ('spotlight', 'personal quality').",
+    "Completion answers are single words taken from the passage, in passage order."
+  ],
+  "issues": [
+    { "q": 22, "severity": "medium", "problem": "Passage 2 tests the same facts twice: Q15 and Q22 both test the floor weight and foundation savings in paragraph C, Q18 and Q25 both test Nwosu's exposed-wood findings (D), and Q16 and Q26 both test Lindqvist's point about ordinary buildings (G). A student who gets one of each pair gets the other free, and paragraphs B and F are only tested through the summary and Q23.", "fixed": false, "change": "Suggestion: change two matching-information items to cover untested content, e.g. 'a reason why the size of a panel is limited' (B: limited by roads) and 'a warning that demand could lead to forests being over-cut' (F)." },
+    { "q": 11, "severity": "low", "problem": "Paraphrase pair: the text side 'the price fell' is not in the passage (it says 'The price of nails fell').", "fixed": true, "change": "Pair is now ['The price of nails fell', 'cost more to produce']." },
+    { "q": 37, "severity": "low", "problem": "Paraphrase pair: the text side 'the anticipation of the answer' is not in the passage.", "fixed": true, "change": "Pair is now ['it is the anticipation', 'waiting for an answer']." },
+    { "q": 14, "severity": "low", "problem": "Paraphrase pairs for Q14, Q15, Q19, Q21, Q36 and Q39 had question sides that were not exact copies of the prompt or ending (for example 'gaps the learner…' for 'gaps that the learner…'). The Q14 pair also used 'a queue of taller proposals', which is about future buildings, not ones already built.", "fixed": true, "change": "All six pairs were rewritten as exact copies, e.g. Q14 ['There is now an eighteen-storey tower', 'how tall timber buildings have already become'], Q19 ['carries load in both directions', 'strong in both directions']." },
+    { "q": 31, "severity": "low", "problem": "The Q31 and Q33 pairs were weak or too long.", "fixed": true, "change": "Q31 is now ['a response to a condition', 'created by circumstances'] and Q33 ['not a virtue', 'always beneficial']. New pairs were also added for Q3, Q12 and Q28." }
+  ],
+  "paraphrasePairs": { "before": 35, "after": 37 }
+}

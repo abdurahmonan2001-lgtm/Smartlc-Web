@@ -1,0 +1,26 @@
+{
+  "id": "upset11-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built Pre-IELTS listening paper in true IELTS format, with plenty of real distractors (self-corrections, wrong options mentioned first) in every part. It is a little gentler than the real test mainly because the Part 4 notes repeat the lecturer's wording almost word for word and the lecture is on the short side, which suits B2 students. Pair coverage went from 20 to 36 of 40, and five broken pairs were repaired.",
+  "strengths": [
+    "Part 1 has a correction or a distractor for almost every gap (16th/23rd, 30/27, 8.30/8.15, 200/150, lift/ramp, post/text).",
+    "Part 2 MCQs each mention and reject two options before the right one; the matching box uses paraphrased comments, not script words.",
+    "Part 3 is a genuine academic discussion in which both students reject ideas, with clean multi-select pairs.",
+    "Part 4 notes follow every main idea of the lecture in order; all answers are single, correctly spelled words heard in the script.",
+    "Answers occur in question order in every part; scripts are 600-950 words a part."
+  ],
+  "issues": [
+    { "q": 3, "severity": "medium", "problem": "The explanation said 'three pupils dropped out', which makes 30 - 3 + 3 = 30, not 27. The script actually says three families said no and 24 pupils are going.", "fixed": true, "change": "Explain now says only twenty-four pupils are going and with three adults the total is twenty-seven." },
+    { "q": 3, "severity": "low", "problem": "Script: 'thirty children ... three families have said no, so twenty-four pupils' - three families removing six children is odd and may confuse a careful listener (the key 27 is still clear).", "fixed": false, "change": "Script not changed (audio recorded). If re-recorded, say 'six children can't come, so twenty-four pupils'." },
+    { "q": 10, "severity": "medium", "problem": "Pair used 'no longer used', which is not in the table.", "fixed": true, "change": "Replaced with ['how do we confirm everything', 'Confirmation']." },
+    { "q": 19, "severity": "medium", "problem": "Pair question side 'paid for by donations' is not a phrase in the box (box: 'was paid for by local people's donations').", "fixed": true, "change": "Now ['raised entirely by donations from local people', \"paid for by local people's donations\"]." },
+    { "q": 30, "severity": "medium", "problem": "Pair question side 'classify the video clips' is not the option wording.", "fixed": true, "change": "Now ['coding the footage', 'classify the recorded video clips']." },
+    { "q": 33, "severity": "medium", "problem": "Pair was ['drains away', 'is removed']: 'drains away' is the notes' own wording and 'is removed' appears nowhere in the question.", "fixed": true, "change": "Pair removed; the notes copy the script here, so there is no real paraphrase." },
+    { "q": 36, "severity": "medium", "problem": "Pair text side 'pay in wheels of cheese' not in the script.", "fixed": true, "change": "Now ['villagers could pay their taxes', 'accepted as payment of']." },
+    { "q": 34, "severity": "low", "problem": "Part 4 notes repeat the lecture almost verbatim around many gaps ('first made by {{35}}' = 'first made by monks'; 'daily {{34}}' = 'daily rations'), so it is easier than a real Part 4, where the notes paraphrase the speaker.", "fixed": false, "change": "For future sets, paraphrase the note stems (e.g. 'many well-known varieties originated in {{35}}' with answer 'monasteries')." },
+    { "q": 31, "severity": "low", "problem": "Part 4 script is 619 words, short for a real Part 4 (usually 750-900).", "fixed": false, "change": "Acceptable for Pre-IELTS; in a revision add a paragraph between the gaps so answers are less densely packed." },
+    { "q": 11, "severity": "low", "problem": "Part 2 has MCQ + matching but no map/plan labelling; the railway walk-round from bottom to top would make a natural map task.", "fixed": false, "change": "Optional: turn Q15-20 into a plan of the hill (lower station, carriages, engine room, platform, footpath) in a future set." }
+  ],
+  "paraphrasePairs": { "before": 20, "after": 36 }
+}

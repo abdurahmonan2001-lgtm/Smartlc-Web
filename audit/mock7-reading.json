@@ -1,0 +1,18 @@
+{
+  "id": "mock7-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three good academic passages (umbrellas, desalination, laughter) with difficulty rising from passage 1 to 3 and a sound IELTS question mix. Every answer key, word limit and TRUE/FALSE/NOT GIVEN decision checks out. The only weakness is that passage 3 is a little short (777 words) and passage 1 is on the easy side.",
+  "strengths": [
+    "Passages 2 and 3 have genuine C1 vocabulary and argument structure (expert opinions, hedged claims, a writer's view to infer).",
+    "NOT GIVEN items (Q11, Q13, Q33) are truly unaddressed, and FALSE/NO items (Q7, Q10, Q31, Q35) are clearly contradicted.",
+    "Completion answers (Q1-6, Q19-23) follow passage order and are single words copied from the text; Q22 sensibly accepts both 'energy' and 'pressure'.",
+    "Good spread of types: sentence completion, T/F/NG, matching information, summary completion, matching people, MCQ, Y/N/NG and a summary with a word box."
+  ],
+  "issues": [
+    { "q": 27, "severity": "low", "problem": "Passage 3 is 777 words, at the bottom of the real range, so the hardest passage is also the shortest.", "fixed": false, "change": "Suggest adding one paragraph (about 120-150 words) to passage 3, e.g. on laughter in other cultures or in infants, without moving the answer locations." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 is narrative history with fairly common vocabulary; Q1-6 completion answers sit right next to words that echo the prompt.", "fixed": false, "change": "Acceptable for a first passage. To lift it slightly, rephrase a few prompts further from the text (e.g. Q5 'which broke easily' is very close to 'cracked easily')." },
+    { "q": 24, "severity": "low", "problem": "Matching people has four names for three statements; Marcus Feld is a distractor only. This is legitimate, but real tests usually set 4-5 statements for a list this size.", "fixed": false, "change": "Optional: add a statement for Feld if the question numbering is ever reworked." }
+  ],
+  "paraphrasePairs": { "before": 1, "after": 38 }
+}

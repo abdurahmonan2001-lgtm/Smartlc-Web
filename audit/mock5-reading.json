@@ -1,0 +1,38 @@
+{
+  "id": "mock5-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three full-length passages (825, 859, 867 words) with rising difficulty and a varied IELTS question set; passage 3 on food-storing birds is a good C1 science text. All keys are correct. The Y/N/NG set in passage 3 was slightly out of passage order and has been re-ordered.",
+  "strengths": [
+    "Matching headings has two spare headings and paraphrased headings (\"A faster way to grow the slowest corals\" for \"the reef's marathon runners\").",
+    "Passage 3 MCQs need inference (Q29: digging where seeds were removed means smell is not the guide).",
+    "Sentence endings include a direct trap (C \"grows smaller during the autumn months\", the opposite of the passage)."
+  ],
+  "issues": [
+    {
+      "q": 35,
+      "severity": "medium",
+      "problem": "Y/N/NG order: Q35 (the scrub-jay experiment, paragraph 4) comes after Q33 and Q34 (paragraph 5).",
+      "fixed": true,
+      "change": "Re-ordered in mock5-reading.js (numbers and types kept): Q33 is now the scrub-jay item (YES), Q34 the laboratory item (NO), Q35 the primates item (NOT GIVEN); explanation, evidence and paraphrase pair moved with each statement in mock-vocab-A.json. Q32-36 now follow passage order."
+    },
+    {
+      "q": 34,
+      "severity": "low",
+      "problem": "\"superior to that of any mammal\" vs the passage \"rival those of primates\": NOT GIVEN is the right key, but \"rival\" (are equal to) could be argued to contradict \"superior\", so a few students may defend NO.",
+      "fixed": false,
+      "change": "Make the statement clearly unaddressed, e.g. \"The nutcracker's memory is better than that of any other bird.\""
+    },
+    {
+      "q": 26,
+      "severity": "low",
+      "problem": "The mass spawning is tested twice (heading H for paragraph D and Q26).",
+      "fixed": false,
+      "change": "Change Q26 to another detail, e.g. \"What is breeding from corals that survived bleaching called?\" (assisted evolution)."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 1,
+    "after": 38
+  }
+}

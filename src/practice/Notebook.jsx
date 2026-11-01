@@ -19,6 +19,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { fetchResults, saveReview } from "./api.js";
 import { BOOKS } from "./content.js";
+import ParaphraseHunt from "./ParaphraseHunt.jsx";
 import { buildReview, fmtBand, fmtTime, halfBand, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
 import { hasCue, PaperReview, useCueAudio } from "./PaperReview.jsx";
 import { CRITERIA } from "./WritingFeedback.jsx";
@@ -376,7 +377,11 @@ export default function Notebook({
     cards.sort((a, b) => new Date(b.takenAt || 0) - new Date(a.takenAt || 0));
 
     const mistakes = cards.filter((c) => c.review).flatMap((c) =>
-      c.review.filter((it) => !it.ok).map((it) => ({ ...it, testId: c.testId, title: c.title, module: c.module })));
+      c.review.filter((it) => !it.ok).map((it) => ({ ...it, testId: c.testId, title: c.title, module: c.module, test: c.test })));
+    // Every answered question, right or wrong, for "Find the paraphrase":
+    // the mistakes come first there, then the rest of the papers taken.
+    const answered = cards.filter((c) => c.review).flatMap((c) =>
+      c.review.map((it) => ({ ...it, testId: c.testId, title: c.title, module: c.module, test: c.test })));
 
     // Mocks group into their sitting; everything else is a practice paper.
     const practice = [];
@@ -398,7 +403,7 @@ export default function Notebook({
     mocks.sort((a, b) => Number(a.bookId.slice(4)) - Number(b.bookId.slice(4)));
 
     return {
-      cards, practice, mocks, mistakes,
+      cards, practice, mocks, mistakes, answered,
       byId: new Map(cards.map((c) => [c.testId, c])),
       stats: typeStats(cards.filter((c) => c.review).map((c) => c.review)),
       quizItems: mistakes.filter((m) => QUIZABLE.has(m.type)),
@@ -456,6 +461,12 @@ export default function Notebook({
                   <span className="pr-paper__meta">match the paraphrase</span>
                   <span className="pr-paper__work">how the test hid the answer</span>
                 </button>
+                <button className="pr-paper is-tool" onClick={() => setPick({ kind: "hunt" })}>
+                  <span className="pr-paper__icon">🔍</span>
+                  <span className="pr-paper__title">Find the paraphrase</span>
+                  <span className="pr-paper__meta">in the passage and the audio script</span>
+                  <span className="pr-paper__work">the skill behind every answer</span>
+                </button>
               </div>
             </>
           )}
@@ -469,6 +480,7 @@ export default function Notebook({
       return <QuizMe key={data.quizItems.length} items={data.quizItems} username={user.username} />;
     }
     if (pick.kind === "vocab") return <VocabMatch review={data.mistakes} cap={10} />;
+    if (pick.kind === "hunt") return <ParaphraseHunt items={data.answered} cap={10} />;
     if (pick.kind === "mock") {
       const mock = data.mocks.find((m) => m.bookId === pick.bookId);
       if (!mock) return null;
@@ -496,6 +508,7 @@ export default function Notebook({
     if (!pick || !data) return null;
     if (pick.kind === "quiz") return { back: "All my papers", to: null };
     if (pick.kind === "vocab") return { back: "All my papers", to: null };
+    if (pick.kind === "hunt") return { back: "All my papers", to: null };
     if (pick.kind === "mock") return { back: "All my papers", to: null };
     const card = data.byId.get(pick.testId);
     if (!card) return null;

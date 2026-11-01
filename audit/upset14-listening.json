@@ -1,0 +1,22 @@
+{
+  "id": "upset14-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-made Pre-IELTS listening paper in true IELTS format: a booking call with spelling, corrections and changed numbers, a staff briefing with MCQ and a matching box, a two-student discussion, and a lecture with note completion. Every item has a real distractor, but the speakers signpost the answer very clearly ('What genuinely surprised us was...', 'The real problem was...'), which makes it a little gentler than a real test - right for B2 students.",
+  "strengths": [
+    "Scripts are full length (612 / 668 / 889 / 709 words) and answers come in question order.",
+    "Part 1 has all the classic traps: spelling, a misheard number corrected (308562), a self-correction (160 to 165), old vs new deposit, last year's vs this year's location.",
+    "Parts 2 and 3 MCQs mention each wrong option before ruling it out; the multi-select pairs reject every distractor explicitly.",
+    "Part 4 notes follow the lecture's structure with one-word concrete answers."
+  ],
+  "issues": [
+    { "q": 16, "severity": "medium", "problem": "Box option C ('will open later than the rest of the building') was word for word what the speaker says, so the item needed no paraphrase recognition.", "fixed": true, "change": "Box option C reworded to 'will not be ready when the rink opens'; same letter, same key." },
+    { "q": 32, "severity": "medium", "problem": "Part 4 note lines for Q32, Q34, Q36 and Q37 copied the lecturer's words exactly, unlike real IELTS notes, which paraphrase.", "fixed": true, "change": "Note wording only (not the script): 'war divers' -> 'military divers', 'sent down from the surface' -> 'delivered from above', 'joined' -> 'attached', 'air pumped down' -> 'air supplied'. Answers unchanged." },
+    { "q": 39, "severity": "low", "problem": "'tanks' was accepted, but the lecturer only says 'cylinders'; IELTS gap answers must be the word heard.", "fixed": true, "change": "Answer is now 'cylinders' only." },
+    { "q": 17, "severity": "low", "problem": "Paraphrase pair used 'funded by', which does not appear anywhere in the question paper.", "fixed": true, "change": "Pair is now ['the family firm from Winter Street', 'a local company']." },
+    { "q": 12, "severity": "low", "problem": "Paraphrase pairs for Q12 and Q14 quoted words that are not in the script.", "fixed": true, "change": "Q12 is now ['about lessons for themselves', 'the demand for adult lessons'] and Q14 is now ['how to avoid the wait', 'to avoid queues']." },
+    { "q": 21, "severity": "low", "problem": "Laylo says 'The poster starts conversations' almost word for word before the key, so option B is easier to match than an IELTS item would be.", "fixed": false, "change": "Suggestion only (the script is recorded): next time, keep the option wording out of the script." },
+    { "q": 13, "severity": "low", "problem": "Part 2 and 3 answers are strongly signposted ('What genuinely surprised us was', 'The real problem was', 'The strongest titles state'), which lowers difficulty.", "fixed": false, "change": "Acceptable for Pre-IELTS. For harder sets, let the correct answer come with less of a marker, or put a distractor after the answer." }
+  ],
+  "paraphrasePairs": { "before": 16, "after": 36 }
+}

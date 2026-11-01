@@ -1,0 +1,40 @@
+{
+  "id": "mock9-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong paper: realistic settings, full-length scripts in Parts 2-4, and real IELTS-style traps throughout (a branch code next to the order number, a dining table corrected to a coffee table, three rejected delivery days). One Part 4 gap could fairly be answered two ways, so the key now accepts both.",
+  "strengths": [
+    "Part 1 tests the classic skills: spelling (Nazarova, Cherry), a number read digit by digit with a distractor number (331), and corrections (dining -> coffee table, 100 -> 80 thousand).",
+    "Part 2 MCQs reject the obvious options explicitly (centenary, government money; March, July; closing, weekends only).",
+    "The Part 2 matching box has two strong distractors that are mentioned and rejected (moved to a new position; longer opening hours).",
+    "Part 3 has proper disagreement and self-correction in nearly every question (calculations vs glue drying; drawings rejected as a success).",
+    "Part 4 is a coherent academic lecture with notes in the same order as the talk."
+  ],
+  "issues": [
+    {
+      "q": 37,
+      "severity": "medium",
+      "problem": "The notes line 'each orca family group uses its own ___' can be completed with 'calls' as well as 'dialect': the lecture says 'uses its own set of calls - its own dialect, in effect'. A student writing 'calls' would have been marked wrong.",
+      "fixed": true,
+      "change": "Answer key changed to accept both 'dialect' and 'calls'; explanation updated in the overlay."
+    },
+    {
+      "q": 40,
+      "severity": "low",
+      "problem": "Q40 'hydrophones' is followed in the script by the gloss 'underwater microphones'; some students may write 'microphones'.",
+      "fixed": false,
+      "change": "The key is right (networks of hydrophones). Consider adding 'TWO WORDS' wording elsewhere or leave as is; no change made."
+    },
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "Part 1 script is 572 words, slightly short of a typical real Part 1.",
+      "fixed": false,
+      "change": "Optional: one more exchange next time the audio is recorded."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 33
+  }
+}

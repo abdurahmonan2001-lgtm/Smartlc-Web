@@ -1,0 +1,33 @@
+{
+  "id": "mock7-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built paper that matches the real test closely. Every part has the right setting, the scripts are full length (650-870 words), and the distractors are the genuine IELTS kind: dates and prices corrected mid-sentence, wrong options mentioned first and then ruled out. All 40 answer keys check out against the scripts and the theatre plan.",
+  "strengths": [
+    "Part 1 has a correction or a tempting wrong value for almost every gap (9th to 2nd September, 8 to 8.30, eight to ten weeks, 400 to 450 thousand, library car park vs bank).",
+    "Part 2 MCQs each mention all three options, with the right one paraphrased (an hour and a half = 90 minutes; walk them outside / fetch water both ruled out).",
+    "The plan-labelling walk-through is consistent with the SVG: every room is reached by clear left/right/near/far directions from the entrance.",
+    "Part 3 is a real discussion with disagreement and self-correction (restaurants -> law firms; the accident -> the price war).",
+    "Part 4 notes follow the lecture in order and the gaps are concrete nouns heard exactly (sun, wood, camels, gold, salary, meat, moisture, sailors, Revolution, monopoly)."
+  ],
+  "issues": [
+    {
+      "q": 15,
+      "severity": "low",
+      "problem": "The plan labels (Q15-20) are named in the script exactly as printed, so they cannot carry a paraphrase pair; only Q16 and Q18 have a descriptive gloss in the script.",
+      "fixed": false,
+      "change": "None needed for the test itself. If more paraphrase practice is wanted, a future plan task could describe rooms by function (e.g. 'where tickets are sold') instead of naming them."
+    },
+    {
+      "q": 36,
+      "severity": "low",
+      "problem": "The Q36 notes line ('the main way of storing ___ and fish before refrigeration') copies the lecture's words almost exactly, which makes the gap easier than the rest of Part 4.",
+      "fixed": false,
+      "change": "Suggest rewording the notes line (e.g. 'chief method of keeping ___ and fish edible over winter'); the script and audio stay as they are."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 32
+  }
+}

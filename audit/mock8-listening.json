@@ -1,0 +1,39 @@
+{
+  "id": "mock8-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A sound paper with realistic situations and good distractors in Parts 1-3. All answer keys are correct and appear in question order. Part 1 (533 words) and Part 4 (653 words) are on the short side, and the Part 4 notes repeat the lecture's words closely, so the last section is a little easier than a real Part 4.",
+  "strengths": [
+    "Part 1 has proper corrections: Swallow vs Heron Cottage, the 12th already booked so the 19th, the old website price 580 vs 640, Sunday vs Monday closing, the satnav's wrong turn at the church.",
+    "Part 2 MCQs mention every option and rule two out (bus depot and street market; fire ten years ago and staff shortage denied).",
+    "The Part 2 matching box has two strong distractors (stored until prices improve - explicitly denied; not accepted - used for mattresses).",
+    "Part 3 is a natural supervisor-student discussion in which most wrong options are raised and rejected."
+  ],
+  "issues": [
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "Part 1 script is 533 words, under the usual 600+ for a real Part 1, so it runs short on the recording.",
+      "fixed": false,
+      "change": "Suggest adding one more exchange (e.g. about parking or check-in time) next time the audio is re-recorded; no change to the current script."
+    },
+    {
+      "q": 31,
+      "severity": "medium",
+      "problem": "Part 4 (653 words) is short and its notes copy the lecture almost word for word (e.g. 'high mountains and wide ___' / 'high mountain passes and wide deserts', 'state ___' / 'state secret'). There is almost no paraphrase or distractor, which makes Part 4 easier than in the real test.",
+      "fixed": false,
+      "change": "Reword the notes lines (not the script) further from the lecture, e.g. Q33 'the method was guarded as an official ___', Q35 'routes crossed mountain ranges and arid ___', Q38 'concealed in hollowed-out walking ___'."
+    },
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "Q2 'Heron' is not spelled out; it relies on 'as in the bird'. Fine for a common word, but real Part 1 tests usually spell unusual names.",
+      "fixed": false,
+      "change": "None needed."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 35
+  }
+}

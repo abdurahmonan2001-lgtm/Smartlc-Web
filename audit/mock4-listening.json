@@ -1,0 +1,39 @@
+{
+  "id": "mock4-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A sound IELTS paper: a lost-property call with phone number and spelling, a volunteer briefing with a matching box, a two-student design discussion and a full lecture on beavers. All keys are correct and every answer is heard in question order.",
+  "strengths": [
+    "Part 1 traps: 35 vs 53, Tuesday corrected to Wednesday, black denied for grey, the central-station office closed, five thousand raised to ten.",
+    "Part 2 MCQs each reject two options with reasons (postponed second stage, posted T-shirts that went missing, first-aid tent kept for emergencies).",
+    "Part 3 eliminates options clearly and naturally (station vs museum vs market; 1:50 too big, 1:200 too small; cardboard warps, balsa too dear).",
+    "Part 4 notes paraphrase the lecture well (\"block a stream\" for \"drags branches into the current\", \"slow the water down\" for \"acts as a brake\")."
+  ],
+  "issues": [
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "Part 1 script is 486 words, short for a full Part 1 (very roughly 600+).",
+      "fixed": false,
+      "change": "If re-recorded, add an exchange about the time of the journey or a second contact number."
+    },
+    {
+      "q": 15,
+      "severity": "low",
+      "problem": "In the Part 2 box, the two unused options (\"is the most popular choice\", \"is only for returning volunteers\") are never mentioned, so they are easy to cross out.",
+      "fixed": false,
+      "change": "Replace them with near misses the script touches, e.g. \"involves working with children\" (the children's area volunteers only assist) or \"starts after the gates open\"."
+    },
+    {
+      "q": 24,
+      "severity": "low",
+      "problem": "Several items are heard word for word with little paraphrase (Q14 \"tell your team leader\", Q24 \"foam board\", Q28 \"the glass roof\", Q30 \"update the diary\").",
+      "fixed": false,
+      "change": "Reword options, e.g. Q30 \"bring the project log up to date\"."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 32
+  }
+}

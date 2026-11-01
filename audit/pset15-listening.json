@@ -1,0 +1,18 @@
+{
+  "id": "pset15-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A solid paper in the real format. Part 1 has the kind of traps the real test uses (a wrong date corrected, a published price then a discount, the office meeting point ruled out), and Parts 2 and 3 offer every option and then reject it. Part 4 is a clear lecture with one-word notes, the easiest part of the paper but still typical of IELTS. All answer keys are correct and in script order.",
+  "strengths": [
+    "Every Part 1 gap has a real distractor: 15th to 22nd June, 900 to 780 thousand, office to station, post to email to text.",
+    "In the Part 2 and Part 3 MCQs, all three options are heard in the script, and the two wrong ones are explicitly rejected.",
+    "The scripts are long enough for the real timing (620, 771, 813 and 770 words).",
+    "Part 4 notes follow the lecture's structure, and every answer is a single word heard exactly."
+  ],
+  "issues": [
+    { "q": 31, "severity": "low", "problem": "Part 4 is a little easy for a Part 4: most gaps come straight after the same words in the notes ('molten', 'added', 'carry'), so a student can match without real understanding.", "fixed": false, "change": "Suggestion for future sets: paraphrase more of the note wording around the gaps (e.g. 'spread out on a bath of liquid ___' instead of 'molten glass is poured onto a bath of molten ___')." },
+    { "q": 33, "severity": "low", "problem": "The explanation said 'The plural word before the gap is \"core of\"', which is wrong and confusing.", "fixed": true, "change": "Now reads: the notes read 'a core of' before the gap, so the name of a material is needed." },
+    { "q": 10, "severity": "low", "problem": "Paraphrase pairs: Q3 and Q8 repeated the same words on both sides, Q10 used the answer itself as the question side, and the Q26 and Q34 question sides were not exact copies of the paper.", "fixed": true, "change": "These were replaced with real paraphrases, e.g. Q10 ['how shall I confirm', 'Confirmation sent by'] and Q8 ['reading a number plate at twenty metres', 'the eyesight check']. New pairs were added for Q5, Q24, Q27, Q29, Q31, Q32, Q33, Q35, Q36, Q37 and Q39." }
+  ],
+  "paraphrasePairs": { "before": 23, "after": 33 }
+}

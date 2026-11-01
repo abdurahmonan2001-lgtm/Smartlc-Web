@@ -1,0 +1,19 @@
+{
+  "id": "pset17-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A good, full-length paper (907, 943 and 979 words) on screws, second-hand clothing and social loafing, and it gets harder from passage 1 to 3 as it should. The keys are correct. In one sentence-ending question a second ending could also be defended, so that ending has been rewritten. Passage 2 again tests the same facts twice.",
+  "strengths": [
+    "Passage 3 is a properly academic argument (experiment, rival explanations, practical conclusion, cautions), with C1 vocabulary.",
+    "The T/F/NG set is balanced and clean: Q9 and Q12 are true NOT GIVENs, and Q8 and Q11 are direct contradictions.",
+    "The MCQ distractors in passage 3 recycle words from the paragraph without its meaning (Q27), or reverse the finding (Q28 A).",
+    "The summary answers are single nouns copied from the passage, in passage order."
+  ],
+  "issues": [
+    { "q": 38, "severity": "medium", "problem": "Ending D ('reduces the amount of effort that people hold back') was so general that it also fitted Q39 ('Being given a part of a task that the group clearly depends on…'), since the passage lists 'a job that is clearly theirs and clearly needed' among the levers that work against loafing. Q39 therefore had two defensible endings, D and G.", "fixed": true, "change": "Ending D now reads 'removes most of the loss that comes from not being judged.' It fits only Q38 (being identifiable, which is the evaluation explanation), so Q39 can only be G. The Q38 explanation and pair were updated to match." },
+    { "q": 24, "severity": "medium", "problem": "Passage 2 tests the same facts twice: Q15 and Q24 (Kowalski, C), Q16 and Q26 (Mensah, F), Q17 and Q25 (Delgado, G), and Q18 and Q23 (Halvorsen, E). Four of the five matching-information items repeat a people-matching item, and paragraphs B and D are hardly tested.", "fixed": false, "change": "Suggestion: change Q15–Q18 to items from B and D, e.g. 'uncertainty about whether resale reduces the number of new clothes bought' (B) and 'a reason why a garment that is almost all one fibre may still not be recyclable' (D)." },
+    { "q": 22, "severity": "low", "problem": "The explanation said 'the word before the colon in the passage is the answer', but there is no colon.", "fixed": true, "change": "Now reads: it is the last word of that sentence in the passage." },
+    { "q": 27, "severity": "low", "problem": "The Q27 pair ('separate' / 'establish whether') did not teach the key paraphrase.", "fixed": true, "change": "Now ['coordination loss from any loss of motivation', 'caused by motivation rather than coordination']. New pairs were added for Q11, Q21, Q22, Q28 and Q35." }
+  ],
+  "paraphrasePairs": { "before": 31, "after": 35 }
+}

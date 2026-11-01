@@ -1,0 +1,20 @@
+{
+  "id": "upset8-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good passages of the right length (871 / 823 / 870 words), on the history of board games, car-sharing cooperatives, and why time seems to speed up with age. Difficulty rises properly and Passage 3 is real C1 academic writing. It is a little gentler than IELTS because the Passage 1 gap sentences and the final word-list summary stay very close to the passage's wording, which suits B2 students.",
+  "strengths": [
+    "Full IELTS mix: sentence completion, T/F/NG, matching information, summary completion, matching people with one extra name, MCQ, Y/N/NG and a word-list summary.",
+    "T/F/NG and Y/N/NG items are sound: FALSE items are clearly contradicted (Q9 'ordinary soldiers played it too', Q12 'competed to sound improving') and NOT GIVEN items are genuinely not addressed (Q10 Go in Europe, Q33 technology).",
+    "Passage 3 MCQ distractors are well made: Q27 option A echoes 'broad curve of the complaint' while reversing it; Q29 option D contradicts 'much-repeated experiment'.",
+    "All keys checked and correct; completion answers are copied from the passage and inside the word limit; completion and T/F/NG answers follow passage order."
+  ],
+  "issues": [
+    { "q": 15, "severity": "low", "problem": "The paraphrase pair used 'little used', which is not in the question ('how little the typical private car is actually used').", "fixed": true, "change": "Pair is now ['ninety-five per cent of its life parked', 'how little the typical private car is actually used']." },
+    { "q": 24, "severity": "low", "problem": "Some existing pairs were weak one-word matches (Q24 'a visible price'/'a price', Q25 'a lifeline'/'matter most', Q26 'Members stay'/'stay committed', Q28 'races by'/'feels brief').", "fixed": true, "change": "Replaced with the paraphrase that actually decides the answer, e.g. Q25 ['a marginal market to a company', 'places firms find unprofitable'], Q26 ['Customers leave the moment a cheaper offer appears', 'ordinary customers would walk away']." },
+    { "q": 4, "severity": "low", "problem": "Several Passage 1 completion sentences repeat the passage's own words around the gap (Q4 'Persian expression about a helpless ______', Q5 'new powers', Q7 'printing method called ______'), so they can be answered by matching words.", "fixed": false, "change": "Suggest more paraphrase around the gaps, e.g. Q4 'In Persian, the term checkmate originally referred to a powerless ______.'" },
+    { "q": 36, "severity": "low", "problem": "The word-list summary (Q36-40) follows the passage's sentences closely ('the life we have lived', 'remembered past', 'thickens the record'), which makes it easier than an IELTS summary.", "fixed": false, "change": "Suggest rewording the summary lines so they paraphrase the passage, keeping the same answers." },
+    { "q": 12, "severity": "low", "problem": "Q12 and Q32 have no clean same-meaning pair (the passage contradicts the statement rather than restating it), so they are left without a pair.", "fixed": false, "change": "None needed." }
+  ],
+  "paraphrasePairs": { "before": 20, "after": 38 }
+}

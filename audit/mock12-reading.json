@@ -1,0 +1,18 @@
+{
+  "id": "mock12-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three well-written passages (canned food, peat bogs, myths about creativity) at real IELTS length and difficulty. The keys were all correct, but the TRUE/FALSE/NOT GIVEN set in passage 1 and two YES/NO/NOT GIVEN statements in passage 3 did not follow passage order; they have been reordered.",
+  "strengths": [
+    "Passage 1 completion answers are single words in passage order, with a good spread of FALSE items (Appert's understanding, Durand's factory).",
+    "Passage 2 is genuinely academic (carbon accounting, restoration ecology) with five clearly distinct experts for matching people.",
+    "Passage 3 is an excellent argument passage: each myth is stated and then dismantled, which suits sentence endings and Y/N/NG.",
+    "Distractor endings (A, G) and the unused expert (Nowak) are well chosen."
+  ],
+  "issues": [
+    { "q": 8, "severity": "medium", "problem": "T/F/NG Q8-12 were out of passage order: the statement about Appert's understanding (paragraph 4) came first, and the book-translation statement (paragraph 3) came fourth.", "fixed": true, "change": "Reordered to follow the passage: Q8 obliged to make the process public (TRUE), Q9 book translated (NOT GIVEN), Q10 Appert understood why it worked (FALSE), Q11 Durand's own factory (FALSE), Q12 Royal Navy early buyer (TRUE). Explain/evidence moved in the overlay." },
+    { "q": 38, "severity": "medium", "problem": "Y/N/NG Q38 (schools and creativity training, paragraph 5) came before Q39 (value of groups, paragraph 4).", "fixed": true, "change": "Swapped: Q38 is now 'Working in groups has no value...' (NO), Q39 'Schools should give more lesson time...' (NOT GIVEN). Explain/evidence swapped in the overlay. Results saved earlier for Q8-12 and Q38/39 were marked against the old order." },
+    { "q": 1, "severity": "low", "problem": "Q1 ('preserving food for the French navy and ___') copies the passage almost word for word, so it tests no paraphrase.", "fixed": false, "change": "Suggest 'The 1795 competition sought a method of keeping supplies fresh for France's sailors and ___.'" }
+  ],
+  "paraphrasePairs": { "before": 0, "after": 38 }
+}

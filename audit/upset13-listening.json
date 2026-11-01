@@ -1,0 +1,22 @@
+{
+  "id": "upset13-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.0",
+  "summary": "A well-built Pre-IELTS listening paper in genuine IELTS format: a booking call, a museum tour, a two-student project discussion and a history lecture, each about the right length. Every question has a real distractor (corrections, 'used to' times, options mentioned then ruled out), and the keys are all correct. It is a little gentler than the real test because most gap answers in Parts 1 and 4 are heard almost word for word, which suits B2 students.",
+  "strengths": [
+    "Scripts are full length (about 580, 760, 1,030 and 780 words) and natural.",
+    "Part 1 has proper traps: the October course replaced by November, 10.00 changed to 9.30, Friday versus Wednesday, cash versus card.",
+    "Part 2 and Part 3 distractors are fair: every wrong option is mentioned and then rejected, and answers come in question order.",
+    "Part 4 notes follow every main idea of the lecture; all ten answers are single, correctly spelled words."
+  ],
+  "issues": [
+    { "q": 4, "severity": "medium", "problem": "Paraphrase pair was reversed and its question side ('takes place') was not on the question paper.", "fixed": true, "change": "Pair now ['where exactly is the course held', 'Place']." },
+    { "q": 11, "severity": "medium", "problem": "Paraphrase pair used 'stored', a word that is only in the explanation, not in what the student reads.", "fixed": true, "change": "Pair now ['barrels of salted fish stood here', 'a store for fish']." },
+    { "q": 23, "severity": "low", "problem": "Question side 'fibres from their clothes' did not match the option ('fibres from their own clothes').", "fixed": true, "change": "Pair now ['Our own clothes were shedding fibres', 'fibres from their own clothes']." },
+    { "q": 26, "severity": "low", "problem": "Question side 'operate' is not in the option ('operating the spectrometer').", "fixed": true, "change": "Pair now ['run the spectrometer for us', 'operating the spectrometer']." },
+    { "q": 3, "severity": "low", "problem": "Pair ['begin', 'start'] was not a useful paraphrase: the script itself says 'starts at nine thirty', and 'begin' belongs to the distractor time.", "fixed": true, "change": "Pair removed." },
+    { "q": 31, "severity": "low", "problem": "Part 4 is mostly heard word for word (e.g. Q33 'ferment the leaves', Q38 'a secret', Q39 'the medicine quinine'), so it is easier than a real Part 4.", "fixed": false, "change": "Suggestion for future sets: paraphrase more of the note stems (e.g. 'the drug used against malaria' instead of 'the medicine')." },
+    { "q": 12, "severity": "low", "problem": "Part 2 MCQs have only three options and are short; real Part 2 often mixes in a map or plan labelling task.", "fixed": false, "change": "Acceptable for Pre-IELTS; consider a plan-labelling task in Part 2 of a later set for type variety." }
+  ],
+  "paraphrasePairs": { "before": 22, "after": 31 }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "upset10-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built Pre-IELTS listening paper. The four parts have the right kinds of talk, the right length and the right question types, and Parts 1-3 have real IELTS traps (corrections, wrong options heard first). It is a little gentler than the real test mainly because the Part 4 notes repeat the lecturer's own words, and the Part 1 form gives away some of its traps in brackets. Right level for B2 students.",
+  "strengths": [
+    "Script lengths fit the real timing (633 / 733 / 971 / 724 words).",
+    "Part 1 has a correction or distractor on almost every gap: Tuesday then Wednesday, 8.00 then 7.45, The Champions then The Magpies, 30 then 25 thousand, 25 September then 2 October.",
+    "In Parts 2 and 3 each wrong MCQ option is mentioned and rejected before the right one, as in the real test.",
+    "Answers come in question order; the spelled-out name and the numbers are clear; all Part 4 answers are single concrete nouns inside the ONE WORD limit.",
+    "Speaker attributions in explain/evidence are correct (A = Aziza, B = Bekzod in Part 3)."
+  ],
+  "issues": [
+    { "q": 5, "severity": "medium", "problem": "Paraphrase pair broken: 'reach you' does not occur in the script.", "fixed": true, "change": "Pair now ['how should I get hold of you', 'Contact by']." },
+    { "q": 13, "severity": "medium", "problem": "Pair's question side 'stay overnight' is not what the option says ('stay on the ship overnight').", "fixed": true, "change": "Pair now ['you can sleep on board', 'stay on the ship overnight']." },
+    { "q": 19, "severity": "medium", "problem": "Pair's question side 'being repaired' is not in the box (the box says 'cannot be entered at the moment').", "fixed": true, "change": "Pair now ['you can only look in from the doorway', 'cannot be entered at the moment']." },
+    { "q": 12, "severity": "low", "problem": "Pair ['the breakers', 'destruction'] did not point to the answer.", "fixed": true, "change": "Pair now ['Rescue came instead from', 'saved from destruction by']." },
+    { "q": 12, "severity": "low", "problem": "The right option 'a group of former sailors' is word for word what the curator says, so no paraphrase is needed to answer.", "fixed": false, "change": "Suggest the option 'people who had once worked on the ship'." },
+    { "q": 1, "severity": "low", "problem": "The Part 1 form prints some traps in brackets: '(no longer on Tuesdays)', '(25 September is a public holiday)', '(calls often go unanswered)'. Students are warned before they hear the trap, so the correction is easier to catch.", "fixed": false, "change": "Suggest removing the bracketed hints from the rows for gaps 1, 5 and 8." },
+    { "q": 31, "severity": "medium", "problem": "The Part 4 notes copy the lecture almost word for word ('channels of water', 'designed to express the king's power', 'a walled enclosure', 'to improve the health of'). Students only have to match words, not meaning, and there are no distractors in Part 4.", "fixed": false, "change": "Suggest rewording the stems, e.g. 'split into quarters by ___ channels' or 'meant to display royal ___'. A self-correction in the lecture would also help in future sets (this script is already recorded)." },
+    { "q": 20, "severity": "low", "problem": "Box options for Q15, Q18 and Q20 are very close to the script ('can only be seen with a guide' / 'can only be visited with a guide').", "fixed": false, "change": "Suggest rewording one or two box options, e.g. 'is open only on accompanied tours'." }
+  ],
+  "paraphrasePairs": { "before": 15, "after": 37 }
+}

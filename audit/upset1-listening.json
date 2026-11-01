@@ -1,0 +1,20 @@
+{
+  "id": "upset1-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built Pre-IELTS listening paper in true IELTS format: a booking call, a guide's talk, a two-student project discussion and a history lecture, each long enough for real timing. The answer keys are all correct and the parts use real distractors (Tuesday then Wednesday, 200 then 180 thousand). Part 4 is the gentlest part, because the notes often repeat the lecturer's own words, which suits B2 students.",
+  "strengths": [
+    "All four parts match the IELTS pattern and length (669 / 783 / 1,224 / 995 words).",
+    "Part 1 has real self-corrections (200 to 180 thousand som; Tuesday withdrawn, then Wednesday) and a spelled surname and street.",
+    "Part 3 rejects each wrong MCQ option with a reason, and the multi-select items include three convincing distractors that are discussed and dismissed.",
+    "Every answer comes in question order and every gap answer is a single word or number, spelled as heard."
+  ],
+  "issues": [
+    { "q": 22, "severity": "low", "problem": "Paraphrase pair used 'questionnaires' as the question side, but the options say 'forms'; the pair could not be shown to students.", "fixed": true, "change": "Pair is now ['at the start of a lecture', 'during lectures']." },
+    { "q": 26, "severity": "low", "problem": "Paraphrase pair used 'measure of uncertainty', which does not appear anywhere in the question.", "fixed": true, "change": "Pair is now ['for every percentage we give', 'for every figure']." },
+    { "q": 15, "severity": "low", "problem": "Box option E 'has won a national award' copies the guide's words exactly ('it won a national award'), so the item tests word matching, not understanding.", "fixed": false, "change": "Suggest rewording box option E to 'has received a prize from a national organisation' (the script can stay as recorded)." },
+    { "q": 25, "severity": "low", "problem": "Option C 'a seminar group from another course' is repeated almost word for word by Gulnora ('a small group from another course'), which gives the answer away.", "fixed": false, "change": "Suggest rewording option C to 'a group of geography students' or 'people from a different department'." },
+    { "q": 31, "severity": "low", "problem": "Part 4 notes repeat the lecturer's wording closely ('crushed wild grains', 'baked on hot stones', 'closed clay oven'), so several gaps need no paraphrase recognition. This makes Part 4 easier than a real IELTS Part 4.", "fixed": false, "change": "For a harder version, paraphrase the note lines, e.g. 'made from wild {{31}} that had been ground up', 'cooked on heated {{32}}'. Fine as it is for B2 students." }
+  ],
+  "paraphrasePairs": { "before": 21, "after": 32 }
+}

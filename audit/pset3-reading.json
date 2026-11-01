@@ -1,0 +1,18 @@
+{
+  "id": "pset3-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A high-quality IELTS Academic paper: three passages of 856-899 words, rising from a history of street lighting to a demanding psychology argument about procrastination, with well-paraphrased questions. One pair of True/False/Not Given questions was out of passage order and has been swapped; nothing else needed fixing.",
+  "strengths": [
+    "Passage 3 is genuinely C1: abstract argument, metaphor ('a loan at high interest', 'the emotional cliff') and evidence from several research traditions.",
+    "Questions paraphrase rather than copy (valid reason / without good reason; groups / clusters; pardons / forgiving themselves; no clear starting point / no obvious first move).",
+    "Passage 2 matching-people task has a genuine extra name (Jonas Berg) and the summary follows passage order.",
+    "MCQ distractors are plausible and some reverse the text (Q27 D, Q28 B), as in the real test."
+  ],
+  "issues": [
+    { "q": 8, "severity": "high", "problem": "T/F/NG out of passage order: Q8 (Paris lanterns, paragraph 2) came before Q9 (link-boys, paragraph 1).", "fixed": true, "change": "Swapped the statements: Q8 = link-boys earnings (NOT GIVEN), Q9 = Paris lanterns paid by householders (FALSE). Keys now T, NG, F, T, T, F, NG." },
+    { "q": 4, "severity": "low", "problem": "Q4 repeats the passage word for word ('lit each lamp high above the street with long').", "fixed": false, "change": "Suggest 'Lamplighters reached the lamps with the help of long ______.'" },
+    { "q": 21, "severity": "low", "problem": "Summary gaps 20 and 21 keep the passage's collocations ('strong winds', 'safe landing sites'), so they are easy to locate.", "fixed": false, "change": "Acceptable; for a harder version use 'in gusty ______' and 'places where drones can safely ______'." }
+  ],
+  "paraphrasePairs": { "before": 30, "after": 35 }
+}

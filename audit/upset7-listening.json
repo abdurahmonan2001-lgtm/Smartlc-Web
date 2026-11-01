@@ -1,0 +1,19 @@
+{
+  "id": "upset7-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A good Pre-IELTS listening paper: hiring party equipment, a science-centre talk about a new gallery, two students planning a canteen study, and a lecture on the history of shorthand. All answer keys are correct, in script order and spelled correctly, and Parts 1–3 have real IELTS distractors. Part 4 notes copy the lecture's words around most gaps, so it is the easiest part. No key fixes were needed; 5 pairs were added, so 34 of 40 questions now have one.",
+  "strengths": [
+    "Part 1 uses classic traps: wedding then birthday, the 16th then the 23rd, hall then garden, nine-metre then twelve-metre marquee, seven then eight tables, Friday then Thursday.",
+    "Every Part 2 MCQ mentions and rejects the two wrong options (council and ticket sales; standard tickets and school groups; timed tickets and weekends; feedback forms and donations), and the matching box has two unused distractors.",
+    "Part 3 (908 words) is a realistic two-speaker project discussion; in both 'choose TWO' items the three wrong options are each raised and dismissed with a reason.",
+    "Script lengths fit the real timing (699 / 677 / 908 / 680 words)."
+  ],
+  "issues": [
+    { "q": 32, "severity": "medium", "problem": "Part 4 notes repeat the lecturer's words around most gaps ('take down {{32}} word for word in the Senate', 'used in church to copy {{35}}', 'based on {{37}} taken from ordinary handwriting', 'a shorthand {{39}} with a small keyboard', 'an honest {{40}} of everyday life'), and there are no distractors before the answers. This part is clearly easier than an IELTS Part 4.", "fixed": false, "change": "Paraphrase the notes without changing the audio, e.g. 'recorded the {{32}} given in the Senate in full', 'used by churchgoers to write down {{35}}', 'its shapes come from the {{37}} of everyday writing', 'court reporters now type on a {{39}}', 'diaries prized as a truthful {{40}} of daily life'." },
+    { "q": 8, "severity": "low", "problem": "Some Part 1 gaps have no distractor and the table repeats the script (Q8 'two large speakers and a cordless {{8}}', Q10 'by bank {{10}}').", "fixed": false, "change": "Acceptable for B2. In a future script, add a correction (e.g. a wired microphone offered first, or card payment suggested and refused)." },
+    { "q": 11, "severity": "low", "problem": "Part 2 has no map/plan labelling, which is common in real Part 2 (MCQ + matching is still a valid IELTS mix).", "fixed": false, "change": "The exhibit walk-through ('Just inside the entrance', 'Beyond that', 'Next to the heart', 'Across the hall', 'at the far end') would suit a plan-labelling task in a future set." },
+    { "q": 3, "severity": "low", "problem": "A previous reviewer had already added pairs to this paper. All 29 were checked: each side is copied from the script/question and the meaning matches, so all were kept. Q1, Q2, Q6, Q8, Q9 and Q12 have no real paraphrase (a spelled name, numbers, or the question repeats the script) and are left without a pair.", "fixed": true, "change": "Added pairs: Q3 ['The sixteenth... I'm sorry', 'the 16th not possible'], Q30 ['when the plates were smaller', 'using smaller plates'], Q32 ['with them he took down', 'used his symbols to take down'], Q33 ['across Europe', 'European'], Q40 ['A diary kept in symbols', 'old shorthand diaries']." }
+  ],
+  "paraphrasePairs": { "before": 29, "after": 34 }
+}

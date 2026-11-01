@@ -1,0 +1,25 @@
+{
+  "id": "pset14-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong Academic Reading paper. The three passages (907, 947 and 985 words) get harder in the right way: a factual history of the button, a discursive article on food redistribution, and an argumentative psychology passage at C1 level. All answer keys were correct. Two question groups were out of passage order and have been reordered, and the paraphrase pairs were tidied up and completed.",
+  "strengths": [
+    "Passage 3 is genuinely C1: an argument with concessions ('There is nothing absurd in this'), and the cause-and-effect reasoning about replication tests careful reading.",
+    "The NOT GIVEN items (9, 13, 33) really are not addressed, and the FALSE items (8, 11) are directly contradicted.",
+    "MCQ distractors in Passage 3 are well made: 28D and 30C echo the passage's wording but reverse what it says.",
+    "A good mix of IELTS question types: sentence completion, TFNG, matching information, summary completion, matching people, MCQ, YNNG and sentence endings."
+  ],
+  "issues": [
+    { "q": 34, "severity": "medium", "problem": "Y/N/NG items were out of passage order: Q34 (fellow-feeling and policy) is answered in the last paragraph, while Q35 ('nothing absurd', the simulator idea) is answered in paragraph 5.", "fixed": true, "change": "The two statements swapped places (numbers and type kept): Q34 is now the far-fetched statement (NO) and Q35 the fellow-feeling statement (YES). The sequence is now YES, NO, NG, NO, YES." },
+    { "q": 37, "severity": "low", "problem": "Sentence endings were out of passage order: the 'later, larger experiments' come before the 'lifetime of reading' correlation in paragraph 4.", "fixed": true, "change": "Q37 and Q38 swapped: Q37 'The outcome of the later, larger experiments' = E, Q38 'The link between a lifetime of reading fiction and social skill' = A." },
+    { "q": 6, "severity": "low", "problem": "Paraphrase pair ['firing', 'baking'] and the explanation cite 'baking', but the question says 'then bake it'.", "fixed": true, "change": "Pair now ['firing it', 'bake it']; the explanation is corrected to match." },
+    { "q": 32, "severity": "low", "problem": "Pair ['found no such effect', 'has been shown'] was a contradiction, not a paraphrase.", "fixed": true, "change": "Now ['demonstrating that fiction builds social skill', 'shown to make people better at understanding others']. The explanation now also cites 'would require what nobody has yet done'." },
+    { "q": 27, "severity": "low", "problem": "The explanation said only A and D are never claimed, and said nothing about B (young children).", "fixed": true, "change": "The explanation now covers A (best known, not only reliable), B and D." },
+    { "q": 38, "severity": "low", "problem": "Pair ['the causal arrow ran the other way', 'may simply show'] did not mean the same thing.", "fixed": true, "change": "Now ['choosing to spend their evenings with novels', 'choose to read novels'] (this question moved from Q37 to Q38)." },
+    { "q": 1, "severity": "low", "problem": "Several pairs were single words, or a pair could teach more (Q1, Q3, Q5, Q26).", "fixed": true, "change": "Q1 ['The earliest known buttons', 'The oldest buttons found so far'], Q3 ['coincided with a revolution', 'at the same time as a great change'], Q5 ['water-powered stamping machinery', 'stamping machinery driven by'], Q26 ['far more waste than any charity can move', 'more than redistributing it ever can']." },
+    { "q": 8, "severity": "low", "problem": "Q8, Q9, Q13 and Q33 had no pair.", "fixed": true, "change": "Added ['on Roman sites', 'in the Roman world'], ['a narrow sleeve or a fitted jacket', 'Fitted garments'], ['a broken zip', 'Zips break'], ['offering practice at inference', \"train readers' social judgement\"]. Q11 (FALSE, the price fell) stays without a pair because the passage has no paraphrase of 'more expensive', only its opposite." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 sentence completion (1-6) keeps much of the passage's wording around each gap ('discs of curved', 'cord', 'damp ... into shape'), so these are easier than typical.", "fixed": false, "change": "Fine for Passage 1. To make it harder, paraphrase the words around the gap more (e.g. Q1 'small rounded pieces of shell, pierced and polished')." },
+    { "q": 23, "severity": "low", "problem": "In People matching (23-26), the person not needed is Halvorsen, who is also the whole subject of the summary (19-22). Students can rule her out without reading closely.", "fixed": false, "change": "Suggest adding a statement close to Halvorsen's view as a distractor, or making the unused person someone whose ideas overlap with Chandra or Tanaka." }
+  ],
+  "paraphrasePairs": { "before": 35, "after": 39 }
+}

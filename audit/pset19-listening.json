@@ -1,0 +1,17 @@
+{
+  "id": "pset19-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A good paper in the real format. Part 1 has the usual corrections (French to Japanese, Tuesday to Thursday, six to 6.30, Oak to Willow Room, 75 to 60 thousand). Parts 2 and 3 mention and reject both wrong options in almost every question, and Part 3 is a rich 948-word discussion. All the keys are correct and in script order. The main weakness is one Part 3 question whose wrong options are never heard.",
+  "strengths": [
+    "The Part 2 matching list is well made: the six comments are paraphrased (e.g. 'a fifth of what they cost ten years ago' becomes 'fallen sharply in price'), and the two unused ones are plausible.",
+    "Part 3 has real academic content (site moves, snow measured as depth, methods versus limitations), at the right Part 3 level.",
+    "Part 4 tests proper nouns and the order of facts well (Cremona after Milan and Brescia; maple after spruce)."
+  ],
+  "issues": [
+    { "q": 23, "severity": "low", "problem": "The wrong options A ('rounded to whole millimetres') and B ('recorded at different times of day') are never mentioned in the recording, so a student can pick C simply by hearing 'snow'. Every other MCQ has heard distractors.", "fixed": false, "change": "Suggestion: change A to an idea that is discussed and set aside, e.g. 'Several years of readings are missing' (the 1911 gap), or rewrite the options around the 'tenth to a third' water content." },
+    { "q": 10, "severity": "low", "problem": "The table already gives the coordinator's name (Malika), so the speaker's correction from Gulbahor to Malika is not tested. Several Part 1 table cells also copy the script word for word.", "fixed": false, "change": "Suggestion: make the coordinator's name a gap and turn another row into plain information." },
+    { "q": 3, "severity": "low", "problem": "Paraphrase pairs: Q3 and Q10 used 'now' as the question side, which is not on the form. Q6 paired 'come down to' with 'per term'. Q24 paired '1948' with 'check their corrections'. Q16 and Q37 repeated the same words, and the Q28 and Q32 pairs did not match in meaning.", "fixed": true, "change": "All replaced or removed, e.g. Q10 ['So how do I sign up', 'To join'], Q24 ['how do we test our corrections', 'to check their corrections'], Q32 ['settled the shape once and for all', 'took its final form']. The Q6 pair was removed. New pairs were added for Q7, Q9 and Q33." }
+  ],
+  "paraphrasePairs": { "before": 29, "after": 31 }
+}

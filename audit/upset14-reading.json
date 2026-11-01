@@ -1,0 +1,21 @@
+{
+  "id": "upset14-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good, original passages (a history of the piano, rewilding old golf courses, and the psychology of 'flow'), each about 800-880 words, with a full IELTS mix of question types. Passages 1 and 2 are clear and accessible, and Passage 3 reaches C1 register, so the paper sits a little below a real IELTS paper, which suits B2 students. Some questions repeated the passage's own words; these were reworded so that students have to recognise paraphrase.",
+  "strengths": [
+    "Lengths are right (832 / 879 / 801 words) and difficulty rises from passage 1 to 3.",
+    "Varied IELTS question types: sentence completion, T/F/NG, matching information, summary completion, people matching with an extra name, MCQ, Y/N/NG and a word-list summary.",
+    "Completion and T/F/NG answers follow passage order. The NOT GIVEN items (Q10, Q33) are genuinely not addressed, and the FALSE/NO items are directly contradicted.",
+    "The MCQ distractors echo passage words ('evening', 'too far above', 'slogan'), and the correct options are paraphrased."
+  ],
+  "issues": [
+    { "q": 25, "severity": "medium", "problem": "The statement ('More courses were built than the remaining players could support') nearly copied Trewin's quote, so students could match it by spotting the same words.", "fixed": true, "change": "Prompt reworded to 'Developers overestimated how many people would want to play.' Key stays A (Trewin)." },
+    { "q": 1, "severity": "low", "problem": "The Q1 and Q3 gap sentences repeated the passage's wording around the answer ('plucked by a small', 'threw a small ... against the string').", "fixed": true, "change": "Q1 is now 'a small ______ pulled at the string each time a key went down'. Q3 is now 'pressing a key sent a small ______ against the string'. Keys unchanged." },
+    { "q": 19, "severity": "low", "problem": "The summary lines for Q19, Q21 and Q37 copied the passage words next to the gap ('dosed with', 'were flowering on', 'rapid').", "fixed": true, "change": "Reworded to 'treated with', 'were in bloom across' and 'quick'. Q37's explanation was updated to match. Keys unchanged." },
+    { "q": 36, "severity": "low", "problem": "The summary line for Q36 ('well matched to a person's ...') reuses the wording of Q28's correct option C, so one item hints at the other.", "fixed": false, "change": "Suggestion: reword Q28 option C, for example to 'suits what the performer can currently do'." },
+    { "q": 11, "severity": "low", "problem": "Weak paraphrase pairs ('smallest movement'/'less pressure', 'survey teams'/'recorded', 'rangers'/'staff', 'filled larger halls'/'volume').", "fixed": true, "change": "Replaced with closer pairs, for example ['a light, shallow action', 'needed less pressure from the player'] and ['the money once spent on mowing', 'Money saved on maintaining turf']." },
+    { "q": 14, "severity": "low", "problem": "The matching-information set uses only A, C, D and E. B and F are never answers, which slightly reduces the challenge.", "fixed": false, "change": "Suggestion: next time, include one statement that matches paragraph B (for example 'a claim that fairways are ecologically closer to carpet') or paragraph F." }
+  ],
+  "paraphrasePairs": { "before": 25, "after": 38 }
+}

@@ -2669,3 +2669,31 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .pr-an__row span:nth-child(5), .pr-an__row span:nth-child(6) { display: none; }
   .pr-an__skill { grid-template-columns: 1fr 1fr; }
 }
+
+/* ─── Find the paraphrase (practice/ParaphraseHunt.jsx) ─── */
+.ph .pr-review__bar { display: flex; justify-content: space-between; align-items: center; }
+.ph-q { background: #fef3c7; color: #92400e; padding: 0 3px; border-radius: 4px; font-weight: 700; }
+.ph-question { border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; background: #f8fafc; }
+.ph-question p { margin: 4px 0 0; line-height: 1.55; }
+.ph-qn { font-size: 12px; font-weight: 700; color: #64748b; }
+.ph-opts { margin: 6px 0 0; padding-left: 18px; line-height: 1.5; }
+.ph-look { font-size: 13px; color: #475569; }
+.ph-source { max-height: 360px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; line-height: 1.75; font-size: 15px; }
+.ph-title { font-weight: 800; margin-bottom: 6px; }
+.ph-line { margin: 0 0 10px; }
+.ph-who { display: inline-block; min-width: 20px; margin-right: 6px; font-size: 11px; font-weight: 800; color: #64748b; }
+.ph-w { cursor: pointer; border-radius: 4px; padding: 1px 0; }
+.ph-w:hover { background: #e2e8f0; }
+.ph-w:focus-visible { outline: 2px solid var(--green); }
+.ph-w.is-picked { background: #dbeafe; color: #1e3a8a; }
+.ph-w.is-target { background: #d1fae5; color: #065f46; font-weight: 700; }
+.ph-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: 12px; }
+.ph-bar p { margin: 0; flex: 1; min-width: 200px; font-size: 14px; line-height: 1.5; }
+.ph-ok { color: #047857; font-weight: 700; }
+.ph-show { color: #1e3a8a; font-weight: 600; }
+.ph-no { color: #b91c1c; font-weight: 600; }
+.ph-actions { display: flex; gap: 8px; }
+.ph-btn { border: none; border-radius: 10px; padding: 10px 18px; font-weight: 700; background: var(--green); color: #fff; cursor: pointer; }
+.ph-btn:disabled { opacity: .45; cursor: default; }
+.ph-btn.is-ghost { background: transparent; color: #334155; border: 1px solid #cbd5e1; }
+.ph-done { font-size: 18px; font-weight: 800; margin: 6px 0; }

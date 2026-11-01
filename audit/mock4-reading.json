@@ -1,0 +1,31 @@
+{
+  "id": "mock4-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three full-length passages (835, 817, 829 words) with clear rising difficulty; passage 3 on dying languages is genuine C1 argument. All keys, word limits and T/F/NG decisions check out. The only weakness is that a few facts in passage 2 are tested twice.",
+  "strengths": [
+    "Passage 1 sentence completion paraphrases the text well (\"made stronger by\" for \"strengthened by\", \"kept burning by monks\" for \"maintained by monks\").",
+    "NOT GIVEN items (Q10, Q13, Q32) are truly unaddressed and FALSE/NO items (Q9, Q12, Q33, Q35) clearly contradicted.",
+    "Passage 3 Y/N/NG items need understanding of the writer's argument, not word matching (Q31 \"seldom a completely free one\", Q34)."
+  ],
+  "issues": [
+    {
+      "q": 25,
+      "severity": "low",
+      "problem": "Passage 2 tests some facts twice: the four per cent shoe gain (Q15 and Q25), the even pace (Q22 and Q24), drinking too much (Q17 and Q23).",
+      "fixed": false,
+      "change": "Replace the correct option B of Q25 with another true fact from paragraph E (e.g. \"Most major records since 2016 have been set in them\"), and make Q22 test another word of paragraph C."
+    },
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "Q1 states the mirror was bronze, while the passage says \"probably of bronze\". \"According to ancient accounts\" covers it, but it is slightly stronger than the text.",
+      "fixed": false,
+      "change": "Optional: \"... made stronger by a large polished ______, probably bronze.\""
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 3,
+    "after": 37
+  }
+}

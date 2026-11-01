@@ -1,0 +1,45 @@
+{
+  "id": "mock6-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three full-length passages (886, 854, 910 words) with clear rising difficulty and a proper IELTS mix; all keys are correct. Two T/F/NG items out of passage order have been swapped; the remaining weak point is passage 3 sentence endings that copy the passage word for word.",
+  "strengths": [
+    "Passage 1 completion stems paraphrase the text well (\"adjusting the amount of canvas\" for \"taking cloth in when a gale threatened\").",
+    "Passage 2 matching people has a fifth person (Priya Raman) who is never the answer, a real distractor.",
+    "Passage 3 MCQs and Y/N/NG need the writer's argument (Q29 \"Nor need the two be rivals\", Q39 \"now looks misconceived\")."
+  ],
+  "issues": [
+    {
+      "q": 32,
+      "severity": "medium",
+      "problem": "Sentence endings copy the passage: D \"return to breed on the shore where they hatched\", C \"implies that a bird might see the magnetic field\" and F \"seem to recognise the chemistry of their home water\" are near quotes, so Q31, Q33 and Q34 are word matching.",
+      "fixed": false,
+      "change": "Paraphrase the endings, e.g. D \"come back to their birthplace to lay eggs\", C \"suggests the magnetic field may be visible to birds\", F \"appear to identify their river by its chemical make-up\"."
+    },
+    {
+      "q": 12,
+      "severity": "low",
+      "problem": "T/F/NG order: Q11 (millwrights, paragraph 6) comes before Q12 (the fantail, paragraph 5).",
+      "fixed": true,
+      "change": "Swapped the prompts of Q11 and Q12 in mock6-reading.js (numbers and types kept): Q11 is now the fantail item (TRUE), Q12 the millwrights item (NOT GIVEN); explanation, evidence and paraphrase pair moved with each statement in mock-vocab-A.json."
+    },
+    {
+      "q": 18,
+      "severity": "low",
+      "problem": "Summary order: Q18 (water vapour) comes before Q19 (five degrees cooler), but in paragraph B the five-degree figure comes first.",
+      "fixed": false,
+      "change": "Swap the two summary sentences so the five-degree sentence holds gap 18 and the vapour sentence gap 19 (keys swap accordingly)."
+    },
+    {
+      "q": 23,
+      "severity": "low",
+      "problem": "Passage 2 tests each expert twice (Lindqvist Q19/Q24, Osei Q20/Q26, Whitfield Q21/Q25, Duarte Q22/Q23).",
+      "fixed": false,
+      "change": "Replace one item of each pair, e.g. a summary gap about Raman's \"open-crowned species\" in narrow streets."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 35
+  }
+}

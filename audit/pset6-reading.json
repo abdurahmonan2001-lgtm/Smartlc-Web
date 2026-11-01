@@ -1,0 +1,22 @@
+{
+  "id": "pset6-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.0",
+  "summary": "The three passages are long (918-947 words) and well written, and Passage 3 on risk is genuinely IELTS-hard. But the twelve completion questions in Passages 1 and 2 copy the passage almost word for word, and the people-matching task has no extra name, so a student can score well by word-spotting. Two question groups were out of passage order and have been reordered; the paper had only 4 paraphrase pairs and now has 33.",
+  "strengths": [
+    "Passage 3 ('Why we misjudge risk') is a demanding argumentative text at C1 level, with well-built MCQs whose keys paraphrase the passage (Q27 'ignorance alone' / 'a simple lack of knowledge').",
+    "Passage 2 matching-information items need real paraphrase recognition (retrofitting / buildings that already exist; benefits shared / fall to different people).",
+    "T/F/NG keys are sound: FALSE items are contradicted (curiosity at the fair, the clothing trade would not touch it, the name escaped its owner) and NOT GIVEN items are absent."
+  ],
+  "issues": [
+    { "q": 31, "severity": "high", "problem": "Y/N/NG 31-36 out of passage order: Q35 (news reporting, paragraph 2) came last, and Q36 (education, paragraph 7) came after Q34 (researchers), whose sentence follows it.", "fixed": true, "change": "Reordered to passage order: Q31 news organisations (NG), Q32 qualities worth caring about (YES), Q33 more accurate statistics (NO), Q34 frequency out of a hundred (YES), Q35 removed by education (NO), Q36 researchers protected (NO)." },
+    { "q": 37, "severity": "high", "problem": "Sentence-completion MCQs out of order: Q37 (involuntary risk, paragraph 3) came before Q38 (heart disease, paragraph 2).", "fixed": true, "change": "Swapped: Q37 = heart-disease deaths underestimated, Q38 = hazard feels more threatening." },
+    { "q": 24, "severity": "medium", "problem": "Broken English and a verbatim copy: 'Planted roofs are met at the lowest possible standard when cities require them without funding them.'", "fixed": true, "change": "Prompt now 'When cities make planted roofs compulsory without paying for them, builders do only the minimum required.' (key unchanged: Marek Dolinski)." },
+    { "q": 19, "severity": "low", "problem": "Q19 prompt began 'Complete the summary.' although Questions 19-23 are separate sentences, not a summary.", "fixed": true, "change": "Removed the stray instruction from the prompt." },
+    { "q": 8, "severity": "medium", "problem": "Pair text side 'defending his patents' is not in the passage ('defending his sewing-machine patents').", "fixed": true, "change": "Pair now ['busy defending his sewing-machine patents', 'concentrate on legal disputes']; 29 more pairs added." },
+    { "q": 2, "severity": "medium", "problem": "Completion items 2, 5, 7, 20, 22 and 23 repeat the passage's exact phrase (joined by a cord; hollow on one face and a ... on the other; rubber overshoe; bare bitumen; patches of bare gravel). This is the main reason the paper is easier than IELTS.", "fixed": false, "change": "Paraphrase the stems, e.g. Q5 'one side of each tooth is hollow and the other has a ______'; Q23 'roofs that suit insects best include areas of uncovered ______'." },
+    { "q": 24, "severity": "medium", "problem": "Matching people (24-26) offers exactly three names for three statements, so the last answer is free; IELTS always gives more options than questions or allows reuse.", "fixed": false, "change": "Add one or two extra names (e.g. the Basel or Toronto planners mentioned in paragraph A could be named) or add a fourth statement." },
+    { "q": 1, "severity": "low", "problem": "Explanations in Passages 1-2 mostly restate the evidence sentence without saying what makes the answer right or which distractor to avoid.", "fixed": false, "change": "Expand explanations in the style of pset1-5 (name the paraphrase and the trap)." }
+  ],
+  "paraphrasePairs": { "before": 4, "after": 33 }
+}

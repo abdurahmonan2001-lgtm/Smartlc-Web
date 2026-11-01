@@ -1,0 +1,20 @@
+{
+  "id": "pset7-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A realistic IELTS listening test with long scripts and a clear trap on almost every question in Parts 1-3. No answer keys were wrong. Part 4's notes repeat the lecture closely, so it is a little easier than a real Part 4, and several paraphrase pairs were not real paraphrases and have been fixed or removed.",
+  "strengths": [
+    "Part 1 (724 words) has corrections and distractors throughout: third/fourth floor, 5th/12th September, large/medium van, 800/700, bank transfer refused, boxes free but tape not.",
+    "Part 2 MCQs mention and reject two plausible options each; the matching box paraphrases well (former member of staff / worked in our shop for thirty years; recently returned from abroad / come home after two years on loan).",
+    "Part 3 (909 words) is a full academic planning discussion; the multi-select items reject three options each with reasons.",
+    "Answers appear in question order and gap answers are single, correctly spelled words."
+  ],
+  "issues": [
+    { "q": 38, "severity": "medium", "problem": "Pair had the same words on both sides ('more importantly' / 'more importantly').", "fixed": true, "change": "Removed; no real paraphrase exists for this gap ('removed plants and, more importantly, skilled ____' repeats the lecture)." },
+    { "q": 28, "severity": "medium", "problem": "Pair's question side 'the marker will expect' is from the script, not the question.", "fixed": true, "change": "Pair now ['burn the dried sample', 'burning samples']." },
+    { "q": 10, "severity": "low", "problem": "Pair ['ten working days ahead', '10 working days ahead'] was a number format, not a paraphrase.", "fixed": true, "change": "Removed. Also tightened Q13 and Q20 and added 8 new pairs." },
+    { "q": 31, "severity": "low", "problem": "Part 4 notes 31, 32, 35, 38 and 40 copy the lecture's wording ('a single ____, Camellia sinensis'; 'made fashionable by a Portuguese ____'), so these items test word-catching more than understanding.", "fixed": false, "change": "Reword the stems in a future edit, e.g. 35 'Charles II's Portuguese wife, a ______, made tea popular at court'." },
+    { "q": 27, "severity": "low", "problem": "Q27 option B 'sieving and weighing dried samples' is said word for word.", "fixed": false, "change": "Suggest 'drying and weighing the soil'." }
+  ],
+  "paraphrasePairs": { "before": 22, "after": 28 }
+}

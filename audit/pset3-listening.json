@@ -1,0 +1,17 @@
+{
+  "id": "pset3-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong, realistic IELTS listening paper. Every part has the right setting and length, and almost every question has a genuine trap (a date that is taken, a number corrected, two options mentioned and rejected). No wrong answers were found; only paraphrase pairs were added.",
+  "strengths": [
+    "Part 1 traps on nearly every gap: 5th/12th November, 40/45 guests, Willow/Cedar Room, boardroom/theatre style, cake/biscuits, post/email.",
+    "Part 2 matching box is well paraphrased (shortest of people / greatest number; extra kit / special clothing; two hours before / arrive earlier) with two unused distractors.",
+    "Part 3 (882 words) is a convincing academic discussion; every MCQ rejects both distractors with reasons, and the multi-select items require following what is kept and what is left out.",
+    "Part 4 lecture is well organised, notes follow the talk's order, and Q37 has a fair distractor (tins vs later vacuum packs)."
+  ],
+  "issues": [
+    { "q": 36, "severity": "low", "problem": "Some Part 4 notes repeat the lecture exactly (36 'plantations replaced large areas of', 37 'ground coffee stayed fresh in sealed', 39 'contains more'), so these items test spelling more than understanding.", "fixed": false, "change": "Reword the stems in a future edit, e.g. 36 'large areas of ______ were cleared for plantations'." },
+    { "q": 13, "severity": "low", "problem": "Q13 option B 'collected from the volunteers' office' repeats the speaker's exact words.", "fixed": false, "change": "Suggest 'They are given out behind the gift shop'." }
+  ],
+  "paraphrasePairs": { "before": 19, "after": 33 }
+}

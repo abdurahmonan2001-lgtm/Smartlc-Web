@@ -1,0 +1,24 @@
+{
+  "id": "pset11-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong IELTS Academic reading paper. The three passages are the right length (about 910, 940 and 980 words) and get harder in the right order, ending with a demanding argument essay on music. I fixed one summary gap that was not supported by the passage and two questions that were out of passage order; the rest of the keys are sound.",
+  "strengths": [
+    "Passage lengths 908 / 943 / 982 words, with difficulty rising from a factual history to a discursive piece to a C1-level argumentative essay.",
+    "A good IELTS type mix: sentence completion, T/F/NG, matching information, summary completion, matching people, 4-option MCQ, Y/N/NG and sentence endings.",
+    "T/F/NG and Y/N/NG keys are sound: FALSE items are clearly contradicted and NOT GIVEN items are truly not addressed.",
+    "MCQ distractors are plausible (e.g. Q27 A is a trap the writer rejects outright), and sentence-ending distractors B and E are believable.",
+    "Matching people includes a well-built distractor (Nowak, also about rules) for Q26."
+  ],
+  "issues": [
+    { "q": 20, "severity": "high", "problem": "The summary said 'No domestic {{20}} can approach such efficiency' (answer 'boiler'). The passage never compares a home boiler's efficiency with combined heat and power; it only says 'there is no boiler in the flat' (paragraph A). So the summary claimed something not in the text, and the answer jumped back from paragraph C to A, out of order.", "fixed": true, "change": "Rewrote the summary line: 'The waste is easy to underestimate: in a single winter, one large station discards more warm water than a small {{20}} could use.' Answer is now 'city' (paragraph C, in order). Explain, evidence and vocab updated." },
+    { "q": 21, "severity": "medium", "problem": "The summary gap 'burying insulated {{21}} beneath an existing street' matches paragraph E ('Laying insulated pipe under an existing street'), but the key accepted only 'pipes' and the evidence quoted paragraph A. A student copying 'pipe' from E would be marked wrong.", "fixed": true, "change": "Answer now accepts 'pipe' and 'pipes'; evidence and explain now quote paragraph E." },
+    { "q": 32, "severity": "medium", "problem": "Y/N/NG out of passage order: Q32 (sad music and a hormone, paragraph 6) came before Q33 (children, linked to paragraph 2).", "fixed": true, "change": "Swapped the two statements, keeping numbers: Q32 is now the children statement (NOT GIVEN) and Q33 the hormone statement (NO). Order is now YES / NOT GIVEN / NO / YES / NO with no three-in-a-row." },
+    { "q": 38, "severity": "low", "problem": "Ending A said moving in time 'makes strangers readier to cooperate', but the passage speaks of 'partners', not strangers.", "fixed": true, "change": "Ending A is now 'raises pain thresholds and makes people readier to cooperate.'" },
+    { "q": 23, "severity": "low", "problem": "Explain said the plant is swapped 'as prices and politics change'; the passage says only 'as prices change'.", "fixed": true, "change": "Explain corrected to quote the passage." },
+    { "q": 18, "severity": "low", "problem": "Paraphrase question side 'restriction on what they may earn' is not in the prompt ('...what heat companies may earn'). Same for Q25 ('takes to come back' is not a phrase in the prompt) and Q2 ('keep supplied' is split by the gap). The checker accepted these because it searches the vocab field itself.", "fixed": true, "change": "Q18 -> ['forbidden to make a profit', 'restriction on what heat companies may earn']; Q25 -> ['over a payback period of thirty to forty years', 'takes decades to come back']; Q2 -> ['devices known as the wooden ox and the gliding horse', 'wheeled devices']." },
+    { "q": 6, "severity": "low", "problem": "Several existing pairs taught a weaker paraphrase than the one the question turns on (Q6 'borrowed from/taken from', Q11 tied 'underground' to 'galleries too low for a horse', Q32 old pair was an opposite, Q40 shared 'at a distance').", "fixed": true, "change": "Q6 -> ['the last real improvement', 'The final significant advance']; Q11 -> ['shallow mines', 'underground']; Q33 -> ['releases a hormone associated with comfort', 'the release of a comforting hormone']; Q40 -> ['with none of the costs that attend real loss', 'without its usual costs']; Q1 newly paired." },
+    { "q": 0, "severity": "low", "problem": "Passage 3 sentence 'The minor third ... carries no such message in every tradition' is slightly awkward ('does not carry that message in every tradition' is clearer). Not a typo, so left.", "fixed": false, "change": "Optional rewording." }
+  ],
+  "paraphrasePairs": { "before": 37, "after": 38 }
+}

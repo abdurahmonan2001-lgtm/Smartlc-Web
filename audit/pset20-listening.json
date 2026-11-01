@@ -1,0 +1,18 @@
+{
+  "id": "pset20-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Now at IELTS level. Parts 1, 3 and 4 were already there, with good traps and a solid map-projection lecture, but Part 2 was much too easy, and before the fix the paper was slightly easier than IELTS: all six matching answers were printed word for word as the speaker says them ('is set aside for beginners', 'was paid for by a local business'…). I have reworded all six. The Part 1 script also has a small date inconsistency, which I could not fix because the audio is already recorded.",
+  "strengths": [
+    "Part 1 has a correction on almost every gap (abbey to castle, the 15th versus the 22nd, bus station to museum, 8.15 to 7.45, 110 to 95 thousand, email to post).",
+    "In the Part 3 MCQs, all three options are discussed, and two are rejected with reasons on the recording.",
+    "Part 4 is a clear, well-organised lecture whose answers are subject words (distortion, navigation, equator, aviation, compromise)."
+  ],
+  "issues": [
+    { "q": 15, "severity": "high", "problem": "Part 2 matching (Q15–20): every correct comment in the box was the speaker's exact words, e.g. 'the bay is set aside for beginners', 'it was paid for by a local business', 'it is popular with people who do not swim', 'it will be made larger next year', 'it must not be entered by swimmers', 'holds equipment that can be borrowed'. Students only had to match words, with no paraphrase to understand.", "fixed": true, "change": "The six box options were reworded (script untouched): 'is reserved for people learning to swim', 'was funded by a company in the area', 'is where members can hire swimming gear', 'attracts visitors who never go in the water', 'is going to be extended', 'is off limits to swimmers'. The explanations and pairs were updated. Keys are unchanged (G, B, H, D, E, C)." },
+    { "q": 3, "severity": "low", "problem": "Script inconsistency (not changed, because the audio is recorded): the agent says the trip runs 'on the last Saturday of every month' and that two trips are 'running that weekend', but then gives two different dates, the 15th and the 22nd of September. The 15th cannot be the last Saturday. The key (22) is still clear.", "fixed": false, "change": "Suggestion for the next recording: say 'two trips running in September' instead of 'that weekend', and drop 'last Saturday of every month' (also from the first row of the form)." },
+    { "q": 17, "severity": "low", "problem": "The script line 'and all of it holds equipment that can be borrowed' is awkward English, written to echo the old box option.", "fixed": false, "change": "Report only. Now that the box option is reworded the echo no longer gives the answer away. If the audio is ever re-recorded, it could say 'and members can borrow all of it for a small charge'." },
+    { "q": 23, "severity": "low", "problem": "Paraphrase pairs: Q17 was reversed and its text side was not in the script. Q23 ('a standing agreement' / 'the answer') and Q25 ('three separate days' / 'three different days', which is not on the paper) were not real pairs. Q6, Q9 and Q38 did not match in meaning or were not on the paper.", "fixed": true, "change": "Fixed or removed. Q23 and Q25 now have no pair. Q6 is now ['that price includes your entrance ticket', 'entrance ticket included'] and Q38 ['was itself replaced by the Winkel Tripel', 'the Winkel Tripel replaced Robinson's map']. New pairs were added for Q2, Q5, Q7, Q10, Q15, Q27, Q32 and Q33." }
+  ],
+  "paraphrasePairs": { "before": 26, "after": 31 }
+}

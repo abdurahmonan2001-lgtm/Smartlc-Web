@@ -1,0 +1,19 @@
+{
+  "id": "mock8-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three well-written passages (early photography, food waste, children's play) at the right length and with rising difficulty. The keys were all correct, but two pairs of TRUE/FALSE/NOT GIVEN and YES/NO/NOT GIVEN questions were out of passage order; they have been swapped so the questions now follow the text, as in the real test.",
+  "strengths": [
+    "Passage 3 is a genuine argument passage with a clear writer's view, ideal for Y/N/NG and the writer's-purpose MCQ.",
+    "Matching people (Q23-26) uses five names for four statements, each statement a real paraphrase of a quotation.",
+    "NOT GIVEN items (Q11 after the fix, Q38) are truly unaddressed; FALSE/NO items are clearly contradicted.",
+    "Completion answers are single words copied from the text and in passage order."
+  ],
+  "issues": [
+    { "q": 10, "severity": "medium", "problem": "Q10 (portrait prices, paragraph 4) came before Q11 (single copy of a daguerreotype, paragraph 3), breaking the rule that T/F/NG questions follow passage order.", "fixed": true, "change": "Swapped the two statements: Q10 is now 'A daguerreotype could not be copied...' (TRUE) and Q11 'Daguerreotype portraits cost more in America...' (NOT GIVEN). Explain/evidence swapped in the overlay to match." },
+    { "q": 36, "severity": "medium", "problem": "Q36 (real costs of declining play, paragraph 3) came before Q37 (fear of strangers, paragraph 2), so the Y/N/NG set was out of passage order.", "fixed": true, "change": "Swapped: Q36 is now 'Parents' fears about strangers...' (NO) and Q37 'The decline of outdoor play has real costs...' (YES). Explain/evidence swapped in the overlay. Note: any results students saved before this change for Q10/11 and Q36/37 were marked against the old order." },
+    { "q": 20, "severity": "low", "problem": "Several summary gaps (Q20 'checking the fridge', Q21 'shopping list') copy the passage's wording exactly, so they are easier than real summary completion.", "fixed": false, "change": "Optional rewording of the summary, e.g. Q20 'without first looking in the ___', Q21 'drawing up a ___ of what to buy'." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 completion prompts are close to the text (Q3 'exposure lasting about eight ___', Q4 'vapour of warmed ___').", "fixed": false, "change": "Acceptable for passage 1; could be rephrased slightly more." }
+  ],
+  "paraphrasePairs": { "before": 0, "after": 37 }
+}

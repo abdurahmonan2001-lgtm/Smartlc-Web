@@ -1,0 +1,24 @@
+{
+  "id": "upset9-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good academic passages of real IELTS length (898, 801 and 866 words): the history of the alphabet, the comeback of night trains, and the bystander effect. Difficulty rises properly, and Passage 3 is real C1 reading. The questions are a little kinder than IELTS because several completion prompts repeat the passage's wording, which is right for a Pre-IELTS set. I fixed one ambiguous NOT GIVEN, a gap with two possible answers, and Yes/No/Not Given questions that were out of passage order.",
+  "strengths": [
+    "Passages are original, well written, in the right magazine/textbook register, and IELTS length; Passage 3 has an argument (myth, experiments, re-examination, field data, conclusion) that rewards careful reading.",
+    "Good IELTS question mix: sentence completion, TFNG, matching information, summary completion, matching people with one extra name, 4-option MCQ, YNNG, sentence endings.",
+    "MCQ distractors echo passage words (Q30 'great majority' appears in the seizure experiment too; Q29 'glancing around'), as in the real test.",
+    "NOT GIVEN items Q13 and Q35 are unaddressed rather than contradicted."
+  ],
+  "issues": [
+    { "q": 10, "severity": "medium", "problem": "'The Greeks changed the traditional order of the letters they borrowed' was keyed NOT GIVEN, but the passage says the order was fixed and 'any modern child would recognise' it, and alpha/beta = aleph/bet. That implies the order was kept, so a strong student could argue FALSE.", "fixed": true, "change": "Replaced with 'The Greeks first encountered the alphabet in Cyprus.' (NOT GIVEN: Cyprus is named only as a Phoenician harbour; the passage never says where the Greeks met the script). New explanation and evidence; type and number unchanged." },
+    { "q": 22, "severity": "medium", "problem": "'growing public concern about the ______ cost of flying' (ONE WORD): 'environmental' is in paragraph C ('an environmental one') and fits as well as the key 'climate'.", "fixed": true, "change": "Key now accepts 'climate' or 'environmental'; explanation updated." },
+    { "q": 31, "severity": "medium", "problem": "Questions 31-35 (YNNG) were not in passage order: Q33 pointed to the last paragraph while Q34 and Q35 pointed back to paragraphs 4 and 5.", "fixed": true, "change": "Reordered the five statements into passage order (Q31 misleading account, Q32 textbooks slow, Q33 less help in crowds, Q34 laboratory studies worthless, Q35 compulsory school training). Answers now Y, Y, N, N, NG." },
+    { "q": 40, "severity": "low", "problem": "The explanation said the effect is strongest in 'low-stakes' situations; the passage says it is strongest 'when the cost of a mistake seems high'.", "fixed": true, "change": "Explanation corrected to match the passage." },
+    { "q": 8, "severity": "low", "problem": "Paraphrase pair's question side 'workers' is not in the statement.", "fixed": true, "change": "Pair now ['trained scribes', 'professional writers']." },
+    { "q": 21, "severity": "low", "problem": "Pair's question side 'more and more disliked' is not in the summary (it reads 'more and more of them disliked').", "fixed": true, "change": "Pair now ['increasingly disliked', 'more and more of them disliked']." },
+    { "q": 39, "severity": "low", "problem": "Pair's question side 'aim at' is not in the sentence ending.", "fixed": true, "change": "Pair now ['single out one person', 'one clearly identified person']." },
+    { "q": 1, "severity": "low", "problem": "Several Passage 1 completion prompts copy the passage's own phrasing (Q1 'used many hundreds of', Q3 'picture of a familiar', Q5 'the first ... to record', Q6 'quickly with a'), so they are easier to find than in IELTS.", "fixed": false, "change": "For more challenge, paraphrase the frames, e.g. Q1 'Cuneiform and hieroglyphs each required learners to memorise hundreds of ______.'" },
+    { "q": 30, "severity": "low", "problem": "Q30 (MCQ) and Q38 (sentence ending E) test the same fact: bystanders intervened in about nine incidents out of ten. One answer gives away the other.", "fixed": false, "change": "Rewrite Q30 to test why the footage mattered, e.g. key: 'it allowed researchers to study emergencies that could not be staged' (the crowd-size finding is already tested by Q33)." }
+  ],
+  "paraphrasePairs": { "before": 26, "after": 39 }
+}

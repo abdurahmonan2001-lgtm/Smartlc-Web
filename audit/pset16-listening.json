@@ -1,0 +1,18 @@
+{
+  "id": "pset16-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A good paper in the real format, with genuine traps throughout: a wrong address corrected, a date that is not available, a normal start time and a standard price both replaced. In the Part 2 and Part 3 questions, all the options are heard and the wrong ones rejected. All answer keys are correct and come in script order. One explanation named the wrong speaker, and it has been fixed.",
+  "strengths": [
+    "Part 1 has a correction or a 'normal versus this time' contrast on almost every gap (Cedar to Willow, 19th to 26th, nine to 8.30, 100 to 90 thousand).",
+    "The Part 3 multi-select items reject every distractor with a reason (drone needs a licence, light meter broken, the plan already downloaded, memory cards supplied).",
+    "The Part 4 notes follow the lecture's sections, every answer is a single word heard exactly, and the script is 814 words.",
+    "The scripts are long enough for the real timing (605, 752, 761 and 814 words)."
+  ],
+  "issues": [
+    { "q": 26, "severity": "medium", "problem": "The explanation had the speakers the wrong way round. It said Sanjar names cloud as his worry and Dildora agrees, but in the script Dildora ('my worry is the sky') raises it and Sanjar replies 'That frightens me more than anything else, too.'", "fixed": true, "change": "The explanation now says Dildora names the sky as her worry and Sanjar agrees." },
+    { "q": 27, "severity": "low", "problem": "Part 3 has only two speakers. The real test often has three or four in Part 3, and two-person dialogues are a little easier to follow.", "fixed": false, "change": "Suggestion for future sets: bring in a tutor or a third student for part of the discussion." },
+    { "q": 7, "severity": "low", "problem": "Paraphrase pairs: Q7 was reversed and used 'except', which is not on the form. Q6 paired the trap ('the standard rate') with 'early-booking rate'. Q9 used the answer itself. Q3, Q5, Q11 and Q37 had question sides that are not on the paper, and Q12 repeated the same words on both sides.", "fixed": true, "change": "All replaced with real paraphrases, e.g. Q7 ['Everything except the oven', 'Charged separately'], Q6 ['booked more than two weeks ahead', 'early-booking rate'], Q37 ['taking a merino out of Spain', 'exporting one']. New pairs were added for Q8, Q24, Q31, Q33, Q36 and Q40." }
+  ],
+  "paraphrasePairs": { "before": 29, "after": 35 }
+}

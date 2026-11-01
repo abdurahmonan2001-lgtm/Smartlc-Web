@@ -1,0 +1,39 @@
+{
+  "id": "mock6-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A full IELTS paper with strong distractors in every part: an airport taxi booking, a sports-centre reopening talk, a student-tutor discussion and a lecture on chocolate. All keys are correct; one accepted answer broke the word limit and was removed.",
+  "strengths": [
+    "Part 1: the twelfth corrected to the twenty-second, six o'clock moved to half past five, MAPEL corrected to MAPLE, the standard car price given but not used, card discouraged for cash.",
+    "Part 2 MCQs give two wrong reasons each before the right one (flooding repaired long ago, pool heating next year), and the box separates \"temporarily closed\" (tennis) from \"will open later\" (sauna).",
+    "Part 3 is a natural tutor discussion where each option is weighed and dismissed with a reason.",
+    "Part 4 notes paraphrase well for most items (\"to suit their taste\" for \"far too bitter for European mouths\", \"most cacao\" for \"seventy per cent of the world's beans\")."
+  ],
+  "issues": [
+    {
+      "q": 3,
+      "severity": "low",
+      "problem": "\"half past five\" was accepted for a gap marked ONE WORD AND/OR A NUMBER (three words).",
+      "fixed": true,
+      "change": "Accepted answers are now \"5.30\", \"5:30\" and \"five thirty\" in mock6-listening.js."
+    },
+    {
+      "q": 31,
+      "severity": "low",
+      "problem": "Some Part 4 notes echo the lecture exactly (Q31 \"whipped the paste into a bitter {{31}}\", Q32 \"flavoured with chilli and {{32}}\", Q37 \"first solid chocolate {{37}}\").",
+      "fixed": false,
+      "change": "Reword, e.g. Q32 \"spiced with chilli and {{32}}\", Q37 \"1847: first chocolate {{37}} you could eat\"."
+    },
+    {
+      "q": 28,
+      "severity": "low",
+      "problem": "Q28 option \"the choice of vegetarian dishes\" is said word for word by Madina when she sums up.",
+      "fixed": false,
+      "change": "Reword, e.g. \"the range of meat-free food\"."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 33
+  }
+}

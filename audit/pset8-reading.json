@@ -1,0 +1,27 @@
+{
+  "id": "pset8-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong Academic Reading paper: barbed wire (history), reopening buried city streams (lettered paragraphs, people matching) and sleep and memory (argument, MCQ, Yes/No/Not Given). Passages are the right length (916–947 words), the language gets harder from passage 1 to 3, and passage 3 is real C1 academic prose. I fixed one doubtful TRUE, a summary line that added facts the passage does not give, an MCQ distractor that could be argued, and two question blocks that were out of passage order.",
+  "strengths": [
+    "Passage lengths 916 / 934 / 947 words, magazine/textbook register, difficulty clearly rising.",
+    "A good mix of IELTS types: sentence completion, T/F/NG, matching information, summary completion, matching people, MCQ, Y/N/NG, sentence endings.",
+    "NOT GIVEN items (9, 13, 32) are genuinely unaddressed rather than contradicted; FALSE/NO items are directly contradicted.",
+    "MCQ distractors in passage 3 are built from real passage content (the 'rest' view, 'nobody is teaching anything', 'nothing new entered').",
+    "Completion answers are single copied words within the ONE WORD ONLY limit."
+  ],
+  "issues": [
+    { "q": 7, "severity": "high", "problem": "'Three men who later made wire of their own examined Rose's device' was keyed TRUE, but the passage only shows Glidden making wire (Haish argues over the patent, Ellwood is never mentioned again), so TRUE was not safely supported.", "fixed": true, "change": "Statement changed to 'Rose's device was never produced commercially, but it gave other men ideas.' (TRUE: 'was never manufactured' + 'each of them went home thinking about points'); explain, evidence and pair updated." },
+    { "q": 22, "severity": "medium", "problem": "Summary line said smell is 'the commonest complaint' and its 'usual cause' is misconnections 'further upstream' — none of this is in the passage (smell is just 'the second' obstacle; pipes are 'frequently' misconnected).", "fixed": true, "change": "Line changed to 'Another obstacle is smell, which is often caused by {{22}} — waste pipes wrongly attached to the surface-water drain.'" },
+    { "q": 27, "severity": "medium", "problem": "Option A 'is dangerous for most animals in the wild' is arguably also suggested by paragraph 1 ('unable to defend ourselves', 'worth the risk'), giving a second defensible answer.", "fixed": true, "change": "Option A changed to 'has been lost by some animals during evolution' (contradicted: preserved 'in every animal with a nervous system')." },
+    { "q": 32, "severity": "medium", "problem": "Y/N/NG items were out of passage order: Q32 (edits the day, para 5) came before Q33 (sleepless night, para 4) and Q34 (naps, para 3).", "fixed": true, "change": "Reordered to passage order: 32 naps (NOT GIVEN), 33 sleepless night (YES), 34 copy/edit (NO). Keys now Y, NG, Y, N, N." },
+    { "q": 38, "severity": "medium", "problem": "Sentence endings 38 (weakening of connections) and 39 (material to be tested) were out of passage order — the tested-material sentence comes first in paragraph 5.", "fixed": true, "change": "Swapped: 38 'Material that people have been told…' → D; 39 'The weakening of connections…' → F." },
+    { "q": 37, "severity": "medium", "problem": "Ending C 'are replayed to the cortex far faster than they originally occurred' was copied word for word from the passage.", "fixed": true, "change": "Ending C reworded to 'are passed to the cortex at a much higher speed than they first happened.'; pair added." },
+    { "q": 1, "severity": "low", "problem": "Prompt said 'Before wire was available', but the passage says plain wire was already on sale; only barbed wire came later.", "fixed": true, "change": "Changed to 'Before barbed wire was available'." },
+    { "q": 23, "severity": "low", "problem": "'does little to protect the area downstream' adds 'downstream', which the passage does not say.", "fixed": true, "change": "Changed to 'A short stretch of open water offers little flood protection on its own.'" },
+    { "q": 29, "severity": "low", "problem": "Pair's question side 'rearranges rather than simply keeping' was not a continuous phrase in option A.", "fixed": true, "change": "Changed to 'rearranges material rather than simply keeping it'." },
+    { "q": 11, "severity": "low", "problem": "Pairs for FALSE/NO items 11 and 35 were opposites ('after dark'/'in daylight', 'correlational'/'cause and effect'), not paraphrases; several other pairs were weak (14 reused 24's pair, 20 'washes back'/'is washed back', 30 not equivalent).", "fixed": true, "change": "Replaced with real paraphrases (11 'bands of masked men'/'The Texas fence-cutters', 35 'the human work'/'The human research described', 14, 20, 21, 26, 30, 36 improved)." },
+    { "q": 9, "severity": "low", "problem": "Q9 (NOT GIVEN, about hedges, the topic of paragraph 1) sits between items on paragraphs 2 and 4, so the T/F/NG block is not perfectly in passage order.", "fixed": false, "change": "Acceptable for a NOT GIVEN item; could be moved to Q7 position by reordering 7–9 if wanted." }
+  ],
+  "paraphrasePairs": { "before": 33, "after": 37 }
+}

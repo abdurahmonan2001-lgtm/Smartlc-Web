@@ -1,0 +1,22 @@
+{
+  "id": "upset4-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A strong Pre-IELTS listening paper and one of the closest to real IELTS in this group: an allotment enquiry, a guide at an open-air museum, two students discussing glacier data, and a lecture on the history of mirrors. All four parts are full length (797–939 words), every answer key is correct and in order, and the distractors are well made. Only the Part 4 notes, which keep the lecturer's own words around most gaps, make it a little gentler than the real test.",
+  "strengths": [
+    "Full IELTS timing in every part (797 / 866 / 932 / 939 words).",
+    "Part 1 traps are realistic: full plot then half plot, the gate plot already taken, 35 then 45 thousand, the 6th then the 13th of April, email then post.",
+    "Part 2 and Part 3 MCQs each raise both wrong options and reject them with reasons; the Part 2 box has believable spare options ('moved from another region', 'most expensive to move').",
+    "Part 3 is genuinely academic (marker moves, seasonal bias, error bars), which is good preparation for IELTS Part 3."
+  ],
+  "issues": [
+    { "q": 5, "severity": "low", "problem": "Paraphrase pair ['give back', 'hand back'] was not in the script or the form (the script says 'give the key back'; the form says 'handed back'). The explanation also said 'gate key is returned to the office', which is not in the script.", "fixed": true, "change": "Pair is now ['give the key back', 'handed back']. The explanation now says the deposit comes back 'as soon as the key is given back'." },
+    { "q": 9, "severity": "low", "problem": "Pair ['clashed with', 'moved'] had its sides reversed, and 'clashed with' is not in the script.", "fixed": true, "change": "Removed the pair. The only overlap with the form is the word 'moved' itself, so there is no real paraphrase to teach." },
+    { "q": 16, "severity": "low", "problem": "Pair used 'on sale', which is not in the script.", "fixed": true, "change": "Pair is now ['you can buy a bag of it', 'is sold']." },
+    { "q": 21, "severity": "low", "problem": "Pair ['continuous record', 'measurements go back'] was not in the script or the options.", "fixed": true, "change": "Pair is now ['A hundred and thirty years of numbers', 'more than a century']." },
+    { "q": 32, "severity": "low", "problem": "Pair ['tarnished', 'needed polishing'] did not match the notes, and the notes repeat the lecturer's words ('needed constant polishing') exactly.", "fixed": true, "change": "Removed the pair (no real paraphrase available for this gap)." },
+    { "q": 34, "severity": "low", "problem": "Several Part 4 note lines keep the lecturer's exact wording around the gap ('covered with {{34}}', 'inside a {{38}} chamber', 'needed constant {{32}}'), so these gaps test word matching rather than paraphrase.", "fixed": false, "change": "In a future version, paraphrase them, e.g. 'tin foil was coated in {{34}}', 'the metal is applied in a {{38}} chamber'." },
+    { "q": 1, "severity": "low", "problem": "The Part 1 script uses almost no contractions ('It is', 'I am', 'I would'), which sounds stiffer than real IELTS conversations.", "fixed": false, "change": "Report only (audio is recorded). Use natural contractions in future scripts." }
+  ],
+  "paraphrasePairs": { "before": 14, "after": 29 }
+}

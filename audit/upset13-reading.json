@@ -1,0 +1,22 @@
+{
+  "id": "upset13-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three good passages (the history of the crossword, sheep grazing in city parks, the psychology of curiosity) of real IELTS length, with difficulty rising nicely to a C1-level Passage 3. The question types are authentic and the keys are correct. Passage 1 is factual and gentle, and a few questions overlap so that one answer helps with another; one such question was rewritten.",
+  "strengths": [
+    "Passages are 828, 832 and 856 words, in a magazine/textbook register; Passage 3 has genuine C1 vocabulary and argument.",
+    "Good IELTS type mix: sentence completion, T/F/NG, matching information, summary completion, matching people with an extra name, MCQ, Y/N/NG, sentence endings with distractors.",
+    "NOT GIVEN items (Q9, Q13, Q32) are truly unaddressed, and FALSE/NO items are clearly contradicted.",
+    "Completion answers are single words copied from the passage and appear in passage order."
+  ],
+  "issues": [
+    { "q": 12, "severity": "medium", "problem": "Q12 (solvers offered secret war work) tested exactly the same fact as Q5 (recruited for wartime codebreaking), so each gave away the other.", "fixed": true, "change": "Q12 rewritten, still TRUE: 'Most people who completed the 1942 challenge in time believed it was simply a publicity exercise.' Explanation, evidence and pair updated." },
+    { "q": 5, "severity": "low", "problem": "'Winners of the 1942 competition' was loose: the passage says only 'some of the fastest solvers' were recruited.", "fixed": true, "change": "Prompt now 'Some successful solvers in the 1942 competition were secretly recruited for wartime ______.'" },
+    { "q": 17, "severity": "low", "problem": "Evidence quoted the benches/memorials line, which is about blades not reaching, not about machines being unsafe.", "fixed": true, "change": "Evidence now 'they graze steep slopes and banks too dangerous for ride-on mowers'." },
+    { "q": 0, "severity": "low", "problem": "Passage 2, paragraph B: 'the real question is not whether sheep are cheaper ... but that machines were never truly an option' is ungrammatical.", "fixed": true, "change": "'question' changed to 'point'." },
+    { "q": 23, "severity": "medium", "problem": "Four pairs (Q23, Q25, Q26, Q30) had a question side that is not on the question paper ('spend longer', 'very little value', 'constant attention', 'exploited commercially'). The checker did not catch this because it searches the whole question object, including the vocab pair itself.", "fixed": true, "change": "Pairs now copy the exact prompt/option wording, e.g. Q25 ['commercially, almost worthless', 'very little market value']." },
+    { "q": 37, "severity": "low", "problem": "Sentence endings overlap with the MCQs: Q37 (faces remembered) repeats Q29, and Q39 (clickbait) repeats Q30.", "fixed": false, "change": "Suggest replacing Q37 and Q39 with stems on paragraph 6 (schooling) and paragraph 7 (morbid curiosity), with matching new endings." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 completion answers are mostly located by identical wording (e.g. 'sold with a sharpened pencil attached'), making it easier than a real Passage 1.", "fixed": false, "change": "Fine for Pre-IELTS; in later sets paraphrase the gapped sentences more." }
+  ],
+  "paraphrasePairs": { "before": 22, "after": 36 }
+}

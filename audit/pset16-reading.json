@@ -1,0 +1,19 @@
+{
+  "id": "pset16-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong paper. The three passages (playing cards, urban wildlife, how we feel time) are full length (919, 957 and 979 words), in the right academic style, and get harder from passage 1 to 3. One True/False/Not Given question could be argued two ways and has been rewritten. Otherwise the keys are sound.",
+  "strengths": [
+    "Passage 3 is a real C1 argument with concessions and counter-evidence (the tower-drop experiment), and its MCQ distractors reuse the text's wording to reverse its meaning.",
+    "The FALSE items are clean head-on contradictions (Q8 'not portraits', Q11 'cheapness, not beauty', Q13 1960).",
+    "The summary completion paraphrases the passage well ('less a threat to life than a barrier', 'pierced by small gaps').",
+    "Every person in the people-matching has a distinct point of view, and one person is correctly left over."
+  ],
+  "issues": [
+    { "q": 9, "severity": "high", "problem": "'Cards were banned in Italy before they were banned in France' was keyed NOT GIVEN, but the passage says 'city after city begins banning them: Florence, Basel, Paris, Barcelona'. 'City after city' reads as a sequence, with Florence before Paris, so a strong student could defend TRUE.", "fixed": true, "change": "The statement is now 'The bans on cards in European cities were introduced by religious authorities.' This is clearly NOT GIVEN, because the passage never says who issued the bans. The explanation was rewritten to match." },
+    { "q": 25, "severity": "medium", "problem": "Passage 2 tests the same facts twice: Q14 and Q25 (Delgado's budget point, F), Q17 and Q23 (Adeyemi's design details, D), and Q16, Q19 and Q26 (Brandt's road barrier, C). Paragraphs E and G are hardly tested by the matching items.", "fixed": false, "change": "Suggestion: change Q14 to a feature of paragraph G (e.g. 'a claim that an effective scheme needs no official permission') and Q17 to E (e.g. 'physical changes in an animal's body caused by city life')." },
+    { "q": 7, "severity": "low", "problem": "Paraphrase pair: the text side 'difficult to say' is not continuous in the passage ('difficult it is to say'), and the old checker read the pair as reversed.", "fixed": true, "change": "Pair is now ['difficult it is to say', 'uncertain']." },
+    { "q": 18, "severity": "low", "problem": "Paraphrase pairs for Q18 (text side not in the passage) and for Q14, Q22, Q26, Q27 and Q37 (question sides not exact copies of the prompt or ending).", "fixed": true, "change": "All rewritten as exact copies, e.g. Q18 ['abundant and, more importantly, predictable', 'easier for animals to find'], Q14 ['absorbs a budget that could instead have created', 'what the same money could buy']." }
+  ],
+  "paraphrasePairs": { "before": 36, "after": 36 }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "upset6-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A good Pre-IELTS listening paper: booking a carpet clean, a seed-bank coordinator's welcome talk, two students preparing a solar car, and a lecture on the history of fireworks. All answer keys are correct and in script order, and Parts 1–3 have real IELTS distractors. One option in the Part 2 box also fitted the main vault, and it has been replaced. Part 4 is short (678 words) and its notes copy the lecture closely, so it is the easiest part.",
+  "strengths": [
+    "Part 1 uses classic traps: bedroom then hallway, tea then coffee, Tuesday then Friday, 9.00 then 9.30, 300 then 250, cash then card.",
+    "Part 2 MCQs each mention and reject two wrong options (old crops and overseas gardens; free entry and the film; seminar room and cars).",
+    "Part 3 (916 words) is a realistic project discussion, with three rejected options in each multi-select item.",
+    "All gap answers are single words or numbers, as heard and correctly spelled."
+  ],
+  "issues": [
+    { "q": 17, "severity": "medium", "problem": "Box option C 'cannot be visited today' also fitted the main vault: visitors only 'view it through the window - we won't be opening the door'. So Q17 had two defensible answers (B 'kept extremely cold' and C).", "fixed": true, "change": "Changed box option C to 'is closed for repairs at the moment', which fits no room. Key B unchanged." },
+    { "q": 14, "severity": "low", "problem": "Pair ['costs nothing', 'most useful way'] did not have the same meaning.", "fixed": true, "change": "Pair is now ['the help we need most', 'the most useful way to help']." },
+    { "q": 8, "severity": "low", "problem": "Pairs for Q8, Q15, Q36 and Q40 used question wording that does not appear in the table, box or notes ('reduced price', 'depends on volunteers', 'ordered for', 'timed to music').", "fixed": true, "change": "Replaced with pairs the students can see (Q8 ['For two rooms', 'for both rooms'], Q15 ['nearly all the work', 'almost completely']). Q36 and Q40 were removed because the notes repeat the script's words." },
+    { "q": 33, "severity": "medium", "problem": "Part 4 is only 678 words, and almost every note repeats the lecturer's words around the gap ('tubes of {{33}}', 'the aerial {{35}}', 'fired by {{40}}, matched to music'). This part is clearly easier than an IELTS Part 4.", "fixed": false, "change": "If re-recorded, add about 200 words (e.g. a section on safety or regulation) and paraphrase the notes, e.g. 'the powder was wrapped in {{33}} cylinders', 'shows are now controlled by {{40}}'." }
+  ],
+  "paraphrasePairs": { "before": 20, "after": 30 }
+}

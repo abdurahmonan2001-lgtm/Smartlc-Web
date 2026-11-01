@@ -1,0 +1,21 @@
+{
+  "id": "upset1-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three well-written passages of IELTS length (893 / 850 / 899 words) on matches, floating solar farms and the psychology of queues, with a good spread of IELTS question types. Two questions needed fixing: one True/False/Not Given item was out of passage order, and one sentence ending fitted two questions. The vocabulary in passage 3 reaches C1, but the passages are clearer than real IELTS texts, which suits B2 students.",
+  "strengths": [
+    "Lengths and register are right for IELTS Academic; difficulty rises from a narrative history text to an argumentative psychology text.",
+    "Good question type mix: sentence completion, TRUE/FALSE/NOT GIVEN, matching information, summary completion, matching people (with one extra name), MCQ, YES/NO/NOT GIVEN and sentence endings.",
+    "NOT GIVEN items are genuinely unaddressed and FALSE/NO items are clearly contradicted.",
+    "MCQ distractors repeat words from the passage while the correct options paraphrase it, as in the real test."
+  ],
+  "issues": [
+    { "q": 13, "severity": "medium", "problem": "TFNG items must follow passage order, but Q13 (copies of Walker's design, paragraph 4) came after Q12 (Sweden, paragraph 6).", "fixed": true, "change": "Replaced it with a NOT GIVEN statement about the last paragraph: 'Walker's shop is now open to visitors as a museum.' (only a plaque is mentioned). Updated the explanation and evidence to match." },
+    { "q": 37, "severity": "high", "problem": "Two endings fitted Q37. Ending A 'makes the time seem to pass more quickly' matched the passage's 'judge the same wait shorter' just as well as ending C did, and A also fitted Q36.", "fixed": true, "change": "Ending A now reads 'can make complaints stop although the wait is no shorter.', which fits only Q36 (mirrors and airport). Rewrote the Q36 and Q37 explanations and evidence so they point at the right lines." },
+    { "q": 34, "severity": "low", "problem": "Paraphrase pair used 'unfair', which is not in the question.", "fixed": true, "change": "Pair is now ['accept a longer wait', 'even when it is slower']." },
+    { "q": 20, "severity": "low", "problem": "Pair ['gives', 'is'] taught nothing.", "fixed": true, "change": "Pair is now ['cooled from below by the water', 'Water also keeps panels cool']." },
+    { "q": 8, "severity": "low", "problem": "Some existing pairs matched opposite meanings (e.g. 'refused to patent' with 'took out a patent') rather than the same meaning.", "fixed": true, "change": "Replaced them with same-meaning pairs (Q8 ['patent the invention', 'took out a patent'], Q11 ['A safe alternative', 'a safer form'], Q35 ['predictor of whether a person gives up', 'influence on whether that person stays'])." },
+    { "q": 1, "severity": "low", "problem": "Passage 1 gaps mostly repeat passage wording around the gap ('burnt cloth', 'folded sandpaper', 'decay of the jaw'), so Questions 1–6 are easier than real IELTS completion.", "fixed": false, "change": "For extra challenge, paraphrase the prompts, e.g. Q3 'Each tin came with a sheet of rough ______ that had been folded'. Acceptable for a Pre-IELTS set." }
+  ],
+  "paraphrasePairs": { "before": 25, "after": 39 }
+}

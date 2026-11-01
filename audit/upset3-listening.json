@@ -1,0 +1,21 @@
+{
+  "id": "upset3-listening",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A clean Pre-IELTS listening paper: a call to a language club, a harbour officer on ferry changes, two students planning a memory experiment, and a lecture on the history of perfume. All 40 answer keys are correct and in script order, and Parts 1–3 have good traps. Part 4 is the easiest part, because the notes repeat the lecturer's words almost exactly. Parts 2–4 are also on the short side for real IELTS timing.",
+  "strengths": [
+    "Part 1 has textbook distractors: a misread phone digit corrected ('six, not two'), English rejected for German, Tuesday replaced by Thursday, the film night replaced by a quiz night, email replaced by the website.",
+    "Part 2 MCQs each raise two wrong reasons and reject them (passenger numbers, old boats; the pier, the crossings).",
+    "In Part 3 each of the three non-answers in both multi-select items is raised and rejected with a reason.",
+    "Answers are concrete single words or numbers within the word limits."
+  ],
+  "issues": [
+    { "q": 36, "severity": "low", "problem": "Paraphrase pair ['prepared for', 'made for'] could not be found: the script says 'prepared, the story says, for an elderly queen', and the notes say 'was made for'.", "fixed": true, "change": "Pair is now ['prepared', 'was made for']." },
+    { "q": 37, "severity": "low", "problem": "Paraphrase pair ['began with', 'originally produced'] was not in the script as written ('began not with perfume but with gloves').", "fixed": true, "change": "Pair is now ['its speciality was', 'originally produced']." },
+    { "q": 14, "severity": "low", "problem": "Paraphrase pair used 'book in advance', which is not in the question (the option says 'reserve a place in advance').", "fixed": true, "change": "Pair is now ['reserve a space before they travel', 'reserve a place in advance']." },
+    { "q": 28, "severity": "low", "problem": "Paraphrase pair used 'what it is testing', which is not in the question.", "fixed": true, "change": "Pair is now ['go on the exclusion list', 'decide to exclude']." },
+    { "q": 31, "severity": "medium", "problem": "Part 4 notes copy the lecture almost word for word ('cones of scented {{33}}', 'thin strips of {{39}}', 'Arab chemists perfected {{34}}'), so most gaps can be filled by simple word matching. This is clearly easier than a real IELTS Part 4.", "fixed": false, "change": "For a future version, paraphrase the note lines, e.g. 'guests at Egyptian feasts had cones of perfumed {{33}} placed on their heads', 'blends are tested on narrow pieces of {{39}}'." },
+    { "q": 11, "severity": "low", "problem": "Parts 2–4 are 684, 781 and 732 words, which is at the short end for IELTS timing.", "fixed": false, "change": "If a part is re-recorded, add one more stage of content (about 100–150 words) with a distractor to Parts 2 and 4." }
+  ],
+  "paraphrasePairs": { "before": 22, "after": 29 }
+}

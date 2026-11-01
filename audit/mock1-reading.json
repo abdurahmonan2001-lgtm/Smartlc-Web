@@ -1,0 +1,73 @@
+{
+  "id": "mock1-reading",
+  "verdict": "clearly below IELTS",
+  "estimatedBandToScore30of40": "6.0",
+  "summary": "The three passages are only 394, 385 and 434 words (about 1,200 in total, half of a real paper, where each passage is 750 to 950 words). Topics, register and the question mix are right, and passage 3 has C1 language, but with so little text the paper is much easier than the real test. One matching question had two correct answers and is fixed.",
+  "strengths": [
+    "Good IELTS topics and magazine register; passage 3 (forgetting) has genuine C1 vocabulary such as \"radical reversal\", \"malfunction\", \"benign\".",
+    "Sound question mix: T/F/NG, sentence completion, matching headings, summary completion, multi-select, matching features, Y/N/NG, MCQ and a summary with a word list.",
+    "NOT GIVEN items (Q4, Q29) are truly unaddressed, FALSE/NO items are clearly contradicted, and completion answers are single words copied from the text in passage order."
+  ],
+  "issues": [
+    {
+      "q": 1,
+      "severity": "high",
+      "problem": "Passage 1 (shipping containers) is 394 words; a real passage 1 is about 750-900.",
+      "fixed": false,
+      "change": "Add 3-4 paragraphs without moving the tested sentences, e.g. dock workers' strikes and union deals over job losses; how containers proved themselves supplying US forces in Vietnam; today's 20,000-box ships and the ports that cannot take them. Use the new text for 2-3 extra T/F/NG items so the set is not guessable from four paragraphs."
+    },
+    {
+      "q": 14,
+      "severity": "high",
+      "problem": "Passage 2 (vertical farms) is 385 words and only five short paragraphs, and the List of Headings has just one spare heading (6 headings for 5 paragraphs), so the last heading is almost free.",
+      "fixed": false,
+      "change": "Expand to about 850 words: a paragraph on the wave of vertical-farm bankruptcies after energy prices rose, one on research into new indoor crops and LED \"light recipes\", and one contrasting a Gulf state and a Nordic city. Add 2-3 more distractor headings (real tests give 7-8 headings for 5-6 paragraphs)."
+    },
+    {
+      "q": 27,
+      "severity": "high",
+      "problem": "Passage 3 (forgetting) is 434 words; the hardest passage should be the longest (850-950 words).",
+      "fixed": false,
+      "change": "Add paragraphs on sleep and memory consolidation, on \"directed forgetting\" experiments (people told to forget a list recall less of it), and a sceptical paragraph from a researcher who warns that \"forgetting is useful\" is overstated. Use them for harder Y/N/NG and MCQ items that need inference, not word matching."
+    },
+    {
+      "q": 26,
+      "severity": "high",
+      "problem": "Two defensible answers: the box listed \"leafy greens and herbs\" (A) and \"strawberries\" (C) separately, but the passage says leafy greens, herbs AND strawberries are all \"sold at premium prices to nearby restaurants and supermarkets\", so A and C were both correct.",
+      "fixed": true,
+      "change": "Box changed to A \"leafy greens, herbs and strawberries\", B \"staple crops such as wheat and rice\", C \"vegetables imported from abroad\" (a distractor from paragraph B). Key stays A; explanation updated in mock-vocab-A.json."
+    },
+    {
+      "q": 22,
+      "severity": "medium",
+      "problem": "Q22 and Q26 test the same sentence (\"sold at premium prices to nearby restaurants and supermarkets\"), and the Q26 statement (\"sold at high prices\") tells students what the Q22 gap means.",
+      "fixed": false,
+      "change": "Change Q26 to another detail of paragraph D, e.g. \"light crops that grow quickly and are mostly water\" (answer A)."
+    },
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "T/F/NG order: Q2 (the converted oil tanker) is in the first sentence of the passage, before Q1 (McLean as a former truck driver). IELTS keeps T/F/NG in passage order.",
+      "fixed": false,
+      "change": "Swap the prompts of Q1 and Q2 (keys become Q1 FALSE, Q2 TRUE). Not changed here because it would change the keys of attempts already taken."
+    },
+    {
+      "q": 3,
+      "severity": "low",
+      "problem": "Several passage 1 items copy the text closely (Q3 \"as long in port as at sea\", Q9 \"from weeks to ______\", Q12 \"cross ______ several times\"), so even the short passage is easy to scan.",
+      "fixed": false,
+      "change": "Paraphrase more of the stems when the passage is expanded, e.g. Q3 \"Ships once spent as much time being loaded and unloaded as travelling.\""
+    },
+    {
+      "q": 25,
+      "severity": "low",
+      "problem": "The crop matching has only two questions for three options, which is very little for an IELTS task.",
+      "fixed": false,
+      "change": "Add 2-3 more statements when passage 2 is expanded."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 29,
+    "after": 35
+  }
+}

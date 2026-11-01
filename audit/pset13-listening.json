@@ -1,0 +1,96 @@
+{
+  "id": "pset13-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built listening paper. All four parts have the right setting, length (610-880 words a script) and real distractors: corrections in Part 1, named-and-rejected options in Parts 2 and 3. Part 4 is slightly gentle because most gap words are said exactly as printed right after a date or number, but overall this is real IELTS standard.",
+  "strengths": [
+    "Part 1 has five genuine traps (wrong date corrected, meadow price vs orchard price, old arrival time, cash dropped, posted letter replaced by text).",
+    "Part 2 and Part 3 MCQs mention every wrong option and reject it, as in the real test; the Part 3 multi-selects clear all three distractors explicitly.",
+    "Part 2 matching uses true paraphrase (burned down / rebuilt after a fire; a firm of joiners / a local business).",
+    "Answers appear in question order throughout; spelling and word limits are respected.",
+    "The Part 4 lecture is a coherent academic talk with clear signposting."
+  ],
+  "issues": [
+    {
+      "q": 12,
+      "severity": "low",
+      "problem": "Evidence line 'was paid for by the people of this town' does not by itself point to 'most of the cost' or to fundraising events.",
+      "fixed": true,
+      "change": "Evidence changed to 'together raised more than three quarters of what we needed'."
+    },
+    {
+      "q": 5,
+      "severity": "low",
+      "problem": "Pair 'the ground in the orchard is very stony' / 'the ground is stony' was near-identical wording, not a paraphrase.",
+      "fixed": true,
+      "change": "Pair changed to ['anything I ought to bring', 'Must bring']."
+    },
+    {
+      "q": 11,
+      "severity": "low",
+      "problem": "Pair 'a class project at Northgate Primary' / 'a group of schoolchildren' was loose; the script has a closer paraphrase.",
+      "fixed": true,
+      "change": "Pair changed to ['a group of nine-year-olds', 'a group of schoolchildren']."
+    },
+    {
+      "q": 20,
+      "severity": "low",
+      "problem": "Pair 'nobody knew it was there' / 'discovered by accident' does not mean the same thing.",
+      "fixed": true,
+      "change": "Pair changed to ['digging out the foundations', 'during building work']."
+    },
+    {
+      "q": 23,
+      "severity": "low",
+      "problem": "'invertebrates' is said word for word in the script, so 'the mayflies and the shrimps' is not the paraphrase students need.",
+      "fixed": true,
+      "change": "Pair changed to ['tells you what the water has been like', 'judge water quality']."
+    },
+    {
+      "q": 31,
+      "severity": "low",
+      "problem": "Pair repeated the answer word 'shadow' on both sides.",
+      "fixed": true,
+      "change": "Pair changed to ['told the time by watching', 'the time was read from']."
+    },
+    {
+      "q": 38,
+      "severity": "low",
+      "problem": "Pair 'what ended it' / 'made timetables impossible' paired two different ideas.",
+      "fixed": true,
+      "change": "Pair changed to ['What ended it', 'until the'] (X lasted until Y = Y ended X)."
+    },
+    {
+      "q": "6, 7, 10, 14, 33, 37, 40",
+      "severity": "low",
+      "problem": "No paraphrase pair although a genuine one exists.",
+      "fixed": true,
+      "change": "Added: We allow no / Not allowed; stays open until eight in the evening / open until 8 pm; will reach you / sent by; set off / begin the trail; who wanted it / demanded by; a method of finding longitude / a longitude method; The navigation system in your telephone / navigation today."
+    },
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "Pair 'much quieter' / 'smaller and quieter' is close to identical, but the script offers no better paraphrase for this gap.",
+      "fixed": false,
+      "change": "Kept. Q1, Q3, Q4 and Q35 left without a pair (spelled name, numbers, verbatim date-anchored line)."
+    },
+    {
+      "q": "31-40",
+      "severity": "low",
+      "problem": "Part 4 is a little gentle: nearly every gap word is spoken exactly as in the notes, often straight after a date (1656, 1714, 1927) that locates it instantly.",
+      "fixed": false,
+      "change": "For future sets, paraphrase more of the note lines around the gaps and avoid putting a date next to every gap."
+    },
+    {
+      "q": "26-27",
+      "severity": "low",
+      "problem": "Script (not changed): Part 3 has two consecutive lines by speaker A ('The photographs are worth more...' then 'So in the review we also have to say...'). Harmless; reported only.",
+      "fixed": false,
+      "change": "None needed; the audio is already recorded."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 29,
+    "after": 36
+  }
+}

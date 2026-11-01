@@ -1,0 +1,27 @@
+{
+  "id": "pset14-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built IELTS listening paper: the four parts follow the real format (612, 769, 944 and 744 words), answers come in question order, and every part has genuine distractors such as self-corrections, rejected options and old prices. The keys and word limits are all correct. The main work was the paraphrase pairs: one was broken, several just repeated the same words, and 12 questions had none.",
+  "strengths": [
+    "Part 1 has real correction traps (route 38 then 63, Tuesday the 11th then Wednesday the 12th, dark blue then green, under the seat then the rack, 15,000 then 25,000 som).",
+    "Part 2 MCQs mention both wrong options before the right one, and the six-place matching task paraphrases every site description (low tide / when the tide goes out, Saturdays and Sundays only / at weekends).",
+    "Part 3 is a natural academic planning discussion, and the two-from-five tasks include convincing rejected items (store room, drinks, packaging; questionnaire, training helpers).",
+    "Part 4 is a coherent lecture whose notes follow every main idea, with a bicycle trap for Q37 and one-word answers throughout."
+  ],
+  "issues": [
+    { "q": 18, "severity": "medium", "problem": "Paraphrase pair's question side 'included for the first time this year' does not appear in the box (the option reads 'was included in the scheme for the first time this year'). The checker missed it because it searches the whole question object, including the vocab pair itself.", "fixed": true, "change": "Question side changed to the exact option text 'was included in the scheme for the first time this year'." },
+    { "q": 13, "severity": "low", "problem": "Pair ['in open water, not a heated pool', 'a swimming test in open water'] mostly repeated the same words.", "fixed": true, "change": "Replaced with ['What you do have to do', 'an applicant must']." },
+    { "q": 23, "severity": "low", "problem": "Pair ['after every service', 'weighing the bins themselves'] did not mean the same thing.", "fixed": true, "change": "Replaced with ['Weighing it is', 'The students decide to collect their data by'] (the speakers' decision phrase)." },
+    { "q": 31, "severity": "low", "problem": "Pair shared almost all its words ('a solid, springy lump' / 'a solid, springy material').", "fixed": true, "change": "Replaced with ['stir the latex together with the juice', 'mixing the latex with juice'], which leads to the gap." },
+    { "q": 39, "severity": "low", "problem": "Pair ['made from oil', 'from oil'] was essentially identical.", "fixed": true, "change": "Replaced with ['When Japan took the plantations of south-east Asia', 'the loss of south-east Asia']." },
+    { "q": 21, "severity": "low", "problem": "Pair ['my job', \"Sevara's job in the canteen\"] repeated the word 'job'.", "fixed": true, "change": "Replaced with ['I work three evenings a week', \"Sevara's job in the canteen\"]." },
+    { "q": 28, "severity": "low", "problem": "Pair's question side 'peelings and trimmings' was also a word in the script; the option being paraphrased is 'peelings and trimmings from preparation'.", "fixed": true, "change": "Now ['the preparation waste', 'peelings and trimmings from preparation']." },
+    { "q": 30, "severity": "low", "problem": "Pair ['the bin labels', 'label the bins'] was only a change of word form.", "fixed": true, "change": "Replaced with ['every bin marked and numbered', 'label the bins']." },
+    { "q": 14, "severity": "low", "problem": "Pair could teach more of the option.", "fixed": true, "change": "Now ['Filling the weekday rota', 'covering shifts on weekdays']." },
+    { "q": 2, "severity": "low", "problem": "Twelve questions (2, 7, 8, 9, 10, 27, 32, 34, 35, 36, 37, 38) had no paraphrase pair although a real paraphrase exists.", "fixed": true, "change": "Pairs added, e.g. Q9 ['the price went up in January', 'the price rose in January'], Q10 ['any weekday between nine and five', '9 am to 5 pm on weekdays'], Q34 ['Useful, though, it was not', 'raw rubber was unusable'], Q37 ['the pneumatic tyre was born', 'made the first air-filled tyre']. Q1, Q3 and Q5 stay without a pair (spelled name, date, colour said in the same words)." },
+    { "q": 21, "severity": "low", "problem": "Part 3: in every MCQ (21-26) both wrong options are named and rejected in the turn just before the answer, often with 'neither' or 'not ... either'. A strong candidate learns to wait for the dismissal pattern.", "fixed": false, "change": "Script not changed (audio already recorded). For future papers, let one wrong option be accepted at first and then dropped, or let the two speakers disagree before they agree." },
+    { "q": 35, "severity": "low", "problem": "Part 4: in several gaps (35, 36, 38) the notes repeat the words right before the answer ('between two layers of', 'botanical'), which makes them easier than the hardest real Part 4 gaps.", "fixed": false, "change": "Acceptable as it stands. In later sets, paraphrase the words around more of the Part 4 gaps." }
+  ],
+  "paraphrasePairs": { "before": 25, "after": 37 }
+}

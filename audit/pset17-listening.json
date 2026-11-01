@@ -1,0 +1,18 @@
+{
+  "id": "pset17-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A sound paper in the real format. Part 1 has good corrections (soprano to alto, Monday to Wednesday, 180 to 120 thousand), and in Parts 2 and 3 every option is heard and the wrong ones rejected. All answer keys are correct and in script order. Part 1 is a little short at 546 words, and the form had one line that is not in the audio. That line has been fixed.",
+  "strengths": [
+    "Every MCQ in Parts 2 and 3 names all three options in the script and rejects two with a reason.",
+    "The Part 2 matching uses eight comments for six areas, and the two extra ones are plausible.",
+    "Part 4 is a clear, well-ordered lecture with one-word answers heard exactly, including proper nouns (Sumatra, Vietnam) that test spelling."
+  ],
+  "issues": [
+    { "q": 1, "severity": "low", "problem": "The first row of the Part 1 form said 'about fifty singers; no audition is needed to join', but neither fact is in the recording. A student checking the form against the audio would be confused.", "fixed": true, "change": "Row changed to 'new voices always needed before the spring concert', which the secretary does say." },
+    { "q": 6, "severity": "low", "problem": "The speaker says 'a hundred and twenty thousand', but the accepted answers listed only '120' and 'one hundred and twenty'.", "fixed": true, "change": "Added 'a hundred and twenty' as an accepted answer." },
+    { "q": 21, "severity": "low", "problem": "The Part 1 script is a little short (546 words), and Part 3 has only two speakers. Real Part 3s often have three.", "fixed": false, "change": "Suggestion for future sets: add one or two more exchanges to Part 1, and give the tutor a short turn in Part 3." },
+    { "q": 36, "severity": "low", "problem": "Paraphrase pairs: Q36 had the same words on both sides ('the token payment' / 'a token payment'), Q27 paired 'said yes on the spot' with 'will include', and Q30 copied the option.", "fixed": true, "change": "Replaced, e.g. Q36 ['grant something for almost nothing', 'a token payment'], Q27 ['The supermarket is definite', 'will the students include']. New pairs were added for Q2, Q3, Q4, Q8, Q9, Q10, Q24, Q28 and Q35." }
+  ],
+  "paraphrasePairs": { "before": 23, "after": 31 }
+}

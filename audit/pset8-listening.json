@@ -1,0 +1,26 @@
+{
+  "id": "pset8-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A well-built paper in the real IELTS format: an enrolment call, a talk to new allotment holders, two students planning a traffic count, and a lecture on the history of salt. Every part has proper distractors (corrections, wrong options mentioned first), the scripts are long enough (660–800 words a part), and all keys are correct. Part 4 is a little easy because the notes copy the lecture almost word for word.",
+  "strengths": [
+    "Part 1 has a correction or a rejected option for almost every gap (Tuesday→Thursday, 11th→18th, main building→Cedar Workshop, 280→320, table/cupboard→chair, Bridge Road→Mill Street, e-mail→post).",
+    "Part 2 MCQs each reject two options explicitly before giving the answer; the matching follows the walking route in order and has two unused, plausible distractors (after dark, where new members start).",
+    "Part 3 is a genuine two-speaker discussion with turn-taking, and the multi-select items reject buses, motorcycles, taxis, police permission and the standing place with reasons.",
+    "All answers appear in question order; gap answers are single words or numbers inside the limits and spelt correctly.",
+    "Script lengths fit the real timing: 731 / 784 / 801 / 659 words."
+  ],
+  "issues": [
+    { "q": 16, "severity": "medium", "problem": "Box option D 'floods after heavy rain' was word for word what the speaker says ('they flood after heavy rain'), so the item tested matching of identical words, not listening for paraphrase.", "fixed": true, "change": "Option D reworded to 'is sometimes under water in wet weather'; explain updated; pair added." },
+    { "q": 19, "severity": "medium", "problem": "Box option H 'is being surveyed for wildlife' was copied word for word from the script ('it is being surveyed for wildlife').", "fixed": true, "change": "Option H reworded to 'is being used for research on animals' (script: 'counting frogs and dragonflies'); explain updated; pair added." },
+    { "q": 18, "severity": "low", "problem": "Option B 'is closed until repairs are finished' repeats 'until the repairs are finished' from the script; only 'closed' is paraphrased ('shut', 'stays locked').", "fixed": false, "change": "Acceptable as it stands; could be reworded to 'cannot be used until building work is done' for a harder item." },
+    { "q": 17, "severity": "low", "problem": "Paraphrase pair 'prune and pick together' / 'looked after together' was not in the script or the question (checker failure).", "fixed": true, "change": "Pair changed to ['We prune them together', 'is looked after by all the members together']." },
+    { "q": 14, "severity": "low", "problem": "Pair used 'no disagreement', which is not in the question, and 'without a murmur' points to the wrong options rather than the answer.", "fixed": true, "change": "Pair changed to ['The committee vote was very close', 'causing most disagreement']." },
+    { "q": 8, "severity": "low", "problem": "Pair's question side '10 per cent discount' does not occur in the table (the row reads 'Discount | 10 per cent for holders…').", "fixed": true, "change": "Pair changed to ['ten per cent off the fee', 'Discount']." },
+    { "q": 6, "severity": "low", "problem": "Pair ['to restore', 'restoration'] took both sides from the paper's table, not the script vs the question; there is no real paraphrase for this gap.", "fixed": true, "change": "Pair removed." },
+    { "q": 30, "severity": "low", "problem": "Pair ['on thick paper in case it rains', 'print the recording sheets'] was not a paraphrase.", "fixed": true, "change": "Pair changed to ['what still has to happen before Thursday', 'still have to do before the count']." },
+    { "q": 36, "severity": "low", "problem": "Part 4 notes for 34, 36, 37, 38 and 40 repeat the lecture's sentence almost word for word (e.g. 'thousands of smugglers were arrested every year'), so Part 4 is easier than a real Part 4, where notes usually rephrase the lecture.", "fixed": false, "change": "Script cannot change; for a harder Part 4, reword those note lines, e.g. 37 'so many {{37}} were caught each year that…', 36 'salt blocks were transported south by {{36}}', 40 'today most salt in cold countries is used to treat {{40}} in winter'." },
+    { "q": 1, "severity": "low", "problem": "Part 1 is a little gentle: answers mostly follow a clear cue word ('but', 'now') and only one item (Q1) needs spelling.", "fixed": false, "change": "No change needed; a real Part 1 often has one more spelled item (e.g. a street name such as Mill spelled out)." }
+  ],
+  "paraphrasePairs": { "before": 18, "after": 34 }
+}

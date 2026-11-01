@@ -1,0 +1,17 @@
+{
+  "id": "pset20-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A strong, full-length paper (916, 945 and 977 words) on the plough, light pollution and learning by teaching. It is at the right level, and passage 3 is properly argued C1 prose. All the keys are correct and no fixes to answers were needed. The only changes were to paraphrase pairs.",
+  "strengths": [
+    "All the passage 1 completion items paraphrase the passage around the gap ('discarded' becomes 'old', 'to and fro' becomes 'backwards and forwards', 'ahead of' becomes 'in front of').",
+    "The T/F/NG set is clean: Q10 ('cost more to keep') and Q13 ('too heavy to drive across a field') are direct contradictions, and Q11 is a true NOT GIVEN.",
+    "The passage 3 MCQ and sentence-ending distractors reverse the text (Q29 A, Q38 F) or overstate it (ending C).",
+    "Passage 2 repeats facts across question types less than the other sets in this range."
+  ],
+  "issues": [
+    { "q": 25, "severity": "low", "problem": "Some overlap between question types in passage 2: Q16 and Q25 both test Kovacs's 'brighter is not clearer' point (C), and Q18 and Q23 both test Aaberg (F). Demir's insect and tree findings (D) are tested only once, and Ruiz's sleep research only by Q24.", "fixed": false, "change": "Suggestion: change Q25 to Demir, e.g. 'Lighting near roads can change the seasonal behaviour of trees', and add a Ruiz item about the small effect on any one sleeper." },
+    { "q": 18, "severity": "low", "problem": "Paraphrase pairs: the question sides for Q18 and Q25 were not exact copies of the prompt or statement, and the Q14 pair used the technical term 'rebound effect' rather than the paraphrase.", "fixed": true, "change": "Q18 is now ['not equally free to everybody', 'affects some groups of people more than others'], Q25 ['without making them any easier to read', 'does not automatically make it easier to see in'], and Q14 ['cut the cost of a unit of light', 'cheaper light']. New pairs were added for Q13 and Q22, and Q30 was improved." }
+  ],
+  "paraphrasePairs": { "before": 36, "after": 38 }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "mock2-writing",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "n/a (writing)",
+  "summary": "Task 1 is a three-line graph of museum visitors over 15 years and Task 2 an agree/disagree essay about investing in young people; both are phrased the IELTS way. The only problem is that one of the three \"types of visitor\" in the graph is not a type of visitor.",
+  "strengths": [
+    "Task 1 has clear contrasting trends (adults up then slightly down, children falling, special exhibitions small but rising) that reward comparison.",
+    "Task 2 is a genuine IELTS-style opinion prompt with the standard instruction and rubric."
+  ],
+  "issues": [
+    {
+      "q": 1,
+      "severity": "medium",
+      "problem": "The prompt says \"three types of visitors\", but the third line in writing/day2.svg is labelled \"Special exhibitions\", which is an attraction, not a type of visitor. Careful candidates will be unsure what that line counts.",
+      "fixed": false,
+      "change": "Relabel the legend \"Visitors to special exhibitions\" in day2.svg, or change the prompt to \"the number of visits to a museum by adults and by children under 15, and visits to its special exhibitions, between 1997 and 2012\"."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 0
+  }
+}

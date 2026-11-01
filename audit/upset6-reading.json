@@ -1,0 +1,19 @@
+{
+  "id": "upset6-reading",
+  "verdict": "slightly easier than IELTS",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "Three strong passages (896 / 821 / 855 words) on the compass, bringing cranes back to Britain, and the endowment effect, with a full IELTS question mix and a real rise in difficulty to passage 3. One fault was fixed: the last two gaps of the passage 3 summary were in reverse passage order. All other keys are correct. Passage 3 is close to real IELTS level; passages 1 and 2 are a little gentler.",
+  "strengths": [
+    "Passage 3 is genuinely IELTS-like: an argument with competing explanations, a sceptical view and C1 vocabulary (artefact, ledger, loss aversion).",
+    "Full IELTS question mix: sentence completion, TFNG, matching information, summary completion, matching people with a spare name, MCQ, YNNG and a word-box summary.",
+    "FALSE items are clearly contradicted (Shen Kuo, the Flinders bar) and NOT GIVEN items are genuinely unaddressed (Neckam's own voyages, compass costs, culture).",
+    "MCQ distractors invent motives or reverse findings that the passage explicitly denies."
+  ],
+  "issues": [
+    { "q": 39, "severity": "medium", "problem": "The word-box summary was out of passage order: gap 39 (free trials, paragraph 7) came before gap 40 (the sceptics' confusion, paragraph 6).", "fixed": true, "change": "Swapped the two summary sentences. Q39 is now 'Critics ... nothing deeper than {{39}} about the rules' (F confusion) and Q40 is 'retailers ... offering free {{40}}' (C trials). Explanations, evidence and pairs moved with them." },
+    { "q": 19, "severity": "low", "problem": "Pair used 'regard as', which is not continuous in the summary ('regard humans as').", "fixed": true, "change": "Pair is now ['treating humans as', 'regard humans as']." },
+    { "q": 7, "severity": "low", "problem": "Pair ['misleading them', 'pulled off course'] did not point at the answer sentence.", "fixed": true, "change": "Pair is now ['pulls the needle towards itself', 'pulled off course']." },
+    { "q": 18, "severity": "low", "problem": "The passage 2 summary repeats the passage's wording around most gaps ('hooded grey {{18}}', 'taught to fear {{21}} such as foxes'), so Questions 18–22 are easy.", "fixed": false, "change": "Paraphrase the summary, e.g. 'keepers dressed in grey hooded {{18}}', 'the birds learned to be afraid of animals that hunt them, such as foxes ({{21}})'." }
+  ],
+  "paraphrasePairs": { "before": 21, "after": 33 }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "pset5-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "6.5",
+  "summary": "A solid IELTS listening paper with the right four settings and plenty of real traps. Part 2's matching box and Part 3's MCQs are well paraphrased. Two Part 4 keys accepted words that are never heard on the recording ('aeroplanes', 'antenna'); in IELTS only the heard word counts, so I removed them.",
+  "strengths": [
+    "Part 1 corrections on most gaps: beginners/intermediate, 7th/14th March, Lake/Garden Room, 500/450, 12/10 students, trainers/boots, phone/email.",
+    "Part 2 box options are paraphrased, not copied (carries the name of / is named after; twice the size / made bigger; every Saturday / one day a week; caretaker's flat / different purpose).",
+    "Part 3 (820 words) is a believable planning discussion; each MCQ names and rejects both distractors, and the multi-select items require following three or four rejected options.",
+    "Part 4 notes follow the lecture's order and each gap is one concrete noun."
+  ],
+  "issues": [
+    { "q": 37, "severity": "medium", "problem": "Key also accepted 'aeroplanes', which the lecturer never says (he says 'the first aircraft'). IELTS gap answers must be words heard.", "fixed": true, "change": "Answer now 'aircraft' only; explanation updated." },
+    { "q": 38, "severity": "medium", "problem": "Key also accepted 'antenna', which is not heard (the lecturer says 'aerial').", "fixed": true, "change": "Answer now 'aerial' only." },
+    { "q": 37, "severity": "low", "problem": "Pair's question side 'early aircraft' contained the answer, which the student does not see in the notes.", "fixed": true, "change": "Pair now ['influenced the builders of the first', 'his design influenced early']." },
+    { "q": 7, "severity": "low", "problem": "Most Part 1 rows repeat the receptionist's wording (top floor, printing materials, tripods are provided, spare battery), so Questions 2-5, 7 and 9 have no paraphrase.", "fixed": false, "change": "Normal for Part 1; no change needed." },
+    { "q": 33, "severity": "low", "problem": "Part 4 notes 33, 35 and 39 keep the lecture's phrases ('frighten away', 'metal ... tied to the line', 'standing on a').", "fixed": false, "change": "Reword in a future edit, e.g. 33 'to scare off ______ that ate young crops'." }
+  ],
+  "paraphrasePairs": { "before": 22, "after": 31 }
+}

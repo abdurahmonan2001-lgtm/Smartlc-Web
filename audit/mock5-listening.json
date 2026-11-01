@@ -1,0 +1,32 @@
+{
+  "id": "mock5-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A very good mock: realistic flat-letting call, museum reopening talk with a well-built comment box, a two-student project discussion, and a full lecture on timekeeping. All keys are correct and the distractors are fair.",
+  "strengths": [
+    "Part 1: Carlton Road vs Cardwell Street, fourth corrected to third, six million reduced to five, Friday withdrawn, driving licence refused, email rejected for text.",
+    "Part 2 box is strong: the costume gallery is \"exactly the same size\" (trap for \"twice its previous size\"), the children's room has no separate entrance (trap for that option).",
+    "Part 3 matching paraphrases the findings well (\"pollution from agriculture\" for \"showed pollution from farming\", \"passed every standard\" for \"passed every official standard\").",
+    "Part 4 notes paraphrase rather than copy for most items (\"the hour was announced by a {{34}}\" vs \"learned the hour from a bell\")."
+  ],
+  "issues": [
+    {
+      "q": 9,
+      "severity": "low",
+      "problem": "A few Part 1 notes repeat the script exactly (Q6 \"paid by the tenant\", Q9 \"needed for the tenancy form\", Q10 directions \"sent by text\").",
+      "fixed": false,
+      "change": "Reword, e.g. Q6 \"electricity: the {{6}}'s responsibility\"."
+    },
+    {
+      "q": 39,
+      "severity": "low",
+      "problem": "Q35 and Q39 notes are close to the script (\"a swinging {{35}} in a cathedral\", \"vibrations of a tiny {{39}}\").",
+      "fixed": false,
+      "change": "Reword, e.g. Q39 \"quartz clocks: count how often a small {{39}} vibrates\"."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 33
+  }
+}

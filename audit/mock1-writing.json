@@ -1,0 +1,30 @@
+{
+  "id": "mock1-writing",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "n/a (writing)",
+  "summary": "Both tasks are phrased the way the Academic test phrases them: a line graph with four age groups over 30 years for Task 1 and an agree/disagree opinion essay for Task 2. One small wording slip in Task 2 is fixed.",
+  "strengths": [
+    "Task 1 uses the standard rubric (\"Summarise the information by selecting and reporting the main features, and make comparisons where relevant\") and a clear four-line graph with labelled axes.",
+    "Task 2 is a typical IELTS work topic with the standard \"To what extent do you agree or disagree?\" instruction and rubric."
+  ],
+  "issues": [
+    {
+      "q": 2,
+      "severity": "low",
+      "problem": "Task 2 read \"this change may only benefit workers, not the employers\" (\"the\" is not natural here).",
+      "fixed": true,
+      "change": "Changed to \"not employers\" in mock1-writing.js. The same sentence is in writing-bank.json (Day 1), which is outside this slice and still has \"the employers\"."
+    },
+    {
+      "q": 1,
+      "severity": "low",
+      "problem": "In the graph every age group has exactly the same value in 1998 and 2008, so the last decade is completely flat and gives candidates little to compare.",
+      "fixed": false,
+      "change": "Vary the 2008 values slightly (e.g. 14-24 at 85%, 50 and over at 55%) in writing/day1.svg so there is a final trend to report."
+    }
+  ],
+  "paraphrasePairs": {
+    "before": 0,
+    "after": 0
+  }
+}

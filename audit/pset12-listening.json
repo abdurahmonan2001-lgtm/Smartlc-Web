@@ -1,0 +1,28 @@
+{
+  "id": "pset12-listening",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "A well-built paper at genuine IELTS level. All four parts have the right setting and question types, scripts are a realistic length (about 680-830 words each), and almost every answer is protected by a real distractor: self-corrections, a wrong option mentioned first, and paraphrased answers. No answer keys needed changing; the work was on the paraphrase pairs, several of which pointed at words the student never sees.",
+  "strengths": [
+    "Part 1 has textbook distractors: washing machine before dishwasher, bakery corrected to pharmacy, the 12th withdrawn for the 19th, the old charge of 120 before 90, email replaced by text, and sister and caretaker rejected for the neighbour.",
+    "In the Part 2 and Part 3 MCQs, both wrong options are raised and rejected in the script for every item, so students must listen for the reason, not just a keyword.",
+    "Part 2 matching uses 8 options for 6 places, and 'last month' (the station) sits next to 'four weeks ago' (Ashcombe) as a fair trap.",
+    "The Part 4 lecture (purple dye) is a strong academic monologue. Its notes are ONE WORD ONLY, follow script order, and paraphrase the talk ('restricted' to 'reserved', 'a scrap' to 'a piece', 'something like' to 'roughly').",
+    "Answers appear in question order, and all gap answers are spelled exactly as heard and stay within the word limits."
+  ],
+  "issues": [
+    { "q": 15, "severity": "medium", "problem": "The paraphrase pair's text side ('more journeys end there than anywhere else') is not in the script; the speaker says 'at the hospital', not 'there'.", "fixed": true, "change": "vocab -> [\"More journeys end at the hospital than anywhere else\", \"the busiest destination\"]" },
+    { "q": 20, "severity": "medium", "problem": "The question side 'only at weekends' is not in the box, which reads 'can only be reached at weekends'. The checker missed this because it also searches the vocab field itself.", "fixed": true, "change": "vocab -> [\"on Saturdays only\", \"can only be reached at weekends\"]" },
+    { "q": 24, "severity": "medium", "problem": "The question side 'the gap between hearing and recalling' is not in the prompt (which reads 'between hearing the list and recalling it').", "fixed": true, "change": "vocab -> [\"the delay\", \"The gap\"]" },
+    { "q": 25, "severity": "medium", "problem": "The question side 'the subject they study' is not in the option (which reads 'the subject most of them study').", "fixed": true, "change": "vocab -> [\"Nearly two-thirds of them study languages\", \"the subject most of them study\"]" },
+    { "q": 37, "severity": "medium", "problem": "The question side 'substances taken from coal tar' contains the answer and is not what the student sees (the notes read 'substances taken from {{37}} tar').", "fixed": true, "change": "vocab -> [\"the waste products of the gas industry\", \"substances taken from\"]" },
+    { "q": 21, "severity": "low", "problem": "Weak pair: 'the warehouse' does not paraphrase 'weekend job'.", "fixed": true, "change": "vocab -> [\"I work there at weekends\", \"Javlon's weekend job\"]" },
+    { "q": 28, "severity": "low", "problem": "The pair 'from the same category' / 'belonging to the same category' repeats the same words, so it teaches no paraphrase.", "fixed": true, "change": "vocab -> [\"have to come out\", \"remove words\"]" },
+    { "q": 29, "severity": "low", "problem": "The pair 'the consent form' / 'writing the consent form' repeats the same words.", "fixed": true, "change": "vocab -> [\"until the form is written\", \"writing the consent form\"]" },
+    { "q": 17, "severity": "low", "problem": "The pair used 'shifts start at seven', which is not the line that shows the passengers travel early.", "fixed": true, "change": "vocab -> [\"full between six and seven in the morning\", \"travelling early\"]" },
+    { "q": 40, "severity": "low", "problem": "The question side 'the same companies' is also said word for word in the script, so it is not a paraphrase.", "fixed": true, "change": "vocab -> [\"those dye works that produced\", \"the same companies later made\"]" },
+    { "q": 2, "severity": "low", "problem": "No paraphrase pairs in Part 1 or on Q31, 32, 35 and 39.", "fixed": true, "change": "Added pairs for Q2, 7, 8, 10, 31, 32, 35 and 39 (e.g. 'before he arrives' / 'Before the visit', 'somebody can let him in' / 'Access', 'the reason was' / 'because of the', 'the method of making true Tyrian purple' / 'the technique'). Q1, 3, 4, 5, 6 and 9 are left without a pair because they are a spelled name, a street name, numbers, or the script uses the notes' own words." },
+    { "q": 30, "severity": "low", "problem": "The script also says 'the pilot data' word for word ('the second job is the pilot data'), so option E ('going through the pilot data') can be matched without understanding. This is a script matter, so the script was not changed.", "fixed": false, "change": "Report only. On a future re-record, replace 'the pilot data' in the script with 'what we got from the pilot', so the option has to be paraphrased." }
+  ],
+  "paraphrasePairs": { "before": 26, "after": 34 }
+}

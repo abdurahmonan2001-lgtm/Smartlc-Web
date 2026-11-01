@@ -1,0 +1,19 @@
+{
+  "id": "mock11-reading",
+  "verdict": "at IELTS level",
+  "estimatedBandToScore30of40": "7.0",
+  "summary": "Three good passages (the ice trade, early electric cars, boredom) at real IELTS length with a typical question mix. The keys were correct, but the passage 2 summary and the passage 3 YES/NO/NOT GIVEN set did not follow passage order; both have been reordered. A typo in passage 2 ('lighter-lived') was corrected.",
+  "strengths": [
+    "Passage 1 is a clear, well-paced narrative with good T/F/NG items, including a FALSE (steam vs horse-drawn) that rewards careful reading.",
+    "Passage 2 combines matching information, summary completion and matching people; the four experts hold clearly distinct views.",
+    "Passage 3 is a real academic argument with hedged claims and an explicit writer's position, well suited to Y/N/NG.",
+    "NOT GIVEN items (Q9, Q13, Q32) are truly unaddressed."
+  ],
+  "issues": [
+    { "q": 20, "severity": "medium", "problem": "Summary Q19-23 was out of passage order: the passage gives assembly line, cheap petrol, rural electricity, the starter/crank, then range, but the summary asked crank (20), range (21), electricity (22), petrol (23).", "fixed": true, "change": "Reordered the summary lines and keys to follow the passage: 19 assembly, 20 petrol, 21 electricity, 22 crank, 23 range. Explain/evidence moved to match in the overlay." },
+    { "q": 32, "severity": "medium", "problem": "Y/N/NG Q32-34 were out of passage order (the 'removing boredom' statement from the end of paragraph 5 came before the children statement and the pain analogy).", "fixed": true, "change": "Reordered: Q32 children (NOT GIVEN), Q33 like pain, protective purpose (YES), Q34 removing boredom completely (NO). Explain/evidence moved in the overlay. Results saved earlier for Q20-23 and Q32-34 were marked against the old order." },
+    { "q": 14, "severity": "low", "problem": "Passage 2 typo: 'a nickel-iron battery, lighter-lived than lead' ('lighter-lived' is not a word).", "fixed": true, "change": "Corrected to 'lighter and longer-lived than lead'." },
+    { "q": 26, "severity": "low", "problem": "The expert name 'Ingrid Halvorsen' is used here for a battery historian and also in mock10-reading for an epidemiologist. Students who sit both may notice.", "fixed": false, "change": "Optional: rename one of them (e.g. here 'Ingrid Larsen'), together with the box entry." }
+  ],
+  "paraphrasePairs": { "before": 0, "after": 37 }
+}
