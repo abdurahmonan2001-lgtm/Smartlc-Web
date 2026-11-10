@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 405" font-family="Arial, sans-serif">
+  <rect width="680" height="405" fill="#ffffff"/>
+  <g fill="#000">
+    <rect x="20" y="40" width="310" height="330" fill="#fff" stroke="#333" stroke-width="1.4"/>
+    <path d="M225,262 C270,256 310,266 330,262 L330,370 L180,370 C180,330 195,280 225,262 Z" fill="#f4efe6" stroke="#999"/>
+    <text x="275" y="330" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Pagoda</text>
+    <path d="M115,40 C130,150 120,260 160,370" fill="none" stroke="#333" stroke-width="1"/><path d="M130,40 C145,150 135,260 175,370" fill="none" stroke="#333" stroke-width="1"/>
+    <text x="145" y="130" text-anchor="middle" font-size="9.5" fill="#555">path</text>
+    <path d="M44,70 L60,60 L76,70 Z" fill="#333"/><rect x="47" y="70" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M76,72 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M44,105 L60,95 L76,105 Z" fill="#333"/><rect x="47" y="105" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M76,107 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M44,140 L60,130 L76,140 Z" fill="#333"/><rect x="47" y="140" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M76,142 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M44,175 L60,165 L76,175 Z" fill="#333"/><rect x="47" y="175" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M76,177 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M44,210 L60,200 L76,210 Z" fill="#333"/><rect x="47" y="210" width="26" height="14" fill="#cfcfcf" stroke="#333"/>
+    <path d="M184,170 L200,160 L216,170 Z" fill="#333"/><rect x="187" y="170" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M216,172 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M184,200 L200,190 L216,200 Z" fill="#333"/><rect x="187" y="200" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M216,202 l6,-8 m-3,4 l5,2" stroke="#333" stroke-width="1.2" fill="none"/>
+    <path d="M184,230 L200,220 L216,230 Z" fill="#333"/><rect x="187" y="230" width="26" height="14" fill="#cfcfcf" stroke="#333"/>
+    <rect x="45" y="270" width="12" height="12" fill="#555"/><rect x="61" y="270" width="12" height="12" fill="#555"/><rect x="49" y="286" width="12" height="12" fill="#555"/><rect x="67" y="292" width="12" height="12" fill="#555"/><rect x="53" y="302" width="12" height="12" fill="#555"/>
+    <text x="90" y="300" text-anchor="start" font-size="11" fill="#000" font-weight="bold">Market</text>
+    <rect x="220" y="46" width="104" height="80" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <text x="272" y="92" text-anchor="middle" font-size="11" fill="#000" font-weight="bold">Primary</text><text x="272" y="105" text-anchor="middle" font-size="11" fill="#000" font-weight="bold">school</text>
+    <path d="M237,292 L255,282 L273,292 Z" fill="#c0392b"/><rect x="242" y="292" width="26" height="14" fill="#7a3b2e"/>
+    <path d="M208.4,335 L230,323 L251.6,335 Z" fill="#c0392b"/><rect x="214.4" y="335" width="31.2" height="16.8" fill="#7a3b2e"/>
+    <text x="175" y="392" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">2005</text>
+    <rect x="350" y="40" width="310" height="330" fill="#fff" stroke="#333" stroke-width="1.4"/>
+    <path d="M555,262 C600,256 640,266 660,262 L660,370 L510,370 C510,330 525,280 555,262 Z" fill="#f4efe6" stroke="#999"/>
+    <text x="605" y="330" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Pagoda</text>
+    <path d="M470,40 C485,150 475,260 515,370 L555,370 C515,260 525,150 510,40 Z" fill="#333"/>
+    <path d="M490,44 C504,150 496,260 535,368" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <text x="455" y="60" text-anchor="middle" font-size="9.5" fill="#555">road</text>
+    <path d="M455,40 C470,150 460,260 500,370" fill="none" stroke="#777" stroke-dasharray="3 3"/>
+    <path d="M374,70 L390,60 L406,70 Z" fill="#333"/><rect x="377" y="70" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M405,64 a6,6 0 0 0 8,8 z" fill="#777"/>
+    <path d="M374,105 L390,95 L406,105 Z" fill="#333"/><rect x="377" y="105" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M405,99 a6,6 0 0 0 8,8 z" fill="#777"/>
+    <path d="M374,140 L390,130 L406,140 Z" fill="#333"/><rect x="377" y="140" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M405,134 a6,6 0 0 0 8,8 z" fill="#777"/>
+    <path d="M374,175 L390,165 L406,175 Z" fill="#333"/><rect x="377" y="175" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M405,169 a6,6 0 0 0 8,8 z" fill="#777"/>
+    <path d="M374,210 L390,200 L406,210 Z" fill="#333"/><rect x="377" y="210" width="26" height="14" fill="#cfcfcf" stroke="#333"/>
+    <path d="M559,190 L575,180 L591,190 Z" fill="#333"/><rect x="562" y="190" width="26" height="14" fill="#cfcfcf" stroke="#333"/><path d="M590,184 a6,6 0 0 0 8,8 z" fill="#777"/>
+    <rect x="368" y="250" width="12" height="12" fill="#555"/><rect x="368" y="265" width="12" height="12" fill="#555"/><rect x="383" y="250" width="12" height="12" fill="#555"/><rect x="383" y="265" width="12" height="12" fill="#555"/><rect x="398" y="250" width="12" height="12" fill="#555"/><rect x="398" y="265" width="12" height="12" fill="#555"/><rect x="413" y="250" width="12" height="12" fill="#555"/><rect x="413" y="265" width="12" height="12" fill="#555"/>
+    <text x="435" y="268" text-anchor="start" font-size="11" fill="#000" font-weight="bold">Market</text>
+    <path d="M380,345 L388,300 L396,345 M405,345 L413,300 L421,345" fill="none" stroke="#333" stroke-width="1.5"/>
+    <text x="400" y="362" text-anchor="middle" font-size="9.5" fill="#555">towers</text>
+    <rect x="550" y="46" width="104" height="80" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <text x="602" y="82" text-anchor="middle" font-size="10.5" fill="#000" font-weight="bold">Primary and</text><text x="602" y="95" text-anchor="middle" font-size="10.5" fill="#000" font-weight="bold">secondary</text><text x="602" y="108" text-anchor="middle" font-size="10.5" fill="#000" font-weight="bold">school</text>
+    <rect x="555" y="215" width="28" height="16" fill="none" stroke="#333" stroke-dasharray="3 2"/><rect x="595" y="232" width="28" height="16" fill="none" stroke="#333" stroke-dasharray="3 2"/>
+    <path d="M567,292 L585,282 L603,292 Z" fill="#c0392b"/><rect x="572" y="292" width="26" height="14" fill="#7a3b2e"/>
+    <path d="M617.6,284 L632,276 L646.4,284 Z" fill="#c0392b"/><rect x="621.6" y="284" width="20.8" height="11.200000000000001" fill="#7a3b2e"/>
+    <path d="M552,345 L570,335 L588,345 Z" fill="#c0392b"/><rect x="557" y="345" width="26" height="14" fill="#7a3b2e"/>
+    <text x="505" y="392" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">2015</text>
+  </g>
+</svg>

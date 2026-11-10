@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Overseas visitors to the UK by purpose of visit, 1989–2009</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="314.4" x2="620" y2="314.4" stroke="#eee"/><text x="68" y="318.4" text-anchor="end">2</text>
+    <line x1="76" y1="256.8" x2="620" y2="256.8" stroke="#eee"/><text x="68" y="260.8" text-anchor="end">4</text>
+    <line x1="76" y1="199.2" x2="620" y2="199.2" stroke="#eee"/><text x="68" y="203.2" text-anchor="end">6</text>
+    <line x1="76" y1="141.6" x2="620" y2="141.6" stroke="#eee"/><text x="68" y="145.6" text-anchor="end">8</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">10</text>
+  </g>
+  <line x1="76" y1="372" x2="620" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">1989</text><text x="103.2" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="130.4" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="157.6" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="184.8" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="212" y="390" text-anchor="middle" font-size="11" fill="#555">1994</text><text x="239.2" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="266.4" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="293.6" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="320.8" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="348" y="390" text-anchor="middle" font-size="11" fill="#555">1999</text><text x="375.2" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="402.4" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="429.6" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="456.8" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="484" y="390" text-anchor="middle" font-size="11" fill="#555">2004</text><text x="511.2" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="538.4" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="565.6" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="592.8" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="620" y="390" text-anchor="middle" font-size="11" fill="#555">2009</text>
+  </g>
+  <text x="22" y="228" font-size="11" fill="#555" transform="rotate(-90 22 228)" text-anchor="middle">Millions of visitors</text>
+  <polyline points="76,184.8 103.2,181.9 130.4,179 157.6,176.2 184.8,167.5 212,153.1 239.2,138.7 266.4,127.2 293.6,112.8 320.8,98.4 348,112.8 375.2,121.4 402.4,130.1 429.6,138.7 456.8,147.4 484,156 511.2,147.4 538.4,138.7 565.6,130.1 592.8,121.4 620,112.8" fill="none" stroke="#1d3a6b" stroke-width="2.5"/>
+  <polyline points="76,219.4 103.2,225.1 130.4,236.6 157.6,256.8 184.8,256.8 212,239.5 239.2,228 266.4,216.5 293.6,202.1 320.8,190.6 348,176.2 375.2,170.4 402.4,170.4 429.6,173.3 456.8,173.3 484,170.4 511.2,161.8 538.4,150.2 565.6,138.7 592.8,153.1 620,170.4" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <polyline points="76,268.3 103.2,265.4 130.4,262.6 157.6,256.8 184.8,253.9 212,251 239.2,242.4 266.4,233.8 293.6,225.1 320.8,216.5 348,207.8 375.2,199.2 402.4,190.6 429.6,181.9 456.8,173.3 484,170.4 511.2,170.4 538.4,176.2 565.6,181.9 592.8,187.7 620,193.4" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/>
+  <g>
+    <line x1="120.2" y1="46" x2="146.2" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="151.2" y="50" font-size="12" fill="#000">Holiday</text>
+    <line x1="211" y1="46" x2="237" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="242" y="50" font-size="12" fill="#000">Business</text>
+    <line x1="308.2" y1="46" x2="334.2" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="339.2" y="50" font-size="12" fill="#000">Visiting friends or relatives</text>
+  </g>
+</svg>

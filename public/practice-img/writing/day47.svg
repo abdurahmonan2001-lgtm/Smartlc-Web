@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 300" font-family="Arial, sans-serif">
+  <rect width="610" height="300" fill="#ffffff"/>
+<text x="305" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">Harckley Hall: income and expenditure</text>
+  <rect x="20" y="44" width="240" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="140" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold"></text>
+  <rect x="260" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Year 1</text>
+  <rect x="370" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Year 2</text>
+  <rect x="480" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Year 3</text>
+  <rect x="20" y="74" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="93" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Income from hiring rooms</text>
+  <rect x="260" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="93" text-anchor="middle" font-size="12" fill="#000">£34,000</text>
+  <rect x="370" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="93" text-anchor="middle" font-size="12" fill="#000">£35,000</text>
+  <rect x="480" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="93" text-anchor="middle" font-size="12" fill="#000">£32,000</text>
+  <rect x="20" y="104" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Income from the café</text>
+  <rect x="260" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="123" text-anchor="middle" font-size="12" fill="#000">£3,500</text>
+  <rect x="370" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="123" text-anchor="middle" font-size="12" fill="#000">£3,000</text>
+  <rect x="480" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="123" text-anchor="middle" font-size="12" fill="#000">£4,000</text>
+  <rect x="20" y="134" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="153" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Funding from local council</text>
+  <rect x="260" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="153" text-anchor="middle" font-size="12" fill="#000">£22,000</text>
+  <rect x="370" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="153" text-anchor="middle" font-size="12" fill="#000">£22,000</text>
+  <rect x="480" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="153" text-anchor="middle" font-size="12" fill="#000">£21,000</text>
+  <rect x="20" y="164" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="183" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Funding from other sources</text>
+  <rect x="260" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="183" text-anchor="middle" font-size="12" fill="#000">£24,000</text>
+  <rect x="370" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="183" text-anchor="middle" font-size="12" fill="#000">£25,000</text>
+  <rect x="480" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="183" text-anchor="middle" font-size="12" fill="#000">£27,000</text>
+  <rect x="20" y="194" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="213" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Total income</text>
+  <rect x="260" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="213" text-anchor="middle" font-size="12" fill="#000">£83,500</text>
+  <rect x="370" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="213" text-anchor="middle" font-size="12" fill="#000">£85,000</text>
+  <rect x="480" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="213" text-anchor="middle" font-size="12" fill="#000">£84,000</text>
+  <rect x="20" y="224" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="243" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Expenditure</text>
+  <rect x="260" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="243" text-anchor="middle" font-size="12" fill="#000">£56,000</text>
+  <rect x="370" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="243" text-anchor="middle" font-size="12" fill="#000">£60,000</text>
+  <rect x="480" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="243" text-anchor="middle" font-size="12" fill="#000">£62,000</text>
+  <rect x="20" y="254" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="273" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Profit</text>
+  <rect x="260" y="254" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="273" text-anchor="middle" font-size="12" fill="#000">£27,500</text>
+  <rect x="370" y="254" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="273" text-anchor="middle" font-size="12" fill="#000">£25,000</text>
+  <rect x="480" y="254" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="273" text-anchor="middle" font-size="12" fill="#000">£22,000</text>
+</svg>

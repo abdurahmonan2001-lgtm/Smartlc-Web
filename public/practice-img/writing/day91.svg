@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 600" font-family="Arial, sans-serif">
+  <rect width="680" height="600" fill="#ffffff"/>
+  <g transform="translate(0,0)">
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Workforce in Australia by place of birth, 2003</text>
+  <path d="M170,150 L170,65 A85,85 0 1 1 85.2,144.7 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="237.8" y="226.2" text-anchor="start" font-size="11" fill="#000">76%</text>
+  <path d="M170,150 L85.2,144.7 A85,85 0 0 1 120,81.2 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="83.2" y="106.3" text-anchor="end" font-size="11" fill="#000">14%</text>
+  <path d="M170,150 L120,81.2 A85,85 0 0 1 170,65 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="139.4" y="59.8" text-anchor="end" font-size="11" fill="#000">10%</text>
+    <rect x="300" y="105" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="322" y="115" font-size="11.5">Born in Australia</text>
+    <rect x="300" y="131" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="322" y="141" font-size="11.5">NESC (born in non-English-speaking countries)</text>
+    <rect x="300" y="157" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="322" y="167" font-size="11.5">ESC (born in English-speaking countries other than Australia)</text>
+  </g>
+  <g transform="translate(0,270)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Unemployment in Australia by place of birth, 1993–2003</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="286" text-anchor="end">0</text>
+    <line x1="76" y1="232.5" x2="620" y2="232.5" stroke="#eee"/><text x="68" y="236.5" text-anchor="end">2</text>
+    <line x1="76" y1="183" x2="620" y2="183" stroke="#eee"/><text x="68" y="187" text-anchor="end">4</text>
+    <line x1="76" y1="133.5" x2="620" y2="133.5" stroke="#eee"/><text x="68" y="137.5" text-anchor="end">6</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">8</text>
+  </g>
+  <line x1="76" y1="282" x2="620" y2="282" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="282" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="300" text-anchor="middle" font-size="11" fill="#555">1993</text><text x="130.4" y="300" text-anchor="middle" font-size="11" fill="#555"></text><text x="184.8" y="300" text-anchor="middle" font-size="11" fill="#555">1995</text><text x="239.2" y="300" text-anchor="middle" font-size="11" fill="#555"></text><text x="293.6" y="300" text-anchor="middle" font-size="11" fill="#555">1997</text><text x="348" y="300" text-anchor="middle" font-size="11" fill="#555"></text><text x="402.4" y="300" text-anchor="middle" font-size="11" fill="#555">1999</text><text x="456.8" y="300" text-anchor="middle" font-size="11" fill="#555"></text><text x="511.2" y="300" text-anchor="middle" font-size="11" fill="#555">2001</text><text x="565.6" y="300" text-anchor="middle" font-size="11" fill="#555"></text><text x="620" y="300" text-anchor="middle" font-size="11" fill="#555">2003</text>
+  </g>
+  <text x="22" y="183" font-size="11" fill="#555" transform="rotate(-90 22 183)" text-anchor="middle">Percentage of group</text>
+  <polyline points="76,103.8 130.4,133.5 184.8,143.4 239.2,155.8 293.6,168.2 348,202.8 402.4,188 456.8,205.3 511.2,197.9 565.6,197.9 620,202.8" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="76" cy="103.8" r="3" fill="#1d3a6b"/><circle cx="130.4" cy="133.5" r="3" fill="#1d3a6b"/><circle cx="184.8" cy="143.4" r="3" fill="#1d3a6b"/><circle cx="239.2" cy="155.8" r="3" fill="#1d3a6b"/><circle cx="293.6" cy="168.2" r="3" fill="#1d3a6b"/><circle cx="348" cy="202.8" r="3" fill="#1d3a6b"/><circle cx="402.4" cy="188" r="3" fill="#1d3a6b"/><circle cx="456.8" cy="205.3" r="3" fill="#1d3a6b"/><circle cx="511.2" cy="197.9" r="3" fill="#1d3a6b"/><circle cx="565.6" cy="197.9" r="3" fill="#1d3a6b"/><circle cx="620" cy="202.8" r="3" fill="#1d3a6b"/>
+  <polyline points="76,183 130.4,200.3 184.8,217.7 239.2,205.3 293.6,205.3 348,210.2 402.4,215.2 456.8,225.1 511.2,222.6 565.6,230 620,233.7" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="76" cy="183" r="3" fill="#009472"/><circle cx="130.4" cy="200.3" r="3" fill="#009472"/><circle cx="184.8" cy="217.7" r="3" fill="#009472"/><circle cx="239.2" cy="205.3" r="3" fill="#009472"/><circle cx="293.6" cy="205.3" r="3" fill="#009472"/><circle cx="348" cy="210.2" r="3" fill="#009472"/><circle cx="402.4" cy="215.2" r="3" fill="#009472"/><circle cx="456.8" cy="225.1" r="3" fill="#009472"/><circle cx="511.2" cy="222.6" r="3" fill="#009472"/><circle cx="565.6" cy="230" r="3" fill="#009472"/><circle cx="620" cy="233.7" r="3" fill="#009472"/>
+  <polyline points="76,195.4 130.4,205.3 184.8,220.1 239.2,213.9 293.6,217.7 348,220.1 402.4,220.1 456.8,238.7 511.2,228.8 565.6,238.7 620,256" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="76" cy="195.4" r="3" fill="#c0392b"/><circle cx="130.4" cy="205.3" r="3" fill="#c0392b"/><circle cx="184.8" cy="220.1" r="3" fill="#c0392b"/><circle cx="239.2" cy="213.9" r="3" fill="#c0392b"/><circle cx="293.6" cy="217.7" r="3" fill="#c0392b"/><circle cx="348" cy="220.1" r="3" fill="#c0392b"/><circle cx="402.4" cy="220.1" r="3" fill="#c0392b"/><circle cx="456.8" cy="238.7" r="3" fill="#c0392b"/><circle cx="511.2" cy="228.8" r="3" fill="#c0392b"/><circle cx="565.6" cy="238.7" r="3" fill="#c0392b"/><circle cx="620" cy="256" r="3" fill="#c0392b"/>
+  <g>
+    <line x1="209.8" y1="46" x2="235.8" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="240.8" y="50" font-size="12" fill="#000">NESC</text>
+    <line x1="281.4" y1="46" x2="307.4" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="312.4" y="50" font-size="12" fill="#000">Australia</text>
+    <line x1="385" y1="46" x2="411" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="416" y="50" font-size="12" fill="#000">ESC</text>
+  </g>
+  </g>
+</svg>

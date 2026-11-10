@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" font-family="Arial, sans-serif">
+  <rect width="680" height="330" fill="#ffffff"/>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Process for making soft cheese</text>
+  <g fill="#000">
+    <text x="52" y="70" text-anchor="middle" font-size="11" fill="#000">Water + milk</text>
+    <line x1="52" y1="78" x2="52" y2="146" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="6" y="150" width="92" height="58" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="52" y="183" text-anchor="middle" font-size="11">Mixing</text>    <text x="52" y="228" text-anchor="middle" font-size="10.5" fill="#000">(mixer)</text>
+    <line x1="100" y1="179" x2="120" y2="179" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="122" y="150" width="92" height="58" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="168" y="183" text-anchor="middle" font-size="11">Cooling</text>    <text x="168" y="228" text-anchor="middle" font-size="10.5" fill="#000">5°C</text><text x="168" y="241" text-anchor="middle" font-size="10.5" fill="#000">(2 hours)</text>
+    <line x1="216" y1="179" x2="236" y2="179" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <text x="226" y="112" text-anchor="middle" font-size="11" fill="#000">Salt</text>
+    <line x1="226" y1="118" x2="226" y2="172" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="238" y="150" width="92" height="58" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="284" y="183" text-anchor="middle" font-size="11">Fermentation</text>    <text x="284" y="228" text-anchor="middle" font-size="10.5" fill="#000">37°C (6 hours)</text><text x="284" y="241" text-anchor="middle" font-size="10.5" fill="#000">heated and mixed</text>
+    <line x1="332" y1="179" x2="352" y2="179" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="354" y="150" width="92" height="58" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="400" y="183" text-anchor="middle" font-size="11">Evaporation</text>    <text x="400" y="228" text-anchor="middle" font-size="10.5" fill="#000">100°C</text><text x="400" y="241" text-anchor="middle" font-size="10.5" fill="#000">(8 hours)</text>
+    <line x1="400" y1="148" x2="400" y2="108" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <text x="400" y="100" text-anchor="middle" font-size="11" fill="#000">Steam</text>
+    <line x1="448" y1="179" x2="470" y2="179" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="472" y="160" width="46" height="38" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="495" y="183" text-anchor="middle" font-size="10.5">Filter</text>
+    <line x1="495" y1="200" x2="495" y2="260" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <text x="495" y="276" text-anchor="middle" font-size="11" fill="#000">Waste water</text>
+    <line x1="520" y1="179" x2="546" y2="179" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="548" y="120" width="112" height="118" fill="#fff7e0" stroke="#333" stroke-width="1.2"/><text x="604" y="183" text-anchor="middle" font-size="12">Soft cheese</text>
+    <text x="604" y="110" text-anchor="middle" font-size="11" fill="#000" font-weight="bold">Cooling</text>
+    <text x="604" y="258" text-anchor="middle" font-size="10.5" fill="#000">5°C (8 hours)</text>
+    <text x="340" y="310" text-anchor="middle" font-size="11" fill="#555">The liquid becomes a thicker mixture at each stage.</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 210" font-family="Arial, sans-serif">
+  <rect width="650" height="210" fill="#ffffff"/>
+<text x="325" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">First-year students who rated the resources</text><text x="325" y="40" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">provided by their college “very good” (%)</text>
+  <rect x="20" y="60" width="120" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="80" y="86" text-anchor="middle" font-size="12" fill="#000" font-weight="bold"></text>
+  <rect x="140" y="60" width="105" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="192.5" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Pre-course</text><text x="192.5" y="93" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">information</text>
+  <rect x="245" y="60" width="95" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="292.5" y="86" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Teaching</text>
+  <rect x="340" y="60" width="90" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="385" y="86" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Tutor</text>
+  <rect x="430" y="60" width="100" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="480" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Resources</text><text x="480" y="93" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">(print)</text>
+  <rect x="530" y="60" width="100" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="580" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Other</text><text x="580" y="93" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">resources</text>
+  <rect x="20" y="104" width="120" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Economics</text>
+  <rect x="140" y="104" width="105" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="192.5" y="123" text-anchor="middle" font-size="12" fill="#000">59%</text>
+  <rect x="245" y="104" width="95" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="292.5" y="123" text-anchor="middle" font-size="12" fill="#000">95%</text>
+  <rect x="340" y="104" width="90" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="385" y="123" text-anchor="middle" font-size="12" fill="#000">90%</text>
+  <rect x="430" y="104" width="100" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="480" y="123" text-anchor="middle" font-size="12" fill="#000">81%</text>
+  <rect x="530" y="104" width="100" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="580" y="123" text-anchor="middle" font-size="12" fill="#000">60%</text>
+  <rect x="20" y="134" width="120" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="153" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Law</text>
+  <rect x="140" y="134" width="105" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="192.5" y="153" text-anchor="middle" font-size="12" fill="#000">72%</text>
+  <rect x="245" y="134" width="95" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="292.5" y="153" text-anchor="middle" font-size="12" fill="#000">62%</text>
+  <rect x="340" y="134" width="90" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="385" y="153" text-anchor="middle" font-size="12" fill="#000">76%</text>
+  <rect x="430" y="134" width="100" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="480" y="153" text-anchor="middle" font-size="12" fill="#000">70%</text>
+  <rect x="530" y="134" width="100" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="580" y="153" text-anchor="middle" font-size="12" fill="#000">80%</text>
+  <rect x="20" y="164" width="120" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="183" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Commerce</text>
+  <rect x="140" y="164" width="105" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="192.5" y="183" text-anchor="middle" font-size="12" fill="#000">95%</text>
+  <rect x="245" y="164" width="95" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="292.5" y="183" text-anchor="middle" font-size="12" fill="#000">95%</text>
+  <rect x="340" y="164" width="90" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="385" y="183" text-anchor="middle" font-size="12" fill="#000">93%</text>
+  <rect x="430" y="164" width="100" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="480" y="183" text-anchor="middle" font-size="12" fill="#000">85%</text>
+  <rect x="530" y="164" width="100" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="580" y="183" text-anchor="middle" font-size="12" fill="#000">81%</text>
+</svg>

@@ -119,7 +119,8 @@
   "t2Type": "Advantages and Disadvantages Essay",
   "t1": "The table below shows the number of motor vehicles per 1,000 inhabitants in eight countries in 1990 and 2000.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "New technologies have changed the way children spend their free time.\n\nDo you think the advantages outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day14.webp"
+  "image": "/practice-img/writing/day14.svg",
+  "data": "Table (Motor vehicles per 1,000 inhabitants). Bahamas: 1990 235, 2000 187; Brazil: 1990 55, 2000 135; Cambodia: 1990 1, 2000 1; Chile: 1990 68, 2000 88; Jordan: 1990 50, 2000 157; Luxembourg: 1990 548, 2000 728; New Zealand: 1990 531, 2000 557; Romania: 1990 68, 2000 80."
  },
  {
   "day": 15,
@@ -127,15 +128,17 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the proportion of types of magazines sold by the company in 1975, 1995 and 2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that too much money has been spent looking after and repairing old buildings, so we should knock down old buildings and build modern ones instead.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day15.webp"
+  "image": "/practice-img/writing/day15.svg",
+  "data": "Bar chart, Percentage. Sports: 1975 32%, 1995 36%, 2015 42%; Food: 1975 10%, 1995 22%, 2015 10%; Fashion: 1975 22%, 1995 16%, 2015 5%; Health: 1975 26%, 1995 20%, 2015 20%; Others: 1975 26%, 1995 32%, 2015 26%."
  },
  {
   "day": 16,
   "t1Type": "Line Graph",
   "t2Type": "Opinion Essay",
-  "t1": "The graph shows the value in US dollars (in millions of dollars) of investment in funds of four categories from 1988 to 2014.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The graph shows the value in US dollars (in millions of dollars) of investment in funds of four categories from 1988 to 2014.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people argue that parents of children who break the law should be punished in some way, because they are responsible for their children’s actions. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day16.webp"
+  "image": "/practice-img/writing/day16.svg",
+  "data": "Line graph, Millions of US dollars. Property: 1988 50, 1990 58, 1992 52, 1994 75, 1996 60, 1998 62, 2000 70, 2002 82, 2004 105, 2006 90, 2008 115, 2010 150, 2012 178, 2014 190. Gold: 1988 100, 1990 110, 1992 65, 1994 122, 1996 128, 1998 100, 2000 117, 2002 123, 2004 152, 2006 187, 2008 300, 2010 350, 2012 450, 2014 380. Fine art: 1988 80, 1990 85, 1992 65, 1994 80, 1996 92, 1998 52, 2000 108, 2002 65, 2004 175, 2006 100, 2008 150, 2010 200, 2012 302, 2014 332. Company shares: 1988 40, 1990 50, 1992 92, 1994 72, 1996 155, 1998 162, 2000 168, 2002 172, 2004 200, 2006 215, 2008 222, 2010 230, 2012 248, 2014 252."
  },
  {
   "day": 17,
@@ -143,7 +146,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the population ratio females per 100 males in six different areas in 1995 and 2005.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Today, people are surrounded by advertising. This affects what people think is important and has a negative impact on people’s lives.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day17.webp"
+  "image": "/practice-img/writing/day17.svg",
+  "data": "Table (Females per 100 males). 1995: Africa 97.8, Asia 105.3, Europe 89.4, North America 100.1, Central America 100, Oceania 103.9; 2005: Africa 99.2, Asia 104.9, Europe 92.8, North America 96.9, Central America 97.5, Oceania 99.8."
  },
  {
   "day": 18,
@@ -151,15 +155,17 @@
   "t2Type": "Discussion Essay",
   "t1": "The graph below shows the annual pay (thousands of US dollars) for doctors and other workers in seven countries in 2004.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people believe teenagers should focus on all subjects equally, whereas other people think that they should concentrate on only those subjects that they find interesting and they are best at.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day18.webp"
+  "image": "/practice-img/writing/day18.svg",
+  "data": "Bar chart, Thousands of US dollars. France: Other workers 30, Doctors 70; Italy: Other workers 20, Doctors 60; Czech Republic: Other workers 20, Doctors 63; Germany: Other workers 20, Doctors 62; Finland: Other workers 25, Doctors 50; Switzerland: Other workers 40, Doctors 70; The US: Other workers 45, Doctors 120."
  },
  {
   "day": 19,
   "t1Type": "Line Graph",
   "t2Type": "Multiple Task Essay",
-  "t1": "The graph shows the amount of fruit produced in four countries (France, Spain, Germany, Turkey) from 1970 to 2010.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The graph shows the amount of fruit produced in four countries (France, Spain, Germany, Turkey) from 1970 to 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Major cities in the world are growing fast, as well as their problems.\n\nWhat are the problems that young people living in those cities are facing? What solutions can you suggest?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day19.webp"
+  "image": "/practice-img/writing/day19.svg",
+  "data": "Line graph, Millions of tonnes. Spain: 1970 5.6, 1980 6.1, 1990 5.6, 2000 5.35, 2010 5.1. Turkey: 1970 1.95, 1980 2.5, 1990 2.75, 2000 3.25, 2010 3.55. France: 1970 1.2, 1980 1.5, 1990 2.2, 2000 1.8, 2010 2.75. Germany: 1970 2.5, 1980 2, 1990 1.5, 2000 1.5, 2010 1.3."
  },
  {
   "day": 20,
@@ -167,15 +173,17 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The table below gives information about salaries of secondary/high school teachers in five countries in 2009.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In some countries today, many people decide to have their first child when they are older.\n\nWhat are the reasons?\n\nDo you think the advantages of this outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day20.webp"
+  "image": "/practice-img/writing/day20.svg",
+  "data": "Table (Secondary/high school teachers' salaries, 2009). Australia: Starting salary (US$) 34,600, Average salary (US$) 48,000, Maximum salary (US$) 48,000, Years to reach top salary 9; Denmark: Starting salary (US$) 47,000, Average salary (US$) 54,000, Maximum salary (US$) 54,000, Years to reach top salary 8; Luxembourg: Starting salary (US$) 80,000, Average salary (US$) 112,000, Maximum salary (US$) 139,000, Years to reach top salary 30; Korea: Starting salary (US$) 30,500, Average salary (US$) 52,600, Maximum salary (US$) 84,500, Years to reach top salary 37; Japan: Starting salary (US$) 28,000, Average salary (US$) 49,000, Maximum salary (US$) 62,400, Years to reach top salary 34."
  },
  {
   "day": 21,
   "t1Type": "Bar Chart",
   "t2Type": "Opinion Essay",
-  "t1": "The bar chart shows the information of the number of volunteers and paid workers in 4 different roles in the sports sector of an Australian town in 2015.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The bar chart shows the information of the number of volunteers and paid workers in 4 different roles in the sports sector of an Australian town in 2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "The best way to solve the world's environmental problem is to increase the cost of fuel for cars and other vehicles. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day21.webp"
+  "image": "/practice-img/writing/day21.svg",
+  "data": "Bar chart, Number of people. Coaching: Volunteer 74, Paid 45; Referees: Volunteer 32, Paid 39; Therapists: Volunteer 45, Paid 41; Other sections: Volunteer 58, Paid 48."
  },
  {
   "day": 22,
@@ -183,7 +191,8 @@
   "t2Type": "Independent Task Essay",
   "t1": "The process shows how waste is sorted for recycling.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Anybody can use a mobile phone to answer the work and personal calls at any time or 7 days a week.\n\nDoes this development have more positive or negative effects on both individuals and society?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day22.webp"
+  "image": "/practice-img/writing/day22.svg",
+  "data": "Process diagram, sorting mixed waste (glass, food, steel cans, iron, non-ferrous metals, wood, aluminium) on a conveyor through five machines in turn: shredder; primary air classifier, which removes shredded paper and plastic to a compactor; magnetic separator, which removes steel cans and iron to a collector; trommel screen, which removes glass, food and non-ferrous metals to a collector; secondary air classifier, which removes aluminium, wood, rubber and plastic to a collector."
  },
  {
   "day": 23,
@@ -199,7 +208,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the CO2 emissions of five regions from 2000 to 2020, and predictions up to the year 2040.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Government should support old building restoration or invest in the construction of new houses, offices and roads.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day24.webp"
+  "image": "/practice-img/writing/day24.svg",
+  "data": "Line graph, Millions of metric tonnes. Region 1: 2000 8, 2005 8.6, 2010 9.2, 2015 8.4, 2020 7.5, 2025 7.5, 2030 7.3, 2035 7.15, 2040 7. Region 2: 2000 6, 2005 6.25, 2010 5.9, 2015 5.7, 2020 6, 2025 6.3, 2030 6.1, 2035 5.8, 2040 6. Region 3: 2000 4, 2005 3.1, 2010 4, 2015 4.8, 2020 4.8, 2025 4.8, 2030 4.8, 2035 5, 2040 6. Region 4: 2000 2.7, 2005 2.7, 2010 2.7, 2015 3.3, 2020 4, 2025 3.9, 2030 4, 2035 4.5, 2040 5. Region 5: 2000 1, 2005 1.75, 2010 1.5, 2015 1.15, 2020 0.8, 2025 1.3, 2030 1.6, 2035 1.3, 2040 1.3. Figures after 2020 are predictions. Region 5 fluctuates between about 0.8 and 1.75 throughout."
  },
  {
   "day": 25,
@@ -229,9 +239,10 @@
   "day": 28,
   "t1Type": "Bar Chart",
   "t2Type": "Opinion Essay",
-  "t1": "The chart below shows the annual rice production in 4 countries in 1995,2005,2015.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The chart below shows the annual rice production in 4 countries in 1995,2005,2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people say that we do not need printed paper newspapers. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day28.webp"
+  "image": "/practice-img/writing/day28.svg",
+  "data": "Bar chart, Million tonnes. A: 1995 45, 2005 47, 2015 50; B: 1995 36, 2005 47, 2015 42; C: 1995 5, 2005 7, 2015 5; D: 1995 2.5, 2005 2.5, 2015 5."
  },
  {
   "day": 29,
@@ -239,7 +250,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The table below shows the production of milk annually in four countries in 1990, 2000 and 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people say free time activities for children should be organized by parents. Others say that children should be free to choose what they do in their free time.\n\nDiscuss both these views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day29.webp"
+  "image": "/practice-img/writing/day29.svg",
+  "data": "Table (Annual milk production (litres)). Netherlands: 1990 11,262,000, 2000 11,155,000, 2010 11,466,000; Australia: 1990 11,246,000, 2000 11,105,000, 2010 9,165,000; Tanzania: 1990 87,000, 2000 142,000, 2010 155,000; Guatemala: 1990 26,000, 2000 55,000, 2010 84,000."
  },
  {
   "day": 30,
@@ -247,7 +259,8 @@
   "t2Type": "Advantages and Disadvantages Essay",
   "t1": "The graph below shows the production levels of the main kinds of fuel in the UK between 1981 and 2000.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In some countries, students live with their family while studying at a university. In other countries, students attend university in another city.\n\nDo you think the advantages of living away from family home while attending university outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day30.webp"
+  "image": "/practice-img/writing/day30.svg",
+  "data": "Line graph. Petroleum: 1981 90, 1982 104, 1983 118, 1984 136, 1985 138, 1986 139, 1987 138, 1988 125, 1989 110, 1990 100, 1991 100, 1992 105, 1993 118, 1994 133, 1995 137, 1996 140, 1997 143, 1998 140, 1999 150, 2000 145. Coal: 1981 80, 1982 78, 1983 75, 1984 33, 1985 47, 1986 60, 1987 60, 1988 60, 1989 60, 1990 55, 1991 55, 1992 46, 1993 44, 1994 36, 1995 40, 1996 37, 1997 37, 1998 36, 1999 35, 2000 36. Natural gas: 1981 36, 1982 35, 1983 37, 1984 39, 1985 38, 1986 41, 1987 40, 1988 40, 1989 43, 1990 45, 1991 46, 1992 52, 1993 62, 1994 72, 1995 73, 1996 80, 1997 82, 1998 87, 1999 92, 2000 101."
  },
  {
   "day": 31,
@@ -263,7 +276,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The table below shows water use for different purposes in four countries. The use of water by four different countries (%).\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "If old people are no longer physically, mentally or financially able to look after themselves, younger family members should be legally responsible for supporting them.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day32.webp"
+  "image": "/practice-img/writing/day32.svg",
+  "data": "Table (Water use for different purposes (%)). Egypt: Domestic use 8%, Industry 10%, Agriculture 82%; Saudi Arabia: Domestic use 6%, Industry 30%, Agriculture 64%; New Zealand: Domestic use 10%, Industry 46%, Agriculture 44%; Canada: Domestic use 20%, Industry 70%, Agriculture 10%."
  },
  {
   "day": 33,
@@ -271,7 +285,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The charts below show the percentages of men and women aged 60-64 in employment in four countries in 1970 and 2000.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people want governments to spend money looking for life on other planets. Others, however, think this is a waste of public money when there are so many problems on earth.\n\nDiscuss both these views and give your own opinion\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day33.webp"
+  "image": "/practice-img/writing/day33.svg",
+  "data": "Two bar charts, % aged 60–64 in employment (1970 / 2000). Men: Belgium 79% / 19%; USA 73% / 55%; Japan 85% / 74%; Australia 76% / 47%. Women: Belgium 8% / 7%; USA 36% / 39%; Japan 43% / 40%; Australia 16% / 18%."
  },
  {
   "day": 34,
@@ -279,15 +294,17 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph shows the number of people taking parts in 4 kinds of sports in a particular region between 1985 and 2005.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Whether or not a person achieves their aims in life is mostly related to luck.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day34.webp"
+  "image": "/practice-img/writing/day34.svg",
+  "data": "Line graph. Basketball: 1985 80, 1990 77, 1995 83, 2000 84, 2005 80. Tennis: 1985 150, 1990 175, 1995 200, 2000 210, 2005 220. Badminton: 1985 55, 1990 45, 1995 50, 2000 50, 2005 50. Rugby: 1985 240, 1990 210, 1995 200, 2000 150, 2005 50."
  },
  {
   "day": 35,
   "t1Type": "Table",
   "t2Type": "Opinion Essay",
-  "t1": "The table below shows the percentage of first-year students who gave ‘very good’ rating to the resources provided by their college, for three courses.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The table below shows the percentage of first-year students who gave ‘very good’ rating to the resources provided by their college, for three courses.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people claim that public museums and art galleries will no longer be necessary because people can see historical objects and works of art by using a computer. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day35.webp"
+  "image": "/practice-img/writing/day35.svg",
+  "data": "Table (First-year students who rated the resources provided by their college “very good” (%)). Economics: Pre-course information 59%, Teaching 95%, Tutor 90%, Resources (print) 81%, Other resources 60%; Law: Pre-course information 72%, Teaching 62%, Tutor 76%, Resources (print) 70%, Other resources 80%; Commerce: Pre-course information 95%, Teaching 95%, Tutor 93%, Resources (print) 85%, Other resources 81%."
  },
  {
   "day": 36,
@@ -295,7 +312,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The diagram below shows the process for producing olive oil.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people believe that a crime is a result of social problems and poverty, others think that crime is a result of bad person’s nature.\n\nDiscuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day36.webp"
+  "image": "/practice-img/writing/day36.svg",
+  "data": "Process diagram, olive oil production in eight stages: 1 collecting the olives (raked from the trees); 2 storing them in a vat for 2 to 3 days; 3 washing with cool water; 4 crushing by hammers into olive paste, with the olive stones removed into a container; 5 pressing (hydraulic press) and filtering the paste; 6 spinning and separating the oil in a centrifuge, with water removed; 7 bottling the oil; 8 transporting it to the store by lorry."
  },
  {
   "day": 37,
@@ -303,7 +321,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The world health organization recommends that people should eat five or more portion of fruit and vegetables per day. The bar chart shows the percentage of males and females in the UK by age group in 2006.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some experts believe that when a country is already rich, any additional increase in economic wealth does not make its citizens any more satisfied.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day37.webp"
+  "image": "/practice-img/writing/day37.svg",
+  "data": "Bar chart, % of age group. 19–24: Males 15%, Females 16%; 25–34: Males 20%, Females 22%; 35–44: Males 22%, Females 25%; 45–54: Males 22%, Females 27%; 55–64: Males 32%, Females 34.5%; 65–74: Males 27%, Females 29.5%; 75+: Males 25%, Females 25.3%."
  },
  {
   "day": 38,
@@ -311,7 +330,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The graph below shows the number of enquiries received by the Tourist Information Office in one city over a six-month period in 2011.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In the modern world it is possible to shop, work and communicate with people via the internet and live without any face-to-face contact with others.\n\nIs it a positive or negative development in your opinion?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day38.webp"
+  "image": "/practice-img/writing/day38.svg",
+  "data": "Line graph, Number of enquiries. In person: Jan 380, Feb 640, Mar 830, Apr 910, May 1,110, Jun 1,140. By telephone: Jan 800, Feb 750, Mar 790, Apr 790, May 940, Jun 1,060. By email/letter: Jan 600, Feb 565, Mar 560, Apr 460, May 400, Jun 210."
  },
  {
   "day": 39,
@@ -335,7 +355,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The table describes the changes of people who went for international travel in 1990, 1995, 2000 and 2005 (million).\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "While many people go to university for academic study, more people should be encouraged to do vocational training because there is a lack of qualified workers such as electricians and plumbers.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day41.webp"
+  "image": "/practice-img/writing/day41.svg",
+  "data": "Table (International travellers by region (millions)). Africa: 1990 18.2, 1995 20.8, 2000 26.9, 2005 28.7; America: 1990 80.5, 1995 112.5, 2000 118.2, 2005 113.2; Asia and the Pacific: 1990 60.2, 1995 80.3, 2000 117.4, 2005 135.8; Europe: 1990 280.2, 1995 390.3, 2000 393.2, 2005 400.2; Middle East: 1990 9.8, 1995 11.3, 2000 13.5, 2005 15.8; Total: 1990 448.9, 1995 615.2, 2000 669.2, 2005 693.7."
  },
  {
   "day": 42,
@@ -343,7 +364,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph shows information about the number of people in Australia who use Chinese, Arabic, Italian and Greek as their first language.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Large companies use sports events to promote their products. Some people think it has a negative impact on sports.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day42.webp"
+  "image": "/practice-img/writing/day42.svg",
+  "data": "Line graph, Number of people. Chinese: 1986 110,000, 1991 158,000, 1996 207,000, 2001 255,000, 2006 302,000, 2011 350,000. Arabic: 1986 50,000, 1991 70,000, 1996 90,000, 2001 110,000, 2006 130,000, 2011 150,000. Italian: 1986 152,000, 1991 140,000, 1996 130,000, 2001 118,000, 2006 107,000, 2011 107,000. Greek: 1986 228,000, 1991 218,000, 1996 209,000, 2001 200,000, 2006 190,000, 2011 181,000."
  },
  {
   "day": 43,
@@ -359,7 +381,8 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The graph and chart below give information on the average daily maximum and minimum temperatures in degrees Celsius and the average number of days with rainfall each month for two Australian cities.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "An increasing number of people are choosing to have cosmetic surgery in order to improve their appearance.\n\nWhy do people have operations to change the way they look?\n\nDo you think this is a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day44.webp"
+  "image": "/practice-img/writing/day44.svg",
+  "data": "Line graph, average daily temperatures (°C) by month, Jan–Dec. Brisbane maximum: Jan 28, Feb 30, Mar 25, Apr 21, May 23, Jun 21, Jul 21, Aug 22, Sep 24, Oct 27, Nov 28, Dec 29. Canberra maximum: Jan 27, Feb 27, Mar 24, Apr 19, May 16, Jun 12, Jul 11, Aug 13, Sep 16, Oct 20, Nov 24, Dec 27. Brisbane minimum: Jan 21, Feb 20, Mar 19, Apr 17, May 13, Jun 11, Jul 10, Aug 10, Sep 13, Oct 17, Nov 18, Dec 20. Canberra minimum: Jan 13, Feb 13, Mar 11, Apr 7, May 3, Jun 1, Jul 1, Aug 2, Sep 3, Oct 6, Nov 9, Dec 12. Bar chart, average number of days with rainfall by month. Brisbane: Jan 13, Feb 14, Mar 14, Apr 12, May 10, Jun 7, Jul 7, Aug 7, Sep 7, Oct 8, Nov 10, Dec 12. Canberra: Jan 7, Feb 7, Mar 8, Apr 7, May 7, Jun 10, Jul 10, Aug 10, Sep 8, Oct 10, Nov 7, Dec 7."
  },
  {
   "day": 45,
@@ -367,7 +390,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The chart below shows the percentage of people born in and outside of Australia living in cities, towns, and rural areas in 1950 and 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Rich countries often give money to poorer countries, but it does not solve poverty. Therefore, developed countries should give other types of help to poorer countries rather than financial aid.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day45.webp"
+  "image": "/practice-img/writing/day45.svg",
+  "data": "Two bar charts, % of people born in Australia and born outside Australia living in cities, towns and rural areas. 1950: People born in Australia: Cities 50%, Towns 20%, Rural areas 30%; People born outside Australia: Cities 60%, Towns 12%, Rural areas 40%. 2010: People born in Australia: Cities 65%, Towns 15%, Rural areas 15%; People born outside Australia: Cities 80%, Towns 10%, Rural areas 5%."
  },
  {
   "day": 46,
@@ -375,15 +399,17 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The graph below shows the unemployment rates in the UK, the rest of Europe and Japan from 1993 to 2007.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Parents are putting a lot of pressure on their children to succeed.\n\nWhat are the reasons for this?\n\nIs it a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day46.webp"
+  "image": "/practice-img/writing/day46.svg",
+  "data": "Line graph, Percentage. UK: 1993 11%, 1995 9%, 1997 8%, 1999 6.5%, 2001 5%, 2003 5%, 2005 5%, 2007 6%. EU: 1993 9%, 1995 11%, 1997 11.5%, 1999 10%, 2001 9%, 2003 8.5%, 2005 8.6%, 2007 7.6%. Japan: 1993 2%, 1995 3%, 1997 3%, 1999 3%, 2001 5%, 2003 6%, 2005 5%, 2007 4%."
  },
  {
   "day": 47,
   "t1Type": "Table",
   "t2Type": "Advantages and Disadvantages Essay",
-  "t1": "The table below shows the income and expenditure of Harckley Hall, a public place for hiring over the period of 3 years.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The table below shows the income and expenditure of Harckley Hall, a public place for hiring over the period of 3 years.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people believe that schools should teach foreign languages for primary school children. Do the advantages of this outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day47.webp"
+  "image": "/practice-img/writing/day47.svg",
+  "data": "Table (Harckley Hall: income and expenditure). Income from hiring rooms: Year 1 £34,000, Year 2 £35,000, Year 3 £32,000; Income from the café: Year 1 £3,500, Year 2 £3,000, Year 3 £4,000; Funding from local council: Year 1 £22,000, Year 2 £22,000, Year 3 £21,000; Funding from other sources: Year 1 £24,000, Year 2 £25,000, Year 3 £27,000; Total income: Year 1 £83,500, Year 2 £85,000, Year 3 £84,000; Expenditure: Year 1 £56,000, Year 2 £60,000, Year 3 £62,000; Profit: Year 1 £27,500, Year 2 £25,000, Year 3 £22,000."
  },
  {
   "day": 48,
@@ -391,7 +417,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The graph below shows the percentage of males and females aged 18-20 in a city who participated in various activities in one month in 2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "It costs a lot of money for a country to host an international sports event, such as the Olympic Games or football World Cup. Some people think that this is a waste of money, while others believe the opposite.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day48.webp"
+  "image": "/practice-img/writing/day48.svg",
+  "data": "Bar chart, Percentage. Basketball: Males 33%, Females 12%; Cycling: Males 36%, Females 40%; Football: Males 52%, Females 15%; Swimming: Males 20%, Females 35%; Hockey: Males 12%, Females 4.5%."
  },
  {
   "day": 49,
@@ -399,7 +426,8 @@
   "t2Type": "Independent Task Essay",
   "t1": "The graph below gives information about the price of bananas in four countries between 1994 and 2004.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some employers are giving increased importance to employing people with good social skills in addition to good qualifications.\n\nDo you agree or disagree that social skills are as important as good qualifications for success in a job?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day49.webp"
+  "image": "/practice-img/writing/day49.svg",
+  "data": "Line graph, US$ per kilogram. Japan: 1994 1.88, 1995 2.85, 1996 2, 1997 1.89, 1998 2.02, 1999 2.24, 2000 2.07, 2001 1.6, 2002 2.1, 2003 2.19, 2004 2.57. France: 1994 1.67, 1995 1.67, 1996 1.68, 1997 1.68, 1998 1.55, 1999 1.75, 2000 1.31, 2001 1.78, 2002 1.62, 2003 1, 2004 1.58. Germany: 1994 1.4, 1995 1.25, 1996 1.52, 1997 1.49, 1998 1.35, 1999 1.54, 2000 1.23, 2001 1.43, 2002 1.21, 2003 1.19, 2004 1.19. USA: 1994 0.79, 1995 1.16, 1996 1.16, 1997 1.02, 1998 1.16, 1999 1.1, 2000 1.1, 2001 1.1, 2002 1.1, 2003 1.1, 2004 1.1."
  },
  {
   "day": 50,
@@ -413,9 +441,10 @@
   "day": 51,
   "t1Type": "Bar Chart",
   "t2Type": "Opinion Essay",
-  "t1": "The bar graphs show percentage of men and women aged 60-64 who were employed in 4 countries in 1970 and 2000.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The bar graphs show percentage of men and women aged 60-64 who were employed in 4 countries in 1970 and 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that mobile phones should be banned in public places like libraries, shop and on public transport.\n\nTo what extent do you agree or disagree with this statement?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day51.webp"
+  "image": "/practice-img/writing/day51.svg",
+  "data": "Two bar charts, % of men and women aged 60–64 in employment. 1970: Belgium: Men 79%, Women 63%; USA: Men 86%, Women 78%; Japan: Men 75.5%, Women 56%; Indonesia: Men 84%, Women 65%. 2020: Belgium: Men 53%, Women 7.5%; USA: Men 79%, Women 45%; Japan: Men 63%, Women 47%; Indonesia: Men 72%, Women 50%."
  },
  {
   "day": 52,
@@ -431,7 +460,8 @@
   "t2Type": "Advantages and Disadvantages Essay",
   "t1": "The graph below shows the percentage of Australian exports to four countries from 1990 to 2012.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In many countries today, if people want to find work, they have to move away from their families and friends.\n\nDo you think the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day53.webp"
+  "image": "/practice-img/writing/day53.svg",
+  "data": "Line graph, % of Australian exports going to each country. Japan: 1990 25%, 1991 26%, 1992 24.5%, 1993 23.4%, 1994 23.4%, 1995 22.3%, 1996 20.4%, 1997 18.8%, 1998 18.7%, 1999 17.9%, 2000 17.9%, 2001 17.9%, 2002 17%, 2003 16.3%, 2004 17%, 2005 18.3%, 2006 17.5%, 2007 16.9%, 2008 20%, 2009 16.9%, 2010 17.1%, 2011 17.4%, 2012 17%. US: 1990 11.3%, 1991 11.3%, 1992 10.2%, 1993 9%, 1994 9%, 1995 9%, 1996 7.7%, 1997 7.3%, 1998 7.6%, 1999 10%, 2000 10%, 2001 10%, 2002 10%, 2003 9%, 2004 8.5%, 2005 7.7%, 2006 7.6%, 2007 7.3%, 2008 6.8%, 2009 5.9%, 2010 5%, 2011 4.8%, 2012 5.7%. China: 1990 2.5%, 1991 2.7%, 1992 3.1%, 1993 3.5%, 1994 3.9%, 1995 3.8%, 1996 4.4%, 1997 4.2%, 1998 4.4%, 1999 5.1%, 2000 5.8%, 2001 6.3%, 2002 7.5%, 2003 8.8%, 2004 10.6%, 2005 12.2%, 2006 13.8%, 2007 14.2%, 2008 20.8%, 2009 24%, 2010 25.5%, 2011 26.8%, 2012 28%. India: 1990 1.6%, 1991 1.6%, 1992 1.8%, 1993 1.8%, 1994 1.8%, 1995 1.9%, 1996 2%, 1997 2.2%, 1998 2.4%, 1999 2.2%, 2000 2.4%, 2001 2.6%, 2002 3.6%, 2003 4.8%, 2004 5.3%, 2005 5.9%, 2006 6.2%, 2007 7.1%, 2008 8.1%, 2009 7.9%, 2010 6.4%, 2011 5.1%, 2012 4.9%."
  },
  {
   "day": 54,
@@ -439,7 +469,8 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The graph below shows the hours of teaching per year done by each teacher in four different countries in 2001.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people believe that certain old buildings should be preserved more than others.\n\nWhat types of old buildings should be preserved?\n\nDo you think the advantages of preserving old buildings outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day54.webp"
+  "image": "/practice-img/writing/day54.svg",
+  "data": "Bar chart, Hours per year. Japan: Primary 600, Lower secondary 600, Upper secondary 670; Spain: Primary 600, Lower secondary 600, Upper secondary 970; Ireland: Primary 600, Lower secondary 800, Upper secondary 760; USA: Primary 875, Lower secondary 1,070, Upper secondary 1,105."
  },
  {
   "day": 55,
@@ -447,7 +478,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The diagram below outlines the features and design of a contemporary landfill used for household waste management.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "The use of mobile phones is as antisocial as smoking. Smoking is banned in certain places so mobile phones should be banned like smoking.\n\nTo what extent do you agree or disagree with this?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day55.webp"
+  "image": "/practice-img/writing/day55.svg",
+  "data": "Diagram of a modern landfill in three stages. Construction: a man-made hole is dug in natural rock, then lined with clay and a synthetic lining, with drainage pipes along the bottom and a drainage tank beneath. Use: lorries tip household waste into the lined pit; waste liquid drains through the pipes into the tank. Closure: the full pit is sealed with a clay cover, and a pipe running down into the waste carries the gases out."
  },
  {
   "day": 56,
@@ -463,7 +495,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The maps below give information about a plan to redevelop an industrial site.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Space travel has been possible for some time and some people claim that space tourism could be developed in the future.\n\nDo you think it is a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day57.webp"
+  "image": "/practice-img/writing/day57.svg",
+  "data": "Two plans of a site bounded by Chimney Road (north), Swallow Street (south), Toe Lane (west) and Pie Walk (east). Now (industrial): entrance and reception at the north; a yard in the middle; a round parking area in the west; storage in the south-west; a block of six offices and a canteen in the centre-south; a factory along the east side. Plan (new housing): a 3-bedroom and a 4-bedroom house along the west side; three 2-bedroom houses in the north centre, with communal gardens (with trees) in front of them; private roads on either side and across the south of the gardens; parking garages in the south centre; a parking area and an apartment block along the east side where the factory was."
  },
  {
   "day": 58,
@@ -471,15 +504,17 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The chart below shows the percentage of the day working adults spent doing different activities in a particular country in 1958 and in 2008.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Nowadays, not enough students choose science subjects in university in many countries.\n\nWhy is this happening?\n\nWhat are the effects on society?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day58.webp"
+  "image": "/practice-img/writing/day58.svg",
+  "data": "Two pie charts, % of the day working adults spent on each activity. 1958: Sleeping 32%, Travelling to work 2%, Working 33%, Relaxing at home 8%, Going out (with friends/family) 19%, Other (e.g. hobbies/playing sport) 6%. 2008: Sleeping 25%, Travelling to work 8%, Working 42%, Relaxing at home 13%, Going out (with friends/family) 6%, Other (e.g. hobbies/playing sport) 6%."
  },
  {
   "day": 59,
   "t1Type": "Bar Chart",
   "t2Type": "Opinion Essay",
-  "t1": "The chart below shows the percentage of the population in the UK who consumed the recommended daily amount of fruit and vegetables in 2002, 2006 and 2010.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The chart below shows the percentage of the population in the UK who consumed the recommended daily amount of fruit and vegetables in 2002, 2006 and 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "To succeed in a business, one needs to be good at maths.To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day59.webp"
+  "image": "/practice-img/writing/day59.svg",
+  "data": "Bar chart, Percentage. 2002: Men 22%, Women 25%, Children 11%; 2006: Men 28%, Women 32%, Children 16%; 2010: Men 24%, Women 27%, Children 14%."
  },
  {
   "day": 60,
@@ -487,7 +522,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The graph below shows the number of overseas visitors who came to the UK for different purposes between 1989 and 2009.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Directors of large organizations earn much higher salaries than ordinary employees do. Some people believe it is necessary, but others think that it is unfair.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day60.webp"
+  "image": "/practice-img/writing/day60.svg",
+  "data": "Line graph, millions of overseas visitors to the UK. Holiday: 1989 6.5, 1990 6.6, 1991 6.7, 1992 6.8, 1993 7.1, 1994 7.6, 1995 8.1, 1996 8.5, 1997 9, 1998 9.5, 1999 9, 2000 8.7, 2001 8.4, 2002 8.1, 2003 7.8, 2004 7.5, 2005 7.8, 2006 8.1, 2007 8.4, 2008 8.7, 2009 9. Business: 1989 5.3, 1990 5.1, 1991 4.7, 1992 4, 1993 4, 1994 4.6, 1995 5, 1996 5.4, 1997 5.9, 1998 6.3, 1999 6.8, 2000 7, 2001 7, 2002 6.9, 2003 6.9, 2004 7, 2005 7.3, 2006 7.7, 2007 8.1, 2008 7.6, 2009 7. Visiting friends or relatives: 1989 3.6, 1990 3.7, 1991 3.8, 1992 4, 1993 4.1, 1994 4.2, 1995 4.5, 1996 4.8, 1997 5.1, 1998 5.4, 1999 5.7, 2000 6, 2001 6.3, 2002 6.6, 2003 6.9, 2004 7, 2005 7, 2006 6.8, 2007 6.6, 2008 6.4, 2009 6.2."
  },
  {
   "day": 61,
@@ -495,7 +531,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The table shows the number of exchange students from universities in Europe to Australia and vice versa.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "The advantages of the spread of English as a global language will continue to outweigh its disadvantages.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day61.webp"
+  "image": "/practice-img/writing/day61.svg",
+  "data": "Two tables, number of exchange students. From Europe to Australia: France: 2007 61, 2009 60; Sweden: 2007 32, 2009 42; United Kingdom: 2007 31, 2009 25; Germany: 2007 27, 2009 63; The Netherlands: 2007 36, 2009 26; Total: 2007 186, 2009 226. From Australia to Europe: France: 2007 37, 2009 58; Sweden: 2007 33, 2009 27; United Kingdom: 2007 32, 2009 23; Germany: 2007 18, 2009 26; The Netherlands: 2007 32, 2009 18; Total: 2007 152, 2009 152."
  },
  {
   "day": 62,
@@ -503,7 +540,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The graph below shows the results of three surveys on absenteeism in a particular European country in the years 2000, 2005 and 2010. The results show reasons people gave for not going to work.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that newspapers are the best way to learn about the news. However, others believe that they can learn the news more effectively through other media.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day62.webp"
+  "image": "/practice-img/writing/day62.svg",
+  "data": "Bar chart, Percentage. Illness: 2000 44%, 2005 40%, 2010 35%; Stress: 2000 6%, 2005 4.2%, 2010 12.5%; Personal needs (appointments, etc.): 2000 13.7%, 2005 20%, 2010 23%; Family responsibilities: 2000 27%, 2005 25.7%, 2010 25.7%; Unexpected problems (transport, weather, etc.): 2000 8.3%, 2005 14%, 2010 13%."
  },
  {
   "day": 63,
@@ -511,7 +549,8 @@
   "t2Type": "Advantage Disadvantage",
   "t1": "The plan below show a school in 1985 and the school now.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "The use of social media (e.g. Facebook and Twitter) is replacing face-to-face contact for many people in everyday life.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day63.webp"
+  "image": "/practice-img/writing/day63.svg",
+  "data": "Two plans of a school. 1985 (1,500 students): entrance and exit off the road at the top; a looping road round a central car park; an office and a library on the left; a small second car park; a classroom building in the middle and a two-storey classroom block on the right; large playing fields across the whole bottom half. Now (2,300 students): the road curves round a larger semicircular car park; the office stays; the library has become a Learning Resources Centre with a computer room; the small car park has gone and trees stand in the middle; the classroom block on the right is now three storeys; two new classroom buildings; a pool and a fitness centre in the bottom left; the playing fields are much smaller, in the bottom right only."
  },
  {
   "day": 64,
@@ -519,23 +558,26 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the production of three forest industry products in a European country, namely timber, pulp, and paper from 1980 to 2000.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "It is the responsibility of schools to teach children good behaviour in addition to providing formal education.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day64.webp"
+  "image": "/practice-img/writing/day64.svg",
+  "data": "Line graph, production in million tonnes (points every two and a half years). Pulp: 1980 5.5, 1982.5 2.5, 1985 7, 1987.5 7.5, 1990 8, 1992.5 8, 1995 8.3, 1997.5 8.2, 2000 9.8. Timber: 1980 4.8, 1982.5 7, 1985 10, 1987.5 8, 1990 8, 1992.5 7.5, 1995 6.5, 1997.5 8.2, 2000 7.5. Paper: 1980 4, 1982.5 5, 1985 6, 1987.5 6.5, 1990 7, 1992.5 7.5, 1995 9, 1997.5 8, 2000 12."
  },
  {
   "day": 65,
   "t1Type": "Bar Chart",
   "t2Type": "Opinion Essay",
-  "t1": "The chart below shows the results of the survey of business people in three different years about factors that make managers good at their jobs. Respondents rated the factors from 1 to 5, according to the importance.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The chart below shows the results of the survey of business people in three different years about factors that make managers good at their jobs. Respondents rated the factors from 1 to 5, according to the importance.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "There are several factors that motivate people to stay in the workforce, and money is the most important factor. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day65.webp"
+  "image": "/practice-img/writing/day65.svg",
+  "data": "Bar chart, Rating (1–5). Responsibility: 2010 5, 2015 4, 2020 5; Good communication: 2010 4, 2015 4, 2020 5; Transparency: 2010 3, 2015 4, 2020 3; Empathy: 2010 1, 2015 3, 2020 4; Vision: 2010 2, 2015 3, 2020 4."
  },
  {
   "day": 66,
   "t1Type": "Bar Chart",
   "t2Type": "Discussion Essay",
-  "t1": "The chart below shows the number of people employed in five types of work on one region of Australia in 2001 and 2008.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The chart below shows the number of people employed in five types of work on one region of Australia in 2001 and 2008.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that people commit crime because of poverty and social problems, while others think it is because of their bad nature.\n\nDiscuss both these views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day66.webp"
+  "image": "/practice-img/writing/day66.svg",
+  "data": "Bar chart, Number of people. Sales: 2001 153,000, 2008 165,000; Accounting: 2001 66,000, 2008 58,000; Computing: 2001 58,000, 2008 80,000; Nursing: 2001 58,000, 2008 62,000; Farming: 2001 29,000, 2008 19,000."
  },
  {
   "day": 67,
@@ -543,7 +585,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The graph below shows the number of overseas visitors to three different areas in a European country between 1987 and 2007.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some countries achieve international success by building specialized facilities to train top athletes instead of providing sports facilities that everyone can use.\n\nIs this a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day67.webp"
+  "image": "/practice-img/writing/day67.svg",
+  "data": "Line graph, thousands of overseas visitors (points every two and a half years). The coast: 1987 40, 1989.5 37.5, 1992 35, 1994.5 45.5, 1997 48.5, 1999.5 60, 2002 63, 2004.5 65.5, 2007 75. The mountains: 1987 20, 1989.5 28.5, 1992 24, 1994.5 20, 1997 30, 1999.5 35, 2002 30, 2004.5 32, 2007 35. The lakes: 1987 10, 1989.5 20, 1992 25, 1994.5 35, 1997 40, 1999.5 50, 2002 75, 2004.5 61, 2007 49.5."
  },
  {
   "day": 68,
@@ -551,7 +594,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The diagram below shows how recycled paper is made.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In many parts of the world, some famous people are considered ‘role models', and they are having an increasing influence on the young.\n\nIs this a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day68.webp"
+  "image": "/practice-img/writing/day68.svg",
+  "data": "Process diagram, recycled paper in four stages. 1 Making pulp: used paper is carried on a conveyor belt into a tank of water and chemicals, making unfiltered pulp. 2 Filtering: the pulp is filtered through a sieve into a tank and the ink is drained off, leaving filtered pulp. 3 Cleaning: the pulp is washed with water and soap while air is pumped in, then treated with water and chemicals, giving cleaned pulp. 4 Making paper: the pulp is spread on a conveyor belt, the water drains away, heated rollers dry it, and it comes out as rolls of recycled paper."
  },
  {
   "day": 69,
@@ -559,7 +603,8 @@
   "t2Type": "Advantages and Disadvantages Essay",
   "t1": "The graph shows the percentages of people going to cinemas in a European country on different days\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In the past, people stored knowledge in books. Nowadays, people store knowledge on the internet.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day69.webp"
+  "image": "/practice-img/writing/day69.svg",
+  "data": "Bar chart, Percentage. Mon: 2003 10%, 2005 14%, 2007 12.5%; Tue: 2003 20%, 2005 17%, 2007 18.5%; Wed: 2003 15.5%, 2005 14.2%, 2007 8.5%; Thu: 2003 17.5%, 2005 13.3%, 2007 19%; Fri: 2003 30%, 2005 30%, 2007 30%; Sat: 2003 40%, 2005 45%, 2007 42%; Sun: 2003 30%, 2005 34%, 2007 31.7%."
  },
  {
   "day": 70,
@@ -567,7 +612,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The table below shows the number of temporary migrant workers in four countries in 2003 and 2006 and the number of these workers per 1,000 people in these countries in 2006.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "It is a natural process that animal species such as dinosaurs become extinct. There is no reason for people to prevent this from happening.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day70.webp"
+  "image": "/practice-img/writing/day70.svg",
+  "data": "Table (Temporary migrant workers, 2003 and 2006). Australia: 2003 152,000, 2006 219,000, Per 1,000 people in 2006 10.7; New Zealand: 2003 65,000, 2006 87,000, Per 1,000 people in 2006 21.1; United Kingdom: 2003 137,000, 2006 266,000, Per 1,000 people in 2006 4.4; United States: 2003 577,000, 2006 678,000, Per 1,000 people in 2006 2.3."
  },
  {
   "day": 71,
@@ -575,15 +621,17 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the average house prices in 3 countries between the years 1997 and 2014.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that the increasing use of computers and mobile phones for communication has a negative effect on young people’s reading and writing skills.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day71.webp"
+  "image": "/practice-img/writing/day71.svg",
+  "data": "Line graph, average house price in thousands of dollars ($k). Country A: 1997 150k, 1998 170k, 1999 190k, 2000 195k, 2001 300k, 2002 400k, 2003 535k, 2004 495k, 2005 470k, 2006 455k, 2007 500k, 2008 550k, 2009 600k, 2010 605k, 2011 607k, 2012 608k, 2013 600k, 2014 620k. Country B: 1997 135k, 1998 190k, 1999 220k, 2000 250k, 2001 270k, 2002 300k, 2003 310k, 2004 320k, 2005 375k, 2006 310k, 2007 280k, 2008 270k, 2009 375k, 2010 470k, 2011 500k, 2012 510k, 2013 490k, 2014 488k. Country C: 1997 105k, 1998 120k, 1999 130k, 2000 140k, 2001 150k, 2002 160k, 2003 170k, 2004 180k, 2005 195k, 2006 210k, 2007 230k, 2008 150k, 2009 250k, 2010 268k, 2011 278k, 2012 290k, 2013 300k, 2014 280k."
  },
  {
   "day": 72,
   "t1Type": "Map",
   "t2Type": "Multiple Task Essay",
-  "t1": "The plans below show a city before and how it looks now.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The plans below show a city before and how it looks now.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Many young people do not spend their holidays and weekends doing outdoor activities like hiking and climbing in natural environments.\n\nWhy is this the case?\n\nHow can they be encouraged to go out in natural environments?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day72.webp"
+  "image": "/practice-img/writing/day72.svg",
+  "data": "Two maps of a city. 1950 (population 20,000): a small business district with a residential area around its north side, where two major roads cross north of a river; the north–south road crosses the river by a bridge; a government building just south of the river; an airport in the east. Now (population 200,000): a dam in the east has turned the river through the centre into a lake; the residential area surrounds the whole city on both sides of the lake; a second business district south of the lake, with a government building; the north–south road continues across the lake by the bridge; a new road runs along the south-west and diagonally north-east across the lake; a large new government building in the south; the airport is unchanged."
  },
  {
   "day": 73,
@@ -591,7 +639,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The maps show two different plans designed for a conference room.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some experts believe that when a country is already rich, any additional increase in economic wealth does not make its citizens any more satisfied.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day73.webp"
+  "image": "/practice-img/writing/day73.svg",
+  "data": "Two plans for a conference room, entrance in the top-right corner. Plan A: a podium (with the speaker's chair) top left and a whiteboard top centre; two tables with three chairs each along the left and right sides; one table with four chairs at the bottom centre; the morning tea table along the bottom wall. Total 10 seats. Plan B: morning tea in the top-left corner; the whiteboard top centre with the podium below it in the middle of the room; two tables on the left and right with six chairs each (three on each side); one table at the bottom with three chairs on each side. Total 18 seats."
  },
  {
   "day": 74,
@@ -599,23 +648,26 @@
   "t2Type": "Opinion Essay",
   "t1": "The graph below shows the average retirement age of males and females in six countries in 2003.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people suggest that the government should spend money putting more works of art like paintings and statues into towns and cities to make them attractive places.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day74.webp"
+  "image": "/practice-img/writing/day74.svg",
+  "data": "Table (Average retirement age, 2003). Australia: Men (years) 64, Men (months) 1, Women (years) 63, Women (months) 5; United States: Men (years) 65, Men (months) 6, Women (years) 64, Women (months) 2; Japan: Men (years) 67, Men (months) 4, Women (years) 66, Women (months) 9; Italy: Men (years) 67, Men (months) 4, Women (years) 66, Women (months) 9; France: Men (years) 57, Men (months) 4, Women (years) 56, Women (months) 9; Korea: Men (years) 68, Men (months) 8, Women (years) 67, Women (months) 2."
  },
  {
   "day": 75,
   "t1Type": "Map",
   "t2Type": "Multiple Task Essay",
-  "t1": "The diagram shows how Liverton Docks have changed since 1980.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The diagram shows how Liverton Docks have changed since 1980.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In many countries large amounts of food are wasted. Why do you think people waste food in this way?\n\nWhat can be done to reduce the amount of food thrown away?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day75.webp"
+  "image": "/practice-img/writing/day75.svg",
+  "data": "Two maps of Liverton Docks on a river that flows west, towards the coast in the east. 1980: a working dock — warehouses and cranes on both banks (two warehouses and two cranes on the north bank, one crane and one warehouse on the south bank) and several cargo ships on the river. Now: no warehouses, cranes or cargo ships. North bank: an education centre (replacing a warehouse), a new sailing club and a kids' playground. River: a ship museum, a new bridge and a flood barrier to the east. South bank: a river walk along the water, a hotel (replacing the crane area), new apartments and a car park."
  },
  {
   "day": 76,
   "t1Type": "Table",
   "t2Type": "Multiple Task Essay",
-  "t1": "The table below shows the questionnaire about opinions of club members and general public for the new theatre in one town in 2012.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The table below shows the questionnaire about opinions of club members and general public for the new theatre in one town in 2012.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "People aim to achieve a balance between their work and personal life, but few people achieve it. What are the causes of this problem?\n\nHow to overcome it?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day76.webp"
+  "image": "/practice-img/writing/day76.svg",
+  "data": "Table, % rating the new theatre. Facilities: club members: Excellent 72%, Satisfied 26%, Poor 2%; Facilities: general public: Excellent 64%, Satisfied 24%, Poor 8%; Information: club members: Excellent 54%, Satisfied 30%, Poor 16%; Information: general public: Excellent 66%, Satisfied 20%, Poor 14%; Quality: club members: Excellent 88%, Satisfied 10%, Poor 2%; Quality: general public: Excellent 53%, Satisfied 40%, Poor 7%."
  },
  {
   "day": 77,
@@ -623,7 +675,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The charts below show the percentage of Australian men and women in three age groups who were employed in 1984, 2001, and 2014.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people believe that success in sports depends on physical ability. Others believe that there are more important factors. Discuss both views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day77.webp"
+  "image": "/practice-img/writing/day77.svg",
+  "data": "Two bar charts, % of Australian men and women in three age groups who were employed. Men: 1984: 15–19 62%, 35–44 80%, 60–64 40%; 2001: 15–19 60%, 35–44 80%, 60–64 42%; 2014: 15–19 52%, 35–44 80%, 60–64 62%. Women: 1984: 15–19 60%, 35–44 58%, 60–64 10%; 2001: 15–19 60%, 35–44 70%, 60–64 20%; 2014: 15–19 60%, 35–44 80%, 60–64 42%."
  },
  {
   "day": 79,
@@ -631,7 +684,8 @@
   "t2Type": "Cause and Solution Essay",
   "t1": "The charts below show the percentages of the water used in different sectors in Sydney, Australia in 1997 and 2007.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In many countries, the number of animals and plants is declining.\n\nWhy do you think it is happening?\n\nHow can we solve this issue?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day79.webp"
+  "image": "/practice-img/writing/day79.svg",
+  "data": "Two pie charts, % of total water use in Sydney by sector. 1997: Building industry 5%, Household use 19%, Manufacturing 15%, Food industry 48%, Service industry 13%. 2007: Building industry 2%, Household use 21%, Manufacturing 11%, Food industry 41%, Service industry 25%."
  },
  {
   "day": 80,
@@ -639,7 +693,8 @@
   "t2Type": "Discussion Essay",
   "t1": "The diagram below illustrates the process of producing soft cheese.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think the newly built houses should be the same as the old house style in local areas. Others argue that local authorities should allow people to build houses in their own styles.\n\nDiscuss both views and give your opinion\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day80.webp"
+  "image": "/practice-img/writing/day80.svg",
+  "data": "Process diagram, making soft cheese: water and milk go into a tank and are mixed; the mixture is cooled to 5°C for 2 hours; salt is added; it ferments at 37°C for 6 hours while heated and mixed; evaporation at 100°C for 8 hours releases steam; it passes through a filter, which removes waste water; finally it is cooled at 5°C for 8 hours, giving soft cheese. The liquid turns into a thicker mixture along the way."
  },
  {
   "day": 81,
@@ -647,7 +702,8 @@
   "t2Type": "Opinion Essay",
   "t1": "The charts below show the performance of spending on roads and transport in four countries from 1990 to 2005.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In the modern world, schools are no longer necessary because there is so much information available through the internet that children can study just as well at home.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day81.webp"
+  "image": "/practice-img/writing/day81.svg",
+  "data": "Bar chart, Percentage. Italy: 1990 20%, 1995 16%, 2000 12.5%, 2005 13.5%; Portugal: 1990 27%, 1995 20%, 2000 17.2%, 2005 15.8%; UK: 1990 11%, 1995 13%, 2000 6.5%, 2005 7.3%; USA: 1990 13.2%, 1995 12.2%, 2000 14.3%, 2005 12.5%."
  },
  {
   "day": 82,
@@ -655,7 +711,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The plans below show how the ground of a particular building has changed over time.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "More and more people no longer read newspapers or watch TV programs to get news. They get news about the world through the Internet.\n\nIs this a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day82.webp"
+  "image": "/practice-img/writing/day82.svg",
+  "data": "Three plans of the same ground floor, entrance at the bottom. 1958–1984, an office: meeting room top left, kitchen top right, assistant's and secretary's offices on the left, manager's office on the right, toilet bottom left, reception area bottom right. 1985–2000, an apartment: living room top left, kitchen top right, bedroom 1 and bedroom 2 on the right, bathroom and shower bottom left. 2001–present, a flower shop: gift cards top left, kitchen top right, an office on the right, a play area bottom left, and flowers on display down the left side and at the bottom right."
  },
  {
   "day": 83,
@@ -679,23 +736,26 @@
   "t2Type": "Discussion Essay",
   "t1": "The charts below show the water levels of 6 cities in Australia in October 2009 and 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people argue that we should do research into our family history. Others agree with the view that we should focus on the present and future generations.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day85.webp"
+  "image": "/practice-img/writing/day85.svg",
+  "data": "Bar chart, Percentage. Darwin: Oct 2009 45%, Oct 2010 25%; Sydney: Oct 2009 77%, Oct 2010 80.5%; Melbourne: Oct 2009 22.5%, Oct 2010 40%; Brisbane: Oct 2009 56.5%, Oct 2010 56.5%; Perth: Oct 2009 39.5%, Oct 2010 70%; Canberra: Oct 2009 75.5%, Oct 2010 99%."
  },
  {
   "day": 86,
   "t1Type": "Table",
   "t2Type": "Advantages and Disadvantages Essay",
-  "t1": "The table below shows the percentage of lawyers choosing jobs in different fields in a specific country between 2001 and 2016.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The table below shows the percentage of lawyers choosing jobs in different fields in a specific country between 2001 and 2016.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "As transport and accommodation problems are increasing in many cities, some governments are encouraging businesses to move to rural areas. Do you think the advantages outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day86.webp"
+  "image": "/practice-img/writing/day86.svg",
+  "data": "Table (Lawyers choosing jobs in different fields (%)). Private lawyer: 2001 male 15%, 2001 female 17%, 2016 male 19%, 2016 female 21%; Business: 2001 male 14%, 2001 female 14%, 2016 male 14%, 2016 female 21%; Government: 2001 male 45%, 2001 female 41%, 2016 male 38%, 2016 female 42%; Others: 2001 male 26%, 2001 female 28%, 2016 male 29%, 2016 female 16%."
  },
  {
   "day": 87,
   "t1Type": "Line Graph",
   "t2Type": "Advantages and Disadvantages Essay",
-  "t1": "The line graph shows the global demand of different types of textile from 1980 to 2015.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The line graph shows the global demand of different types of textile from 1980 to 2015.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that young people should be required to do unpaid work helping people in the community. Do the advantages outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day87.webp"
+  "image": "/practice-img/writing/day87.svg",
+  "data": "Line graph, Million tons. Polyester: 1980 5, 1985 7.5, 1990 12, 1995 19.5, 2000 33, 2005 49, 2010 58, 2015 69. Cotton: 1980 14, 1985 18, 1990 18.5, 1995 20, 2000 25, 2005 26.5, 2010 28.5, 2015 32. Cellulosic: 1980 2.5, 1985 3, 1990 3, 1995 2.5, 2000 3.5, 2005 6, 2010 7.5, 2015 9. Wool: 1980 3, 1985 3, 1990 4, 1995 4.8, 2000 4, 2005 2, 2010 1.8, 2015 1.5."
  },
  {
   "day": 88,
@@ -719,7 +779,8 @@
   "t2Type": "Positive or Negative Development Essay",
   "t1": "The graph below shows the percentage of small, medium, large companies which used social media for business purposes between 2012 to 2016.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Many people put their personal information online (address, telephone number, and so on) for purposes such as signing up for social networks or online banking.\n\nIs this a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day90.webp"
+  "image": "/practice-img/writing/day90.svg",
+  "data": "Bar chart, Percentage. Small business: 2012 27%, 2013 30%, 2014 35%, 2015 30%, 2016 49%; Medium business: 2012 32%, 2013 48%, 2014 49%, 2015 30%, 2016 53%; Large business: 2012 78%, 2013 78%, 2014 77%, 2015 53%, 2016 79%."
  },
  {
   "day": 91,
@@ -727,15 +788,17 @@
   "t2Type": "Opinion Essay",
   "t1": "The chart and graph below illustrates data on three types of workers in Australia and the unemployment rates among these groups.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think that employers should not care about the way their employees dress because what matters is the quality of their work.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day91.webp"
+  "image": "/practice-img/writing/day91.svg",
+  "data": "Pie chart, Australia's workforce by place of birth, 2003: born in Australia 76%, born in non-English-speaking countries (NESC) 14%, born in other English-speaking countries (ESC) 10%. Line graph, unemployment rate (% of each group). NESC: 1993 7.2%, 1994 6%, 1995 5.6%, 1996 5.1%, 1997 4.6%, 1998 3.2%, 1999 3.8%, 2000 3.1%, 2001 3.4%, 2002 3.4%, 2003 3.2%. Australia: 1993 4%, 1994 3.3%, 1995 2.6%, 1996 3.1%, 1997 3.1%, 1998 2.9%, 1999 2.7%, 2000 2.3%, 2001 2.4%, 2002 2.1%, 2003 1.95%. ESC: 1993 3.5%, 1994 3.1%, 1995 2.5%, 1996 2.75%, 1997 2.6%, 1998 2.5%, 1999 2.5%, 2000 1.75%, 2001 2.15%, 2002 1.75%, 2003 1.05%."
  },
  {
   "day": 92,
   "t1Type": "Map",
   "t2Type": "Opinion Essay",
-  "t1": "The maps show how the industrial area will change into a housing area in the future.Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "t1": "The maps show how the industrial area will change into a housing area in the future.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Large companies use sport events to promote their products. Some people think this has a negative impact on sports. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day92.webp"
+  "image": "/practice-img/writing/day92.svg",
+  "data": "Two plans of an area surrounded by main roads. Now (industrial area): entrance and reception at the north; parking and storage on the west side; a block of six offices and a canteen in the centre-south; a factory on the east side. Future (area for houses): a 3-bedroom and a 4-bedroom house on the west side; three 2-bedroom houses along the north, with communal gardens in front of them; parking garages in the south centre; a parking area and an apartment block on the east side where the factory was."
  },
  {
   "day": 93,
@@ -743,7 +806,8 @@
   "t2Type": "Multiple Task Essay",
   "t1": "The chart below shows information about European people of different age groups who went to gym once a month or more between 1990 and 2010.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "In many countries large amounts of food are wasted. Why do you think people waste food in this way?\n\nWhat can be done to reduce the amount of food thrown away?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day93.webp"
+  "image": "/practice-img/writing/day93.svg",
+  "data": "Line graph, % of each European age group going to a gym once a month or more. 18–24: 1990 7%, 1991 9%, 1992 11%, 1993 12.5%, 1994 13.5%, 1995 15%, 1996 17%, 1997 20%, 1998 25%, 1999 30%, 2000 33%, 2001 37%, 2002 42%, 2003 46%, 2004 49%, 2005 52%, 2006 58%, 2007 57%, 2008 51%, 2009 54%, 2010 58.5%. 25–34: 1990 8%, 1991 12%, 1992 15.5%, 1993 16%, 1994 17%, 1995 18.5%, 1996 20.5%, 1997 24%, 1998 28%, 1999 31%, 2000 32%, 2001 33.5%, 2002 35%, 2003 36%, 2004 37.5%, 2005 40%, 2006 42.5%, 2007 44%, 2008 45%, 2009 44.5%, 2010 49.5%. 35–44: 1990 4%, 1991 5.5%, 1992 7%, 1993 8%, 1994 9.5%, 1995 10.5%, 1996 11%, 1997 11.5%, 1998 12%, 1999 13.5%, 2000 15%, 2001 16.5%, 2002 19.5%, 2003 20.5%, 2004 21.5%, 2005 22.5%, 2006 23%, 2007 27%, 2008 31%, 2009 35.5%, 2010 39.5%. 45 and over: 1990 3%, 1991 3.5%, 1992 4%, 1993 4.5%, 1994 5%, 1995 6%, 1996 7.5%, 1997 7.5%, 1998 8%, 1999 9%, 2000 9%, 2001 10%, 2002 10%, 2003 10%, 2004 10%, 2005 10.5%, 2006 12%, 2007 13%, 2008 14.5%, 2009 18%, 2010 22.5%."
  },
  {
   "day": 94,
@@ -751,6 +815,7 @@
   "t2Type": "Discussion Essay",
   "t1": "The two plans show Pancha village in 2005 and 2015. Write a summary of the information.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "t2": "Some people think children have the freedom to make mistakes, while other people believe that adults should prevent children from making mistakes.\n\nDiscuss both sides and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.",
-  "image": "/practice-img/writing/day94.webp"
+  "image": "/practice-img/writing/day94.svg",
+  "data": "Two maps of Pancha village. 2005: a narrow path runs north–south through the village; a row of five houses on the west side (four with TV aerials) and three houses in the centre; a small market of scattered stalls in the south-west; a primary school (two buildings) in the north-east; a pagoda with two temples in the south-east. 2015: the path has become a wide paved road with traffic, fenced on its west side; the five western houses now have satellite dishes; the market has more stalls in neat rows; two communication towers stand in the south-west; the school has grown into a primary and secondary school; only one house remains in the centre, and two plots there are marked out (dashed) for new buildings; the pagoda now has three temples."
  }
 ]

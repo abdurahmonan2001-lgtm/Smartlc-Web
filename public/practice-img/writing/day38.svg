@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Enquiries to the Tourist Information Office, January–June 2011</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="330.9" x2="620" y2="330.9" stroke="#eee"/><text x="68" y="334.9" text-anchor="end">200</text>
+    <line x1="76" y1="289.7" x2="620" y2="289.7" stroke="#eee"/><text x="68" y="293.7" text-anchor="end">400</text>
+    <line x1="76" y1="248.6" x2="620" y2="248.6" stroke="#eee"/><text x="68" y="252.6" text-anchor="end">600</text>
+    <line x1="76" y1="207.4" x2="620" y2="207.4" stroke="#eee"/><text x="68" y="211.4" text-anchor="end">800</text>
+    <line x1="76" y1="166.3" x2="620" y2="166.3" stroke="#eee"/><text x="68" y="170.3" text-anchor="end">1,000</text>
+    <line x1="76" y1="125.1" x2="620" y2="125.1" stroke="#eee"/><text x="68" y="129.1" text-anchor="end">1,200</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">1,400</text>
+  </g>
+  <line x1="76" y1="372" x2="620" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">Jan</text><text x="184.8" y="390" text-anchor="middle" font-size="11" fill="#555">Feb</text><text x="293.6" y="390" text-anchor="middle" font-size="11" fill="#555">Mar</text><text x="402.4" y="390" text-anchor="middle" font-size="11" fill="#555">Apr</text><text x="511.2" y="390" text-anchor="middle" font-size="11" fill="#555">May</text><text x="620" y="390" text-anchor="middle" font-size="11" fill="#555">Jun</text>
+  </g>
+  <text x="22" y="228" font-size="11" fill="#555" transform="rotate(-90 22 228)" text-anchor="middle">Number of enquiries</text>
+  <polyline points="76,293.8 184.8,240.3 293.6,201.3 402.4,184.8 511.2,143.7 620,137.5" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="76" cy="293.8" r="3" fill="#1d3a6b"/><circle cx="184.8" cy="240.3" r="3" fill="#1d3a6b"/><circle cx="293.6" cy="201.3" r="3" fill="#1d3a6b"/><circle cx="402.4" cy="184.8" r="3" fill="#1d3a6b"/><circle cx="511.2" cy="143.7" r="3" fill="#1d3a6b"/><circle cx="620" cy="137.5" r="3" fill="#1d3a6b"/>
+  <polyline points="76,207.4 184.8,217.7 293.6,209.5 402.4,209.5 511.2,178.6 620,153.9" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="76" cy="207.4" r="3" fill="#009472"/><circle cx="184.8" cy="217.7" r="3" fill="#009472"/><circle cx="293.6" cy="209.5" r="3" fill="#009472"/><circle cx="402.4" cy="209.5" r="3" fill="#009472"/><circle cx="511.2" cy="178.6" r="3" fill="#009472"/><circle cx="620" cy="153.9" r="3" fill="#009472"/>
+  <polyline points="76,248.6 184.8,255.8 293.6,256.8 402.4,277.4 511.2,289.7 620,328.8" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="76" cy="248.6" r="3" fill="#c0392b"/><circle cx="184.8" cy="255.8" r="3" fill="#c0392b"/><circle cx="293.6" cy="256.8" r="3" fill="#c0392b"/><circle cx="402.4" cy="277.4" r="3" fill="#c0392b"/><circle cx="511.2" cy="289.7" r="3" fill="#c0392b"/><circle cx="620" cy="328.8" r="3" fill="#c0392b"/>
+  <g>
+    <line x1="145.8" y1="46" x2="171.8" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="176.8" y="50" font-size="12" fill="#000">In person</text>
+    <line x1="249.4" y1="46" x2="275.4" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="280.4" y="50" font-size="12" fill="#000">By telephone</text>
+    <line x1="372.2" y1="46" x2="398.2" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="403.2" y="50" font-size="12" fill="#000">By email/letter</text>
+  </g>
+</svg>

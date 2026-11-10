@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Unemployment rates in the UK, the rest of Europe and Japan, 1993–2007</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="330.9" x2="620" y2="330.9" stroke="#eee"/><text x="68" y="334.9" text-anchor="end">2</text>
+    <line x1="76" y1="289.7" x2="620" y2="289.7" stroke="#eee"/><text x="68" y="293.7" text-anchor="end">4</text>
+    <line x1="76" y1="248.6" x2="620" y2="248.6" stroke="#eee"/><text x="68" y="252.6" text-anchor="end">6</text>
+    <line x1="76" y1="207.4" x2="620" y2="207.4" stroke="#eee"/><text x="68" y="211.4" text-anchor="end">8</text>
+    <line x1="76" y1="166.3" x2="620" y2="166.3" stroke="#eee"/><text x="68" y="170.3" text-anchor="end">10</text>
+    <line x1="76" y1="125.1" x2="620" y2="125.1" stroke="#eee"/><text x="68" y="129.1" text-anchor="end">12</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">14</text>
+  </g>
+  <line x1="76" y1="372" x2="620" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">1993</text><text x="153.7" y="390" text-anchor="middle" font-size="11" fill="#555">1995</text><text x="231.4" y="390" text-anchor="middle" font-size="11" fill="#555">1997</text><text x="309.1" y="390" text-anchor="middle" font-size="11" fill="#555">1999</text><text x="386.9" y="390" text-anchor="middle" font-size="11" fill="#555">2001</text><text x="464.6" y="390" text-anchor="middle" font-size="11" fill="#555">2003</text><text x="542.3" y="390" text-anchor="middle" font-size="11" fill="#555">2005</text><text x="620" y="390" text-anchor="middle" font-size="11" fill="#555">2007</text>
+  </g>
+  <text x="22" y="228" font-size="11" fill="#555" transform="rotate(-90 22 228)" text-anchor="middle">Percentage</text>
+  <polyline points="76,145.7 153.7,186.9 231.4,207.4 309.1,238.3 386.9,269.1 464.6,269.1 542.3,269.1 620,248.6" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="76" cy="145.7" r="3" fill="#1d3a6b"/><circle cx="153.7" cy="186.9" r="3" fill="#1d3a6b"/><circle cx="231.4" cy="207.4" r="3" fill="#1d3a6b"/><circle cx="309.1" cy="238.3" r="3" fill="#1d3a6b"/><circle cx="386.9" cy="269.1" r="3" fill="#1d3a6b"/><circle cx="464.6" cy="269.1" r="3" fill="#1d3a6b"/><circle cx="542.3" cy="269.1" r="3" fill="#1d3a6b"/><circle cx="620" cy="248.6" r="3" fill="#1d3a6b"/>
+  <polyline points="76,186.9 153.7,145.7 231.4,135.4 309.1,166.3 386.9,186.9 464.6,197.1 542.3,195.1 620,215.7" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="76" cy="186.9" r="3" fill="#009472"/><circle cx="153.7" cy="145.7" r="3" fill="#009472"/><circle cx="231.4" cy="135.4" r="3" fill="#009472"/><circle cx="309.1" cy="166.3" r="3" fill="#009472"/><circle cx="386.9" cy="186.9" r="3" fill="#009472"/><circle cx="464.6" cy="197.1" r="3" fill="#009472"/><circle cx="542.3" cy="195.1" r="3" fill="#009472"/><circle cx="620" cy="215.7" r="3" fill="#009472"/>
+  <polyline points="76,330.9 153.7,310.3 231.4,310.3 309.1,310.3 386.9,269.1 464.6,248.6 542.3,269.1 620,289.7" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="76" cy="330.9" r="3" fill="#c0392b"/><circle cx="153.7" cy="310.3" r="3" fill="#c0392b"/><circle cx="231.4" cy="310.3" r="3" fill="#c0392b"/><circle cx="309.1" cy="310.3" r="3" fill="#c0392b"/><circle cx="386.9" cy="269.1" r="3" fill="#c0392b"/><circle cx="464.6" cy="248.6" r="3" fill="#c0392b"/><circle cx="542.3" cy="269.1" r="3" fill="#c0392b"/><circle cx="620" cy="289.7" r="3" fill="#c0392b"/>
+  <g>
+    <line x1="232.2" y1="46" x2="258.2" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="263.2" y="50" font-size="12" fill="#000">UK</text>
+    <line x1="291" y1="46" x2="317" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="322" y="50" font-size="12" fill="#000">EU</text>
+    <line x1="349.8" y1="46" x2="375.8" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="380.8" y="50" font-size="12" fill="#000">Japan</text>
+  </g>
+</svg>
