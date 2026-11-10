@@ -29,8 +29,8 @@
       "q": 1,
       "severity": "low",
       "problem": "Part 1 script is 572 words, slightly short of a typical real Part 1.",
-      "fixed": false,
-      "change": "Optional: one more exchange next time the audio is recorded."
+      "fixed": true,
+      "change": "Part 1 extended to real length with natural exchanges and distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     }
   ],
   "paraphrasePairs": {

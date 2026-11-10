@@ -29,8 +29,8 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
-    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
-    "P|3",
+  "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+  "P|3",
   "M|Part one. You will hear a woman phoning a repair company to arrange a visit for her washing machine. First, you have some time to look at questions one to five.",
   "P|20",
   "M|Now listen carefully and answer questions one to five.",
@@ -38,6 +38,9 @@ $s1 = @(
   "F|Oh, hello. My washing machine has broken down, and I'd like to arrange a repair visit, please.",
   "M|Of course. Is it a top loader or a front loader?",
   "F|A front loader - the door is on the front.",
+  "M|And do you know the make? There are one or two newer models we can only repair at our workshop.",
+  "F|It's a Vestel. Quite a common one, I think.",
+  "M|Very common - no problem at all, the engineer carries parts for those.",
   "M|Fine. Let me take some details. Your name, please?",
   "F|Farida Rashidova. Shall I spell the surname? It's R - A - S - H - I - D - O - V - A. Rashidova.",
   "M|Thank you. And how old is the machine? If it's under two years old, the repair might be free under the guarantee.",
@@ -46,15 +49,18 @@ $s1 = @(
   "F|Water is leaking out during the wash. At first I thought it was coming from the hose at the back, but I checked that, and it's actually leaking from the door.",
   "M|From the door - probably the rubber seal. Anything else?",
   "F|Yes, one more thing. Right at the end of the spin cycle there's a loud banging. The whole kitchen shakes.",
-  "M|A banging noise at the end of the spin. I'll note that down for the engineer.",
+  "M|A banging noise at the end of the spin. Does it happen every time, or only with heavy loads?",
+  "F|Every single time, even with a few shirts. My neighbour downstairs has started complaining.",
+  "M|I'll note that down for the engineer - it may be the drum, but he'll check. Now, could I take your address?",
+  "F|It's flat six, number fourteen, Bustan Street. That's B - U - S - T - A - N. Bustan.",
+  "M|B - U - S - T - A - N. Is that the one opposite the school?",
+  "F|That's right, directly opposite the school gates.",
+  "M|Good, the engineer knows it. Is there anywhere he can park?",
+  "F|There's a small car park behind our block. He can use any space marked for visitors.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
   "P|20",
   "M|Now listen and answer questions six to ten.",
-  "M|Now, could I take your address?",
-  "F|It's flat six, number fourteen, Bustan Street.",
-  "M|Bustan Street - is that the one opposite the school?",
-  "F|That's right, directly opposite the school gates.",
-  "M|Good, the engineer knows it. Now, when would suit you? Could he come on Monday morning?",
+  "M|Now, when would suit you? Could he come on Monday morning?",
   "F|Monday would be perfect.",
   "M|Ah - I'm sorry, I've just seen the rota. The engineer isn't in your area on Mondays. He covers your district on Wednesdays. Would Wednesday morning work?",
   "F|Wednesday morning... yes, that's fine. What time will he arrive?",
@@ -63,6 +69,8 @@ $s1 = @(
   "M|The call-out fee is fifty thousand som, and that includes the first half hour of the engineer's labour. If the job takes longer, the extra time is charged on top.",
   "F|Fifty thousand. I see. And if he has to fit new parts?",
   "M|Parts are paid for separately. But every part we fit is guaranteed for one year, so you're covered if anything fails again.",
+  "F|And can I pay by card, or does it have to be cash?",
+  "M|Either is fine - the engineer has a card machine with him.",
   "F|Fine. Is there anything I should do before he comes?",
   "M|Two small things. Make sure the machine is completely empty - no clothes left inside. And turn off the tap under the sink - that's the one that feeds water to the machine.",
   "F|Empty the machine, and turn off the tap. Easy enough.",
@@ -70,7 +78,7 @@ $s1 = @(
   "F|W R five eight. Lovely. Thank you so much for your help.",
   "M|Thank you, Mrs Rashidova. The engineer will see you on Wednesday.",
   "M|That is the end of part one. You now have half a minute to check your answers.",
-    "P|5"
+  "P|5"
 )
 
 $s2 = @(
@@ -143,13 +151,13 @@ $s4 = @(
   "P|30",
   "M|Now listen carefully and answer questions thirty-one to forty.",
   "M|Today I want to talk about a material so ordinary that we forget how much history is knitted into it. Wool.",
-  "M|Sheep were among the very first animals that humans ever farmed - they were being kept more than ten thousand years ago. But here is the surprising part: those earliest sheep had no fleece worth cutting. They were kept for two products only - their meat, and their milk. The woolly sheep we know today is really a human invention, created over thousands of years as herders bred, again and again, from their woolliest animals.",
-  "M|Getting the wool off the animal was slow work at first. The earliest wool was not cut at all: it was combed out by hand in the season when the sheep shed their coats naturally. The arrival of iron changed that. Iron shears - two blades joined by a spring - let a single worker strip a whole animal in minutes, and versions of that simple tool are still in use on farms today.",
-  "M|And why did wool matter so much? Because of one property that plant fibres cannot match: a wool garment keeps the body warm even when it is wet. For sailors, shepherds and soldiers - for anyone whose life was lived outdoors in a cold climate - that one property could mean the difference between life and death.",
-  "M|Let us move on to the Middle Ages, when wool became, quite simply, money. English pastures produced heavy fleeces that the whole of Europe wanted, and raw wool became England's most valuable export by a wide margin. The king taxed every sack that left the country, and those taxes helped to pay for his wars. There is a reminder of this in London even now: in Parliament, one of its most senior officials still sits on a great sack stuffed with wool - a piece of furniture designed, centuries ago, to declare exactly where the nation's wealth came from.",
+  "M|Sheep were among the very first animals that humans ever farmed - they were being kept more than ten thousand years ago. But here is the surprising part: those earliest sheep had no fleece worth cutting. They were kept for two products only - their meat, and their milk. Their coats were mostly coarse hair, with only a thin layer of soft wool underneath, rather like a goat's. The woolly sheep we know today is really a human invention, created over thousands of years as herders bred, again and again, from their woolliest animals.",
+  "M|Getting the wool off the animal was slow work at first. The earliest wool was not cut at all: it was combed out by hand in the season when the sheep shed their coats naturally. It has sometimes been suggested that early farmers cut the fleece with sharp stone blades, but there is very little evidence of that. The arrival of iron changed that. Iron shears - two blades joined by a spring - let a single worker strip a whole animal in minutes, and versions of that simple tool are still in use on farms today.",
+  "M|And why did wool matter so much? Because of one property that plant fibres cannot match: a wool garment keeps the body warm even when it is wet. For sailors, shepherds and soldiers - for anyone whose life was lived outdoors in a cold climate - that one property could mean the difference between life and death. A wool fibre can take up about a third of its own weight in water and still feel dry to the touch.",
+  "M|Let us move on to the Middle Ages, when wool became, quite simply, money. English pastures produced heavy fleeces that the whole of Europe wanted, and raw wool became England's most valuable export by a wide margin. The king taxed every sack that left the country, and those taxes helped to pay for his wars. The merchants who exported it grew so wealthy that many of the grand churches in English farming villages were built with their money, and they are still known today as wool churches. There is a reminder of this in London even now: in Parliament, one of its most senior officials still sits on a great sack stuffed with wool - a piece of furniture designed, centuries ago, to declare exactly where the nation's wealth came from.",
   "M|Most of that English wool crossed the sea to Flanders, whose weavers were the finest in Europe and turned it into expensive fabric. Then, from the fifteenth century, the English drew the obvious conclusion: instead of selling the raw material, they would weave it at home and sell the finished cloth themselves. It was cloth, not fleece, that made England genuinely rich.",
-  "M|Meanwhile, Spain was guarding a treasure of its own: the merino, a breed whose wool was extraordinarily fine - fibres so thin and soft that merino fabric clothed the kings of Europe. The Spanish crown protected its monopoly ruthlessly. Taking a merino sheep out of the country was a crime punished by death, and for centuries the ban held. But no monopoly lasts forever. In seventeen ninety-seven, the first merinos were landed in Australia, and the breed thrived on the dry grasslands there as nowhere else on earth. Australia remains the largest producer of fine wool to this day.",
-  "M|The twentieth century, however, was unkind to wool. From the nineteen thirties onward, chemists learned to make cheap artificial fibres - the first great success was nylon - and one by one, wool lost its old markets: first stockings, then suits, then carpets. By the end of the century, wool had fallen to a tiny fraction of the world's fibre production.",
+  "M|Meanwhile, Spain was guarding a treasure of its own: the merino, a breed whose wool was extraordinarily fine - fibres so thin and soft that merino fabric clothed the kings of Europe. The Spanish crown protected its monopoly ruthlessly. Taking a merino sheep out of the country was a crime punished by death, and for centuries the ban held. In the end it was broken by diplomacy rather than by smugglers: in the eighteenth century, Spanish kings sent merino flocks as royal gifts to other European courts. But no monopoly lasts forever. In seventeen ninety-seven, the first merinos were landed in Australia, and the breed thrived on the dry grasslands there as nowhere else on earth. Australia remains the largest producer of fine wool to this day.",
+  "M|The twentieth century, however, was unkind to wool. From the nineteen thirties onward, chemists learned to make cheap artificial fibres - the first great success was nylon - and one by one, wool lost its old markets: first stockings, then suits, then carpets. The new fibres were cheaper, easier to wash, and did not shrink in hot water. By the end of the century, wool had fallen to a tiny fraction of the world's fibre production.",
   "M|And yet the story is turning once more. Wool is natural, renewable and biodegradable: it grows on grass and sunshine, and at the end of its life it simply rots away - something no plastic fibre can claim. It is also finding new markets that its old merchants never imagined. Builders now pack sheep's wool inside the walls of new houses as insulation - so the same property that once kept the shepherd warm on the hillside now keeps the whole building warm instead.",
   "M|That is the end of part four. You now have some time to check your answers."
 )

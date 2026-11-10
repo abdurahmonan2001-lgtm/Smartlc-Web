@@ -12843,7 +12843,15 @@
    },
    {
     "s": "A",
-    "t": "R, A, K, H, I, M, O, V. Got it. Now, we have three kinds of membership: standard, family, and student. Shall I put you down as standard?"
+    "t": "R, A, K, H, I, M, O, V. Got it. And a contact number, in case we ever need to reach you?"
+   },
+   {
+    "s": "B",
+    "t": "Sure. It's oh nine oh, four four one, two seven six eight."
+   },
+   {
+    "s": "A",
+    "t": "Oh nine oh, four four one, two seven six eight. Thank you. Now, we have three kinds of membership: standard, family, and student. Shall I put you down as standard?"
    },
    {
     "s": "B",
@@ -12874,6 +12882,10 @@
     "t": "Perfect timing, then. When could I actually start?"
    },
    {
+    "s": "A",
+    "t": "Whenever suits you - we can start a membership on any day of the week. Did you have a date in mind?"
+   },
+   {
     "s": "B",
     "t": "Could we say the first of September?"
    },
@@ -12895,7 +12907,15 @@
    },
    {
     "s": "B",
-    "t": "Eight at weekends. That still works. Are any classes included in the membership?"
+    "t": "Eight at weekends. That still works. Is it very busy in the evenings? I'd rather not queue for the machines."
+   },
+   {
+    "s": "A",
+    "t": "Between six and eight on weekdays it does get crowded, I won't pretend otherwise. After eight it's much calmer, and on Sunday mornings the place is almost empty."
+   },
+   {
+    "s": "B",
+    "t": "Right. Are any classes included in the membership?"
    },
    {
     "s": "A",
@@ -12911,11 +12931,27 @@
    },
    {
     "s": "B",
+    "t": "Is the sauna expensive?"
+   },
+   {
+    "s": "A",
+    "t": "Thirty thousand som a visit. Most people use it once a week or so. Towels are free for members, though - in the changing rooms and at the pool."
+   },
+   {
+    "s": "B",
     "t": "Fair enough. Is there anything I need to bring when I first come in?"
    },
    {
     "s": "A",
     "t": "Yes, please bring your passport - we need it to make up your membership card. And your college card too, of course, for the discount."
+   },
+   {
+    "s": "B",
+    "t": "What about a photo? I think I've got some spare passport photos at home."
+   },
+   {
+    "s": "A",
+    "t": "No need - we take your photo here at reception, on the day. It only takes a moment."
    },
    {
     "s": "B",
@@ -12927,6 +12963,14 @@
    },
    {
     "s": "B",
+    "t": "A bag! I was half expecting a water bottle."
+   },
+   {
+    "s": "A",
+    "t": "We gave out water bottles last year, but members kept telling us they wanted something bigger, so this year it's a bag."
+   },
+   {
+    "s": "B",
     "t": "Oh, very nice. And how long does the membership card take?"
    },
    {
@@ -12935,7 +12979,15 @@
    },
    {
     "s": "B",
-    "t": "Five days, from reception. Wonderful. Thank you so much for your help."
+    "t": "Five days, from reception. And can I use the gym before the card is ready?"
+   },
+   {
+    "s": "A",
+    "t": "Yes, of course. We'll give you a paper pass on your first visit, and that works until your card is ready."
+   },
+   {
+    "s": "B",
+    "t": "Wonderful. Thank you so much for your help."
    },
    {
     "s": "A",
@@ -13125,15 +13177,15 @@
   [
    {
     "s": "A",
-    "t": "Glass feels like a modern material - the towers of our cities are wrapped in it from pavement to roof - and yet its story begins long before human beings had made anything at all. Nature made glass first. When volcanic lava cools very quickly, it hardens into obsidian: a natural glass, black and shining. Obsidian breaks with an edge sharper than any metal, and prehistoric peoples treasured it. They shaped it into knives, and traded those blades across enormous distances, hundreds of kilometres from any volcano."
+    "t": "Glass feels like a modern material - the towers of our cities are wrapped in it from pavement to roof - and yet its story begins long before human beings had made anything at all. Nature made glass first. When volcanic lava cools very quickly, it hardens into obsidian: a natural glass, black and shining. Obsidian breaks with an edge sharper than any metal, and prehistoric peoples treasured it. They shaped it into knives, and traded those blades across enormous distances, hundreds of kilometres from any volcano. Archaeologists once assumed that these blades were mainly weapons, but the marks of wear on them tell a different story: most were everyday tools, used for cutting meat and preparing animal skins."
    },
    {
     "s": "A",
-    "t": "The first people to make glass for themselves lived in Mesopotamia and Egypt, more than four thousand years ago. Their recipe has, in essence, never changed: they melted sand together with the ashes of certain plants, at temperatures their ordinary fires could barely reach. Because it was so difficult to produce, early glass was a luxury. The oldest objects we have found are small beads, worn as jewellery and buried with their owners - at that time, glass was valued as highly as precious stones."
+    "t": "The first people to make glass for themselves lived in Mesopotamia and Egypt, more than four thousand years ago. Their recipe has, in essence, never changed: they melted sand together with the ashes of certain plants, at temperatures their ordinary fires could barely reach. Because it was so difficult to produce, early glass was a luxury. The oldest objects we have found are small beads, worn as jewellery and buried with their owners - at that time, glass was valued as highly as precious stones. Interestingly, this early glass was hardly ever transparent. It was usually coloured - a deep blue was especially popular - because its makers were trying to imitate stones such as lapis lazuli, not to make something you could see through. Glass bottles and vessels came considerably later."
    },
    {
     "s": "A",
-    "t": "The great turning point came about two thousand years ago, in the Roman world, with the invention of glassblowing. A worker gathers a lump of molten glass on the end of a hollow iron pipe and blows down it, inflating the glass like a soap bubble, and that bubble can be shaped into almost anything in a matter of minutes. The consequences were enormous. A bottle that had once taken days to make could now be produced before your eyes; prices fell and fell, and glass became, for the first time, an everyday material. The Romans were also the first people to fit glass into windows - small, cloudy panes, but a revolution in how buildings could be lit."
+    "t": "The great turning point came about two thousand years ago, in the Roman world, with the invention of glassblowing. A worker gathers a lump of molten glass on the end of a hollow iron pipe and blows down it, inflating the glass like a soap bubble, and that bubble can be shaped into almost anything in a matter of minutes. The consequences were enormous. A bottle that had once taken days to make could now be produced before your eyes; prices fell and fell, and glass became, for the first time, an everyday material. It is often said that the Romans invented the glass mirror as well, but that is a myth: their mirrors were of polished metal, and good glass mirrors were still more than a thousand years away. The Romans were also the first people to fit glass into windows - small, cloudy panes, but a revolution in how buildings could be lit."
    },
    {
     "s": "A",
@@ -13141,11 +13193,11 @@
    },
    {
     "s": "A",
-    "t": "Now to the modern age, and to a problem that had defeated glassmakers for centuries: how to make truly flat window glass cheaply. The answer arrived in the nineteen fifties, and it is called the float process. Molten glass is poured onto a bath of liquid tin, and because the glass floats on the metal, it spreads out into a sheet that is perfectly flat on both sides, with no grinding and no polishing. Nearly every window in every modern building is made this way."
+    "t": "Now to the modern age, and to a problem that had defeated glassmakers for centuries: how to make truly flat window glass cheaply. The answer arrived in the nineteen fifties, and it is called the float process. Molten glass is poured onto a bath of liquid tin, and because the glass floats on the metal, it spreads out into a sheet that is perfectly flat on both sides, with no grinding and no polishing. Before that, flat glass had been rolled out on iron tables or blown and then cut open, and every sheet had to be ground and polished afterwards, which wasted a great deal of time and material. Nearly every window in every modern building is made this way."
    },
    {
     "s": "A",
-    "t": "And today, glass may be at its most remarkable when it is almost invisible. Optical fibres - threads of glass finer than a human hair - now carry most of the world's information beneath the oceans, as tiny flashes of light. And the material points towards a greener future too, because glass has one property that almost nothing else we manufacture can match: it can be recycled endlessly, melted down and reformed again and again, with no loss of quality. The bottle you recycle this week can become a new bottle next month, and another one after that, for ever."
+    "t": "And today, glass may be at its most remarkable when it is almost invisible. Optical fibres - threads of glass finer than a human hair - now carry most of the world's information beneath the oceans, as tiny flashes of light. Specially strengthened glass covers the screens of the phones in your pockets, and glass is a key part of the solar panels on our roofs. And the material points towards a greener future too, because glass has one property that almost nothing else we manufacture can match: it can be recycled endlessly, melted down and reformed again and again, with no loss of quality. The bottle you recycle this week can become a new bottle next month, and another one after that, for ever."
    }
   ]
  ],
@@ -13209,6 +13261,22 @@
    },
    {
     "s": "B",
+    "t": "And where did you get off? It helps us to know which end of the route the bus finished at."
+   },
+   {
+    "s": "A",
+    "t": "At the stop outside the university library. I'd put the bag on the seat next to me while I looked for my ticket, and somehow I just walked off without it."
+   },
+   {
+    "s": "B",
+    "t": "It happens far more often than you'd think. Were you sitting upstairs or downstairs?"
+   },
+   {
+    "s": "A",
+    "t": "Upstairs, near the back."
+   },
+   {
+    "s": "B",
     "t": "Good. Now, the bag itself. Can you describe it for me?"
    },
    {
@@ -13226,6 +13294,14 @@
    {
     "s": "A",
     "t": "Unfortunately, yes - my laptop. And some library books, which are due back on Friday, of all things. At least my purse was in my coat pocket."
+   },
+   {
+    "s": "B",
+    "t": "Was the laptop in a case of its own?"
+   },
+   {
+    "s": "A",
+    "t": "Yes, a black padded sleeve. And my name is written inside the cover of one of the library books, if that helps."
    },
    {
     "s": "B",
@@ -13249,7 +13325,15 @@
    },
    {
     "s": "A",
-    "t": "Do I need to bring anything with me?"
+    "t": "My husband works near there. Could he collect it for me?"
+   },
+   {
+    "s": "B",
+    "t": "He could, but he'd need a note signed by you, and he'd have to bring his own identification as well."
+   },
+   {
+    "s": "A",
+    "t": "It'll probably be easier if I go myself, then. Do I need to bring anything with me?"
    },
    {
     "s": "B",
@@ -14785,6 +14869,14 @@
    },
    {
     "s": "A",
+    "t": "And is there a garden? The children will want to be outside as much as possible."
+   },
+   {
+    "s": "B",
+    "t": "There's an enclosed garden at the back with a table and chairs, and a field beyond it where they can run about as much as they like."
+   },
+   {
+    "s": "A",
     "t": "That sounds perfect. Now, dates. We were hoping to arrive on Friday the twelfth of August."
    },
    {
@@ -14810,6 +14902,18 @@
    {
     "s": "A",
     "t": "Six hundred and forty. All right, that's fine."
+   },
+   {
+    "s": "B",
+    "t": "And will you be arriving by car? I ask because the lane is too narrow for a minibus."
+   },
+   {
+    "s": "A",
+    "t": "Two cars, actually. My brother is driving my mother down separately."
+   },
+   {
+    "s": "B",
+    "t": "That's fine - there's room for two cars beside the cottage."
    },
    {
     "s": "A",
@@ -14842,6 +14946,14 @@
    {
     "s": "B",
     "t": "Not at all, one dog is allowed. We simply ask that it's kept off the furniture."
+   },
+   {
+    "s": "A",
+    "t": "And is there internet? My husband may need to do a little work while we're there."
+   },
+   {
+    "s": "B",
+    "t": "There is wifi, though I should warn you it's slow - fine for emails, not so good for films."
    },
    {
     "s": "A",
@@ -15067,19 +15179,19 @@
    },
    {
     "s": "B",
-    "t": "The cloth itself, of course, was for sale, and carrying it westwards created the most famous trade network in history: the Silk Road. Not a single road at all, in reality, but a web of routes threading through high mountain passes and wide deserts. No merchant travelled the whole distance; goods moved in stages, passed from trader to trader, carried by caravans of camels. Silk flowed west, towards Persia and Rome. And coming east into China, in exchange, came glass, horses and, above all, silver. Nor was it only goods that moved. Ideas travelled the same paths - Buddhism entered China with the caravans, carried by merchants and travelling monks."
+    "t": "The cloth itself, of course, was for sale, and carrying it westwards created the most famous trade network in history: the Silk Road. Nobody at the time actually called it that: the name was invented only in the nineteenth century, by a German geographer. Not a single road at all, in reality, but a web of routes threading through high mountain passes and wide deserts. No merchant travelled the whole distance; goods moved in stages, passed from trader to trader, carried by caravans of camels. Silk flowed west, towards Persia and Rome. In Rome it became so fashionable that some senators complained the empire's gold was disappearing eastwards to pay for it. And coming east into China, in exchange, came glass, horses and, above all, silver. Nor was it only goods that moved. Ideas travelled the same paths - Buddhism entered China with the caravans, carried by merchants and travelling monks."
    },
    {
     "s": "B",
-    "t": "A secret so valuable could not last forever. The story goes that around the year five hundred and fifty, two monks who had spent years in the East arrived at Constantinople with a proposal for the emperor. They went back, and they smuggled out silkworm eggs - hiding them, tradition says, inside their hollow walking canes. However decorated the tale has become, silk production really did begin at Constantinople at about that time. From there, over the following centuries, the craft spread into Europe - first to Italy, whose weaving towns grew rich on it, and later to France, where the city of Lyon became the centre of the European trade."
+    "t": "A secret so valuable could not last forever. The story goes that around the year five hundred and fifty, two monks who had spent years in the East arrived at Constantinople with a proposal for the emperor. They went back, and they smuggled out silkworm eggs - hiding them, tradition says, inside their hollow walking canes. Why eggs, and not the caterpillars themselves? Because caterpillars would never have survived a journey of many months, whereas the eggs could lie dormant until they reached the end of the road. However decorated the tale has become, silk production really did begin at Constantinople at about that time. From there, over the following centuries, the craft spread into Europe - first to Italy, whose weaving towns grew rich on it, and later to France, where the city of Lyon became the centre of the European trade."
    },
    {
     "s": "B",
-    "t": "The nineteenth century brought the industry's great crisis. A disease of the silkworms swept through the rearing houses of Europe, killing the caterpillars in their millions, and European production never fully recovered. Then, in the twentieth century, came competition of an entirely new kind: chemists learned to make artificial fibres - above all nylon - which could imitate silk at a fraction of the price. Stockings, parachutes, linings: one by one, silk's markets were taken from it."
+    "t": "The nineteenth century brought the industry's great crisis. A disease of the silkworms swept through the rearing houses of Europe, killing the caterpillars in their millions, and European production never fully recovered. The French scientist Louis Pasteur eventually identified the disease and showed farmers how to choose healthy eggs, but by then much of the trade had already moved back to Asia. Then, in the twentieth century, came competition of an entirely new kind: chemists learned to make artificial fibres - above all nylon - which could imitate silk at a fraction of the price. Stockings, parachutes, linings: one by one, silk's markets were taken from it."
    },
    {
     "s": "B",
-    "t": "And yet silk did not disappear. It simply returned to being what it had been at the start - a luxury. Today the world's largest producer is, once again, China, which grows the great majority of the global supply. And the fibre has quietly found new work far from fashion. Because silk is strong, fine, and readily accepted by the human body, surgeons have long used silk stitches for closing wounds, and researchers are now testing silk structures for repairing nerves and even skin."
+    "t": "And yet silk did not disappear. It simply returned to being what it had been at the start - a luxury. Today the world's largest producer is, once again, China, which grows the great majority of the global supply. India comes second, and it is unusual in producing every one of the main commercial kinds of silk. And the fibre has quietly found new work far from fashion. Because silk is strong, fine, and readily accepted by the human body, surgeons have long used silk stitches for closing wounds, and researchers are now testing silk structures for repairing nerves and even skin."
    },
    {
     "s": "B",
@@ -15155,6 +15267,14 @@
    },
    {
     "s": "B",
+    "t": "And will the sofa fit in the lift? It's quite a large one."
+   },
+   {
+    "s": "A",
+    "t": "I measured it, actually. The lift is just big enough, as long as they stand the sofa on its end."
+   },
+   {
+    "s": "B",
     "t": "That is always good to hear. Thank you."
    },
    {
@@ -15199,6 +15319,14 @@
    },
    {
     "s": "A",
+    "t": "Could I pay by card instead?"
+   },
+   {
+    "s": "B",
+    "t": "The drivers only carry cash, I'm afraid. If you'd rather use a card, you can pay online before the day."
+   },
+   {
+    "s": "A",
     "t": "Eighty thousand, to the driver. That's fine. And one more thing - can you take the old sofa away?"
    },
    {
@@ -15215,7 +15343,15 @@
    },
    {
     "s": "A",
-    "t": "A text. Perfect. Thank you very much for your help."
+    "t": "A text. Perfect. And will they put the coffee table together? I think it comes flat in a box."
+   },
+   {
+    "s": "B",
+    "t": "It does, but the drivers assemble it for you - it only takes about ten minutes - and they take all the packaging away with them."
+   },
+   {
+    "s": "A",
+    "t": "Wonderful. Thank you very much for your help."
    },
    {
     "s": "B",
@@ -15763,6 +15899,18 @@
    },
    {
     "s": "B",
+    "t": "And do you know the make? There are one or two newer models we can only repair at our workshop."
+   },
+   {
+    "s": "A",
+    "t": "It's a Vestel. Quite a common one, I think."
+   },
+   {
+    "s": "B",
+    "t": "Very common - no problem at all, the engineer carries parts for those."
+   },
+   {
+    "s": "B",
     "t": "Fine. Let me take some details. Your name, please?"
    },
    {
@@ -15795,19 +15943,23 @@
    },
    {
     "s": "B",
-    "t": "A banging noise at the end of the spin. I'll note that down for the engineer."
-   },
-   {
-    "s": "B",
-    "t": "Now, could I take your address?"
+    "t": "A banging noise at the end of the spin. Does it happen every time, or only with heavy loads?"
    },
    {
     "s": "A",
-    "t": "It's flat six, number fourteen, Bustan Street."
+    "t": "Every single time, even with a few shirts. My neighbour downstairs has started complaining."
    },
    {
     "s": "B",
-    "t": "Bustan Street - is that the one opposite the school?"
+    "t": "I'll note that down for the engineer - it may be the drum, but he'll check. Now, could I take your address?"
+   },
+   {
+    "s": "A",
+    "t": "It's flat six, number fourteen, Bustan Street. That's B - U - S - T - A - N. Bustan."
+   },
+   {
+    "s": "B",
+    "t": "B - U - S - T - A - N. Is that the one opposite the school?"
    },
    {
     "s": "A",
@@ -15815,7 +15967,15 @@
    },
    {
     "s": "B",
-    "t": "Good, the engineer knows it. Now, when would suit you? Could he come on Monday morning?"
+    "t": "Good, the engineer knows it. Is there anywhere he can park?"
+   },
+   {
+    "s": "A",
+    "t": "There's a small car park behind our block. He can use any space marked for visitors."
+   },
+   {
+    "s": "B",
+    "t": "Now, when would suit you? Could he come on Monday morning?"
    },
    {
     "s": "A",
@@ -15848,6 +16008,14 @@
    {
     "s": "B",
     "t": "Parts are paid for separately. But every part we fit is guaranteed for one year, so you're covered if anything fails again."
+   },
+   {
+    "s": "A",
+    "t": "And can I pay by card, or does it have to be cash?"
+   },
+   {
+    "s": "B",
+    "t": "Either is fine - the engineer has a card machine with him."
    },
    {
     "s": "A",
@@ -16061,19 +16229,19 @@
    },
    {
     "s": "B",
-    "t": "Sheep were among the very first animals that humans ever farmed - they were being kept more than ten thousand years ago. But here is the surprising part: those earliest sheep had no fleece worth cutting. They were kept for two products only - their meat, and their milk. The woolly sheep we know today is really a human invention, created over thousands of years as herders bred, again and again, from their woolliest animals."
+    "t": "Sheep were among the very first animals that humans ever farmed - they were being kept more than ten thousand years ago. But here is the surprising part: those earliest sheep had no fleece worth cutting. They were kept for two products only - their meat, and their milk. Their coats were mostly coarse hair, with only a thin layer of soft wool underneath, rather like a goat's. The woolly sheep we know today is really a human invention, created over thousands of years as herders bred, again and again, from their woolliest animals."
    },
    {
     "s": "B",
-    "t": "Getting the wool off the animal was slow work at first. The earliest wool was not cut at all: it was combed out by hand in the season when the sheep shed their coats naturally. The arrival of iron changed that. Iron shears - two blades joined by a spring - let a single worker strip a whole animal in minutes, and versions of that simple tool are still in use on farms today."
+    "t": "Getting the wool off the animal was slow work at first. The earliest wool was not cut at all: it was combed out by hand in the season when the sheep shed their coats naturally. It has sometimes been suggested that early farmers cut the fleece with sharp stone blades, but there is very little evidence of that. The arrival of iron changed that. Iron shears - two blades joined by a spring - let a single worker strip a whole animal in minutes, and versions of that simple tool are still in use on farms today."
    },
    {
     "s": "B",
-    "t": "And why did wool matter so much? Because of one property that plant fibres cannot match: a wool garment keeps the body warm even when it is wet. For sailors, shepherds and soldiers - for anyone whose life was lived outdoors in a cold climate - that one property could mean the difference between life and death."
+    "t": "And why did wool matter so much? Because of one property that plant fibres cannot match: a wool garment keeps the body warm even when it is wet. For sailors, shepherds and soldiers - for anyone whose life was lived outdoors in a cold climate - that one property could mean the difference between life and death. A wool fibre can take up about a third of its own weight in water and still feel dry to the touch."
    },
    {
     "s": "B",
-    "t": "Let us move on to the Middle Ages, when wool became, quite simply, money. English pastures produced heavy fleeces that the whole of Europe wanted, and raw wool became England's most valuable export by a wide margin. The king taxed every sack that left the country, and those taxes helped to pay for his wars. There is a reminder of this in London even now: in Parliament, one of its most senior officials still sits on a great sack stuffed with wool - a piece of furniture designed, centuries ago, to declare exactly where the nation's wealth came from."
+    "t": "Let us move on to the Middle Ages, when wool became, quite simply, money. English pastures produced heavy fleeces that the whole of Europe wanted, and raw wool became England's most valuable export by a wide margin. The king taxed every sack that left the country, and those taxes helped to pay for his wars. The merchants who exported it grew so wealthy that many of the grand churches in English farming villages were built with their money, and they are still known today as wool churches. There is a reminder of this in London even now: in Parliament, one of its most senior officials still sits on a great sack stuffed with wool - a piece of furniture designed, centuries ago, to declare exactly where the nation's wealth came from."
    },
    {
     "s": "B",
@@ -16081,11 +16249,11 @@
    },
    {
     "s": "B",
-    "t": "Meanwhile, Spain was guarding a treasure of its own: the merino, a breed whose wool was extraordinarily fine - fibres so thin and soft that merino fabric clothed the kings of Europe. The Spanish crown protected its monopoly ruthlessly. Taking a merino sheep out of the country was a crime punished by death, and for centuries the ban held. But no monopoly lasts forever. In seventeen ninety-seven, the first merinos were landed in Australia, and the breed thrived on the dry grasslands there as nowhere else on earth. Australia remains the largest producer of fine wool to this day."
+    "t": "Meanwhile, Spain was guarding a treasure of its own: the merino, a breed whose wool was extraordinarily fine - fibres so thin and soft that merino fabric clothed the kings of Europe. The Spanish crown protected its monopoly ruthlessly. Taking a merino sheep out of the country was a crime punished by death, and for centuries the ban held. In the end it was broken by diplomacy rather than by smugglers: in the eighteenth century, Spanish kings sent merino flocks as royal gifts to other European courts. But no monopoly lasts forever. In seventeen ninety-seven, the first merinos were landed in Australia, and the breed thrived on the dry grasslands there as nowhere else on earth. Australia remains the largest producer of fine wool to this day."
    },
    {
     "s": "B",
-    "t": "The twentieth century, however, was unkind to wool. From the nineteen thirties onward, chemists learned to make cheap artificial fibres - the first great success was nylon - and one by one, wool lost its old markets: first stockings, then suits, then carpets. By the end of the century, wool had fallen to a tiny fraction of the world's fibre production."
+    "t": "The twentieth century, however, was unkind to wool. From the nineteen thirties onward, chemists learned to make cheap artificial fibres - the first great success was nylon - and one by one, wool lost its old markets: first stockings, then suits, then carpets. The new fibres were cheaper, easier to wash, and did not shrink in hot water. By the end of the century, wool had fallen to a tiny fraction of the world's fibre production."
    },
    {
     "s": "B",

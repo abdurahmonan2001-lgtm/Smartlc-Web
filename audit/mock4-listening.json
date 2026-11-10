@@ -14,8 +14,8 @@
       "q": 1,
       "severity": "low",
       "problem": "Part 1 script is 486 words, short for a full Part 1 (very roughly 600+).",
-      "fixed": false,
-      "change": "If re-recorded, add an exchange about the time of the journey or a second contact number."
+      "fixed": true,
+      "change": "Part 1 extended to real length with natural exchanges and distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 15,

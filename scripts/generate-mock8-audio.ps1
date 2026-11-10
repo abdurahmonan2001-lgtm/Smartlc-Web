@@ -29,8 +29,8 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
-    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
-    "P|3",
+  "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+  "P|3",
   "M|Part one. You will hear a woman phoning an agency about renting a holiday cottage. First, you have some time to look at questions one to five.",
   "P|20",
   "M|Now listen carefully and answer questions one to five.",
@@ -45,6 +45,8 @@ $s1 = @(
   "M|Six, right. Then I'd suggest Heron Cottage. Swallow Cottage is charming, but it only sleeps four. Heron sleeps six very comfortably.",
   "F|Heron - as in the bird?",
   "M|Exactly, like the tall grey bird. It stands on its own, about three kilometres from the village of Askwell. A very quiet lane, and wonderful walking country all around.",
+  "F|And is there a garden? The children will want to be outside as much as possible.",
+  "M|There's an enclosed garden at the back with a table and chairs, and a field beyond it where they can run about as much as they like.",
   "F|That sounds perfect. Now, dates. We were hoping to arrive on Friday the twelfth of August.",
   "M|Let me check... ah, I'm sorry, the cottage is already booked that week. It's free from Friday the nineteenth, though.",
   "F|The nineteenth... yes, we can manage that.",
@@ -52,6 +54,9 @@ $s1 = @(
   "F|Just the one week - seven nights, Friday to Friday.",
   "M|Seven nights, lovely. Now, the rent. You may have seen five hundred and eighty pounds on our website, but I'm afraid prices went up in April. For August it's six hundred and forty pounds for the week - and that does include all your electricity.",
   "F|Six hundred and forty. All right, that's fine.",
+  "M|And will you be arriving by car? I ask because the lane is too narrow for a minibus.",
+  "F|Two cars, actually. My brother is driving my mother down separately.",
+  "M|That's fine - there's room for two cars beside the cottage.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
   "P|20",
   "M|Now listen and answer questions six to ten.",
@@ -63,6 +68,8 @@ $s1 = @(
   "M|Very little. All the beds are made up when you arrive, and the kitchen has everything. The one thing guests must bring is their own towels - we stopped providing those.",
   "F|Towels, I'll note that down. Oh - and we have a dog. Is that a problem?",
   "M|Not at all, one dog is allowed. We simply ask that it's kept off the furniture.",
+  "F|And is there internet? My husband may need to do a little work while we're there.",
+  "M|There is wifi, though I should warn you it's slow - fine for emails, not so good for films.",
   "F|Of course. Is there somewhere nearby to buy food?",
   "M|There's a very good shop in Askwell. It used to shut on Sundays, but the new owners changed all that - it opens on Sundays now and closes on Mondays instead. So don't arrive planning to do your shopping on a Monday.",
   "F|Closed on Mondays - got it. And how do we actually find the cottage?",
@@ -70,7 +77,7 @@ $s1 = @(
   "F|Left just after the bridge. Wonderful. Thank you so much for your help.",
   "M|A pleasure. I'll email the booking form to you today. Goodbye.",
   "M|That is the end of part one. You now have half a minute to check your answers.",
-    "P|5"
+  "P|5"
 )
 
 $s2 = @(
@@ -146,10 +153,10 @@ $s4 = @(
   "M|Let's begin with what silk actually is. The fibre comes from the cocoon of a caterpillar - the larva of a moth that feeds on the leaves of the mulberry tree. When the caterpillar is ready to transform, it spins a protective case around itself from a single continuous strand, and it is that strand we weave.",
   "M|How anyone discovered that this little case could become cloth is lost to history, but China preserves a famous legend. An empress, the story goes, was sitting in her garden when a cocoon dropped from a mulberry branch into her cup of hot tea. As she lifted it out, the softened casing began to unravel between her fingers - and kept unravelling. That detail, at least, is quite accurate: unwound with care, a single cocoon yields an unbroken length of thread approaching one kilometre.",
   "M|Whatever the true origin, the Chinese learned to raise the moths, feed the caterpillars, and reel and weave the fibre. And then they did something remarkable: for centuries, they told nobody. The entire method was treated as a state secret, guarded as closely as any military plan. Under the old laws, anyone who revealed the process to a foreigner, or tried to carry the moths out of the country, could be punished by death.",
-  "M|The cloth itself, of course, was for sale, and carrying it westwards created the most famous trade network in history: the Silk Road. Not a single road at all, in reality, but a web of routes threading through high mountain passes and wide deserts. No merchant travelled the whole distance; goods moved in stages, passed from trader to trader, carried by caravans of camels. Silk flowed west, towards Persia and Rome. And coming east into China, in exchange, came glass, horses and, above all, silver. Nor was it only goods that moved. Ideas travelled the same paths - Buddhism entered China with the caravans, carried by merchants and travelling monks.",
-  "M|A secret so valuable could not last forever. The story goes that around the year five hundred and fifty, two monks who had spent years in the East arrived at Constantinople with a proposal for the emperor. They went back, and they smuggled out silkworm eggs - hiding them, tradition says, inside their hollow walking canes. However decorated the tale has become, silk production really did begin at Constantinople at about that time. From there, over the following centuries, the craft spread into Europe - first to Italy, whose weaving towns grew rich on it, and later to France, where the city of Lyon became the centre of the European trade.",
-  "M|The nineteenth century brought the industry's great crisis. A disease of the silkworms swept through the rearing houses of Europe, killing the caterpillars in their millions, and European production never fully recovered. Then, in the twentieth century, came competition of an entirely new kind: chemists learned to make artificial fibres - above all nylon - which could imitate silk at a fraction of the price. Stockings, parachutes, linings: one by one, silk's markets were taken from it.",
-  "M|And yet silk did not disappear. It simply returned to being what it had been at the start - a luxury. Today the world's largest producer is, once again, China, which grows the great majority of the global supply. And the fibre has quietly found new work far from fashion. Because silk is strong, fine, and readily accepted by the human body, surgeons have long used silk stitches for closing wounds, and researchers are now testing silk structures for repairing nerves and even skin.",
+  "M|The cloth itself, of course, was for sale, and carrying it westwards created the most famous trade network in history: the Silk Road. Nobody at the time actually called it that: the name was invented only in the nineteenth century, by a German geographer. Not a single road at all, in reality, but a web of routes threading through high mountain passes and wide deserts. No merchant travelled the whole distance; goods moved in stages, passed from trader to trader, carried by caravans of camels. Silk flowed west, towards Persia and Rome. In Rome it became so fashionable that some senators complained the empire's gold was disappearing eastwards to pay for it. And coming east into China, in exchange, came glass, horses and, above all, silver. Nor was it only goods that moved. Ideas travelled the same paths - Buddhism entered China with the caravans, carried by merchants and travelling monks.",
+  "M|A secret so valuable could not last forever. The story goes that around the year five hundred and fifty, two monks who had spent years in the East arrived at Constantinople with a proposal for the emperor. They went back, and they smuggled out silkworm eggs - hiding them, tradition says, inside their hollow walking canes. Why eggs, and not the caterpillars themselves? Because caterpillars would never have survived a journey of many months, whereas the eggs could lie dormant until they reached the end of the road. However decorated the tale has become, silk production really did begin at Constantinople at about that time. From there, over the following centuries, the craft spread into Europe - first to Italy, whose weaving towns grew rich on it, and later to France, where the city of Lyon became the centre of the European trade.",
+  "M|The nineteenth century brought the industry's great crisis. A disease of the silkworms swept through the rearing houses of Europe, killing the caterpillars in their millions, and European production never fully recovered. The French scientist Louis Pasteur eventually identified the disease and showed farmers how to choose healthy eggs, but by then much of the trade had already moved back to Asia. Then, in the twentieth century, came competition of an entirely new kind: chemists learned to make artificial fibres - above all nylon - which could imitate silk at a fraction of the price. Stockings, parachutes, linings: one by one, silk's markets were taken from it.",
+  "M|And yet silk did not disappear. It simply returned to being what it had been at the start - a luxury. Today the world's largest producer is, once again, China, which grows the great majority of the global supply. India comes second, and it is unusual in producing every one of the main commercial kinds of silk. And the fibre has quietly found new work far from fashion. Because silk is strong, fine, and readily accepted by the human body, surgeons have long used silk stitches for closing wounds, and researchers are now testing silk structures for repairing nerves and even skin.",
   "M|A caterpillar's cocoon, an empress's teacup, and two monks with hollow canes - and behind them all, one of the longest commercial secrets ever kept. That is where we will stop today.",
   "M|That is the end of part four. You now have some time to check your answers."
 )

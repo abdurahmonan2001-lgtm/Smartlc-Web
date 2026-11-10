@@ -28,8 +28,8 @@
       "q": 18,
       "severity": "low",
       "problem": "Plan labelling: \"the small room tucked in right beside it, on its far side\" is H, to the right of the stairs, but D is also beside the stairs on the other side, and \"far side\" more naturally means behind the stairs. A careful student could hesitate between H and D.",
-      "fixed": false,
-      "change": "Redraw the plan so H sits on the side of the stairs away from the entrance (behind them), or move D away from the stairs."
+      "fixed": true,
+      "change": "Plan redrawn: H now sits directly behind the stairs, D is set apart by a corridor."
     },
     {
       "q": 26,

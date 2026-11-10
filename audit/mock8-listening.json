@@ -14,15 +14,15 @@
       "q": 1,
       "severity": "low",
       "problem": "Part 1 script is 533 words, under the usual 600+ for a real Part 1, so it runs short on the recording.",
-      "fixed": false,
-      "change": "Suggest adding one more exchange (e.g. about parking or check-in time) next time the audio is re-recorded; no change to the current script."
+      "fixed": true,
+      "change": "Part 1 extended to real length with natural exchanges and distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 31,
       "severity": "medium",
       "problem": "Part 4 (653 words) is short and its notes copy the lecture almost word for word (e.g. 'high mountains and wide ___' / 'high mountain passes and wide deserts', 'state ___' / 'state secret'). There is almost no paraphrase or distractor, which makes Part 4 easier than in the real test.",
-      "fixed": false,
-      "change": "Reword the notes lines (not the script) further from the lecture, e.g. Q33 'the method was guarded as an official ___', Q35 'routes crossed mountain ranges and arid ___', Q38 'concealed in hollowed-out walking ___'."
+      "fixed": true,
+      "change": "Notes reworded away from the lecture (earlier fix); Part 4 extended to about 785 words with distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 2,

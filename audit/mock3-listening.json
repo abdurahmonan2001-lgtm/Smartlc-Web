@@ -27,15 +27,15 @@
       "q": 31,
       "severity": "medium",
       "problem": "Part 4 is 618 words, has no distractors, and the notes repeat the script (Q31 \"shaped it into sharp {{31}}\", Q35 \"first to fit glass into {{35}}\", Q37 \"most famous products\", Q38 \"poured onto a bath of liquid {{38}}\", Q39 \"flashes of {{39}}\").",
-      "fixed": false,
-      "change": "Reword the notes now (no re-recording needed), e.g. Q35 \"Romans pioneered glass in {{35}}\", Q38 \"float process uses a bath of molten {{38}}\". At the next recording, add 200-250 words with a distractor or two (e.g. \"people assume Venice invented glassblowing, but ...\")."
+      "fixed": true,
+      "change": "Part 4 extended to about 800 words with distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 1,
       "severity": "low",
       "problem": "Part 1 script is 530 words, at the short end for a full Part 1.",
-      "fixed": false,
-      "change": "Fine as is; if re-recorded, add one more exchange (e.g. a parking question) to reach about 600 words."
+      "fixed": true,
+      "change": "Part 1 extended to real length with natural exchanges and distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     }
   ],
   "paraphrasePairs": {

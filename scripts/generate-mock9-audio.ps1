@@ -29,8 +29,8 @@ function Render($file, $lines) {
 }
 
 $s1 = @(
-    "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
-    "P|3",
+  "M|You will hear a number of different recordings and you will have to answer questions on what you hear. There will be time for you to read the instructions and answer the questions. All the recordings will be played once only. The test is in four parts. Now turn to part one.",
+  "P|3",
   "M|Part one. You will hear a woman phoning a furniture store to arrange the delivery of her order. First, you have some time to look at questions one to five.",
   "P|20",
   "M|Now listen carefully and answer questions one to five.",
@@ -50,6 +50,8 @@ $s1 = @(
   "F|That's it - C, H, E, R, R, Y. And it's very easy to find, because it's directly opposite the primary school.",
   "M|Opposite the primary school. Noted. And which floor is flat nine on?",
   "F|The fourth. But please don't worry about that - there's a lift in the building, so your men won't have to carry anything up the stairs.",
+  "M|And will the sofa fit in the lift? It's quite a large one.",
+  "F|I measured it, actually. The lift is just big enough, as long as they stand the sofa on its end.",
   "M|That is always good to hear. Thank you.",
   "M|Before you hear the rest of the conversation, you have some time to look at questions six to ten.",
   "P|20",
@@ -64,11 +66,15 @@ $s1 = @(
   "M|Ten till midday. And I should mention the delivery charge. Delivery is free for any order over two million som.",
   "F|Oh - is mine over that?",
   "M|Just under, I'm afraid, so there is a small charge. Normally it would be a hundred thousand som, but as your street is close to our warehouse it comes down to eighty thousand. You pay the driver on the day, in cash.",
+  "F|Could I pay by card instead?",
+  "M|The drivers only carry cash, I'm afraid. If you'd rather use a card, you can pay online before the day.",
   "F|Eighty thousand, to the driver. That's fine. And one more thing - can you take the old sofa away?",
   "M|We can, and this month it's free of charge. In the past we simply took old furniture to the tip, but everything we collect now is recycled - the frame, the foam, the fabric, all of it.",
   "F|Recycled - even better. And how will I know when they're coming?",
   "M|The driver leaves the warehouse at about half past eight, and he'll send you a text - not a phone call, a text - roughly twenty minutes before he arrives.",
-  "F|A text. Perfect. Thank you very much for your help.",
+  "F|A text. Perfect. And will they put the coffee table together? I think it comes flat in a box.",
+  "M|It does, but the drivers assemble it for you - it only takes about ten minutes - and they take all the packaging away with them.",
+  "F|Wonderful. Thank you very much for your help.",
   "M|My pleasure. See you on Tuesday.",
   "M|That is the end of part one. You now have half a minute to check your answers.",
   "P|5"

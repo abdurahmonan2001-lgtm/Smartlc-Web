@@ -14,8 +14,8 @@
       "q": 5,
       "severity": "medium",
       "problem": "Q5 'Bustan' (street name) is never spelled out in the script. In a real Part 1 an unfamiliar name is always spelled; students cannot be sure of 'Bustan' vs 'Bostan'.",
-      "fixed": false,
-      "change": "Script cannot change (audio recorded). Suggest either accepting 'Bostan' as an alternative spelling, or, at the next re-recording, adding 'That's B-U-S-T-A-N'."
+      "fixed": true,
+      "change": "The caller now spells B-U-S-T-A-N; Bostan stays accepted. Re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 29,
@@ -28,15 +28,15 @@
       "q": 31,
       "severity": "low",
       "problem": "Part 4 is about 630 words and its notes repeat the lecture closely (e.g. 'punished by ___', 'sits on a ___ filled with wool'), so it is slightly easier than a real Part 4.",
-      "fixed": false,
-      "change": "Reword some notes lines further from the script, e.g. Q37 'smuggling a merino abroad carried the ___ penalty', Q40 'wool packed into walls to provide ___'."
+      "fixed": true,
+      "change": "Part 4 extended to about 800 words with distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     },
     {
       "q": 1,
       "severity": "low",
       "problem": "Part 1 script is about 510 words, shorter than a typical real Part 1.",
-      "fixed": false,
-      "change": "Optional extra exchange at the next re-recording."
+      "fixed": true,
+      "change": "Part 1 extended to real length with natural exchanges and distractors (answers unchanged) and re-recorded with ElevenLabs, 2026-11-10."
     }
   ],
   "paraphrasePairs": {
