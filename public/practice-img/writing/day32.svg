@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 210" font-family="Arial, sans-serif">
+  <rect width="590" height="210" fill="#ffffff"/>
+<text x="295" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">Water use for different purposes (%)</text>
+  <rect x="20" y="44" width="160" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="100" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Country</text>
+  <rect x="180" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="245" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Domestic use</text>
+  <rect x="310" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="375" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Industry</text>
+  <rect x="440" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="505" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Agriculture</text>
+  <rect x="20" y="74" width="160" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="93" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Egypt</text>
+  <rect x="180" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="245" y="93" text-anchor="middle" font-size="12" fill="#000">8%</text>
+  <rect x="310" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="375" y="93" text-anchor="middle" font-size="12" fill="#000">10%</text>
+  <rect x="440" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="505" y="93" text-anchor="middle" font-size="12" fill="#000">82%</text>
+  <rect x="20" y="104" width="160" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Saudi Arabia</text>
+  <rect x="180" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="245" y="123" text-anchor="middle" font-size="12" fill="#000">6%</text>
+  <rect x="310" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="375" y="123" text-anchor="middle" font-size="12" fill="#000">30%</text>
+  <rect x="440" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="505" y="123" text-anchor="middle" font-size="12" fill="#000">64%</text>
+  <rect x="20" y="134" width="160" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="153" text-anchor="start" font-size="12" fill="#000" font-weight="bold">New Zealand</text>
+  <rect x="180" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="245" y="153" text-anchor="middle" font-size="12" fill="#000">10%</text>
+  <rect x="310" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="375" y="153" text-anchor="middle" font-size="12" fill="#000">46%</text>
+  <rect x="440" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="505" y="153" text-anchor="middle" font-size="12" fill="#000">44%</text>
+  <rect x="20" y="164" width="160" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="183" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Canada</text>
+  <rect x="180" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="245" y="183" text-anchor="middle" font-size="12" fill="#000">20%</text>
+  <rect x="310" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="375" y="183" text-anchor="middle" font-size="12" fill="#000">70%</text>
+  <rect x="440" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="505" y="183" text-anchor="middle" font-size="12" fill="#000">10%</text>
+</svg>

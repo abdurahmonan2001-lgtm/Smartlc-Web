@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" font-family="Arial, sans-serif">
+  <rect width="680" height="410" fill="#ffffff"/>
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Percentage of total water use in Sydney</text>
+<text x="175" y="65" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">1997</text>
+  <path d="M175,190 L175,95 A95,95 0 0 1 204.4,99.6 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="192.1" y="86.3" text-anchor="middle" font-size="11" fill="#000">5%</text>
+  <path d="M175,190 L204.4,99.6 A95,95 0 0 1 269.8,184 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="261.1" y="127.2" text-anchor="start" font-size="11" fill="#000">19%</text>
+  <path d="M175,190 L269.8,184 A95,95 0 0 1 235.6,263.2 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="275" y="237.3" text-anchor="start" font-size="11" fill="#000">15%</text>
+  <path d="M175,190 L235.6,263.2 A95,95 0 0 1 105.7,125 Z" fill="#d8b26e" stroke="#fff" stroke-width="1.5"/>
+  <text x="95.5" y="268.6" text-anchor="end" font-size="11" fill="#000">48%</text>
+  <path d="M175,190 L105.7,125 A95,95 0 0 1 175,95 Z" fill="#8e44ad" stroke="#fff" stroke-width="1.5"/>
+  <text x="131.7" y="94" text-anchor="end" font-size="11" fill="#000">13%</text>
+<text x="505" y="65" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">2007</text>
+  <path d="M505,190 L505,95 A95,95 0 0 1 516.9,95.7 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="511.8" y="85.2" text-anchor="middle" font-size="11" fill="#000">2%</text>
+  <path d="M505,190 L516.9,95.7 A95,95 0 0 1 599.3,178.1 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="582.1" y="116.9" text-anchor="start" font-size="11" fill="#000">21%</text>
+  <path d="M505,190 L599.3,178.1 A95,95 0 0 1 585.2,240.9 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="611.4" y="217.8" text-anchor="start" font-size="11" fill="#000">11%</text>
+  <path d="M505,190 L585.2,240.9 A95,95 0 0 1 410,190 Z" fill="#d8b26e" stroke="#fff" stroke-width="1.5"/>
+  <text x="474.6" y="304.7" text-anchor="end" font-size="11" fill="#000">41%</text>
+  <path d="M505,190 L410,190 A95,95 0 0 1 505,95 Z" fill="#8e44ad" stroke="#fff" stroke-width="1.5"/>
+  <text x="427.9" y="116.9" text-anchor="end" font-size="11" fill="#000">25%</text>
+  <g>
+    <rect x="40" y="340" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="62" y="350" font-size="12">Building industry</text>
+    <rect x="40" y="360" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="62" y="370" font-size="12">Household use</text>
+    <rect x="40" y="380" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="62" y="390" font-size="12">Manufacturing</text>
+    <rect x="340" y="340" width="14" height="12" fill="#d8b26e" stroke="#333" stroke-width="0.6"/><text x="362" y="350" font-size="12">Food industry</text>
+    <rect x="340" y="360" width="14" height="12" fill="#8e44ad" stroke="#333" stroke-width="0.6"/><text x="362" y="370" font-size="12">Service industry</text>
+  </g>
+</svg>

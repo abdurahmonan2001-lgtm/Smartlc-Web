@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 478" font-family="Arial, sans-serif">
+  <rect width="680" height="478" fill="#ffffff"/>
+  <g transform="translate(0,0)">
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Tourists by region of origin (%)</text>
+  <path d="M260,150 L260,55 A95,95 0 0 1 315.8,73.1 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="293.7" y="50.3" text-anchor="start" font-size="11" fill="#000">10%</text>
+  <path d="M260,150 L315.8,73.1 A95,95 0 0 1 277.8,243.3 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="366.4" y="177.8" text-anchor="start" font-size="11" fill="#000">37%</text>
+  <path d="M260,150 L277.8,243.3 A95,95 0 0 1 174,109.6 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="173.9" y="220.8" text-anchor="end" font-size="11" fill="#000">35%</text>
+  <path d="M260,150 L174,109.6 A95,95 0 0 1 260,55 Z" fill="#d8b26e" stroke="#fff" stroke-width="1.5"/>
+  <text x="201.6" y="62" text-anchor="end" font-size="11" fill="#000">18%</text>
+    <rect x="400" y="90" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="422" y="100" font-size="12">Asia</text>
+    <rect x="400" y="114" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="422" y="124" font-size="12">Europe</text>
+    <rect x="400" y="138" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="422" y="148" font-size="12">US</text>
+    <rect x="400" y="162" width="14" height="12" fill="#d8b26e" stroke="#333" stroke-width="0.6"/><text x="422" y="172" font-size="12">Other</text>
+  </g>
+  <g transform="translate(0,270)">
+  <g transform="translate(15,0)">
+  <rect x="20" y="16" width="130" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="85" y="42" text-anchor="middle" font-size="12" fill="#000" font-weight="bold"></text>
+  <rect x="150" y="16" width="110" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="35" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Asian</text><text x="205" y="49" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">tourists</text>
+  <rect x="260" y="16" width="130" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="325" y="35" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">European</text><text x="325" y="49" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">tourists</text>
+  <rect x="390" y="16" width="110" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="445" y="35" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">American</text><text x="445" y="49" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">tourists</text>
+  <rect x="500" y="16" width="130" height="44" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="565" y="35" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Tourists from</text><text x="565" y="49" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">other regions</text>
+  <rect x="20" y="60" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="79" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Average length</text><text x="30" y="93" text-anchor="start" font-size="12" fill="#000" font-weight="bold">of stay</text>
+  <rect x="150" y="60" width="110" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="86" text-anchor="middle" font-size="12" fill="#000">7 days</text>
+  <rect x="260" y="60" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="325" y="86" text-anchor="middle" font-size="12" fill="#000">16 days</text>
+  <rect x="390" y="60" width="110" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="445" y="86" text-anchor="middle" font-size="12" fill="#000">14 days</text>
+  <rect x="500" y="60" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="565" y="86" text-anchor="middle" font-size="12" fill="#000">10 days</text>
+  <rect x="20" y="104" width="130" height="44" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Most popular</text><text x="30" y="137" text-anchor="start" font-size="12" fill="#000" font-weight="bold">accommodation</text>
+  <rect x="150" y="104" width="110" height="44" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="130" text-anchor="middle" font-size="12" fill="#000">5-star hotel</text>
+  <rect x="260" y="104" width="130" height="44" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="325" y="123" text-anchor="middle" font-size="12" fill="#000">Camping or</text><text x="325" y="137" text-anchor="middle" font-size="12" fill="#000">caravan</text>
+  <rect x="390" y="104" width="110" height="44" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="445" y="130" text-anchor="middle" font-size="12" fill="#000">4-star hotel</text>
+  <rect x="500" y="104" width="130" height="44" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="565" y="123" text-anchor="middle" font-size="12" fill="#000">Camping or</text><text x="565" y="137" text-anchor="middle" font-size="12" fill="#000">caravan</text>
+  <rect x="20" y="148" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="174" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Main activity</text>
+  <rect x="150" y="148" width="110" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="174" text-anchor="middle" font-size="12" fill="#000">Sightseeing</text>
+  <rect x="260" y="148" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="325" y="167" text-anchor="middle" font-size="12" fill="#000">Swimming/</text><text x="325" y="181" text-anchor="middle" font-size="12" fill="#000">sunbathing</text>
+  <rect x="390" y="148" width="110" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="445" y="174" text-anchor="middle" font-size="12" fill="#000">Sightseeing</text>
+  <rect x="500" y="148" width="130" height="44" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="565" y="174" text-anchor="middle" font-size="12" fill="#000">Surfing</text>
+  </g>
+  </g>
+</svg>

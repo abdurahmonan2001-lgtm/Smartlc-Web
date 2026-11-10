@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 286" font-family="Arial, sans-serif">
+  <rect width="680" height="286" fill="#ffffff"/>
+  <g>
+<text x="165" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">From universities in Europe</text><text x="165" y="40" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">to Australia</text>
+  <rect x="20" y="60" width="150" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="95" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Country</text>
+  <rect x="170" y="60" width="70" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2007</text>
+  <rect x="240" y="60" width="70" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2009</text>
+  <rect x="20" y="90" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="109" text-anchor="start" font-size="12" fill="#000" font-weight="bold">France</text>
+  <rect x="170" y="90" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="109" text-anchor="middle" font-size="12" fill="#000">61</text>
+  <rect x="240" y="90" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="109" text-anchor="middle" font-size="12" fill="#000">60</text>
+  <rect x="20" y="120" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="139" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Sweden</text>
+  <rect x="170" y="120" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="139" text-anchor="middle" font-size="12" fill="#000">32</text>
+  <rect x="240" y="120" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="139" text-anchor="middle" font-size="12" fill="#000">42</text>
+  <rect x="20" y="150" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="169" text-anchor="start" font-size="12" fill="#000" font-weight="bold">United Kingdom</text>
+  <rect x="170" y="150" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="169" text-anchor="middle" font-size="12" fill="#000">31</text>
+  <rect x="240" y="150" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="169" text-anchor="middle" font-size="12" fill="#000">25</text>
+  <rect x="20" y="180" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="199" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Germany</text>
+  <rect x="170" y="180" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="199" text-anchor="middle" font-size="12" fill="#000">27</text>
+  <rect x="240" y="180" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="199" text-anchor="middle" font-size="12" fill="#000">63</text>
+  <rect x="20" y="210" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="229" text-anchor="start" font-size="12" fill="#000" font-weight="bold">The Netherlands</text>
+  <rect x="170" y="210" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="229" text-anchor="middle" font-size="12" fill="#000">36</text>
+  <rect x="240" y="210" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="229" text-anchor="middle" font-size="12" fill="#000">26</text>
+  <rect x="20" y="240" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="259" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Total</text>
+  <rect x="170" y="240" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="259" text-anchor="middle" font-size="12" fill="#000">186</text>
+  <rect x="240" y="240" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="259" text-anchor="middle" font-size="12" fill="#000">226</text>
+  </g>
+  <g transform="translate(350,0)">
+<text x="165" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">From universities in Australia</text><text x="165" y="40" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">to Europe</text>
+  <rect x="20" y="60" width="150" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="95" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Country</text>
+  <rect x="170" y="60" width="70" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2007</text>
+  <rect x="240" y="60" width="70" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="79" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2009</text>
+  <rect x="20" y="90" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="109" text-anchor="start" font-size="12" fill="#000" font-weight="bold">France</text>
+  <rect x="170" y="90" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="109" text-anchor="middle" font-size="12" fill="#000">37</text>
+  <rect x="240" y="90" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="109" text-anchor="middle" font-size="12" fill="#000">58</text>
+  <rect x="20" y="120" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="139" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Sweden</text>
+  <rect x="170" y="120" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="139" text-anchor="middle" font-size="12" fill="#000">33</text>
+  <rect x="240" y="120" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="139" text-anchor="middle" font-size="12" fill="#000">27</text>
+  <rect x="20" y="150" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="169" text-anchor="start" font-size="12" fill="#000" font-weight="bold">United Kingdom</text>
+  <rect x="170" y="150" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="169" text-anchor="middle" font-size="12" fill="#000">32</text>
+  <rect x="240" y="150" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="169" text-anchor="middle" font-size="12" fill="#000">23</text>
+  <rect x="20" y="180" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="199" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Germany</text>
+  <rect x="170" y="180" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="199" text-anchor="middle" font-size="12" fill="#000">18</text>
+  <rect x="240" y="180" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="199" text-anchor="middle" font-size="12" fill="#000">26</text>
+  <rect x="20" y="210" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="229" text-anchor="start" font-size="12" fill="#000" font-weight="bold">The Netherlands</text>
+  <rect x="170" y="210" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="229" text-anchor="middle" font-size="12" fill="#000">32</text>
+  <rect x="240" y="210" width="70" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="229" text-anchor="middle" font-size="12" fill="#000">18</text>
+  <rect x="20" y="240" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="259" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Total</text>
+  <rect x="170" y="240" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="205" y="259" text-anchor="middle" font-size="12" fill="#000">152</text>
+  <rect x="240" y="240" width="70" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="275" y="259" text-anchor="middle" font-size="12" fill="#000">152</text>
+  </g>
+</svg>

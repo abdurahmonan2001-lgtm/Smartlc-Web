@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Arial, sans-serif">
+  <rect width="700" height="420" fill="#ffffff"/>
+  <text x="350" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Reasons people gave for not going to work (%)</text>
+  <g font-size="11" fill="#555">
+    <text x="72" y="355" text-anchor="end">0</text>
+    <line x1="80" y1="321.3" x2="670" y2="321.3" stroke="#eee"/><text x="72" y="325.3" text-anchor="end">5</text>
+    <line x1="80" y1="291.7" x2="670" y2="291.7" stroke="#eee"/><text x="72" y="295.7" text-anchor="end">10</text>
+    <line x1="80" y1="262" x2="670" y2="262" stroke="#eee"/><text x="72" y="266" text-anchor="end">15</text>
+    <line x1="80" y1="232.3" x2="670" y2="232.3" stroke="#eee"/><text x="72" y="236.3" text-anchor="end">20</text>
+    <line x1="80" y1="202.7" x2="670" y2="202.7" stroke="#eee"/><text x="72" y="206.7" text-anchor="end">25</text>
+    <line x1="80" y1="173" x2="670" y2="173" stroke="#eee"/><text x="72" y="177" text-anchor="end">30</text>
+    <line x1="80" y1="143.3" x2="670" y2="143.3" stroke="#eee"/><text x="72" y="147.3" text-anchor="end">35</text>
+    <line x1="80" y1="113.7" x2="670" y2="113.7" stroke="#eee"/><text x="72" y="117.7" text-anchor="end">40</text>
+    <line x1="80" y1="84" x2="670" y2="84" stroke="#eee"/><text x="72" y="88" text-anchor="end">45</text>
+  </g>
+  <line x1="80" y1="351" x2="670" y2="351" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="351" x2="80" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g fill="#000">
+    <rect x="88" y="89.9" width="34" height="261.1" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="122" y="113.7" width="34" height="237.3" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="156" y="143.3" width="34" height="207.7" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="139" y="367" text-anchor="middle" font-size="11" fill="#000">Illness</text>
+    <rect x="206" y="315.4" width="34" height="35.6" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="240" y="326.1" width="34" height="24.9" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="274" y="276.8" width="34" height="74.2" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="257" y="367" text-anchor="middle" font-size="11" fill="#000">Stress</text>
+    <rect x="324" y="269.7" width="34" height="81.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="358" y="232.3" width="34" height="118.7" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="392" y="214.5" width="34" height="136.5" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="375" y="367" text-anchor="middle" font-size="11" fill="#000">Personal needs</text><text x="375" y="380" text-anchor="middle" font-size="11" fill="#000">(appointments,</text><text x="375" y="393" text-anchor="middle" font-size="11" fill="#000">etc.)</text>
+    <rect x="442" y="190.8" width="34" height="160.2" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="476" y="198.5" width="34" height="152.5" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="510" y="198.5" width="34" height="152.5" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="493" y="367" text-anchor="middle" font-size="11" fill="#000">Family</text><text x="493" y="380" text-anchor="middle" font-size="11" fill="#000">responsibilities</text>
+    <rect x="560" y="301.8" width="34" height="49.2" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="594" y="267.9" width="34" height="83.1" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="628" y="273.9" width="34" height="77.1" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="611" y="367" text-anchor="middle" font-size="11" fill="#000">Unexpected problems</text><text x="611" y="380" text-anchor="middle" font-size="11" fill="#000">(transport,</text><text x="611" y="393" text-anchor="middle" font-size="11" fill="#000">weather, etc.)</text>
+  </g>
+  <text x="24" y="217.5" font-size="11" fill="#555" transform="rotate(-90 24 217.5)" text-anchor="middle">Percentage</text>
+  <g>
+    <rect x="248.6" y="40" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="273.6" y="50" font-size="12" fill="#000">2000</text>
+    <rect x="320.2" y="40" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="345.2" y="50" font-size="12" fill="#000">2005</text>
+    <rect x="391.8" y="40" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="416.8" y="50" font-size="12" fill="#000">2010</text>
+  </g>
+</svg>

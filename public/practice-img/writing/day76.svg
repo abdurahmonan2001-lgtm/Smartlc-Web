@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 270" font-family="Arial, sans-serif">
+  <rect width="610" height="270" fill="#ffffff"/>
+<text x="305" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">Opinions of club members and the general public on the new theatre, 2012</text>
+  <rect x="20" y="44" width="240" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="140" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold"></text>
+  <rect x="260" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Excellent</text>
+  <rect x="370" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Satisfied</text>
+  <rect x="480" y="44" width="110" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Poor</text>
+  <rect x="20" y="74" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="93" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Facilities: club members</text>
+  <rect x="260" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="93" text-anchor="middle" font-size="12" fill="#000">72%</text>
+  <rect x="370" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="93" text-anchor="middle" font-size="12" fill="#000">26%</text>
+  <rect x="480" y="74" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="93" text-anchor="middle" font-size="12" fill="#000">2%</text>
+  <rect x="20" y="104" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Facilities: general public</text>
+  <rect x="260" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="123" text-anchor="middle" font-size="12" fill="#000">64%</text>
+  <rect x="370" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="123" text-anchor="middle" font-size="12" fill="#000">24%</text>
+  <rect x="480" y="104" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="123" text-anchor="middle" font-size="12" fill="#000">8%</text>
+  <rect x="20" y="134" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="153" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Information: club members</text>
+  <rect x="260" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="153" text-anchor="middle" font-size="12" fill="#000">54%</text>
+  <rect x="370" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="153" text-anchor="middle" font-size="12" fill="#000">30%</text>
+  <rect x="480" y="134" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="153" text-anchor="middle" font-size="12" fill="#000">16%</text>
+  <rect x="20" y="164" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="183" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Information: general public</text>
+  <rect x="260" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="183" text-anchor="middle" font-size="12" fill="#000">66%</text>
+  <rect x="370" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="183" text-anchor="middle" font-size="12" fill="#000">20%</text>
+  <rect x="480" y="164" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="183" text-anchor="middle" font-size="12" fill="#000">14%</text>
+  <rect x="20" y="194" width="240" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="213" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Quality: club members</text>
+  <rect x="260" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="213" text-anchor="middle" font-size="12" fill="#000">88%</text>
+  <rect x="370" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="213" text-anchor="middle" font-size="12" fill="#000">10%</text>
+  <rect x="480" y="194" width="110" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="213" text-anchor="middle" font-size="12" fill="#000">2%</text>
+  <rect x="20" y="224" width="240" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="243" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Quality: general public</text>
+  <rect x="260" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="315" y="243" text-anchor="middle" font-size="12" fill="#000">53%</text>
+  <rect x="370" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="425" y="243" text-anchor="middle" font-size="12" fill="#000">40%</text>
+  <rect x="480" y="224" width="110" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="535" y="243" text-anchor="middle" font-size="12" fill="#000">7%</text>
+</svg>

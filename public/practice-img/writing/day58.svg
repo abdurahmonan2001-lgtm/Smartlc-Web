@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="Arial, sans-serif">
+  <rect width="680" height="420" fill="#ffffff"/>
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Percentage of the day spent on different activities</text>
+<text x="175" y="75" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">1958</text>
+  <path d="M175,200 L175,105 A95,95 0 0 1 261,240.4 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="267" y="145.6" text-anchor="start" font-size="11" fill="#000">32%</text>
+  <path d="M175,200 L261,240.4 A95,95 0 0 1 255.2,250.9 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="270.5" y="256.5" text-anchor="start" font-size="11" fill="#000">2%</text>
+  <path d="M175,200 L255.2,250.9 A95,95 0 0 1 91.8,245.8 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="171.6" y="318.9" text-anchor="middle" font-size="11" fill="#000">33%</text>
+  <path d="M175,200 L91.8,245.8 A95,95 0 0 1 80,200 Z" fill="#d8b26e" stroke="#fff" stroke-width="1.5"/>
+  <text x="69.4" y="231.1" text-anchor="end" font-size="11" fill="#000">8%</text>
+  <path d="M175,200 L80,200 A95,95 0 0 1 140,111.7 Z" fill="#8e44ad" stroke="#fff" stroke-width="1.5"/>
+  <text x="84.8" y="142.7" text-anchor="end" font-size="11" fill="#000">19%</text>
+  <path d="M175,200 L140,111.7 A95,95 0 0 1 175,105 Z" fill="#9aa5b1" stroke="#fff" stroke-width="1.5"/>
+  <text x="154.6" y="96.9" text-anchor="middle" font-size="11" fill="#000">6%</text>
+<text x="505" y="75" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">2008</text>
+  <path d="M505,200 L505,105 A95,95 0 0 1 600,200 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="582.1" y="126.9" text-anchor="start" font-size="11" fill="#000">25%</text>
+  <path d="M505,200 L600,200 A95,95 0 0 1 588.2,245.8 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="610.6" y="231.1" text-anchor="start" font-size="11" fill="#000">8%</text>
+  <path d="M505,200 L588.2,245.8 A95,95 0 0 1 410,200 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="477.9" y="315.6" text-anchor="end" font-size="11" fill="#000">42%</text>
+  <path d="M505,200 L410,200 A95,95 0 0 1 440,130.7 Z" fill="#d8b26e" stroke="#fff" stroke-width="1.5"/>
+  <text x="405" y="160.7" text-anchor="end" font-size="11" fill="#000">13%</text>
+  <path d="M505,200 L440,130.7 A95,95 0 0 1 470,111.7 Z" fill="#8e44ad" stroke="#fff" stroke-width="1.5"/>
+  <text x="446.6" y="112" text-anchor="end" font-size="11" fill="#000">6%</text>
+  <path d="M505,200 L470,111.7 A95,95 0 0 1 505,105 Z" fill="#9aa5b1" stroke="#fff" stroke-width="1.5"/>
+  <text x="484.6" y="96.9" text-anchor="middle" font-size="11" fill="#000">6%</text>
+  <g>
+    <rect x="40" y="348" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="62" y="358" font-size="12">Sleeping</text>
+    <rect x="40" y="368" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="62" y="378" font-size="12">Travelling to work</text>
+    <rect x="40" y="388" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="62" y="398" font-size="12">Working</text>
+    <rect x="340" y="348" width="14" height="12" fill="#d8b26e" stroke="#333" stroke-width="0.6"/><text x="362" y="358" font-size="12">Relaxing at home</text>
+    <rect x="340" y="368" width="14" height="12" fill="#8e44ad" stroke="#333" stroke-width="0.6"/><text x="362" y="378" font-size="12">Going out (with friends/family)</text>
+    <rect x="340" y="388" width="14" height="12" fill="#9aa5b1" stroke="#333" stroke-width="0.6"/><text x="362" y="398" font-size="12">Other (e.g. hobbies/playing sport)</text>
+  </g>
+</svg>

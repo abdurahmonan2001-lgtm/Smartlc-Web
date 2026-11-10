@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Arial, sans-serif">
+  <rect width="700" height="420" fill="#ffffff"/>
+  <text x="350" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Production levels of the main fuels in the UK, 1981–2000</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="336" x2="660" y2="336" stroke="#eee"/><text x="68" y="340" text-anchor="end">20</text>
+    <line x1="76" y1="300" x2="660" y2="300" stroke="#eee"/><text x="68" y="304" text-anchor="end">40</text>
+    <line x1="76" y1="264" x2="660" y2="264" stroke="#eee"/><text x="68" y="268" text-anchor="end">60</text>
+    <line x1="76" y1="228" x2="660" y2="228" stroke="#eee"/><text x="68" y="232" text-anchor="end">80</text>
+    <line x1="76" y1="192" x2="660" y2="192" stroke="#eee"/><text x="68" y="196" text-anchor="end">100</text>
+    <line x1="76" y1="156" x2="660" y2="156" stroke="#eee"/><text x="68" y="160" text-anchor="end">120</text>
+    <line x1="76" y1="120" x2="660" y2="120" stroke="#eee"/><text x="68" y="124" text-anchor="end">140</text>
+    <line x1="76" y1="84" x2="660" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">160</text>
+  </g>
+  <line x1="76" y1="372" x2="660" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">1981</text><text x="106.7" y="390" text-anchor="middle" font-size="11" fill="#555">1982</text><text x="137.5" y="390" text-anchor="middle" font-size="11" fill="#555">1983</text><text x="168.2" y="390" text-anchor="middle" font-size="11" fill="#555">1984</text><text x="198.9" y="390" text-anchor="middle" font-size="11" fill="#555">1985</text><text x="229.7" y="390" text-anchor="middle" font-size="11" fill="#555">1986</text><text x="260.4" y="390" text-anchor="middle" font-size="11" fill="#555">1987</text><text x="291.2" y="390" text-anchor="middle" font-size="11" fill="#555">1988</text><text x="321.9" y="390" text-anchor="middle" font-size="11" fill="#555">1989</text><text x="352.6" y="390" text-anchor="middle" font-size="11" fill="#555">1990</text><text x="383.4" y="390" text-anchor="middle" font-size="11" fill="#555">1991</text><text x="414.1" y="390" text-anchor="middle" font-size="11" fill="#555">1992</text><text x="444.8" y="390" text-anchor="middle" font-size="11" fill="#555">1993</text><text x="475.6" y="390" text-anchor="middle" font-size="11" fill="#555">1994</text><text x="506.3" y="390" text-anchor="middle" font-size="11" fill="#555">1995</text><text x="537.1" y="390" text-anchor="middle" font-size="11" fill="#555">1996</text><text x="567.8" y="390" text-anchor="middle" font-size="11" fill="#555">1997</text><text x="598.5" y="390" text-anchor="middle" font-size="11" fill="#555">1998</text><text x="629.3" y="390" text-anchor="middle" font-size="11" fill="#555">1999</text><text x="660" y="390" text-anchor="middle" font-size="11" fill="#555">2000</text>
+  </g>
+  <polyline points="76,210 106.7,184.8 137.5,159.6 168.2,127.2 198.9,123.6 229.7,121.8 260.4,123.6 291.2,147 321.9,174 352.6,192 383.4,192 414.1,183 444.8,159.6 475.6,132.6 506.3,125.4 537.1,120 567.8,114.6 598.5,120 629.3,102 660,111" fill="none" stroke="#1d3a6b" stroke-width="2.5"/>
+  <polyline points="76,228 106.7,231.6 137.5,237 168.2,312.6 198.9,287.4 229.7,264 260.4,264 291.2,264 321.9,264 352.6,273 383.4,273 414.1,289.2 444.8,292.8 475.6,307.2 506.3,300 537.1,305.4 567.8,305.4 598.5,307.2 629.3,309 660,307.2" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <polyline points="76,307.2 106.7,309 137.5,305.4 168.2,301.8 198.9,303.6 229.7,298.2 260.4,300 291.2,300 321.9,294.6 352.6,291 383.4,289.2 414.1,278.4 444.8,260.4 475.6,242.4 506.3,240.6 537.1,228 567.8,224.4 598.5,215.4 629.3,206.4 660,190.2" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/>
+  <g>
+    <line x1="204.2" y1="46" x2="230.2" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="235.2" y="50" font-size="12" fill="#000">Petroleum</text>
+    <line x1="307.8" y1="46" x2="333.8" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="338.8" y="50" font-size="12" fill="#000">Coal</text>
+    <line x1="379.4" y1="46" x2="405.4" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="410.4" y="50" font-size="12" fill="#000">Natural gas</text>
+  </g>
+</svg>

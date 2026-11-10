@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Fruit production in four countries (millions of tonnes)</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="330.9" x2="620" y2="330.9" stroke="#eee"/><text x="68" y="334.9" text-anchor="end">1</text>
+    <line x1="76" y1="289.7" x2="620" y2="289.7" stroke="#eee"/><text x="68" y="293.7" text-anchor="end">2</text>
+    <line x1="76" y1="248.6" x2="620" y2="248.6" stroke="#eee"/><text x="68" y="252.6" text-anchor="end">3</text>
+    <line x1="76" y1="207.4" x2="620" y2="207.4" stroke="#eee"/><text x="68" y="211.4" text-anchor="end">4</text>
+    <line x1="76" y1="166.3" x2="620" y2="166.3" stroke="#eee"/><text x="68" y="170.3" text-anchor="end">5</text>
+    <line x1="76" y1="125.1" x2="620" y2="125.1" stroke="#eee"/><text x="68" y="129.1" text-anchor="end">6</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">7</text>
+  </g>
+  <line x1="76" y1="372" x2="620" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">1970</text><text x="212" y="390" text-anchor="middle" font-size="11" fill="#555">1980</text><text x="348" y="390" text-anchor="middle" font-size="11" fill="#555">1990</text><text x="484" y="390" text-anchor="middle" font-size="11" fill="#555">2000</text><text x="620" y="390" text-anchor="middle" font-size="11" fill="#555">2010</text>
+  </g>
+  <text x="22" y="228" font-size="11" fill="#555" transform="rotate(-90 22 228)" text-anchor="middle">Millions of tonnes</text>
+  <polyline points="76,141.6 212,121 348,141.6 484,151.9 620,162.2" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="76" cy="141.6" r="3" fill="#1d3a6b"/><circle cx="212" cy="121" r="3" fill="#1d3a6b"/><circle cx="348" cy="141.6" r="3" fill="#1d3a6b"/><circle cx="484" cy="151.9" r="3" fill="#1d3a6b"/><circle cx="620" cy="162.2" r="3" fill="#1d3a6b"/>
+  <polyline points="76,291.8 212,269.1 348,258.9 484,238.3 620,225.9" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="76" cy="291.8" r="3" fill="#009472"/><circle cx="212" cy="269.1" r="3" fill="#009472"/><circle cx="348" cy="258.9" r="3" fill="#009472"/><circle cx="484" cy="238.3" r="3" fill="#009472"/><circle cx="620" cy="225.9" r="3" fill="#009472"/>
+  <polyline points="76,322.6 212,310.3 348,281.5 484,297.9 620,258.9" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="76" cy="322.6" r="3" fill="#c0392b"/><circle cx="212" cy="310.3" r="3" fill="#c0392b"/><circle cx="348" cy="281.5" r="3" fill="#c0392b"/><circle cx="484" cy="297.9" r="3" fill="#c0392b"/><circle cx="620" cy="258.9" r="3" fill="#c0392b"/>
+  <polyline points="76,269.1 212,289.7 348,310.3 484,310.3 620,318.5" fill="none" stroke="#8e44ad" stroke-width="2.5" stroke-dasharray="10 3 2 3"/><circle cx="76" cy="269.1" r="3" fill="#8e44ad"/><circle cx="212" cy="289.7" r="3" fill="#8e44ad"/><circle cx="348" cy="310.3" r="3" fill="#8e44ad"/><circle cx="484" cy="310.3" r="3" fill="#8e44ad"/><circle cx="620" cy="318.5" r="3" fill="#8e44ad"/>
+  <g>
+    <line x1="161.2" y1="46" x2="187.2" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="192.2" y="50" font-size="12" fill="#000">Spain</text>
+    <line x1="239.2" y1="46" x2="265.2" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="270.2" y="50" font-size="12" fill="#000">Turkey</text>
+    <line x1="323.6" y1="46" x2="349.6" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="354.6" y="50" font-size="12" fill="#000">France</text>
+    <line x1="408" y1="46" x2="434" y2="46" stroke="#8e44ad" stroke-width="2.5" stroke-dasharray="10 3 2 3"/><text x="439" y="50" font-size="12" fill="#000">Germany</text>
+  </g>
+</svg>

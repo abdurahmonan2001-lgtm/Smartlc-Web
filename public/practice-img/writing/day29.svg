@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 210" font-family="Arial, sans-serif">
+  <rect width="580" height="210" fill="#ffffff"/>
+<text x="290" y="24" text-anchor="middle" font-size="14" fill="#000" font-weight="bold">Annual milk production (litres)</text>
+  <rect x="20" y="44" width="150" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="95" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Country</text>
+  <rect x="170" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="235" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">1990</text>
+  <rect x="300" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="365" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2000</text>
+  <rect x="430" y="44" width="130" height="30" fill="#e8eef3" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="63" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">2010</text>
+  <rect x="20" y="74" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="93" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Netherlands</text>
+  <rect x="170" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="235" y="93" text-anchor="middle" font-size="12" fill="#000">11,262,000</text>
+  <rect x="300" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="365" y="93" text-anchor="middle" font-size="12" fill="#000">11,155,000</text>
+  <rect x="430" y="74" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="93" text-anchor="middle" font-size="12" fill="#000">11,466,000</text>
+  <rect x="20" y="104" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="123" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Australia</text>
+  <rect x="170" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="235" y="123" text-anchor="middle" font-size="12" fill="#000">11,246,000</text>
+  <rect x="300" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="365" y="123" text-anchor="middle" font-size="12" fill="#000">11,105,000</text>
+  <rect x="430" y="104" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="123" text-anchor="middle" font-size="12" fill="#000">9,165,000</text>
+  <rect x="20" y="134" width="150" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="153" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Tanzania</text>
+  <rect x="170" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="235" y="153" text-anchor="middle" font-size="12" fill="#000">87,000</text>
+  <rect x="300" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="365" y="153" text-anchor="middle" font-size="12" fill="#000">142,000</text>
+  <rect x="430" y="134" width="130" height="30" fill="#fff" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="153" text-anchor="middle" font-size="12" fill="#000">155,000</text>
+  <rect x="20" y="164" width="150" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="30" y="183" text-anchor="start" font-size="12" fill="#000" font-weight="bold">Guatemala</text>
+  <rect x="170" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="235" y="183" text-anchor="middle" font-size="12" fill="#000">26,000</text>
+  <rect x="300" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="365" y="183" text-anchor="middle" font-size="12" fill="#000">55,000</text>
+  <rect x="430" y="164" width="130" height="30" fill="#fafafa" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="183" text-anchor="middle" font-size="12" fill="#000">84,000</text>
+</svg>

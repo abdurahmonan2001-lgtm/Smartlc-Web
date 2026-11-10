@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Overseas visitors to three areas in a European country, 1987–2007</text>
+  <g font-size="11" fill="#555">
+    <text x="68" y="376" text-anchor="end">0</text>
+    <line x1="76" y1="336" x2="620" y2="336" stroke="#eee"/><text x="68" y="340" text-anchor="end">10</text>
+    <line x1="76" y1="300" x2="620" y2="300" stroke="#eee"/><text x="68" y="304" text-anchor="end">20</text>
+    <line x1="76" y1="264" x2="620" y2="264" stroke="#eee"/><text x="68" y="268" text-anchor="end">30</text>
+    <line x1="76" y1="228" x2="620" y2="228" stroke="#eee"/><text x="68" y="232" text-anchor="end">40</text>
+    <line x1="76" y1="192" x2="620" y2="192" stroke="#eee"/><text x="68" y="196" text-anchor="end">50</text>
+    <line x1="76" y1="156" x2="620" y2="156" stroke="#eee"/><text x="68" y="160" text-anchor="end">60</text>
+    <line x1="76" y1="120" x2="620" y2="120" stroke="#eee"/><text x="68" y="124" text-anchor="end">70</text>
+    <line x1="76" y1="84" x2="620" y2="84" stroke="#eee"/><text x="68" y="88" text-anchor="end">80</text>
+  </g>
+  <line x1="76" y1="372" x2="620" y2="372" stroke="#333" stroke-width="1.5"/>
+  <line x1="76" y1="372" x2="76" y2="72" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="76" y="390" text-anchor="middle" font-size="11" fill="#555">1987</text><text x="144" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="212" y="390" text-anchor="middle" font-size="11" fill="#555">1992</text><text x="280" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="348" y="390" text-anchor="middle" font-size="11" fill="#555">1997</text><text x="416" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="484" y="390" text-anchor="middle" font-size="11" fill="#555">2002</text><text x="552" y="390" text-anchor="middle" font-size="11" fill="#555"></text><text x="620" y="390" text-anchor="middle" font-size="11" fill="#555">2007</text>
+  </g>
+  <text x="22" y="228" font-size="11" fill="#555" transform="rotate(-90 22 228)" text-anchor="middle">Thousands of visitors</text>
+  <polyline points="76,228 144,237 212,246 280,208.2 348,197.4 416,156 484,145.2 552,136.2 620,102" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="76" cy="228" r="3" fill="#1d3a6b"/><circle cx="144" cy="237" r="3" fill="#1d3a6b"/><circle cx="212" cy="246" r="3" fill="#1d3a6b"/><circle cx="280" cy="208.2" r="3" fill="#1d3a6b"/><circle cx="348" cy="197.4" r="3" fill="#1d3a6b"/><circle cx="416" cy="156" r="3" fill="#1d3a6b"/><circle cx="484" cy="145.2" r="3" fill="#1d3a6b"/><circle cx="552" cy="136.2" r="3" fill="#1d3a6b"/><circle cx="620" cy="102" r="3" fill="#1d3a6b"/>
+  <polyline points="76,300 144,269.4 212,285.6 280,300 348,264 416,246 484,264 552,256.8 620,246" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="76" cy="300" r="3" fill="#009472"/><circle cx="144" cy="269.4" r="3" fill="#009472"/><circle cx="212" cy="285.6" r="3" fill="#009472"/><circle cx="280" cy="300" r="3" fill="#009472"/><circle cx="348" cy="264" r="3" fill="#009472"/><circle cx="416" cy="246" r="3" fill="#009472"/><circle cx="484" cy="264" r="3" fill="#009472"/><circle cx="552" cy="256.8" r="3" fill="#009472"/><circle cx="620" cy="246" r="3" fill="#009472"/>
+  <polyline points="76,336 144,300 212,282 280,246 348,228 416,192 484,102 552,152.4 620,193.8" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="76" cy="336" r="3" fill="#c0392b"/><circle cx="144" cy="300" r="3" fill="#c0392b"/><circle cx="212" cy="282" r="3" fill="#c0392b"/><circle cx="280" cy="246" r="3" fill="#c0392b"/><circle cx="348" cy="228" r="3" fill="#c0392b"/><circle cx="416" cy="192" r="3" fill="#c0392b"/><circle cx="484" cy="102" r="3" fill="#c0392b"/><circle cx="552" cy="152.4" r="3" fill="#c0392b"/><circle cx="620" cy="193.8" r="3" fill="#c0392b"/>
+  <g>
+    <line x1="161.8" y1="46" x2="187.8" y2="46" stroke="#1d3a6b" stroke-width="2.5"/><text x="192.8" y="50" font-size="12" fill="#000">The coast</text>
+    <line x1="265.4" y1="46" x2="291.4" y2="46" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="296.4" y="50" font-size="12" fill="#000">The mountains</text>
+    <line x1="394.6" y1="46" x2="420.6" y2="46" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="425.6" y="50" font-size="12" fill="#000">The lakes</text>
+  </g>
+</svg>
