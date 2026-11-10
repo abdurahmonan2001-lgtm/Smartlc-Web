@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" font-family="Arial, sans-serif">
+  <rect width="680" height="520" fill="#ffffff"/>
+<text x="170" y="18" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">Male workers, country A</text>
+  <path d="M170,120 L170,48 A72,72 0 0 1 228.2,77.7 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="209" y="47.4" text-anchor="start" font-size="11" fill="#000">15%</text>
+  <path d="M170,120 L228.2,77.7 A72,72 0 0 1 196.5,186.9 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="252.6" y="148" text-anchor="start" font-size="11" fill="#000">29%</text>
+  <path d="M170,120 L196.5,186.9 A72,72 0 1 1 170,48 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="85.5" y="140.1" text-anchor="end" font-size="11" fill="#000">56%</text>
+<text x="510" y="18" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">Female workers, country A</text>
+  <path d="M510,120 L510,48 A72,72 0 0 1 544.7,56.9 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="531.4" y="40.7" text-anchor="start" font-size="11" fill="#000">8%</text>
+  <path d="M510,120 L544.7,56.9 A72,72 0 0 1 505.5,191.9 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="592.6" y="148" text-anchor="start" font-size="11" fill="#000">43%</text>
+  <path d="M510,120 L505.5,191.9 A72,72 0 0 1 510,48 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="424" y="121.3" text-anchor="end" font-size="11" fill="#000">49%</text>
+<text x="170" y="253" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">Male workers, country B</text>
+  <path d="M170,355 L170,283 A72,72 0 0 1 235.1,385.7 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="242.6" y="312.9" text-anchor="start" font-size="11" fill="#000">32%</text>
+  <path d="M170,355 L235.1,385.7 A72,72 0 0 1 228.2,397.3 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="244" y="402.8" text-anchor="start" font-size="11" fill="#000">3%</text>
+  <path d="M170,355 L228.2,397.3 A72,72 0 1 1 170,283 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="93.4" y="398" text-anchor="end" font-size="11" fill="#000">65%</text>
+<text x="510" y="253" text-anchor="middle" font-size="13" fill="#000" font-weight="bold">Female workers, country B</text>
+  <path d="M510,355 L510,283 A72,72 0 0 1 555.9,299.5 Z" fill="#1d3a6b" stroke="#fff" stroke-width="1.5"/>
+  <text x="539.1" y="278.1" text-anchor="start" font-size="11" fill="#000">11%</text>
+  <path d="M510,355 L555.9,299.5 A72,72 0 0 1 559.3,302.5 Z" fill="#7fb8a6" stroke="#fff" stroke-width="1.5"/>
+  <text x="566.9" y="294.5" text-anchor="start" font-size="11" fill="#000">1%</text>
+  <path d="M510,355 L559.3,302.5 A72,72 0 1 1 510,283 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="478.3" y="445" text-anchor="end" font-size="11" fill="#000">88%</text>
+  <g>
+    <rect x="40" y="465" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="62" y="475" font-size="12">Industry</text>
+    <rect x="40" y="485" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="62" y="495" font-size="12">Agriculture</text>
+    <rect x="340" y="465" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="362" y="475" font-size="12">Services</text>
+  </g>
+</svg>

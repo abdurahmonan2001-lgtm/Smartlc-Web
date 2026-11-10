@@ -996,6 +996,236 @@ FIG[94] = () => {
   };
 };
 
+// ── Days that already showed their real chart, under another site's
+// watermark: redrawn the same way, so every day has a clean picture. ────
+
+// ── Day 13: class sizes in primary schools, four Australian states, 2010 ─
+// (The source key misspells "students" three times.)
+FIG[13] = () => {
+  const keys = ["20 students or fewer", "21–25 students", "26–30 students", "More than 30 students"];
+  const states = [["New South Wales", [26, 37, 33, 4]], ["South Australia", [36, 33, 28, 4]], ["Australian Capital Territory", [38, 51, 10, 1]], ["Western Australia", [26, 42, 27, 5]]];
+  const pos = [[170, 160], [510, 160], [170, 400], [510, 400]];
+  return {
+    svg: svg([title("Class sizes in primary schools in four Australian states, 2010", 340), ...states.map(([n, v], i) => keyedPie(pos[i][0], pos[i][1], 72, n, v)), pieKey(keys, 510)].join("\n"), 680, 560),
+    data: "Four pie charts, % of primary school classes by size, 2010 (20 or fewer / 21–25 / 26–30 / more than 30). " + states.map(([n, v]) => `${n}: ${v.join("% / ")}%`).join("; ") + ".",
+  };
+};
+
+// ── Day 23: salaries of five UK professions, and their working hours ────
+FIG[23] = () => {
+  const cats = ["Police", "Nurse", "Teacher", "Firefighter", "Underground\ndriver"];
+  const series = [{ label: "Salary when started", values: [23000, 15500, 32500, 40500, 49000] }, { label: "Salary after three years", values: [23500, 18500, 34500, 43000, 51500] }];
+  const head = ["Profession", "Average working\nhours per week"];
+  const rows = [["Police", 40], ["Nurse", 38], ["Teacher", 55], ["Firefighter", 55], ["Underground driver", 36]];
+  const t = table({ head, rows, colW: [180, 150] });
+  return {
+    svg: stack([{ body: barChart({ heading: "Salaries of five professions in the UK (£)", unit: "Salary (£)", cats, series, max: 60000, step: 10000, height: 330 }), height: 330 }, { body: `  <g transform="translate(${(660 - t.width) / 2},0)">\n${t.body}\n  </g>`, height: t.height }]),
+    data: "Bar chart, salaries in pounds (when started / after three years). " + catText(cats, series) + " Table, average working hours per week: " + rows.map(([p, h]) => `${p} ${h}`).join(", ") + ".",
+  };
+};
+
+// ── Day 25: UK spending on three categories by age group, 2004 (%) ──────
+FIG[25] = () => B({
+  heading: "Spending on three categories by age group, UK 2004 (% of total spending)", unit: "% of total spending", suffix: "%",
+  cats: ["Under 30", "31–45", "46–60", "61–75", "76+"],
+  series: [{ label: "Food and drink", values: [6, 13, 17, 20, 23] }, { label: "Restaurants and hotels", values: [14, 12, 12, 2, 7] }, { label: "Entertainment", values: [7, 8, 14, 23, 13] }],
+  max: 25, step: 5,
+});
+
+// ── Day 26: the design plan for a new town ──────────────────────────────
+FIG[26] = () => {
+  const H = (x, y, w = 40, h = 34) => box(x, y, w, h, "H", { size: 12 });
+  const hatch = (x, y, w, h, t) => `    <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#hatch)" stroke="#333"/>` + label(x + w / 2, y + h / 2 + 4, t, { size: 12, bold: true });
+  const rec = (x, y) => `    <rect x="${x}" y="${y}" width="14" height="18" fill="#7fb8a6" stroke="#333"/>`;
+  const body = [`  <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#aaa" stroke-width="2"/></pattern></defs>`,
+    title("Design plan for a new town", 260), `  <g fill="#000">`,
+    `    <rect x="30" y="40" width="460" height="460" fill="#fff" stroke="#333" stroke-width="1.4"/>`,
+    stroke("M30,40 L490,500", { dash: "6 4" }), stroke("M490,40 L30,500", { dash: "6 4" }),
+    `    <rect x="242" y="40" width="36" height="460" fill="#eee" stroke="#333"/>`, `    <rect x="30" y="252" width="460" height="36" fill="#eee" stroke="#333"/>`,
+    `    <ellipse cx="260" cy="270" rx="150" ry="170" fill="none" stroke="#333" stroke-dasharray="6 4"/><ellipse cx="260" cy="270" rx="120" ry="140" fill="none" stroke="#333" stroke-dasharray="6 4"/>`,
+    label(260, 116, "Ring road", { size: 10 }), label(260, 210, "R", { size: 11 }), label(200, 270, "R", { size: 11 }),
+    hatch(110, 50, 110, 50, "Industry"), hatch(300, 430, 120, 60, "Industry"),
+    H(50, 120), H(50, 190), H(160, 140), H(190, 200), H(300, 140), H(330, 200), H(410, 120, 45, 70), H(420, 200, 45, 60), H(300, 60), H(360, 55),
+    H(50, 310), H(60, 380), H(170, 305), H(310, 320), H(170, 430), H(220, 450, 30, 34),
+    label(225, 238, "B", { size: 12, bold: true }), label(300, 238, "P", { size: 12, bold: true }), label(300, 310, "B", { size: 12, bold: true }), label(222, 310, "P", { size: 12, bold: true }),
+    rec(340, 240), rec(250, 320), rec(250, 345), rec(250, 370), rec(250, 410),
+    "  </g>",
+    `  <g font-size="12"><text x="510" y="150">H = Housing</text><text x="510" y="170">R = Roads</text><text x="510" y="190">Ring road (dashed)</text><rect x="510" y="200" width="14" height="10" fill="url(#hatch)" stroke="#333"/><text x="530" y="210">Industry</text><text x="510" y="230">P = Parking</text><text x="510" y="250">B = Bus stand</text><rect x="510" y="260" width="14" height="10" fill="#7fb8a6" stroke="#333"/><text x="530" y="270">Recreational area</text>`,
+    `    <text x="580" y="400" text-anchor="middle">N</text><line x1="580" y1="406" x2="580" y2="460" stroke="#333"/><line x1="553" y1="433" x2="607" y2="433" stroke="#333"/><text x="545" y="437" text-anchor="end">W</text><text x="613" y="437">E</text><text x="580" y="474" text-anchor="middle">S</text></g>`].join("\n");
+  return {
+    svg: svg(body, 660, 510),
+    data: "Plan of a proposed town. Two main roads cross at the centre, dividing the town into four quarters, with two diagonal roads running from the corners and two ring roads circling the centre. Housing (H) is spread through all four quarters, both inside and outside the ring roads. Industry is in two areas on the edge: one at the top (north-west) and one in the bottom right (south-east). Bus stands (B) and parking (P) are beside the central crossroads. Recreational areas are close to the centre, mainly south of it along the north–south road, with one to the east.",
+  };
+};
+
+// ── Day 27: ages of UK visitors to Spain, 1983 and 2003 ─────────────────
+// (The source key says "34 - 54"; the groups run 25–34, then 35–54.)
+FIG[27] = () => {
+  const keys = ["0–15 years", "16–24 years", "25–34 years", "35–54 years", "55+ years"];
+  const a = [10, 4, 20, 50, 16], b = [12, 15, 12, 35, 26];
+  return {
+    svg: svg([title("Age of visitors from the UK to Spain", 340), keyedPie(175, 190, 100, "1983", a), keyedPie(505, 190, 100, "2003", b), pieKey(keys, 345)].join("\n"), 680, 410),
+    data: "Two pie charts, % of UK visitors to Spain by age group. 1983: " + keys.map((k, i) => `${k} ${a[i]}%`).join(", ") + ". 2003: " + keys.map((k, i) => `${k} ${b[i]}%`).join(", ") + ".",
+  };
+};
+
+// ── Day 31: typical Japanese and American offices ───────────────────────
+FIG[31] = () => {
+  const chair = (x, y) => `<circle cx="${x}" cy="${y}" r="7" fill="#fff" stroke="#111" stroke-width="2"/>`;
+  const jp = [`    <rect x="20" y="50" width="310" height="300" fill="#fff" stroke="#333" stroke-width="1.6"/>`, label(175, 44, "Windows", { size: 10.5 }),
+    "    " + chair(175, 72), box(120, 82, 110, 26, "Department manager", { size: 10 })];
+  [40, 180].forEach((ox) => {
+    jp.push("    " + chair(ox + 55, 135), box(ox, 145, 110, 24, "Section manager", { size: 10 }));
+    for (let r = 0; r < 3; r++) jp.push(box(ox, 169 + r * 34, 55, 34, ""), box(ox + 55, 169 + r * 34, 55, 34, ""), "    " + chair(ox - 12, 186 + r * 34) + chair(ox + 122, 186 + r * 34));
+  });
+  jp.push(label(175, 375, "Typical Japanese office", { size: 12, bold: true }));
+  const us = [`    <rect x="350" y="50" width="320" height="300" fill="#fff" stroke="#333" stroke-width="1.6"/>`,
+    `    <text x="345" y="200" font-size="10.5" text-anchor="middle" transform="rotate(-90 345 200)">Windows</text>`, `    <text x="680" y="200" font-size="10.5" text-anchor="middle" transform="rotate(-90 680 200)">Windows</text>`,
+    ...["Copier", "Storage", "Conference\nroom", "Conference\nroom"].map((t, i) => box(352, 52 + i * 74, 80, 74, t, { size: 10.5 })),
+    ...[0, 1, 2, 3, 4].flatMap((r) => [0, 1].map((c) => box(448 + c * 55, 60 + r * 57, 42, 42, "") + "    " + chair(469 + c * 55, 88 + r * 57))),
+    box(570, 52, 98, 80, "Section\nmanager", { size: 10.5 }), box(570, 132, 98, 80, "Section\nmanager", { size: 10.5 }), box(570, 212, 98, 136, "Department\nmanager", { size: 10.5 }),
+    label(510, 375, "Typical American office", { size: 12, bold: true })];
+  return {
+    svg: svg([`  <g fill="#000">`, ...jp, ...us, "  </g>"].join("\n"), 690, 390),
+    data: "Two office plans. Typical Japanese office: one open room with windows along the top; the department manager's desk at the front facing the room; two groups of six desks pushed together, each with a section manager's desk at its head and three staff on each side, so everyone works together in the open. Typical American office: closed rooms along the left wall (copier room, storage room, two conference rooms); ten separate cubicles, each with one chair, in two columns in the middle; private offices on the right for two section managers and a larger one for the department manager; windows on the left and right walls.",
+  };
+};
+
+// ── Day 39: water used and income from six products, 2004 ──────────────
+FIG[39] = () => {
+  const keys = ["Vegetables", "Cereal", "Lime", "Fruits", "Rice", "Dandelion"];
+  const a = [46, 12, 8, 28, 3, 3], b = [31, 12, 8, 40, 1, 8];
+  return {
+    svg: svg([title("Water used for six products, and the income from them, 2004", 340), keyedPie(175, 190, 95, "Water used (%)", a), keyedPie(505, 190, 95, "Total income (%)", b), pieKey(keys, 340)].join("\n"), 680, 410),
+    data: "Two pie charts, 2004. % of water used: " + keys.map((k, i) => `${k} ${a[i]}%`).join(", ") + ". % of total income: " + keys.map((k, i) => `${k} ${b[i]}%`).join(", ") + ".",
+  };
+};
+
+// ── Day 40: UK people eating five portions a day, 2001–2008 (%) ─────────
+FIG[40] = () => B({
+  heading: "People eating five portions of fruit and vegetables per day (%)", unit: "Percentage", suffix: "%",
+  cats: years(2001, 2008),
+  series: [{ label: "Men", values: [18, 19, 18, 21, 25, 27, 26, 25] }, { label: "Women", values: [22, 24.5, 27.5, 30, 33, 36.5, 32.5, 30] }, { label: "Children", values: [13.5, 14, 13.5, 26, 28.5, 22.5, 25, 23.5] }],
+  max: 40, step: 10,
+});
+
+// ── Day 43: male and female workers by sector, countries A and B (%) ────
+// (The source labels women in services in country B 49%; the slices and the
+// model essay give 88%.)
+FIG[43] = () => {
+  const keys = ["Industry", "Agriculture", "Services"];
+  const groups = [["Male workers, country A", [15, 29, 56]], ["Female workers, country A", [8, 43, 49]], ["Male workers, country B", [32, 3, 65]], ["Female workers, country B", [11, 1, 88]]];
+  const pos = [[170, 120], [510, 120], [170, 355], [510, 355]];
+  return {
+    svg: svg([...groups.map(([n, v], i) => keyedPie(pos[i][0], pos[i][1], 72, n, v)), pieKey(keys, 465)].join("\n"), 680, 520),
+    data: "Four pie charts, % of workers by sector (industry / agriculture / services). " + groups.map(([n, v]) => `${n}: ${v.join("% / ")}%`).join("; ") + ".",
+  };
+};
+
+// ── Day 50: tourists at an Australian holiday resort ────────────────────
+FIG[50] = () => {
+  const keys = ["Asia", "Europe", "US", "Other"];
+  const shares = [10, 37, 35, 18];
+  const head = ["", "Asian\ntourists", "European\ntourists", "American\ntourists", "Tourists from\nother regions"];
+  const rows = [["Average length\nof stay", "7 days", "16 days", "14 days", "10 days"], ["Most popular\naccommodation", "5-star hotel", "Camping or\ncaravan", "4-star hotel", "Camping or\ncaravan"], ["Main activity", "Sightseeing", "Swimming/\nsunbathing", "Sightseeing", "Surfing"]];
+  const t = table({ head, rows, colW: [130, 110, 130, 110, 130] });
+  const top = [title("Tourists by region of origin (%)", 340), keyedPie(260, 150, 95, "", shares), ...keys.map((k, i) => `    <rect x="400" y="${90 + i * 24}" width="14" height="12" fill="${FILLS[i]}" stroke="#333" stroke-width="0.6"/><text x="422" y="${100 + i * 24}" font-size="12">${esc(k)}</text>`)].join("\n");
+  return {
+    svg: stack([{ body: top, height: 270 }, { body: `  <g transform="translate(${(680 - t.width) / 2},0)">\n${t.body}\n  </g>`, height: t.height }], 680),
+    data: `Pie chart, tourists at the resort by region of origin: Asia ${shares[0]}%, Europe ${shares[1]}%, US ${shares[2]}%, other ${shares[3]}%. Table: ` + tableText(head, rows),
+  };
+};
+
+// ── Day 52: the cost of water in five Australian cities ─────────────────
+// (The source headings say "Usage change"; it is the usage charge.)
+FIG[52] = () => T({
+  heading: "The cost of water in five Australian cities",
+  head: ["City", "Usage charge\nper kilolitre\n(up to 125 kL)", "Usage charge\nper kilolitre\n(over 125 kL)", "Average bill\nper household"],
+  rows: [["Adelaide", "$0.42", "$1.00", "$312"], ["Brisbane", "$0.81", "$0.84", "$310"], ["Melbourne", "$0.78", "$0.78", "$253"], ["Perth", "$0.42", "$1.50", "$332"], ["Sydney", "$0.98", "$0.98", "$319"]],
+  colW: [140, 150, 150, 140],
+});
+
+// ── Day 56: workers absent through illness, five countries, 1991–2001 ───
+FIG[56] = () => L({
+  heading: "Workers absent for a day or more through illness (%)", unit: "Percentage of workers", suffix: "%",
+  xs: years(1991, 2001),
+  series: [
+    { label: "Netherlands", values: [4.8, 5.55, 5.4, 5.1, 4.8, 4.2, 4.7, 4.9, 5.05, 5.25, 5.4] },
+    { label: "France", values: [5.05, 5.15, 4.15, 4.05, 3.6, 3.2, 3.15, 3.12, 3.1, 3.08, 3.05] },
+    { label: "Sweden", values: [3, 3.18, 3, 3.15, 3, 3.25, 3.6, 3.95, 4.4, 4.55, 4.63] },
+    { label: "UK", values: [2.12, 2.25, 2.37, 2.25, 2.37, 2.18, 2.37, 2.25, 2.32, 2.18, 2.37] },
+    { label: "Germany", values: [1.87, 1.78, 1.7, 1.78, 1.7, 1.78, 1.7, 1.82, 1.7, 1.78, 1.7] },
+  ],
+  max: 6, step: 1,
+});
+
+// ── Day 83: tourists' transport in one country, 1989–2009 (%) ───────────
+FIG[83] = () => L({
+  heading: "Tourists who used different types of transport in a particular country, 1989–2009 (%)", unit: "% of tourists", suffix: "%",
+  xs: years(1989, 2009, 5),
+  series: [
+    { label: "Car", values: [48, 56, 62, 57, 51.5] }, { label: "Rail", values: [34, 38, 45, 52, 58] }, { label: "Air", values: [38, 31.5, 28, 24.5, 21.5] },
+    { label: "Coach", values: [8, 12, 15, 22, 25.5] }, { label: "Ferry", values: [3, 7, 8, 12, 8] },
+  ],
+  max: 70, step: 10,
+});
+
+// ── Day 84: producing smoked fish ───────────────────────────────────────
+FIG[84] = () => {
+  const rows = [
+    ["Caught in\na net", "Brought in\nby boat", "Landed\nat port", "Frozen"],
+    ["Washed in\nfresh water", "Cut open", "Soaked in salt water\n+ yellow colouring", "Smoked"],
+    ["Packed\nin boxes", "Frozen\nat 0°C", "Cold store", "Distribution", "Fish store"],
+  ];
+  const out = [ARROW_DEFS, title("Producing smoked fish", 340), `  <g fill="#000">`];
+  const W = 120, Hh = 50, gap = 36;
+  const xs = (n, w = W, g = gap) => { const total = n * w + (n - 1) * g; const x0 = (680 - total) / 2; return Array.from({ length: n }, (_, i) => x0 + i * (w + g)); };
+  rows.forEach((r, ri) => {
+    const w = ri === 2 ? 110 : W, g = ri === 2 ? 20 : gap;
+    const y = 50 + ri * 110, X = xs(r.length, w, g);
+    // Row 2 runs right to left, like the source.
+    const order = ri === 1 ? [...r].reverse() : r;
+    order.forEach((t, i) => out.push(box(r1(X[i]), y, w, Hh, t, { fill: "#f6f8f7", size: 10.5 })));
+    for (let i = 0; i < r.length - 1; i++) out.push(ri === 1 ? arrow(r1(X[i + 1] - 2), y + 25, r1(X[i] + w + 2), y + 25) : arrow(r1(X[i] + w + 2), y + 25, r1(X[i + 1] - 2), y + 25));
+  });
+  const X0 = xs(4), X2 = xs(5, 110, 20);
+  out.push(label(r1(X0[3] + W / 2 + 8), 134, "Thawed", { size: 10.5, fill: "#333", anchor: "start" }), arrow(r1(X0[3] + W / 2), 102, r1(X0[3] + W / 2), 158));
+  out.push(stroke(`M${r1(X0[0] + W / 2)},212 L${r1(X0[0] + W / 2)},238 L${r1(X2[0] + 55)},238`), arrow(r1(X2[0] + 55), 238, r1(X2[0] + 55), 268));
+  out.push("  </g>");
+  return {
+    svg: svg(out.join("\n"), 680, 340),
+    data: "Process diagram, producing smoked fish: fish are caught in a net, brought in by boat and landed at the port, then frozen; later they are thawed, washed in fresh water, cut open, soaked in salt water with yellow colouring, and smoked; the smoked fish are packed in boxes, frozen at 0°C, kept in a cold store, then distributed by lorry to fish stores.",
+  };
+};
+
+// ── Day 88: a bus company's punctuality and complaints, 1999–2003 ───────
+FIG[88] = () => {
+  const cats = years(1999, 2003);
+  const onTime = [{ label: "Actual", values: [85, 82.3, 84.4, 84.2, 85] }, { label: "Target", values: [86, 86, 85, 85, 84.6] }];
+  const complaints = [{ label: "Complaints", values: [71, 104, 94, 112, 124] }];
+  return {
+    svg: stack([
+      { body: barChart({ heading: "Services arriving on time, actual and target (%)", unit: "Percentage", cats, series: onTime, min: 80, max: 87, step: 1, height: 300 }), height: 300 },
+      { body: barChart({ heading: "Number of complaints (per thousand passenger journeys)", unit: "Complaints", cats, series: complaints, max: 140, step: 20, height: 280 }), height: 280 },
+    ]),
+    data: "Bar chart, % of services arriving on time (actual / target): " + cats.map((c, i) => `${c} ${onTime[0].values[i]}% / ${onTime[1].values[i]}%`).join("; ") + ". Bar chart, complaints per thousand passenger journeys: " + cats.map((c, i) => `${c} ${complaints[0].values[i]}`).join(", ") + ". The target was met only in 2003.",
+  };
+};
+
+// ── Day 89: the world's top three producers of four dairy products, 2012 ─
+// (In the source the four groups are drawn to different scales; here each
+// keeps its own axis.)
+FIG[89] = () => {
+  const groups = [["Milk", ["EU", "India", "United States"], [142970, 127000, 90038], 160000, 40000], ["Cheese", ["EU", "United States", "Brazil"], [7120, 4925, 700], 8000, 2000],
+    ["Butter", ["India", "EU", "United States"], [7500, 2040, 810], 8000, 2000], ["Milk powder", ["China", "New Zealand", "EU"], [1200, 1110, 770], 1400, 200]];
+  const parts = groups.map(([name, cats, v, max, step]) => ({ body: hBarChart({ heading: name, cats, series: [{ label: name, values: v }], max, step, height: 150, labelW: 140, labels: true }), height: 150 }));
+  const note = { body: label(340, 18, "Figures in MT (metric tons; 1 MT = 1,000 kg). EU = European Union.", { size: 11, fill: "#555" }), height: 30 };
+  return {
+    svg: stack([{ body: title("Dairy production: top three world producers, 2012", 330), height: 30 }, ...parts, note], 660),
+    data: "Four bar charts, dairy production by the top three producers, 2012 (metric tons, as shown). " + groups.map(([n, c, v]) => `${n}: ` + c.map((x, i) => `${x} ${v[i].toLocaleString("en-GB")}`).join(", ")).join("; ") + ".",
+  };
+};
+
 // ── Run ─────────────────────────────────────────────────────────────────
 // Task 1 wording is the real IELTS task and stays; only plain slips are
 // fixed: the rubric glued to the first sentence ("2014.Summarise"), and a

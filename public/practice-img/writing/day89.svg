@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 660" font-family="Arial, sans-serif">
+  <rect width="660" height="660" fill="#ffffff"/>
+  <g transform="translate(0,0)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Dairy production: top three world producers, 2012</text>
+  </g>
+  <g transform="translate(0,30)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Milk</text>
+  <g font-size="11" fill="#555">
+    <line x1="140" y1="62" x2="140" y2="120" stroke="#333" stroke-width="1.5"/><text x="140" y="135" text-anchor="middle">0</text>
+    <line x1="260" y1="62" x2="260" y2="120" stroke="#eee"/><text x="260" y="135" text-anchor="middle">40,000</text>
+    <line x1="380" y1="62" x2="380" y2="120" stroke="#eee"/><text x="380" y="135" text-anchor="middle">80,000</text>
+    <line x1="500" y1="62" x2="500" y2="120" stroke="#eee"/><text x="500" y="135" text-anchor="middle">120,000</text>
+    <line x1="620" y1="62" x2="620" y2="120" stroke="#eee"/><text x="620" y="135" text-anchor="middle">160,000</text>
+  </g>
+  <g fill="#000">
+    <rect x="140" y="65" width="428.9" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="572.9" y="75.2" font-size="9.5" fill="#555">142,970</text><text x="132" y="75.7" text-anchor="end" font-size="11.5" fill="#000">EU</text>
+    <rect x="140" y="84.3" width="381" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="525" y="94.5" font-size="9.5" fill="#555">127,000</text><text x="132" y="95" text-anchor="end" font-size="11.5" fill="#000">India</text>
+    <rect x="140" y="103.7" width="270.1" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="414.1" y="113.8" font-size="9.5" fill="#555">90,038</text><text x="132" y="114.3" text-anchor="end" font-size="11.5" fill="#000">United States</text>
+  </g>
+  </g>
+  <g transform="translate(0,180)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Cheese</text>
+  <g font-size="11" fill="#555">
+    <line x1="140" y1="62" x2="140" y2="120" stroke="#333" stroke-width="1.5"/><text x="140" y="135" text-anchor="middle">0</text>
+    <line x1="260" y1="62" x2="260" y2="120" stroke="#eee"/><text x="260" y="135" text-anchor="middle">2,000</text>
+    <line x1="380" y1="62" x2="380" y2="120" stroke="#eee"/><text x="380" y="135" text-anchor="middle">4,000</text>
+    <line x1="500" y1="62" x2="500" y2="120" stroke="#eee"/><text x="500" y="135" text-anchor="middle">6,000</text>
+    <line x1="620" y1="62" x2="620" y2="120" stroke="#eee"/><text x="620" y="135" text-anchor="middle">8,000</text>
+  </g>
+  <g fill="#000">
+    <rect x="140" y="65" width="427.2" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="571.2" y="75.2" font-size="9.5" fill="#555">7,120</text><text x="132" y="75.7" text-anchor="end" font-size="11.5" fill="#000">EU</text>
+    <rect x="140" y="84.3" width="295.5" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="439.5" y="94.5" font-size="9.5" fill="#555">4,925</text><text x="132" y="95" text-anchor="end" font-size="11.5" fill="#000">United States</text>
+    <rect x="140" y="103.7" width="42" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="186" y="113.8" font-size="9.5" fill="#555">700</text><text x="132" y="114.3" text-anchor="end" font-size="11.5" fill="#000">Brazil</text>
+  </g>
+  </g>
+  <g transform="translate(0,330)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Butter</text>
+  <g font-size="11" fill="#555">
+    <line x1="140" y1="62" x2="140" y2="120" stroke="#333" stroke-width="1.5"/><text x="140" y="135" text-anchor="middle">0</text>
+    <line x1="260" y1="62" x2="260" y2="120" stroke="#eee"/><text x="260" y="135" text-anchor="middle">2,000</text>
+    <line x1="380" y1="62" x2="380" y2="120" stroke="#eee"/><text x="380" y="135" text-anchor="middle">4,000</text>
+    <line x1="500" y1="62" x2="500" y2="120" stroke="#eee"/><text x="500" y="135" text-anchor="middle">6,000</text>
+    <line x1="620" y1="62" x2="620" y2="120" stroke="#eee"/><text x="620" y="135" text-anchor="middle">8,000</text>
+  </g>
+  <g fill="#000">
+    <rect x="140" y="65" width="450" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="594" y="75.2" font-size="9.5" fill="#555">7,500</text><text x="132" y="75.7" text-anchor="end" font-size="11.5" fill="#000">India</text>
+    <rect x="140" y="84.3" width="122.4" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="266.4" y="94.5" font-size="9.5" fill="#555">2,040</text><text x="132" y="95" text-anchor="end" font-size="11.5" fill="#000">EU</text>
+    <rect x="140" y="103.7" width="48.6" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="192.6" y="113.8" font-size="9.5" fill="#555">810</text><text x="132" y="114.3" text-anchor="end" font-size="11.5" fill="#000">United States</text>
+  </g>
+  </g>
+  <g transform="translate(0,480)">
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Milk powder</text>
+  <g font-size="11" fill="#555">
+    <line x1="140" y1="62" x2="140" y2="120" stroke="#333" stroke-width="1.5"/><text x="140" y="135" text-anchor="middle">0</text>
+    <line x1="208.6" y1="62" x2="208.6" y2="120" stroke="#eee"/><text x="208.6" y="135" text-anchor="middle">200</text>
+    <line x1="277.1" y1="62" x2="277.1" y2="120" stroke="#eee"/><text x="277.1" y="135" text-anchor="middle">400</text>
+    <line x1="345.7" y1="62" x2="345.7" y2="120" stroke="#eee"/><text x="345.7" y="135" text-anchor="middle">600</text>
+    <line x1="414.3" y1="62" x2="414.3" y2="120" stroke="#eee"/><text x="414.3" y="135" text-anchor="middle">800</text>
+    <line x1="482.9" y1="62" x2="482.9" y2="120" stroke="#eee"/><text x="482.9" y="135" text-anchor="middle">1,000</text>
+    <line x1="551.4" y1="62" x2="551.4" y2="120" stroke="#eee"/><text x="551.4" y="135" text-anchor="middle">1,200</text>
+    <line x1="620" y1="62" x2="620" y2="120" stroke="#eee"/><text x="620" y="135" text-anchor="middle">1,400</text>
+  </g>
+  <g fill="#000">
+    <rect x="140" y="65" width="411.4" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="555.4" y="75.2" font-size="9.5" fill="#555">1,200</text><text x="132" y="75.7" text-anchor="end" font-size="11.5" fill="#000">China</text>
+    <rect x="140" y="84.3" width="380.6" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="524.6" y="94.5" font-size="9.5" fill="#555">1,110</text><text x="132" y="95" text-anchor="end" font-size="11.5" fill="#000">New Zealand</text>
+    <rect x="140" y="103.7" width="264" height="13.3" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="408" y="113.8" font-size="9.5" fill="#555">770</text><text x="132" y="114.3" text-anchor="end" font-size="11.5" fill="#000">EU</text>
+  </g>
+  </g>
+  <g transform="translate(0,630)">
+    <text x="340" y="18" text-anchor="middle" font-size="11" fill="#555">Figures in MT (metric tons; 1 MT = 1,000 kg). EU = European Union.</text>
+  </g>
+</svg>

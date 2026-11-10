@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 390" font-family="Arial, sans-serif">
+  <rect width="690" height="390" fill="#ffffff"/>
+  <g fill="#000">
+    <rect x="20" y="50" width="310" height="300" fill="#fff" stroke="#333" stroke-width="1.6"/>
+    <text x="175" y="44" text-anchor="middle" font-size="10.5" fill="#000">Windows</text>
+    <circle cx="175" cy="72" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="120" y="82" width="110" height="26" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="175" y="99" text-anchor="middle" font-size="10">Department manager</text>
+    <circle cx="95" cy="135" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="40" y="145" width="110" height="24" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="95" y="161" text-anchor="middle" font-size="10">Section manager</text>
+    <rect x="40" y="169" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="95" y="169" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="28" cy="186" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="162" cy="186" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="40" y="203" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="95" y="203" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="28" cy="220" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="162" cy="220" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="40" y="237" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="95" y="237" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="28" cy="254" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="162" cy="254" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <circle cx="235" cy="135" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="180" y="145" width="110" height="24" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="235" y="161" text-anchor="middle" font-size="10">Section manager</text>
+    <rect x="180" y="169" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="235" y="169" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="168" cy="186" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="302" cy="186" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="180" y="203" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="235" y="203" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="168" cy="220" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="302" cy="220" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="180" y="237" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="235" y="237" width="55" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <circle cx="168" cy="254" r="7" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="302" cy="254" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <text x="175" y="375" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Typical Japanese office</text>
+    <rect x="350" y="50" width="320" height="300" fill="#fff" stroke="#333" stroke-width="1.6"/>
+    <text x="345" y="200" font-size="10.5" text-anchor="middle" transform="rotate(-90 345 200)">Windows</text>
+    <text x="680" y="200" font-size="10.5" text-anchor="middle" transform="rotate(-90 680 200)">Windows</text>
+    <rect x="352" y="52" width="80" height="74" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="392" y="93" text-anchor="middle" font-size="10.5">Copier</text>
+    <rect x="352" y="126" width="80" height="74" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="392" y="167" text-anchor="middle" font-size="10.5">Storage</text>
+    <rect x="352" y="200" width="80" height="74" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="392" y="234.8" text-anchor="middle" font-size="10.5">Conference</text><text x="392" y="247.3" text-anchor="middle" font-size="10.5">room</text>
+    <rect x="352" y="274" width="80" height="74" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="392" y="308.8" text-anchor="middle" font-size="10.5">Conference</text><text x="392" y="321.3" text-anchor="middle" font-size="10.5">room</text>
+    <rect x="448" y="60" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="469" cy="88" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="503" y="60" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="524" cy="88" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="448" y="117" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="469" cy="145" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="503" y="117" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="524" cy="145" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="448" y="174" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="469" cy="202" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="503" y="174" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="524" cy="202" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="448" y="231" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="469" cy="259" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="503" y="231" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="524" cy="259" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="448" y="288" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="469" cy="316" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="503" y="288" width="42" height="42" fill="#fff" stroke="#333" stroke-width="1.2"/>    <circle cx="524" cy="316" r="7" fill="#fff" stroke="#111" stroke-width="2"/>
+    <rect x="570" y="52" width="98" height="80" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="619" y="89.8" text-anchor="middle" font-size="10.5">Section</text><text x="619" y="102.3" text-anchor="middle" font-size="10.5">manager</text>
+    <rect x="570" y="132" width="98" height="80" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="619" y="169.8" text-anchor="middle" font-size="10.5">Section</text><text x="619" y="182.3" text-anchor="middle" font-size="10.5">manager</text>
+    <rect x="570" y="212" width="98" height="136" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="619" y="277.8" text-anchor="middle" font-size="10.5">Department</text><text x="619" y="290.3" text-anchor="middle" font-size="10.5">manager</text>
+    <text x="510" y="375" text-anchor="middle" font-size="12" fill="#000" font-weight="bold">Typical American office</text>
+  </g>
+</svg>
