@@ -19,21 +19,25 @@ export const MOCK2_READING = {
 
 The man who untangled this system was not a postal official at all. Rowland Hill was a schoolmaster and inventor who, in 1837, published a pamphlet arguing that the true cost of delivering a letter had almost nothing to do with how far it went. The expensive part was the clerical labour: calculating each charge, recording it, and collecting the money at the door. Hill's remedy was radical simplicity. There should be one low, uniform rate — a single penny — for any letter of a given weight, sent anywhere in the country; and the postage should be prepaid by the sender, proved by a small printed label stuck to the envelope.
 
-That label appeared in May 1840. The Penny Black, as it became known, carried a profile of the young Queen Victoria against a dark background, and it transformed the economics of communication almost overnight. Prepayment put an end to the refused-letter game, and the flat rate made writing home an ordinary habit rather than a luxury: the number of letters posted in Britain more than doubled within a year, and kept climbing for decades.
+The proposal was not welcomed by the people who ran the existing system. Senior figures in the Post Office predicted that a penny rate would ruin the service's finances, and the Postmaster General dismissed the scheme as one of the most extravagant he had ever heard of. Hill found his allies elsewhere: merchants and bankers, who sent letters in great numbers, and reformers who argued that cheap postage would allow working families separated by distance to stay in touch. Petitions poured into Parliament, a committee examined the plan in detail, and in 1839 an act was passed to introduce it. Only then was Hill given a position at the Treasury, to oversee a reform he had designed entirely from the outside.
 
-The stamp itself, however, still had rough edges — literally. The first stamps were printed in sheets with no easy way to divide them, and post office clerks and customers alike had to cut them apart with scissors, a slow business that left many stamps damaged. The solution came in 1854, when a machine designed by the engineer Henry Archer was adopted: it punched rows of tiny holes between the stamps, the perforations that still let a stamp be torn cleanly from a sheet today.
+The label itself appeared in May 1840, and it transformed the economics of communication almost overnight. Prepayment put an end to the refused-letter game, and the flat rate made writing home an ordinary habit rather than a luxury: the number of letters posted in Britain more than doubled within a year, and kept climbing for decades. The Penny Black, as it became known, carried a profile of the young Queen Victoria against a dark background, and versions of the same portrait remained on British stamps for the rest of her long reign.
+
+The black stamp, however, had a hidden flaw. To prevent a stamp being used twice, clerks cancelled it with a mark in red ink, but the red was hard to see against the black and could be cleaned off by anyone with patience and the right chemicals. Within a year the colours were reversed: from 1841 the penny stamp was printed in red-brown and cancelled in black ink, which was far harder to remove. The famous Penny Black had been on sale for less than a year.
+
+The stamp also still had rough edges — literally. The first stamps were printed in sheets with no easy way to divide them, and post office clerks and customers alike had to cut them apart with scissors, a slow business that left many stamps damaged. The solution came in 1854, when a machine designed by the engineer Henry Archer was adopted: it punched rows of tiny holes between the stamps, the perforations that still let a stamp be torn cleanly from a sheet today.
 
 Other countries needed little persuading. Brazil issued its famous "bull's eye" stamps in 1843, several Swiss cantons produced their own in the same period, and within twenty years the adhesive postage stamp was a worldwide standard. Almost as quickly, an unexpected side effect appeared: people began to keep stamps rather than use them. Within a generation the hobby had dealers, albums, catalogues and a grand name of its own — philately — and rare specimens were changing hands for remarkable sums. Governments noticed that the small labels doubled as advertisements for the nation, and stamps grew into miniature galleries of kings, birds, battles and inventions.
 
 Electronic communication has, of course, done to the letter what the letter once did to the messenger on horseback. Yet the stamp has outlived the habit that created it. Collectors still meet, catalogues are still printed, and a scrap of gummed paper from 1840 — of which millions were made — can now sell for more than a house. Rowland Hill's penny label solved a practical problem; it also created, quite by accident, one of the world's most durable objects of desire.`,
       questions: [
         { n: 1, type: "gap", prompt: "Before 1840, the cost of a letter was normally paid by the ______.", note: "ONE WORD ONLY", answer: "recipient" },
-        { n: 2, type: "gap", prompt: "Postage was calculated from the number of sheets and the ______ a letter travelled.", note: "ONE WORD ONLY", answer: "distance" },
+        { n: 2, type: "gap", prompt: "The price of a letter depended on how many pages it contained and the ______ it had to cover.", note: "ONE WORD ONLY", answer: "distance" },
         { n: 3, type: "gap", prompt: "Hill argued that the greatest expense in the old system was clerical ______.", note: "ONE WORD ONLY", answer: "labour" },
-        { n: 4, type: "gap", prompt: "Under Hill's plan, a single rate applied to any letter of a given ______.", note: "ONE WORD ONLY", answer: "weight" },
+        { n: 4, type: "gap", prompt: "Hill's plan charged the same amount for every letter up to a set ______, wherever it was going.", note: "ONE WORD ONLY", answer: "weight" },
         { n: 5, type: "gap", prompt: "Early stamps had to be separated from the sheet using ______.", note: "ONE WORD ONLY", answer: "scissors" },
         { n: 6, type: "gap", prompt: "Archer's machine punched the small holes known as ______.", note: "ONE WORD ONLY", answer: "perforations" },
-        { n: 7, type: "tfng", prompt: "The Penny Black showed a portrait of a monarch.", answer: "TRUE" },
+        { n: 7, type: "tfng", prompt: "Before 1840, some people received information from letters without paying for them.", answer: "TRUE" },
         { n: 8, type: "tfng", prompt: "Rowland Hill was working for the postal service when he proposed his reform.", answer: "FALSE" },
         { n: 9, type: "tfng", prompt: "Prepayment ended the practice of refusing letters at the door.", answer: "TRUE" },
         { n: 10, type: "tfng", prompt: "The design of the Penny Black was chosen through a public competition.", answer: "NOT GIVEN" },
@@ -56,19 +60,23 @@ D — Scepticism about amateur data has always shadowed the field, and not witho
 
 E — Why do people give up their evenings and weekends to classify galaxies or count moths? Money is not the answer, and even scientific curiosity is only part of it. Priya Nair, a social scientist who interviews long-term volunteers, finds that the strongest motives are belonging and purpose: "People stay for the community — the forums, the shared jokes, the feeling of being part of something that matters. The science recruits them; the other people keep them." Projects that ignore this, she notes, watch their helpers quietly drift away.
 
-F — The movement's quiet triumph is that its numbers now carry official weight. Volunteer water-quality tests have triggered investigations of polluted rivers, and amateur air-quality sensors have shifted the placement of monitoring stations. Tomás Herrera, who advises city governments on environmental data, says the change is recent but real: "Ten years ago a minister could wave away volunteer measurements. Today those datasets are cited in court cases and written into official policy. That is a transfer of power, not just of information." Citizen science began as a way for the public to help researchers; increasingly, it is also a way for the public to hold institutions to account.`,
+F — Technology brings its own fragility. One ambitious project asked volunteers to record the songs of night-flying insects with a free smartphone app. Tens of thousands of recordings arrived in the first summer, but the microphones in different phone models captured sound so differently that a recording made on one handset could not be compared with confidence to one made on another. When an update to the phones' operating systems stopped the app from working, there was no money to rebuild it, and the project ended with a database that nobody could fully trust. The volunteers had done everything that was asked of them; it was the instrument in their pockets that let them down.
+
+G — The growth of the field has also raised awkward questions about fairness. When volunteers classify images that later help a company train commercial software, or when their observations are sold as part of a larger dataset, who should benefit? Marta Kowalczyk, a lawyer who specialises in data rights, argues that the field's generosity rests on trust. "Most people are delighted to give their time to science," she says. "What they do not expect is to discover that their work has become somebody's private property. Projects should state clearly, from the first day, who will own what the volunteers produce." A number of projects now publish all of their data openly for exactly this reason.
+
+H — The movement's quiet triumph is that its numbers now carry official weight. Volunteer water-quality tests have triggered investigations of polluted rivers, and amateur air-quality sensors have shifted the placement of monitoring stations. Tomás Herrera, who advises city governments on environmental data, says the change is recent but real: "Ten years ago a minister could wave away volunteer measurements. Today those datasets are cited in court cases and written into official policy. That is a transfer of power, not just of information." Citizen science began as a way for the public to help researchers; increasingly, it is also a way for the public to hold institutions to account.`,
       questions: [
-        { n: 14, type: "match", group: "minfo", letters: "ABCDEF",
-          rubric: "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F. NB You may use any letter more than once.",
-          prompt: "a project whose volunteers judged images better than software", answer: "C" },
+        { n: 14, type: "match", group: "minfo", letters: "ABCDEFGH",
+          rubric: "Reading Passage 2 has eight paragraphs, A–H. Which paragraph contains the following information? Write the correct letter, A–H. NB You may use any letter more than once.",
+          prompt: "a project that attracted far more helpers than its organisers had predicted", answer: "C" },
         { n: 15, type: "match", group: "minfo", prompt: "examples of unpaid observers from before the twentieth century", answer: "B" },
-        { n: 16, type: "match", group: "minfo", prompt: "a response to doubts about the reliability of volunteer records", answer: "D" },
-        { n: 17, type: "match", group: "minfo", prompt: "an explanation of why volunteers continue to take part", answer: "E" },
+        { n: 16, type: "match", group: "minfo", prompt: "a description of two errors that inexperienced observers can make", answer: "D" },
+        { n: 17, type: "match", group: "minfo", prompt: "a warning that some projects gradually lose their helpers", answer: "E" },
         { n: 18, type: "gap", group: "sum2", note: "ONE WORD ONLY",
           notes: {
             title: "Summary — What made modern citizen science possible",
             lines: [
-              "Volunteer research is old, but its scale is new. The spread of {{18}} means millions of people now carry an instrument with a camera, clock and location-finder,",
+              "Volunteer research is old, but its scale is new. Because so many people now own {{18}}, millions carry an instrument with a camera, clock and location-finder,",
               "while the internet lets projects recruit helpers cheaply worldwide. Good projects protect data quality through short {{19}} and built-in {{20}},",
               "such as having many people judge the same {{21}}. As a result, volunteer datasets are now cited in court and written into official {{22}}.",
             ],
@@ -79,9 +87,9 @@ F — The movement's quiet triumph is that its numbers now carry official weight
         { n: 21, type: "gap", group: "sum2", answer: "photograph" },
         { n: 22, type: "gap", group: "sum2", answer: "policy" },
         { n: 23, type: "match", group: "people", boxTitle: "List of People",
-          box: ["Elena Marsh", "Daniel Okoye", "Priya Nair", "Tomás Herrera"],
-          rubric: "Match each statement with the correct person, A–D.",
-          prompt: "Volunteer measurements now influence legal and government decisions.", answer: "D" },
+          box: ["Elena Marsh", "Daniel Okoye", "Priya Nair", "Tomás Herrera", "Marta Kowalczyk"],
+          rubric: "Match each statement with the correct person, A–E. NB There is one extra person you will not need.",
+          prompt: "The public has gained influence, not only knowledge.", answer: "D" },
         { n: 24, type: "match", group: "people", prompt: "Reliable results come from well-designed systems rather than expert observers.", answer: "A" },
         { n: 25, type: "match", group: "people", prompt: "Certain visual judgements are still beyond computers.", answer: "B" },
         { n: 26, type: "match", group: "people", prompt: "Social connection keeps volunteers involved longer than curiosity does.", answer: "C" },
@@ -91,17 +99,21 @@ F — The movement's quiet triumph is that its numbers now carry official weight
       title: "Passage 3",
       instructions: "You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.",
       passageTitle: "The trouble with choice",
-      passage: `Standing before a supermarket shelf that offers ninety kinds of breakfast cereal, it is easy to believe that abundance is an unmixed blessing. Freedom to choose is, after all, close to the heart of what modern societies mean by freedom itself. Yet for two decades psychologists have been arguing about a disquieting possibility: that beyond a certain point, more options make us not freer and happier but hesitant, anxious and less satisfied with whatever we finally pick.
+      passage: `Standing before a supermarket shelf that offers ninety kinds of breakfast cereal, it is easy to believe that abundance is an unmixed blessing. Freedom to choose is, after all, close to the heart of what modern societies mean by freedom itself, and advertisers, politicians and philosophers alike have treated each widening of choice as a mark of progress. Yet for two decades psychologists have been arguing about a disquieting possibility: that beyond a certain point, more options make us not freer and happier but hesitant, anxious and less satisfied with whatever we finally pick.
 
-The debate began in earnest with a jar of jam. In a now-celebrated field experiment, researchers set up a tasting table in a California grocery store, sometimes displaying six varieties of jam and sometimes twenty-four. The larger display was better theatre: it drew a substantially bigger crowd. But it was worse commerce — of those who stopped at the twenty-four-jam table, only a tiny fraction went on to buy a jar, while shoppers who had faced just six options bought at roughly ten times that rate. Attention, it seemed, was not the same thing as decision, and too many possibilities could quietly paralyse the will.
+The debate began in earnest with a jar of jam. In a now-celebrated field experiment, researchers set up a tasting table in a California grocery store, sometimes displaying six varieties of jam and sometimes twenty-four. The larger display was better theatre: it drew a substantially bigger crowd. But it was worse commerce — of those who stopped at the twenty-four-jam table, only a tiny fraction went on to buy a jar, while shoppers who had faced just six options bought at roughly ten times that rate. Attention, it seemed, was not the same thing as decision, and too many possibilities could quietly paralyse the will. The study was modest in size, but its result was so neat that within a few years it was being quoted in business books, marketing courses and public lectures around the world.
 
 Later work suggested that the pain of choosing depends as much on the chooser as on the menu. One line of research divides people into two broad styles. Maximisers approach every decision determined to find the best possible option, and so cannot stop searching until every alternative has been examined; satisficers look until they find something good enough, choose it, and move on. The styles come at different prices. Maximisers do tend to make objectively better choices — they find the higher-paying job, the better-reviewed camera — but study after study finds them less happy with the outcome, more prone to regret, and more likely to keep comparing after the decision is made. Even a good result gives less pleasure when your standard is a perfect one.
 
 If the story had ended there, the practical advice would be simple: cut the options, everywhere and always. But science rarely leaves a tidy story alone. In 2010, researchers pooled the results of fifty separate experiments on choice overload in a single meta-analysis, and the headline finding was deflating: averaged across every study, the effect of adding options was close to zero. Sometimes large assortments hurt, sometimes they helped, and often they made no difference at all. The original phenomenon had not been disproved, but it had been demoted — from a law of human nature to something more conditional, which appears reliably only under particular circumstances.
 
-What are those circumstances? The pattern across studies suggests that choice becomes burdensome when the options are complex and hard to compare, when the chooser knows little about the field, and when no clear favourite exists in advance; it is harmless, even pleasant, when we know what we like and can tell the alternatives apart at a glance. A wine novice facing three hundred unfamiliar bottles suffers; the same wall of labels is a playground to a collector. This reframing shifts the responsibility from the size of the menu to the design of the choosing: what overwhelms us is not number itself but comparison without support.
+Culture complicates the picture further. In one widely cited study, children from European-American families solved more word puzzles when they had picked the puzzles themselves, while children from Asian-American families did best when they were told their mothers had chosen for them. Researchers comparing countries report a similar pattern among adults: where important decisions are seen as shared with family and community, being handed a choice can feel less like a freedom than like a responsibility to carry alone. The conviction that more personal choice is always welcome, it seems, owes something to a particular cultural tradition and is not simply a universal human need.
 
-That conclusion is less dramatic than the jam study, and more useful. It implies that shops, websites and governments do not need to ration our options so much as organise them — sort them into meaningful categories, make the differences visible, and supply honest defaults for those who would rather not become experts. Choice, in other words, is neither poison nor pure freedom. It is an interface problem, and like any interface it can be designed well or badly. The shelf of ninety cereals is only a burden when we are left to face it alone.`,
+In what circumstances, then, does choice overload appear? The pattern across studies suggests that choice becomes burdensome when the options are complex and hard to compare, when the chooser knows little about the field, and when no clear favourite exists in advance; it is harmless, even pleasant, when we know what we like and can tell the alternatives apart at a glance. A wine novice facing three hundred unfamiliar bottles suffers; the same wall of labels is a playground to a collector. This reframing shifts the responsibility from the size of the menu to the design of the choosing: what overwhelms us is not number itself but comparison without support.
+
+Defaults show how much that design can matter. Some countries ask citizens to register if they wish to donate their organs after death; others treat everyone as a donor unless they register an objection. The two systems offer precisely the same choice, yet countries using the second record far higher rates of registered donors than their neighbours using the first, largely because most people never act at all and simply keep whatever has been set for them. That reluctance cuts both ways. A default chosen to serve the chooser spares them effort; one chosen to serve the seller turns the same inertia against them.
+
+The reframing is less dramatic than the jam study, and more useful. It implies that shops, websites and governments do not need to ration our options so much as organise them — sort them into meaningful categories, make the differences visible, and supply honest defaults for those who would rather not become experts. Choice, in other words, is neither poison nor pure freedom. It is an interface problem, and like any interface it can be designed well or badly. The shelf of ninety cereals is only a burden when we are left to face it alone.`,
       questions: [
         { n: 27, type: "mcq", prompt: "What point does the writer make with the jam experiment?", options: ["A Shoppers dislike tasting tables in stores", "B A bigger display attracted people but discouraged buying", "C Six varieties of jam was still too many", "D The researchers expected the result they found"], answer: "B" },
         { n: 28, type: "mcq", prompt: "According to the passage, maximisers typically", options: ["A make worse decisions than satisficers", "B refuse to make decisions at all", "C avoid comparing products before buying", "D feel less pleasure even after good decisions"], answer: "D" },
@@ -109,23 +121,23 @@ That conclusion is less dramatic than the jam study, and more useful. It implies
         { n: 30, type: "mcq", prompt: "The writer's overall conclusion is that", options: ["A the number of options should be reduced everywhere", "B people should learn to become experts before choosing", "C how choices are organised matters more than how many there are", "D freedom of choice is an illusion"], answer: "C" },
         { n: 31, type: "match", group: "ends", boxTitle: "Sentence endings",
           box: [
-            "stop searching once an option seems good enough.",
-            "helps mainly when options are complex and the chooser inexperienced.",
-            "drew a larger crowd but produced far fewer sales.",
-            "was rejected by most psychologists as a fraud.",
-            "keep examining alternatives in search of the best possible one.",
-            "prefer to let other people decide on their behalf.",
-            "found that, on average, extra options had almost no effect.",
+            "can feel more like a burden than a freedom.",
+            "is one that suits people who would prefer not to study every option.",
+            "suggests a situation in which having more options seems entirely good.",
+            "persuaded most psychologists to abandon research on choice.",
+            "did better on puzzles they believed their mothers had selected.",
+            "made shoppers less willing to try unfamiliar products.",
+            "record far higher rates of registered donors than countries using opt-in.",
           ],
           rubric: "Complete each sentence with the correct ending, A–G, below.",
-          prompt: "In the experiment, the twenty-four-jam table", answer: "C" },
-        { n: 32, type: "match", group: "ends", prompt: "Maximisers are people who", answer: "E" },
-        { n: 33, type: "match", group: "ends", prompt: "Satisficers are people who", answer: "A" },
-        { n: 34, type: "match", group: "ends", prompt: "The pooled analysis of fifty studies", answer: "G" },
-        { n: 35, type: "match", group: "ends", prompt: "The writer believes reducing options", answer: "B" },
+          prompt: "The shelf of ninety breakfast cereals described at the start", answer: "C" },
+        { n: 32, type: "match", group: "ends", prompt: "In one study, children from Asian-American families", answer: "E" },
+        { n: 33, type: "match", group: "ends", prompt: "For people who expect important decisions to be made together with relatives, being given a choice of their own", answer: "A" },
+        { n: 34, type: "match", group: "ends", prompt: "Countries in which people are treated as organ donors unless they object", answer: "G" },
+        { n: 35, type: "match", group: "ends", prompt: "In the writer's view, an honest default", answer: "B" },
         { n: 36, type: "ynng", prompt: "The writer accepts that a large number of options can delay decisions.", answer: "YES" },
         { n: 37, type: "ynng", prompt: "The writer believes the jam study settled the question of choice overload.", answer: "NO" },
-        { n: 38, type: "ynng", prompt: "The writer thinks online retailers deliberately exploit choice overload.", answer: "NOT GIVEN" },
+        { n: 38, type: "ynng", prompt: "The writer predicts that differences between cultures in attitudes to choice will disappear.", answer: "NOT GIVEN" },
         { n: 39, type: "ynng", prompt: "The writer considers the chooser's expertise relevant to how choice feels.", answer: "YES" },
         { n: 40, type: "ynng", prompt: "The writer concludes that menu size is the most important factor.", answer: "NO" },
       ],

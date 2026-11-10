@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 410" font-family="Arial, sans-serif">
+  <rect width="660" height="410" fill="#ffffff"/>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Growing pineapples and making pineapple products</text>
+  <text x="20" y="54" font-size="12" font-weight="bold">Stage 1: Growing (23–30°C)</text>
+  <g fill="#000">
+    <rect x="20" y="64" width="120" height="46" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="80" y="84.5" text-anchor="middle" font-size="11">Crown planted</text><text x="80" y="97.5" text-anchor="middle" font-size="11">26 cm apart</text>
+    <line x1="140" y1="87" x2="175" y2="87" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="175" y="64" width="120" height="46" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="235" y="84.5" text-anchor="middle" font-size="11">Grows for</text><text x="235" y="97.5" text-anchor="middle" font-size="11">7 months</text>
+    <line x1="295" y1="87" x2="330" y2="87" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="330" y="64" width="140" height="46" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="400" y="84.5" text-anchor="middle" font-size="11">Sprayed with</text><text x="400" y="97.5" text-anchor="middle" font-size="11">ethylene</text>
+    <line x1="470" y1="87" x2="505" y2="87" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="505" y="64" width="135" height="46" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="572.5" y="84.5" text-anchor="middle" font-size="11">5 months: fruit ready</text><text x="572.5" y="97.5" text-anchor="middle" font-size="11">(30 cm, 2 kg)</text>
+    <text x="20" y="140" font-size="12" font-weight="bold">Stage 2: Processing</text>
+    <rect x="245" y="150" width="170" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="330" y="174" text-anchor="middle" font-size="11">Harvested and washed</text>
+    <line x1="330" y1="190" x2="120" y2="228" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="330" y1="190" x2="330" y2="228" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="330" y1="190" x2="540" y2="228" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="40" y="228" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="120" y="252" text-anchor="middle" font-size="11">Top removed, peeled</text>
+    <rect x="250" y="228" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="330" y="252" text-anchor="middle" font-size="11">Top removed, peeled</text>
+    <rect x="460" y="228" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="540" y="252" text-anchor="middle" font-size="11">Coated with wax</text>
+    <line x1="120" y1="268" x2="120" y2="290" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="330" y1="268" x2="330" y2="290" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="540" y1="268" x2="540" y2="290" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="40" y="290" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="120" y="314" text-anchor="middle" font-size="11">Cut; put in extractor</text>
+    <rect x="250" y="290" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="330" y="307.5" text-anchor="middle" font-size="11">Sliced into rings</text><text x="330" y="320.5" text-anchor="middle" font-size="11">and chunks</text>
+    <rect x="460" y="290" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="540" y="314" text-anchor="middle" font-size="11">Packed in crates</text>
+    <line x1="120" y1="330" x2="120" y2="352" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="330" y1="330" x2="330" y2="352" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <line x1="540" y1="330" x2="540" y2="352" stroke="#333" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="40" y="352" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="120" y="376" text-anchor="middle" font-size="11">JUICE (cartons)</text>
+    <rect x="250" y="352" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="330" y="376" text-anchor="middle" font-size="11">CANNED FRUIT</text>
+    <rect x="460" y="352" width="160" height="40" fill="#f6f8f7" stroke="#333" stroke-width="1.2"/><text x="540" y="376" text-anchor="middle" font-size="11">EXPORTED by ship</text>
+  </g>
+</svg>

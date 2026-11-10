@@ -101,7 +101,7 @@ G — The obstacles that actually decide the future are duller than any of this.
             "the speed at which the harvest deteriorates once it is cut",
             "organised opposition from environmental campaigners",
             "the cost of employing people in the newer producing regions",
-            "a shortage of species suitable for cultivation",
+            "a lack of suitable coastal sites",
             "declining demand for seaweed products in Asia",
           ],
           answer: "A" },

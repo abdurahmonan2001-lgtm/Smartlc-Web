@@ -131,6 +131,10 @@ const writingSections = (d) => [
     passageTitle: "Writing Task 1",
     instructions: "You should spend about 20 minutes on this task. Write at least 150 words.",
     image: d.image,
+    // The figures in the visual, in words: never shown to the student, sent
+    // with the prompt so the marker can check a report's data (it cannot see
+    // the picture). Mocks 3–12 have it (scripts/draw-mock-writing.mjs).
+    visualData: d.data,
     passage: d.t1,
     questions: [{ n: 1, type: "essay", prompt: "Write your report below.", minWords: 150 }],
   },

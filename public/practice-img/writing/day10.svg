@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 435" font-family="Arial, sans-serif">
+  <rect width="680" height="435" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">A small museum and its surroundings, 1990 and 2010</text>
+  <text x="170" y="52" text-anchor="middle" font-size="14" font-weight="bold">1990</text>
+  <g fill="#000">
+    <rect x="30" y="62" width="280" height="320" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="30" y="62" width="280" height="34" fill="#eef5ee" stroke="#333" stroke-width="1.2"/><text x="170" y="83" text-anchor="middle" font-size="11">Garden</text>
+    <rect x="30" y="96" width="50" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="55" y="117" text-anchor="middle" font-size="9">Restaurant</text>
+    <rect x="30" y="130" width="50" height="100" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <rect x="80" y="96" width="50" height="34" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <rect x="130" y="96" width="40" height="50" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <text x="150" y="175" text-anchor="middle" font-size="10" transform="rotate(-90 150 172)">Entrance</text>
+    <rect x="80" y="230" width="120" height="40" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="140" y="254" text-anchor="middle" font-size="10">Shop</text>
+    <rect x="30" y="380" width="280" height="22" fill="#f0f0f0" stroke="#333" stroke-width="1.2"/><text x="170" y="395" text-anchor="middle" font-size="10">Main road</text>
+    <rect x="80" y="130" width="50" height="100" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="190" y="96" width="120" height="174" fill="#fafafa" stroke="#333" stroke-width="1.2"/><text x="250" y="187" text-anchor="middle" font-size="11">Car park</text>
+    <rect x="40" y="290" width="120" height="70" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="100" y="329" text-anchor="middle" font-size="11">Cottage</text>
+    <rect x="190" y="290" width="120" height="90" fill="#eef5ee" stroke="#333" stroke-width="1.2"/><text x="250" y="339" text-anchor="middle" font-size="11">Garden</text>
+  </g>
+  <text x="510" y="52" text-anchor="middle" font-size="14" font-weight="bold">2010</text>
+  <g fill="#000">
+    <rect x="370" y="62" width="280" height="320" fill="#fff" stroke="#333" stroke-width="1.2"/>
+    <rect x="370" y="62" width="280" height="34" fill="#eef5ee" stroke="#333" stroke-width="1.2"/><text x="510" y="83" text-anchor="middle" font-size="11">Garden</text>
+    <rect x="370" y="96" width="50" height="34" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="395" y="117" text-anchor="middle" font-size="9">Restaurant</text>
+    <rect x="370" y="130" width="50" height="100" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <rect x="420" y="96" width="50" height="34" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <rect x="470" y="96" width="40" height="50" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <text x="490" y="170" text-anchor="middle" font-size="10" transform="rotate(-90 490 172)">Entrance</text>
+    <rect x="420" y="230" width="120" height="40" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="480" y="254" text-anchor="middle" font-size="10">Shop</text>
+    <rect x="370" y="380" width="280" height="22" fill="#f0f0f0" stroke="#333" stroke-width="1.2"/><text x="510" y="395" text-anchor="middle" font-size="10">Main road</text>
+    <rect x="420" y="130" width="50" height="100" fill="#cfcfcf" stroke="#333" stroke-width="1.2"/>
+    <rect x="530" y="96" width="120" height="174" fill="#fafafa" stroke="#333" stroke-width="1.2"/><text x="590" y="187" text-anchor="middle" font-size="11">Car park</text>
+    <rect x="380" y="290" width="120" height="70" fill="#fff" stroke="#333" stroke-width="1.2"/><text x="440" y="329" text-anchor="middle" font-size="11">Café</text>
+    <rect x="530" y="290" width="120" height="90" fill="#fafafa" stroke="#333" stroke-width="1.2"/><text x="590" y="339" text-anchor="middle" font-size="11">Car park</text>
+  </g>
+  <rect x="250" y="412" width="22" height="13" fill="#cfcfcf" stroke="#333" stroke-width="0.8"/><text x="280" y="423" font-size="12">Exhibition rooms</text>
+</svg>

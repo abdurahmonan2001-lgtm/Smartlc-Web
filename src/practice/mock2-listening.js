@@ -58,7 +58,7 @@ export const MOCK2_LISTENING = {
         { n: 14, type: "mcq", prompt: "The manager says the best way to support the farm is to", options: ["A make a monthly donation", "B become a volunteer", "C buy produce from the farm shop"], answer: "C" },
         { n: 15, type: "match", group: "areas", boxTitle: "Comments",
           box: [
-            "has just been rebuilt",
+            "has been replaced after an animal got in",
             "will move to a bigger space soon",
             "is looked after by local schoolchildren",
             "is closed to visitors today",
@@ -121,7 +121,7 @@ export const MOCK2_LISTENING = {
             title: "The story of rubber",
             lines: [
               "## Origins",
-              "• natural rubber is made from latex, the milky {{31}} of a tropical tree",
+              "• latex: the white {{31}} produced by a tropical tree",
               "• first collected by peoples of the Amazon rainforest",
               "• in ancient Central America, used to make {{32}} for ritual games",
               "## Europe discovers rubber",
@@ -129,7 +129,7 @@ export const MOCK2_LISTENING = {
               "• English name comes from its power to {{33}} out pencil marks",
               "• early coats and shoes failed: sticky in hot {{34}}, cracked in winter",
               "## Vulcanisation",
-              "• 1839: Charles Goodyear heated rubber together with {{35}}",
+              "• 1839: Goodyear combined rubber and {{35}} under heat",
               "• the new material stayed firm at any temperature",
               "• demand grew fast — first from makers of {{36}}",
               "## Plantations and modern rubber",

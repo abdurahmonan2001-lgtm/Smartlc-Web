@@ -29,7 +29,7 @@ A strong tower, though, was only half the problem; the other half was the light 
 
 Behind every beam lived the keepers, trimming wicks, winding machinery and polishing glass through the night, often in total isolation. Their world ended slowly, then completely. Electric light replaced flame only gradually — many stations were still burning oil well into the twentieth century — but automation was merciless, and during the 1990s the last keepers in most countries locked the doors behind them. Satellite navigation has since taken over most of the lighthouse's work, yet very few countries have switched their lights off. Electronics can fail; the beam does not. The towers are kept partly as a backup, and partly, perhaps, out of gratitude.`,
       questions: [
-        { n: 1, type: "gap", prompt: "According to ancient accounts, the light of the Pharos was made stronger by a large bronze ______.", note: "ONE WORD ONLY", answer: "mirror" },
+        { n: 1, type: "gap", prompt: "According to ancient accounts, the light of the Pharos was made stronger by a large polished ______, probably of bronze.", note: "ONE WORD ONLY", answer: "mirror" },
         { n: 2, type: "gap", prompt: "In medieval Europe, coastal lights were usually kept burning by ______.", note: "ONE WORD ONLY", answer: "monks" },
         { n: 3, type: "gap", prompt: "Winstanley's tower on the Eddystone rocks was largely built of ______.", note: "ONE WORD ONLY", answer: "wood" },
         { n: 4, type: "gap", prompt: "Smeaton based the shape of his tower on the trunk of an ______.", note: "ONE WORD ONLY", answer: "oak" },
@@ -96,7 +96,7 @@ F — How much further can the event go? The two-hour barrier, long treated as t
           prompt: "Which TWO statements about carbon-plated shoes are true, according to the passage?",
           options: [
             "They have been banned from official races",
-            "They improve running economy by about four per cent",
+            "Nearly all of the sport's major records since their arrival have been set in them",
             "They benefit all runners to the same degree",
             "Their effect was measured in laboratory tests",
             "They have been proved to reduce muscle damage",

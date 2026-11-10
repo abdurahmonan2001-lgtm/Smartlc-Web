@@ -29,8 +29,8 @@ One barrier remained. Photography still demanded chemistry, darkrooms and patien
       questions: [
         { n: 1, type: "gap", prompt: "In a darkened room, an image of the outside world could enter through a small ______ in a wall.", note: "ONE WORD ONLY", answer: "hole" },
         { n: 2, type: "gap", prompt: "Niépce made his first photograph on a plate of polished ______.", note: "ONE WORD ONLY", answer: "pewter" },
-        { n: 3, type: "gap", prompt: "Niépce's picture required an exposure lasting about eight ______.", note: "ONE WORD ONLY", answer: "hours" },
-        { n: 4, type: "gap", prompt: "Daguerre strengthened his images using the vapour of warmed ______.", note: "ONE WORD ONLY", answer: "mercury" },
+        { n: 3, type: "gap", prompt: "Niépce's plate had to be left in the camera for roughly eight ______.", note: "ONE WORD ONLY", answer: "hours" },
+        { n: 4, type: "gap", prompt: "Daguerre made faint images visible by treating the plate with fumes from heated ______.", note: "ONE WORD ONLY", answer: "mercury" },
         { n: 5, type: "gap", prompt: "In portrait studios, an iron ______ kept the sitter's head still during the exposure.", note: "ONE WORD ONLY", answer: "clamp" },
         { n: 6, type: "gap", prompt: "Talbot realised his reversed paper image was in fact a ______, from which many prints could be made.", note: "ONE WORD ONLY", answer: "negative" },
         { n: 7, type: "gap", prompt: "The first Kodak camera was sold already loaded with a roll of ______.", note: "ONE WORD ONLY", answer: "film" },
@@ -71,8 +71,8 @@ G — No single actor can solve waste on this scale, and researchers describe a 
             title: "Summary — Waste in wealthy countries",
             lines: [
               "In rich countries, the largest share of food waste happens in the {{18}}. Households misunderstand date {{19}} and so discard food that is still safe to eat,",
-              "and they often buy too much because they shop without first checking the {{20}}. Research by Ruth Calder suggests simple routines make the difference:",
-              "writing a shopping {{21}} before going out, serving smaller {{22}} at meals, and freezing leftovers cut waste in her studies by a third.",
+              "and they often buy too much because they go shopping without first looking in the {{20}}. Research by Ruth Calder suggests simple routines make the difference:",
+              "drawing up a {{21}} of what to buy before going out, serving smaller {{22}} at meals, and freezing leftovers cut waste in her studies by a third.",
             ],
           },
           answer: "home" },

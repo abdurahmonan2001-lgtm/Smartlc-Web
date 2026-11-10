@@ -435,7 +435,9 @@ function essayTasks(test) {
       .map((q) => ({
         n: q.n,
         task: i + 1,
-        prompt: [s.passageTitle, s.instructions, s.passage].filter(Boolean).join("\n\n"),
+        prompt: [s.passageTitle, s.instructions, s.passage,
+          s.visualData && `Data in the visual (for checking the figures the candidate reports): ${s.visualData}`,
+        ].filter(Boolean).join("\n\n"),
         wordTarget: i === 0 ? 150 : 250,
       })),
   );

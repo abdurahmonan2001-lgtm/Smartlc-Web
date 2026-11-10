@@ -13,6 +13,7 @@ export const MOCK1_WRITING = {
       passageTitle: "Writing Task 1",
       instructions: "You should spend about 20 minutes on this task. Write at least 150 words.",
       image: "/practice-img/writing/day1.svg",
+      visualData: "Line graph, % of each age group visiting the cinema at least once a month (1978 / 1988 / 1998 / 2008). 14–24: 90 / 88 / 90 / 85. 25–34: 80 / 60 / 75 / 78. 35–49: 60 / 50 / 70 / 72. 50 and over: 40 / 30 / 50 / 55. All groups fell in 1988 (14–24 only slightly) and recovered by 1998; 14–24 was highest throughout and 50 and over lowest.",
       passage: "The graph below shows the percentage of people by age group visiting the cinema at least once a month between 1978 and 2008.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
       questions: [
         { n: 1, type: "essay", prompt: "Write your report below.", minWords: 150 },

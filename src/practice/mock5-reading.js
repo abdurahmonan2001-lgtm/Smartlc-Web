@@ -127,7 +127,7 @@ How should all this be interpreted? For one school, the food-storers are a textb
         { n: 32, type: "ynng", prompt: "The writer accepts that food-storing birds find their caches by memory rather than chance.", answer: "YES" },
         { n: 33, type: "ynng", prompt: "The writer regards the scrub-jay findings as evidence of memory for events.", answer: "YES" },
         { n: 34, type: "ynng", prompt: "The writer believes laboratory studies of caching prove nothing.", answer: "NO" },
-        { n: 35, type: "ynng", prompt: "The writer considers the nutcracker's memory superior to that of any mammal.", answer: "NOT GIVEN" },
+        { n: 35, type: "ynng", prompt: "The writer believes Clark's nutcracker has a better memory than any other food-storing bird.", answer: "NOT GIVEN" },
         { n: 36, type: "ynng", prompt: "The writer concludes that complex memory arose only once in evolution.", answer: "NO" },
         { n: 37, type: "match", group: "ends", boxTitle: "Sentence endings",
           box: [

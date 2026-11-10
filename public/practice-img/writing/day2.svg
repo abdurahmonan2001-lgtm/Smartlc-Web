@@ -25,6 +25,6 @@
   <g font-size="12" fill="#000">
     <line x1="90" y1="44" x2="116" y2="44" stroke="#1d3a6b" stroke-width="2.5"/><text x="121" y="48">Adults</text>
     <line x1="190" y1="44" x2="216" y2="44" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="221" y="48">Children under 15</text>
-    <line x1="360" y1="44" x2="386" y2="44" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="391" y="48">Special exhibitions</text>
+    <line x1="360" y1="44" x2="386" y2="44" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="391" y="48">Special-exhibition visitors</text>
   </g>
 </svg>

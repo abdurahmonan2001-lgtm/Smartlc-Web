@@ -52,7 +52,7 @@ The rescue came from an unexpected direction: pleasure. From the 1940s, enthusia
 
 B — At first sight a city seems the worst possible home for an insect that lives on blossom. In fact, urban areas can offer bees a better diet than much of the modern countryside. Intensively farmed land is often a green desert: a single crop that flowers spectacularly for two or three weeks and then offers nothing at all. A city, by contrast, is a patchwork of parks, gardens, balconies, cemeteries, railway embankments and street trees, and between them they provide an extraordinary variety of flowers from early spring until late autumn. Cities are also warmer — typically a few degrees warmer than the surrounding countryside, since brick and asphalt store the day's heat — which stretches the foraging season at both ends. And a city garden, unlike a field of oilseed, is rarely sprayed with agricultural pesticides.
 
-C — The obvious worry is pollution: who wants to eat honey made beside a six-lane ring road? Ingrid Halvorsen, a food chemist who has analysed hundreds of urban honey samples, says the fear is misplaced. "People expect city honey to be full of traffic fumes. In fact the levels of lead and other metals we measure are almost always far below the safety limits — the bee is a surprisingly good filter, and nectar itself is remarkably clean." What her analyses do reveal is a chemical portrait of the district: pollen grains and trace compounds show which trees line the streets and which weeds fill the empty plots. Her team has come to treat hives as living sensors. "A single colony samples millions of flowers across several square kilometres. Reading its honey tells you more about a neighbourhood's environment than any instrument we could afford to install."
+C — The obvious worry is pollution: who wants to eat honey made beside a six-lane ring road? Astrid Lindahl, a food chemist who has analysed hundreds of urban honey samples, says the fear is misplaced. "People expect city honey to be full of traffic fumes. In fact the levels of lead and other metals we measure are almost always far below the safety limits — the bee is a surprisingly good filter, and nectar itself is remarkably clean." What her analyses do reveal is a chemical portrait of the district: pollen grains and trace compounds show which trees line the streets and which weeds fill the empty plots. Her team has come to treat hives as living sensors. "A single colony samples millions of flowers across several square kilometres. Reading its honey tells you more about a neighbourhood's environment than any instrument we could afford to install."
 
 D — Success, however, has delivered an awkward problem: too many bees. Marcus Adeyemi, an ecologist who maps insect populations in three large cities, points out that honeybees are livestock, not wildlife. "In some districts the number of hives has doubled, and then doubled again, and there is simply not enough nectar to go round. A managed colony contains tens of thousands of foragers, and it competes directly with the wild pollinators — bumblebees, solitary bees, hoverflies — that have nowhere else to go." His surveys find wild species becoming scarcer precisely where clusters of hives are densest, and he notes the irony without enjoyment: a movement that began as a gesture towards nature may, in crowded corners, be squeezing nature out.
 
@@ -82,7 +82,7 @@ F — None of this diminishes what beekeeping does for the people who practise i
         { n: 21, type: "gap", group: "sum2", answer: "sensors" },
         { n: 22, type: "gap", group: "sum2", answer: "pollinators" },
         { n: 23, type: "match", group: "people", boxTitle: "List of People",
-          box: ["Ingrid Halvorsen", "Marcus Adeyemi", "Claudia Reyes", "Peter Voss", "Kenji Mori"],
+          box: ["Astrid Lindahl", "Marcus Adeyemi", "Claudia Reyes", "Peter Voss", "Kenji Mori"],
           rubric: "Match each statement with the correct person, A–E.",
           prompt: "Looking after bees permanently changes how people see their city.", answer: "D" },
         { n: 24, type: "match", group: "people", prompt: "Honey can provide detailed information about a local environment.", answer: "A" },
@@ -112,17 +112,17 @@ What, then, should a sensible person conclude? Background music is neither the h
         { n: 30, type: "mcq", prompt: "Which statement best summarises the writer's conclusion?", options: ["A Music should be removed from public spaces", "B Complex work always benefits from silence", "C People should avoid music that contains lyrics", "D Whether music helps depends on the job, the individual and whose choice it is"], answer: "D" },
         { n: 31, type: "match", group: "ends", boxTitle: "Sentence endings",
           box: [
-            "tend to be more affected by background music than outgoing people.",
+            "are more easily disturbed by background music than extroverts.",
             "was dismissed by researchers as impossible to measure.",
             "encourages shoppers to leave a store more quickly.",
             "often improves when music raises arousal and lifts mood.",
             "is less disturbing than music imposed by someone else.",
-            "suffers particularly when the music includes lyrics.",
+            "proved to be slight, short-lived and not unique to classical music.",
             "leads customers to spend more time and money.",
           ],
           rubric: "Complete each sentence with the correct ending, A–G, below.",
           prompt: "Performance on simple, repetitive tasks", answer: "D" },
-        { n: 32, type: "match", group: "ends", prompt: "The writer states that reading comprehension", answer: "F" },
+        { n: 32, type: "match", group: "ends", prompt: "The improvement first reported after listening to Mozart", answer: "F" },
         { n: 33, type: "match", group: "ends", prompt: "According to the passage, introverts", answer: "A" },
         { n: 34, type: "match", group: "ends", prompt: "Music that a person has selected for themselves", answer: "E" },
         { n: 35, type: "match", group: "ends", prompt: "Slow music playing in a shop", answer: "G" },

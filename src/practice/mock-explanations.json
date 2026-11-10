@@ -249,24 +249,32 @@
       "evidence": "he packed them in small silk bags",
       "vocab": [
         "began sending his customers small samples",
-        "sent customers samples"
+        "posted samples to customers"
       ]
     },
     "38": {
       "explain": "India and Kenya are named too, but as the countries that follow. The largest producer is where the story began.",
       "evidence": "The world's largest producer of tea is China",
       "vocab": [
-        "dominated by the region where the story began",
-        "largest producer"
+        "The world's largest producer of tea",
+        "today's biggest grower"
       ]
     },
     "39": {
       "explain": "The lecturer answers the students' usual question directly: the two teas are not botanically different.",
-      "evidence": "Green tea and black tea come from the very same plant"
+      "evidence": "Green tea and black tea come from the very same plant",
+      "vocab": [
+        "The difference between them is not botanical",
+        "no botanical difference"
+      ]
     },
     "40": {
       "explain": "The difference happens after picking. Black tea is left exposed to the air and fully oxidised; green tea is heated at once, which stops the process.",
-      "evidence": "it is caused by oxidation of the leaves"
+      "evidence": "it is caused by oxidation of the leaves",
+      "vocab": [
+        "it is caused by",
+        "the colour difference comes from"
+      ]
     }
   },
   "mock1-reading": {
@@ -287,11 +295,11 @@
       ]
     },
     "3": {
-      "explain": "TRUE: the passage states this almost word for word — time at the quayside could equal time at sea.",
+      "explain": "TRUE: a ship might spend as long at the quayside as at sea. 'Tied up at the docks' is the quayside, and 'travelling' is the time at sea; 'could once' matches 'might' in the days before containers.",
       "evidence": "a cargo ship might spend as long at the quayside as it did at sea",
       "vocab": [
         "at the quayside",
-        "in port"
+        "tied up at the docks"
       ]
     },
     "4": {
@@ -327,11 +335,11 @@
       ]
     },
     "9": {
-      "explain": "'Collapsed from weeks to hours' gives both ends of the change; the gap needs the second one.",
+      "explain": "'Collapsed from weeks to hours' gives both ends of the change; 'cut' is the question's word for 'collapsed', and the gap needs the second end.",
       "evidence": "Loading time collapsed from weeks to hours",
       "vocab": [
         "collapsed",
-        "fell"
+        "cut"
       ]
     },
     "10": {
@@ -354,8 +362,8 @@
       "explain": "'Before completion' in the passage is 'before they are finished' in the question; the thing crossed is oceans.",
       "evidence": "complex products began to cross oceans several times before completion",
       "vocab": [
-        "before completion",
-        "before they are finished"
+        "several times before completion",
+        "more than once before they are finished"
       ]
     },
     "13": {
@@ -383,7 +391,7 @@
       ]
     },
     "16": {
-      "explain": "B is 'The problem of electricity'. The paragraph names the weakness in its first line and spends the rest on the cost of power and LEDs.",
+      "explain": "B is 'The problem of electricity'. The paragraph names the weakness in its first line and spends the rest on the cost of power, lamps and cooling. Do not be pulled to 'Businesses that could not survive': the closures are one result of the electricity problem, not the paragraph's main idea.",
       "evidence": "The technology's weakness is equally easy to name: electricity",
       "vocab": [
         "The technology's weakness",
@@ -391,7 +399,7 @@
       ]
     },
     "17": {
-      "explain": "D is 'What vertical farms choose to grow'. The paragraph lists what is grown and why. Do not be pulled to 'The crops of the future': the paragraph says the opposite, that staple crops are not expected to move indoors.",
+      "explain": "D is 'What vertical farms choose to grow'. The paragraph lists what is grown and why, and ends by saying the new crops remain showpieces. Two headings are traps: 'The crops of the future' (the paragraph says staples are not expected to move indoors) and 'Changing plants with light' (light recipes are one detail, not the main idea).",
       "evidence": "This economic pressure explains what vertical farms actually grow"
     },
     "18": {
@@ -427,11 +435,11 @@
       ]
     },
     "22": {
-      "explain": "The passage says these crops are sold at premium prices to nearby buyers; 'premium' is the word the summary needs.",
+      "explain": "The passage says these crops are sold at premium prices to nearby restaurants and supermarkets; 'buyers close by' are those restaurants and supermarkets, and 'premium' is the word the summary needs.",
       "evidence": "sold at premium prices to nearby restaurants and supermarkets",
       "vocab": [
         "nearby restaurants and supermarkets",
-        "nearby buyers"
+        "buyers close by"
       ]
     },
     "23": {
@@ -459,11 +467,11 @@
       ]
     },
     "26": {
-      "explain": "A, the leafy greens, herbs and strawberries. Paragraph D names them as the crops that dominate commercially, and the same sentence says they are sold at premium prices to nearby restaurants and supermarkets.",
-      "evidence": "Leafy greens, herbs and strawberries dominate",
+      "explain": "A, the leafy greens, herbs and strawberries. Paragraph D describes them as crops that are light, quick to mature and mostly water. The staples (B) are the crops that cannot be grown indoors economically.",
+      "evidence": "crops that are light, quick to mature, mostly water",
       "vocab": [
-        "premium prices",
-        "high prices"
+        "quick to mature, mostly water",
+        "grow quickly and consist largely of water"
       ]
     },
     "27": {
@@ -527,7 +535,7 @@
       ]
     },
     "35": {
-      "explain": "C, persuaded. The writer reports the case approvingly, adds supporting reasoning of their own ('Evolution does not usually pay for machinery that serves no purpose'), and states the conclusion as fact in the final paragraph. Nothing in the text is dismissive or alarmed, and the writer is not left undecided.",
+      "explain": "C, persuaded. The writer reports the case approvingly, adds supporting reasoning of their own ('Evolution does not usually pay for machinery that serves no purpose'), answers the sceptics ('Such caution is healthy. Yet it is aimed at the popular version of the argument'), and states the conclusion as fact in the final paragraph. Mentioning the sceptics does not make the writer undecided.",
       "evidence": "Remembering and forgetting, long cast as opponents, are better understood as partners in the same enterprise"
     },
     "36": {
@@ -796,8 +804,8 @@
       "explain": "The lecturer defines latex before anything else: the milky liquid a tropical tree bleeds when the bark is cut.",
       "evidence": "Natural rubber begins as latex - the milky sap of a tropical tree",
       "vocab": [
-        "Natural rubber begins as latex",
-        "natural rubber is made from latex"
+        "the milky",
+        "the white"
       ]
     },
     "32": {
@@ -826,7 +834,11 @@
     },
     "35": {
       "explain": "Goodyear's 1839 accident was heating rubber with sulphur; the process was later named vulcanisation, after the Roman god of fire.",
-      "evidence": "He heated rubber together with sulphur"
+      "evidence": "He heated rubber together with sulphur",
+      "vocab": [
+        "He heated rubber together with",
+        "combined rubber and"
+      ]
     },
     "36": {
       "explain": "The lecturer flags this as the detail that surprises students: the first great market was not cars, which barely existed, but bicycles with air-filled wheels.",
@@ -879,11 +891,11 @@
       ]
     },
     "2": {
-      "explain": "Two things set the price, and the question gives you the first one. The second is how far the letter had to go.",
+      "explain": "Two things set the price: the number of sheets ('how many pages it contained') and the distance the letter had to travel ('the distance it had to cover').",
       "evidence": "the cost depended on the number of sheets of paper and on the distance the letter had to travel",
       "vocab": [
         "the cost depended on",
-        "Postage was calculated from"
+        "The price of a letter depended on"
       ]
     },
     "3": {
@@ -895,11 +907,11 @@
       ]
     },
     "4": {
-      "explain": "The uniform penny rate was not unlimited — it applied to a letter of a given weight, sent anywhere in the country.",
+      "explain": "The uniform penny rate was not unlimited: it applied to any letter of a given weight, sent anywhere in the country. 'Up to a set weight' is the question's way of saying 'of a given weight'.",
       "evidence": "for any letter of a given weight, sent anywhere in the country",
       "vocab": [
         "one low, uniform rate",
-        "a single rate"
+        "the same amount"
       ]
     },
     "5": {
@@ -919,15 +931,15 @@
       ]
     },
     "7": {
-      "explain": "TRUE: the Penny Black carried a profile of Queen Victoria. A profile is a portrait, and a queen is a monarch.",
-      "evidence": "carried a profile of the young Queen Victoria against a dark background",
+      "explain": "TRUE: a common trick was to agree a code with a distant relative, look at the outside of the letter and hand it back unopened — 'the message received and not a penny spent'.",
+      "evidence": "a common trick was to agree a code with a distant relative, glance at the outside of the letter, and hand it back unopened, the message received and not a penny spent",
       "vocab": [
-        "a profile of the young Queen Victoria",
-        "a portrait of a monarch"
+        "not a penny spent",
+        "without paying for them"
       ]
     },
     "8": {
-      "explain": "FALSE: the passage says the opposite in its first line about him — he was not a postal official but a schoolmaster and inventor.",
+      "explain": "FALSE: the passage says the opposite in its first line about him — he was not a postal official but a schoolmaster and inventor. He was given a Treasury post only after Parliament had passed his plan in 1839.",
       "evidence": "The man who untangled this system was not a postal official at all",
       "vocab": [
         "was not a postal official at all",
@@ -971,11 +983,11 @@
       ]
     },
     "14": {
-      "explain": "C: the galaxy project. Okoye's point is that for spotting a faint spiral arm the human eye still beats the algorithm — volunteers outperforming software.",
-      "evidence": "the human eye still beats the algorithm",
+      "explain": "C: the galaxy project. The astronomers expected a few hundred helpers; within a year more than 150,000 people had taken part — far more than predicted.",
+      "evidence": "expecting a few hundred helpers; within a year, more than 150,000 people had made tens of millions of classifications",
       "vocab": [
-        "beats the algorithm",
-        "better than software"
+        "expecting a few hundred helpers",
+        "than its organisers had predicted"
       ]
     },
     "15": {
@@ -987,19 +999,19 @@
       ]
     },
     "16": {
-      "explain": "D: the paragraph states the doubt honestly — an untrained observer can misidentify a species — and then answers it with design: training, and checks built into the system.",
-      "evidence": "Scepticism about amateur data has always shadowed the field",
+      "explain": "D: the paragraph names two errors an untrained observer can make — mistaking one species for another, and counting the same bird twice. Paragraph F is about a project that failed, but there the volunteers made no mistakes; the phones did.",
+      "evidence": "an untrained observer can mistake one species for another, or count the same bird twice",
       "vocab": [
-        "Scepticism about amateur data",
-        "doubts about the reliability of volunteer records"
+        "an untrained observer",
+        "inexperienced observers"
       ]
     },
     "17": {
-      "explain": "E: the paragraph asks why people give up their evenings, and answers with belonging and purpose rather than money or curiosity.",
-      "evidence": "the strongest motives are belonging and purpose",
+      "explain": "E: Nair warns that projects which ignore their volunteers' need for community 'watch their helpers quietly drift away' — they lose them slowly. Paragraph F describes a project that ended, but because its app stopped working, not because its helpers left.",
+      "evidence": "Projects that ignore this, she notes, watch their helpers quietly drift away",
       "vocab": [
-        "Why do people give up their evenings",
-        "why volunteers continue to take part"
+        "quietly drift away",
+        "gradually lose their helpers"
       ]
     },
     "18": {
@@ -1007,7 +1019,7 @@
       "evidence": "The spread of smartphones has turned millions of pockets into portable laboratories",
       "vocab": [
         "turned millions of pockets into portable laboratories",
-        "millions of people now carry an instrument"
+        "millions carry an instrument"
       ]
     },
     "19": {
@@ -1043,11 +1055,11 @@
       ]
     },
     "23": {
-      "explain": "D, Herrera. He advises city governments, and his point is precisely that volunteer data now appears in court cases and policy — 'a transfer of power, not just of information'.",
-      "evidence": "Today those datasets are cited in court cases and written into official policy",
+      "explain": "D, Herrera. He calls the new official use of volunteer data 'a transfer of power, not just of information': the public now has influence, not only knowledge. Kowalczyk (E) talks about who owns volunteers' work, not about power.",
+      "evidence": "That is a transfer of power, not just of information",
       "vocab": [
-        "cited in court cases",
-        "influence legal and government decisions"
+        "a transfer of power, not just of information",
+        "gained influence, not only knowledge"
       ]
     },
     "24": {
@@ -1107,43 +1119,43 @@
       ]
     },
     "31": {
-      "explain": "C: the twenty-four-jam table pulled the crowd, but only a tiny fraction of them bought, against roughly ten times that rate at the six-jam table.",
-      "evidence": "only a tiny fraction went on to buy a jar",
+      "explain": "C: the opening uses the shelf of ninety cereals to show how easy it is to believe that abundance is an unmixed blessing — that more options are entirely good. The rest of the passage questions that belief.",
+      "evidence": "it is easy to believe that abundance is an unmixed blessing",
       "vocab": [
-        "drew a substantially bigger crowd",
-        "drew a larger crowd"
+        "an unmixed blessing",
+        "entirely good"
       ]
     },
     "32": {
-      "explain": "E: a maximiser cannot stop until every alternative has been examined, because the goal is the best possible option.",
-      "evidence": "cannot stop searching until every alternative has been examined",
+      "explain": "E: in the study, children from Asian-American families did best when told their mothers had chosen the puzzles, while European-American children did best with puzzles they had picked themselves.",
+      "evidence": "children from Asian-American families did best when they were told their mothers had chosen for them",
       "vocab": [
-        "determined to find the best possible option",
-        "in search of the best possible one"
+        "their mothers had chosen for them",
+        "their mothers had selected"
       ]
     },
     "33": {
-      "explain": "A: satisficers look for something good enough, take it and move on — the direct contrast with the maximiser in the same sentence.",
-      "evidence": "satisficers look until they find something good enough, choose it, and move on",
+      "explain": "A: where decisions are seen as shared with family, being handed a choice can feel 'less like a freedom than like a responsibility to carry alone' — a burden rather than a freedom.",
+      "evidence": "being handed a choice can feel less like a freedom than like a responsibility to carry alone",
       "vocab": [
-        "look until they find something good enough",
-        "stop searching once an option seems good enough"
+        "shared with family and community",
+        "made together with relatives"
       ]
     },
     "34": {
-      "explain": "G: averaged across every study, adding options had an effect close to zero — sometimes harmful, sometimes helpful, often neither.",
-      "evidence": "averaged across every study, the effect of adding options was close to zero",
+      "explain": "G: opt-out countries, which treat everyone as a donor unless they object, record far higher rates of registered donors than their opt-in neighbours, because most people simply keep the default.",
+      "evidence": "countries using the second record far higher rates of registered donors than their neighbours using the first",
       "vocab": [
-        "pooled the results of fifty separate experiments",
-        "The pooled analysis of fifty studies"
+        "unless they register an objection",
+        "unless they object"
       ]
     },
     "35": {
-      "explain": "B: the writer does not reject cutting options outright, but limits when it helps — complex options that are hard to compare, and a chooser who knows little about the field.",
-      "evidence": "choice becomes burdensome when the options are complex and hard to compare, when the chooser knows little about the field",
+      "explain": "B: the writer wants honest defaults 'for those who would rather not become experts' — people who would prefer not to study every option.",
+      "evidence": "supply honest defaults for those who would rather not become experts",
       "vocab": [
-        "when the chooser knows little about the field",
-        "the chooser inexperienced"
+        "would rather not become experts",
+        "would prefer not to study every option"
       ]
     },
     "36": {
@@ -1163,12 +1175,8 @@
       ]
     },
     "38": {
-      "explain": "NOT GIVEN: shops and websites appear only in the advice about organising options better. Nothing is said about retailers exploiting overload on purpose.",
-      "evidence": "It implies that shops, websites and governments do not need to ration our options",
-      "vocab": [
-        "shops, websites",
-        "online retailers"
-      ]
+      "explain": "NOT GIVEN: the writer says the wish for more personal choice owes something to a particular cultural tradition, but never says whether the differences between cultures will last or disappear.",
+      "evidence": "The conviction that more personal choice is always welcome, it seems, owes something to a particular cultural tradition"
     },
     "39": {
       "explain": "YES: the wine example is exactly this point — the same wall of bottles is suffering for a novice and a playground for a collector.",
@@ -1456,8 +1464,8 @@
       "explain": "Optical fibres are glass threads finer than a hair, carrying most of the world's information beneath the oceans as tiny flashes of light.",
       "evidence": "as tiny flashes of light",
       "vocab": [
-        "carry most of the world's information",
-        "carrying information"
+        "as tiny flashes of light",
+        "send data as tiny pulses of"
       ]
     },
     "40": {
@@ -1595,7 +1603,7 @@
       ]
     },
     "17": {
-      "explain": "C: Halvorsen's measurements of lead and other metals come out far below safety limits, and she calls the pollution fear misplaced.",
+      "explain": "C: Lindahl's measurements of lead and other metals come out far below safety limits, and she calls the pollution fear misplaced.",
       "evidence": "are almost always far below the safety limits",
       "vocab": [
         "far below the safety limits",
@@ -1619,7 +1627,7 @@
       ]
     },
     "20": {
-      "explain": "What Halvorsen measures is lead and other metals, and the levels sit far below the safety limits — traces, not contamination.",
+      "explain": "What Lindahl measures is lead and other metals, and the levels sit far below the safety limits — traces, not contamination.",
       "evidence": "the levels of lead and other metals we measure are almost always far below the safety limits",
       "vocab": [
         "far below the safety limits",
@@ -1651,7 +1659,7 @@
       ]
     },
     "24": {
-      "explain": "A, Halvorsen. Pollen grains and trace compounds in the honey show which trees line the streets and which weeds fill the empty plots.",
+      "explain": "A, Lindahl. Pollen grains and trace compounds in the honey show which trees line the streets and which weeds fill the empty plots.",
       "evidence": "Reading its honey tells you more about a neighbourhood's environment than any instrument we could afford to install",
       "vocab": [
         "Reading its honey tells you more",
@@ -1715,16 +1723,20 @@
       ]
     },
     "32": {
-      "explain": "F: lyrics are the specific problem for reading, because the words of the song compete with the words on the page.",
-      "evidence": "reading comprehension suffers particularly when the music includes lyrics",
+      "explain": "F: the 1993 Mozart result was real but tiny and brief, and the same small boost followed a story or a pop song the listener liked — it was not about Mozart or classical music at all.",
+      "evidence": "The boost was real but tiny and brief, and — crucially — it was not about Mozart",
       "vocab": [
-        "contains language",
-        "includes lyrics"
+        "real but tiny and brief",
+        "slight, short-lived"
       ]
     },
     "33": {
       "explain": "A: introverts run closer to their optimal level of stimulation, so background music pushes them past it more easily than it does outgoing people.",
-      "evidence": "tend to be more affected by background music than outgoing people"
+      "evidence": "tend to be more affected by background music than outgoing people",
+      "vocab": [
+        "outgoing people",
+        "extroverts"
+      ]
     },
     "34": {
       "explain": "E: chosen music is predictable, carries no social irritation and can be switched off — which is why headphones are tolerable where a colleague's radio is not.",
@@ -2259,8 +2271,12 @@
       ]
     },
     "25": {
-      "explain": "B: the measured figure is about four per cent. A is wrong — a ban was demanded but the governing body set limits instead — and E is wrong because the muscle-damage claim rests on much weaker evidence.",
-      "evidence": "an improvement in running economy of about four per cent"
+      "explain": "B: almost every major record since the shoes appeared in 2016 has been set in them. A is wrong — a ban was demanded but the governing body set limits instead — C is wrong because the benefit varies between individuals, and E is wrong because the muscle-damage claim rests on much weaker evidence.",
+      "evidence": "almost every major record since has been set in the new shoes",
+      "vocab": [
+        "almost every major record since",
+        "Nearly all of the sport's major records"
+      ]
     },
     "26": {
       "explain": "D: Soto led one of the laboratory teams and measured the effect on treadmill runners. C is contradicted in the same paragraph — the benefit varies noticeably between individuals.",
@@ -2939,12 +2955,8 @@
       ]
     },
     "35": {
-      "explain": "NOT GIVEN: the writer says the birds rival primates at spatial memory. 'Rival' is not 'superior to', and no ranking is claimed.",
-      "evidence": "perform feats of spatial memory that rival those of primates",
-      "vocab": [
-        "rival those of primates",
-        "superior to that of any mammal"
-      ]
+      "explain": "NOT GIVEN: the writer compares food-storing birds with species that store little and says their spatial memory rivals that of primates, but never ranks the nutcracker against other food-storing birds.",
+      "evidence": "perform feats of spatial memory that rival those of primates"
     },
     "36": {
       "explain": "NO: the final sentence says the opposite — memory evolved many times, wherever remembering paid its way.",
@@ -3516,7 +3528,11 @@
     },
     "31": {
       "explain": "D: hatchlings disappear into decades of open-ocean wandering and return to breed on their birth shore, sometimes within a few kilometres.",
-      "evidence": "return to breed on the shore where they hatched"
+      "evidence": "return to breed on the shore where they hatched",
+      "vocab": [
+        "return to breed on the shore where they hatched",
+        "come back to their birthplace to lay their eggs"
+      ]
     },
     "32": {
       "explain": "A: the planetarium birds learned no constellations. They watched which point the artificial sky turned around and called that north — and moved their pole when the experimenters moved the centre.",
@@ -3536,7 +3552,11 @@
     },
     "34": {
       "explain": "C: in the cryptochrome account the field biases chemical reactions in the retina — implying a bird may in effect see the field laid over the visual world.",
-      "evidence": "implying, remarkably, that a bird might in effect see the magnetic field"
+      "evidence": "implying, remarkably, that a bird might in effect see the magnetic field",
+      "vocab": [
+        "might in effect see the magnetic field",
+        "the magnetic field may be visible to birds"
+      ]
     },
     "35": {
       "explain": "B: pigeons temporarily unable to smell struggled from unfamiliar release sites while intact birds flew straight home — repeated many times.",
@@ -3910,8 +3930,8 @@
       "explain": "Whalebone was the alternative to wood, and the passage says it was expensive and cracked easily — a gust could leave a ruined bird-cage on a stick.",
       "evidence": "with a frame of wood or whalebone",
       "vocab": [
-        "it cracked easily",
-        "which broke easily"
+        "cracked easily",
+        "easily damaged"
       ]
     },
     "6": {
@@ -4432,8 +4452,8 @@
       "explain": "Having learned to raise the moths and weave the fibre, the Chinese told nobody — the method was guarded as closely as a military plan.",
       "evidence": "The entire method was treated as a state secret",
       "vocab": [
-        "they told nobody",
-        "kept as a state"
+        "was treated as a state secret",
+        "was guarded as an official"
       ]
     },
     "34": {
@@ -4448,8 +4468,8 @@
       "explain": "The Silk Road was not one road but a web of routes through high mountain passes and wide deserts, travelled in stages.",
       "evidence": "but a web of routes threading through high mountain passes and wide deserts",
       "vocab": [
-        "a web of routes",
-        "a network of routes"
+        "high mountain passes and wide deserts",
+        "mountain ranges and arid"
       ]
     },
     "36": {
@@ -4511,15 +4531,15 @@
       "evidence": "An exposure of about eight hours was needed",
       "vocab": [
         "An exposure of about eight hours was needed",
-        "required an exposure lasting about eight"
+        "had to be left in the camera for roughly eight"
       ]
     },
     "4": {
       "explain": "Daguerre found a barely visible image could be brought up by exposing the plate to the vapour of warmed mercury, cutting exposure from hours to minutes.",
       "evidence": "by exposing the plate to the vapour of warmed mercury",
       "vocab": [
-        "by exposing the plate to the vapour",
-        "using the vapour"
+        "exposing the plate to the vapour of warmed",
+        "treating the plate with fumes from heated"
       ]
     },
     "5": {
@@ -4640,7 +4660,11 @@
     },
     "20": {
       "explain": "The second ordinary cause: shopping without first checking what is already at home.",
-      "evidence": "they shop without checking the fridge"
+      "evidence": "they shop without checking the fridge",
+      "vocab": [
+        "shop without checking",
+        "go shopping without first looking in"
+      ]
     },
     "21": {
       "explain": "Her list of unglamorous remedies begins with writing a shopping list — the four together cut a family's waste by a third.",
@@ -5632,8 +5656,8 @@
       "explain": "Rising magma cracks the rock around it, producing earthquakes too weak to feel but detectable by instruments planted across the slopes.",
       "evidence": "they are detected by instruments called seismometers",
       "vocab": [
-        "every crack produces a small earthquake",
-        "causing small earthquakes"
+        "they are detected by instruments called",
+        "picked up by"
       ]
     },
     "32": {
@@ -5672,8 +5696,8 @@
       "explain": "Rising gas usually means rising magma — but a sudden drop is the dangerous case, because a blocked vent lets pressure build towards an explosion.",
       "evidence": "a sudden fall in gas may mean the vent has become blocked",
       "vocab": [
-        "pressure then builds towards an explosion",
-        "pressure then builds up"
+        "a sudden fall in gas",
+        "a drop in gas output"
       ]
     },
     "38": {
@@ -5693,7 +5717,7 @@
       "evidence": "and that is the work of a volcano observatory",
       "vocab": [
         "scientists weigh them together",
-        "are combined"
+        "are weighed together"
       ]
     }
   },
@@ -5938,8 +5962,8 @@
       "explain": "A: the researchers' own objection — it was a group average, and some violinists needed far fewer hours and others far more.",
       "evidence": "some violinists had needed far fewer hours, others far more",
       "vocab": [
-        "not a threshold for individuals",
-        "not a target for individuals"
+        "an average across a group, not a threshold for individuals",
+        "a typical figure for a group rather than a goal for each person"
       ]
     },
     "33": {
@@ -6033,7 +6057,7 @@
       ]
     },
     "5": {
-      "explain": "Confirmed twice — flat six, number fourteen, and the street is the one directly opposite the school gates.",
+      "explain": "Confirmed twice — flat six, number fourteen, and the street is the one directly opposite the school gates. The street name is not spelled out in the recording, so Bostan is accepted as well as Bustan.",
       "evidence": "It's flat six, number fourteen, Bustan Street"
     },
     "6": {
@@ -6269,7 +6293,7 @@
       "evidence": "Taking a merino sheep out of the country was a crime punished by death",
       "vocab": [
         "Taking a merino sheep out of the country",
-        "exporting a merino from Spain"
+        "smuggling a merino out of Spain"
       ]
     },
     "38": {
@@ -6293,7 +6317,7 @@
       "evidence": "Builders now pack sheep's wool inside the walls of new houses as insulation",
       "vocab": [
         "Builders now pack sheep's wool",
-        "sheep's wool used as"
+        "wool packed into the walls"
       ]
     }
   },
@@ -6491,7 +6515,7 @@
       ]
     },
     "26": {
-      "explain": "B, Halvorsen. Battery chemistry improved far more slowly than the pioneers assumed, and the 1914 batteries broke the carmakers' promises.",
+      "explain": "B, Larsen. Battery chemistry improved far more slowly than the pioneers assumed, and the 1914 batteries broke the carmakers' promises.",
       "evidence": "Battery chemistry improved far more slowly than the pioneers assumed it would",
       "vocab": [
         "far more slowly than the pioneers assumed",
@@ -6918,8 +6942,8 @@
       "explain": "France was fighting across half of Europe, and the 1795 prize of twelve thousand francs covered preserving food for both services.",
       "evidence": "a reliable way of preserving food for its navy and army",
       "vocab": [
-        "announced a prize of twelve thousand francs",
-        "The 1795 prize"
+        "preserving food for its navy",
+        "keeping supplies fresh for France's sailors"
       ]
     },
     "2": {

@@ -124,7 +124,7 @@ export const MOCK7_LISTENING = {
               "• Roman soldiers: money to buy salt — origin of the word {{35}}",
               "• the Via Salaria road built to move salt inland",
               "## Preservation",
-              "• the main way of storing {{36}} and fish before refrigeration",
+              "• before fridges, the chief method of keeping {{36}} and fish edible",
               "• works by removing the {{37}} that bacteria need",
               "• cheap salted cod fed generations of {{38}} on long voyages",
               "## Salt and power",

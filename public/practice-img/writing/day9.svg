@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Donations by one company to six types of charity, 2012–2014</text>
+  <g font-size="11" fill="#555">
+    <text x="70" y="344" text-anchor="end">0</text>
+    <line x1="80" y1="295" x2="620" y2="295" stroke="#eee"/><text x="70" y="299" text-anchor="end">5</text>
+    <line x1="80" y1="250" x2="620" y2="250" stroke="#eee"/><text x="70" y="254" text-anchor="end">10</text>
+    <line x1="80" y1="205" x2="620" y2="205" stroke="#eee"/><text x="70" y="209" text-anchor="end">15</text>
+    <line x1="80" y1="160" x2="620" y2="160" stroke="#eee"/><text x="70" y="164" text-anchor="end">20</text>
+    <line x1="80" y1="115" x2="620" y2="115" stroke="#eee"/><text x="70" y="119" text-anchor="end">25</text>
+    <line x1="80" y1="70" x2="620" y2="70" stroke="#eee"/><text x="70" y="74" text-anchor="end">30</text>
+  </g>
+  <line x1="80" y1="340" x2="620" y2="340" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="55" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#000">
+    <rect x="92" y="139.3" width="22" height="200.7" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="114" y="178" width="22" height="162" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="136" y="124" width="22" height="216" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="125" y="356" text-anchor="middle">Social</text><text x="125" y="369" text-anchor="middle">welfare</text>
+    <rect x="182" y="265.3" width="22" height="74.7" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="204" y="286" width="22" height="54" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="226" y="265.3" width="22" height="74.7" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="215" y="356" text-anchor="middle">Education</text>
+    <rect x="272" y="265.3" width="22" height="74.7" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="294" y="295" width="22" height="45" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="316" y="279.7" width="22" height="60.3" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="305" y="356" text-anchor="middle">Environment</text>
+    <rect x="362" y="286" width="22" height="54" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="384" y="274.3" width="22" height="65.7" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="406" y="257.2" width="22" height="82.8" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="395" y="356" text-anchor="middle">Health</text>
+    <rect x="452" y="313" width="22" height="27" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="474" y="304" width="22" height="36" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="496" y="295" width="22" height="45" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="485" y="356" text-anchor="middle">Wildlife</text>
+    <rect x="542" y="313" width="22" height="27" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="564" y="313" width="22" height="27" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="586" y="304" width="22" height="36" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="575" y="356" text-anchor="middle">Arts</text>
+  </g>
+  <text x="28" y="205" font-size="11" fill="#555" transform="rotate(-90 28 205)" text-anchor="middle">Thousands of dollars</text>
+  <g>
+    <rect x="221.4" y="38" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="246.4" y="48" font-size="12" fill="#000">2012</text>
+    <rect x="297.8" y="38" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="322.8" y="48" font-size="12" fill="#000">2013</text>
+    <rect x="374.2" y="38" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="399.2" y="48" font-size="12" fill="#000">2014</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Average monthly salary and television prices in Japan, 1970–2000</text>
+  <line x1="70" y1="350" x2="610" y2="350" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="350" x2="70" y2="55" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#555">
+    <text x="60" y="354" text-anchor="end">0</text>
+    <line x1="70" y1="303.3" x2="610" y2="303.3" stroke="#eee"/><text x="60" y="307.3" text-anchor="end">20</text>
+    <line x1="70" y1="256.7" x2="610" y2="256.7" stroke="#eee"/><text x="60" y="260.7" text-anchor="end">40</text>
+    <line x1="70" y1="210" x2="610" y2="210" stroke="#eee"/><text x="60" y="214" text-anchor="end">60</text>
+    <line x1="70" y1="163.3" x2="610" y2="163.3" stroke="#eee"/><text x="60" y="167.3" text-anchor="end">80</text>
+    <line x1="70" y1="116.7" x2="610" y2="116.7" stroke="#eee"/><text x="60" y="120.7" text-anchor="end">100</text>
+    <line x1="70" y1="70" x2="610" y2="70" stroke="#eee"/><text x="60" y="74" text-anchor="end">120</text>
+  </g>
+  <g font-size="11" fill="#555" text-anchor="middle">
+    <text x="70" y="368">1970</text><text x="160" y="368">1975</text><text x="250" y="368">1980</text><text x="340" y="368">1985</text><text x="430" y="368">1990</text><text x="520" y="368">1995</text><text x="610" y="368">2000</text>
+  </g>
+  <text x="20" y="210" font-size="11" fill="#555" transform="rotate(-90 20 210)" text-anchor="middle">Thousands of yen</text>
+  <polyline points="70,93.3 160,198.3 250,261.3 340,273 430,284.7 520,296.3 610,301" fill="none" stroke="#1d3a6b" stroke-width="2.5"/><circle cx="70" cy="93.3" r="3" fill="#1d3a6b"/><circle cx="160" cy="198.3" r="3" fill="#1d3a6b"/><circle cx="250" cy="261.3" r="3" fill="#1d3a6b"/><circle cx="340" cy="273" r="3" fill="#1d3a6b"/><circle cx="430" cy="284.7" r="3" fill="#1d3a6b"/><circle cx="520" cy="296.3" r="3" fill="#1d3a6b"/><circle cx="610" cy="301" r="3" fill="#1d3a6b"/>
+  <polyline points="250,140 340,198.3 430,219.3 520,231 610,240.3" fill="none" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><circle cx="250" cy="140" r="3" fill="#009472"/><circle cx="340" cy="198.3" r="3" fill="#009472"/><circle cx="430" cy="219.3" r="3" fill="#009472"/><circle cx="520" cy="231" r="3" fill="#009472"/><circle cx="610" cy="240.3" r="3" fill="#009472"/>
+  <polyline points="70,305.7 160,303.3 250,298.7 340,296.3 430,289.3 520,273 610,193.7" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><circle cx="70" cy="305.7" r="3" fill="#c0392b"/><circle cx="160" cy="303.3" r="3" fill="#c0392b"/><circle cx="250" cy="298.7" r="3" fill="#c0392b"/><circle cx="340" cy="296.3" r="3" fill="#c0392b"/><circle cx="430" cy="289.3" r="3" fill="#c0392b"/><circle cx="520" cy="273" r="3" fill="#c0392b"/><circle cx="610" cy="193.7" r="3" fill="#c0392b"/>
+  <g>
+    <line x1="53.7" y1="44" x2="79.7" y2="44" stroke="#1d3a6b" stroke-width="2.5"/><text x="84.7" y="48" font-size="12" fill="#000">Black and white TV price</text>
+    <line x1="262.1" y1="44" x2="288.1" y2="44" stroke="#009472" stroke-width="2.5" stroke-dasharray="7 4"/><text x="293.1" y="48" font-size="12" fill="#000">Colour TV price</text>
+    <line x1="411.1" y1="44" x2="437.1" y2="44" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="2 4"/><text x="442.1" y="48" font-size="12" fill="#000">Average monthly salary</text>
+  </g>
+</svg>

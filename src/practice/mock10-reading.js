@@ -43,7 +43,7 @@ Elevators now complete billions of journeys every day, and per trip they are amo
         { n: 10, type: "tfng", prompt: "Otis's 1854 demonstration was reported in newspapers across America.", answer: "NOT GIVEN" },
         { n: 11, type: "tfng", prompt: "Very tall buildings appeared as soon as the first passenger elevator opened.", answer: "FALSE" },
         { n: 12, type: "tfng", prompt: "Electric elevators operated at higher speeds than steam-powered ones.", answer: "TRUE" },
-        { n: 13, type: "tfng", prompt: "The writer believes the elevator changed which floors of a building people wanted to occupy.", answer: "TRUE" },
+        { n: 13, type: "tfng", prompt: "The elevator changed which floors of a building people wanted to occupy.", answer: "TRUE" },
       ],
     },
     {
@@ -113,7 +113,7 @@ Where does this leave the ambitious learner? Neither of the old, comfortable sto
         { n: 30, type: "mcq", prompt: "In the final paragraph, the writer concludes that deliberate practice", options: ["A should be abandoned as a scientific theory", "B matters only for those who begin in childhood", "C guarantees expertise in games and music", "D is the most useful factor that a learner can control"], answer: "D" },
         { n: 31, type: "match", group: "ends", boxTitle: "Sentence endings",
           box: [
-            "was an average across a group, not a target for individuals.",
+            "described a typical figure for a group rather than a goal for each person.",
             "predicts success more strongly in games and music than in the professions.",
             "demands effort and feedback rather than enjoyable repetition.",
             "shows that talent can be detected in early childhood.",

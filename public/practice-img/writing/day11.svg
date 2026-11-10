@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
+  <rect width="660" height="420" fill="#ffffff"/>
+  <text x="330" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Who helped children with four activities, Australia, 2013 (%)</text>
+  <g font-size="11" fill="#555">
+    <text x="70" y="344" text-anchor="end">0</text>
+    <line x1="80" y1="286" x2="620" y2="286" stroke="#eee"/><text x="70" y="290" text-anchor="end">20</text>
+    <line x1="80" y1="232" x2="620" y2="232" stroke="#eee"/><text x="70" y="236" text-anchor="end">40</text>
+    <line x1="80" y1="178" x2="620" y2="178" stroke="#eee"/><text x="70" y="182" text-anchor="end">60</text>
+    <line x1="80" y1="124" x2="620" y2="124" stroke="#eee"/><text x="70" y="128" text-anchor="end">80</text>
+    <line x1="80" y1="70" x2="620" y2="70" stroke="#eee"/><text x="70" y="74" text-anchor="end">100</text>
+  </g>
+  <line x1="80" y1="340" x2="620" y2="340" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="55" stroke="#333" stroke-width="1.5"/>
+  <g font-size="11" fill="#000">
+    <rect x="108.5" y="151" width="26" height="189" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="134.5" y="286" width="26" height="54" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="160.5" y="326.5" width="26" height="13.5" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="147.5" y="356" text-anchor="middle">Dressing</text>
+    <rect x="243.5" y="178" width="26" height="162" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="269.5" y="259" width="26" height="81" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="295.5" y="315.7" width="26" height="24.3" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="282.5" y="356" text-anchor="middle">Homework</text>
+    <rect x="378.5" y="275.2" width="26" height="64.8" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="404.5" y="151" width="26" height="189" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="430.5" y="323.8" width="26" height="16.2" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="417.5" y="356" text-anchor="middle">Playing games</text>
+    <rect x="513.5" y="215.8" width="26" height="124.2" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><rect x="539.5" y="205" width="26" height="135" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><rect x="565.5" y="334.6" width="26" height="5.4" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="552.5" y="356" text-anchor="middle">Getting ready</text><text x="552.5" y="369" text-anchor="middle">for bed</text>
+  </g>
+  <text x="28" y="205" font-size="11" fill="#555" transform="rotate(-90 28 205)" text-anchor="middle">Percentage of time</text>
+  <g>
+    <rect x="208.2" y="38" width="14" height="12" fill="#1d3a6b" stroke="#333" stroke-width="0.6"/><text x="233.2" y="48" font-size="12" fill="#000">Mother</text>
+    <rect x="297.8" y="38" width="14" height="12" fill="#7fb8a6" stroke="#333" stroke-width="0.6"/><text x="322.8" y="48" font-size="12" fill="#000">Father</text>
+    <rect x="387.4" y="38" width="14" height="12" fill="#c0392b" stroke="#333" stroke-width="0.6"/><text x="412.4" y="48" font-size="12" fill="#000">Both</text>
+  </g>
+</svg>

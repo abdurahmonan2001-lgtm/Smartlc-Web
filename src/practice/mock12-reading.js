@@ -29,7 +29,7 @@ The can, however, was still some distance from the convenient object we know tod
 
 Once those pieces were in place, canned food stopped being military equipment and became ordinary groceries. Machines replaced hand-soldering, output rose from dozens of cans a day to thousands an hour, and prices fell steadily. For city families with no garden and no cellar, cans put vegetables on the table in the middle of winter; for emigrants and settlers, they made it possible to live for months beyond the reach of any market. The can changed the world's diet so quietly and so completely that its origins were largely forgotten: a sweet-maker's fifteen years of patience, a prize offered to feed an army, and a kitchen process that waited fifty years for anyone to understand why it worked.`,
       questions: [
-        { n: 1, type: "gap", prompt: "The 1795 prize was for a way of preserving food for the French navy and ______.", note: "ONE WORD ONLY", answer: "army" },
+        { n: 1, type: "gap", prompt: "The 1795 competition sought a method of keeping supplies fresh for France's sailors and its ______.", note: "ONE WORD ONLY", answer: "army" },
         { n: 2, type: "gap", prompt: "Before his experiments, Appert had worked as a ______.", note: "ONE WORD ONLY", answer: "confectioner" },
         { n: 3, type: "gap", prompt: "Appert packed food into glass ______ with wide necks.", note: "ONE WORD ONLY", answer: "jars" },
         { n: 4, type: "gap", prompt: "The containers were sealed with wax, wire and thick ______.", note: "ONE WORD ONLY", answer: "corks" },
