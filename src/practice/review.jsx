@@ -17,9 +17,15 @@ export const isMockResult = (testId) => /^mock\d+-/.test(String(testId));
  * had actually said. */
 export function answerText(value, options) {
   const v = String(value ?? "").trim();
-  if (!/^[A-Z]$/i.test(v) || !Array.isArray(options)) return v;
-  const o = options.find((x) => new RegExp(`^${v}[\\s.)]`, "i").test(String(x)));
-  return o ? `${v.toUpperCase()} — ${String(o).replace(/^[A-Z][\s.)]+/i, "")}` : v;
+  if (!/^[A-Z]$/.test(v) || !Array.isArray(options) || !options.length) return v;
+  // Options written "B New housing…" are found by their letter. Choose-TWO
+  // options carry no letter ("a higher borrowing limit"), so there the letter
+  // is the option's place in the list — matching "A" against "a higher…"
+  // once showed a student the text of a different option.
+  const lettered = options.every((x) => /^[A-Z][\s.)]/.test(String(x)));
+  const o = lettered ? options.find((x) => String(x).startsWith(v)) : options[v.charCodeAt(0) - 65];
+  if (!o) return v;
+  return `${v} — ${lettered ? String(o).replace(/^[A-Z][\s.)]+/, "") : String(o)}`;
 }
 
 /* ─── Raw score → band ───

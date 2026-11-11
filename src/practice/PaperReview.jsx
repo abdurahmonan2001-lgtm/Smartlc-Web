@@ -48,6 +48,9 @@ export function useCueAudio() {
 }
 
 export const hasCue = (testId, n) => !!AUDIO_CUES[parentListeningId(testId)]?.[n];
+/* Whether the paper has a recording of ours at all (a paper a teacher uploaded
+ * does not, and its player would point at a file that is not there). */
+const hasRecording = (testId) => !!LINE_CUES[parentListeningId(testId)] || !!AUDIO_CUES[parentListeningId(testId)];
 export const cueOf = (testId, n) => AUDIO_CUES[parentListeningId(testId)]?.[n] || null;
 
 /* The recording part (1–4) a paper's section i is: a chunk paper carries only
@@ -96,16 +99,30 @@ export function PartPlayer({ testId, part, seek = null, start = 0, onTime = null
     const a = ref.current;
     if (!a) return;
     a.pause();
-    const put = () => { a.currentTime = start; setSt((s) => ({ ...s, t: start, playing: false })); };
-    if (a.readyState >= 1) put(); else a.addEventListener("loadedmetadata", put, { once: true });
+    // The play state is left to the play/pause events: a student who taps ▶
+    // before the file's length is known is playing, whatever this says.
+    const put = () => { a.currentTime = start; setSt((s) => ({ ...s, t: start, playing: !a.paused })); };
+    if (a.readyState >= 1) { put(); return undefined; }
+    a.addEventListener("loadedmetadata", put, { once: true });
+    return () => a.removeEventListener("loadedmetadata", put);
   }, [src, start]);
+  // play() is called at once, inside the tap, so a phone allows it; the jump
+  // waits for the file's length if it has to. A jump still waiting when the
+  // part changes is dropped, never carried over to the next recording.
   useEffect(() => {
     const a = ref.current;
-    if (!a || !seek) return;
-    const go = () => { a.currentTime = seek.t; a.play().catch(() => {}); };
-    if (a.readyState >= 1) go(); else a.addEventListener("loadedmetadata", go, { once: true });
+    if (!a || !seek) return undefined;
+    const go = () => { a.currentTime = seek.t; };
+    a.play().catch(() => {});
+    if (a.readyState >= 1) { go(); return undefined; }
+    a.addEventListener("loadedmetadata", go, { once: true });
+    return () => a.removeEventListener("loadedmetadata", go);
   }, [seek?.k]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => { if (ref.current) ref.current.playbackRate = RATES[rate]; }, [rate]);
+  // A new src resets the speed to the default, so the default is set too.
+  useEffect(() => {
+    const a = ref.current;
+    if (a) { a.defaultPlaybackRate = RATES[rate]; a.playbackRate = RATES[rate]; }
+  }, [rate, src]);
   useEffect(() => () => ref.current?.pause(), []);
 
   const a = () => ref.current;
@@ -530,9 +547,9 @@ export function PaperReview({ test, result, showStats = true, showVocab = true, 
           below is already the paper's navigation — tapping any question opens
           its part — and a second switcher would only cost the passage a band
           of height to say what the panel headings say anyway. */}
-      {(isListening && herePart) || (onRedo && redoCount > 0) ? (
+      {(isListening && herePart && hasRecording(tid)) || (onRedo && redoCount > 0) ? (
         <div className="pr-tools">
-          {isListening && herePart && (
+          {isListening && herePart && hasRecording(tid) && (
             <PartPlayer testId={tid} part={herePart} seek={seek} onTime={onTime}
               label={`${here} recording · tap a line of the script, or “Listen from here”`} />
           )}

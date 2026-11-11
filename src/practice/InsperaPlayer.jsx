@@ -541,7 +541,11 @@ export default function InsperaPlayer({ test, user, onExit, onFinish, examStep =
                               : q.type === "ynng" ? ["YES", "NO", "NOT GIVEN"]
                               : q.options
                             ).map((o) => {
-                              const val = (q.type === "mcq" || q.type === "select") ? o.slice(0, 1) : o;
+                              // A lettered option ("B the city website") is answered by its
+                              // letter; an unlettered one (a name, a phrase) by its words.
+                              // Taking the first character of those once marked every
+                              // such answer wrong, and ticked two radios starting "a".
+                              const val = (q.type === "mcq" || q.type === "select") && /^[A-Z][\s.)]/.test(o) ? o.slice(0, 1) : o;
                               return (
                                 <li key={o}>
                                   <input

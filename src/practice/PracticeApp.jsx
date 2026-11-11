@@ -62,7 +62,7 @@ const testsOfBook = (tests, access, bookId) => tests.filter((t) =>
   t.bookId === bookId && (String(bookId).startsWith("up:") || access.inProgramme(t.id)));
 
 /* ─── Library ─── */
-export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection }) {
+export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection, resultsKnown = true }) {
   // Mocks are IELTS-only and hidden below that. The level arrives a moment
   // after first paint, so the chosen tab is resolved on every render
   // rather than fixed at mount — otherwise a student can be left looking
@@ -113,7 +113,7 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
     const done = tests.length > 0 && doneTests.length === tests.length;
     const opens = Math.min(...tests.map((t) => access.opensAt(t.id) ?? Infinity));
     const state = !open ? "is-locked" : done ? "is-done" : doneTests.length ? "is-partial"
-      : now && opens === now ? "is-current" : now && opens < now ? "is-missed" : "";
+      : now && opens === now ? "is-current" : now && opens < now && resultsKnown ? "is-missed" : "";
     return { open, doneTests, done, opens, state };
   };
   const progs = programmes.map((p) => {
@@ -131,8 +131,10 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
       || lessons.find((l) => l.open && !l.done);
     return { ...p, lessons, openL, doneL, behind, avg, next };
   });
-  const mine = !access.owner && progs.length === 1 ? progs[0] : null;
-  const first = String(user.full_name || "").trim().split(/\s+/).slice(-1)[0] || "";
+  const mine = !access.owner && resultsKnown && progs.length === 1 ? progs[0] : null;
+  // Names here are written "Surname Firstname" (and may go on: "… qizi").
+  const names = String(user.full_name || "").trim().split(/\s+/);
+  const first = names[1] || names[0] || "";
 
   return (
     <div className="pr-lib">
@@ -178,8 +180,8 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
             <div className="pr-hero__ring" aria-label={`${pct}% of lessons done`}>
               <svg viewBox="0 0 100 100" width="120" height="120">
                 <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(255,255,255,.14)" strokeWidth="9" />
-                <circle cx="50" cy="50" r={R} fill="none" stroke="#e3b95a" strokeWidth="9" strokeLinecap="round"
-                  strokeDasharray={`${(C * pct) / 100} ${C}`} transform="rotate(-90 50 50)" />
+                {pct > 0 && <circle cx="50" cy="50" r={R} fill="none" stroke="#e3b95a" strokeWidth="9" strokeLinecap="round"
+                  strokeDasharray={`${(C * pct) / 100} ${C}`} transform="rotate(-90 50 50)" />}
               </svg>
               <span><b>{pct}%</b>done</span>
             </div>
@@ -965,6 +967,10 @@ export default function PracticeApp() {
   // testId → { raw, total } for every practice paper handed in: a Map, so
   // "done?" is .has() as before and the lesson cards can show the score.
   const [takenPractice, setTakenPractice] = useState(() => new Map());
+  // Whether the results have arrived. Until then (or if they cannot be read)
+  // no lesson may be called missed and no catch-up count shown: an empty
+  // record would paint every past lesson red.
+  const [resultsKnown, setResultsKnown] = useState(false);
 
   // Uploaded papers are read with the student's token, so after sign-in.
   useEffect(() => { if (user) fetchRemoteTests().then(setRemote); }, [user?.username]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -1015,6 +1021,7 @@ export default function PracticeApp() {
         scores.set(r.test_id, { raw: r.raw_score, total: r.total });
       }
       setTakenPractice(scores);
+      setResultsKnown(rows !== null);
     });
   };
   useEffect(loadTaken, [user]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -1234,6 +1241,7 @@ export default function PracticeApp() {
       onOpenBook={(bookId) => setView({ name: "book", bookId })}
       onOpenLesson={(level, n) => setView({ name: "lesson", level, n })}
       takenPractice={usedPractice}
+      resultsKnown={access.owner || resultsKnown}
       onNotebook={() => setView({ name: "notebook" })}
       completedMocks={doneMocks}
       access={access}

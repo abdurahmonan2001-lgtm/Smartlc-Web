@@ -146,7 +146,7 @@ function QuizMe({ items, username }) {
           {isRight(given) ? "Correct this time." : <>Still tricky — the answer is <strong>{answerText(q.correct, q.options)}</strong>.</>}
           <div className="pr-quiz__compare">
             <span>First time: <b>{String(q.your ?? "").trim() ? answerText(q.your, q.options) : "blank"}</b></span>
-            <span>This time: <b>{answerText(given, q.options)}</b></span>
+            <span>This time: <b>{answerText(q.options?.includes(given) && /^[A-Z][ .)]/.test(given) ? given[0] : given, q.options)}</b></span>
           </div>
           {q.explain && <div className="pr-review__why" style={{ marginTop: 6 }}>{q.explain}</div>}
           {/* Where the answer was, now lit. */}
