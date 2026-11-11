@@ -104,6 +104,36 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
     </button>
   );
 
+  // Each programme's lessons with their state, and the record they add up to
+  // (the hero and the cards read the same numbers).
+  const now = access.lessonNum;
+  const stateOf = (tests) => {
+    const open = tests.some((t) => access.isOpen(t.id));
+    const doneTests = tests.filter((t) => takenPractice.has(t.id));
+    const done = tests.length > 0 && doneTests.length === tests.length;
+    const opens = Math.min(...tests.map((t) => access.opensAt(t.id) ?? Infinity));
+    const state = !open ? "is-locked" : done ? "is-done" : doneTests.length ? "is-partial"
+      : now && opens === now ? "is-current" : now && opens < now ? "is-missed" : "";
+    return { open, doneTests, done, opens, state };
+  };
+  const progs = programmes.map((p) => {
+    const lessons = p.lessons.map((l) => ({ ...l, ...stateOf(l.tests) }));
+    const openL = lessons.filter((l) => l.open);
+    const doneL = openL.filter((l) => l.done);
+    // Behind = lessons already past and not finished; this lesson's papers
+    // are not late yet.
+    const behind = openL.filter((l) => !l.done && l.opens < (now || 0)).length;
+    const sc = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total);
+    const avg = sc.length ? Math.round(100 * sc.reduce((a, s) => a + s.raw, 0) / sc.reduce((a, s) => a + s.total, 0)) : null;
+    // Where "Continue" goes: this lesson if it is not finished, else the
+    // earliest one still owed.
+    const next = lessons.find((l) => l.open && !l.done && l.opens >= (now || 0))
+      || lessons.find((l) => l.open && !l.done);
+    return { ...p, lessons, openL, doneL, behind, avg, next };
+  });
+  const mine = !access.owner && progs.length === 1 ? progs[0] : null;
+  const first = String(user.full_name || "").trim().split(/\s+/).slice(-1)[0] || "";
+
   return (
     <div className="pr-lib">
       <header className="pr-lib__top">
@@ -119,11 +149,52 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
         </div>
       </header>
 
+      {/* The student's record at a glance, and the way straight back in. */}
+      {mine && mine.openL.length > 0 && (() => {
+        const pct = Math.round(100 * mine.doneL.length / mine.openL.length);
+        const R = 42, C = 2 * Math.PI * R;
+        return (
+          <section className="pr-hero">
+            <div className="pr-hero__main">
+              <div className="pr-hero__kicker">{mine.label}{now ? ` · lesson ${now}` : ""}</div>
+              <h1 className="pr-hero__hi">{first ? `Salom, ${first}!` : "Your practice"}</h1>
+              <p className="pr-hero__line">
+                {mine.behind > 0
+                  ? `${mine.behind} lesson${mine.behind === 1 ? "" : "s"} to catch up — one paper at a time.`
+                  : mine.doneL.length === mine.openL.length ? "Every lesson so far is done. Brilliant!"
+                    : "You’re on track. Keep it going!"}
+              </p>
+              <div className="pr-hero__stats">
+                <span><b>{mine.doneL.length}/{mine.openL.length}</b> lessons done</span>
+                {mine.avg != null && <span><b>{mine.avg}%</b> average</span>}
+                {mine.behind > 0 && <span className="is-warn"><b>{mine.behind}</b> to catch up</span>}
+              </div>
+              {mine.next && (
+                <button className="pr-hero__go" onClick={() => onOpenLesson(mine.level, mine.next.n)}>
+                  {mine.next.state === "is-current" ? "Start this lesson" : "Continue"} · Lesson {mine.next.n} →
+                </button>
+              )}
+            </div>
+            <div className="pr-hero__ring" aria-label={`${pct}% of lessons done`}>
+              <svg viewBox="0 0 100 100" width="120" height="120">
+                <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(255,255,255,.14)" strokeWidth="9" />
+                <circle cx="50" cy="50" r={R} fill="none" stroke="#e3b95a" strokeWidth="9" strokeLinecap="round"
+                  strokeDasharray={`${(C * pct) / 100} ${C}`} transform="rotate(-90 50 50)" />
+              </svg>
+              <span><b>{pct}%</b>done</span>
+            </div>
+            <img className="pr-hero__smarty" src="/smarty/hero.png" alt="" />
+          </section>
+        );
+      })()}
+
       {/* Mocks are not merely locked below IELTS level — they are absent. */}
-      <div className="pr-tabs">
-        {access.mocks && tab("mock", "Mock exams", "Full test · one attempt")}
-        {access.practice && tab("practice", "Practice", "Single papers · one attempt each")}
-      </div>
+      {(access.mocks || access.practice) && (
+        <div className="pr-tabs">
+          {access.practice && tab("practice", "📝 Practice", "Lesson homework · one attempt each")}
+          {access.mocks && tab("mock", "🏆 Mock exams", "Full test · one attempt")}
+        </div>
+      )}
 
       {!access.practice && !access.mocks && (
         <p className="pr-lib__gate">
@@ -136,7 +207,7 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
 
       {/* Mocks stay whole books: a mock is a sitting, not a lesson. */}
       {section === "mock" && (
-        <div className="pr-lib__grid">
+        <div className="pr-lib__grid pr-lib__grid--books">
           {shown.map((b) => {
             const bookTests = forBook(b.id);
             const taken = takenMocks.has(b.id);
@@ -161,39 +232,12 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
 
       {/* Practice is arranged by lesson, because that is how it is set and how
           a student is told about it — "lesson 12", not "set 6, reading". */}
-      {section === "practice" && programmes.map(({ level, label, lessons }) => (
+      {section === "practice" && progs.map(({ level, label, lessons }) => (
         <div key={level}>
-          {programmes.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
-          {/* The whole record in one line: lessons handed in of those open,
-              and the average score over the papers done. */}
-          {!access.owner && (() => {
-            const openL = lessons.filter((l) => l.tests.some((t) => access.isOpen(t.id)))
-            const doneL = openL.filter((l) => l.tests.every((t) => takenPractice.has(t.id)))
-            const sc = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total)
-            // Behind = lessons already past and not finished; this lesson's
-            // papers are not late yet.
-            const behind = openL.filter((l) => !doneL.includes(l)
-              && Math.min(...l.tests.map((t) => access.opensAt(t.id) ?? Infinity)) < (access.lessonNum || 0)).length
-            const avg = sc.length ? Math.round(100 * sc.reduce((a, s) => a + s.raw, 0) / sc.reduce((a, s) => a + s.total, 0)) : null
-            return openL.length > 0 && (
-              <p className="pr-lib__record">
-                <b>{doneL.length} of {openL.length}</b> lessons done{avg != null && <> · average <b>{avg}%</b></>}
-                {behind > 0 && <span> · {behind} to catch up</span>}
-              </p>
-            )
-          })()}
+          {progs.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
           <div className="pr-lib__grid pr-lib__grid--lessons">
-            {lessons.map(({ n, tests }) => {
-              const open = tests.some((t) => access.isOpen(t.id));
-              const doneTests = tests.filter((t) => takenPractice.has(t.id));
-              const done = tests.length > 0 && doneTests.length === tests.length;
+            {lessons.map(({ n, tests, open, doneTests, done, state }) => {
               const mins = tests.reduce((s, t) => s + t.durationMin, 0);
-              // Where this lesson stands against the class: its homework is
-              // the current lesson's, or one already past and still undone.
-              const opens = Math.min(...tests.map((t) => access.opensAt(t.id) ?? Infinity));
-              const now = access.lessonNum;
-              const state = !open ? "is-locked" : done ? "is-done" : doneTests.length ? "is-partial"
-                : now && opens === now ? "is-current" : now && opens < now ? "is-missed" : "";
               return (
                 <button
                   className={`pr-lesson ${state}`}
@@ -202,21 +246,27 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
                   onClick={() => open && onOpenLesson(level, n)}
                 >
                   {state === "is-current" && <span className="pr-lesson__flag">This lesson</span>}
-                  <span className="pr-lesson__n">{done ? "✓" : n}</span>
-                  <span className="pr-lesson__title">{label} Lesson {n}</span>
-                  {/* The scores on the card's face: one chip a paper. */}
-                  {doneTests.length > 0 && (
+                  <span className="pr-lesson__n">
+                    {n}
+                    {done && <i className="pr-lesson__tick">✓</i>}
+                  </span>
+                  <span className="pr-lesson__title">Lesson {n}</span>
+                  {/* The papers on the card's face: a score chip once handed in. */}
+                  {open && (
                     <span className="pr-lesson__scores">
                       {tests.map((t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />)}
                     </span>
                   )}
                   <span className="pr-lesson__count">
-                    {!open ? "🔒 not yet"
+                    {!open ? "🔒 opens later"
                       : done ? "Done"
                         : doneTests.length ? `${doneTests.length} of ${tests.length} done`
                           : state === "is-missed" ? "Not done yet"
-                            : `${tests.length} paper${tests.length > 1 ? "s" : ""} · ${mins} min`}
+                            : `${mins} min`}
                   </span>
+                  {open && tests.length > 1 && (
+                    <span className="pr-lesson__bar"><i style={{ width: `${(100 * doneTests.length) / tests.length}%` }} /></span>
+                  )}
                 </button>
               );
             })}

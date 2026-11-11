@@ -2780,3 +2780,111 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .ph-btn:disabled { opacity: .45; cursor: default; }
 .ph-btn.is-ghost { background: transparent; color: #334155; border: 1px solid #cbd5e1; }
 .ph-done { font-size: 18px; font-weight: 800; margin: 6px 0; }
+
+/* ─── The practice library, dressed up (CEO, 11 Nov 2026: "too plain") ───
+   A racing-green hero with the student's record and a way straight back
+   in, pill tabs, and lesson cards that wear their state: a coloured top
+   edge, a number badge, a chip a paper and a bar of papers done. */
+.pr-hero {
+  position: relative; overflow: hidden; display: flex; align-items: center; gap: 22px;
+  margin: 0 0 22px; padding: 26px 28px; border-radius: 24px; color: #fff;
+  background: radial-gradient(120% 140% at 0% 0%, #0b5c50 0%, var(--racing) 55%, #001c1b 100%);
+  box-shadow: 0 18px 40px rgba(0, 43, 42, 0.22);
+}
+.pr-hero::after {
+  content: ""; position: absolute; right: -60px; top: -80px; width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,185,90,.22), rgba(227,185,90,0) 70%); pointer-events: none;
+}
+.pr-hero__main { flex: 1; min-width: 0; position: relative; z-index: 1; }
+.pr-hero__kicker { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #e3b95a; }
+.pr-hero__hi { margin: 4px 0 6px; font-size: 28px; font-weight: 900; letter-spacing: -.5px; color: #fff; }
+.pr-hero__line { margin: 0 0 14px; font-size: 15px; color: rgba(255,255,255,.82); }
+.pr-hero__stats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.pr-hero__stats span {
+  font-size: 13px; color: rgba(255,255,255,.85); background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 5px 12px;
+}
+.pr-hero__stats b { color: #fff; font-weight: 900; }
+.pr-hero__stats .is-warn { background: rgba(248,113,113,.18); border-color: rgba(248,113,113,.4); }
+.pr-hero__go {
+  border: none; cursor: pointer; border-radius: 14px; padding: 12px 20px;
+  background: #e3b95a; color: #2b1d00; font-weight: 900; font-size: 15px;
+  box-shadow: 0 6px 0 #b98c2c; transition: transform .12s ease, box-shadow .12s ease;
+}
+.pr-hero__go:hover { transform: translateY(-1px); }
+.pr-hero__go:active { transform: translateY(4px); box-shadow: 0 2px 0 #b98c2c; }
+.pr-hero__ring { position: relative; flex-shrink: 0; z-index: 1; display: grid; place-items: center; }
+.pr-hero__ring span {
+  position: absolute; inset: 0; display: grid; place-content: center; text-align: center;
+  font-size: 11px; font-weight: 700; color: rgba(255,255,255,.75); line-height: 1.1;
+}
+.pr-hero__ring b { display: block; font-size: 24px; font-weight: 900; color: #fff; }
+.pr-hero__smarty { width: 130px; flex-shrink: 0; margin: -10px -6px -30px 0; position: relative; z-index: 1; filter: drop-shadow(0 10px 18px rgba(0,0,0,.3)); }
+
+.pr-tabs { gap: 8px; padding: 5px; background: #eef2f1; border-radius: 16px; width: fit-content; max-width: 100%; }
+.pr-tab { border: none; background: transparent; border-radius: 12px; padding: 9px 16px; max-width: none; }
+.pr-tab.is-active { background: #fff; box-shadow: 0 4px 14px rgba(0, 43, 42, 0.1); }
+
+.pr-lib__grid--lessons { grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 16px; }
+.pr-lesson {
+  overflow: visible; gap: 7px; padding: 20px 14px 14px; border-radius: 18px;
+  border: 1px solid #e6ebea; background: #fff; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.pr-lesson::before {
+  content: ""; position: absolute; left: 14px; right: 14px; top: 0; height: 4px; border-radius: 0 0 6px 6px; background: #cbd5d1;
+}
+.pr-lesson:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(15, 61, 52, 0.12); border-color: #b7d8cf; }
+.pr-lesson__n {
+  position: relative; width: 50px; height: 50px; border-radius: 15px; font-size: 19px; font-weight: 900;
+  background: linear-gradient(150deg, #13574b, var(--racing)); box-shadow: 0 6px 14px rgba(0, 43, 42, 0.22);
+}
+.pr-lesson__tick {
+  position: absolute; right: -6px; bottom: -6px; width: 22px; height: 22px; border-radius: 50%;
+  display: grid; place-items: center; font-style: normal; font-size: 12px; font-weight: 900;
+  background: #e3b95a; color: #2b1d00; border: 2px solid #fff;
+}
+.pr-lesson__title { font-size: 14.5px; font-weight: 800; color: var(--ink); }
+.pr-lesson__count { font-size: 12px; font-weight: 700; }
+.pr-lesson__bar { width: 100%; height: 5px; border-radius: 999px; background: #eef2f1; overflow: hidden; margin-top: 2px; }
+.pr-lesson__bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #00b389, #047857); transition: width .4s ease; }
+
+.pr-lesson.is-done { background: linear-gradient(180deg, #f2fbf8, #fff 60%); border-color: #bfe7d9; }
+.pr-lesson.is-done::before { background: linear-gradient(90deg, #00b389, #047857); }
+.pr-lesson.is-done .pr-lesson__n { background: linear-gradient(150deg, #00b389, #047857); }
+.pr-lesson.is-partial { background: linear-gradient(180deg, #fffaf0, #fff 60%); border-color: #f5d48a; }
+.pr-lesson.is-partial::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.pr-lesson.is-partial .pr-lesson__n { background: linear-gradient(150deg, #f59e0b, #b45309); }
+.pr-lesson.is-partial .pr-lesson__bar i { background: linear-gradient(90deg, #fbbf24, #d97706); }
+.pr-lesson.is-current { border: 2px solid #0f766e; box-shadow: 0 10px 26px rgba(15,118,110,.18); }
+.pr-lesson.is-current::before { background: linear-gradient(90deg, #e3b95a, #f59e0b); }
+.pr-lesson.is-current .pr-lesson__n { animation: prPulse 2.2s ease-in-out infinite; }
+@keyframes prPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(15,118,110,.35); } 50% { box-shadow: 0 0 0 8px rgba(15,118,110,0); } }
+.pr-lesson.is-missed { background: linear-gradient(180deg, #fff6f6, #fff 60%); border-color: #f8caca; }
+.pr-lesson.is-missed::before { background: linear-gradient(90deg, #f87171, #dc2626); }
+.pr-lesson.is-missed .pr-lesson__n { background: linear-gradient(150deg, #ef4444, #b91c1c); }
+.pr-lesson.is-locked { opacity: .55; background: #f8faf9; box-shadow: none; }
+.pr-lesson.is-locked .pr-lesson__n { background: #d5dbd9; box-shadow: none; color: #7b8784; }
+.pr-lesson__flag { top: -11px; padding: 3px 10px; background: linear-gradient(90deg, #e3b95a, #f59e0b); color: #2b1d00; box-shadow: 0 4px 10px rgba(245,158,11,.3); }
+
+.pr-lib__grid--books { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; }
+.pr-book { border-radius: 18px; padding: 22px 14px 18px; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04); }
+.pr-book__cover {
+  width: 64px; height: 84px; border-radius: 10px; font-size: 22px;
+  background: linear-gradient(160deg, #13574b, var(--racing) 70%); border-bottom: 4px solid #e3b95a;
+}
+
+@media (max-width: 640px) {
+  .pr-hero { flex-wrap: wrap; padding: 22px 18px 18px; gap: 14px; }
+  /* The text takes the whole width; the ring and Smarty share the row under it. */
+  .pr-hero__main { flex: 1 1 100%; order: 2; }
+  .pr-hero__ring { order: 1; }
+  .pr-hero__smarty { order: 1; }
+  .pr-hero__hi { font-size: 24px; }
+  .pr-hero__ring svg { width: 92px; height: 92px; }
+  .pr-hero__ring b { font-size: 19px; }
+  .pr-hero__smarty { width: 92px; margin: 0 0 -24px auto; }
+  .pr-hero__go { width: 100%; }
+  .pr-lib__grid--lessons { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pr-tab { padding: 8px 12px; }
+}
