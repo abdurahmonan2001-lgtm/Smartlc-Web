@@ -18,7 +18,7 @@ import CourseRegion, { regionOf } from "./CourseRegion.jsx";
 const ISLAND_H = 200;
 const chapterName = (c) => (c.kind === "exam" ? (c.final ? "Final exam" : "Mid-term exam") : c.no === 0 ? "Start" : `Unit ${c.no}`);
 
-function Station({ l, here, tone, onOpen }) {
+export function Station({ l, here, tone, onOpen }) {
   const R = 22, C = 2 * Math.PI * R;
   const locked = l.state === "is-locked", done = l.state === "is-done";
   const missed = l.state === "is-missed", partial = l.state === "is-partial";

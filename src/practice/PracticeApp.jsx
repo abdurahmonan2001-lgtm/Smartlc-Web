@@ -3,7 +3,7 @@ import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, handoffStudent, hasSession, endSession, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import { unitsOf } from "./units.js";
-import PracticeMap from "./PracticeMap.jsx";
+import PracticeRoad from "./PracticeRoad.jsx";
 import CourseRegion, { regionOf } from "./CourseRegion.jsx";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
@@ -217,17 +217,16 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
       {section === "practice" && record}
 
       {/* Home: the journey, the Student App's course map for practice. */}
+      {/* The record across the top, then the road across the whole page. */}
       {section === "home" && (
-        <div className={`pr-exp__home ${record ? "has-record" : ""}`}>
-          {record && <aside className="pr-exp__side">{record}</aside>}
-          <div className="pr-exp__maps">
-            {progs.map((p) => (
-              <div key={p.level}>
-                {progs.length > 1 && <h2 className="pr-lib__prog">{p.label}</h2>}
-                <PracticeMap prog={p} onOpenLesson={onOpenLesson} />
-              </div>
-            ))}
-          </div>
+        <div className="pr-exp__home">
+          {record}
+          {progs.map((p) => (
+            <div key={p.level}>
+              {progs.length > 1 && <h2 className="pr-lib__prog">{p.label}</h2>}
+              <PracticeRoad prog={p} onOpenLesson={onOpenLesson} />
+            </div>
+          ))}
         </div>
       )}
 
@@ -1027,6 +1026,9 @@ export default function PracticeApp() {
   // null until the group's level and lesson are known. Until then nothing
   // unlocks: a failed lookup must never be read as permission.
   const [context, setContext] = useState({ level: null, lessonNum: null });
+  // Whose context that is, once the lookup has answered (or failed): a lesson
+  // link from the Student App must wait for it, not bounce to the library.
+  const [contextFor, setContextFor] = useState(null);
   const [takenMocks, setTakenMocks] = useState(() => new Set());
   const [completedMocks, setCompletedMocks] = useState(() => new Set());
   // testId → { raw, total } for every practice paper handed in: a Map, so
@@ -1047,7 +1049,8 @@ export default function PracticeApp() {
       .catch((e) => {
         console.error("could not read the student's level/lesson:", e);
         setContext({ level: null, lessonNum: null });
-      });
+      })
+      .finally(() => setContextFor(user.username));
   }, [user]);
   const access = accessFor(context.level, context.lessonNum);
   // An owner browses the library; they do not sit it for a record. Nothing
@@ -1173,6 +1176,7 @@ export default function PracticeApp() {
   if (!user) return <Login onLogin={login} />;
 
   if (view.name === "lesson") {
+    if (contextFor !== user.username) return <p className="pr-lib__gate">Opening your lesson…</p>;
     // A lesson belongs to a programme, and a student only has their own.
     // The owner has neither level, so both are allowed for them.
     const mine = access.owner || view.level === access.level;

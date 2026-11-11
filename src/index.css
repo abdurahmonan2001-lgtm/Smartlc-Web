@@ -3165,3 +3165,47 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* The library fills the screen (CEO, 11 Nov 2026: "why so much white space on the sides?" … "make it wider"): only a 32px margin, islands up to four a row. */
 .pr-lib.pr-exp { max-width: none; padding-left: 32px; padding-right: 32px; }
 @media (max-width: 640px) { .pr-lib.pr-exp { padding-left: 16px; padding-right: 16px; } }
+
+/* ─── Home: the course as one road, left to right (PracticeRoad.jsx; CEO,
+   11 Nov 2026). The islands stay for a phone. ─── */
+.pr-exp__home .pr-exp__top { margin-bottom: 16px; }
+.pr-rd__view { position: relative; border-radius: 26px; overflow: hidden; box-shadow: 0 14px 34px -18px rgba(15,23,42,.4); border: 1px solid rgba(255,255,255,.7); }
+.pr-rd__scroll { overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: thin; scrollbar-color: rgba(15,23,42,.25) transparent; overscroll-behavior-x: contain; }
+.pr-rd__scroll:active { cursor: grabbing; }
+.pr-rd__scroll::-webkit-scrollbar { height: 8px; }
+.pr-rd__scroll::-webkit-scrollbar-thumb { background: rgba(15,23,42,.22); border-radius: 4px; }
+.pr-rd__map { position: relative; user-select: none; -webkit-user-select: none; }
+.pr-rd__svg { position: absolute; inset: 0; display: block; }
+.pr-rd__shut { filter: saturate(.35); opacity: .75; }
+.pr-rd__card {
+  --line: #e3e9e7; position: absolute; top: 16px; z-index: 2; padding: 8px 12px; border-radius: 16px;
+  background: rgba(255,255,255,.86); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 12px rgba(15,23,42,.1); display: flex; flex-direction: column; gap: 1px;
+}
+.pr-rd__card strong { font-size: 17px; font-weight: 900; color: #1f2d2b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pr-rd__card.is-locked { opacity: .8; }
+.pr-rd__stop { position: absolute; z-index: 3; width: 56px; }
+.pr-rd__stop .pr-st { width: 56px; }
+.pr-rd__badge { position: absolute; left: 2px; top: -64px; overflow: visible; filter: drop-shadow(0 4px 8px rgba(15,23,42,.16)); }
+.pr-rd__badge.is-locked { filter: saturate(.3); opacity: .7; }
+.pr-rd__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; width: 44px; height: 44px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,.92); box-shadow: 0 4px 14px rgba(15,23,42,.2); font-size: 28px; line-height: 1;
+  color: #1f2d2b; cursor: pointer; display: flex; align-items: center; justify-content: center; padding-bottom: 4px;
+}
+.pr-rd__arrow:hover { background: #fff; }
+.pr-rd__arrow.is-left { left: 12px; }
+.pr-rd__arrow.is-right { right: 12px; }
+.pr-rd__units { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 2px 4px; }
+.pr-rd__units button {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px 5px 5px; border-radius: 999px; border: 1px solid #e3e9e7;
+  background: #fff; font: inherit; font-size: 12.5px; font-weight: 700; color: #334155; cursor: pointer;
+}
+.pr-rd__units button i {
+  font-style: normal; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--tone); color: #fff; font-size: 11px; font-weight: 800;
+}
+.pr-rd__units button:hover { border-color: var(--tone); }
+.pr-rd__units button.is-here { box-shadow: 0 0 0 2px #e3b95a; }
+.pr-rd__units button.is-done::after { content: "✓"; color: #059669; font-weight: 900; }
+.pr-rd__units button.is-locked { opacity: .55; }
