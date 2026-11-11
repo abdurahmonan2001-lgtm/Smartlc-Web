@@ -62,7 +62,7 @@ const testsOfBook = (tests, access, bookId) => tests.filter((t) =>
   t.bookId === bookId && (String(bookId).startsWith("up:") || access.inProgramme(t.id)));
 
 /* ─── Library ─── */
-function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection }) {
+export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection }) {
   // Mocks are IELTS-only and hidden below that. The level arrives a moment
   // after first paint, so the chosen tab is resolved on every render
   // rather than fixed at mount — otherwise a student can be left looking
@@ -164,24 +164,58 @@ function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onRes
       {section === "practice" && programmes.map(({ level, label, lessons }) => (
         <div key={level}>
           {programmes.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
+          {/* The whole record in one line: lessons handed in of those open,
+              and the average score over the papers done. */}
+          {!access.owner && (() => {
+            const openL = lessons.filter((l) => l.tests.some((t) => access.isOpen(t.id)))
+            const doneL = openL.filter((l) => l.tests.every((t) => takenPractice.has(t.id)))
+            const sc = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total)
+            // Behind = lessons already past and not finished; this lesson's
+            // papers are not late yet.
+            const behind = openL.filter((l) => !doneL.includes(l)
+              && Math.min(...l.tests.map((t) => access.opensAt(t.id) ?? Infinity)) < (access.lessonNum || 0)).length
+            const avg = sc.length ? Math.round(100 * sc.reduce((a, s) => a + s.raw, 0) / sc.reduce((a, s) => a + s.total, 0)) : null
+            return openL.length > 0 && (
+              <p className="pr-lib__record">
+                <b>{doneL.length} of {openL.length}</b> lessons done{avg != null && <> · average <b>{avg}%</b></>}
+                {behind > 0 && <span> · {behind} to catch up</span>}
+              </p>
+            )
+          })()}
           <div className="pr-lib__grid pr-lib__grid--lessons">
             {lessons.map(({ n, tests }) => {
               const open = tests.some((t) => access.isOpen(t.id));
-              const done = tests.length > 0 && tests.every((t) => takenPractice.has(t.id));
+              const doneTests = tests.filter((t) => takenPractice.has(t.id));
+              const done = tests.length > 0 && doneTests.length === tests.length;
               const mins = tests.reduce((s, t) => s + t.durationMin, 0);
+              // Where this lesson stands against the class: its homework is
+              // the current lesson's, or one already past and still undone.
+              const opens = Math.min(...tests.map((t) => access.opensAt(t.id) ?? Infinity));
+              const now = access.lessonNum;
+              const state = !open ? "is-locked" : done ? "is-done" : doneTests.length ? "is-partial"
+                : now && opens === now ? "is-current" : now && opens < now ? "is-missed" : "";
               return (
                 <button
-                  className={`pr-lesson ${open ? "" : "is-locked"} ${done ? "is-done" : ""}`}
+                  className={`pr-lesson ${state}`}
                   key={level + n}
                   disabled={!open}
                   onClick={() => open && onOpenLesson(level, n)}
                 >
-                  <span className="pr-lesson__n">{n}</span>
+                  {state === "is-current" && <span className="pr-lesson__flag">This lesson</span>}
+                  <span className="pr-lesson__n">{done ? "✓" : n}</span>
                   <span className="pr-lesson__title">{label} Lesson {n}</span>
+                  {/* The scores on the card's face: one chip a paper. */}
+                  {doneTests.length > 0 && (
+                    <span className="pr-lesson__scores">
+                      {tests.map((t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />)}
+                    </span>
+                  )}
                   <span className="pr-lesson__count">
                     {!open ? "🔒 not yet"
-                      : done ? "✓ done"
-                        : `${tests.length} paper${tests.length > 1 ? "s" : ""} · ${mins} min`}
+                      : done ? "Done"
+                        : doneTests.length ? `${doneTests.length} of ${tests.length} done`
+                          : state === "is-missed" ? "Not done yet"
+                            : `${tests.length} paper${tests.length > 1 ? "s" : ""} · ${mins} min`}
                   </span>
                 </button>
               );
@@ -191,6 +225,19 @@ function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onRes
       ))}
     </div>
   );
+}
+
+/* One paper's result as a chip: 🎧 8/10, green from 80%, amber from 50%,
+ * red below; a paper not yet handed in is a grey "to do". */
+const pctTone = (raw, total) => {
+  const p = total ? raw / total : 0;
+  return p >= 0.8 ? "is-high" : p >= 0.5 ? "is-mid" : "is-low";
+};
+function ScoreChip({ test, score }) {
+  const icon = test.module === "listening" ? "🎧" : "📖";
+  if (!score) return <span className="pr-chip is-todo">{icon} to do</span>;
+  if (score.raw == null || !score.total) return <span className="pr-chip is-high">{icon} ✓</span>;
+  return <span className={`pr-chip ${pctTone(score.raw, score.total)}`}>{icon} {score.raw}/{score.total}</span>;
 }
 
 /* ─── One lesson, as a page of its own ───
@@ -224,7 +271,9 @@ function LessonPage({ level, label, n, tests, user, access, onBack, onOpenBrief,
               {locked
                 ? <span className="pr-lock-chip">🔒 not open yet</span>
                 : done
-                  ? <span className="pr-done-chip">✓ done — review it under My results</span>
+                  ? <span className="pr-done-chip">
+                      ✓ {takenPractice.get(t.id)?.total ? `${takenPractice.get(t.id).raw}/${takenPractice.get(t.id).total} · ` : ""}review it under My mistakes
+                    </span>
                   : <button className="btn btn--primary" onClick={() => onOpenBrief(t.id)}>Start</button>}
             </div>
           );
@@ -424,6 +473,7 @@ function scoreTest(test, answers, username, startedAt) {
 let SUPPRESS_SAVES = false;
 export const setSuppressSaves = (v) => { SUPPRESS_SAVES = !!v; };
 const EMPTY_SET = new Set();
+const EMPTY_MAP = new Map();
 
 /** The essay tasks of a writing paper, as the grader needs them: the prompt a
  *  candidate actually saw, and the word target that carries the under-length
@@ -862,7 +912,9 @@ export default function PracticeApp() {
   const [context, setContext] = useState({ level: null, lessonNum: null });
   const [takenMocks, setTakenMocks] = useState(() => new Set());
   const [completedMocks, setCompletedMocks] = useState(() => new Set());
-  const [takenPractice, setTakenPractice] = useState(() => new Set());
+  // testId → { raw, total } for every practice paper handed in: a Map, so
+  // "done?" is .has() as before and the lesson cards can show the score.
+  const [takenPractice, setTakenPractice] = useState(() => new Map());
 
   // Uploaded papers are read with the student's token, so after sign-in.
   useEffect(() => { if (user) fetchRemoteTests().then(setRemote); }, [user?.username]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -883,7 +935,7 @@ export default function PracticeApp() {
   const NONE = EMPTY_SET;
   const usedMocks = access.owner ? NONE : takenMocks;
   const doneMocks = access.owner ? NONE : completedMocks;
-  const usedPractice = access.owner ? NONE : takenPractice;
+  const usedPractice = access.owner ? EMPTY_MAP : takenPractice;
 
   // Which mocks this student has used up. Starting a mock stores an
   // `mockN-attempt` marker, and finishing stores the three paper results,
@@ -907,9 +959,12 @@ export default function PracticeApp() {
       // Practice papers are once-only too: a finished paper is homework
       // handed in, and doing it again with the answers fresh would only
       // inflate the score the teacher sees. One result per test id.
-      setTakenPractice(new Set(
-        mine.filter((r) => r.module !== "attempt" && !mockOf(r.test_id)).map((r) => r.test_id),
-      ));
+      const scores = new Map();
+      for (const r of mine) {
+        if (r.module === "attempt" || mockOf(r.test_id) || scores.has(r.test_id)) continue;
+        scores.set(r.test_id, { raw: r.raw_score, total: r.total });
+      }
+      setTakenPractice(scores);
     });
   };
   useEffect(loadTaken, [user]);   // eslint-disable-line react-hooks/exhaustive-deps

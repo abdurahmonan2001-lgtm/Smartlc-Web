@@ -2587,6 +2587,34 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-lesson.is-locked { opacity: .5; cursor: not-allowed; }
 .pr-lesson.is-locked .pr-lesson__n { background: #d1d5db; color: #6b7280; }
 .pr-lesson.is-done .pr-lesson__n { background: #047857; }
+/* Done, half done, this lesson's, and missed: the state is on the card's face. */
+.pr-lesson { position: relative; }
+.pr-lesson.is-done { border-color: #a7e3cf; background: #f2fbf8; }
+.pr-lesson.is-done .pr-lesson__count { color: #047857; font-weight: 700; }
+.pr-lesson.is-partial { border-color: #f5d48a; background: #fffaf0; }
+.pr-lesson.is-partial .pr-lesson__n { background: #b45309; }
+.pr-lesson.is-partial .pr-lesson__count { color: #b45309; font-weight: 700; }
+.pr-lesson.is-current { border: 2px solid #0f766e; box-shadow: 0 6px 18px rgba(15,118,110,.14); }
+.pr-lesson.is-missed { border-color: #fbd5d5; background: #fff7f7; }
+.pr-lesson.is-missed .pr-lesson__n { background: #b91c1c; }
+.pr-lesson.is-missed .pr-lesson__count { color: #b91c1c; font-weight: 700; }
+.pr-lesson__flag {
+  position: absolute; top: -9px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: #0f766e; color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: .03em;
+  padding: 2px 9px; border-radius: 999px;
+}
+.pr-lib__record { margin: 0 0 12px; font-size: 14px; color: #475569; }
+.pr-lib__record b { color: #0f3d34; }
+.pr-lib__record span { color: #b91c1c; font-weight: 700; }
+.pr-lesson__scores { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+.pr-chip {
+  font-size: 11.5px; font-weight: 800; padding: 2px 7px; border-radius: 999px;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.pr-chip.is-high { background: #d9f4ea; color: #047857; }
+.pr-chip.is-mid { background: #fdefc8; color: #92400e; }
+.pr-chip.is-low { background: #fde2e2; color: #b91c1c; }
+.pr-chip.is-todo { background: #f1f5f9; color: #64748b; font-weight: 700; }
 
 /* ─── My mistakes: the shelf of papers already sat ───
    A student picks the paper first and the question second, because that is

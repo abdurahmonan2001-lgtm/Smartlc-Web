@@ -257,8 +257,11 @@ export async function gradeMockWriting(username, testId, tasks) {
   }
 }
 
+/* Every result, not the latest 50: an Upper-Intermediate student hands in two
+ * papers a lesson, so 50 ran out a little past half the course and the older
+ * lessons lost their done marks (and their papers left My mistakes). */
 export async function fetchResults(username) {
-  const q = `${URL_BASE}/rest/v1/practice_results?student_username=eq.${encodeURIComponent(username)}&order=taken_at.desc&limit=50`;
+  const q = `${URL_BASE}/rest/v1/practice_results?student_username=eq.${encodeURIComponent(username)}&order=taken_at.desc&limit=1000`;
   const res = await fetch(q, { headers: authHeaders() });
   if (!res.ok) return null;
   return res.json();
