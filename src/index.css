@@ -3013,3 +3013,108 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .pr-trail__map { padding: 22px 10px 8px; }
   .pr-trail__row { gap: 12px; }
 }
+
+/* ─── Home: the journey map (PracticeMap.jsx) beside the record ───
+   The landscapes are the Student App's (CourseRegion.jsx); on a wide screen
+   the record sits in a column of its own and stays in view while the map
+   scrolls. */
+.pr-exp__home.has-record { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 22px; align-items: start; }
+.pr-exp__side { position: sticky; top: 14px; }
+.pr-exp__side .pr-exp__top { grid-template-columns: minmax(0, 1fr); margin: 0; }
+.pr-exp__maps { min-width: 0; }
+.pr-map {
+  --line: #e3e9e7; --surface: #fff; --surface-3: #eef2f1;
+  border-radius: 24px; overflow: hidden; background: #f4f1e1; border: 1px solid #e3e9e7;
+  box-shadow: 0 10px 30px rgba(0, 43, 42, 0.08);
+}
+.slc-region-muted { filter: grayscale(.85); opacity: .55; }
+.pr-node {
+  position: relative; display: block; width: 100%; height: 96px; text-align: left; cursor: pointer;
+  background: #fff; border: 1.5px solid #e3e9e7; border-radius: 18px; padding: 10px 12px 8px;
+  box-shadow: 0 8px 18px -6px rgba(0, 43, 42, .22); transition: transform .15s ease, box-shadow .15s ease;
+  border-left: 6px solid var(--tone);
+}
+.pr-node:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 14px 26px -8px rgba(0, 43, 42, .3); }
+.pr-node:disabled { cursor: default; background: #f6f8f7; box-shadow: none; }
+.pr-node.is-here { border-color: #e3b95a; border-left-color: var(--tone); box-shadow: 0 0 0 3px rgba(227,185,90,.35), 0 12px 26px -8px rgba(0,43,42,.3); animation: prNode 2.4s ease-in-out infinite; }
+@keyframes prNode { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+.pr-node__here {
+  position: absolute; top: -24px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: #009472; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .06em;
+  padding: 4px 10px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,148,114,.35);
+}
+.pr-node__top { display: flex; align-items: center; gap: 9px; }
+.pr-node__n {
+  width: 34px; height: 34px; border-radius: 11px; flex-shrink: 0; display: grid; place-items: center;
+  background: var(--tone); color: #fff; font-weight: 900; font-size: 15px;
+}
+.pr-node__t { display: flex; flex-direction: column; min-width: 0; }
+.pr-node__t b { font-size: 14px; font-weight: 900; color: var(--ink); line-height: 1.2; }
+.pr-node__t em { font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--tone); }
+.pr-node.is-open .pr-node__t em, .pr-node.is-locked .pr-node__t em { color: #75908b; }
+.pr-node__chips { display: flex; gap: 4px; margin-top: 8px; flex-wrap: nowrap; overflow: hidden; }
+.pr-node__chips .pr-chip { font-size: 11px; padding: 2px 6px; }
+
+@media (max-width: 900px) {
+  .pr-exp__home.has-record { grid-template-columns: minmax(0, 1fr); }
+  .pr-exp__side { position: static; }
+  .pr-exp__side .pr-exp__top { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 4px; }
+}
+@media (max-width: 640px) {
+  .pr-exp__side .pr-exp__top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pr-map { border-radius: 18px; margin: 0 -8px; }
+}
+
+/* ─── A lesson's own page: its unit's landscape as the header ─── */
+.pr-lp { max-width: 860px; }
+.pr-lp__head {
+  position: relative; height: 200px; border-radius: 24px; overflow: hidden; margin-bottom: 18px;
+  --line: #e3e9e7; --surface: #fff; --surface-3: #eef2f1;
+  box-shadow: 0 12px 30px -10px rgba(0, 43, 42, .25);
+}
+.pr-lp__land { position: absolute; inset: 0; }
+.pr-lp__land svg { top: 0 !important; }
+.pr-lp__over { position: relative; z-index: 1; height: 100%; padding: 14px 18px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; }
+.pr-lp__back {
+  border: none; cursor: pointer; background: rgba(255,255,255,.85); color: var(--tone); font-weight: 800; font-size: 13px;
+  padding: 6px 12px; border-radius: 999px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.pr-lp__card {
+  background: var(--tone); color: #fff; border-radius: 18px; padding: 12px 16px; min-width: 260px;
+  box-shadow: 0 10px 22px -8px var(--tone); border: 1.5px solid rgba(255,255,255,.35);
+}
+.pr-lp__kicker { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.pr-lp__card h1 { margin: 2px 0 0; font-size: 24px; font-weight: 900; color: #fff; }
+.pr-lp__card p { margin: 0; font-size: 14px; font-weight: 700; opacity: .92; }
+.pr-lp__progress { display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 800; background: rgba(255,255,255,.2); border-radius: 999px; padding: 2px 9px; }
+.pr-lp__papers { display: grid; gap: 12px; }
+.pr-lp__paper {
+  display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 20px; background: #fff;
+  border: 1px solid #e6ebea; border-left: 6px solid var(--tone); box-shadow: 0 4px 14px rgba(15,23,42,.05);
+}
+.pr-lp__paper.is-done { background: linear-gradient(90deg, #f2fbf8, #fff 50%); }
+.pr-lp__paper.is-locked { opacity: .6; }
+.pr-lp__icon { width: 50px; height: 50px; border-radius: 16px; display: grid; place-items: center; font-size: 24px; background: #f4f7f6; flex-shrink: 0; }
+.pr-lp__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pr-lp__mod { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--tone); }
+.pr-lp__body strong { font-size: 16px; font-weight: 900; color: var(--ink); }
+.pr-lp__meta { font-size: 12.5px; color: #64748b; font-weight: 600; }
+.pr-lp__act { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+.pr-lp__hint { font-size: 11.5px; color: #64748b; font-weight: 600; }
+.pr-lp__start {
+  border: none; cursor: pointer; border-radius: 14px; padding: 11px 20px; font-weight: 900; font-size: 15px;
+  background: var(--tone); color: #fff; box-shadow: 0 5px 0 rgba(0,0,0,.18); transition: transform .12s ease;
+}
+.pr-lp__start:hover { transform: translateY(-1px); }
+@media (max-width: 640px) {
+  .pr-lp__head { height: 190px; border-radius: 18px; }
+  .pr-lp__card { min-width: 0; width: 100%; }
+  .pr-lp__paper { flex-wrap: wrap; }
+  .pr-lp__act { width: 100%; align-items: stretch; }
+  .pr-lp__start { width: 100%; }
+}
+
+/* Practice tab unit headings in their landscape colour (regionOf). */
+.pr-exp__unith span { width: auto; height: auto; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 800; background: var(--tone, var(--racing)); }
+.pr-exp__unith small { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--tone, #64748b); opacity: .85; }
+.pr-exp__unitblock { border-left: 4px solid transparent; }

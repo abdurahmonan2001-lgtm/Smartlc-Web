@@ -16,7 +16,7 @@ const UPPER_TITLES = ["Introduction", "Fame", "Problems", "Customs and culture",
 const UNIT_ENDS = [2, 6, 10, 14, 18, 22, 27, 31, 35, 39];
 const IELTS_F = [
   ["Learning for life", "Education"], ["Going places", "Travel"], ["A warming world", "Environment"],
-  ["Eureka!", "Science"], ["Smart machines", "Technology"], ["Breaking news", "Media"],
+  ["Eureka!", "Science"], ["Smart machines", "Technology"], ["Breaking news", "Film and news"],
   ["Healthy choices", "Health"], ["Wild planet", "Nature"], ["Inside the mind", "Mind"],
   ["City life", "Cities"], ["Echoes of the past", "History"], ["The world of work", "Work"],
   ["Rules and rights", "Law"],
@@ -43,7 +43,7 @@ export function unitsOf(level) {
   if (level === "IELTS Foundation") {
     return [
       { key: "welcome", no: "0", title: "Welcome to IELTS", lessons: [1] },
-      ...IELTS_F.map(([title], i) => ({ key: `u${i + 1}`, no: String(i + 1), title, lessons: range(2 + 3 * i, 4 + 3 * i) })),
+      ...IELTS_F.map(([title, topic], i) => ({ key: `u${i + 1}`, no: String(i + 1), title, topic, lessons: range(2 + 3 * i, 4 + 3 * i) })),
     ];
   }
   return Array.from({ length: 10 }, (_, i) => ({

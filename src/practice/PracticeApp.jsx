@@ -3,6 +3,8 @@ import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, handoffStudent, hasSession, endSession, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import { unitsOf } from "./units.js";
+import PracticeMap from "./PracticeMap.jsx";
+import CourseRegion, { regionOf } from "./CourseRegion.jsx";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
 import Notebook from "./Notebook.jsx";
@@ -146,6 +148,39 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
   const names = String(user.full_name || "").trim().split(/\s+/);
   const first = names[1] || names[0] || "";
 
+  // The record and the way straight back in: beside the map on Home (a column
+  // of its own on a wide screen), above the lessons on Practice.
+  const record = mine && mine.openL.length > 0 ? (
+        <section className="pr-exp__top">
+          <div className="pr-exp__go">
+            <span className="pr-exp__hi">Salom, {first || "friend"}!</span>
+            <strong>
+              {mine.next
+                ? mine.next.state === "is-current" ? `Lesson ${mine.next.n} is today's homework` : `Lesson ${mine.next.n} is waiting for you`
+                : "Every lesson so far is done. Brilliant!"}
+            </strong>
+            {mine.next && (
+              <button className="pr-hero__go" onClick={() => onOpenLesson(mine.level, mine.next.n)}>
+                {mine.next.state === "is-current" ? "Start" : "Continue"} · Lesson {mine.next.n} →
+              </button>
+            )}
+          </div>
+          <div className="pr-exp__stat"><span>Lessons done</span><b>{mine.doneL.length}/{mine.openL.length}</b>
+            <i className="pr-exp__meter"><i style={{ width: `${(100 * mine.doneL.length) / mine.openL.length}%` }} /></i></div>
+          <div className="pr-exp__stat"><span>Average</span><b>{mine.avg != null ? `${mine.avg}%` : "—"}</b>
+            {mine.behind > 0 && <em>{mine.behind} to catch up</em>}</div>
+          <div className="pr-exp__stat pr-exp__band">
+            <span>Your band if you took IELTS now</span>
+            <b>{mine.band != null ? fmtBand(mine.band) : "—"}</b>
+            <em className="is-quiet">
+              {mine.band != null
+                ? `± 0.5 band · from your last ${mine.bandOf} paper${mine.bandOf === 1 ? "" : "s"}`
+                : "Hand in a paper to see it"}
+            </em>
+          </div>
+        </section>
+  ) : null;
+
   const nav = [
     ["home", "Home", "🏠"],
     ...(access.practice ? [["practice", "Practice", "📝"]] : []),
@@ -179,42 +214,23 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
         </p>
       )}
 
-      {/* The record and the way straight back in. */}
-      {section !== "mock" && mine && mine.openL.length > 0 && (
-        <section className="pr-exp__top">
-          <div className="pr-exp__go">
-            <span className="pr-exp__hi">Salom, {first || "friend"}!</span>
-            <strong>
-              {mine.next
-                ? mine.next.state === "is-current" ? `Lesson ${mine.next.n} is today's homework` : `Lesson ${mine.next.n} is waiting for you`
-                : "Every lesson so far is done. Brilliant!"}
-            </strong>
-            {mine.next && (
-              <button className="pr-hero__go" onClick={() => onOpenLesson(mine.level, mine.next.n)}>
-                {mine.next.state === "is-current" ? "Start" : "Continue"} · Lesson {mine.next.n} →
-              </button>
-            )}
-          </div>
-          <div className="pr-exp__stat"><span>Lessons done</span><b>{mine.doneL.length}/{mine.openL.length}</b>
-            <i className="pr-exp__meter"><i style={{ width: `${(100 * mine.doneL.length) / mine.openL.length}%` }} /></i></div>
-          <div className="pr-exp__stat"><span>Average</span><b>{mine.avg != null ? `${mine.avg}%` : "—"}</b>
-            {mine.behind > 0 && <em>{mine.behind} to catch up</em>}</div>
-          <div className="pr-exp__stat pr-exp__band">
-            <span>Your band if you took IELTS now</span>
-            <b>{mine.band != null ? fmtBand(mine.band) : "—"}</b>
-            <em className="is-quiet">
-              {mine.band != null
-                ? `± 0.5 band · from your last ${mine.bandOf} paper${mine.bandOf === 1 ? "" : "s"}`
-                : "Hand in a paper to see it"}
-            </em>
-          </div>
-        </section>
-      )}
+      {section === "practice" && record}
 
-      {section === "home" && progs.map((p) => (
-        <Trail key={p.level} prog={p} heading={progs.length > 1 ? p.label : null}
-          takenPractice={takenPractice} onOpenLesson={onOpenLesson} />
-      ))}
+      {/* Home: the journey, the Student App's course map for practice. */}
+      {section === "home" && (
+        <div className={`pr-exp__home ${record ? "has-record" : ""}`}>
+          {record && <aside className="pr-exp__side">{record}</aside>}
+          <div className="pr-exp__maps">
+            {progs.map((p) => (
+              <div key={p.level}>
+                {progs.length > 1 && <h2 className="pr-lib__prog">{p.label}</h2>}
+                <PracticeMap prog={p} onOpenLesson={onOpenLesson}
+                  chipFor={(t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />} />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Practice: every lesson, unit by unit. */}
       {section === "practice" && progs.map(({ level, label, units }) => (
@@ -222,7 +238,11 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
           {progs.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
           {units.map((u) => (
             <div key={u.key} className="pr-exp__unitblock">
-              <h3 className="pr-exp__unith"><span>{u.no}</span>{u.title}
+              {/* In its landscape's colour, as on the map; the Introduction and
+                  Welcome to IELTS are where the journey starts. */}
+              <h3 className="pr-exp__unith" style={{ "--tone": regionOf(chapterOf(u)).banner }}>
+                <span>{u.no === "0" ? "Start" : u.exam ? "Exam" : `Unit ${u.no}`}</span>{u.title}
+                <small>{regionOf(chapterOf(u)).name}</small>
                 {u.open && <em>{u.doneCount}/{u.ls.length} done{u.avg != null ? ` · ${u.avg}%` : ""}</em>}</h3>
               <div className="pr-lib__grid pr-lib__grid--lessons">
                 {u.ls.map((l) => <LessonCard key={l.n} lesson={l} level={level} takenPractice={takenPractice} onOpenLesson={onOpenLesson} />)}
@@ -260,6 +280,12 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
   );
 }
 
+/* A unit as the course map's regions see it (CourseRegion.jsx). */
+const chapterOf = (u) => ({
+  kind: u.exam ? "exam" : "unit", no: /^\d+$/.test(u.no) ? Number(u.no) : 0, title: u.title, topic: u.topic,
+  final: u.key === "final", state: "open", done: 0, total: 0, units: [],
+});
+
 /* One lesson as a card: its state on its face, a chip a paper, a bar of
  * papers done. */
 function LessonCard({ lesson, level, takenPractice, onOpenLesson }) {
@@ -292,81 +318,6 @@ function LessonCard({ lesson, level, takenPractice, onOpenLesson }) {
   );
 }
 
-/* ─── The trail ───
- * The programme's units as stops along a winding path: a dot a lesson in the
- * lesson's colour, the unit's score, and the current unit ringed in gold.
- * Tapping a stop opens its lessons underneath. Rows snake left-to-right then
- * right-to-left, four stops a row (two on a phone). */
-function useNarrow() {
-  const q = "(max-width: 640px)";
-  const [narrow, setNarrow] = useState(() => typeof window !== "undefined" && window.matchMedia?.(q).matches);
-  useEffect(() => {
-    const m = window.matchMedia?.(q);
-    if (!m) return undefined;
-    const on = () => setNarrow(m.matches);
-    m.addEventListener?.("change", on);
-    return () => m.removeEventListener?.("change", on);
-  }, []);
-  return narrow;
-}
-
-function Trail({ prog, heading, takenPractice, onOpenLesson }) {
-  const narrow = useNarrow();
-  const per = narrow ? 2 : 4;
-  const { units, level } = prog;
-  const start = units.find((u) => u.here) || units.find((u) => u.open && !u.done) || units[0];
-  const [openKey, setOpenKey] = useState(start?.key);
-  // On a phone the lessons open below the whole trail, so a tap scrolls there.
-  const openRef = useRef(null);
-  const pick = (key) => {
-    setOpenKey(key);
-    if (narrow) setTimeout(() => openRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
-  };
-  const rows = [];
-  for (let i = 0; i < units.length; i += per) rows.push(units.slice(i, i + per));
-  const opened = units.find((u) => u.key === openKey);
-  const dot = (l) => (l.state === "is-done" ? "g" : l.state === "is-partial" ? "a" : l.state === "is-missed" ? "r"
-    : l.state === "is-current" ? "c" : l.state === "is-locked" ? "l" : "o");
-  return (
-    <section className="pr-trail">
-      {heading && <h2 className="pr-lib__prog">{heading}</h2>}
-      <div className="pr-trail__map">
-        {rows.map((row, r) => (
-          <div key={r} className={`pr-trail__row ${r % 2 ? "is-back" : ""} ${r < rows.length - 1 ? "has-turn" : ""}`}
-            style={{ gridTemplateColumns: `repeat(${per}, minmax(0, 1fr))` }}>
-            {row.map((u) => (
-              <button key={u.key} type="button"
-                className={`pr-stop ${u.here ? "is-here" : ""} ${u.done ? "is-done" : ""} ${!u.open ? "is-locked" : ""} ${u.exam ? "is-exam" : ""} ${openKey === u.key ? "is-open" : ""}`}
-                onClick={() => pick(u.key)}>
-                {u.here && <span className="pr-stop__pin">You are here</span>}
-                <span className="pr-stop__no">{u.done ? "✓" : u.no}</span>
-                <span className="pr-stop__title">{u.title}</span>
-                <span className="pr-stop__meta">
-                  {!u.open ? "🔒 later" : u.exam ? (u.done ? "done" : "exam papers")
-                    : `${u.doneCount}/${u.ls.length}${u.avg != null ? ` · ${u.avg}%` : ""}`}
-                  {u.behind > 0 && <b> · {u.behind} to catch up</b>}
-                </span>
-                <span className="pr-stop__dots">{u.ls.map((l) => <i key={l.n} className={`is-${dot(l)}`} />)}</span>
-              </button>
-            ))}
-          </div>
-        ))}
-      </div>
-      {opened && (
-        <div className="pr-trail__open" ref={openRef}>
-          <div className="pr-trail__openh">
-            <strong><span>{opened.no}</span>{opened.title}</strong>
-            <em>{opened.open ? `${opened.doneCount} of ${opened.ls.length} done${opened.behind ? ` · ${opened.behind} to catch up` : ""}` : "Opens later"}</em>
-          </div>
-          <div className="pr-lib__grid pr-lib__grid--lessons">
-            {opened.ls.map((l) => <LessonCard key={l.n} lesson={l} level={level} takenPractice={takenPractice} onOpenLesson={onOpenLesson} />)}
-          </div>
-        </div>
-      )}
-    </section>
-  );
-}
-
 /* One paper's result as a chip: 🎧 8/10, green from 80%, amber from 50%,
  * red below; a paper not yet handed in is a grey "to do". */
 const pctTone = (raw, total) => {
@@ -384,37 +335,64 @@ function ScoreChip({ test, score }) {
  * Pre-IELTS lessons carry two short papers (a listening third and a reading
  * passage); IELTS lessons carry one full paper. Either way this is the page
  * a student lands on when their homework says "lesson 12". */
-function LessonPage({ level, label, n, tests, user, access, onBack, onOpenBrief, takenPractice }) {
+export function LessonPage({ level, label, n, tests, user, access, onBack, onOpenBrief, takenPractice }) {
+  // The lesson wears its unit's landscape (CourseRegion.jsx): the same region
+  // the map draws it in, so opening a lesson feels like stepping into it.
+  const unit = unitsOf(level).find((u) => u.lessons.includes(Number(n)));
+  const chapter = unit ? chapterOf(unit) : { kind: "unit", no: 1, title: "", state: "open", done: 0, total: 0, units: [] };
+  const region = regionOf(chapter);
+  const headRef = useRef(null);
+  const [w, setW] = useState(900);
+  useEffect(() => {
+    const el = headRef.current;
+    if (!el) return undefined;
+    const m = () => setW(el.clientWidth || 900);
+    m();
+    const ro = new ResizeObserver(m);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  const done = tests.filter((t) => takenPractice.has(t.id)).length;
   return (
-    <div className="pr-lib">
-      <header className="pr-lib__top">
-        <button className="pr-link pr-back" onClick={onBack}>← Library</button>
-        <div className="pr-lib__user"><span>{user.full_name}</span></div>
+    <div className="pr-lib pr-lp">
+      <header className="pr-lp__head" ref={headRef} style={{ "--tone": region.banner }}>
+        <div className="pr-lp__land"><CourseRegion chapter={chapter} width={w} height={200} first seed={Number(n) || 1} /></div>
+        <div className="pr-lp__over">
+          <button className="pr-lp__back" onClick={onBack}>← Back to the map</button>
+          <div className="pr-lp__card">
+            <span className="pr-lp__kicker">{label}{unit ? ` · ${unit.exam ? unit.title : `Unit ${unit.no}`} · ${region.name}` : ""}</span>
+            <h1>Lesson {n}</h1>
+            {unit && !unit.exam && <p>{unit.title}</p>}
+            <span className="pr-lp__progress">{done} of {tests.length} paper{tests.length === 1 ? "" : "s"} done</span>
+          </div>
+        </div>
       </header>
 
-      <h1 className="pr-book__heading">{label} Lesson {n}</h1>
-
-      <div className="pr-lib__tests">
+      <div className="pr-lp__papers">
         {tests.map((t) => {
-          const done = takenPractice.has(t.id);
+          const score = takenPractice.get(t.id);
+          const isDone = takenPractice.has(t.id);
           const locked = !access.isOpen(t.id);
           const isChunk = /-(a|b|c|p[123])$/.test(t.id);
+          const qs = t.sections.reduce((s, x) => s + x.questions.length, 0);
           return (
-            <div className={`pr-test-row ${locked ? "is-locked" : ""}`} key={t.id}>
-              <div>
+            <div className={`pr-lp__paper ${locked ? "is-locked" : ""} ${isDone ? "is-done" : ""}`} key={t.id} style={{ "--tone": region.banner }}>
+              <span className="pr-lp__icon" aria-hidden="true">{t.module === "listening" ? "🎧" : "📖"}</span>
+              <div className="pr-lp__body">
+                <span className="pr-lp__mod">{t.module}</span>
                 <strong>{isChunk ? t.title.split(" · ").slice(1).join(" · ") : t.title}</strong>
-                <span>
-                  {t.module} · {t.durationMin} min ·{" "}
-                  {t.sections.reduce((s, x) => s + x.questions.length, 0)} questions
-                </span>
+                <span className="pr-lp__meta">{t.durationMin} min · {qs} questions</span>
               </div>
-              {locked
-                ? <span className="pr-lock-chip">🔒 not open yet</span>
-                : done
-                  ? <span className="pr-done-chip">
-                      ✓ {takenPractice.get(t.id)?.total ? `${takenPractice.get(t.id).raw}/${takenPractice.get(t.id).total} · ` : ""}review it under My mistakes
-                    </span>
-                  : <button className="btn btn--primary" onClick={() => onOpenBrief(t.id)}>Start</button>}
+              <div className="pr-lp__act">
+                {locked
+                  ? <span className="pr-lock-chip">🔒 not open yet</span>
+                  : isDone
+                    ? <>
+                        {score?.total ? <ScoreChip test={t} score={score} /> : <span className="pr-chip is-high">✓ done</span>}
+                        <span className="pr-lp__hint">Review it under My mistakes</span>
+                      </>
+                    : <button className="pr-lp__start" onClick={() => onOpenBrief(t.id)}>Start →</button>}
+              </div>
             </div>
           );
         })}

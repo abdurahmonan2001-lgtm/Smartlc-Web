@@ -7,10 +7,10 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../src/index.css";
-import { Library } from "../src/practice/PracticeApp.jsx";
+import { Library, LessonPage } from "../src/practice/PracticeApp.jsx";
 import { BOOKS, TESTS } from "../src/practice/content.js";
 import { bandFor } from "../src/practice/review.jsx";
-import { accessFor, lessonPlan, PROGRAMMES } from "../src/practice/access.js";
+import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "../src/practice/access.js";
 
 const level = new URLSearchParams(location.search).get("level") || PROGRAMMES[0].level;
 const access = accessFor(level, 12);
@@ -29,9 +29,13 @@ for (const { n, testIds } of lessonPlan(level)) {
 
 function App() {
   const [section, setSection] = useState("home");
+  const [lesson, setLesson] = useState(null);
+  if (lesson) return <LessonPage level={level} label={levelLabel(level)} n={lesson} access={access} takenPractice={taken}
+    tests={lessonPapers(level, lesson).map((id) => TESTS.find((t) => t.id === id)).filter(Boolean)}
+    user={{ username: "preview", full_name: "Preview Student" }} onBack={() => setLesson(null)} onOpenBrief={() => {}} />;
   return <Library user={{ username: "preview", full_name: "Preview Student" }} books={BOOKS} tests={TESTS}
     takenMocks={new Set()} completedMocks={new Set()} takenPractice={taken} access={access}
     picked={section} setSection={setSection}
-    onLogout={() => {}} onResults={() => {}} onOpenBook={() => {}} onOpenLesson={() => {}} onNotebook={() => {}} />;
+    onLogout={() => {}} onResults={() => {}} onOpenBook={() => {}} onOpenLesson={(_l, n) => setLesson(n)} onNotebook={() => {}} />;
 }
 createRoot(document.getElementById("root")).render(<App />);
