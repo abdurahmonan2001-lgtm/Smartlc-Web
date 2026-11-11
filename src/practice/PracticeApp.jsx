@@ -224,8 +224,7 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
             {progs.map((p) => (
               <div key={p.level}>
                 {progs.length > 1 && <h2 className="pr-lib__prog">{p.label}</h2>}
-                <PracticeMap prog={p} onOpenLesson={onOpenLesson}
-                  chipFor={(t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />} />
+                <PracticeMap prog={p} onOpenLesson={onOpenLesson} />
               </div>
             ))}
           </div>
