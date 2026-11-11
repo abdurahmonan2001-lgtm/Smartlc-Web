@@ -3161,3 +3161,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-st__tag.is-missed { color: #b91c1c; }
 .pr-st__tag.is-here { color: #92400e; }
 .pr-st__tag.is-locked { color: #94a3b8; }
+
+/* The library uses a wide screen (CEO, 11 Nov 2026: "why so much white space on the sides?"): up to 1600px, so the islands go three a row. */
+.pr-lib.pr-exp { max-width: 1600px; padding-left: 28px; padding-right: 28px; }
+@media (max-width: 640px) { .pr-lib.pr-exp { padding-left: 16px; padding-right: 16px; } }
