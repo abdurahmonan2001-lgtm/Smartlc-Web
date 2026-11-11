@@ -20,8 +20,8 @@ import { useEffect, useMemo, useState } from "react";
 import { fetchResults, saveReview } from "./api.js";
 import { BOOKS } from "./content.js";
 import ParaphraseHunt from "./ParaphraseHunt.jsx";
-import { buildReview, fmtBand, fmtTime, halfBand, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
-import { hasCue, PaperReview, useCueAudio } from "./PaperReview.jsx";
+import { answerText, buildReview, fmtBand, fmtTime, halfBand, isMockResult, typeStats, TypeStatsBars, VocabMatch } from "./review.jsx";
+import { cueOf, hasCue, PaperReview, PartPlayer, SourceSnippet, useCueAudio } from "./PaperReview.jsx";
 import { CRITERIA } from "./WritingFeedback.jsx";
 
 const PENDING_KEY = "slc_practice_pending";
@@ -45,6 +45,7 @@ function QuizMe({ items, username }) {
   const [answered, setAnswered] = useState([]);   // {test_id, n, type, right}
   const [startedAt] = useState(() => Date.now());
   const [saved, setSaved] = useState(false);
+  const [showPara, setShowPara] = useState(false);   // reading: the paragraph, before answering
   const q = items[i];
 
   // Fires once, on the finish screen. A session abandoned half way is not
@@ -96,7 +97,7 @@ function QuizMe({ items, username }) {
       ? a
       : [...a, { test_id: q.testId, n: q.n, type: q.type, right }]);
   };
-  const next = () => { setI(i + 1); setGiven(null); setChecked(false); setText(""); };
+  const next = () => { setI(i + 1); setGiven(null); setChecked(false); setText(""); setShowPara(false); };
 
   return (
     <div className="pr-review">
@@ -106,6 +107,22 @@ function QuizMe({ items, username }) {
       </div>
       <div className="pr-quiz__meta">{q.title} · Q{q.n}</div>
       <div className="pr-review__q" style={{ marginBottom: 10 }}>{q.prompt}</div>
+      {/* What they put the first time: the mistake being worked on has to be
+          on screen, or there is nothing to understand. */}
+      <div className="pr-quiz__before">
+        {String(q.your ?? "").trim()
+          ? <>Last time you put <strong>{answerText(q.your, q.options)}</strong>.</>
+          : <>Last time you left this blank.</>}
+      </div>
+      {/* The recording, cued to just before the answer: listen again, then
+          answer again. Reading gets its paragraph, unmarked, on request. */}
+      {q.module === "listening" && cueOf(q.testId, q.n) && (
+        <PartPlayer key={`${q.testId}:${q.n}`} testId={q.testId} part={cueOf(q.testId, q.n).p} start={cueOf(q.testId, q.n).t}
+          label="Listen again from just before the answer, then answer" />
+      )}
+      {q.module === "reading" && !checked && (showPara
+        ? <SourceSnippet test={q.test} testId={q.testId} item={q} />
+        : <button type="button" className="pr-link pr-quiz__para" onClick={() => setShowPara(true)}>Show me the paragraph</button>)}
       {opts ? (
         <div className="pr-quiz__opts">
           {opts.map((o) => {
@@ -126,8 +143,14 @@ function QuizMe({ items, username }) {
       )}
       {checked && (
         <div className={`pr-quiz__verdict ${isRight(given) ? "is-right" : "is-wrong"}`}>
-          {isRight(given) ? "Correct this time." : <>Still tricky — the answer is <strong>{q.correct}</strong>.</>}
+          {isRight(given) ? "Correct this time." : <>Still tricky — the answer is <strong>{answerText(q.correct, q.options)}</strong>.</>}
+          <div className="pr-quiz__compare">
+            <span>First time: <b>{String(q.your ?? "").trim() ? answerText(q.your, q.options) : "blank"}</b></span>
+            <span>This time: <b>{answerText(given, q.options)}</b></span>
+          </div>
           {q.explain && <div className="pr-review__why" style={{ marginTop: 6 }}>{q.explain}</div>}
+          {/* Where the answer was, now lit. */}
+          <SourceSnippet test={q.test} testId={q.testId} item={q} marked />
           <button className="btn btn--primary" style={{ marginTop: 10 }} onClick={next}>
             {i + 1 < items.length ? "Next →" : "Finish"}
           </button>
@@ -477,7 +500,9 @@ export default function Notebook({
     // The way back and the name of what is open both live in the header now
     // (see `crumb`), so nothing below repeats them.
     if (pick.kind === "quiz") {
-      return <QuizMe key={data.quizItems.length} items={data.quizItems} username={user.username} />;
+      // From a paper's "Redo my mistakes": that paper's only.
+      const items = pick.testId ? data.quizItems.filter((m) => m.testId === pick.testId) : data.quizItems;
+      return <QuizMe key={`${pick.testId || "all"}:${items.length}`} items={items} username={user.username} />;
     }
     if (pick.kind === "vocab") return <VocabMatch review={data.mistakes} cap={10} />;
     if (pick.kind === "hunt") return <ParaphraseHunt items={data.answered} cap={10} />;
@@ -499,14 +524,20 @@ export default function Notebook({
     // No score tiles and no vocabulary game here: this screen is for reading
     // the paper back. The numbers are the Analytics tab's job, and the
     // vocabulary exercise has a tile of its own on the shelf.
-    return <PaperReview test={card.test} result={card.row} showStats={false} showVocab={false} />;
+    const redo = data.quizItems.filter((m) => m.testId === card.testId).length;
+    return (
+      <PaperReview test={card.test} result={card.row} showStats={false} showVocab={false}
+        onRedo={() => setPick({ kind: "quiz", testId: card.testId })} redoCount={redo} />
+    );
   };
 
   /* What is open, and the way back out of it — both in the header line, so
    * an open paper spends none of its height on a title and a link. */
   const crumb = (() => {
     if (!pick || !data) return null;
-    if (pick.kind === "quiz") return { back: "All my papers", to: null };
+    if (pick.kind === "quiz") return pick.testId
+      ? { back: "Back to the paper", to: { kind: "paper", testId: pick.testId } }
+      : { back: "All my papers", to: null };
     if (pick.kind === "vocab") return { back: "All my papers", to: null };
     if (pick.kind === "hunt") return { back: "All my papers", to: null };
     if (pick.kind === "mock") return { back: "All my papers", to: null };

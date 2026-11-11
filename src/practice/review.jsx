@@ -11,6 +11,17 @@ export const norm = (s) =>
 
 export const isMockResult = (testId) => /^mock\d+-/.test(String(testId));
 
+/* "B" → "B — New housing districts are poorly served", wherever the question's
+ * options spell the letters out. A bare letter told a student reviewing a
+ * mistake nothing: they had to scroll back to the options to learn what they
+ * had actually said. */
+export function answerText(value, options) {
+  const v = String(value ?? "").trim();
+  if (!/^[A-Z]$/i.test(v) || !Array.isArray(options)) return v;
+  const o = options.find((x) => new RegExp(`^${v}[\\s.)]`, "i").test(String(x)));
+  return o ? `${v.toUpperCase()} — ${String(o).replace(/^[A-Z][\s.)]+/i, "")}` : v;
+}
+
 /* ─── Raw score → band ───
  * The official IELTS conversion, listening and reading, for a full 40-question
  * paper. A short paper (a chunked Pre-IELTS set, a single part) gets no band at
