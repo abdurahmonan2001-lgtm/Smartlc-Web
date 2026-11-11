@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { BOOKS, TESTS, getTest } from "./content.js";
 import { loginStudent, handoffStudent, hasSession, endSession, saveResult, fetchResults, fetchRemoteTests, fetchStudentContext, gradeMockWriting } from "./api.js";
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
+import { unitsOf } from "./units.js";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
 import Notebook from "./Notebook.jsx";
@@ -63,22 +64,20 @@ const testsOfBook = (tests, access, bookId) => tests.filter((t) =>
 
 /* ─── Library ─── */
 export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout, onResults, onNotebook, takenMocks, completedMocks, takenPractice, access, picked, setSection, resultsKnown = true }) {
+  // Home is the trail, Practice every lesson by unit, Mock exams the mocks.
   // Mocks are IELTS-only and hidden below that. The level arrives a moment
-  // after first paint, so the chosen tab is resolved on every render
-  // rather than fixed at mount — otherwise a student can be left looking
-  // at a tab that has since been taken away. The choice itself is held by
-  // the root, so opening a shelf and coming back does not silently throw
-  // the student onto the other tab.
-  const section = picked === "mock" && !access.mocks ? "practice" : picked;
+  // after first paint, so the chosen tab is resolved on every render rather
+  // than fixed at mount. The choice itself is held by the root, so opening a
+  // lesson and coming back returns to the same tab.
+  const section = picked === "mock" && !access.mocks ? "home" : (picked || "home");
 
   const forBook = (bookId) => testsOfBook(tests, access, bookId);
 
-  // Uploaded shelves carry no `kind`; they are homework material, so they
-  // belong with practice. A shelf whose papers are all outside this
-  // student's programme disappears entirely.
+  // Mock shelves. A shelf whose papers are all outside this student's
+  // programme disappears entirely.
   const shown = books
-    .filter((b) => (b.kind || "practice") === section)
-    .filter(() => (section === "mock" ? access.mocks : access.practice))
+    .filter((b) => (b.kind || "practice") === "mock")
+    .filter(() => access.mocks)
     .filter((b) => forBook(b.id).length > 0);
 
   // Which programme's lessons to lay out. A student has exactly one; the
@@ -93,19 +92,10 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
         .filter((l) => l.tests.length > 0),
     }))
     .filter((p) => p.lessons.length > 0);
-  const tab = (id, label, hint) => (
-    <button
-      key={id}
-      className={`pr-tab ${section === id ? "is-active" : ""}`}
-      onClick={() => setSection(id)}
-    >
-      <strong>{label}</strong>
-      <span>{hint}</span>
-    </button>
-  );
 
-  // Each programme's lessons with their state, and the record they add up to
-  // (the hero and the cards read the same numbers).
+  // Each programme's lessons with their state, grouped into its units, and
+  // the record they add up to (the top row, the trail and the cards all read
+  // the same numbers).
   const now = access.lessonNum;
   const stateOf = (tests) => {
     const open = tests.some((t) => access.isOpen(t.id));
@@ -118,85 +108,67 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
   };
   const progs = programmes.map((p) => {
     const lessons = p.lessons.map((l) => ({ ...l, ...stateOf(l.tests) }));
+    const byN = new Map(lessons.map((l) => [l.n, l]));
     const openL = lessons.filter((l) => l.open);
     const doneL = openL.filter((l) => l.done);
     // Behind = lessons already past and not finished; this lesson's papers
     // are not late yet.
     const behind = openL.filter((l) => !l.done && l.opens < (now || 0)).length;
-    const sc = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total);
-    const avg = sc.length ? Math.round(100 * sc.reduce((a, s) => a + s.raw, 0) / sc.reduce((a, s) => a + s.total, 0)) : null;
+    const scores = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total);
+    const avg = scores.length ? Math.round(100 * scores.reduce((a, s) => a + s.raw, 0) / scores.reduce((a, s) => a + s.total, 0)) : null;
+    // "Your band if you took IELTS now": the last six papers' bands averaged
+    // to the half (CEO: always shown, with a half-band disclaimer).
+    const bands = lessons.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id)?.band)).filter((b) => b != null).slice(-6);
+    const band = bands.length ? Math.round(2 * bands.reduce((a, b) => a + Number(b), 0) / bands.length) / 2 : null;
     // Where "Continue" goes: this lesson if it is not finished, else the
     // earliest one still owed.
     const next = lessons.find((l) => l.open && !l.done && l.opens >= (now || 0))
       || lessons.find((l) => l.open && !l.done);
-    return { ...p, lessons, openL, doneL, behind, avg, next };
+    const units = unitsOf(p.level).map((u) => {
+      const ls = u.lessons.map((n) => byN.get(n)).filter(Boolean);
+      const o = ls.filter((l) => l.open);
+      const d = o.filter((l) => l.done);
+      const sc = ls.flatMap((l) => l.tests.map((t) => takenPractice.get(t.id))).filter((s) => s?.total);
+      return {
+        ...u, ls,
+        open: o.length > 0,
+        done: o.length > 0 && d.length === ls.length,
+        here: ls.some((l) => l.state === "is-current") || (!!next && ls.includes(next)),
+        behind: o.filter((l) => !l.done && l.opens < (now || 0)).length,
+        doneCount: d.length,
+        avg: sc.length ? Math.round(100 * sc.reduce((a, s) => a + s.raw, 0) / sc.reduce((a, s) => a + s.total, 0)) : null,
+      };
+    }).filter((u) => u.ls.length > 0);
+    return { ...p, lessons, openL, doneL, behind, avg, band, bandOf: bands.length, next, units };
   });
   const mine = !access.owner && resultsKnown && progs.length === 1 ? progs[0] : null;
   // Names here are written "Surname Firstname" (and may go on: "… qizi").
   const names = String(user.full_name || "").trim().split(/\s+/);
   const first = names[1] || names[0] || "";
 
+  const nav = [
+    ["home", "Home", "🏠"],
+    ...(access.practice ? [["practice", "Practice", "📝"]] : []),
+    ...(access.mocks ? [["mock", "Mock exams", "🏆"]] : []),
+    ["mistakes", "My mistakes", "🔁"],
+    ["results", "Results", "📈"],
+  ];
+  const go = (id) => (id === "mistakes" ? onNotebook() : id === "results" ? onResults() : setSection(id));
+
   return (
-    <div className="pr-lib">
-      <header className="pr-lib__top">
-        <span className="nav__logo">
-          <img src="/brand/icon-96.png" alt="" width="34" height="34" />
-          <span>Practice</span>
-        </span>
-        <div className="pr-lib__user">
-          <button className="pr-link" onClick={onNotebook}>My mistakes</button>
-          <button className="pr-link" onClick={onResults}>My results</button>
-          <span>{user.full_name}</span>
-          <button className="pr-link" onClick={onLogout}>Log out</button>
-        </div>
+    <div className="pr-lib pr-exp">
+      {/* One bar on every library tab; a phone gets it as tabs along the bottom. */}
+      <header className="pr-exp__bar">
+        <span className="pr-exp__brand"><img src="/brand/icon-96.png" alt="" width="28" height="28" /> SMART Practice</span>
+        <nav className="pr-exp__nav">
+          {nav.map(([id, label, icon]) => (
+            <button key={id} className={`pr-exp__link ${section === id ? "is-on" : ""}`} onClick={() => go(id)}>
+              <i aria-hidden="true">{icon}</i><span>{label}</span>
+            </button>
+          ))}
+        </nav>
+        <span className="pr-exp__me">{first || user.full_name}<button className="pr-exp__out" onClick={onLogout}>Log out</button></span>
       </header>
-
-      {/* The student's record at a glance, and the way straight back in. */}
-      {mine && mine.openL.length > 0 && (() => {
-        const pct = Math.round(100 * mine.doneL.length / mine.openL.length);
-        const R = 42, C = 2 * Math.PI * R;
-        return (
-          <section className="pr-hero">
-            <div className="pr-hero__main">
-              <div className="pr-hero__kicker">{mine.label}{now ? ` · lesson ${now}` : ""}</div>
-              <h1 className="pr-hero__hi">{first ? `Salom, ${first}!` : "Your practice"}</h1>
-              <p className="pr-hero__line">
-                {mine.behind > 0
-                  ? `${mine.behind} lesson${mine.behind === 1 ? "" : "s"} to catch up — one paper at a time.`
-                  : mine.doneL.length === mine.openL.length ? "Every lesson so far is done. Brilliant!"
-                    : "You’re on track. Keep it going!"}
-              </p>
-              <div className="pr-hero__stats">
-                <span><b>{mine.doneL.length}/{mine.openL.length}</b> lessons done</span>
-                {mine.avg != null && <span><b>{mine.avg}%</b> average</span>}
-                {mine.behind > 0 && <span className="is-warn"><b>{mine.behind}</b> to catch up</span>}
-              </div>
-              {mine.next && (
-                <button className="pr-hero__go" onClick={() => onOpenLesson(mine.level, mine.next.n)}>
-                  {mine.next.state === "is-current" ? "Start this lesson" : "Continue"} · Lesson {mine.next.n} →
-                </button>
-              )}
-            </div>
-            <div className="pr-hero__ring" aria-label={`${pct}% of lessons done`}>
-              <svg viewBox="0 0 100 100" width="120" height="120">
-                <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(255,255,255,.14)" strokeWidth="9" />
-                {pct > 0 && <circle cx="50" cy="50" r={R} fill="none" stroke="#e3b95a" strokeWidth="9" strokeLinecap="round"
-                  strokeDasharray={`${(C * pct) / 100} ${C}`} transform="rotate(-90 50 50)" />}
-              </svg>
-              <span><b>{pct}%</b>done</span>
-            </div>
-            <img className="pr-hero__smarty" src="/smarty/hero.png" alt="" />
-          </section>
-        );
-      })()}
-
-      {/* Mocks are not merely locked below IELTS level — they are absent. */}
-      {(access.mocks || access.practice) && (
-        <div className="pr-tabs">
-          {access.practice && tab("practice", "📝 Practice", "Lesson homework · one attempt each")}
-          {access.mocks && tab("mock", "🏆 Mock exams", "Full test · one attempt")}
-        </div>
-      )}
 
       {!access.practice && !access.mocks && (
         <p className="pr-lib__gate">
@@ -206,6 +178,59 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
               + "Please reload, or ask your teacher if it keeps happening."}
         </p>
       )}
+
+      {/* The record and the way straight back in. */}
+      {section !== "mock" && mine && mine.openL.length > 0 && (
+        <section className="pr-exp__top">
+          <div className="pr-exp__go">
+            <span className="pr-exp__hi">Salom, {first || "friend"}!</span>
+            <strong>
+              {mine.next
+                ? mine.next.state === "is-current" ? `Lesson ${mine.next.n} is today's homework` : `Lesson ${mine.next.n} is waiting for you`
+                : "Every lesson so far is done. Brilliant!"}
+            </strong>
+            {mine.next && (
+              <button className="pr-hero__go" onClick={() => onOpenLesson(mine.level, mine.next.n)}>
+                {mine.next.state === "is-current" ? "Start" : "Continue"} · Lesson {mine.next.n} →
+              </button>
+            )}
+          </div>
+          <div className="pr-exp__stat"><span>Lessons done</span><b>{mine.doneL.length}/{mine.openL.length}</b>
+            <i className="pr-exp__meter"><i style={{ width: `${(100 * mine.doneL.length) / mine.openL.length}%` }} /></i></div>
+          <div className="pr-exp__stat"><span>Average</span><b>{mine.avg != null ? `${mine.avg}%` : "—"}</b>
+            {mine.behind > 0 && <em>{mine.behind} to catch up</em>}</div>
+          <div className="pr-exp__stat pr-exp__band">
+            <span>Your band if you took IELTS now</span>
+            <b>{mine.band != null ? fmtBand(mine.band) : "—"}</b>
+            <em className="is-quiet">
+              {mine.band != null
+                ? `± 0.5 band · from your last ${mine.bandOf} paper${mine.bandOf === 1 ? "" : "s"}`
+                : "Hand in a paper to see it"}
+            </em>
+          </div>
+        </section>
+      )}
+
+      {section === "home" && progs.map((p) => (
+        <Trail key={p.level} prog={p} heading={progs.length > 1 ? p.label : null}
+          takenPractice={takenPractice} onOpenLesson={onOpenLesson} />
+      ))}
+
+      {/* Practice: every lesson, unit by unit. */}
+      {section === "practice" && progs.map(({ level, label, units }) => (
+        <div key={level}>
+          {progs.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
+          {units.map((u) => (
+            <div key={u.key} className="pr-exp__unitblock">
+              <h3 className="pr-exp__unith"><span>{u.no}</span>{u.title}
+                {u.open && <em>{u.doneCount}/{u.ls.length} done{u.avg != null ? ` · ${u.avg}%` : ""}</em>}</h3>
+              <div className="pr-lib__grid pr-lib__grid--lessons">
+                {u.ls.map((l) => <LessonCard key={l.n} lesson={l} level={level} takenPractice={takenPractice} onOpenLesson={onOpenLesson} />)}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
 
       {/* Mocks stay whole books: a mock is a sitting, not a lesson. */}
       {section === "mock" && (
@@ -231,51 +256,114 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
           })}
         </div>
       )}
+    </div>
+  );
+}
 
-      {/* Practice is arranged by lesson, because that is how it is set and how
-          a student is told about it — "lesson 12", not "set 6, reading". */}
-      {section === "practice" && progs.map(({ level, label, lessons }) => (
-        <div key={level}>
-          {progs.length > 1 && <h2 className="pr-lib__prog">{label}</h2>}
+/* One lesson as a card: its state on its face, a chip a paper, a bar of
+ * papers done. */
+function LessonCard({ lesson, level, takenPractice, onOpenLesson }) {
+  const { n, tests, open, doneTests, done, state } = lesson;
+  const mins = tests.reduce((s, t) => s + t.durationMin, 0);
+  return (
+    <button className={`pr-lesson ${state}`} disabled={!open} onClick={() => open && onOpenLesson(level, n)}>
+      {state === "is-current" && <span className="pr-lesson__flag">Today</span>}
+      <span className="pr-lesson__n">
+        {n}
+        {done && <i className="pr-lesson__tick">✓</i>}
+      </span>
+      <span className="pr-lesson__title">Lesson {n}</span>
+      {open && (
+        <span className="pr-lesson__scores">
+          {tests.map((t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />)}
+        </span>
+      )}
+      <span className="pr-lesson__count">
+        {!open ? "🔒 opens later"
+          : done ? "Done"
+            : doneTests.length ? `${doneTests.length} of ${tests.length} done`
+              : state === "is-missed" ? "Not done yet"
+                : `${mins} min`}
+      </span>
+      {open && tests.length > 1 && (
+        <span className="pr-lesson__bar"><i style={{ width: `${(100 * doneTests.length) / tests.length}%` }} /></span>
+      )}
+    </button>
+  );
+}
+
+/* ─── The trail ───
+ * The programme's units as stops along a winding path: a dot a lesson in the
+ * lesson's colour, the unit's score, and the current unit ringed in gold.
+ * Tapping a stop opens its lessons underneath. Rows snake left-to-right then
+ * right-to-left, four stops a row (two on a phone). */
+function useNarrow() {
+  const q = "(max-width: 640px)";
+  const [narrow, setNarrow] = useState(() => typeof window !== "undefined" && window.matchMedia?.(q).matches);
+  useEffect(() => {
+    const m = window.matchMedia?.(q);
+    if (!m) return undefined;
+    const on = () => setNarrow(m.matches);
+    m.addEventListener?.("change", on);
+    return () => m.removeEventListener?.("change", on);
+  }, []);
+  return narrow;
+}
+
+function Trail({ prog, heading, takenPractice, onOpenLesson }) {
+  const narrow = useNarrow();
+  const per = narrow ? 2 : 4;
+  const { units, level } = prog;
+  const start = units.find((u) => u.here) || units.find((u) => u.open && !u.done) || units[0];
+  const [openKey, setOpenKey] = useState(start?.key);
+  // On a phone the lessons open below the whole trail, so a tap scrolls there.
+  const openRef = useRef(null);
+  const pick = (key) => {
+    setOpenKey(key);
+    if (narrow) setTimeout(() => openRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+  };
+  const rows = [];
+  for (let i = 0; i < units.length; i += per) rows.push(units.slice(i, i + per));
+  const opened = units.find((u) => u.key === openKey);
+  const dot = (l) => (l.state === "is-done" ? "g" : l.state === "is-partial" ? "a" : l.state === "is-missed" ? "r"
+    : l.state === "is-current" ? "c" : l.state === "is-locked" ? "l" : "o");
+  return (
+    <section className="pr-trail">
+      {heading && <h2 className="pr-lib__prog">{heading}</h2>}
+      <div className="pr-trail__map">
+        {rows.map((row, r) => (
+          <div key={r} className={`pr-trail__row ${r % 2 ? "is-back" : ""} ${r < rows.length - 1 ? "has-turn" : ""}`}
+            style={{ gridTemplateColumns: `repeat(${per}, minmax(0, 1fr))` }}>
+            {row.map((u) => (
+              <button key={u.key} type="button"
+                className={`pr-stop ${u.here ? "is-here" : ""} ${u.done ? "is-done" : ""} ${!u.open ? "is-locked" : ""} ${u.exam ? "is-exam" : ""} ${openKey === u.key ? "is-open" : ""}`}
+                onClick={() => pick(u.key)}>
+                {u.here && <span className="pr-stop__pin">You are here</span>}
+                <span className="pr-stop__no">{u.done ? "✓" : u.no}</span>
+                <span className="pr-stop__title">{u.title}</span>
+                <span className="pr-stop__meta">
+                  {!u.open ? "🔒 later" : u.exam ? (u.done ? "done" : "exam papers")
+                    : `${u.doneCount}/${u.ls.length}${u.avg != null ? ` · ${u.avg}%` : ""}`}
+                  {u.behind > 0 && <b> · {u.behind} to catch up</b>}
+                </span>
+                <span className="pr-stop__dots">{u.ls.map((l) => <i key={l.n} className={`is-${dot(l)}`} />)}</span>
+              </button>
+            ))}
+          </div>
+        ))}
+      </div>
+      {opened && (
+        <div className="pr-trail__open" ref={openRef}>
+          <div className="pr-trail__openh">
+            <strong><span>{opened.no}</span>{opened.title}</strong>
+            <em>{opened.open ? `${opened.doneCount} of ${opened.ls.length} done${opened.behind ? ` · ${opened.behind} to catch up` : ""}` : "Opens later"}</em>
+          </div>
           <div className="pr-lib__grid pr-lib__grid--lessons">
-            {lessons.map(({ n, tests, open, doneTests, done, state }) => {
-              const mins = tests.reduce((s, t) => s + t.durationMin, 0);
-              return (
-                <button
-                  className={`pr-lesson ${state}`}
-                  key={level + n}
-                  disabled={!open}
-                  onClick={() => open && onOpenLesson(level, n)}
-                >
-                  {state === "is-current" && <span className="pr-lesson__flag">This lesson</span>}
-                  <span className="pr-lesson__n">
-                    {n}
-                    {done && <i className="pr-lesson__tick">✓</i>}
-                  </span>
-                  <span className="pr-lesson__title">Lesson {n}</span>
-                  {/* The papers on the card's face: a score chip once handed in. */}
-                  {open && (
-                    <span className="pr-lesson__scores">
-                      {tests.map((t) => <ScoreChip key={t.id} test={t} score={takenPractice.get(t.id)} />)}
-                    </span>
-                  )}
-                  <span className="pr-lesson__count">
-                    {!open ? "🔒 opens later"
-                      : done ? "Done"
-                        : doneTests.length ? `${doneTests.length} of ${tests.length} done`
-                          : state === "is-missed" ? "Not done yet"
-                            : `${mins} min`}
-                  </span>
-                  {open && tests.length > 1 && (
-                    <span className="pr-lesson__bar"><i style={{ width: `${(100 * doneTests.length) / tests.length}%` }} /></span>
-                  )}
-                </button>
-              );
-            })}
+            {opened.ls.map((l) => <LessonCard key={l.n} lesson={l} level={level} takenPractice={takenPractice} onOpenLesson={onOpenLesson} />)}
           </div>
         </div>
-      ))}
-    </div>
+      )}
+    </section>
   );
 }
 
@@ -957,7 +1045,7 @@ export default function PracticeApp() {
   }, []);   // eslint-disable-line react-hooks/exhaustive-deps
   // library | book | player | mock | result | mockresult | history | notebook
   const [view, setView] = useState(() => viewOfPath(window.location.pathname));
-  const [section, setSection] = useState("mock");   // which library tab
+  const [section, setSection] = useState("home");   // which library tab
   const [remote, setRemote] = useState([]);
   // null until the group's level and lesson are known. Until then nothing
   // unlocks: a failed lookup must never be read as permission.
@@ -1018,7 +1106,11 @@ export default function PracticeApp() {
       const scores = new Map();
       for (const r of mine) {
         if (r.module === "attempt" || mockOf(r.test_id) || scores.has(r.test_id)) continue;
-        scores.set(r.test_id, { raw: r.raw_score, total: r.total });
+        // Every paper carries a band for the record's estimate: its own when it
+        // is a full 40-question paper, otherwise its score scaled to 40 and read
+        // off the same official table (a Pre-IELTS third has no band of its own).
+        const band = r.band ?? (r.total && r.raw_score != null ? bandFor(Math.round((r.raw_score / r.total) * 40), 40, r.module) : null);
+        scores.set(r.test_id, { raw: r.raw_score, total: r.total, band });
       }
       setTakenPractice(scores);
       setResultsKnown(rows !== null);

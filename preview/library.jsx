@@ -9,6 +9,7 @@ import { createRoot } from "react-dom/client";
 import "../src/index.css";
 import { Library } from "../src/practice/PracticeApp.jsx";
 import { BOOKS, TESTS } from "../src/practice/content.js";
+import { bandFor } from "../src/practice/review.jsx";
 import { accessFor, lessonPlan, PROGRAMMES } from "../src/practice/access.js";
 
 const level = new URLSearchParams(location.search).get("level") || PROGRAMMES[0].level;
@@ -21,12 +22,13 @@ for (const { n, testIds } of lessonPlan(level)) {
     if (n === 4 && k === 1) return;
     const t = TESTS.find((x) => x.id === id);
     const total = t ? t.sections.reduce((s, x) => s + x.questions.length, 0) : 10;
-    taken.set(id, { raw: Math.max(0, total - ((n * 3 + k * 5) % (total + 1))), total });
+    const raw = Math.max(0, total - ((n * 3 + k * 5) % (total + 1)));
+    taken.set(id, { raw, total, band: bandFor(Math.round((raw / total) * 40), 40, t?.module) });
   });
 }
 
 function App() {
-  const [section, setSection] = useState("practice");
+  const [section, setSection] = useState("home");
   return <Library user={{ username: "preview", full_name: "Preview Student" }} books={BOOKS} tests={TESTS}
     takenMocks={new Set()} completedMocks={new Set()} takenPractice={taken} access={access}
     picked={section} setSection={setSection}
