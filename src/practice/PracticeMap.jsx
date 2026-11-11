@@ -11,7 +11,7 @@
 //             amber half done, red when missed, a gold halo for today's lesson,
 //             grey while locked; under it the lesson's scores
 //
-// Three islands a row on a wide monitor, two on a laptop, one on a phone.
+// Up to four islands a row on a wide monitor, two on a laptop, one on a phone.
 import { useLayoutEffect, useRef, useState } from "react";
 import CourseRegion, { regionOf } from "./CourseRegion.jsx";
 
@@ -94,8 +94,8 @@ export default function PracticeMap({ prog, onOpenLesson }) {
     scrolled.current = true;
     if (hereRef.current.getBoundingClientRect().top > window.innerHeight) hereRef.current.scrollIntoView({ block: "center" });
   });
-  // Three a row on a wide monitor, two on a laptop, one on a phone.
-  const cols = width >= 1100 ? 3 : width >= 660 ? 2 : 1, gap = 14;
+  // Four a row on a wide monitor, three on a smaller one, two on a laptop, one on a phone.
+  const cols = width >= 1450 ? 4 : width >= 1100 ? 3 : width >= 660 ? 2 : 1, gap = 14;
   const islandW = Math.floor((width - gap * (cols - 1)) / cols);
   const hereN = prog.next?.n ?? null;
   return (
