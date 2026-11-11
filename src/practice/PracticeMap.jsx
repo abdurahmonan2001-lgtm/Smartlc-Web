@@ -4,7 +4,7 @@
 // … combine the three visuals … make the background topic-based").
 //
 //   island    one per unit, on its own landscape from its topic
-//             (CourseRegion.jsx, copied from the Student App), a frosted head
+//             (LandArt.jsx, shared with the Student App), a frosted head
 //             with the unit, its region and chips: done, average, to catch up
 //   line      the unit's lessons as stations on a short line in its colour
 //   station   a ring that fills with the lesson's papers handed in: ✓ done,
@@ -13,7 +13,8 @@
 //
 // Up to four islands a row on a wide monitor, two on a laptop, one on a phone.
 import { useLayoutEffect, useRef, useState } from "react";
-import CourseRegion, { regionOf } from "./CourseRegion.jsx";
+import { regionOf } from "./CourseRegion.jsx";
+import { Landscape, tierOf } from "./LandArt.jsx";
 
 const ISLAND_H = 200;
 const chapterName = (c) => (c.kind === "exam" ? (c.final ? "Final exam" : "Mid-term exam") : c.no === 0 ? "Start" : `Unit ${c.no}`);
@@ -55,7 +56,10 @@ function Island({ u, i, width, hereN, level, onOpenLesson, islandRef }) {
   const isHere = u.ls.some((l) => l.n === hereN);
   return (
     <section ref={isHere ? islandRef : null} className={`pr-isl ${isHere ? "is-here" : ""} ${!u.open ? "is-locked" : ""}`} style={{ "--tone": region.banner, height: ISLAND_H }}>
-      <div className="pr-isl__land"><CourseRegion chapter={chapter} width={width} height={ISLAND_H} first seed={i + 1} /></div>
+      <svg className="pr-isl__land" width={width} height={ISLAND_H} aria-hidden="true">
+        <Landscape x1={width} height={ISLAND_H} tone={region.banner} name={region.name} tier={tierOf(level)} seed={`${level}|${u.key}|${i}`}
+          horizon={.34} ground={.72} landmarkAt={Math.round(width * .82)} landmarkScale={.8} />
+      </svg>
       <div className="pr-isl__head">
         <span className="pr-isl__kicker">{chapterName(chapter)} · {region.name}</span>
         <strong>{u.title}</strong>

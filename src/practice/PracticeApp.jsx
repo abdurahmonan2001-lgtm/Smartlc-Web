@@ -4,7 +4,8 @@ import { loginStudent, handoffStudent, hasSession, endSession, saveResult, fetch
 import { accessFor, lessonPlan, lessonPapers, levelLabel, PROGRAMMES } from "./access.js";
 import { unitsOf } from "./units.js";
 import PracticeRoad from "./PracticeRoad.jsx";
-import CourseRegion, { regionOf } from "./CourseRegion.jsx";
+import { regionOf } from "./CourseRegion.jsx";
+import { Landscape, tierOf } from "./LandArt.jsx";
 import TRANSCRIPTS from "./transcripts.json";
 import { norm, isMockResult, bandFor, fmtBand, fmtTime } from "./review.jsx";
 import Notebook from "./Notebook.jsx";
@@ -224,7 +225,7 @@ export function Library({ user, books, tests, onOpenBook, onOpenLesson, onLogout
           {progs.map((p) => (
             <div key={p.level}>
               {progs.length > 1 && <h2 className="pr-lib__prog">{p.label}</h2>}
-              <PracticeRoad prog={p} onOpenLesson={onOpenLesson} />
+              <PracticeRoad prog={p} onOpenLesson={onOpenLesson} solo={progs.length === 1} />
             </div>
           ))}
         </div>
@@ -334,7 +335,7 @@ function ScoreChip({ test, score }) {
  * passage); IELTS lessons carry one full paper. Either way this is the page
  * a student lands on when their homework says "lesson 12". */
 export function LessonPage({ level, label, n, tests, user, access, onBack, onOpenBrief, takenPractice }) {
-  // The lesson wears its unit's landscape (CourseRegion.jsx): the same region
+  // The lesson wears its unit's landscape (LandArt.jsx): the same region
   // the map draws it in, so opening a lesson feels like stepping into it.
   const unit = unitsOf(level).find((u) => u.lessons.includes(Number(n)));
   const chapter = unit ? chapterOf(unit) : { kind: "unit", no: 1, title: "", state: "open", done: 0, total: 0, units: [] };
@@ -354,7 +355,10 @@ export function LessonPage({ level, label, n, tests, user, access, onBack, onOpe
   return (
     <div className="pr-lib pr-lp">
       <header className="pr-lp__head" ref={headRef} style={{ "--tone": region.banner }}>
-        <div className="pr-lp__land"><CourseRegion chapter={chapter} width={w} height={200} first seed={Number(n) || 1} /></div>
+        <svg className="pr-lp__land" width={w} height={200} aria-hidden="true">
+          <Landscape x1={w} height={200} tone={region.banner} name={region.name} tier={tierOf(level)} seed={`${level}|${n}`}
+            horizon={.3} ground={.8} landmarkAt={Math.round(w * .72)} landmarkScale={1} />
+        </svg>
         <div className="pr-lp__over">
           <button className="pr-lp__back" onClick={onBack}>← Back to the map</button>
           <div className="pr-lp__card">

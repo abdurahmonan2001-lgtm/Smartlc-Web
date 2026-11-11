@@ -3196,7 +3196,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-rd__arrow:hover { background: #fff; }
 .pr-rd__arrow.is-left { left: 12px; }
 .pr-rd__arrow.is-right { right: 12px; }
-.pr-rd__units { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 2px 4px; }
+.pr-rd__units { position: relative; display: flex; gap: 6px; margin: 12px 2px 4px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.pr-rd__units::-webkit-scrollbar { display: none; }
+.pr-rd__units button { flex-shrink: 0; white-space: nowrap; }
 .pr-rd__units button {
   display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px 5px 5px; border-radius: 999px; border: 1px solid #e3e9e7;
   background: #fff; font: inherit; font-size: 12.5px; font-weight: 700; color: #334155; cursor: pointer;
@@ -3209,3 +3211,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .pr-rd__units button.is-here { box-shadow: 0 0 0 2px #e3b95a; }
 .pr-rd__units button.is-done::after { content: "✓"; color: #059669; font-weight: 900; }
 .pr-rd__units button.is-locked { opacity: .55; }
+.pr-rd__units button.is-view { border-color: var(--tone); background: color-mix(in srgb, var(--tone) 8%, #fff); }
+
+/* The island head only as wide as it needs, so the landmark (LandArt.jsx) shows on the right. */
+.pr-isl__head { width: fit-content; max-width: 66%; box-sizing: border-box; }
+.pr-isl__kicker { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
